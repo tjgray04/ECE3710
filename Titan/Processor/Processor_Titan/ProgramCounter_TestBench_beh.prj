@@ -1,0 +1,4 @@
+verilog work "Mux.v"
+verilog work "ProgramCounter.v"
+verilog work "ProgramCounter_TestBench.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

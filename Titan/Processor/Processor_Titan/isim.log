@@ -1,5 +1,5 @@
 ISim log file
-Running: U:\My Documents\Processor_Titan\ExecutionStage_TestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb U:/My Documents/Processor_Titan/ExecutionStage_TestBench_isim_beh.wdb 
+Running: C:\Users\u0499404\ECE3710\Processor_Titan01\ProgramCounter_TestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/u0499404/ECE3710/Processor_Titan01/ProgramCounter_TestBench_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -9,9 +9,5 @@ Time resolution is 1 ps
 # onerror resume
 # wave add /
 # run 1000 ns
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-# restart
-# run 1.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

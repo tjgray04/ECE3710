@@ -1,7 +1,0 @@
-verilog work "Shifter.v"
-verilog work "RegFile.v"
-verilog work "Mux.v"
-verilog work "ALU.v"
-verilog work "ExecutionStage.v"
-verilog work "ExecutionStage_TestBench.v"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,27 +1,21 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o U:/My Documents/Processor_Titan/ExecutionStage_TestBench_isim_beh.exe -prj U:/My Documents/Processor_Titan/ExecutionStage_TestBench_beh.prj work.ExecutionStage_TestBench work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/u0499404/ECE3710/Processor_Titan01/ProgramCounter_TestBench_isim_beh.exe -prj C:/Users/u0499404/ECE3710/Processor_Titan01/ProgramCounter_TestBench_beh.prj work.ProgramCounter_TestBench work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "U:/My Documents/Processor_Titan/Shifter.v" into library work
-Analyzing Verilog file "U:/My Documents/Processor_Titan/RegFile.v" into library work
-Analyzing Verilog file "U:/My Documents/Processor_Titan/Mux.v" into library work
-Analyzing Verilog file "U:/My Documents/Processor_Titan/ALU.v" into library work
-WARNING:HDLCompiler:693 - "U:/My Documents/Processor_Titan/ALU.v" Line 30: Parameter declaration becomes local in ALU with formal parameter declaration list
-Analyzing Verilog file "U:/My Documents/Processor_Titan/ExecutionStage.v" into library work
-Analyzing Verilog file "U:/My Documents/Processor_Titan/ExecutionStage_TestBench.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan01/Mux.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan01/ProgramCounter.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan01/ProgramCounter_TestBench.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Compiling module RegFile
-Compiling module ALU
 Compiling module Mux
-Compiling module Shifter
-Compiling module ExecutionStage
-Compiling module ExecutionStage_TestBench
+Compiling module ProgramCounter
+Compiling module ProgramCounter_TestBench
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 7 Verilog Units
-Built simulation executable U:/My Documents/Processor_Titan/ExecutionStage_TestBench_isim_beh.exe
-Fuse Memory Usage: 28056 KB
-Fuse CPU Usage: 841 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 4 Verilog Units
+Built simulation executable C:/Users/u0499404/ECE3710/Processor_Titan01/ProgramCounter_TestBench_isim_beh.exe
+Fuse Memory Usage: 27276 KB
+Fuse CPU Usage: 452 ms
