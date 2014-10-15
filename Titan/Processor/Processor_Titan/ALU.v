@@ -18,12 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ALU#(parameter WIDTH = 32)(
+module ALU#(parameter REGBITS = 5, WIDTH = 32)(
     input [WIDTH-1:0] arg1,
     input [WIDTH-1:0] arg2,
 	 input [2:0] aluop,
     output reg [WIDTH-1:0] result,
-    output reg [4:0] PSRwrite
+    output reg [REGBITS-1:0] PSRwrite
     );
 
 	//Parameters
@@ -62,10 +62,10 @@ module ALU#(parameter WIDTH = 32)(
 	always@(*)
 	begin
 		case(aluop)
-					// PSR = {C,L,F,Z,N}
+					// PSRwrite[4:0] = {C,L,F,Z,N}
 			ADD:  begin
 					result = sum[WIDTH-1:0];
-					PSRwrite = {sum[WIDTH],1'b0,Fadd,2'b00};
+					PSRwrite = {sum[WIDTH],PSRwrite[3],Fadd,PSRwrite[1:0]};
 					end
 			SUB:  begin
 					result = diff;
@@ -73,31 +73,31 @@ module ALU#(parameter WIDTH = 32)(
 					end
 			OR:  begin
 					result = arg1 | arg2;
-					PSRwrite = 5'b00000;
+					PSRwrite = PSRwrite;
 					end
 			AND:  begin
 					result = arg1 & arg2;
-					PSRwrite = 5'b00000;
+					PSRwrite = PSRwrite;
 					end
 			XOR:  begin
 					result = arg1 ^ arg2;
-					PSRwrite = 5'b00000;
+					PSRwrite = PSRwrite;
 					end
 			NOT:  begin
 					result = ~arg1;
-					PSRwrite = 5'b00000;
+					PSRwrite = PSRwrite;
 					end
 			MULT: begin
 					result = arg1 * arg2;
-					PSRwrite = 5'b00000;
+					PSRwrite = PSRwrite;
 					end
 			CMP:  begin
 					result = diff;
-					PSRwrite = {1'b0,L,1'b0,diff ? 1'b0 : 1'b1,N};
+					PSRwrite = {PSRwrite[4],L,PSRwrite[2],diff ? PSRwrite[1] : 1'b1,N};
 					end
 		default: begin
 					result = sum;
-					PSRwrite = 5'b00000;
+					PSRwrite = PSRwrite;
 					end
 		endcase
 	end

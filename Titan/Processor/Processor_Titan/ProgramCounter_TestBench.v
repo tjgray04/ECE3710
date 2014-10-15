@@ -36,7 +36,7 @@ module ProgramCounter_TestBench;
 	reg [31:0] RaData;
 
 	// Outputs
-	wire [31:0] PC;
+	wire [31:0] PC, returnAdr;
 
 	// Instantiate the Unit Under Test (UUT)
 	ProgramCounter uut (
@@ -48,7 +48,8 @@ module ProgramCounter_TestBench;
 		.PSRcond(PSRcond), 
 		.instruction(instruction), 
 		.immediate(immediate), 
-		.RaData(RaData), 
+		.RaData(RaData),
+		.returnAdr(returnAdr),
 		.PC(PC)
 	);
 

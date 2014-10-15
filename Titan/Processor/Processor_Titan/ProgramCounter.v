@@ -21,9 +21,10 @@
 module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 							 (input clk, reset, branch, jump, jumpRA, PSRcond,
 							 input  [WIDTH-1:0] instruction, immediate, RaData,
+							 output [WIDTH-1:0] returnAdr,
 							 output reg [WIDTH-1:0] PC);
 
-	wire [WIDTH-1:0] PC1, BranchImm, PC2, JumpImm, PC3, PC_Next;
+	wire [WIDTH-1:0] BranchImm, PC2, JumpImm, PC3, PC_Next;
 
 	always@(posedge reset, posedge clk)
 	begin
@@ -36,11 +37,11 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 	end
 	
 	// PC +1 adder
-	assign PC1 = PC + 1;
+	assign returnAdr = PC + 1;
 	// Branch adder
-	assign BranchImm = PC1 + $signed(immediate);
+	assign BranchImm = returnAdr + $signed(immediate);
 	// Jump based on immediate value
-	assign JumpImm = {PC1[WIDTH-1:WIDTH-REGBITS], instruction[(WIDTH-REGBITS)-1:0]};
+	assign JumpImm = {returnAdr[WIDTH-1:WIDTH-REGBITS], instruction[(WIDTH-REGBITS)-1:0]};
 	// branch and PSR[] both need to be asserted for a branch to happen
 	assign branchTrue = branch & PSRcond;
 	// branch mux
