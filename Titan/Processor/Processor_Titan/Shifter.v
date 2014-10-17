@@ -18,13 +18,16 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module Shifter#(parameter WIDTH = 32)(
-	input [WIDTH-1:0] arg,
-	input [WIDTH-1:0] shiftamount,
-	input shifttype,
-	output reg [WIDTH-1:0] result
-    );
-
+/* SHIFTER
+*	input: arg, data to be shifted, Rs from RegFile
+*	input: shiftamount, amount to shift data by, from ShifterMUX
+*	input: shifttype, logic (0) or arithmetic (1) from Logic Controller
+*	output: result, shifted data
+*/
+module Shifter#(parameter WIDTH = 32)
+					(input [WIDTH-1:0] arg, shiftamount,
+					 input shifttype,
+					 output reg [WIDTH-1:0] result);
 
 	//Two's complement shift amount magnitude calculator
 	wire [WIDTH-1:0] shiftmag;

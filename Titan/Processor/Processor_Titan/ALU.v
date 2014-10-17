@@ -18,10 +18,17 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ALU#(parameter REGBITS = 5, WIDTH = 32)(
+/* ARITHMETIC LOGIC UNIT - ALU
+*	input: arg1, comes from the Rs register from the RegFile
+*	input: arg2, from mux determining input from Rt of RegFile, or [WIDTH-1:0] immediate value
+*	input: aluop, from Logic Controller
+*	output: result, output from the ALU
+*	output: PSRwrite, Program Status Register determined by ALU operation 
+*/
+module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
     input [WIDTH-1:0] arg1,
     input [WIDTH-1:0] arg2,
-	 input [2:0] aluop,
+	 input [ALUOPBITS-1:0] aluop,
     output reg [WIDTH-1:0] result,
     output reg [REGBITS-1:0] PSRwrite
     );

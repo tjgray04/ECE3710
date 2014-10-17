@@ -17,12 +17,24 @@
 // Revision 0.01 - File Created
 // Additional Comments: 
 //
+//					HOW DO WE PERFORM A READ????
+//
 //////////////////////////////////////////////////////////////////////////////////
+/*	REGISTER FILE
+*	input: clk, global clock from top module
+*	input: reset, global reset from top module
+*	input: regWriteEn, from Logic Controller - enable write back to register
+*	input: RaWriteEn, from Logic Controller - control signal enabling writing to return address register reg31
+*	input: Rs, source register A from Instruction Decoder
+*	input: Rt, source register B from Instruction Decoder
+* 	input: Rdest, destination register from Instruction Decoder
+*	input: writeData, from writeDataMux - data to write back to destination register
+*	output: RsData, source register A data output
+*	output: RtData, source register B data output
+*	output: RaData, return address for Program Counter
+*/
 module RegFile#(parameter REGBITS = 5,WIDTH = 32)(
-		input clk,
-		input reset,
-		input regWriteEn,
-		input RaWriteEn,
+		input clk, reset, regWriteEn, RaWriteEn,
 		input[REGBITS-1:0] Rs,			//left argument
 		input[REGBITS-1:0] Rt,			//right argument
 		input[REGBITS-1:0] Rdest,		//write destination

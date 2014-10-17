@@ -18,7 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-/* input: PSRsel comes from instruction[22:18]
+/* PROGRAM STATUS REGISTER
+*	input: PSRsel comes from instruction[22:18]
 *	input: PSRwrite is the PSR register outputted from the ALU
 *	output: PSRcond is the 1-bit output based on PSRsel controlling the multiplexor
 */

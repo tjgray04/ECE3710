@@ -15,7 +15,7 @@
 
   <!--                                                          -->
 
-  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
 
   <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
 
@@ -80,6 +80,11 @@
     <transform xil_pn:end_ts="1413399347" xil_pn:in_ck="4248859339293568618" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1413399347">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALU_TestBench.v"/>
       <outfile xil_pn:name="ExecutionStage.v"/>
@@ -117,6 +122,11 @@
     <transform xil_pn:end_ts="1413399350" xil_pn:in_ck="4248859339293568618" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1413399350">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALU_TestBench.v"/>
       <outfile xil_pn:name="ExecutionStage.v"/>
@@ -142,6 +152,10 @@
     <transform xil_pn:end_ts="1413399352" xil_pn:in_ck="4248859339293568618" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-7838252784583157075" xil_pn:start_ts="1413399350">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="ProgramStatusRegister_TestBench_beh.prj"/>
       <outfile xil_pn:name="ProgramStatusRegister_TestBench_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
@@ -151,6 +165,8 @@
     <transform xil_pn:end_ts="1413399353" xil_pn:in_ck="7570731353030476543" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="432589779409072080" xil_pn:start_ts="1413399352">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="ProgramStatusRegister_TestBench_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
     </transform>

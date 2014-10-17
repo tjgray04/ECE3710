@@ -31,16 +31,17 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	wire [2:0] aluop;
 
 	/* INSTANTIATE the Program Counter
-	*	input: clk from global clk
-	*	input: reset from global reset
-	*  input: branch from Logic Controller
-	*	input: jump from Logic Controller
-	*	input: jumpRA from Logic Controller
-	*	input: PSRcond from ProgramStatusRegister logic
-	*	input: instruction from instructionROM
-	*	input: immediate from sign extender in Execution Stage
-	*  input: RaData from regfile in Execution Stage
-	*	output: Program Counter address
+	*	input: clk, from global clk
+	*	input: reset, from global reset
+	*  input: branch, from Logic Controller
+	*	input: jump, from Logic Controller
+	*	input: jumpRA, from Logic Controller
+	*	input: PSRcond, from ProgramStatusRegister logic
+	*	input: instruction, from instructionROM
+	*	input: immediate, from sign extender in Execution Stage
+	*  input: RaData, from regfile in Execution Stage
+	* 	output: returnAdr, return address - send to Execution Stage to RegFile
+	*	output: PC, Program Counter address
 	*/
 	ProgramCounter PC(.clk(clk), .reset(reset), .branch(branch), .jump(jump), .jumpRA(jumpRA), 
 							.PSRcond(PSRcond), .instruction(instruction), .immediate(immediate), .RaData(RaData),
@@ -55,7 +56,9 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	*	input: RaWriteEn from Logic Controller
 	*	input: instruction from InstructionROM
 	*	input: returnAddr is the return address from the Program Counter
-	*	input:
+	*	input: RaWriteData from Logic Controllers
+	*	input: aluop is the ALU operation determined by the Logic Controller
+	*	input: shifttype from Logic Controller
 	*	output:
 	*	output:
 	*	output:

@@ -18,6 +18,19 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+/* PROGRAM COUNTER
+*	input: clk, from global clk
+*	input: reset, from global reset
+*  input: branch, from Logic Controller
+*	input: jump, from Logic Controller
+*	input: jumpRA, from Logic Controller
+*	input: PSRcond, from ProgramStatusRegister logic
+*	input: instruction, from instructionROM
+*	input: immediate, from sign extender in Execution Stage
+*  input: RaData, from regfile in Execution Stage
+*	output: returnAdr, return address
+*	output: PC, Program Counter address
+*/
 module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 							 (input clk, reset, branch, jump, jumpRA, PSRcond,
 							 input  [WIDTH-1:0] instruction, immediate, RaData,
