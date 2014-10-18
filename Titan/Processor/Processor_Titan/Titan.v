@@ -38,15 +38,34 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	*	input: jumpRA, from Logic Controller
 	*	input: PSRcond, from ProgramStatusRegister logic
 	*	input: instruction, from instructionROM
-	*	input: immediate, from sign extender in Execution Stage
+	*	input: immediateExt, from sign extender in Execution Stage
 	*  input: RaData, from regfile in Execution Stage
 	* 	output: returnAdr, return address - send to Execution Stage to RegFile
 	*	output: PC, Program Counter address
 	*/
 	ProgramCounter PC(.clk(clk), .reset(reset), .branch(branch), .jump(jump), .jumpRA(jumpRA), 
-							.PSRcond(PSRcond), .instruction(instruction), .immediate(immediate), .RaData(RaData),
+							.PSRcond(PSRcond), .instruction(instruction), .immediate(immediateExt), .RaData(RaData),
 							.returnAdr(returnAdr), .PC(PC));
-							
+	
+	/* Instantiate Memory Blocks - InstructionROM
+	*  input: enable from Logic Controller
+	*  input: PCadr from Program Counter
+	*  output: instruction from memory
+	*/
+	InstructionROM instROM(.clk(clk), .enable(enROM), .PCadr(PC), .instruction(instruction));
+	
+	/* Instantiate an Instruction Decoder
+	*	input: instruction, instructionROM
+	*	output: opCode, operation code from instruction - to Logic Controller
+	*	output: functCode, function code from instruction - to Logic Controller
+	*	output: Rs, source register A from instruction
+	*	output: Rt, source register B from instruction
+	*	output: Rdest, destination register from instrucction
+	*	output: immediate, immediate value from instruction
+	*/
+	InstructionDecoder InstDec(.RtSrcReg(RtSrcReg),.instruction(instruction), .opCode(opCode), .functCode(functCode), 
+										.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate));
+										
 	/* Instantiate the Execution Stage
 	*	input: clk from global clk
 	*	input: reset from global reset
@@ -59,31 +78,37 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	*	input: RaWriteData from Logic Controllers
 	*	input: aluop is the ALU operation determined by the Logic Controller
 	*	input: shifttype from Logic Controller
-	*	output:
-	*	output:
-	*	output:
-	*	output:
+	*	output: immediateExt, extended immediate value to be used in Program Counter
 	*/
-	ExecutionStage ExStage(.clk(clk), .reset(reset), .aluSrcb(aluSrcb), .memSrc(memSrc),
-		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .instruction(instruction),
-		.returnAddr(returnAddr), .RaWriteData(RaWriteData), .aluop(aluop), .shifttype(shifttype));
+	ExecutionStage ExStage(.clk(clk), .reset(reset), .enRAM(enRAM), .aluSrcb(aluSrcb), .memSrc(memSrc), .memWrite(memWrite),
+		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .opCode(opCode), .functCode(functCode), 
+		.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate), .returnAddr(returnAddr), .RaWriteData(RaWriteData), 
+		.aluop(aluop), .shifttype(shifttype), .immediateExt(immediateExt));
 	
 	/* Instantiate Logic Controller	
-	*	input:
-	*	input:
-	*	input:
-	*	input:
-	*	input:
-	*	input:
-	*	input:
-	*	input:
-	*	output:
-	*	output:
-	*	output:
-	*	output:
-	*	output:
-	*	output:
+	*	input: opCode, from Instruction Decoder
+	*	input: functCode, from Instruction Decoder
+	*	input: Rs, from Instruction Decoder
+	*	output: aluSrcb, constrol signal to input mux for Source B of ALU - Execution Stage
+	*	output: shiftsrc, control signal to input mux for shifter - Execution Stage
+	*	output: shiftType, control signal to shifter to determine shift type - logical or arithmetic
+	*	output: memSrc, control signal to mux after ALU
+	*	output: memRead, control signal to memory to read back
+	*	output: memWrite, control signal to memory to write
+	*	output: wbSrc, 
+	*	output: wbPSR,
+	*	output: regWriteEn, 
+	*	output: RaWrite,
+	*	output: branch,
+	*	output: jump,
+	*	output: jumpRA,
+	*	output: aluop,
+	*	output: PSRsel, 
 	*/
+	LogicController LogicCtrl(.opCode(opCode), .functCode(functCode), .Rs(Rs), .aluSrcb(aluSrc), 
+					.shiftsrc(shiftsrc), .shiftType(shiftType), .memSrc(memSrc), .memRead(memRead), .memWrite(memWrite), 
+					.enRAM(enRAM), .wbSrc(wbSrc), .wbPSR(wbPSR), .regWriteEn(regWriteEn), .RaWrite(RaWrite), .branch(branch), 
+					.jump(jump), .jumpRA(jumpRA), .aluop(aluop), .PSRsel(PSRsel));
 	
 	/* Instantiate PSR Controller
 	*	input: PSRsel from instruction[22:18] coming from instructionROM
@@ -92,11 +117,5 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	*/
 	ProgramStatusRegister PSR(.PSRsel(instruction[22:18]), .PSRwrite(PSRwrite), .PSRcond(PSRcond));
 	
-	/* Instantiate Memory Blocks - InstructionROM
-	*  input: enable from Logic Controller
-	*  input: PCadr from Program Counter
-	*  output: instruction from memory
-	*/
-	InstructionROM instROM(.clk(clk), .enable(enROM), .PCadr(PC), .instruction(instruction));
-	
-endmodule
+
+	endmodule

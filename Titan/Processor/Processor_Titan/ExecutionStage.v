@@ -20,53 +20,47 @@
 //				CHANGE DATA_2_REGFILE AS DATA WILL NEED TO GO TO MEMORY BLOCK
 //
 //////////////////////////////////////////////////////////////////////////////////
-/*	EXECUTION STAGE - Contains instruction decoder, register file, shifter, ALU
+/*	EXECUTION STAGE - Contains register file, shifter, ALU
 *	input: clk, global clock from top module
 *	input: reset, global reset from top module
 *	input: aluSrcb, mux control signal determining input to source B of ALU, from Logic Controller
 *	input: memSrc, mux control signal determining what gets written to memory, either ALU output of shifter output, from Logic Controller
 *	input: regWriteEn, from Logic Controller - enable write back to register
 *	input: RaWriteEn, from Logic Controller - mux control signal set to 1 if writing return address value to a register
-*	input: instruction, from InstrucitonROM
+*	input: opCode, operation code from Instruction Decoder
+*	input: functCode, function code from Instruction Decoder
+*	input: Rs, source register A from Instruction Decoder
+*	input: Rt, source register B from Instruction Decoder
+*	input: Rdest, destination register from Instruction Decoder
+*	input: immediate, immediate value from Instruction Decoder
 *	input: returnAddr, from Program Counter (PC + 1)
 *	input: RaWriteData, enables write back to return address in RegFile
 *	input: aluop, from Logic Controller, based on instrucion opCode - controls ALU
 *	input: shifttype, from Logic Controller, based on instruction - controls shifter (logical or arithmetic)
+* 	output: immediateExt, extended immediate value to be used in Program Counter
 */
-module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBITS = 18, WIDTH = 32)
-		(input clk, reset, aluSrcb, shiftSrc, memSrc, regWriteEn, RaWriteEn, shifttype,
+module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBITS = 18, ALUOPBITS = 3, WIDTH = 32)
+		(input clk, reset, enRAM, aluSrcb, shiftSrc, memSrc, memWrite, regWriteEn, RaWriteEn, shifttype, 
+		input [OPBITS-1:0] opCode, 
+		input [FUNCTBITS-1:0] functCode,
+		input [REGBITS-1:0] Rs,Rt,Rdest,
+		input [IMMBITS-1:0] immediate,
 		input [WIDTH-1:0] instruction, returnAddr, RaWriteData,
-		input [2:0] aluop);
+		input [ALUOPBITS-1:0] aluop,
+		output [WIDTH-1:0] immediateExt);
 	
 	// Declare internal wires/bus
-	wire [4:0] PSRwrite;
+	wire [REGBITS-1:0] PSRwrite;
 	wire [WIDTH-1:0] RsData, RtData, RaData, ALUMuxOUT, ShiftMuxOUT;
-	wire [WIDTH-1:0] ShiftDataOUT, ALUDataOUT, Data_2_RegFile;
-	wire [OPBITS-1:0] opCode;
-	wire [FUNCTBITS-1:0] functCode;
-	wire [IMMBITS-1:0] immediate;
-	wire [WIDTH-1:0] immediateExt;
-	wire [REGBITS-1:0] Rs,Rt,Rdest;
-		
-	/* Instantiate an Instruction Decoder
-	*	input: instruction, instructionROM
-	*	output: opCode, operation code from instruction - to Logic Controller
-	*	output: functCode, function code from instruction - to Logic Controller
-	*	output: Rs, source register A from instruction
-	*	output: Rt, source register B from instruction
-	*	output: Rdest, destination register from instrucction
-	*	output: immediate, immediate value from instruction
-	*/
-	InstructionDecoder InstDec(.instruction(instruction), .opCode(opCode), .functCode(functCode), 
-										.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate));
-	
+	wire [WIDTH-1:0] ShiftDataOUT, ALUDataOUT, Data_2_dataRAM, Data_2_RegFile;
+	 
 	/*	Instantiate REGISTER FILE
 	*	input: clk, global clock from top module
 	*	input: reset, global reset from top module
 	*	input: regWriteEn, from Logic Controller - enable write back to register
 	*	input: RaWriteEn, from Logic Controller - control signal enabling writing to return address register reg31
 	*	input: Rs, source register A from Instruction Decoder
-	*	input: Rt, source register B from Instruction Decoder
+	*	input: RtRegIn, source register B from RtSrcReg MUX to determine input for Rt
 	* 	input: Rdest, destination register from Instruction Decoder
 	*	input: writeData, from writeDataMux - data to write back to destination register
 	*	output: RsData, source register A data output
@@ -75,6 +69,7 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*/
 	RegFile regfile(.clk(clk), .reset(reset), .regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .Rs(Rs),	.Rt(Rt),
 						 .Rdest(Rdest), .writeData(writeData), .RsData(RsData), .RtData(RtData), .RaData(RaData));
+	
 	
 	/* Instantiate a MUX for writeData (from memory, or from return address)
 	*	input: Data_2_RegFile, data from ALU operation/memory
@@ -123,12 +118,32 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*	input: memSrc, control signal from Logic Controller
 	*	output: Data_2_RegFile, output data to 
 	*/
-	Mux ALU_2_RegFile(.d0(ShiftDataOUT), .d1(ALUDataOUT), .select(memSrc), .out(Data_2_RegFile));
+	Mux ALU_2_dataRAM(.d0(ShiftDataOUT), .d1(ALUDataOUT), .select(memSrc), .out(Data_2_dataRAM));
 
 	/* Instantiate a SignExtender to extend the immediate value to 32-bits
 	*	input: immediate, 18-bit immdiate value from instruction decoder
-	*	output: immediate, 32-bit sign extended immediate value
+	*	output: immediateExt, 32-bit sign extended immediate value
 	*/
 	SignExtender SignExtend1(.data_in(immediate), .data_out(immediateExt));
 	
+	/*	DATA RANDOM ACCESS MEMORY
+	*	input: clk, global clock from top module
+	*	input: enRAM, 
+	*	input:
+	*	input:
+	*	input:
+	*	input:
+	*	output: memData
+	*	output:
+	*	output:
+	*/
+	DataRAM dataRAM(.clk(clk), .enRAM(enRAM), .memWrite(memWrite), .input_data(RtData), .address(Data_2_dataRAM), .memData(memData));
+	
+	/* Instantiate a MUX for data inputed back into regFile
+	*	input: memData, output from Shifter
+	*	input: Data_2_dataRAM, output from ALU_2_dataRAM MUX
+	*	input: wbSrc, control signal from Logic Controller
+	*	output: Data_2_RegFile, output data to RegFile
+	*/
+	Mux ALU_2_dataRAM(.d0(memData), .d1(Data_2_dataRAM), .select(wbSrc), .out(Data_2_RegFile));
 endmodule
