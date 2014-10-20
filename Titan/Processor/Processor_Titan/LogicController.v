@@ -19,29 +19,28 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 /*	LOGIC CONTROLLER
-*	input: opCode
-*	input: functCode
-*	input: Rs
-*	output: aluSrcb
-*	output: shiftsrc
-*	output: shiftType
-*	output: memSrc
-*	output: memRead
-*	output: memWrite
-*	output: wbSrc
-*	output: wbPSR
-*	output: regWriteEn
-*	output: RaWrite
-*	output: branch
-*	output: jump
-*	output: jumpRA
-*	output: PSRsel
+*	input: opCode, from Instruction Decoder
+*	input: functCode, from Instruction Decoder
+*	input: Rs, from Instruction Decoder
+*	output: aluSrcb, constrol signal to input mux for Source B of ALU - Execution Stage
+*	output: shiftsrc, control signal to input mux for shifter - Execution Stage
+*	output: shiftType, control signal to shifter to determine shift type - logical or arithmetic
+*	output: memSrc, control signal to mux after ALU
+*	output: memWrite, control signal to memory to write
+*	output: wbSrc, control signal to MUX after dataRAM to decide which data to write back to RegFile
+*	output: wbPSR, MUX in path to writeData for RegFile to determine if writing back PSR or not
+*	output: regWriteEn, write back signal to RegFile to enable writing to a register
+*	output: RaWrite, control siganl to MUX to determine writing back return address RA 
+*	output: branch, control signal to branch AND gate signifying a branch will take place
+*	output: jump, control signal to jump MUX signifying a jump will take place
+*	output: jumpRA, control signal to jumpRA MUX signifying a jumpRA will take place
+*	output: PSRsel, control signal to PSR MUX to determine output bit based on desired condition
 */
 module LogicController#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5)
 	(input [OPBITS-1:0] opCode,
 	 input [FUNCTBITS-1:0] functCode,
 	 input [REGBITS-1:0] Rs,
-	 output reg aluSrcb, shiftsrc, shiftType, memSrc, memRead, memWrite, enRAM, wbSrc, wbPSR, RtSrcReg, regWriteEn, RaWrite, branch, jump, jumpRA,
+	 output reg aluSrcb, shiftsrc, shiftType, memSrc, memWrite, enRAM, wbSrc, wbPSR, RtSrcReg, regWriteEn, RaWrite, branch, jump, jumpRA,
 	 output reg [ALUOPBITS-1:0] aluop,
 	 output reg [REGBITS-1:0] PSRsel);
 

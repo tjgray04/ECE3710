@@ -95,18 +95,17 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	*	output: memSrc, control signal to mux after ALU
 	*	output: memRead, control signal to memory to read back
 	*	output: memWrite, control signal to memory to write
-	*	output: wbSrc, 
-	*	output: wbPSR,
-	*	output: regWriteEn, 
-	*	output: RaWrite,
-	*	output: branch,
-	*	output: jump,
-	*	output: jumpRA,
-	*	output: aluop,
-	*	output: PSRsel, 
+	*	output: wbSrc, control signal to MUX after dataRAM to decide which data to write back to RegFile
+	*	output: wbPSR, MUX in path to writeData for RegFile to determine if writing back PSR or not
+	*	output: regWriteEn, write back signal to RegFile to enable writing to a register
+	*	output: RaWrite, control siganl to MUX to determine writing back return address RA 
+	*	output: branch, control signal to branch AND gate signifying a branch will take place
+	*	output: jump, control signal to jump MUX signifying a jump will take place
+	*	output: jumpRA, control signal to jumpRA MUX signifying a jumpRA will take place
+	*	output: PSRsel, control signal to PSR MUX to determine output bit based on desired condition
 	*/
 	LogicController LogicCtrl(.opCode(opCode), .functCode(functCode), .Rs(Rs), .aluSrcb(aluSrc), 
-					.shiftsrc(shiftsrc), .shiftType(shiftType), .memSrc(memSrc), .memRead(memRead), .memWrite(memWrite), 
+					.shiftsrc(shiftsrc), .shiftType(shiftType), .memSrc(memSrc), .memWrite(memWrite), 
 					.enRAM(enRAM), .wbSrc(wbSrc), .wbPSR(wbPSR), .regWriteEn(regWriteEn), .RaWrite(RaWrite), .branch(branch), 
 					.jump(jump), .jumpRA(jumpRA), .aluop(aluop), .PSRsel(PSRsel));
 	

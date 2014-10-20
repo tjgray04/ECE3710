@@ -43,8 +43,10 @@ module ProgramStatusRegister_TestBench;
 		PSRsel = 0;
 		PSRwrite = 0;
 
-		// Wait 100 ns for global reset to finish
-		#100;
+		// Wait 10 ns for global reset to finish
+		#10;
+		// Add stimulus here
+		
 		// set Z = 1, and N = 1
       PSRwrite = 5'b00011;
 		// check return value for EQ condition
@@ -55,7 +57,7 @@ module ProgramStatusRegister_TestBench;
 		#20;
 		// check return value for LT condtion
 		PSRsel = 5'b01100; // should return 0 (false), N!=0 & Z!=0
-		// Add stimulus here
+
 
 	end
       

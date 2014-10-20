@@ -5,10 +5,91 @@
 <!--     behavior or data corruption.  It is strongly advised that -->
 <!--     users do not edit the contents of this file.              -->
 <!--                                                               -->
-<!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
+<!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/u0499404/ECE3710/Processor_Titan/InstructionROM.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v&quot; into library work</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">91</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">93</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">95</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">97</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">99</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">101</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">103</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">105</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">107</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">109</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">111</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">113</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">115</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">117</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">119</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">121</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">123</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">125</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">127</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">129</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">132</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">135</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">137</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">140</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">142</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">144</arg>. <arg fmt="%s" index="3">Syntax error near &quot;8&quot;.</arg>
+</msg>
+
+<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController_TestBench.v</arg>&quot; Line <arg fmt="%d" index="2">148</arg>. <arg fmt="%s" index="3">Syntax error near &quot;end&quot;.</arg>
 </msg>
 
 </messages>
