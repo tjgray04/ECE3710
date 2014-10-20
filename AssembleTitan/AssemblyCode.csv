@@ -1,0 +1,10 @@
+add,r3,r1,r2
+addi,r4,r3,-4
+
+
+
+
+// This is a test loop
+loop:
+addi,r7,r8,-7
+j,loop:
