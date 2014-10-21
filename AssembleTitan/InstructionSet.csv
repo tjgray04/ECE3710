@@ -11,11 +11,13 @@ op,rtype,xor,0000,0011
 op,rtype,not,0000,0100
 op,rtype,lsh,1000,0100
 op,rtype,ash,1000,0110
-op,rtype,ld,0100,0000
-op,rtype,str,0100,0100
-op,rtype,scond,0100,1101
+op,rtype,scond,0100,1101,//How is this different from jump?
+
 
 //I-type
+op,rtype,ld,0100,0000,//Needs a new op code so that it can be an iType
+op,rtype,str,0100,0100,//Needs a new op code so that it can be an iType
+
 op,itype,addi,0101
 op,itype,addui,0110
 op,itype,subi,1001
@@ -28,20 +30,53 @@ op,itype,lshi,1000
 op,itype,ashi,1000
 
 //J-Type
-op,jtype,jal,1111,//NOT RIGHT
-op,jtype,jra,0111,//NOT RIGHT
+op,jtype,jal,1111
+op,jtype,jra,0111
 op,jtype,j,0100
 
 
-//Branch?
+//Branch
+op,itype,b,1100
+op,branch,beq,eq
+op,branch,bne,ne
+op,branch,bge,ge
+op,branch,bcs,cs
+op,branch,bcc,cc
+op,branch,bhi,hi
+op,branch,bls,ls
+op,branch,blo,lo
+op,branch,bhs,hs
+op,branch,bgt,gt
+op,branch,ble,le
+op,branch,bfs,fs
+op,branch,bfc,fc
+op,branch,blt,lt
+
+//Conditions
+reg,eq,00000
+reg,ne,00001
+reg,ge,01101
+reg,cs,00010
+reg,cc,00011
+reg,hi,00100
+reg,ls,00101
+reg,lo,01010
+reg,hs,01011
+reg,gt,00110
+reg,le,00111
+reg,fs,01000
+reg,fc,01001
+reg,lt,01100
 
 
-
-//Pseudo Stuff
+//Pseudo Stuff //Not Ready yet
 op,pseudo,move,1110,//This opCode needs to change
 pseudo,move,add,Rd,Rs,r0
 
 //Rules?
+
+//Special Registers
+reg,x,00000
 
 //Registers
 reg,r0,00000

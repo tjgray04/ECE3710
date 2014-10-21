@@ -43,10 +43,10 @@ class Assembler:
 		assemblyCode = self.importCSVfile(codeFile)
 		
 		#Assemble assemble the code
-		assembledCode,labels = self.assembleCode(assemblyCode,op,reg)
+		assembledCode,labels,address = self.assembleCode(assemblyCode,op,reg)
 		
 		#Implement labels & Jumps
-		assembledCode = self.insertLabels(assembledCode,labels)
+		assembledCode = self.insertLabels(assembledCode,labels,address)
 		
 		
 		print ''
@@ -56,6 +56,16 @@ class Assembler:
 		#Implement branches
 		
 		#Write to CSV file
+		self.saveFile(codeFile,assembledCode)
+		
+	def saveFile(self,filename,assembledCode):
+			file = filename[:-4]+'.dat'
+			with open(file, 'wb') as f:
+				writer = csv.writer(f)
+				for line in assembledCode:
+					writer.writerow([line])
+			print ''
+			print 'Saved the assembled code as '+file
 		
 	def assembleCode(self,assemblyCode,op,reg):
 		'''
@@ -63,6 +73,7 @@ class Assembler:
 		each line into its binary equivalent. 
 		'''
 		labels = {}
+		address = {}
 		assembledCode = []
 		PC = 0
 		
@@ -77,6 +88,7 @@ class Assembler:
 			if line[0].endswith(":"):
 				#print line[0]+' '+str(PC)
 				labels[line[0]] = self.dec2bin(PC,28) #Store labels in a dictionary with their binary addresses
+				address[line[0]] = PC
 			else:
 				#Determine the type,opCode,and function code
 				for code in op:
@@ -96,6 +108,8 @@ class Assembler:
 					
 				elif type == 'rtype':
 					binary = self.rType(opCode,func,line,reg)
+				elif type == 'branch':
+					binary = self.branchType(opCode,line,reg)
 				
 				#Record each assembled line
 				assembledCode.append(binary)
@@ -103,9 +117,9 @@ class Assembler:
 			#increment the Program Counter	
 			PC+=1
 		
-		return assembledCode,labels
+		return assembledCode,labels,address
 		
-	def insertLabels(self,assembledCode,labels):
+	def insertLabels(self,assembledCode,labels,address):
 		'''
 		This code searches for labels ending in ":". Then the labels are replaced with binary addresses to complete 
 		the assembled code. 
@@ -116,8 +130,21 @@ class Assembler:
 			if line.endswith(':'): #search for labels      
 				for label in labels:#find the right label
 					index = len(label)*-1
+					print line[index:]
 					if line[index:] == label:
 						newLine = line[0:4]+labels[label] #find the address that goes with that label
+						assembledCode[count]= newLine  #replace the label with a binary address
+						#print assembledCode[count]
+						
+			#handle branches correctly			
+			elif line.endswith('b'):
+				for label in labels:#find the right label
+					index = len(label)*-1-1
+					branchImm = address[label] - count-1 #find the distance to branch
+					branchImm = self.dec2bin(branchImm,18)
+	
+					if line[index:-1] == label:
+						newLine = line[:index]+branchImm #find the address that goes with that label
 						assembledCode[count]= newLine  #replace the label with a binary address
 						#print assembledCode[count]
 			count+=1
@@ -130,6 +157,16 @@ class Assembler:
 		binary later. 
 		'''
 		binary = opCode+line[1]
+		return binary
+		
+	def branchType(self,opCode,line,reg):
+		if line[1].endswith(':'):
+			newline = ['b','x',opCode,'0']
+			binary = self.iType('1100',newline,reg)
+			binary = binary[:-18]+line[1]+'b'
+		else:
+			newline = ['b','x',opCode,line[1]]
+			binary = self.iType('1100',newline,reg)
 		return binary
 		
 	def iType(self,opCode,line,reg):
@@ -252,7 +289,8 @@ class Assembler:
 				
 				
 		return binNumber
-			
+		
+		
 			
 			
 			
