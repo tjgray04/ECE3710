@@ -32,9 +32,9 @@
 *	output: PC, Program Counter address
 */
 module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
-							 (input clk, reset, branch, jump, jumpRA, PSRcond,
+							 (input clk, reset, branch, jump, jumpRA, PSRcond, PCEn,
 							 input  [WIDTH-1:0] instruction, immediate, RaData,
-							 output [WIDTH-1:0] returnAdr,
+							 output [WIDTH-1:0] returnAddr,
 							 output reg [WIDTH-1:0] PC);
 
 	wire [WIDTH-1:0] BranchImm, PC2, JumpImm, PC3, PC_Next;
@@ -45,20 +45,23 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 			PC <= 0;
 		else
 		begin
-			PC <= PC_Next;
+			if(PCEn)
+				PC <= PC_Next;
+			else
+				PC <= PC;
 		end
 	end
 	
 	// PC +1 adder
-	assign returnAdr = PC + 1;
+	assign returnAddr = PC + 1;
 	// Branch adder
-	assign BranchImm = returnAdr + $signed(immediate);
-	// Jump based on immediate value
-	assign JumpImm = {returnAdr[WIDTH-1:WIDTH-REGBITS], instruction[(WIDTH-REGBITS)-1:0]};
+	assign BranchImm = returnAddr + $signed(immediate);
+	// Jump based on immediate value {[returnAddr[31:28],instruction[27:0]}
+	assign JumpImm = {returnAddr[WIDTH-1:(WIDTH-REGBITS)+1], instruction[(WIDTH-REGBITS):0]};
 	// branch and PSR[] both need to be asserted for a branch to happen
 	assign branchTrue = branch & PSRcond;
 	// branch mux
-	Mux branchMux(.d0(PC1), .d1(BranchImm), .select(branchTrue), .out(PC2));
+	Mux branchMux(.d0(returnAddr), .d1(BranchImm), .select(branchTrue), .out(PC2));
 	// jump mux
 	Mux jumpMux(.d0(PC2), .d1(JumpImm), .select(jump), .out(PC3));
 	// jumpRA mux

@@ -23,13 +23,21 @@
 *	input: reset from Nexys3 - global reset
 *	input:
 */
-module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controller
-						
-    );
+module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBITS = 18, WIDTH = 32)
+	(input clk, reset,
+	 input aluSrcb, RtSrcReg, RaWriteEn, shiftsrc, shiftType, memSrc, memWrite, enROM, enRAM, wbSrc, 
+	 input wbPSR, regWriteEn, RaWrite, branch, jump, jumpRA, PCEn, CFwrite, LZNwrite,
+	 input [ALUOPBITS-1:0] aluop,
+	 input [REGBITS-1:0] PSRsel);
 
-	wire [WIDTH-1:0] instruction, immediate, RaData, PC, returnAddr, RaWriteData;
-	wire [2:0] aluop;
-
+	wire [WIDTH-1:0] instruction, immediateExt, RaData, returnAddr, PCadr, RaWriteData, PSRcondExt;
+	//wire [ALUOPBITS-1:0] aluop;
+	wire [OPBITS-1:0] opCode;
+	wire [FUNCTBITS-1:0] functCode;
+	wire [REGBITS-1:0] Rs, Rt, Rdest, PSRwrite; 
+	//wire [REGBITS-1:0] PSRsel;
+	wire [IMMBITS-1:0] immediate;
+	
 	/* INSTANTIATE the Program Counter
 	*	input: clk, from global clk
 	*	input: reset, from global reset
@@ -40,19 +48,19 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	*	input: instruction, from instructionROM
 	*	input: immediateExt, from sign extender in Execution Stage
 	*  input: RaData, from regfile in Execution Stage
-	* 	output: returnAdr, return address - send to Execution Stage to RegFile
+	* 	output: returnAddr, return address - send to Execution Stage to RegFile
 	*	output: PC, Program Counter address
 	*/
 	ProgramCounter PC(.clk(clk), .reset(reset), .branch(branch), .jump(jump), .jumpRA(jumpRA), 
 							.PSRcond(PSRcond), .instruction(instruction), .immediate(immediateExt), .RaData(RaData),
-							.returnAdr(returnAdr), .PC(PC));
+							.returnAddr(returnAddr), .PC(PCadr), .PCEn(PCEn));
 	
 	/* Instantiate Memory Blocks - InstructionROM
 	*  input: enable from Logic Controller
 	*  input: PCadr from Program Counter
 	*  output: instruction from memory
 	*/
-	InstructionROM instROM(.clk(clk), .enable(enROM), .PCadr(PC), .instruction(instruction));
+	InstructionROM instROM(.clk(clk), .enable(enROM), .PCadr(PCadr), .instruction(instruction));
 	
 	/* Instantiate an Instruction Decoder
 	*	input: instruction, instructionROM
@@ -67,23 +75,25 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 										.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate));
 										
 	/* Instantiate the Execution Stage
-	*	input: clk from global clk
-	*	input: reset from global reset
-	*	input: aluSrcb from Logic Controller
-	*	input: memSrc from Logic Controller
-	*	input: regWriteEn from Logic Controller
-	*	input: RaWriteEn from Logic Controller
-	*	input: instruction from InstructionROM
-	*	input: returnAddr is the return address from the Program Counter
-	*	input: RaWriteData from Logic Controllers
-	*	input: aluop is the ALU operation determined by the Logic Controller
-	*	input: shifttype from Logic Controller
+	*	input: clk, from global clk
+	*	input: reset, from global reset
+	*	input: aluSrcb, from Logic Controller
+	*	input: memSrc, from Logic Controller
+	*	input: regWriteEn, from Logic Controller
+	*	input: RaWriteEn, from Logic Controller
+	*	input: instruction, from InstructionROM
+	*	input: returnAddr, is the return address from the Program Counter
+	*	input: RaWriteData, from Logic Controllers
+	*	input: PSRcondExt, from PSR module
+	*	input: aluop, is the ALU operation determined by the Logic Controller
+	*	input: shifttype, from Logic Controller
 	*	output: immediateExt, extended immediate value to be used in Program Counter
+	* 	output: PSRwrite, PSR register to go into PSR module
 	*/
-	ExecutionStage ExStage(.clk(clk), .reset(reset), .enRAM(enRAM), .aluSrcb(aluSrcb), .memSrc(memSrc), .memWrite(memWrite),
-		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .opCode(opCode), .functCode(functCode), 
-		.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate), .returnAddr(returnAddr), .RaWriteData(RaWriteData), 
-		.aluop(aluop), .shifttype(shifttype), .immediateExt(immediateExt));
+	ExecutionStage ExStage(.clk(clk), .reset(reset), .enRAM(enRAM), .aluSrcb(aluSrcb), .shiftSrc(shiftSrc), .memSrc(memSrc), .memWrite(memWrite),
+		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .opCode(opCode), .functCode(functCode), .RtSrcReg(RtSrcReg), .wbPSR(wbPSR), 
+		.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate), .returnAddr(returnAddr), .RaWriteData(RaWriteData), .wbSrc(wbSrc), 
+		.PSRcondExt(PSRcondExt), .aluop(aluop), .shifttype(shifttype), .immediateExt(immediateExt), .RaData(RaData), .PSRwrite(PSRwrite));
 	
 	/* Instantiate Logic Controller	
 	*	input: opCode, from Instruction Decoder
@@ -93,7 +103,9 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	*	output: shiftsrc, control signal to input mux for shifter - Execution Stage
 	*	output: shiftType, control signal to shifter to determine shift type - logical or arithmetic
 	*	output: memSrc, control signal to mux after ALU
-	*	output: memRead, control signal to memory to read back
+	*	output: enROM, enable Instruction ROM
+	*	output: enRAM, enable Data RAM
+	*	output: writeReg, enable write back to register in RegFile
 	*	output: memWrite, control signal to memory to write
 	*	output: wbSrc, control signal to MUX after dataRAM to decide which data to write back to RegFile
 	*	output: wbPSR, MUX in path to writeData for RegFile to determine if writing back PSR or not
@@ -104,17 +116,20 @@ module Titan#(parameter WIDTH = 32)(input clk, reset, enROM//from Logic Controll
 	*	output: jumpRA, control signal to jumpRA MUX signifying a jumpRA will take place
 	*	output: PSRsel, control signal to PSR MUX to determine output bit based on desired condition
 	*/
-	LogicController LogicCtrl(.opCode(opCode), .functCode(functCode), .Rs(Rs), .aluSrcb(aluSrc), 
-					.shiftsrc(shiftsrc), .shiftType(shiftType), .memSrc(memSrc), .memWrite(memWrite), 
-					.enRAM(enRAM), .wbSrc(wbSrc), .wbPSR(wbPSR), .regWriteEn(regWriteEn), .RaWrite(RaWrite), .branch(branch), 
-					.jump(jump), .jumpRA(jumpRA), .aluop(aluop), .PSRsel(PSRsel));
+	
+	/*LogicController LogicCtrl(.opCode(opCode), .functCode(functCode), .Rs(Rs), .aluSrcb(aluSrcb), .RtSrcReg(RtSrcReg),
+					.shiftsrc(shiftsrc), .shiftType(shiftType), .memSrc(memSrc), .memWrite(memWrite),
+					.enRAM(enRAM), .enROM(enROM),.wbSrc(wbSrc), .wbPSR(wbPSR), .regWriteEn(regWriteEn), .RaWrite(RaWrite), .branch(branch), 
+					.jump(jump), .jumpRA(jumpRA), .aluop(aluop), .PSRsel(PSRsel));*/
 	
 	/* Instantiate PSR Controller
+	*	input: clk, from global clk
+	*	input: CFwrite, signal to enable writing to C and F in PSR register
+	*	input: LSNwrite, signal to enable writing to L, Z and N in PSR register
 	*	input: PSRsel from instruction[22:18] coming from instructionROM
 	*	input: PSRwrite from ALU in the Execution Stage
 	*	output: PSRcond, 1-bit, returns 1 (true) if condition (i.e. EQ, NE, GE, etc.) was true based on PSRwrite
 	*/
-	ProgramStatusRegister PSR(.PSRsel(instruction[22:18]), .PSRwrite(PSRwrite), .PSRcond(PSRcond));
+	ProgramStatusRegister PSR(.clk(clk), .reset(reset), .CFwrite(CFwrite), .LZNwrite(LZNwrite), .PSRsel(instruction[22:18]), .PSRwrite(PSRwrite), .PSRcond(PSRcond), .PSRcondExt(PSRcondExt));
 	
-
 	endmodule

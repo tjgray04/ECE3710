@@ -8,43 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/ALU.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/DataRAM.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/ExecutionStage.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/InstructionDecoder.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/InstructionROM.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/LogicController.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/Mux.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/ProgramCounter.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/ProgramStatusRegister.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/RegFile.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/Shifter.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/SignExtender.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Mark/Documents/ECE 3710 - Computer Design Lab/ECE3710/Titan/Processor/Processor_Titan/Titan.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;U:/ECE 3710/Processor_Titan/Titan_TestBench02.v&quot; into library work</arg>
 </msg>
 
 </messages>

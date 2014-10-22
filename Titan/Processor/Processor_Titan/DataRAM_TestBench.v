@@ -52,12 +52,54 @@ module DataRAM_TestBench;
 		input_data = 0;
 		address = 0;
 
-		// Wait 100 ns for global reset to finish
-		#100;
+		// Wait 10 ns for global reset to finish
+		#10;
         
 		// Add stimulus here
-
+		// enable RAM
+		enRAM = 1;
+		#10;
+		// write something to consecutive addresses, starting at address 0
+		memWrite = 1;
+		input_data = 32'h0000;
+		#10;
+		input_data = 32'h0001;
+		address = 32'h0001;
+		#10;
+		input_data = 32'h0002;
+		address = 32'h0002;
+		#10;
+		input_data = 32'h0003;
+		address = 32'h0003;
+		#10;
+		input_data = 32'h0004;
+		address = 32'h0004;
+		#10;
+		input_data = 32'h0005;
+		address = 32'h0005;
+		#10;
+		// Try a higher address
+		input_data = 32'hffffffff;
+		address = 32'h00ff;
+		#10;
+		// read from consecutive addresses, starting at highest address, then working back down 
+		memWrite = 0;
+		address = 32'h00ff;
+		#10;
+		address = 32'h0005;
+		#10;
+		address = 32'h0004;
+		#10;
+		address = 32'h0003;
+		#10;
+		address = 32'h0002;
+		#10;
+		address = 32'h0001;
+		#10;
+		address = 32'h0000;
+		#10;
 	end
-      
+   
+	always #1 clk = ~clk;
 endmodule
 

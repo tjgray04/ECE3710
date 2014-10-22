@@ -1,0 +1,29 @@
+Command line:
+   Titan_TestBench02_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  62043
+
+Tue Oct 21 18:17:02 2014
+
+
+ Elaboration Time: 0.1092 sec
+
+ Current Memory Usage: 673.792 Meg
+
+ Total Signals          : 198
+ Total Nets             : 942
+ Total Signal Drivers   : 69
+ Total Blocks           : 23
+ Total Primitive Blocks : 18
+ Total Processes        : 82
+ Total Traceable Variables  : 104
+ Total Scalar Nets and Variables : 6295107
+Total Line Count : 213
+
+ Total Simulation Time: 0.249601 sec
+
+ Current Memory Usage: 673.792 Meg
+
+Tue Oct 21 18:19:44 2014
+

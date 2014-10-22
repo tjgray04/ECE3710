@@ -32,7 +32,7 @@ module InstructionROM#(parameter WIDTH = 32, ROM_ADDR_BITS = 17)// assures 2^17 
 //   <reg_or_wire> [ROM_ADDR_BITS-1:0] <address>; //this is PCadr
    
    initial
-      $readmemb("test.dat", inst_ROM, 0, ((2**ROM_ADDR_BITS)-1)); //, <begin_address>, <end_address>);
+      $readmemb("AssemblyCode.dat", inst_ROM, 0, ((2**ROM_ADDR_BITS)-1)); //, <begin_address>, <end_address>);
 
    always @(posedge clk)
       if (enable)

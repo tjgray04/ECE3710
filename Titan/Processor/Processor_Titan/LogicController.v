@@ -40,7 +40,7 @@ module LogicController#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGB
 	(input [OPBITS-1:0] opCode,
 	 input [FUNCTBITS-1:0] functCode,
 	 input [REGBITS-1:0] Rs,
-	 output reg aluSrcb, shiftsrc, shiftType, memSrc, memWrite, enRAM, wbSrc, wbPSR, RtSrcReg, regWriteEn, RaWrite, branch, jump, jumpRA,
+	 output reg aluSrcb, shiftsrc, shiftType, memSrc, memWrite, enRAM, enROM, wbSrc, wbPSR, RtSrcReg, regWriteEn, RaWrite, branch, jump, jumpRA,
 	 output reg [ALUOPBITS-1:0] aluop,
 	 output reg [REGBITS-1:0] PSRsel);
 
@@ -50,9 +50,10 @@ module LogicController#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGB
 		shiftsrc = 0;
 		shiftType = 0;
 		memSrc = 0;
-		memRead = 0;
+		//memRead = 0;
 		memWrite = 0;
 		enRAM = 1;
+		enROM = 1;
 		wbSrc = 0;
 		wbPSR = 0;
 		RtSrcReg = 0;

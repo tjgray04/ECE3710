@@ -17,8 +17,11 @@
 // Revision 0.01 - File Created
 // Additional Comments: 
 //
+//				IF ISSUES, CHECK THE LATCHES CREATED IN CASE STATEMENT
+//
 //////////////////////////////////////////////////////////////////////////////////
 /* ARITHMETIC LOGIC UNIT - ALU
+*	input: reset, global reset from top module
 *	input: arg1, comes from the Rs register from the RegFile
 *	input: arg2, from mux determining input from Rt of RegFile, or [WIDTH-1:0] immediate value
 *	input: aluop, from Logic Controller
@@ -26,6 +29,7 @@
 *	output: PSRwrite, Program Status Register determined by ALU operation 
 */
 module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
+	 input reset,
     input [WIDTH-1:0] arg1,
     input [WIDTH-1:0] arg2,
 	 input [ALUOPBITS-1:0] aluop,
@@ -54,6 +58,8 @@ module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
 	//Subtractor
 	wire [WIDTH-1:0] diff;
 	assign diff = arg1 - arg2;
+	// for compare, set the Z flag high if the difference is zero
+	assign Z = diff ? 0 : 1'b1;
 	
 	//Subtraction overflow checker
 	wire Fsub;
@@ -68,45 +74,50 @@ module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
 	//ALU behavior
 	always@(*)
 	begin
-		case(aluop)
-					// PSRwrite[4:0] = {C,L,F,Z,N}
-			ADD:  begin
-					result = sum[WIDTH-1:0];
-					PSRwrite = {sum[WIDTH],PSRwrite[3],Fadd,PSRwrite[1:0]};
-					end
-			SUB:  begin
-					result = diff;
-					PSRwrite = {~arg1[WIDTH-1] & arg2[WIDTH-1],1'b0,Fsub,2'b00};
-					end
-			OR:  begin
-					result = arg1 | arg2;
-					PSRwrite = PSRwrite;
-					end
-			AND:  begin
-					result = arg1 & arg2;
-					PSRwrite = PSRwrite;
-					end
-			XOR:  begin
-					result = arg1 ^ arg2;
-					PSRwrite = PSRwrite;
-					end
-			NOT:  begin
-					result = ~arg1;
-					PSRwrite = PSRwrite;
-					end
-			MULT: begin
-					result = arg1 * arg2;
-					PSRwrite = PSRwrite;
-					end
-			CMP:  begin
-					result = diff;
-					PSRwrite = {PSRwrite[4],L,PSRwrite[2],diff ? PSRwrite[1] : 1'b1,N};
-					end
-		default: begin
-					result = sum;
-					PSRwrite = PSRwrite;
-					end
-		endcase
+		if(reset)
+			PSRwrite = 5'b0;
+		else
+		begin
+			case(aluop)
+						// PSRwrite[4:0] = {C,L,F,Z,N}
+				ADD:  begin
+						result = sum[WIDTH-1:0];
+						PSRwrite = {sum[WIDTH],1'b0,Fadd,2'b00};
+						end
+				SUB:  begin
+						result = diff;
+						PSRwrite = {(~arg1[WIDTH-1] & arg2[WIDTH-1]),1'b0,Fsub,2'b00};
+						end
+				OR:  begin
+						result = arg1 | arg2;
+						PSRwrite = 5'b0;
+						end
+				AND:  begin
+						result = arg1 & arg2;
+						PSRwrite = 5'b0;
+						end
+				XOR:  begin
+						result = arg1 ^ arg2;
+						PSRwrite = 5'b0;
+						end
+				NOT:  begin
+						result = ~arg1;
+						PSRwrite = 5'b0;
+						end
+				MULT: begin
+						result = arg1 * arg2;
+						PSRwrite = 5'b0;
+						end
+				CMP:  begin
+						result = diff;
+						PSRwrite = {1'b0,L,1'b0,Z,N};
+						end
+			default: begin
+						result = sum;
+						PSRwrite = 5'b0;
+						end
+			endcase
+		end
 	end
 				 
 	

@@ -5,5 +5,11 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"U:/ECE 3710/Processor_Titan/RegFile.v" Line 48: Parameter declaration becomes local in <arg fmt="%s" index="1">RegFile</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"U:/ECE 3710/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in <arg fmt="%s" index="1">ALU</arg> with formal parameter declaration list
+</msg>
+
 </messages>
 

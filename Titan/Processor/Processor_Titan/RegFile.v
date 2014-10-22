@@ -40,40 +40,32 @@ module RegFile#(parameter REGBITS = 5,WIDTH = 32)(
 		input[REGBITS-1:0] Rdest,		//write destination
 //		input[WIDTH-1:0] RaWriteData,	//return address register data
 		input[WIDTH-1:0] writeData,   //data to be written back to a register
-		output reg[WIDTH-1:0] RsData,
-		output reg[WIDTH-1:0] RtData,
-		output reg[WIDTH-1:0] RaData
+		output [WIDTH-1:0] RsData,
+		output [WIDTH-1:0] RtData,
+		output [WIDTH-1:0] RaData
     );
 	
 	parameter [REGBITS-1:0] RA = ((1<<REGBITS)-1); //Return address register is RAM[31]
 	//Registers
 	reg[WIDTH-1:0] RAM [(1<<REGBITS)-1:0];	//normally 32 32-bit registers, RAM in this case referes to our 32 available registers
 //	reg[WIDTH-1:0] RaReg;		//Return address register
-
+	
 	//Register behavior
 	always@(posedge clk)
 	begin
 	RAM[0] <= 0;
-	RsData <= RAM[Rs]; // The data is equal to the data at the destination of the source reg Rs
-	RtData <= RAM[Rt]; // The data is equal to the data at the destination of the source reg Rt
-//	RaData <= RaReg;	 // The data is equal to the data at the destination of the return address reg R
-	RaData <= RAM[RA] ;	 // The data is equal to the data at the destination of the return address reg R
-		if(reset)
-		 begin
-			RsData <= 0;
-			RtData <= 0;
-			RaData <= 0;
-//			RaReg  <= 0;
-		 end
-		else
-		 begin
-			// if we are writing back to the register file and the destination register is not the zero register
-			if(regWriteEn && Rdest != 0)
-				RAM[Rdest] <= writeData;
-			// if we are writing back to the return address register
-			if(RaWriteEn)
-				RAM[RA] <= writeData;
-		 end
+//	RsData <= RAM[Rs];
+//	RtData <= RAM[Rt];
+//	RaData <= RAM[31];
+	// if we are writing back to the register file and the destination register is not the zero register
+	if(regWriteEn)
+		RAM[Rdest] <= writeData;
+	// if we are writing back to the return address register
+	else if(RaWriteEn)
+		RAM[RA] <= writeData;
 	end
 
+assign RsData = Rs ? RAM[Rs] : 0;
+assign RtData = Rt ? RAM[Rt] : 0;
+assign RaData = RAM[RA];
 endmodule
