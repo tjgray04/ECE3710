@@ -115,40 +115,60 @@ module Titan_TestBench02;
 		memSrc = 1;
 		wbSrc = 1;
 		CFwrite = 1; //turn on this enable signal for add instructions
-		#2; // wait for addi to complete
-		#2; // wait for addi to complete
-		#2; // wait for addi to complete
 		#3; // wait for addi to complete
-		
-		// change control logic for cmp
-		CFwrite = 0; //trun of this enable signal 
-		regWriteEn = 0;
-		aluSrcb = 1;
-		aluop = 3'b111; //cmp
-		LZNwrite = 1;
-		#2; //wait
-		
-		// change control logic for beq
-		aluop = 3'b000; //doesn't matter - just set back to zero
-		PSRsel = 5'b0_0000;//PSR will set PSRcond for EQ condition
-		branch = 1; // set banch high
-		// regWriteEn = 0; - keep write low
-		#2; // wait
-		// change control logic for add
-		regWriteEn = 1;
-		aluSrcb = 1; //pull from RtData, not the immediate
-		#2; //wait
-		// change control logic for sub
-		aluop = 3'b010;
-		#3; //wait
-		
-		// change control logic for store
+//		PCEn = 0;
+//		#2;
+//		PCEn = 1;
+//		#2; // wait for addi to complete
+//		PCEn = 0;
+//		#2;
+//		PCEn = 1;
+//		#2; // wait for addi to complete
+//		PCEn = 0;
+//		#2;
+////		#3; // wait for addi to complete
+//		
+//		// change control logic for cmp
+//		PCEn = 1;
+//		CFwrite = 0; //trun off this enable signal 
+//		regWriteEn = 0;
+//		aluSrcb = 1;
+//		aluop = 3'b111; //cmp
+//		LZNwrite = 1; // turn on this siganl for cmp
+//		#2; //wait
+//		PCEn = 0;
+//		#2;
+//		
+//		// change control logic for beq
+//		PCEn = 1;
+//		LZNwrite = 0;
+//		aluop = 3'b000; //doesn't matter - just set back to zero
+//		PSRsel = 5'b0_0000;//PSR will set PSRcond for EQ condition
+//		branch = 1; // set banch high
+//		// regWriteEn = 0; - keep write low
+//		#2; // wait
+//		PCEn = 0;
+//		#2;
+//		PCEn = 1;
+//		branch = 0; // set branch low
+//		// change control logic for add
+//		CFwrite = 1;
+//		aluSrcb = 1; //pull from RtData, not the immediate
+//		regWriteEn = 1;
+//		#2; //wait
+//		PCEn = 0;
+//		#2;
+//		// change control logic for sub
+//		PCEn = 1;
+//		aluop = 3'b010;
+//		#3; //wait
+//		
+////		// change control logic for store
 
 
 		
 		// Stop the program counter
 		PCEn = 0;
-		#2;
 		regWriteEn = 0;
 		regWriteEn = 0;
 	end

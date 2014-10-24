@@ -21,13 +21,13 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//wannsee/users/u0655172/ECE 3710/Processor_Titan/RegFile.v";
+static const char *ng0 = "C:/Users/u0499404/ECE3710/Processor_Titan/RegFile.v";
 static int ng1[] = {0, 0};
 static unsigned int ng2[] = {31U, 0U};
 
 
 
-static void Always_54_0(char *t0)
+static void Always_53_0(char *t0)
 {
     char t6[8];
     char t7[8];
@@ -67,7 +67,7 @@ LAB0:    t1 = (t0 + 4376U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(54, ng0);
+LAB2:    xsi_set_current_line(53, ng0);
     t2 = (t0 + 5440);
     *((int *)t2) = 1;
     t3 = (t0 + 4408);
@@ -75,9 +75,9 @@ LAB2:    xsi_set_current_line(54, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(55, ng0);
+LAB4:    xsi_set_current_line(54, ng0);
 
-LAB5:    xsi_set_current_line(56, ng0);
+LAB5:    xsi_set_current_line(55, ng0);
     t4 = ((char*)((ng1)));
     t5 = (t0 + 3456);
     t8 = (t0 + 3456);
@@ -98,7 +98,7 @@ LAB5:    xsi_set_current_line(56, ng0);
     if (t21 == 1)
         goto LAB6;
 
-LAB7:    xsi_set_current_line(61, ng0);
+LAB7:    xsi_set_current_line(57, ng0);
     t2 = (t0 + 1776U);
     t3 = *((char **)t2);
     t2 = (t3 + 4);
@@ -110,7 +110,7 @@ LAB7:    xsi_set_current_line(61, ng0);
     if (t26 > 0)
         goto LAB8;
 
-LAB9:    xsi_set_current_line(64, ng0);
+LAB9:    xsi_set_current_line(60, ng0);
     t2 = (t0 + 1936U);
     t3 = *((char **)t2);
     t2 = (t3 + 4);
@@ -133,7 +133,7 @@ LAB6:    t22 = *((unsigned int *)t6);
     xsi_vlogvar_wait_assign_value(t5, t4, 0, *((unsigned int *)t7), t25, 0LL);
     goto LAB7;
 
-LAB8:    xsi_set_current_line(62, ng0);
+LAB8:    xsi_set_current_line(58, ng0);
     t4 = (t0 + 2576U);
     t5 = *((char **)t4);
     t4 = (t0 + 3456);
@@ -165,7 +165,7 @@ LAB11:    t29 = *((unsigned int *)t6);
     xsi_vlogvar_wait_assign_value(t4, t5, 0, *((unsigned int *)t7), t25, 0LL);
     goto LAB12;
 
-LAB13:    xsi_set_current_line(65, ng0);
+LAB13:    xsi_set_current_line(61, ng0);
     t4 = (t0 + 2576U);
     t5 = *((char **)t4);
     t4 = (t0 + 3456);
@@ -198,7 +198,7 @@ LAB16:    t29 = *((unsigned int *)t6);
 
 }
 
-static void Cont_68_1(char *t0)
+static void Cont_64_1(char *t0)
 {
     char t3[8];
     char t4[8];
@@ -245,7 +245,7 @@ LAB0:    t1 = (t0 + 4624U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(68, ng0);
+LAB2:    xsi_set_current_line(64, ng0);
     t2 = (t0 + 2096U);
     t5 = *((char **)t2);
     memset(t4, 0, 8);
@@ -327,7 +327,7 @@ LAB14:    memcpy(t3, t19, 8);
 
 }
 
-static void Cont_69_2(char *t0)
+static void Cont_65_2(char *t0)
 {
     char t3[8];
     char t4[8];
@@ -374,7 +374,7 @@ LAB0:    t1 = (t0 + 4872U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(69, ng0);
+LAB2:    xsi_set_current_line(65, ng0);
     t2 = (t0 + 2256U);
     t5 = *((char **)t2);
     memset(t4, 0, 8);
@@ -456,7 +456,7 @@ LAB14:    memcpy(t3, t19, 8);
 
 }
 
-static void Cont_70_3(char *t0)
+static void Cont_66_3(char *t0)
 {
     char t5[8];
     char *t1;
@@ -484,7 +484,7 @@ LAB0:    t1 = (t0 + 5120U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(70, ng0);
+LAB2:    xsi_set_current_line(66, ng0);
     t2 = (t0 + 3456);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
@@ -512,7 +512,7 @@ LAB1:    return;
 
 extern void work_m_00000000001473915926_3535081231_init()
 {
-	static char *pe[] = {(void *)Always_54_0,(void *)Cont_68_1,(void *)Cont_69_2,(void *)Cont_70_3};
+	static char *pe[] = {(void *)Always_53_0,(void *)Cont_64_1,(void *)Cont_65_2,(void *)Cont_66_3};
 	xsi_register_didat("work_m_00000000001473915926_3535081231", "isim/Titan_TestBench02_isim_beh.exe.sim/work/m_00000000001473915926_3535081231.didat");
 	xsi_register_executes(pe);
 }

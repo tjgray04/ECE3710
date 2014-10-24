@@ -24,18 +24,14 @@
 *	input:
 */
 module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBITS = 18, WIDTH = 32)
-	(input clk, reset,
-	 input aluSrcb, RtSrcReg, RaWriteEn, shiftsrc, shiftType, memSrc, memWrite, enROM, enRAM, wbSrc, 
-	 input wbPSR, regWriteEn, RaWrite, branch, jump, jumpRA, PCEn, CFwrite, LZNwrite,
-	 input [ALUOPBITS-1:0] aluop,
-	 input [REGBITS-1:0] PSRsel);
+	(input clk, reset);
 
 	wire [WIDTH-1:0] instruction, immediateExt, RaData, returnAddr, PCadr, RaWriteData, PSRcondExt;
-	//wire [ALUOPBITS-1:0] aluop;
+	wire [ALUOPBITS-1:0] aluop;
 	wire [OPBITS-1:0] opCode;
 	wire [FUNCTBITS-1:0] functCode;
 	wire [REGBITS-1:0] Rs, Rt, Rdest, PSRwrite; 
-	//wire [REGBITS-1:0] PSRsel;
+	wire [REGBITS-1:0] PSRsel;
 	wire [IMMBITS-1:0] immediate;
 	
 	/* INSTANTIATE the Program Counter
@@ -116,11 +112,13 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*	output: jumpRA, control signal to jumpRA MUX signifying a jumpRA will take place
 	*	output: PSRsel, control signal to PSR MUX to determine output bit based on desired condition
 	*/
-	
-	/*LogicController LogicCtrl(.opCode(opCode), .functCode(functCode), .Rs(Rs), .aluSrcb(aluSrcb), .RtSrcReg(RtSrcReg),
-					.shiftsrc(shiftsrc), .shiftType(shiftType), .memSrc(memSrc), .memWrite(memWrite),
-					.enRAM(enRAM), .enROM(enROM),.wbSrc(wbSrc), .wbPSR(wbPSR), .regWriteEn(regWriteEn), .RaWrite(RaWrite), .branch(branch), 
-					.jump(jump), .jumpRA(jumpRA), .aluop(aluop), .PSRsel(PSRsel));*/
+	LogicController LogicCtrl(.clk(clk), .reset(reset), .opCode(opCode), .Rs(Rs), .functionCode(functCode), .branch(branch),
+					.jump(jump), .jumpRA(jumpRA), .CFWrite(CFWrite), .LZNWrite(LZNWrite), .wbPSR(wbPSR), .RtSrcReg(RtSrcReg), 
+					.wbSrc(wbSrc), .memSrc(memSrc), .shiftSrc(shiftSrc), .aluSrcb(aluSrcb), .regWriteEn(regWriteEn),
+					.raWrite(raWrite), .shiftType(shiftType), .memWrite(memWrite), .pcEn(PCEn), .aluop(aluop), .PSRsel(PSRsel));
+			// input .Rs(Rs)
+			// output .PSRsel(PSRsel)
+
 	
 	/* Instantiate PSR Controller
 	*	input: clk, from global clk

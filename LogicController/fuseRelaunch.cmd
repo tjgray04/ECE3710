@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "U:/ECE 3710/LogicController/LogicController_TestBench_isim_beh.exe" -prj "U:/ECE 3710/LogicController/LogicController_TestBench_beh.prj" "work.LogicController_TestBench" "work.glbl" 

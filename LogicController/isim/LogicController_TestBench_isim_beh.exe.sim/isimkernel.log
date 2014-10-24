@@ -1,0 +1,10 @@
+Command line:
+   LogicController_TestBench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55185
+
+Thu Oct 23 16:31:04 2014
+
+
+ Elaboration Time: 0.1092 sec

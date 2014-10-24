@@ -37,7 +37,7 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 							 output [WIDTH-1:0] returnAddr,
 							 output reg [WIDTH-1:0] PC);
 
-	wire [WIDTH-1:0] BranchImm, PC2, JumpImm, PC3, PC_Next;
+	wire [WIDTH-1:0] BranchImm, PC2, JumpImm, PC3, PC4, PC_Next;
 
 	always@(posedge reset, posedge clk)
 	begin
@@ -47,8 +47,6 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 		begin
 			if(PCEn)
 				PC <= PC_Next;
-			else
-				PC <= PC;
 		end
 	end
 	
@@ -65,6 +63,8 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 	// jump mux
 	Mux jumpMux(.d0(PC2), .d1(JumpImm), .select(jump), .out(PC3));
 	// jumpRA mux
-	Mux jumpRAMux(.d0(PC3), .d1(RaData), .select(jumpRA), .out(PC_Next));
+	Mux jumpRAMux(.d0(PC3), .d1(RaData), .select(jumpRA), .out(PC4));
+	// Make if we are enabled to advanced to the next state, advance, else, keep the current state
+	assign PC_Next = PCEn ? PC4 : PC;
 
 endmodule

@@ -57,7 +57,7 @@ module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
 	
 	//Subtractor
 	wire [WIDTH-1:0] diff;
-	assign diff = arg1 - arg2;
+	assign diff = $signed(arg1) - $signed(arg2);
 	// for compare, set the Z flag high if the difference is zero
 	assign Z = diff ? 0 : 1'b1;
 	

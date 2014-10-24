@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "//wannsee/users/u0655172/ECE 3710/Processor_Titan/ALU.v";
+static const char *ng0 = "C:/Users/u0499404/ECE3710/Processor_Titan/ALU.v";
 static int ng1[] = {0, 0};
 static unsigned int ng2[] = {1U, 0U};
 static unsigned int ng3[] = {0U, 0U};
@@ -307,16 +307,16 @@ LAB7:    t76 = *((unsigned int *)t64);
 
 static void Cont_60_2(char *t0)
 {
-    char t5[8];
+    char t7[8];
     char *t1;
     char *t2;
-    char *t3;
     char *t4;
     char *t6;
-    char *t7;
     char *t8;
     char *t9;
     char *t10;
+    char *t11;
+    char *t12;
 
 LAB0:    t1 = (t0 + 6120U);
     t2 = *((char **)t1);
@@ -327,20 +327,20 @@ LAB3:    goto *t2;
 
 LAB2:    xsi_set_current_line(60, ng0);
     t2 = (t0 + 2704U);
-    t3 = *((char **)t2);
-    t2 = (t0 + 2864U);
     t4 = *((char **)t2);
-    memset(t5, 0, 8);
-    xsi_vlog_unsigned_minus(t5, 32, t3, 32, t4, 32);
+    t2 = (t0 + 2864U);
+    t6 = *((char **)t2);
+    memset(t7, 0, 8);
+    xsi_vlog_signed_minus(t7, 32, t4, 32, t6, 32);
     t2 = (t0 + 8000);
-    t6 = (t2 + 56U);
-    t7 = *((char **)t6);
-    t8 = (t7 + 56U);
+    t8 = (t2 + 56U);
     t9 = *((char **)t8);
-    memcpy(t9, t5, 8);
+    t10 = (t9 + 56U);
+    t11 = *((char **)t10);
+    memcpy(t11, t7, 8);
     xsi_driver_vfirst_trans(t2, 0, 31);
-    t10 = (t0 + 7712);
-    *((int *)t10) = 1;
+    t12 = (t0 + 7712);
+    *((int *)t12) = 1;
 
 LAB1:    return;
 }

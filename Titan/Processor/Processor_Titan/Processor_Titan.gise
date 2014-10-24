@@ -64,10 +64,13 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Shifter_TestBench_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SignExtender_TestBench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SignExtender_TestBench_stx_beh.prj"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan_TestBench02_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Titan_TestBench02_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Titan_TestBench02_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan_TestBench02_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan_TestBench03_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Titan_TestBench03_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Titan_TestBench03_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan_TestBench03_stx_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Titan_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
@@ -79,56 +82,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1413926768" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1413926768">
+    <transform xil_pn:end_ts="1414106772" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1414106772">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1413937012" xil_pn:in_ck="5244092593596216121" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1413937012">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ALU.v"/>
-      <outfile xil_pn:name="ALU_TestBench.v"/>
-      <outfile xil_pn:name="DataRAM.v"/>
-      <outfile xil_pn:name="DataRAM_TestBench.v"/>
-      <outfile xil_pn:name="ExecutionStage.v"/>
-      <outfile xil_pn:name="ExecutionStage_TestBench.v"/>
-      <outfile xil_pn:name="ExecutionStage_TestBench02.v"/>
-      <outfile xil_pn:name="InstructionDecoder.v"/>
-      <outfile xil_pn:name="InstructionDecoder_TestBench.v"/>
-      <outfile xil_pn:name="InstructionROM.v"/>
-      <outfile xil_pn:name="InstructionROM_TestBench.v"/>
-      <outfile xil_pn:name="LogicController.v"/>
-      <outfile xil_pn:name="LogicController_TestBench.v"/>
-      <outfile xil_pn:name="Mux.v"/>
-      <outfile xil_pn:name="ProgramCounter.v"/>
-      <outfile xil_pn:name="ProgramCounter_TestBench.v"/>
-      <outfile xil_pn:name="ProgramStatusRegister.v"/>
-      <outfile xil_pn:name="ProgramStatusRegister_TestBench.v"/>
-      <outfile xil_pn:name="RegFile.v"/>
-      <outfile xil_pn:name="RegFile_TestBench.v"/>
-      <outfile xil_pn:name="RegFile_TestBench2.v"/>
-      <outfile xil_pn:name="Shifter.v"/>
-      <outfile xil_pn:name="Shifter_TestBench.v"/>
-      <outfile xil_pn:name="SignExtender.v"/>
-      <outfile xil_pn:name="SignExtender_TestBench.v"/>
-      <outfile xil_pn:name="Titan.v"/>
-      <outfile xil_pn:name="Titan_TestBench02.v"/>
-      <outfile xil_pn:name="ZeroPad.v"/>
-      <outfile xil_pn:name="ZeroPad_TestBench.v"/>
-    </transform>
-    <transform xil_pn:end_ts="1413927582" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-8359098199927359912" xil_pn:start_ts="1413927582">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1413927582" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5720557917732912662" xil_pn:start_ts="1413927582">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1413926768" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5936919530444907812" xil_pn:start_ts="1413926768">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1413937012" xil_pn:in_ck="5244092593596216121" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1413937012">
+    <transform xil_pn:end_ts="1414107229" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414107228">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -158,27 +116,74 @@
       <outfile xil_pn:name="SignExtender_TestBench.v"/>
       <outfile xil_pn:name="Titan.v"/>
       <outfile xil_pn:name="Titan_TestBench02.v"/>
+      <outfile xil_pn:name="Titan_TestBench03.v"/>
       <outfile xil_pn:name="ZeroPad.v"/>
       <outfile xil_pn:name="ZeroPad_TestBench.v"/>
     </transform>
-    <transform xil_pn:end_ts="1413937019" xil_pn:in_ck="5244092593596216121" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="1178438076972944239" xil_pn:start_ts="1413937012">
+    <transform xil_pn:end_ts="1414106772" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5987546319950242265" xil_pn:start_ts="1414106772">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414106772" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5962995424219466647" xil_pn:start_ts="1414106772">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414106772" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5936919530444907812" xil_pn:start_ts="1414106772">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1414107229" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414107229">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ALU.v"/>
+      <outfile xil_pn:name="ALU_TestBench.v"/>
+      <outfile xil_pn:name="DataRAM.v"/>
+      <outfile xil_pn:name="DataRAM_TestBench.v"/>
+      <outfile xil_pn:name="ExecutionStage.v"/>
+      <outfile xil_pn:name="ExecutionStage_TestBench.v"/>
+      <outfile xil_pn:name="ExecutionStage_TestBench02.v"/>
+      <outfile xil_pn:name="InstructionDecoder.v"/>
+      <outfile xil_pn:name="InstructionDecoder_TestBench.v"/>
+      <outfile xil_pn:name="InstructionROM.v"/>
+      <outfile xil_pn:name="InstructionROM_TestBench.v"/>
+      <outfile xil_pn:name="LogicController.v"/>
+      <outfile xil_pn:name="LogicController_TestBench.v"/>
+      <outfile xil_pn:name="Mux.v"/>
+      <outfile xil_pn:name="ProgramCounter.v"/>
+      <outfile xil_pn:name="ProgramCounter_TestBench.v"/>
+      <outfile xil_pn:name="ProgramStatusRegister.v"/>
+      <outfile xil_pn:name="ProgramStatusRegister_TestBench.v"/>
+      <outfile xil_pn:name="RegFile.v"/>
+      <outfile xil_pn:name="RegFile_TestBench.v"/>
+      <outfile xil_pn:name="RegFile_TestBench2.v"/>
+      <outfile xil_pn:name="Shifter.v"/>
+      <outfile xil_pn:name="Shifter_TestBench.v"/>
+      <outfile xil_pn:name="SignExtender.v"/>
+      <outfile xil_pn:name="SignExtender_TestBench.v"/>
+      <outfile xil_pn:name="Titan.v"/>
+      <outfile xil_pn:name="Titan_TestBench02.v"/>
+      <outfile xil_pn:name="Titan_TestBench03.v"/>
+      <outfile xil_pn:name="ZeroPad.v"/>
+      <outfile xil_pn:name="ZeroPad_TestBench.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1414107232" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4853721832869011535" xil_pn:start_ts="1414107229">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Titan_TestBench02_beh.prj"/>
-      <outfile xil_pn:name="Titan_TestBench02_isim_beh.exe"/>
+      <outfile xil_pn:name="Titan_TestBench03_beh.prj"/>
+      <outfile xil_pn:name="Titan_TestBench03_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1413937020" xil_pn:in_ck="2236316419993491710" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8844461580440371954" xil_pn:start_ts="1413937019">
+    <transform xil_pn:end_ts="1414107232" xil_pn:in_ck="7268569420544606814" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4393273479427467220" xil_pn:start_ts="1414107232">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="Titan_TestBench02_isim_beh.wdb"/>
+      <outfile xil_pn:name="Titan_TestBench03_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>

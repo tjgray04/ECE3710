@@ -1,24 +1,34 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o U:/ECE 3710/Processor_Titan/Titan_TestBench02_isim_beh.exe -prj U:/ECE 3710/Processor_Titan/Titan_TestBench02_beh.prj work.Titan_TestBench02 work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/u0499404/ECE3710/Processor_Titan/Titan_TestBench03_isim_beh.exe -prj C:/Users/u0499404/ECE3710/Processor_Titan/Titan_TestBench03_beh.prj work.Titan_TestBench03 work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/ZeroPad.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/SignExtender.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/Shifter.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/RegFile.v" into library work
-WARNING:HDLCompiler:693 - "U:/ECE 3710/Processor_Titan/RegFile.v" Line 48: Parameter declaration becomes local in RegFile with formal parameter declaration list
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/Mux.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/DataRAM.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/ALU.v" into library work
-WARNING:HDLCompiler:693 - "U:/ECE 3710/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in ALU with formal parameter declaration list
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/ProgramStatusRegister.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/ProgramCounter.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/InstructionROM.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/InstructionDecoder.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/ExecutionStage.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/Titan.v" into library work
-Analyzing Verilog file "U:/ECE 3710/Processor_Titan/Titan_TestBench02.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/ZeroPad.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/SignExtender.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/Shifter.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/RegFile.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/RegFile.v" Line 47: Parameter declaration becomes local in RegFile with formal parameter declaration list
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/Mux.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/DataRAM.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/ALU.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in ALU with formal parameter declaration list
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/ProgramStatusRegister.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/ProgramCounter.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 33: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 34: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 38: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 48: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 59: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 64: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 68: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 71: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 82: Parameter declaration becomes local in LogicController with formal parameter declaration list
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/InstructionROM.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/InstructionDecoder.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/ExecutionStage.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/Titan.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/ECE3710/Processor_Titan/Titan_TestBench03.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
@@ -32,14 +42,15 @@ Compiling module Shifter
 Compiling module SignExtender
 Compiling module DataRAM
 Compiling module ExecutionStage
+Compiling module LogicController
 Compiling module ZeroPad
 Compiling module ProgramStatusRegister
 Compiling module Titan
-Compiling module Titan_TestBench02
+Compiling module Titan_TestBench03
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 1 sub-compilation(s) to finish...
-Compiled 15 Verilog Units
-Built simulation executable U:/ECE 3710/Processor_Titan/Titan_TestBench02_isim_beh.exe
-Fuse Memory Usage: 28352 KB
-Fuse CPU Usage: 998 ms
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 16 Verilog Units
+Built simulation executable C:/Users/u0499404/ECE3710/Processor_Titan/Titan_TestBench03_isim_beh.exe
+Fuse Memory Usage: 28248 KB
+Fuse CPU Usage: 639 ms
