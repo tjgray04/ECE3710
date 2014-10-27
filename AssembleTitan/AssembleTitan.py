@@ -1,4 +1,4 @@
-#This is an assembler for a modified CR16 instruction set in ECE3710 Computer Design Lab.
+#This is an assembler for a modified CR16 and MIPS instruction set in ECE3710 Computer Design Lab.
 #Team:Freqs
 
 import csv
@@ -83,7 +83,6 @@ class Assembler:
 			func = ''
 			type = ''
 			
-			
 			#First determine if the line is a label
 			if line[0].endswith(":"):
 				#print line[0]+' '+str(PC)
@@ -98,7 +97,7 @@ class Assembler:
 						if type == 'rtype':
 							func = code[3]
 						break	
-				
+			
 				#Handle the assembly of different types
 				if type == 'jtype':
 					binary = self.jtype(opCode,line)
@@ -108,9 +107,13 @@ class Assembler:
 					
 				elif type == 'rtype':
 					binary = self.rType(opCode,func,line,reg)
+					
 				elif type == 'branch':
 					binary = self.branchType(opCode,line,reg)
-				
+					
+				elif type == 'set':
+					binary = self.setType(opCode,func,line,reg)
+					
 				#Record each assembled line
 				assembledCode.append(binary)
 				
@@ -130,9 +133,8 @@ class Assembler:
 			if line.endswith(':'): #search for labels      
 				for label in labels:#find the right label
 					index = len(label)*-1
-					print line[index:]
 					if line[index:] == label:
-						newLine = line[0:4]+labels[label] #find the address that goes with that label
+						newLine = line[0:4]+'_'+labels[label] #find the address that goes with that label
 						assembledCode[count]= newLine  #replace the label with a binary address
 						#print assembledCode[count]
 						
@@ -156,7 +158,13 @@ class Assembler:
 		Assembles J-Type instructions with there opCode and label. The labels need to be converted into
 		binary later. 
 		'''
-		binary = opCode+line[1]
+		binary = opCode+'_'+line[1]#makes it more readable
+		return binary
+		
+	def setType(self,opCode,func,line,reg):
+		newline = ['set',line[1],opCode,'x',func]
+		func = '1101'
+		binary = self.rType('0100',func,newline,reg)
 		return binary
 		
 	def branchType(self,opCode,line,reg):
@@ -189,7 +197,7 @@ class Assembler:
 				Rs = reg[register]
 					
 		#Assemble the binary machine code		
-		binary = opCode+Rd+Rs+Imm
+		binary = opCode+'_'+Rd+'_'+Rs+'_'+Imm
 		
 		return binary	
 		
@@ -215,7 +223,7 @@ class Assembler:
 				Rt = reg[register]
 		
 		#Assemble the binary machine code
-		binary = opCode+Rd+Rs+Rt+'000000000'+func
+		binary = opCode+'_'+Rd+'_'+Rs+'_'+Rt+'_'+'000000000'+'_'+func
 		
 		return binary
 		
