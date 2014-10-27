@@ -34,9 +34,10 @@ module ProgramCounter_TestBench;
 	reg [31:0] instruction;
 	reg [31:0] immediate;
 	reg [31:0] RaData;
+	reg PCEn;
 
 	// Outputs
-	wire [31:0] PC, returnAdr;
+	wire [31:0] PC, returnAddr;
 
 	// Instantiate the Unit Under Test (UUT)
 	ProgramCounter uut (
@@ -49,8 +50,9 @@ module ProgramCounter_TestBench;
 		.instruction(instruction), 
 		.immediate(immediate), 
 		.RaData(RaData),
-		.returnAdr(returnAdr),
-		.PC(PC)
+		.returnAddr(returnAddr),
+		.PC(PC),
+		.PCEn(PCEn)
 	);
 
 	initial begin
@@ -64,9 +66,11 @@ module ProgramCounter_TestBench;
 		instruction = 0;
 		immediate = 0;
 		RaData = 0;
+		PCEn = 0;
 
 		// Wait 100 ns for global reset to finish
 		#10 reset = 0;
+		PCEn = 1;
       instruction = 32'b0101_00000_00000_000000000000000100;
 		// Add stimulus here
 		#20;
@@ -81,6 +85,9 @@ module ProgramCounter_TestBench;
 		branch = 0;
 		jump = 1;
 		#50;
+		PCEn = 0;
+		#50;
+		PCEn = 1;
 		//
 		instruction = 32'b0101_1111111111111111111111111100; // immediate value of -4
 		

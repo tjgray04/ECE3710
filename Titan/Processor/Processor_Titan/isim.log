@@ -11,9 +11,8 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run all
-Stopped at time : 2575542 ns : File "C:/Users/u0499404/ECE3710/Processor_Titan/RegFile.v" Line 54
 # restart
-# run 1.00us
+# restart
+# run 41.00ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.

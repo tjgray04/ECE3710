@@ -24,15 +24,16 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 		  input [REGBITS-1:0] Rs,
 		  input [FUNCTBITS-1:0] functionCode,
 		  output reg branch, jump, jumpRA, CFWrite, LZNWrite, wbPSR, RtSrcReg, wbSrc, memSrc, shiftSrc, aluSrcb ,regWriteEn,
-		  output reg raWrite, shiftType, memWrite, pcEn,
+		  output reg raWrite, shiftType, memWrite, pcEn, enROM, enRAM,
 		  output reg [2:0] aluop,
 		  output [REGBITS-1:0] PSRsel
 		);
 		
 		//Declare State variables.
-		parameter	EX  = 1'b0;
-		parameter   MEM = 1'b1;
-		reg 			PS, NS;
+		parameter	EX  = 2'b00;
+		parameter   MEM = 2'b01;
+		parameter   NOP = 2'b10;
+		reg [1:0]	PS, NS;
 		
 		//Declare ALU operations
 		parameter	opADD = 3'b000,
@@ -97,14 +98,18 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 		end
 		
 		//Next state logic
-		always@(*)
+		always@(posedge clk)
 		begin
 			case(PS)
-				EX:	if((opCode == LOAD) || (opCode == STR))	//Go to MEM state only on load or store instructions
+				//Go to MEM state only on load or store instructions
+				EX:	if((opCode == LOAD) || (opCode == STR))
 							NS <= MEM;
+						else if ((opCode == BCOND) || (opCode == J) || (opCode == JAL) || (opCode == JRA))
+							NS <= NOP;
 						else
 							NS <= EX;
 				MEM:	NS <= EX;
+				NOP:  NS <= EX;
 				default:	 NS <= EX;
 			endcase
 		end
@@ -112,6 +117,30 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 		//Output logic
 		always@(*)
 		begin
+			if(reset)
+			begin
+				// set default outputs when reset occurs
+				branch <= 1'b0;
+				jump <= 1'b0; 
+				jumpRA <= 1'b0; 
+				CFWrite <= 1'b0;
+				LZNWrite <= 1'b0;
+				wbPSR <= 1'b0;
+				RtSrcReg <= 1'b0;
+				wbSrc <= 1'b0;
+				memSrc <= 1'b0;
+				shiftSrc <= 1'b0;
+				aluSrcb <= 1'b0;
+				regWriteEn <= 1'b0;
+				raWrite <= 1'b0;
+				shiftType <= 1'b0;
+				memWrite <= 1'b0;
+				aluop <= opADD;
+				enROM <= 0;
+				enRAM <= 0;
+			end
+			else
+			begin
 			//Initialize outputs for a general R-Type instruction
 			branch <= 1'b0;
 			jump <= 1'b0; 
@@ -129,6 +158,8 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 			shiftType <= 1'b0;
 			memWrite <= 1'b0;
 			aluop <= opADD;
+			enROM <= 1;
+			enRAM <= 0;
 			//Define outputs not affected by current state
 			case(opCode)
 				//I-type instructions
@@ -201,7 +232,7 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 						jumpRA <= 1'b1;		//jumpRa
 						end
 				//RTYPE instructions
-				RTYPE:
+				RTYPE:begin
 						case(functionCode)
 							ADD:
 									begin
@@ -286,8 +317,9 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 									aluop <= opADD;		//add
 									end
 						endcase
+						end // end of RTYPE
 			//RTYPE2 instructions
-			RTYPE2:
+			RTYPE2:	begin
 						case(functionCode)
 							LSH:
 									begin
@@ -325,14 +357,17 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 									regWriteEn <= 1'b1;	//write back
 									end
 						endcase
+						end // end of RTYPE2
 			//MEMTYPE instructions
 			LOAD:
 					begin
+					enRAM <= 1'b1;			//enable dataRAM
 					memSrc <= 1'b1;		//use alu output, not shifter
 					regWriteEn <= 1'b1;	//write back
 					end
 			STR:
 					begin
+					enRAM <= 1'b1;			//enable dataRAM
 					memSrc <= 1'b1;		//use alu output, not shifter
 					memWrite <= 1'b1;		//write to memory
 					RtSrcReg <= 1'b1;		//Use Rdest as Rt
@@ -348,19 +383,51 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 						memSrc <= 1'b1;		//use alu output, not shifter
 						end
 			endcase
-		end
+			end // end of else statement
+		end // end of always block
 		
-		//Program counter enable
+		//Program counter enable and Instruction ROM enable
 		always@(*)
 		begin
+			if(reset)
+			begin
+				pcEn <= 0;
+				enROM <= 0;
+			end
+			else
+			begin
 				case(PS)
-				EX:	if((opCode == LOAD) || (opCode == STR))
-							pcEn <= 1'b0;		//if the instruction is a load or a store, pause the program counter
-						else
-							pcEn <= 1'b1;		//otherwise increment
-				MEM:	pcEn <= 1'b1;			//automatically go back to incrementing
-				default:	 pcEn <= 1'b0;
-			endcase
+					EX:	begin
+								if((opCode == LOAD) || (opCode == STR))
+								begin	
+									pcEn <= 1'b0;	//if the instruction is a load or a store, pause the program counter
+									enROM <= 1'b0;	// pause the instruction ROM when the PC is disabled
+								end
+								else if((opCode == BCOND) || (opCode == J) || (opCode == JAL) || (opCode == JRA))
+								begin	
+									pcEn <= 1'b1;	//if the instruction is a branch or jump, increment the program counter
+									enROM <= 1'b0;	// pause the instruction ROM so as to not load the instruction after the branch/jump until it is completed
+								end
+								else
+								begin
+									pcEn <= 1'b1;	//otherwise increment
+									enROM <= 1'b1; // resume the instruction ROM
+								end
+							end
+					MEM:	begin
+							pcEn <= 1'b1;	//automatically go back to incrementing
+							enROM <= 1'b1;	// resume the instruction ROM
+							end
+					NOP:  begin
+							pcEn <= 1'b1;	//automatically go back to incrementing
+							enROM <= 1'b1;	// resume the instruction ROM	
+							end
+					default:	begin 
+								pcEn <= 1'b0;
+								enROM <= 1'b0;
+								end
+				endcase
+			end
 		end
 
 endmodule

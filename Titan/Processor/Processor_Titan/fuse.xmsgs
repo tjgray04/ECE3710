@@ -17,25 +17,28 @@
 <msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 34: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 38: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 35: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 48: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 39: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 59: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 49: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 64: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 60: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 68: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 65: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 71: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 69: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 82: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 72: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/ECE3710/Processor_Titan/LogicController.v" Line 83: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
 </messages>

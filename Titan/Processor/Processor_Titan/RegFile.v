@@ -50,7 +50,7 @@ module RegFile#(parameter REGBITS = 5,WIDTH = 32)(
 	
 	//Register behavior
 	// Write back on the negative edge of the clock to ensure data propagation through execution stage
-	always@(posedge clk)
+	always@(negedge clk)
 	begin
 		RAM[0] <= 0;
 		// if we are writing back to the register file and the destination register is not the zero register

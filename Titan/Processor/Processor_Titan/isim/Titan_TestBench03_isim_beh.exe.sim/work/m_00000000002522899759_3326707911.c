@@ -25,7 +25,7 @@
 
 
 
-extern void work_m_00000000004172442536_3326707911_init()
+extern void work_m_00000000002522899759_3326707911_init()
 {
-	xsi_register_didat("work_m_00000000004172442536_3326707911", "isim/Titan_TestBench03_isim_beh.exe.sim/work/m_00000000004172442536_3326707911.didat");
+	xsi_register_didat("work_m_00000000002522899759_3326707911", "isim/Titan_TestBench03_isim_beh.exe.sim/work/m_00000000002522899759_3326707911.didat");
 }

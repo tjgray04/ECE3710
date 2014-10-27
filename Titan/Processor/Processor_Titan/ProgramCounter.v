@@ -44,10 +44,7 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 		if(reset)
 			PC <= 0;
 		else
-		begin
-			if(PCEn)
-				PC <= PC_Next;
-		end
+			PC <= PC_Next;
 	end
 	
 	// PC +1 adder
@@ -64,7 +61,7 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 	Mux jumpMux(.d0(PC2), .d1(JumpImm), .select(jump), .out(PC3));
 	// jumpRA mux
 	Mux jumpRAMux(.d0(PC3), .d1(RaData), .select(jumpRA), .out(PC4));
-	// Make if we are enabled to advanced to the next state, advance, else, keep the current state
+	// If we enabled, advanced to the next state, else, keep the current state
 	assign PC_Next = PCEn ? PC4 : PC;
-
+	
 endmodule

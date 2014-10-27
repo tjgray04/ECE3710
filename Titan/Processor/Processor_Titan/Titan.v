@@ -115,10 +115,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	LogicController LogicCtrl(.clk(clk), .reset(reset), .opCode(opCode), .Rs(Rs), .functionCode(functCode), .branch(branch),
 					.jump(jump), .jumpRA(jumpRA), .CFWrite(CFWrite), .LZNWrite(LZNWrite), .wbPSR(wbPSR), .RtSrcReg(RtSrcReg), 
 					.wbSrc(wbSrc), .memSrc(memSrc), .shiftSrc(shiftSrc), .aluSrcb(aluSrcb), .regWriteEn(regWriteEn),
-					.raWrite(raWrite), .shiftType(shiftType), .memWrite(memWrite), .pcEn(PCEn), .aluop(aluop), .PSRsel(PSRsel));
-			// input .Rs(Rs)
-			// output .PSRsel(PSRsel)
-
+					.raWrite(RaWriteEn), .shiftType(shiftType), .memWrite(memWrite), .pcEn(PCEn), .enROM(enROM), .enRAM(enRAM), .aluop(aluop), .PSRsel(PSRsel));
 	
 	/* Instantiate PSR Controller
 	*	input: clk, from global clk
