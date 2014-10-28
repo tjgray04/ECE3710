@@ -1,3 +1,4 @@
+var,test,14
 
 
 //Start the Fibonacci code
@@ -6,6 +7,7 @@ addi,r2,r0,128
 addi,r3,r0,14
 addi,r4,r0,1
 addi,r5,r0,-1
+
 
 
 //Enter the Fib loop
@@ -19,5 +21,20 @@ addi,r2,r2,1
 addi,r3,r3,-1
 j,loop:
 
+//Display what we computed
 end:
-//This is the end
+addi,r6,r0,14
+addi,r2,r0,128
+
+main:
+cmp,x,r6,r0
+beq,finish:
+ld,r7,r2,0
+addi,r2,r2,1
+subi,r6,r6,1
+j,main:
+
+
+finish:
+addi,r8,r0,8
+//This really is the end

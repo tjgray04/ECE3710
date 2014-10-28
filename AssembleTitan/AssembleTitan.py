@@ -44,6 +44,7 @@ class Assembler:
 		
 		#Assemble assemble the code
 		assembledCode,labels,address = self.assembleCode(assemblyCode,op,reg)
+
 		
 		#Implement labels & Jumps
 		assembledCode = self.insertLabels(assembledCode,labels,address)
@@ -74,6 +75,7 @@ class Assembler:
 		'''
 		labels = {}
 		address = {}
+		constants = {}
 		assembledCode = []
 		PC = 0
 		
@@ -88,6 +90,11 @@ class Assembler:
 				#print line[0]+' '+str(PC)
 				labels[line[0]] = self.dec2bin(PC,28) #Store labels in a dictionary with their binary addresses
 				address[line[0]] = PC
+			
+			#handle constant variables
+			elif line[0] == 'var':
+				constants[line[1]] = line[2]
+				
 			else:
 				#Determine the type,opCode,and function code
 				for code in op:
@@ -117,10 +124,27 @@ class Assembler:
 				#Record each assembled line
 				assembledCode.append(binary)
 				
-			#increment the Program Counter	
-			PC+=1
+				#increment the Program Counter	
+				PC+=1
 		
 		return assembledCode,labels,address
+		
+	def insertConstants(self,constants,line,type):
+		if type == 'jtype':
+			for const in constants:#find the right const
+					index = len(const)*-1
+					if line[index:] == const:
+						encoding = self.dec2bin(consts[const],28)
+						newLine = line[0:4]+'_'+encoding #find the address that goes with that const
+						
+		if type == 'itype':
+			for const in constants:#find the right const
+					index = len(const)*-1
+					if line[index:] == const:
+						encoding = self.dec2bin(consts[const],18)
+						newLine = line[0:14]+'_'+encoding #find the address that goes with that const
+		return newline					
+		
 		
 	def insertLabels(self,assembledCode,labels,address):
 		'''
