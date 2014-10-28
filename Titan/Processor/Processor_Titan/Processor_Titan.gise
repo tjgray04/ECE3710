@@ -87,7 +87,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414443090" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414443090">
+    <transform xil_pn:end_ts="1414522185" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414522185">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -133,7 +133,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414443091" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414443090">
+    <transform xil_pn:end_ts="1414522186" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414522185">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -167,10 +167,9 @@
       <outfile xil_pn:name="ZeroPad.v"/>
       <outfile xil_pn:name="ZeroPad_TestBench.v"/>
     </transform>
-    <transform xil_pn:end_ts="1414443094" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4853721832869011535" xil_pn:start_ts="1414443091">
+    <transform xil_pn:end_ts="1414522191" xil_pn:in_ck="-6287420018789328545" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4853721832869011535" xil_pn:start_ts="1414522186">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Titan_TestBench03_beh.prj"/>
@@ -180,11 +179,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1414443094" xil_pn:in_ck="-4232308579753211449" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4393273479427467220" xil_pn:start_ts="1414443094">
+    <transform xil_pn:end_ts="1414522192" xil_pn:in_ck="-4232308579753211449" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4393273479427467220" xil_pn:start_ts="1414522191">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Titan_TestBench03_isim_beh.wdb"/>

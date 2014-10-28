@@ -83,16 +83,19 @@
          <ClosedNode>/DataRAM_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|DataRAM_TestBench.v</ClosedNode>
          <ClosedNode>/ExecutionStage_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|ExecutionStage_TestBench.v</ClosedNode>
          <ClosedNode>/ExecutionStage_TestBench C:|Users|u0499404|ECE3710|Processor_Titan|ExecutionStage_TestBench.v</ClosedNode>
+         <ClosedNode>/ExecutionStage_TestBench02 C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|ExecutionStage_TestBench02.v</ClosedNode>
          <ClosedNode>/ExecutionStage_TestBench02 C:|Users|u0499404|ECE3710|Processor_Titan|ExecutionStage_TestBench02.v</ClosedNode>
          <ClosedNode>/InstructionDecoder_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|InstructionDecoder_TestBench.v</ClosedNode>
          <ClosedNode>/InstructionROM_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|InstructionROM_TestBench.v</ClosedNode>
          <ClosedNode>/ProgramCounter C:|Users|u0499404|ECE3710|Processor_Titan01|ProgramCounter.v</ClosedNode>
          <ClosedNode>/ProgramCounter_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|ProgramCounter_TestBench.v</ClosedNode>
          <ClosedNode>/ProgramCounter_TestBench C:|Users|u0499404|ECE3710|Processor_Titan|ProgramCounter_TestBench.v/uut - ProgramCounter</ClosedNode>
+         <ClosedNode>/ProgramStatusRegister_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|ProgramStatusRegister_TestBench.v</ClosedNode>
          <ClosedNode>/ProgramStatusRegister_TestBench C:|Users|u0499404|ECE3710|Processor_Titan|ProgramStatusRegister_TestBench.v/uut - ProgramStatusRegister</ClosedNode>
          <ClosedNode>/RegFile_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|RegFile_TestBench.v</ClosedNode>
          <ClosedNode>/RegFile_TestBench C:|Users|u0499404|ECE3710|Processor_Titan01|RegFile_TestBench.v</ClosedNode>
          <ClosedNode>/RegFile_TestBench U:|My Documents|Processor_Titan|RegFile_TestBench.v</ClosedNode>
+         <ClosedNode>/RegFile_TestBench2 C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|RegFile_TestBench2.v</ClosedNode>
          <ClosedNode>/RegFile_TestBench2 C:|Users|u0499404|ECE3710|Processor_Titan|RegFile_TestBench2.v</ClosedNode>
          <ClosedNode>/Shifter_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|Shifter_TestBench.v</ClosedNode>
          <ClosedNode>/Shifter_TestBench C:|Users|u0499404|ECE3710|Processor_Titan01|Shifter_TestBench.v</ClosedNode>
@@ -105,21 +108,24 @@
          <ClosedNode>/Titan C:|Users|u0499404|ECE3710|Processor_Titan|Titan.v</ClosedNode>
          <ClosedNode>/Titan C:|Users|u0499404|ECE3710|Processor_Titan|Titan.v/ExStage - ExecutionStage</ClosedNode>
          <ClosedNode>/Titan C:|Users|u0499404|ECE3710|Processor_Titan|Titan.v/PC - ProgramCounter</ClosedNode>
+         <ClosedNode>/Titan_TestBench02 C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|Titan_TestBench02.v</ClosedNode>
          <ClosedNode>/Titan_TestBench02 C:|Users|u0499404|ECE3710|Processor_Titan|Titan_TestBench02.v/uut - Titan/ExStage - ExecutionStage</ClosedNode>
          <ClosedNode>/Titan_TestBench02 C:|Users|u0499404|ECE3710|Processor_Titan|Titan_TestBench02.v/uut - Titan/PC - ProgramCounter</ClosedNode>
          <ClosedNode>/Titan_TestBench02 C:|Users|u0499404|ECE3710|Processor_Titan|Titan_TestBench02.v/uut - Titan/PSR - ProgramStatusRegister</ClosedNode>
+         <ClosedNode>/Titan_TestBench03 C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|Titan_TestBench03.v</ClosedNode>
          <ClosedNode>/Titan_TestBench03 C:|Users|u0499404|ECE3710|Processor_Titan|Titan_TestBench03.v/uut - Titan</ClosedNode>
+         <ClosedNode>/ZeroPad_TestBench C:|Users|Steve Brown|Desktop|ECE3710|Titan|Processor|Processor_Titan|ZeroPad_TestBench.v</ClosedNode>
          <ClosedNode>/mips C:|Users|u0499404|ECE3710|Lab2|Lab02_MiniMIPS|mips.v</ClosedNode>
          <ClosedNode>/mips C:|Users|u0655172|Documents|ECE 3710|mips.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>alu - ALU (C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v)</SelectedItem>
+         <SelectedItem>Titan_TestBench03 (C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/Titan_TestBench03.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001bc000000020000000000000000000000000200000064ffffffff000000810000000300000002000001bc0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>alu - ALU (C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v)</CurrentItem>
+      <CurrentItem>Titan_TestBench03 (C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/Titan_TestBench03.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
