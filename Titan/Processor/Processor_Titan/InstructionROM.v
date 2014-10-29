@@ -32,9 +32,10 @@ module InstructionROM#(parameter WIDTH = 32, ROM_ADDR_BITS = 17)// assures 2^17 
 //   <reg_or_wire> [ROM_ADDR_BITS-1:0] <address>; //this is PCadr
    
    initial
-      $readmemb("AssemblyCode.dat", inst_ROM, 0, ((2**ROM_ADDR_BITS)-1)); //, <begin_address>, <end_address>);
-
-   always @(posedge clk)
+      $readmemb("newFib.dat", inst_ROM, 0, ((2**ROM_ADDR_BITS)-1)); //, <begin_address>, <end_address>);
+	// PCadr is a latched value from the program counter and will never be indeterminate, so we can 
+	// output instructions based on this signal.
+   always @(*)
       if (enable)
          instruction <= inst_ROM[PCadr];
 				

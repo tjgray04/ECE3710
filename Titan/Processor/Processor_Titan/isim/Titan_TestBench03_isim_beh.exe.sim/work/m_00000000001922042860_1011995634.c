@@ -21,8 +21,8 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/InstructionROM.v";
-static const char *ng1 = "AssemblyCode.dat";
+static const char *ng0 = "C:/Users/u0499404/ECE3710/Processor_Titan/InstructionROM.v";
+static const char *ng1 = "newFib.dat";
 static int ng2[] = {0, 0};
 static int ng3[] = {2, 0};
 static int ng4[] = {1, 0};
@@ -55,7 +55,7 @@ LAB0:    xsi_set_current_line(35, ng0);
 LAB1:    return;
 }
 
-static void Always_37_1(char *t0)
+static void Always_38_1(char *t0)
 {
     char t14[8];
     char *t1;
@@ -87,7 +87,7 @@ LAB0:    t1 = (t0 + 3368U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(37, ng0);
+LAB2:    xsi_set_current_line(38, ng0);
     t2 = (t0 + 3688);
     *((int *)t2) = 1;
     t3 = (t0 + 3400);
@@ -95,7 +95,7 @@ LAB2:    xsi_set_current_line(37, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(38, ng0);
+LAB4:    xsi_set_current_line(39, ng0);
     t4 = (t0 + 1480U);
     t5 = *((char **)t4);
     t4 = (t5 + 4);
@@ -110,7 +110,7 @@ LAB4:    xsi_set_current_line(38, ng0);
 LAB6:
 LAB7:    goto LAB2;
 
-LAB5:    xsi_set_current_line(39, ng0);
+LAB5:    xsi_set_current_line(40, ng0);
     t11 = (t0 + 2200);
     t12 = (t11 + 56U);
     t13 = *((char **)t12);
@@ -132,7 +132,7 @@ LAB5:    xsi_set_current_line(39, ng0);
 
 extern void work_m_00000000001922042860_1011995634_init()
 {
-	static char *pe[] = {(void *)Initial_34_0,(void *)Always_37_1};
+	static char *pe[] = {(void *)Initial_34_0,(void *)Always_38_1};
 	xsi_register_didat("work_m_00000000001922042860_1011995634", "isim/Titan_TestBench03_isim_beh.exe.sim/work/m_00000000001922042860_1011995634.didat");
 	xsi_register_executes(pe);
 }

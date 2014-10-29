@@ -125,6 +125,6 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*	input: PSRwrite from ALU in the Execution Stage
 	*	output: PSRcond, 1-bit, returns 1 (true) if condition (i.e. EQ, NE, GE, etc.) was true based on PSRwrite
 	*/
-	ProgramStatusRegister PSR(.clk(clk), .reset(reset), .CFwrite(CFwrite), .LZNwrite(LZNwrite), .PSRsel(instruction[22:18]), .PSRwrite(PSRwrite), .PSRcond(PSRcond), .PSRcondExt(PSRcondExt));
+	ProgramStatusRegister PSR(.clk(clk), .reset(reset), .CFwrite(CFWrite), .LZNwrite(LZNWrite), .PSRsel(instruction[22:18]), .PSRwrite(PSRwrite), .PSRcond(PSRcond), .PSRcondExt(PSRcondExt));
 	
 	endmodule

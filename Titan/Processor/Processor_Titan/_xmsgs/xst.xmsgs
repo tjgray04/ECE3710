@@ -5,55 +5,31 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v" Line 49: Assignment to <arg fmt="%s" index="1">opCode</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\InstructionROM.v" Line 35: Signal &lt;<arg fmt="%s" index="1">inst_ROM</arg>&gt; in initial block is partially initialized.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v" Line 50: Assignment to <arg fmt="%s" index="1">functCode</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\RegFile.v" Line 47: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v" Line 66: Assignment to <arg fmt="%s" index="1">RaData</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\ALU.v" Line 62: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan01\ALU.v" Line 99: Result of <arg fmt="%d" index="1">33</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">32</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\ALU.v" Line 116: Result of <arg fmt="%d" index="1">33</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">32</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v" Line 74: Assignment to <arg fmt="%s" index="1">PSRwrite</arg> ignored, since the identifier is never used
+<msg type="error" file="HDLCompiler" num="1401" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\LogicController.v" Line 143: Signal <arg fmt="%s" index="1">pcEn</arg> in unit <arg fmt="%s" index="2">LogicController</arg> is connected to following multiple drivers:
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%d" index="2">48</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">InstDec</arg>&gt; of block &lt;<arg fmt="%s" index="4">InstructionDecoder</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ExecutionStage</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\LogicController.v" Line 21: Empty module &lt;<arg fmt="%s" index="1">LogicController</arg>&gt; remains a black box.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%d" index="2">55</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">regfile</arg>&gt; of block &lt;<arg fmt="%s" index="4">RegFile</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ExecutionStage</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\Titan.v" Line 118: Assignment to <arg fmt="%s" index="1">shiftType</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%d" index="2">70</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">alu</arg>&gt; of block &lt;<arg fmt="%s" index="4">ALU</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ExecutionStage</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\Titan.v" Line 29: Net &lt;<arg fmt="%s" index="1">RaWriteData[31]</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%d" index="2">78</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ALUsrcbMux</arg>&gt; of block &lt;<arg fmt="%s" index="4">Mux</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ExecutionStage</arg>&gt;. Underlying logic will be removed.
-</msg>
-
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%d" index="2">85</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">shifter</arg>&gt; of block &lt;<arg fmt="%s" index="4">Shifter</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ExecutionStage</arg>&gt;. Underlying logic will be removed.
-</msg>
-
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%d" index="2">92</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ShiftMux</arg>&gt; of block &lt;<arg fmt="%s" index="4">Mux</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ExecutionStage</arg>&gt;. Underlying logic will be removed.
-</msg>
-
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%d" index="2">99</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">ALU_2_RegFile</arg>&gt; of block &lt;<arg fmt="%s" index="4">Mux</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ExecutionStage</arg>&gt;. Underlying logic will be removed.
-</msg>
-
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%d" index="2">106</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">SignExtend1</arg>&gt; of block &lt;<arg fmt="%s" index="4">SignExtender</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">ExecutionStage</arg>&gt;. Underlying logic will be removed.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%s" index="2">48</arg>: Output port &lt;<arg fmt="%s" index="3">opCode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">InstDec</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%s" index="2">48</arg>: Output port &lt;<arg fmt="%s" index="3">functCode</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">InstDec</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%s" index="2">55</arg>: Output port &lt;<arg fmt="%s" index="3">RaData</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">regfile</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan01\ExecutionStage.v</arg>&quot; line <arg fmt="%s" index="2">70</arg>: Output port &lt;<arg fmt="%s" index="3">PSRwrite</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">alu</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\Titan.v" Line 92: Net &lt;<arg fmt="%s" index="1">shifttype</arg>&gt; does not have a driver.
 </msg>
 
 </messages>

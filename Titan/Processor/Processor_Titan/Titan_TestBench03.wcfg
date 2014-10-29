@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="44" />
+   <WVObjectSize size="45" />
    <wvobject fp_name="/Titan_TestBench03/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -113,14 +113,6 @@
       <obj_property name="ObjectShortName">writeData[31:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/Titan_TestBench03/uut/PSR/PSR" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">PSR[4:0]</obj_property>
-      <obj_property name="ObjectShortName">PSR[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Titan_TestBench03/uut/PSR/PSRsel" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">PSRsel[4:0]</obj_property>
-      <obj_property name="ObjectShortName">PSRsel[4:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/Titan_TestBench03/uut/ExStage/dataRAM/input_data" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">input_data[31:0]</obj_property>
       <obj_property name="ObjectShortName">input_data[31:0]</obj_property>
@@ -135,13 +127,25 @@
       <obj_property name="ElementShortName">memData[31:0]</obj_property>
       <obj_property name="ObjectShortName">memData[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Titan_TestBench03/uut/LogicCtrl/branch" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">branch</obj_property>
-      <obj_property name="ObjectShortName">branch</obj_property>
+   <wvobject fp_name="/Titan_TestBench03/uut/PSR/PSRsel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PSRsel[4:0]</obj_property>
+      <obj_property name="ObjectShortName">PSRsel[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Titan_TestBench03/uut/PSR/PSRwrite" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PSRwrite[4:0]</obj_property>
+      <obj_property name="ObjectShortName">PSRwrite[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Titan_TestBench03/uut/PSR/PSR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PSR[4:0]</obj_property>
+      <obj_property name="ObjectShortName">PSR[4:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Titan_TestBench03/uut/PSR/PSRcond" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">PSRcond</obj_property>
       <obj_property name="ObjectShortName">PSRcond</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Titan_TestBench03/uut/LogicCtrl/branch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">branch</obj_property>
+      <obj_property name="ObjectShortName">branch</obj_property>
    </wvobject>
    <wvobject fp_name="/Titan_TestBench03/uut/LogicCtrl/jump" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">jump</obj_property>
