@@ -92,7 +92,7 @@ class Assembler:
 				address[line[0]] = PC
 			
 			#handle constant variables
-			elif line[0] == 'var':
+			elif line[0] == 'gcon': #gcon = Global constant 
 				constants[line[1]] = line[2]
 				
 			else:
@@ -107,10 +107,13 @@ class Assembler:
 			
 				#Handle the assembly of different types
 				if type == 'jtype':
-					binary = self.jtype(opCode,line)
+					newline = self.insertConstants(constants,line,type)
+					binary = self.jtype(opCode,newline)
+					
 					
 				elif type == 'itype':
-					binary = self.iType(opCode,line,reg)
+					newline = self.insertConstants(constants,line,type)
+					binary = self.iType(opCode,newline,reg)
 					
 				elif type == 'rtype':
 					binary = self.rType(opCode,func,line,reg)
@@ -130,20 +133,22 @@ class Assembler:
 		return assembledCode,labels,address
 		
 	def insertConstants(self,constants,line,type):
+		newLine = line
 		if type == 'jtype':
 			for const in constants:#find the right const
-					index = len(const)*-1
-					if line[index:] == const:
-						encoding = self.dec2bin(consts[const],28)
-						newLine = line[0:4]+'_'+encoding #find the address that goes with that const
+				if line[1] == const:
+					encoding = self.dec2bin(int(constants[const]),28)
+					newLine = [line[0],encoding]
 						
 		if type == 'itype':
 			for const in constants:#find the right const
 					index = len(const)*-1
-					if line[index:] == const:
-						encoding = self.dec2bin(consts[const],18)
-						newLine = line[0:14]+'_'+encoding #find the address that goes with that const
-		return newline					
+					if line[3] == const:
+						immediate = constants[const]
+						newLine = newLine = [line[0],line[1],line[2],immediate] 
+		
+		
+		return newLine					
 		
 		
 	def insertLabels(self,assembledCode,labels,address):
