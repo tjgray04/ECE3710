@@ -5,38 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" Line 47: Parameter declaration becomes local in <arg fmt="%s" index="1">RegFile</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in <arg fmt="%s" index="1">ALU</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 33: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 34: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 39: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 49: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 60: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 65: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 69: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 72: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 83: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
-</msg>
-
 </messages>
 

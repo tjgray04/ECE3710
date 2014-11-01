@@ -403,11 +403,6 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 									pcEn <= 1'b0;	//if the instruction is a load or a store, pause the program counter
 									enROM <= 1'b0;	// pause the instruction ROM when the PC is disabled
 								end
-//								else if((opCode == BCOND) || (opCode == J) || (opCode == JAL) || (opCode == JRA))
-//								begin	
-//									pcEn <= 1'b1;	//if the instruction is a branch or jump, increment the program counter
-//									enROM <= 1'b0;	// pause the instruction ROM so as to not load the instruction after the branch/jump until it is completed
-//								end
 								else
 								begin
 									pcEn <= 1'b1;	//otherwise increment
@@ -418,10 +413,6 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 							pcEn <= 1'b1;	//automatically go back to incrementing
 							enROM <= 1'b1;	// resume the instruction ROM
 							end
-//					NOP:  begin
-//							pcEn <= 1'b1;	//automatically go back to incrementing
-//							enROM <= 1'b1;	// resume the instruction ROM	
-//							end
 					default:	begin 
 								pcEn <= 1'b0;
 								enROM <= 1'b0;
