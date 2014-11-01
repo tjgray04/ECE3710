@@ -105,7 +105,7 @@ module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
 						PSRwrite = 5'b0;
 						end
 				MULT: begin
-						result = arg1 * arg2;
+						result = $signed(arg1) * $signed(arg2);
 						PSRwrite = 5'b0;
 						end
 				CMP:  begin
