@@ -44,6 +44,7 @@ class Assembler:
 		
 		#Assemble assemble the code
 		assembledCode,labels,address = self.assembleCode(assemblyCode,op,reg)
+
 		
 		#Implement labels & Jumps
 		assembledCode = self.insertLabels(assembledCode,labels,address)
@@ -74,6 +75,7 @@ class Assembler:
 		'''
 		labels = {}
 		address = {}
+		constants = {}
 		assembledCode = []
 		PC = 0
 		
@@ -88,6 +90,11 @@ class Assembler:
 				#print line[0]+' '+str(PC)
 				labels[line[0]] = self.dec2bin(PC,28) #Store labels in a dictionary with their binary addresses
 				address[line[0]] = PC
+			
+			#handle constant variables
+			elif line[0] == 'gcon': #gcon = Global constant 
+				constants[line[1]] = line[2]
+				
 			else:
 				#Determine the type,opCode,and function code
 				for code in op:
@@ -100,10 +107,13 @@ class Assembler:
 			
 				#Handle the assembly of different types
 				if type == 'jtype':
-					binary = self.jtype(opCode,line)
+					newline = self.insertConstants(constants,line,type)
+					binary = self.jtype(opCode,newline)
+					
 					
 				elif type == 'itype':
-					binary = self.iType(opCode,line,reg)
+					newline = self.insertConstants(constants,line,type)
+					binary = self.iType(opCode,newline,reg)
 					
 				elif type == 'rtype':
 					binary = self.rType(opCode,func,line,reg)
@@ -117,10 +127,29 @@ class Assembler:
 				#Record each assembled line
 				assembledCode.append(binary)
 				
-			#increment the Program Counter	
-			PC+=1
+				#increment the Program Counter	
+				PC+=1
 		
 		return assembledCode,labels,address
+		
+	def insertConstants(self,constants,line,type):
+		newLine = line
+		if type == 'jtype':
+			for const in constants:#find the right const
+				if line[1] == const:
+					encoding = self.dec2bin(int(constants[const]),28)
+					newLine = [line[0],encoding]
+						
+		if type == 'itype':
+			for const in constants:#find the right const
+					index = len(const)*-1
+					if line[3] == const:
+						immediate = constants[const]
+						newLine = newLine = [line[0],line[1],line[2],immediate] 
+		
+		
+		return newLine					
+		
 		
 	def insertLabels(self,assembledCode,labels,address):
 		'''
