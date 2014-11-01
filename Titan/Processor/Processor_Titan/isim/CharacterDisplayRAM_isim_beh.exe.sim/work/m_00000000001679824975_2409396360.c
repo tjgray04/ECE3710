@@ -238,6 +238,6 @@ LAB16:    t36 = *((unsigned int *)t14);
 extern void work_m_00000000001679824975_2409396360_init()
 {
 	static char *pe[] = {(void *)Initial_41_0,(void *)Always_44_1};
-	xsi_register_didat("work_m_00000000001679824975_2409396360", "isim/CharacterDisplayRAM_TestBench_isim_beh.exe.sim/work/m_00000000001679824975_2409396360.didat");
+	xsi_register_didat("work_m_00000000001679824975_2409396360", "isim/CharacterDisplayRAM_isim_beh.exe.sim/work/m_00000000001679824975_2409396360.didat");
 	xsi_register_executes(pe);
 }

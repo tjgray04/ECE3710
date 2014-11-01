@@ -2,28 +2,29 @@ Command line:
    CharacterDisplayRAM_TestBench_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  60487
+     -socket  59136
 
-Thu Oct 30 18:06:15 2014
+Sat Nov 01 14:09:55 2014
 
 
- Elaboration Time: 0.0468 sec
+ Elaboration Time: 0.078 sec
 
- Current Memory Usage: 666.419 Meg
+ Current Memory Usage: 501.76 Meg
 
  Total Signals          : 25
  Total Nets             : 66
  Total Signal Drivers   : 17
  Total Blocks           : 3
  Total Primitive Blocks : 2
- Total Processes        : 22
+ Total Processes        : 23
  Total Traceable Variables  : 33
  Total Scalar Nets and Variables : 1799
-Total Line Count : 51
+Total Line Count : 43
+Total Line Count : 43
 
- Total Simulation Time: 0.0468 sec
+ Total Simulation Time: 0.1248 sec
 
- Current Memory Usage: 823.706 Meg
+ Current Memory Usage: 501.76 Meg
 
-Thu Oct 30 18:08:08 2014
+Sat Nov 01 14:11:45 2014
 

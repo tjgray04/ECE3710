@@ -32,7 +32,6 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 		//Declare State variables.
 		parameter	EX  = 2'b00;
 		parameter   MEM = 2'b01;
-//		parameter   NOP = 2'b10;
 		reg [1:0]	PS, NS;
 		
 		//Declare ALU operations
@@ -104,12 +103,9 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 				//Go to MEM state only on load or store instructions
 				EX:	if((opCode == LOAD) || (opCode == STR))
 							NS <= MEM;
-//						else if ((opCode == BCOND) || (opCode == J) || (opCode == JAL) || (opCode == JRA))
-//							NS <= NOP;
 						else
 							NS <= EX;
 				MEM:	NS <= EX;
-//				NOP:  NS <= EX;
 				default:	 NS <= EX;
 			endcase
 		end
