@@ -15,7 +15,7 @@
 
   <!--                                                          -->
 
-  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
 
   <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
 
@@ -24,9 +24,7 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_TestBench_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CharacterDisplayRAM_TestBench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="CharacterDisplayRAM_TestBench_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="CharacterDisplayRAM_TestBench_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CharacterDisplayRAM_TestBench_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="CharacterDisplayRAM_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="DataRAM_isim_beh.exe"/>
@@ -79,7 +77,9 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan_TestBench02_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Titan_TestBench02_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan_TestBench02_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan_TestBench03_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Titan_TestBench03_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="Titan_TestBench03_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan_TestBench03_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="Titan_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="Titan_summary.html"/>
@@ -102,13 +102,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414872420" xil_pn:in_ck="-1078693275509668188" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1414872420">
+    <transform xil_pn:end_ts="1415064183" xil_pn:in_ck="-1078693275509668188" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1415064183">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALU_TestBench.v"/>
       <outfile xil_pn:name="CharacterDisplayRAM.v"/>
@@ -141,11 +137,11 @@
       <outfile xil_pn:name="counter.v"/>
       <outfile xil_pn:name="vgaControl.v"/>
     </transform>
-    <transform xil_pn:end_ts="1414871973" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6833507790888374567" xil_pn:start_ts="1414871973">
+    <transform xil_pn:end_ts="1415064183" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="5987546319950242265" xil_pn:start_ts="1415064183">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414871973" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="6280805755734104215" xil_pn:start_ts="1414871973">
+    <transform xil_pn:end_ts="1415064183" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="5962995424219466647" xil_pn:start_ts="1415064183">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
@@ -153,14 +149,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414872420" xil_pn:in_ck="-1078693275509668188" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1414872420">
+    <transform xil_pn:end_ts="1415064183" xil_pn:in_ck="-1078693275509668188" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1415064183">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALU_TestBench.v"/>
       <outfile xil_pn:name="CharacterDisplayRAM.v"/>
@@ -193,30 +184,20 @@
       <outfile xil_pn:name="counter.v"/>
       <outfile xil_pn:name="vgaControl.v"/>
     </transform>
-    <transform xil_pn:end_ts="1414872426" xil_pn:in_ck="-1078693275509668188" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7008338676475022513" xil_pn:start_ts="1414872420">
+    <transform xil_pn:end_ts="1415064194" xil_pn:in_ck="-1078693275509668188" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4853721832869011535" xil_pn:start_ts="1415064183">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="CharacterDisplayRAM_TestBench_beh.prj"/>
-      <outfile xil_pn:name="CharacterDisplayRAM_TestBench_isim_beh.exe"/>
+      <outfile xil_pn:name="Titan_TestBench03_beh.prj"/>
+      <outfile xil_pn:name="Titan_TestBench03_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1414872592" xil_pn:in_ck="6213841378664812731" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-8580521070466378924" xil_pn:start_ts="1414872592">
+    <transform xil_pn:end_ts="1415064194" xil_pn:in_ck="6213841378664812731" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4393273479427467220" xil_pn:start_ts="1415064194">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="CharacterDisplayRAM_TestBench_isim_beh.wdb"/>
+      <outfile xil_pn:name="Titan_TestBench03_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>

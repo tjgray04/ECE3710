@@ -1,0 +1,10 @@
+Command line:
+   Titan_TestBench03_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  55050
+
+Mon Nov 03 18:23:19 2014
+
+
+ Elaboration Time: 0.265625 sec
