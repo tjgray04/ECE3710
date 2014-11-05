@@ -21,14 +21,15 @@
 module vgaControl(input clk100M, reset, // system clock and reset
 						output reg hSync, vSync,  // sync signals to the VGA interface
 						output reg bright, 		 // asserted when the pizel is bright
-						output reg hPixel, vPixel, //horizontal and vertical pixel index
-						output reg [11:0] hCount, vCount);	// horizontal and vertical count 
+						output reg [10:0] hPixel, 
+						output reg [9:0]  vPixel //horizontal and vertical pixel index
+						);	
 																		// keeps track of position on screen
 	reg clk25M; // this is the 25Mhz clock for the VGA												
 	reg [1:0] count; // everytime count == 1, clk25M will equal 1 for one clock cycle.
+	reg [11:0] hCount, vCount; // horizontal and vertical count 
 	
-	
-	always@(posedge reset, posedge clk25M)
+	always@(posedge clk25M)
 		begin
 			// initialize values
 			hSync  <= 1;

@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM.v";
+static const char *ng0 = "C:/Users/u0499404/ECE3710/Processor_Titan/CharacterDisplayRAM.v";
 static const char *ng1 = "characterDisplayRAM.dat";
 static int ng2[] = {0, 0};
 static int ng3[] = {2, 0};
@@ -50,7 +50,7 @@ LAB0:    xsi_set_current_line(42, ng0);
     t4 = ((char*)((ng4)));
     memset(t7, 0, 8);
     xsi_vlog_signed_minus(t7, 32, t6, 32, t4, 32);
-    xsi_vlogfile_readmemh(ng1, 0, t1, 1, *((unsigned int *)t2), 1, *((unsigned int *)t7));
+    xsi_vlogfile_readmemb(ng1, 0, t1, 1, *((unsigned int *)t2), 1, *((unsigned int *)t7));
 
 LAB1:    return;
 }
@@ -126,7 +126,8 @@ LAB5:    xsi_set_current_line(45, ng0);
     if (t10 > 0)
         goto LAB6;
 
-LAB7:    xsi_set_current_line(48, ng0);
+LAB7:
+LAB8:    xsi_set_current_line(48, ng0);
     t2 = (t0 + 1640U);
     t3 = *((char **)t2);
     t2 = (t3 + 4);
@@ -139,8 +140,7 @@ LAB7:    xsi_set_current_line(48, ng0);
         goto LAB9;
 
 LAB10:
-LAB11:
-LAB8:    goto LAB2;
+LAB11:    goto LAB2;
 
 LAB6:    xsi_set_current_line(47, ng0);
     t11 = (t0 + 3480);
@@ -159,7 +159,7 @@ LAB6:    xsi_set_current_line(47, ng0);
     xsi_vlogtype_concat(t21, 15, 15, 2U, t24, 7, t23, 8);
     xsi_vlog_generic_get_array_select_value(t14, 6, t13, t17, t20, 2, 1, t21, 15, 2);
     t22 = (t0 + 3320);
-    xsi_vlogvar_wait_assign_value(t22, t14, 0, 0, 6, 0LL);
+    xsi_vlogvar_assign_value(t22, t14, 0, 0, 6);
     goto LAB8;
 
 LAB9:    xsi_set_current_line(48, ng0);
@@ -194,7 +194,7 @@ LAB15:    xsi_set_current_line(52, ng0);
     xsi_vlogtype_concat(t21, 15, 15, 2U, t19, 7, t18, 8);
     xsi_vlog_generic_get_array_select_value(t14, 6, t4, t12, t16, 2, 1, t21, 15, 2);
     t17 = (t0 + 3160);
-    xsi_vlogvar_wait_assign_value(t17, t14, 0, 0, 6, 0LL);
+    xsi_vlogvar_assign_value(t17, t14, 0, 0, 6);
     goto LAB11;
 
 LAB13:    xsi_set_current_line(50, ng0);
@@ -229,7 +229,7 @@ LAB16:    t36 = *((unsigned int *)t14);
     t37 = *((unsigned int *)t21);
     t38 = (t36 - t37);
     t39 = (t38 + 1);
-    xsi_vlogvar_wait_assign_value(t11, t12, 0, *((unsigned int *)t21), t39, 0LL);
+    xsi_vlogvar_assign_value(t11, t12, 0, *((unsigned int *)t21), t39);
     goto LAB17;
 
 }

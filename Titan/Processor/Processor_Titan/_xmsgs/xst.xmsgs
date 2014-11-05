@@ -5,5 +5,122 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\u0499404\ECE3710\Processor_Titan\vgaControl.v" Line 38: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\u0499404\ECE3710\Processor_Titan\vgaControl.v" Line 63: Result of <arg fmt="%d" index="1">12</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">11</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\u0499404\ECE3710\Processor_Titan\vgaControl.v" Line 72: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\u0499404\ECE3710\Processor_Titan\vgaControl.v" Line 74: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"C:\Users\u0499404\ECE3710\Processor_Titan\vgaControl.v" Line 109: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.v" Line 38: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">writeData</arg>&gt;. Formal port size is <arg fmt="%d" index="2">7</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.v" Line 39: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">hGlyphCPU</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.v" Line 40: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">outputCPU</arg>&gt;. Formal port size is <arg fmt="%d" index="2">7</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.v" Line 40: Assignment to <arg fmt="%s" index="1">outputCPU</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\CharacterROM.v" Line 35: Signal &lt;<arg fmt="%s" index="1">charROM</arg>&gt; in initial block is partially initialized.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.v" Line 38: Net &lt;<arg fmt="%s" index="1">writeData</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.v" Line 39: Net &lt;<arg fmt="%s" index="1">hGlyphCPU</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.v</arg>&quot; line <arg fmt="%s" index="2">38</arg>: Output port &lt;<arg fmt="%s" index="3">outputCPU</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">charDispRAM</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">writeData</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">hGlyphCPU</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">vGlyphCPU</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="0" delta="new" >Value &quot;<arg fmt="%s" index="1">{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}</arg>&quot; of property &quot;<arg fmt="%s" index="2">RAM_STYLE</arg>&quot; is not applicable. List of valid values is &quot;<arg fmt="%s" index="3">auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed</arg>&quot; 
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">vGlyphCPU</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">vGlyphVGA</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="0" delta="new" >Value &quot;<arg fmt="%s" index="1">{AUTO | DISTRIBUTED | BLOCK}</arg>&quot; of property &quot;<arg fmt="%s" index="2">ROM_STYLE</arg>&quot; is not applicable. List of valid values is &quot;<arg fmt="%s" index="3">auto, block, distributed</arg>&quot; 
+</msg>
+
+<msg type="warning" file="Xst" num="2999" delta="new" >Signal &apos;<arg fmt="%s" index="1">charROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">CharacterROM</arg>&apos;, is tied to its initial value.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_charDispRAM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_charDispRAM1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_charROM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">charDispRAM/Mram_charDispRAM3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">charDispRAM/Mram_charDispRAM1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">charDispRAM/Mram_charDispRAM2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">charDispRAM/Mram_charDispRAM4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vgaCtrl/vPixel_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vgaCtrl/vPixel_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vgaCtrl/vPixel_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vgaCtrl/vPixel_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vgaCtrl/vPixel_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vgaCtrl/vPixel_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">vgaCtrl/vPixel_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DisplayVGA</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">charDispRAM/Mram_charDispRAM6</arg>&gt;, &lt;<arg fmt="%s" index="2">charDispRAM/Mram_charDispRAM7</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">charDispRAM/Mram_charDispRAM6</arg>&gt;, &lt;<arg fmt="%s" index="2">charDispRAM/Mram_charDispRAM8</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">charDispRAM/Mram_charDispRAM11</arg>&gt;, &lt;<arg fmt="%s" index="2">charDispRAM/Mram_charDispRAM10</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
+<msg type="info" file="Xst" num="2399" delta="new" >RAMs &lt;<arg fmt="%s" index="1">charDispRAM/Mram_charDispRAM11</arg>&gt;, &lt;<arg fmt="%s" index="2">charDispRAM/Mram_charDispRAM12</arg>&gt; are equivalent, second RAM is removed
+</msg>
+
 </messages>
 

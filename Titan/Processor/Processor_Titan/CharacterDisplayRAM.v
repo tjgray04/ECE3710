@@ -18,12 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module CharacterDisplayRAM#(parameter RAM_WIDTH = 6, RAM_ADDR_BITS = 8)
-	(input clk, reset, cpuEn, vgaEn, cpuWriteEn,
+module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 8)
+	(input clk, cpuWriteEn,
 	input [RAM_WIDTH-1:0] writeData,
-	input [RAM_ADDR_BITS-1:0] hPixelCPU, hPixelVGA, // 8-bits of addressing for 80 glyphs
-	input [RAM_ADDR_BITS-2:0] vPixelCPU, vPixelVGA, // 7-bits of addressing for 60 glyphs
-	output reg [RAM_WIDTH-1:0] outputCPU, outputVGA
+	input [RAM_ADDR_BITS-1:0] hGlyphCPU, hGlyphVGA, // 8-bits of addressing for 80 glyphs
+	input [RAM_ADDR_BITS-2:0] vGlyphCPU, vGlyphVGA, // 7-bits of addressing for 60 glyphs
+	output [RAM_WIDTH-1:0] outputCPU, outputVGA
     );
 
 //   parameter RAM_WIDTH = <ram_width>;
@@ -39,19 +39,17 @@ module CharacterDisplayRAM#(parameter RAM_WIDTH = 6, RAM_ADDR_BITS = 8)
    //  The forllowing code is only necessary if you wish to initialize the RAM 
    //  contents via an external file (use $readmemb for binary data)
    initial
-      $readmemh("characterDisplayRAM.dat", charDispRAM, 0, ((2**RAM_ADDR_BITS)-1));
+      $readmemb("characterDisplayRAM.dat", charDispRAM, 0, ((2**RAM_ADDR_BITS)-1));
 
-   always @(posedge clk) begin
-      if (vgaEn) //vgaEn = 1 when VGA display wants to access memory
-			// address to access in charDispRAM is {vPixel,hPixel}
-         outputVGA <= charDispRAM[{vPixelVGA,hPixelVGA}];
-		else if (cpuEn) begin //cpuEn = 1 when CPU wants to access memory
-         if (cpuWriteEn) //cpuWriteEn = 1 when CPU wants to write to memory
-            charDispRAM[{vPixelCPU,hPixelCPU}] <= writeData;
-			//else, just read from memeory
-         outputCPU <= charDispRAM[{vPixelCPU,hPixelCPU}];
-      end
+   always @(posedge clk)
+	begin
+		if (cpuWriteEn) //cpuWriteEn = 1 when CPU wants to write to memory
+			charDispRAM[{vGlyphCPU,hGlyphCPU}] = writeData;
    end
+
+	//Reads are done asynchronously
+	assign outputVGA = charDispRAM[{vGlyphVGA,hGlyphVGA}];
+	assign outputCPU = charDispRAM[{vGlyphCPU,hGlyphCPU}];
 						
 
 endmodule
