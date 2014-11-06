@@ -1,0 +1,740 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.24 secs
+ 
+--> Reading design: NES_CONTROLLER.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "NES_CONTROLLER.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "NES_CONTROLLER"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : NES_CONTROLLER
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" into library work
+Parsing module <NES_CONTROLLER>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <NES_CONTROLLER>.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 159: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 165: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 168: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 171: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 174: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 177: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 180: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 183: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 186: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <NES_CONTROLLER>.
+    Related source file is "G:\ECE 3710\NES_CONTROLLER\NES_CONTROLLER.v".
+    Found 32-bit register for signal <count>.
+    Found 32-bit adder for signal <count[31]_GND_1_o_add_46_OUT> created at line 206.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_data<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_data<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_data<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_data<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_data<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_data<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_data<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <controller_data<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 32-bit comparator greater for signal <latch> created at line 37
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_3_o> created at line 43
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_5_o> created at line 49
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_7_o> created at line 55
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_9_o> created at line 61
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_11_o> created at line 67
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_13_o> created at line 73
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_15_o> created at line 79
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_17_o> created at line 85
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_19_o> created at line 91
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_21_o> created at line 97
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_23_o> created at line 103
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_25_o> created at line 109
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_27_o> created at line 115
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_29_o> created at line 121
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_31_o> created at line 127
+    Found 32-bit comparator greater for signal <count[31]_GND_1_o_LessThan_33_o> created at line 133
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   8 Latch(s).
+	inferred  17 Comparator(s).
+	inferred  16 Multiplexer(s).
+Unit <NES_CONTROLLER> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 1
+ 32-bit register                                       : 1
+# Latches                                              : 8
+ 1-bit latch                                           : 8
+# Comparators                                          : 17
+ 32-bit comparator greater                             : 17
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 16
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <NES_CONTROLLER>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <NES_CONTROLLER> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Comparators                                          : 17
+ 32-bit comparator greater                             : 17
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 16
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <NES_CONTROLLER> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block NES_CONTROLLER, actual ratio is 3.
+FlipFlop count_15 has been replicated 1 time(s)
+FlipFlop count_17 has been replicated 1 time(s)
+FlipFlop count_18 has been replicated 1 time(s)
+FlipFlop count_21 has been replicated 1 time(s)
+FlipFlop count_22 has been replicated 1 time(s)
+FlipFlop count_23 has been replicated 1 time(s)
+FlipFlop count_24 has been replicated 1 time(s)
+FlipFlop count_25 has been replicated 1 time(s)
+FlipFlop count_26 has been replicated 1 time(s)
+FlipFlop count_27 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 42
+ Flip-Flops                                            : 42
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : NES_CONTROLLER.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 426
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 31
+#      LUT2                        : 38
+#      LUT3                        : 13
+#      LUT4                        : 19
+#      LUT5                        : 148
+#      LUT6                        : 24
+#      MUXCY                       : 116
+#      VCC                         : 1
+#      XORCY                       : 32
+# FlipFlops/Latches                : 50
+#      FD                          : 42
+#      LDC                         : 7
+#      LDCE_1                      : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 12
+#      IBUF                        : 2
+#      OBUF                        : 10
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              42  out of  18224     0%  
+ Number of Slice LUTs:                  276  out of   9112     3%  
+    Number used as Logic:               276  out of   9112     3%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    283
+   Number with an unused Flip Flop:     241  out of    283    85%  
+   Number with an unused LUT:             7  out of    283     2%  
+   Number of fully used LUT-FF pairs:    35  out of    283    12%  
+   Number of unique control sets:         9
+
+IO Utilization: 
+ Number of IOs:                          13
+ Number of bonded IOBs:                  13  out of    232     5%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+----------------------------------------------------------------+---------------------------+-------+
+Clock Signal                                                    | Clock buffer(FF name)     | Load  |
+----------------------------------------------------------------+---------------------------+-------+
+count[31]_count[31]_AND_22_o(count[31]_count[31]_AND_22_o1:O)   | NONE(*)(controller_data_4)| 1     |
+count[31]_GND_1_o_equal_35_o(count[31]_GND_1_o_equal_35_o<31>:O)| NONE(*)(controller_data_6)| 2     |
+count[31]_count[31]_AND_19_o(count[31]_count[31]_AND_19_o1:O)   | NONE(*)(controller_data_5)| 1     |
+count[31]_count[31]_AND_37_o(count[31]_count[31]_AND_37_o:O)    | NONE(*)(controller_data_1)| 1     |
+count[31]_count[31]_AND_26_o(count[31]_count[31]_AND_26_o1:O)   | NONE(*)(controller_data_3)| 1     |
+count[31]_count[31]_AND_31_o(count[31]_count[31]_AND_31_o:O)    | NONE(*)(controller_data_2)| 1     |
+count[31]_count[31]_AND_44_o(count[31]_count[31]_AND_44_o1:O)   | NONE(*)(controller_data_0)| 1     |
+clock                                                           | BUFGP                     | 42    |
+----------------------------------------------------------------+---------------------------+-------+
+(*) These 7 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 4.686ns (Maximum Frequency: 213.393MHz)
+   Minimum input arrival time before clock: 3.984ns
+   Maximum output required time after clock: 12.293ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 4.686ns (frequency: 213.393MHz)
+  Total number of paths / destination ports: 2100 / 42
+-------------------------------------------------------------------------
+Delay:               4.686ns (Levels of Logic = 4)
+  Source:            count_21_1 (FF)
+  Destination:       count_1 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: count_21_1 to count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.944  count_21_1 (count_21_1)
+     LUT6:I0->O            2   0.203   0.721  count[31]_GND_1_o_equal_46_o<31>11 (count[31]_GND_1_o_equal_46_o<31>11)
+     LUT5:I3->O            3   0.203   0.651  count[31]_GND_1_o_equal_46_o<31>13 (count[31]_GND_1_o_equal_46_o<31>1)
+     LUT6:I5->O           16   0.205   1.005  Mcount_count_val323 (Mcount_count_val)
+     LUT2:I1->O            1   0.205   0.000  count_1_rstpot (count_1_rstpot)
+     FD:D                      0.102          count_1
+    ----------------------------------------
+    Total                      4.686ns (1.365ns logic, 3.321ns route)
+                                       (29.1% logic, 70.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'count[31]_count[31]_AND_22_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.845ns (Levels of Logic = 2)
+  Source:            data (PAD)
+  Destination:       controller_data_4 (LATCH)
+  Destination Clock: count[31]_count[31]_AND_22_o falling
+
+  Data Path: data to controller_data_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_IBUF (data_IBUF)
+     INV:I->O              8   0.206   0.802  data_INV_3_o1_INV_0 (data_INV_3_o)
+     LDC:D                     0.037          controller_data_4
+    ----------------------------------------
+    Total                      2.845ns (1.465ns logic, 1.380ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'count[31]_GND_1_o_equal_35_o'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              2.845ns (Levels of Logic = 2)
+  Source:            data (PAD)
+  Destination:       controller_data_6 (LATCH)
+  Destination Clock: count[31]_GND_1_o_equal_35_o rising
+
+  Data Path: data to controller_data_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_IBUF (data_IBUF)
+     INV:I->O              8   0.206   0.802  data_INV_3_o1_INV_0 (data_INV_3_o)
+     LDCE_1:D                  0.037          controller_data_6
+    ----------------------------------------
+    Total                      2.845ns (1.465ns logic, 1.380ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'count[31]_count[31]_AND_19_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.845ns (Levels of Logic = 2)
+  Source:            data (PAD)
+  Destination:       controller_data_5 (LATCH)
+  Destination Clock: count[31]_count[31]_AND_19_o falling
+
+  Data Path: data to controller_data_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_IBUF (data_IBUF)
+     INV:I->O              8   0.206   0.802  data_INV_3_o1_INV_0 (data_INV_3_o)
+     LDC:D                     0.037          controller_data_5
+    ----------------------------------------
+    Total                      2.845ns (1.465ns logic, 1.380ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'count[31]_count[31]_AND_37_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.845ns (Levels of Logic = 2)
+  Source:            data (PAD)
+  Destination:       controller_data_1 (LATCH)
+  Destination Clock: count[31]_count[31]_AND_37_o falling
+
+  Data Path: data to controller_data_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_IBUF (data_IBUF)
+     INV:I->O              8   0.206   0.802  data_INV_3_o1_INV_0 (data_INV_3_o)
+     LDC:D                     0.037          controller_data_1
+    ----------------------------------------
+    Total                      2.845ns (1.465ns logic, 1.380ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'count[31]_count[31]_AND_26_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.845ns (Levels of Logic = 2)
+  Source:            data (PAD)
+  Destination:       controller_data_3 (LATCH)
+  Destination Clock: count[31]_count[31]_AND_26_o falling
+
+  Data Path: data to controller_data_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_IBUF (data_IBUF)
+     INV:I->O              8   0.206   0.802  data_INV_3_o1_INV_0 (data_INV_3_o)
+     LDC:D                     0.037          controller_data_3
+    ----------------------------------------
+    Total                      2.845ns (1.465ns logic, 1.380ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'count[31]_count[31]_AND_31_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.845ns (Levels of Logic = 2)
+  Source:            data (PAD)
+  Destination:       controller_data_2 (LATCH)
+  Destination Clock: count[31]_count[31]_AND_31_o falling
+
+  Data Path: data to controller_data_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_IBUF (data_IBUF)
+     INV:I->O              8   0.206   0.802  data_INV_3_o1_INV_0 (data_INV_3_o)
+     LDC:D                     0.037          controller_data_2
+    ----------------------------------------
+    Total                      2.845ns (1.465ns logic, 1.380ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'count[31]_count[31]_AND_44_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.845ns (Levels of Logic = 2)
+  Source:            data (PAD)
+  Destination:       controller_data_0 (LATCH)
+  Destination Clock: count[31]_count[31]_AND_44_o falling
+
+  Data Path: data to controller_data_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_IBUF (data_IBUF)
+     INV:I->O              8   0.206   0.802  data_INV_3_o1_INV_0 (data_INV_3_o)
+     LDC:D                     0.037          controller_data_0
+    ----------------------------------------
+    Total                      2.845ns (1.465ns logic, 1.380ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              3.984ns (Levels of Logic = 3)
+  Source:            reset (PAD)
+  Destination:       count_1 (FF)
+  Destination Clock: clock rising
+
+  Data Path: reset to count_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.222   1.247  reset_IBUF (reset_IBUF)
+     LUT6:I0->O           16   0.203   1.005  Mcount_count_val323 (Mcount_count_val)
+     LUT2:I1->O            1   0.205   0.000  count_1_rstpot (count_1_rstpot)
+     FD:D                      0.102          count_1
+    ----------------------------------------
+    Total                      3.984ns (1.732ns logic, 2.252ns route)
+                                       (43.5% logic, 56.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'count[31]_GND_1_o_equal_35_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            controller_data_7 (LATCH)
+  Destination:       controller_data<7> (PAD)
+  Source Clock:      count[31]_GND_1_o_equal_35_o falling
+
+  Data Path: controller_data_7 to controller_data<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  controller_data_7 (controller_data_7)
+     OBUF:I->O                 2.571          controller_data_7_OBUF (controller_data<7>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'count[31]_count[31]_AND_19_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            controller_data_5 (LATCH)
+  Destination:       controller_data<5> (PAD)
+  Source Clock:      count[31]_count[31]_AND_19_o falling
+
+  Data Path: controller_data_5 to controller_data<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  controller_data_5 (controller_data_5)
+     OBUF:I->O                 2.571          controller_data_5_OBUF (controller_data<5>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'count[31]_count[31]_AND_22_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            controller_data_4 (LATCH)
+  Destination:       controller_data<4> (PAD)
+  Source Clock:      count[31]_count[31]_AND_22_o falling
+
+  Data Path: controller_data_4 to controller_data<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  controller_data_4 (controller_data_4)
+     OBUF:I->O                 2.571          controller_data_4_OBUF (controller_data<4>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'count[31]_count[31]_AND_26_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            controller_data_3 (LATCH)
+  Destination:       controller_data<3> (PAD)
+  Source Clock:      count[31]_count[31]_AND_26_o falling
+
+  Data Path: controller_data_3 to controller_data<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  controller_data_3 (controller_data_3)
+     OBUF:I->O                 2.571          controller_data_3_OBUF (controller_data<3>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'count[31]_count[31]_AND_31_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            controller_data_2 (LATCH)
+  Destination:       controller_data<2> (PAD)
+  Source Clock:      count[31]_count[31]_AND_31_o falling
+
+  Data Path: controller_data_2 to controller_data<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  controller_data_2 (controller_data_2)
+     OBUF:I->O                 2.571          controller_data_2_OBUF (controller_data<2>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'count[31]_count[31]_AND_37_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            controller_data_1 (LATCH)
+  Destination:       controller_data<1> (PAD)
+  Source Clock:      count[31]_count[31]_AND_37_o falling
+
+  Data Path: controller_data_1 to controller_data<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  controller_data_1 (controller_data_1)
+     OBUF:I->O                 2.571          controller_data_1_OBUF (controller_data<1>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'count[31]_count[31]_AND_44_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.648ns (Levels of Logic = 1)
+  Source:            controller_data_0 (LATCH)
+  Destination:       controller_data<0> (PAD)
+  Source Clock:      count[31]_count[31]_AND_44_o falling
+
+  Data Path: controller_data_0 to controller_data<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDC:G->Q              1   0.498   0.579  controller_data_0 (controller_data_0)
+     OBUF:I->O                 2.571          controller_data_0_OBUF (controller_data<0>)
+    ----------------------------------------
+    Total                      3.648ns (3.069ns logic, 0.579ns route)
+                                       (84.1% logic, 15.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 1961 / 2
+-------------------------------------------------------------------------
+Offset:              12.293ns (Levels of Logic = 13)
+  Source:            count_10 (FF)
+  Destination:       pulse (PAD)
+  Source Clock:      clock rising
+
+  Data Path: count_10 to pulse
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              37   0.447   1.707  count_10 (count_10)
+     LUT5:I0->O            1   0.203   0.000  Mcompar_count[31]_GND_1_o_LessThan_27_o_lut<1> (Mcompar_count[31]_GND_1_o_LessThan_27_o_lut<1>)
+     MUXCY:S->O            1   0.172   0.000  Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<1> (Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<2> (Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<3> (Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<3>)
+     MUXCY:CI->O           1   0.213   0.580  Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<4> (Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<4>)
+     LUT5:I4->O            1   0.205   0.580  Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<5> (Mcompar_count[31]_GND_1_o_LessThan_27_o_cy<5>)
+     LUT6:I5->O            1   0.205   0.808  Mmux_pulse12_SW0 (N17)
+     LUT6:I3->O            2   0.205   0.981  Mmux_pulse12 (Mmux_pulse11)
+     LUT6:I0->O            1   0.203   0.684  Mmux_pulse13_SW0 (N21)
+     LUT6:I4->O            2   0.203   0.617  Mmux_pulse13 (Mmux_pulse12)
+     LUT6:I5->O            1   0.205   0.684  Mmux_pulse14_SW1 (N23)
+     LUT6:I4->O            1   0.203   0.579  Mmux_pulse14 (pulse_OBUF)
+     OBUF:I->O                 2.571          pulse_OBUF (pulse)
+    ----------------------------------------
+    Total                     12.293ns (5.073ns logic, 7.220ns route)
+                                       (41.3% logic, 58.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    4.686|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock count[31]_GND_1_o_equal_35_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    6.325|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.49 secs
+ 
+--> 
+
+Total memory usage is 260456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

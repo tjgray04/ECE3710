@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="NES_CONTROLLER_TEST_BENCH" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/NES_CONTROLLER_TEST_BENCH/latch" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch</obj_property>
+      <obj_property name="ObjectShortName">latch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NES_CONTROLLER_TEST_BENCH/pulse" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pulse</obj_property>
+      <obj_property name="ObjectShortName">pulse</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NES_CONTROLLER_TEST_BENCH/controller_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">controller_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">controller_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NES_CONTROLLER_TEST_BENCH/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NES_CONTROLLER_TEST_BENCH/data" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data</obj_property>
+      <obj_property name="ObjectShortName">data</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NES_CONTROLLER_TEST_BENCH/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NES_CONTROLLER_TEST_BENCH/uut/latch_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_en</obj_property>
+      <obj_property name="ObjectShortName">latch_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/NES_CONTROLLER_TEST_BENCH/uut/latch_disable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">latch_disable</obj_property>
+      <obj_property name="ObjectShortName">latch_disable</obj_property>
+   </wvobject>
+</wave_config>

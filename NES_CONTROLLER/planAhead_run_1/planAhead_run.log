@@ -1,0 +1,101 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/pa.fromHdl.tcl
+# create_project -name NES_CONTROLLER -dir "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/planAhead_run_1" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "NES_CONTROLLER.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {NES_CONTROLLER.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top NES_CONTROLLER $srcset
+# add_files [list {NES_CONTROLLER.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.v" into library work
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.ucf]
+Finished Parsing UCF File [C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: dd976d1c
+open_rtl_design: Time (s): elapsed = 00:00:17 . Memory (MB): peak = 616.133 ; gain = 200.945
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS33 [get_ports [list {controller_data[7]} {controller_data[6]} {controller_data[5]} {controller_data[4]} {controller_data[3]} {controller_data[2]} {controller_data[1]} {controller_data[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list clock]]
+startgroup
+set_property package_pin V10 [get_ports clock]
+endgroup
+startgroup
+set_property package_pin T12 [get_ports data]
+endgroup
+startgroup
+set_property package_pin V12 [get_ports latch]
+endgroup
+startgroup
+set_property package_pin N10 [get_ports pulse]
+endgroup
+startgroup
+set_property package_pin C4 [get_ports reset]
+endgroup
+save_constraints
+startgroup
+set_property package_pin T11 [get_ports {controller_data[7]}]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports {controller_data[6]}]
+endgroup
+startgroup
+set_property package_pin N11 [get_ports {controller_data[5]}]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports {controller_data[4]}]
+endgroup
+set_property package_pin "" [get_ports [list  {controller_data[2]}]]
+startgroup
+set_property package_pin V11 [get_ports {controller_data[3]}]
+endgroup
+startgroup
+set_property package_pin U15 [get_ports {controller_data[2]}]
+endgroup
+startgroup
+set_property package_pin V15 [get_ports {controller_data[3]}]
+endgroup
+startgroup
+set_property package_pin V16 [get_ports {controller_data[2]}]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {controller_data[2]}]
+endgroup
+startgroup
+set_property package_pin U15 [get_ports {controller_data[2]}]
+endgroup
+startgroup
+set_property package_pin V16 [get_ports {controller_data[1]}]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {controller_data[0]}]
+endgroup
+save_constraints
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Oct 30 17:29:38 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead
