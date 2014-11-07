@@ -32,7 +32,7 @@ module CharacterROM#(parameter ROM_WIDTH = 8, ROM_ADDR_BITS = 13, GLYPH_BITS = 3
 //   <reg_or_wire> [ROM_ADDR_BITS-1:0] <address>;
    
    initial
-      $readmemb("glyphColor.dat", charROM, 0, ((2**ROM_ADDR_BITS)-1));
+      $readmemh("TestROM.dat", charROM, 0, ((2**ROM_ADDR_BITS)-1));
 	
 	/* The ROM performs a continuous read, infered by the assign statement.
 	*	The address for the read is a concantionation of the current pixel and the current 

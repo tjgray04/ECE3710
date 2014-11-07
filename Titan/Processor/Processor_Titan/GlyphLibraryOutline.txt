@@ -1,0 +1,34 @@
+GLYPH CHARACTERS:
+1. Top Left Head - BLUE (1-64) 0x03
+2. Top Right Head - BLUE (65 - 128) 0x03
+3. Bottom Left Head - BLUE 0x03
+4. Bottom Right Head - BLUE 0x03
+5. Left Arm - BLUE 0x03
+6. Right Arm - BLUE 0x03
+7. Left Leg - BLUE 0x03
+8. Right Leg - BLUE 0x03
+9. Top Left Head - RED
+10. Top Right Head - RED
+11. Bottom Left Head - RED
+12. Bottom Right Head - RED
+13. Left Arm - RED
+14. Right Arm - RED
+15. Left Leg - RED
+16. Right Leg - RED
+17. Top Left Head - GREEN
+18. Top Right Head - GREEN
+19. Bottom Left Head - GREEN
+20. Bottom Right Head - GREEN
+21. Left Arm - GREEN
+22. Right Arm - GREEN
+23. Left Leg - GREEN
+24. Right Leg - GREEN
+25. Top Left Head - WHITE
+26. Top Right Head - WHITE
+27. Bottom Left Head - WHITE
+28. Bottom Right Head - WHITE
+29. Left Arm - WHITE
+30. Right Arm - WHITE
+31. Left Leg - WHITE
+32. Right Leg - WHITE
+33. Wall - GREY 0xA0

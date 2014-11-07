@@ -18,7 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module DisplayVGA(input clk, reset,cpuWriteEn,
+module DisplayVGA(input clk, reset,
+						//cpuWriteEn,
 						//input [6:0] writeData,
 						//input [7:0] hGlyphCPU,
 						//input [6:0] vGlyphCPU,
@@ -31,13 +32,24 @@ module DisplayVGA(input clk, reset,cpuWriteEn,
 	wire [9:0]  vPixel;
 	wire [6:0]  outputVGA;
 	wire [7:0]  color;
-
+	wire [7:0] 	hGlyphVGA;
+	wire [6:0]  vGlyphVGA;
+	
+	assign hGlyphVGA = hPixel[10:3];
+	assign vGlyphVGA = vPixel[9:3];
+	
 	vgaControl	vgaCtrl (.clk100M(clk), .reset(reset), .hSync(hSync), .vSync(vSync), .bright(bright), 		
 						   .hPixel(hPixel), .vPixel(vPixel));
 
-	CharacterDisplayRAM charDispRAM(.clk(clk), .cpuWriteEn(cpuWriteEn), .writeData(writeData),
-											.hGlyphCPU(hGlyphCPU), .hGlyphVGA(hPixel[10:3]), .vGlyphCPU(vGlyphCPU), 
-											.vGlyphVGA(vPixel[9:3]), .outputCPU(outputCPU), .outputVGA(outputVGA));
+	CharacterDisplayRAM charDispRAM(.clk(clk), 
+											//.cpuWriteEn(cpuWriteEn), 
+											//.writeData(writeData),
+											//.hGlyphCPU(hGlyphCPU),
+											.hGlyphVGA(hGlyphVGA),
+											//.vGlyphCPU(vGlyphCPU), 
+											.vGlyphVGA(vGlyphVGA),
+											//.outputCPU(outputCPU), 
+											.outputVGA(outputVGA));
 
 	CharacterROM charROM(.hPixel(hPixel[2:0]), .vPixel(vPixel[2:0]), .glyphAddr(outputVGA), .color(color));
 

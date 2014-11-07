@@ -18,11 +18,11 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module vgaControl(input clk100M, reset, // system clock and reset
-						output reg hSync, vSync,  // sync signals to the VGA interface
-						output reg bright, 		 // asserted when the pizel is bright
-						output reg [10:0] hPixel, 
-						output reg [9:0]  vPixel //horizontal and vertical pixel index
+module vgaControl(input clk100M, reset, 		// system clock and reset
+						output reg hSync, vSync,  	// sync signals to the VGA interface
+						output reg bright, 		  	// asserted when the pizel is bright
+						output reg [10:0] hPixel, 	// horizontal and vertical pixel index
+						output reg [9:0]  vPixel 
 						);	
 																		// keeps track of position on screen
 	reg clk25M; // this is the 25Mhz clock for the VGA												
@@ -36,15 +36,15 @@ module vgaControl(input clk100M, reset, // system clock and reset
 			vSync  <= 1;
 			bright <= 0;
 			hCount <= hCount + 1; // hCount keeps track of the clock ticks
-			
+			// Check for a reset
 			if(reset)
 				begin
 					hSync  <= 0; //hSync and vSync are active low signals, enable them
 					vSync  <= 0;
 					hCount <= 0; // reset the horizontal count
 					vCount <= 0; // reset vertical line count
-					hPixel <= 0;
-					vPixel <= 0;
+					hPixel <= 0; // reset the horizontal pixel count
+					vPixel <= 0; // reset the vertical pixel count
 				end
 			else
 				begin
@@ -55,6 +55,8 @@ module vgaControl(input clk100M, reset, // system clock and reset
 							hSync  <= 0;
 						end
 					// wait for the pulse width (96 clk ticks) + back porch (48 clk ticks) = 144 clock ticks
+					// bright remains high for the duration of the display time
+					// hPixel increments for the duration of the display time
 					else if(hCount >= 12'd143 && hCount < 12'd784)
 						begin
 							//enable the bright for the VGA screen
@@ -67,9 +69,7 @@ module vgaControl(input clk100M, reset, // system clock and reset
 						begin
 							hCount <= 0;
 							hSync  <= 0;
-							//as long as vSync is high, increment the verticall pixel count at this point
-							if(vSync == 1'b1)
-								vPixel <= vPixel + 1;
+							hPixel <= 0;
 							//increment vCount
 							vCount <= vCount + 1;
 						end
@@ -80,6 +80,8 @@ module vgaControl(input clk100M, reset, // system clock and reset
 						begin
 							vSync  <= 0;
 						end
+					else if(vCount >= 12'd31 && vCount < 12'd511)
+						vPixel <= vPixel + 1;
 					// if vCount is 521 lines
 					else if(vCount >= 12'd520)
 						begin

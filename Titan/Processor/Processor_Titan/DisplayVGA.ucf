@@ -10,7 +10,7 @@ NET "rgb[2]" IOSTANDARD = LVCMOS33;
 NET "rgb[1]" IOSTANDARD = LVCMOS33;
 NET "rgb[0]" IOSTANDARD = LVCMOS33;
 NET "clk" IOSTANDARD = LVCMOS33;
-NET "cpuWriteEn" IOSTANDARD = LVCMOS33;
+#NET "cpuWriteEn" IOSTANDARD = LVCMOS33;
 NET "hSync" IOSTANDARD = LVCMOS33;
 NET "reset" IOSTANDARD = LVCMOS33;
 NET "vSync" IOSTANDARD = LVCMOS33;
@@ -18,7 +18,7 @@ NET "vSync" IOSTANDARD = LVCMOS33;
 # PlanAhead Generated physical constraints 
 
 NET "clk" LOC = V10;
-NET "cpuWriteEn" LOC = C9;
+#NET "cpuWriteEn" LOC = C9;
 NET "reset" LOC = B8;
 NET "hSync" LOC = N6;
 NET "vSync" LOC = P7;

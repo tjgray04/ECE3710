@@ -37,40 +37,26 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-cpuWriteEn  |    2.563(R)|      SLOW  |   -1.121(R)|      FAST  |clk_BUFGP         |   0.000|
-reset       |    2.735(R)|      SLOW  |   -1.048(R)|      FAST  |clk_BUFGP         |   0.000|
+reset       |    2.591(R)|      SLOW  |   -0.813(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
-
-Clock clk to Pad
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
-Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
-------------+-----------------+------------+-----------------+------------+------------------+--------+
-rgb<0>      |        11.772(R)|      SLOW  |         6.085(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<1>      |        12.012(R)|      SLOW  |         5.964(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<2>      |        12.068(R)|      SLOW  |         5.840(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<3>      |        11.814(R)|      SLOW  |         5.919(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<4>      |        11.618(R)|      SLOW  |         5.918(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<5>      |        11.358(R)|      SLOW  |         5.741(R)|      FAST  |clk_BUFGP         |   0.000|
-------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
 ---------------+---------+---------+---------+---------+
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    1.926|         |         |         |
+clk            |    2.470|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Nov 04 18:07:37 2014 
+Analysis completed Thu Nov 06 16:56:21 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 218 MB
+Peak Memory Usage: 217 MB
 
 
 

@@ -5,3 +5,77 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
 bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
+xst -intstyle ise -ifn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.xst" -ofn "C:/Users/u0499404/ECE3710/Processor_Titan/DisplayVGA.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3 DisplayVGA.ngc DisplayVGA.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o DisplayVGA_map.ncd DisplayVGA.ngd DisplayVGA.pcf 
+par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd DisplayVGA.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml DisplayVGA.twx DisplayVGA.ncd -o DisplayVGA.twr DisplayVGA.pcf -ucf DisplayVGA.ucf 
+bitgen -intstyle ise -f DisplayVGA.ut DisplayVGA.ncd 
