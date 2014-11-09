@@ -28,15 +28,15 @@ module DisplayVGA(input clk, reset,
 						output [7:0] rgb
 						);
 
-	wire [10:0] hPixel;
-	wire [9:0]  vPixel;
+	wire [9:0] hPixel;
+	wire [8:0]  vPixel;
 	wire [6:0]  outputVGA;
 	wire [7:0]  color;
 	wire [7:0] 	hGlyphVGA;
 	wire [6:0]  vGlyphVGA;
 	
-	assign hGlyphVGA = hPixel[10:3];
-	assign vGlyphVGA = vPixel[9:3];
+	assign hGlyphVGA = hPixel[9:3];
+	assign vGlyphVGA = vPixel[8:3];
 	
 	vgaControl	vgaCtrl (.clk100M(clk), .reset(reset), .hSync(hSync), .vSync(vSync), .bright(bright), 		
 						   .hPixel(hPixel), .vPixel(vPixel));

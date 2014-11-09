@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/u0655172/Downloads/ECE3710-master (1)/ECE3710-master/Titan/Processor/Processor_Titan/vga_Control_TestBenchM_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="vga_Control_TestBenchM" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/vga_Control_TestBenchM/hSync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hSync</obj_property>
+      <obj_property name="ObjectShortName">hSync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/vSync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vSync</obj_property>
+      <obj_property name="ObjectShortName">vSync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/bright" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bright</obj_property>
+      <obj_property name="ObjectShortName">bright</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/hPixel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">hPixel[10:0]</obj_property>
+      <obj_property name="ObjectShortName">hPixel[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/vPixel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vPixel[9:0]</obj_property>
+      <obj_property name="ObjectShortName">vPixel[9:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/clk100M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk100M</obj_property>
+      <obj_property name="ObjectShortName">clk100M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/uut/clk25M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk25M</obj_property>
+      <obj_property name="ObjectShortName">clk25M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/uut/hCount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">hCount[11:0]</obj_property>
+      <obj_property name="ObjectShortName">hCount[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/vga_Control_TestBenchM/uut/vCount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vCount[11:0]</obj_property>
+      <obj_property name="ObjectShortName">vCount[11:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

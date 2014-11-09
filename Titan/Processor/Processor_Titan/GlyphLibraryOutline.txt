@@ -1,6 +1,7 @@
 GLYPH CHARACTERS:
-1. Top Left Head - BLUE (1-64) 0x03
-2. Top Right Head - BLUE (65 - 128) 0x03
+0. Black Background - BLACK (1-640) 0x00
+1. Top Left Head - BLUE (65-128) 0x03
+2. Top Right Head - BLUE (129-192) 0x03
 3. Bottom Left Head - BLUE 0x03
 4. Bottom Right Head - BLUE 0x03
 5. Left Arm - BLUE 0x03

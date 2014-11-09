@@ -22,22 +22,22 @@
 //
 //
 //////////////////////////////////////////////////////////////////////////////////
-module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 8)
+module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 7)
 	(input clk, 
 	//cpuWriteEn,
 	//input [RAM_WIDTH-1:0] writeData,
-	input [RAM_ADDR_BITS-1:0] /*hGlyphCPU,*/ hGlyphVGA, // 8-bits of addressing for 80 glyphs
-	input [RAM_ADDR_BITS-2:0] /*vGlyphCPU,*/ vGlyphVGA, // 7-bits of addressing for 60 glyphs
+	input [RAM_ADDR_BITS-1:0] /*hGlyphCPU,*/ hGlyphVGA, // 7-bits of addressing for 80 glyphs
+	input [RAM_ADDR_BITS-2:0] /*vGlyphCPU,*/ vGlyphVGA, // 6-bits of addressing for 60 glyphs
 	output [RAM_WIDTH-1:0] /*outputCPU,*/ outputVGA
     );
 
    (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
-   reg [RAM_WIDTH-1:0] charDispRAM [(2**RAM_ADDR_BITS)-1:0];
+   reg [RAM_WIDTH-1:0] charDispRAM [4800-1:0];
 
    //  The forllowing code is only necessary if you wish to initialize the RAM 
    //  contents via an external file (use $readmemb for binary data)
    initial
-      $readmemb("TestRAM.dat", charDispRAM, 0, ((2**RAM_ADDR_BITS)-1));
+      $readmemb("mTestRAM.dat", charDispRAM, 0, (4800-1));
 
 //   always @(posedge clk)
 //	begin

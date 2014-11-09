@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-06T14:14:25</DateModified>
+  <DateModified>2014-11-08T14:29:21</DateModified>
   <ModuleName>DisplayVGA</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/u0499404/ECE3710/Processor_Titan/iseconfig/DisplayVGA.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/u0499404/ECE3710/Processor_Titan</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/u0655172/Downloads/ECE3710-master (1)/ECE3710-master/Titan/Processor/Processor_Titan/iseconfig/DisplayVGA.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/u0655172/Downloads/ECE3710-master (1)/ECE3710-master/Titan/Processor/Processor_Titan\</ImplementationReportsDirectory>
   <DateInitialized>2014-11-06T14:14:25</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

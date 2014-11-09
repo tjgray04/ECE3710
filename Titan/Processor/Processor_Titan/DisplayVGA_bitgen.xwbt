@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.ncd
-OUTFILE=C:\Users\u0499404\ECE3710\Processor_Titan\DisplayVGA.bit
+INFILE=C:\Users\u0655172\Downloads\ECE3710-master (1)\ECE3710-master\Titan\Processor\Processor_Titan\DisplayVGA.ncd
+OUTFILE=C:\Users\u0655172\Downloads\ECE3710-master (1)\ECE3710-master\Titan\Processor\Processor_Titan\DisplayVGA.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\u0499404\ECE3710\Processor_Titan
+WORKINGDIR=C:\Users\u0655172\Downloads\ECE3710-master (1)\ECE3710-master\Titan\Processor\Processor_Titan
 LICENSE=WebPack
 USER_INFO=176175080_0_0_415
