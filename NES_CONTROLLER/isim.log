@@ -11,9 +11,4 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 45.0 ms
-Stopped at time : 29621905 ns : File "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH.v" Line 72
-# restart
-# run 45.0 ms
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
+# run 45 ms

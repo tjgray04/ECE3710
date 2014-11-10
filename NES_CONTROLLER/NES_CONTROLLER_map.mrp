@@ -11,23 +11,23 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 06 14:45:24 2014
+Mapped Date    : Mon Nov 10 13:47:44 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   14
+Number of warnings:    8
 Slice Logic Utilization:
-  Number of Slice Registers:                    42 out of  18,224    1%
-    Number used as Flip Flops:                  42
+  Number of Slice Registers:                    38 out of  18,224    1%
+    Number used as Flip Flops:                  38
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        189 out of   9,112    2%
-    Number used as logic:                      188 out of   9,112    2%
-      Number using O6 output only:              71
+  Number of Slice LUTs:                        178 out of   9,112    1%
+    Number used as logic:                      177 out of   9,112    1%
+      Number using O6 output only:              64
       Number using O5 output only:              30
-      Number using O5 and O6:                   87
+      Number using O5 and O6:                   83
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
     Number used exclusively as route-thrus:      1
@@ -36,15 +36,15 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    68 out of   2,278    2%
-  Number of MUXCYs used:                       164 out of   4,556    3%
-  Number of LUT Flip Flop pairs used:          194
-    Number with an unused Flip Flop:           153 out of     194   78%
-    Number with an unused LUT:                   5 out of     194    2%
-    Number of fully used LUT-FF pairs:          36 out of     194   18%
+  Number of occupied Slices:                    67 out of   2,278    2%
+  Number of MUXCYs used:                       156 out of   4,556    3%
+  Number of LUT Flip Flop pairs used:          179
+    Number with an unused Flip Flop:           141 out of     179   78%
+    Number with an unused LUT:                   1 out of     179    1%
+    Number of fully used LUT-FF pairs:          37 out of     179   20%
     Number of unique control sets:               1
     Number of slice register sites lost
-      to control set restrictions:               6 out of  18,224    1%
+      to control set restrictions:               2 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -55,7 +55,7 @@ Slice Logic Distribution:
 IO Utilization:
   Number of bonded IOBs:                        13 out of     232    5%
     Number of LOCed IOBs:                       13 out of      13  100%
-    IOB Latches:                                 8
+    IOB Flip Flops:                              8
 
 Specific Feature Utilization:
   Number of RAMB16BWERs:                         0 out of      32    0%
@@ -86,11 +86,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.58
+Average Fanout of Non-Clock Nets:                5.09
 
-Peak Memory Usage:  411 MB
-Total REAL time to MAP completion:  5 secs 
-Total CPU time to MAP completion:   4 secs 
+Peak Memory Usage:  351 MB
+Total REAL time to MAP completion:  7 secs 
+Total CPU time to MAP completion:   7 secs 
 
 Table of Contents
 -----------------
@@ -115,46 +115,21 @@ Section 2 - Warnings
 --------------------
 WARNING:Pack:2548 - The register "controller_data_6" has the property IOB=TRUE,
    but was not packed into the ILOGIC component. 
-WARNING:Pack:2548 - The register "controller_data_5" has the property IOB=TRUE,
-   but was not packed into the ILOGIC component. 
-WARNING:Pack:2548 - The register "controller_data_1" has the property IOB=TRUE,
+WARNING:Pack:2548 - The register "controller_data_4" has the property IOB=TRUE,
    but was not packed into the ILOGIC component. 
 WARNING:Pack:2548 - The register "controller_data_3" has the property IOB=TRUE,
    but was not packed into the ILOGIC component. 
+WARNING:Pack:2548 - The register "controller_data_0" has the property IOB=TRUE,
+   but was not packed into the ILOGIC component. 
 WARNING:Pack:2548 - The register "controller_data_2" has the property IOB=TRUE,
    but was not packed into the ILOGIC component. 
-WARNING:Pack:2548 - The register "controller_data_0" has the property IOB=TRUE,
+WARNING:Pack:2548 - The register "controller_data_1" has the property IOB=TRUE,
    but was not packed into the ILOGIC component. 
 WARNING:Pack:2548 - The register "controller_data_7" has the property IOB=TRUE,
    but was not packed into the ILOGIC component. 
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   count[31]_count[31]_AND_31_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   count[31]_count[31]_AND_44_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   count[31]_GND_1_o_equal_35_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   count[31]_count[31]_AND_22_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   count[31]_count[31]_AND_19_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   count[31]_count[31]_AND_37_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
-WARNING:PhysDesignRules:372 - Gated clock. Clock net
-   count[31]_count[31]_AND_26_o is sourced by a combinatorial pin. This is not
-   good design practice. Use the CE pin to control the loading of data into the
-   flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net pulse_OBUF is sourced by a
+   combinatorial pin. This is not good design practice. Use the CE pin to
+   control the loading of data into the flip-flop.
 
 Section 3 - Informational
 -------------------------
@@ -193,15 +168,15 @@ Section 6 - IOB Properties
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | clock                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| controller_data<0>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OLATCH       |          |          |
-| controller_data<1>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OLATCH       |          |          |
-| controller_data<2>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OLATCH       |          |          |
-| controller_data<3>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OLATCH       |          |          |
-| controller_data<4>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
-| controller_data<5>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OLATCH       |          |          |
-| controller_data<6>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OLATCH       |          |          |
-| controller_data<7>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OLATCH       |          |          |
-| data                               | IOB              | INPUT     | LVCMOS33             |       |          |      | ILATCH       |          |          |
+| controller_data<0>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| controller_data<1>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| controller_data<2>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| controller_data<3>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| controller_data<4>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| controller_data<5>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| controller_data<6>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| controller_data<7>                 | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | OFF          |          |          |
+| data                               | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
 | latch                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | pulse                              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
 | reset                              | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |

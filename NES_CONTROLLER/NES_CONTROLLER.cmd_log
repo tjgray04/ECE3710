@@ -103,38 +103,51 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off NES_CONTROLLER_map.ncd NES_CONTROLLER.ncd NES_CONTROLLER.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NES_CONTROLLER.twx NES_CONTROLLER.ncd -o NES_CONTROLLER.twr NES_CONTROLLER.pcf -ucf NES_CONTROLLER.ucf 
 bitgen -intstyle ise -f NES_CONTROLLER.ut NES_CONTROLLER.ncd 
-xst -intstyle ise -ifn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 "NES_CONTROLLER.ngc" NES_CONTROLLER.ngd  
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 NES_CONTROLLER.ngc NES_CONTROLLER.ngd  
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NES_CONTROLLER_map.ncd NES_CONTROLLER.ngd NES_CONTROLLER.pcf 
 par -w -intstyle ise -ol high -mt off NES_CONTROLLER_map.ncd NES_CONTROLLER.ncd NES_CONTROLLER.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NES_CONTROLLER.twx NES_CONTROLLER.ncd -o NES_CONTROLLER.twr NES_CONTROLLER.pcf -ucf NES_CONTROLLER.ucf 
 bitgen -intstyle ise -f NES_CONTROLLER.ut NES_CONTROLLER.ncd 
-xst -intstyle ise -ifn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 "NES_CONTROLLER.ngc" NES_CONTROLLER.ngd  
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 NES_CONTROLLER.ngc NES_CONTROLLER.ngd  
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NES_CONTROLLER_map.ncd NES_CONTROLLER.ngd NES_CONTROLLER.pcf 
 par -w -intstyle ise -ol high -mt off NES_CONTROLLER_map.ncd NES_CONTROLLER.ncd NES_CONTROLLER.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NES_CONTROLLER.twx NES_CONTROLLER.ncd -o NES_CONTROLLER.twr NES_CONTROLLER.pcf -ucf NES_CONTROLLER.ucf 
 bitgen -intstyle ise -f NES_CONTROLLER.ut NES_CONTROLLER.ncd 
-xst -intstyle ise -ifn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 "NES_CONTROLLER.ngc" NES_CONTROLLER.ngd  
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 NES_CONTROLLER.ngc NES_CONTROLLER.ngd  
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NES_CONTROLLER_map.ncd NES_CONTROLLER.ngd NES_CONTROLLER.pcf 
 par -w -intstyle ise -ol high -mt off NES_CONTROLLER_map.ncd NES_CONTROLLER.ncd NES_CONTROLLER.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NES_CONTROLLER.twx NES_CONTROLLER.ncd -o NES_CONTROLLER.twr NES_CONTROLLER.pcf -ucf NES_CONTROLLER.ucf 
 bitgen -intstyle ise -f NES_CONTROLLER.ut NES_CONTROLLER.ncd 
-xst -intstyle ise -ifn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 "NES_CONTROLLER.ngc" NES_CONTROLLER.ngd  
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 NES_CONTROLLER.ngc NES_CONTROLLER.ngd  
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NES_CONTROLLER_map.ncd NES_CONTROLLER.ngd NES_CONTROLLER.pcf 
 par -w -intstyle ise -ol high -mt off NES_CONTROLLER_map.ncd NES_CONTROLLER.ncd NES_CONTROLLER.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NES_CONTROLLER.twx NES_CONTROLLER.ncd -o NES_CONTROLLER.twr NES_CONTROLLER.pcf -ucf NES_CONTROLLER.ucf 
 bitgen -intstyle ise -f NES_CONTROLLER.ut NES_CONTROLLER.ncd 
-xst -intstyle ise -ifn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 "NES_CONTROLLER.ngc" NES_CONTROLLER.ngd  
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 NES_CONTROLLER.ngc NES_CONTROLLER.ngd  
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NES_CONTROLLER_map.ncd NES_CONTROLLER.ngd NES_CONTROLLER.pcf 
 par -w -intstyle ise -ol high -mt off NES_CONTROLLER_map.ncd NES_CONTROLLER.ncd NES_CONTROLLER.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NES_CONTROLLER.twx NES_CONTROLLER.ncd -o NES_CONTROLLER.twr NES_CONTROLLER.pcf -ucf NES_CONTROLLER.ucf 
 bitgen -intstyle ise -f NES_CONTROLLER.ut NES_CONTROLLER.ncd 
-xst -intstyle ise -ifn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "G:/ECE 3710/NES_CONTROLLER/NES_CONTROLLER.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 "NES_CONTROLLER.ngc" NES_CONTROLLER.ngd  
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 NES_CONTROLLER.ngc NES_CONTROLLER.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NES_CONTROLLER_map.ncd NES_CONTROLLER.ngd NES_CONTROLLER.pcf 
+par -w -intstyle ise -ol high -mt off NES_CONTROLLER_map.ncd NES_CONTROLLER.ncd NES_CONTROLLER.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NES_CONTROLLER.twx NES_CONTROLLER.ncd -o NES_CONTROLLER.twr NES_CONTROLLER.pcf -ucf NES_CONTROLLER.ucf 
+bitgen -intstyle ise -f NES_CONTROLLER.ut NES_CONTROLLER.ncd 
+xst -intstyle ise -ifn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.xst" -ofn "C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc NES_CONTROLLER.ucf -p xc6slx16-csg324-3 NES_CONTROLLER.ngc NES_CONTROLLER.ngd  
 map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o NES_CONTROLLER_map.ncd NES_CONTROLLER.ngd NES_CONTROLLER.pcf 
 par -w -intstyle ise -ol high -mt off NES_CONTROLLER_map.ncd NES_CONTROLLER.ncd NES_CONTROLLER.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml NES_CONTROLLER.twx NES_CONTROLLER.ncd -o NES_CONTROLLER.twr NES_CONTROLLER.pcf -ucf NES_CONTROLLER.ucf 

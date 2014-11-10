@@ -88,35 +88,33 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1414710859" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1414710859">
+    <transform xil_pn:end_ts="1415650553" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1415650553">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415143431" xil_pn:in_ck="6685682182359409001" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1415143431">
+    <transform xil_pn:end_ts="1415652287" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1415652287">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="CLOCK_DIVDER.v"/>
-      <outfile xil_pn:name="Counter.v"/>
       <outfile xil_pn:name="NES_CONTROLLER.v"/>
       <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH.v"/>
     </transform>
-    <transform xil_pn:end_ts="1415135470" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1328510011678258754" xil_pn:start_ts="1415135470">
+    <transform xil_pn:end_ts="1415650553" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1328510011678258754" xil_pn:start_ts="1415650553">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415135470" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8203109227808432772" xil_pn:start_ts="1415135470">
+    <transform xil_pn:end_ts="1415650553" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8203109227808432772" xil_pn:start_ts="1415650553">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1414710859" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="993346597711110637" xil_pn:start_ts="1414710859">
+    <transform xil_pn:end_ts="1415650553" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="993346597711110637" xil_pn:start_ts="1415650553">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415143435" xil_pn:in_ck="6685682182359409001" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1415143435">
+    <transform xil_pn:end_ts="1415652287" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1415652287">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -124,12 +122,10 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="CLOCK_DIVDER.v"/>
-      <outfile xil_pn:name="Counter.v"/>
       <outfile xil_pn:name="NES_CONTROLLER.v"/>
       <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH.v"/>
     </transform>
-    <transform xil_pn:end_ts="1415143438" xil_pn:in_ck="6685682182359409001" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2892142004527485115" xil_pn:start_ts="1415143435">
+    <transform xil_pn:end_ts="1415652290" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2892142004527485115" xil_pn:start_ts="1415652287">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -144,7 +140,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1415143438" xil_pn:in_ck="-552179662513062930" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6723327982916606210" xil_pn:start_ts="1415143438">
+    <transform xil_pn:end_ts="1415652290" xil_pn:in_ck="-552179662513062930" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6723327982916606210" xil_pn:start_ts="1415652290">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
@@ -154,39 +150,40 @@
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
-    <transform xil_pn:end_ts="1415308851" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1415308851">
+    <transform xil_pn:end_ts="1415133868" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1415133868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415308851" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="226826365376099006" xil_pn:start_ts="1415308851">
+    <transform xil_pn:end_ts="1415133868" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="226826365376099006" xil_pn:start_ts="1415133868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415308851" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="993346597711110637" xil_pn:start_ts="1415308851">
+    <transform xil_pn:end_ts="1415133868" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="993346597711110637" xil_pn:start_ts="1415133868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415308851" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1415308851">
+    <transform xil_pn:end_ts="1415133868" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1415133868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415308851" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-4432391586672914880" xil_pn:start_ts="1415308851">
+    <transform xil_pn:end_ts="1415133868" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-4432391586672914880" xil_pn:start_ts="1415133868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415308851" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1415308851">
+    <transform xil_pn:end_ts="1415133868" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1415133868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415308851" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-1522093315177832841" xil_pn:start_ts="1415308851">
+    <transform xil_pn:end_ts="1415133868" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-1522093315177832841" xil_pn:start_ts="1415133868">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415310317" xil_pn:in_ck="-8741020803895247778" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="8609228182196411164" xil_pn:start_ts="1415310307">
+    <transform xil_pn:end_ts="1415652455" xil_pn:in_ck="-8099327371384881011" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="8609228182196411164" xil_pn:start_ts="1415652442">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="NES_CONTROLLER.lso"/>
       <outfile xil_pn:name="NES_CONTROLLER.ngc"/>
@@ -203,23 +200,27 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1415308868" xil_pn:in_ck="-2623840204969746251" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4503258016302845675" xil_pn:start_ts="1415308868">
+    <transform xil_pn:end_ts="1415133729" xil_pn:in_ck="-2623840204969746251" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4503258016302845675" xil_pn:start_ts="1415133728">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415310322" xil_pn:in_ck="7013234221113981412" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2461973645778321778" xil_pn:start_ts="1415310317">
+    <transform xil_pn:end_ts="1415652463" xil_pn:in_ck="7013234221113981412" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2461973645778321778" xil_pn:start_ts="1415652455">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="NES_CONTROLLER.bld"/>
       <outfile xil_pn:name="NES_CONTROLLER.ngd"/>
       <outfile xil_pn:name="NES_CONTROLLER_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1415310331" xil_pn:in_ck="-8252733881405988827" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1415310322">
+    <transform xil_pn:end_ts="1415652472" xil_pn:in_ck="-8252733881405988827" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1415652463">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="NES_CONTROLLER.pcf"/>
       <outfile xil_pn:name="NES_CONTROLLER_map.map"/>
       <outfile xil_pn:name="NES_CONTROLLER_map.mrp"/>
@@ -230,9 +231,10 @@
       <outfile xil_pn:name="NES_CONTROLLER_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1415310344" xil_pn:in_ck="-6786794637362075394" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1415310331">
+    <transform xil_pn:end_ts="1415652488" xil_pn:in_ck="-6786794637362075394" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1415652472">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="NES_CONTROLLER.ncd"/>
       <outfile xil_pn:name="NES_CONTROLLER.pad"/>
       <outfile xil_pn:name="NES_CONTROLLER.par"/>
@@ -244,10 +246,11 @@
       <outfile xil_pn:name="NES_CONTROLLER_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1415310357" xil_pn:in_ck="-2623840204969753876" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1415310344">
+    <transform xil_pn:end_ts="1415652502" xil_pn:in_ck="-2623840204969753876" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1415652488">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="NES_CONTROLLER.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="nes_controller.bgn"/>
@@ -257,13 +260,15 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1415310362" xil_pn:in_ck="3633694943395849814" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1415310357">
+    <transform xil_pn:end_ts="1415652518" xil_pn:in_ck="3633694943395849814" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1415652502">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1415310344" xil_pn:in_ck="-3840048383111043423" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1415310339">
+    <transform xil_pn:end_ts="1415652488" xil_pn:in_ck="-3840048383111043423" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1415652481">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="NES_CONTROLLER.twr"/>
       <outfile xil_pn:name="NES_CONTROLLER.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>

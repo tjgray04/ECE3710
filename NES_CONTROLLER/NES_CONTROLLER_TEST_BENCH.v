@@ -58,15 +58,15 @@ module NES_CONTROLLER_TEST_BENCH;
         
 		// Add stimulus here
 		#16666667;
-		data = 0;
-		#18000
-		data = 1'b1;
-		#8000
+		data = 1;
+		#22000
 		data = 1'b0;
-		#10000
+		#6000
 		data = 1'b1;
-		#1000 
+		#6000
 		data = 1'b0;
+		#6000 
+		data = 1'b1;
 	end
       
 		always #5 clock = ~clock;

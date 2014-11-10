@@ -12,7 +12,8 @@ Compiling module NES_CONTROLLER
 Compiling module NES_CONTROLLER_TEST_BENCH
 Compiling module glbl
 Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
 Compiled 3 Verilog Units
 Built simulation executable C:/Users/u0791587/Documents/ECE3710/Project/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH_isim_beh.exe
-Fuse Memory Usage: 27992 KB
-Fuse CPU Usage: 482 ms
+Fuse Memory Usage: 28128 KB
+Fuse CPU Usage: 467 ms
