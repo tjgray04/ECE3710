@@ -45,8 +45,12 @@ module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 7)
 //			charDispRAM[{vGlyphCPU,hGlyphCPU}] = writeData;
 //   end
 
+	//setup address to read from
+	wire [12:0] vgaAddress;
+	assign vgaAddress = hGlyphVGA + 80*vGlyphVGA;
 	//Reads are done asynchronously
-	assign outputVGA = charDispRAM[{vGlyphVGA,hGlyphVGA}];
+	assign outputVGA = charDispRAM[vgaAddress];
+//	assign outputVGA = charDispRAM[{vGlyphVGA,hGlyphVGA}];
 //	assign outputCPU = charDispRAM[{vGlyphCPU,hGlyphCPU}];
 						
 

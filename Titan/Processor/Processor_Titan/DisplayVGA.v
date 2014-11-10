@@ -28,7 +28,7 @@ module DisplayVGA(input clk, reset,
 						output [7:0] rgb
 						);
 
-	wire [9:0] hPixel;
+	wire [9:0] 	hPixel;
 	wire [8:0]  vPixel;
 	wire [6:0]  outputVGA;
 	wire [7:0]  color;

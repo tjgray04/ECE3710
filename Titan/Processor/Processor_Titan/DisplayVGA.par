@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DSLWIN14::  Mon Nov 10 10:24:39 2014
+DSLWIN14::  Mon Nov 10 14:56:20 2014
 
 par -w -intstyle ise -ol high -mt off DisplayVGA_map.ncd DisplayVGA.ncd
 DisplayVGA.pcf 
@@ -32,11 +32,11 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        136 out of   9,112    1%
-    Number used as logic:                      134 out of   9,112    1%
-      Number using O6 output only:              97
-      Number using O5 output only:              16
-      Number using O5 and O6:                   21
+  Number of Slice LUTs:                        182 out of   9,112    1%
+    Number used as logic:                      180 out of   9,112    1%
+      Number using O6 output only:             149
+      Number using O5 output only:              17
+      Number using O5 and O6:                   14
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
     Number used exclusively as route-thrus:      2
@@ -45,12 +45,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                    45 out of   2,278    1%
+  Number of occupied Slices:                    62 out of   2,278    2%
   Number of MUXCYs used:                        36 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          137
-    Number with an unused Flip Flop:            94 out of     137   68%
-    Number with an unused LUT:                   1 out of     137    1%
-    Number of fully used LUT-FF pairs:          42 out of     137   30%
+  Number of LUT Flip Flop pairs used:          182
+    Number with an unused Flip Flop:           137 out of     182   75%
+    Number with an unused LUT:                   0 out of     182    0%
+    Number of fully used LUT-FF pairs:          45 out of     182   24%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -80,7 +80,7 @@ Specific Feature Utilization:
   Number of BUFHs:                               0 out of     128    0%
   Number of BUFPLLs:                             0 out of       8    0%
   Number of BUFPLL_MCBs:                         0 out of       4    0%
-  Number of DSP48A1s:                            0 out of      32    0%
+  Number of DSP48A1s:                            1 out of      32    3%
   Number of ICAPs:                               0 out of       1    0%
   Number of MCBs:                                0 out of       2    0%
   Number of PCILOGICSEs:                         0 out of       2    0%
@@ -99,29 +99,29 @@ Finished initial Timing Analysis.  REAL time: 4 secs
 Starting Router
 
 
-Phase  1  : 665 unrouted;      REAL time: 4 secs 
+Phase  1  : 1071 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 612 unrouted;      REAL time: 4 secs 
+Phase  2  : 897 unrouted;      REAL time: 4 secs 
 
-Phase  3  : 178 unrouted;      REAL time: 5 secs 
+Phase  3  : 371 unrouted;      REAL time: 6 secs 
 
-Phase  4  : 178 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 371 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
 Updating file: DisplayVGA.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
-Total REAL time to Router completion: 6 secs 
-Total CPU time to Router completion: 6 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+Total REAL time to Router completion: 7 secs 
+Total CPU time to Router completion: 7 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -141,11 +141,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.590ns|     N/A|           0
-  _BUFGP                                    | HOLD        |     0.489ns|            |       0|           0
+  Autotimespec constraint for clock net vga | SETUP       |         N/A|     5.228ns|     N/A|           0
+  Ctrl/clk25M_BUFG                          | HOLD        |     0.435ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net vga | SETUP       |         N/A|     4.599ns|     N/A|           0
-  Ctrl/clk25M_BUFG                          | HOLD        |     0.416ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     2.286ns|     N/A|           0
+  _BUFGP                                    | HOLD        |     0.445ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -161,8 +161,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 6 secs 
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 7 secs 
 
 Peak Memory Usage:  323 MB
 

@@ -58,7 +58,7 @@ module vga_Control_TestBenchM;
 
 	end
 	
-	always #1 clk100M = ~clk100M;
+	always #4 clk100M = ~clk100M;
       
 endmodule
 
