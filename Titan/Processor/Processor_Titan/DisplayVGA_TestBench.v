@@ -117,7 +117,6 @@ module DisplayVGA_TestBench;
 		writeData = 7'h2;
 		//Check that what was written to memory is correctly read 
 		
-		
 	end
 	
 	always #1 clk = ~clk;

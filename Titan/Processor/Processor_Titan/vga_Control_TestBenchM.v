@@ -32,8 +32,8 @@ module vga_Control_TestBenchM;
 	wire hSync;
 	wire vSync;
 	wire bright;
-	wire [10:0] hPixel;
-	wire [9:0] vPixel;
+	wire [9:0] hPixel;
+	wire [8:0] vPixel;
 
 	// Instantiate the Unit Under Test (UUT)
 	vgaControl uut (

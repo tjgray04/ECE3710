@@ -22,20 +22,15 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 						output reg hSync, vSync,  	// sync signals to the VGA interface
 						output reg bright, 		  	// asserted when the pizel is bright
 						output reg [9:0] hPixel, 	// horizontal and vertical pixel index
-						output reg [8:0]  vPixel 
+						output reg [8:0] vPixel 
 						);	
 																		// keeps track of position on screen
 	reg clk25M; // this is the 25Mhz clock for the VGA												
-	reg [1:0] count; // everytime count == 1, clk25M will equal 1 for one clock cycle.
+	reg [1:0] count; // everytime count == 3, clk25M will equal 1 for one clock cycle.
 	reg [11:0] hCount, vCount; // horizontal and vertical count 
 	
-	always@(posedge clk25M) //or posedge clk
+	always@(posedge reset, posedge clk25M) //or posedge clk
 		begin
-			// initialize values
-			hSync  <= 1;
-			vSync  <= 1;
-			bright <= 0;
-			hCount <= hCount + 1; // hCount keeps track of the clock ticks
 			// Check for a reset
 			if(reset)
 				begin
@@ -48,6 +43,11 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 				end
 			else
 				begin
+				// initialize values
+				hSync  <= 1;
+				vSync  <= 1;
+				bright <= 0;
+				hCount <= hCount + 1; // hCount keeps track of the clock ticks
 					//HSYNC
 					// keep hSync low for the necessary pulse width
 					if(hCount < 12'd96)
@@ -57,7 +57,7 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 					// wait for the pulse width (96 clk ticks) + back porch (48 clk ticks) = 144 clock ticks
 					// bright remains high for the duration of the display time
 					// hPixel increments for the duration of the display time
-					else if(hCount >= 12'd143 && hCount < 12'd784)
+					else if(hCount >= 12'd144 && hCount < 12'd783)
 						begin
 							//enable the bright for the VGA screen
 							bright <= 1;
@@ -72,7 +72,7 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 							hPixel <= 0;
 							//increment vCount
 							vCount <= vCount + 1;
-							if(vCount >= 12'd31 && vCount < 12'd511)
+							if(vCount >= 12'd31 && vCount < 12'd510)
 								vPixel <= vPixel + 1;
 						end
 					
@@ -91,7 +91,7 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 							vPixel <= 0;
 							vSync <= 0;
 						end
-				end
+				end// end of else statement
 		end // end always block
 		
 	
