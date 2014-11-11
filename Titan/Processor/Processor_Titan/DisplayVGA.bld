@@ -5,9 +5,8 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -uc DisplayVGA.ucf -p xc6slx16-csg324-3
 DisplayVGA.ngc DisplayVGA.ngd
 
-Reading NGO file
-"C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.ng
-c" ...
+Reading NGO file "C:/Users/u0655172/Downloads/ECE3710-master
+(2)/ECE3710-master/Titan/Processor/Processor_Titan/DisplayVGA.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -29,7 +28,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 162268 kilobytes
+Total memory usage is 161684 kilobytes
 
 Writing NGD file "DisplayVGA.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec
