@@ -200,6 +200,18 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="173"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="173"/>
     </file>
+    <file xil_pn:name="MemoryController.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="179"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="179"/>
+    </file>
+    <file xil_pn:name="StackMemory.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="180"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="180"/>
+    </file>
+    <file xil_pn:name="IOMemory.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="182"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="182"/>
+    </file>
   </files>
 
   <properties>

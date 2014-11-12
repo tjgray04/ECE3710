@@ -132,7 +132,6 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 				shiftType <= 1'b0;
 				memWrite <= 1'b0;
 				aluop <= opADD;
-				enROM <= 0;
 				enRAM <= 0;
 			end
 			else
@@ -154,7 +153,6 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 			shiftType <= 1'b0;
 			memWrite <= 1'b0;
 			aluop <= opADD;
-			enROM <= 1;
 			enRAM <= 0;
 			//Define outputs not affected by current state
 			case(opCode)

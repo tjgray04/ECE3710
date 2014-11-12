@@ -1,0 +1,612 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: DisplayVGA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DisplayVGA.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DisplayVGA"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : DisplayVGA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" into library work
+Parsing module <vgaControl>.
+Analyzing Verilog file "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\CharacterROM.v" into library work
+Parsing module <CharacterROM>.
+Analyzing Verilog file "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
+Parsing module <CharacterDisplayRAM>.
+Analyzing Verilog file "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
+Parsing module <DisplayVGA>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <DisplayVGA>.
+
+Elaborating module <vgaControl>.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 51: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 66: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 75: Result of 13-bit expression is truncated to fit in 12-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 78: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 116: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <CharacterDisplayRAM>.
+Reading initialization file \"mTestRAM.dat\".
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" Line 50: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:189 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\DisplayVGA.v" Line 48: Size mismatch in connection of port <hGlyphVGA>. Formal port size is 7-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\DisplayVGA.v" Line 50: Size mismatch in connection of port <vGlyphVGA>. Formal port size is 6-bit while actual signal size is 7-bit.
+
+Elaborating module <CharacterROM>.
+Reading initialization file \"TestROM.dat\".
+WARNING:HDLCompiler:1670 - "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal <charROM> in initial block is partially initialized.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <DisplayVGA>.
+    Related source file is "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\DisplayVGA.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <DisplayVGA> synthesized.
+
+Synthesizing Unit <vgaControl>.
+    Related source file is "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v".
+    Found 12-bit register for signal <hCount>.
+    Found 12-bit register for signal <vCount>.
+    Found 10-bit register for signal <hPixel>.
+    Found 9-bit register for signal <vPixel>.
+    Found 1-bit register for signal <vSync>.
+    Found 1-bit register for signal <bright>.
+    Found 1-bit register for signal <hSync>.
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <clk25M>.
+    Found 12-bit adder for signal <hCount[11]_GND_2_o_add_0_OUT> created at line 51.
+    Found 10-bit adder for signal <hPixel[9]_GND_2_o_add_4_OUT> created at line 66.
+    Found 12-bit adder for signal <vCount[11]_GND_2_o_add_6_OUT> created at line 75.
+    Found 9-bit adder for signal <vPixel[8]_GND_2_o_add_9_OUT> created at line 78.
+    Found 2-bit adder for signal <count[1]_GND_2_o_add_35_OUT> created at line 116.
+    Found 12-bit comparator greater for signal <hCount[11]_GND_2_o_LessThan_2_o> created at line 54
+    Found 12-bit comparator lessequal for signal <n0002> created at line 61
+    Found 12-bit comparator greater for signal <hCount[11]_GND_2_o_LessThan_4_o> created at line 61
+    Found 12-bit comparator greater for signal <GND_2_o_INV_1_o> created at line 69
+    Found 12-bit comparator lessequal for signal <n0010> created at line 77
+    Found 12-bit comparator greater for signal <vCount[11]_GND_2_o_LessThan_9_o> created at line 77
+    Found 12-bit comparator greater for signal <vCount[11]_GND_2_o_LessThan_24_o> created at line 86
+    Found 12-bit comparator greater for signal <GND_2_o_vCount[11]_LessThan_25_o> created at line 91
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <vgaControl> synthesized.
+
+Synthesizing Unit <CharacterDisplayRAM>.
+    Related source file is "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v".
+        RAM_WIDTH = 7
+        RAM_ADDR_BITS = 7
+WARNING:Xst - Value "{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" of property "RAM_STYLE" is not applicable. List of valid values is "auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed" 
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'charDispRAM', unconnected in block 'CharacterDisplayRAM', is tied to its initial value.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <charDispRAM>, simulation mismatch.
+    Found 4800x7-bit single-port Read Only RAM <Mram_charDispRAM> for signal <charDispRAM>.
+    Found 13-bit adder for signal <vgaAddress> created at line 50.
+    Found 7x6-bit multiplier for signal <n0010> created at line 50.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <CharacterDisplayRAM> synthesized.
+
+Synthesizing Unit <CharacterROM>.
+    Related source file is "C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\CharacterROM.v".
+        ROM_WIDTH = 8
+        ROM_ADDR_BITS = 13
+        GLYPH_BITS = 3
+        CHAR_AMNT = 7
+WARNING:Xst - Value "{AUTO | DISTRIBUTED | BLOCK}" of property "ROM_STYLE" is not applicable. List of valid values is "auto, block, distributed" 
+WARNING:Xst:2999 - Signal 'charROM', unconnected in block 'CharacterROM', is tied to its initial value.
+    Found 8192x8-bit single-port Read Only RAM <Mram_charROM> for signal <charROM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <CharacterROM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4800x7-bit single-port Read Only RAM                  : 1
+ 8192x8-bit single-port Read Only RAM                  : 1
+# Multipliers                                          : 1
+ 7x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 1
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 9
+ 1-bit register                                        : 4
+ 10-bit register                                       : 1
+ 12-bit register                                       : 2
+ 2-bit register                                        : 1
+ 9-bit register                                        : 1
+# Comparators                                          : 8
+ 12-bit comparator greater                             : 6
+ 12-bit comparator lessequal                           : 2
+# Multiplexers                                         : 13
+ 1-bit 2-to-1 multiplexer                              : 4
+ 10-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 5
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CharacterDisplayRAM>.
+	Multiplier <Mmult_n0010> in block <CharacterDisplayRAM> and adder/subtractor <Madd_vgaAddress> in block <CharacterDisplayRAM> are combined into a MAC<Maddsub_n0010>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_charDispRAM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4800-word x 7-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <vgaAddress>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CharacterDisplayRAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CharacterROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_charROM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8192-word x 8-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(glyphAddr,vPixel,hPixel)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CharacterROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vgaControl>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <hPixel>: 1 register on signal <hPixel>.
+Unit <vgaControl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 4800x7-bit single-port distributed Read Only RAM      : 1
+ 8192x8-bit single-port distributed Read Only RAM      : 1
+# MACs                                                 : 1
+ 7x6-to-13-bit MAC                                     : 1
+# Adders/Subtractors                                   : 3
+ 12-bit adder                                          : 2
+ 9-bit adder                                           : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+# Registers                                            : 37
+ Flip-Flops                                            : 37
+# Comparators                                          : 8
+ 12-bit comparator greater                             : 6
+ 12-bit comparator lessequal                           : 2
+# Multiplexers                                         : 12
+ 1-bit 2-to-1 multiplexer                              : 4
+ 12-bit 2-to-1 multiplexer                             : 5
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <DisplayVGA> ...
+
+Optimizing unit <vgaControl> ...
+WARNING:Xst:1710 - FF/Latch <vgaCtrl/hCount_11> (without init value) has a constant value of 0 in block <DisplayVGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vgaCtrl/hCount_10> (without init value) has a constant value of 0 in block <DisplayVGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vgaCtrl/vCount_11> (without init value) has a constant value of 0 in block <DisplayVGA>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <vgaCtrl/vCount_10> (without init value) has a constant value of 0 in block <DisplayVGA>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DisplayVGA, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 45
+ Flip-Flops                                            : 45
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : DisplayVGA.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 267
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 18
+#      LUT2                        : 12
+#      LUT3                        : 19
+#      LUT4                        : 25
+#      LUT5                        : 28
+#      LUT6                        : 97
+#      MUXCY                       : 27
+#      MUXF7                       : 6
+#      VCC                         : 1
+#      XORCY                       : 30
+# FlipFlops/Latches                : 45
+#      FDC                         : 28
+#      FDCE                        : 14
+#      FDR                         : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 1
+#      OBUF                        : 10
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              45  out of  18224     0%  
+ Number of Slice LUTs:                  202  out of   9112     2%  
+    Number used as Logic:               202  out of   9112     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    203
+   Number with an unused Flip Flop:     158  out of    203    77%  
+   Number with an unused LUT:             1  out of    203     0%  
+   Number of fully used LUT-FF pairs:    44  out of    203    21%  
+   Number of unique control sets:         6
+
+IO Utilization: 
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    232     5%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 3     |
+vgaCtrl/clk25M                     | BUFG                   | 42    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.153ns (Maximum Frequency: 194.058MHz)
+   Minimum input arrival time before clock: 3.936ns
+   Maximum output required time after clock: 18.910ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.578ns (frequency: 387.973MHz)
+  Total number of paths / destination ports: 9 / 6
+-------------------------------------------------------------------------
+Delay:               2.578ns (Levels of Logic = 1)
+  Source:            vgaCtrl/count_1 (FF)
+  Destination:       vgaCtrl/count_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: vgaCtrl/count_1 to vgaCtrl/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.447   0.879  vgaCtrl/count_1 (vgaCtrl/count_1)
+     LUT3:I0->O            2   0.205   0.616  vgaCtrl/Mcount_count_val1 (vgaCtrl/Mcount_count_val)
+     FDR:R                     0.430          vgaCtrl/count_0
+    ----------------------------------------
+    Total                      2.578ns (1.082ns logic, 1.496ns route)
+                                       (42.0% logic, 58.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'vgaCtrl/clk25M'
+  Clock period: 5.153ns (frequency: 194.058MHz)
+  Total number of paths / destination ports: 3618 / 56
+-------------------------------------------------------------------------
+Delay:               5.153ns (Levels of Logic = 14)
+  Source:            vgaCtrl/hCount_4 (FF)
+  Destination:       vgaCtrl/hPixel_9 (FF)
+  Source Clock:      vgaCtrl/clk25M rising
+  Destination Clock: vgaCtrl/clk25M rising
+
+  Data Path: vgaCtrl/hCount_4 to vgaCtrl/hPixel_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              9   0.447   1.058  vgaCtrl/hCount_4 (vgaCtrl/hCount_4)
+     LUT3:I0->O            4   0.205   0.684  vgaCtrl/GND_2_o_hCount[11]_AND_1_o1 (vgaCtrl/GND_2_o_hCount[11]_AND_1_o)
+     LUT5:I4->O           10   0.205   0.961  vgaCtrl/GND_2_o_hCount[11]_AND_1_o4_SW0 (N12)
+     LUT6:I4->O            1   0.203   0.000  vgaCtrl/Mcount_hPixel_lut<0> (vgaCtrl/Mcount_hPixel_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  vgaCtrl/Mcount_hPixel_cy<0> (vgaCtrl/Mcount_hPixel_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  vgaCtrl/Mcount_hPixel_cy<1> (vgaCtrl/Mcount_hPixel_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  vgaCtrl/Mcount_hPixel_cy<2> (vgaCtrl/Mcount_hPixel_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  vgaCtrl/Mcount_hPixel_cy<3> (vgaCtrl/Mcount_hPixel_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  vgaCtrl/Mcount_hPixel_cy<4> (vgaCtrl/Mcount_hPixel_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  vgaCtrl/Mcount_hPixel_cy<5> (vgaCtrl/Mcount_hPixel_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  vgaCtrl/Mcount_hPixel_cy<6> (vgaCtrl/Mcount_hPixel_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  vgaCtrl/Mcount_hPixel_cy<7> (vgaCtrl/Mcount_hPixel_cy<7>)
+     MUXCY:CI->O           0   0.019   0.000  vgaCtrl/Mcount_hPixel_cy<8> (vgaCtrl/Mcount_hPixel_cy<8>)
+     XORCY:CI->O           1   0.180   0.580  vgaCtrl/Mcount_hPixel_xor<9> (vgaCtrl/Mcount_hPixel9)
+     LUT3:I2->O            1   0.205   0.000  vgaCtrl/hPixel_9_dpot (vgaCtrl/hPixel_9_dpot)
+     FDCE:D                    0.102          vgaCtrl/hPixel_9
+    ----------------------------------------
+    Total                      5.153ns (1.871ns logic, 3.282ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.936ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       vgaCtrl/count_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to vgaCtrl/count_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            44   1.222   1.463  reset_IBUF (reset_IBUF)
+     LUT3:I2->O            2   0.205   0.616  vgaCtrl/Mcount_count_val1 (vgaCtrl/Mcount_count_val)
+     FDR:R                     0.430          vgaCtrl/count_0
+    ----------------------------------------
+    Total                      3.936ns (1.857ns logic, 2.079ns route)
+                                       (47.2% logic, 52.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'vgaCtrl/clk25M'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              3.114ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       vgaCtrl/hPixel_9 (FF)
+  Destination Clock: vgaCtrl/clk25M rising
+
+  Data Path: reset to vgaCtrl/hPixel_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            44   1.222   1.462  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.430          vgaCtrl/bright
+    ----------------------------------------
+    Total                      3.114ns (1.652ns logic, 1.462ns route)
+                                       (53.1% logic, 46.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'vgaCtrl/clk25M'
+  Total number of paths / destination ports: 53234 / 6
+-------------------------------------------------------------------------
+Offset:              18.910ns (Levels of Logic = 13)
+  Source:            vgaCtrl/vPixel_3 (FF)
+  Destination:       rgb<1> (PAD)
+  Source Clock:      vgaCtrl/clk25M rising
+
+  Data Path: vgaCtrl/vPixel_3 to rgb<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.447   0.714  vgaCtrl/vPixel_3 (vgaCtrl/vPixel_3)
+     DSP48A1:A0->P5       33   4.560   1.553  charDispRAM/Maddsub_n0010 (charDispRAM/vgaAddress<5>)
+     LUT6:I2->O            2   0.203   0.845  charDispRAM/Mram_charDispRAM8131 (charDispRAM/Mram_charDispRAM8131)
+     LUT4:I1->O            1   0.205   0.580  charDispRAM/Mram_charDispRAM81391 (charDispRAM/Mram_charDispRAM8139)
+     LUT6:I5->O            1   0.205   0.684  charDispRAM/Mram_charDispRAM81310 (charDispRAM/Mram_charDispRAM81310)
+     LUT6:I4->O            1   0.203   0.684  charDispRAM/Mram_charDispRAM81314 (charDispRAM/Mram_charDispRAM81314)
+     LUT6:I4->O            2   0.203   0.617  charDispRAM/Mram_charDispRAM81316 (charDispRAM/Mram_charDispRAM81316)
+     LUT4:I3->O            3   0.205   0.898  charDispRAM/Mram_charDispRAM81319 (charDispRAM/Mram_charDispRAM812)
+     LUT4:I0->O            1   0.203   0.808  color<0>9 (color<0>9)
+     LUT5:I2->O            1   0.205   0.580  color<0>10 (color<0>10)
+     LUT5:I4->O            1   0.205   0.000  color<0>12_F (N39)
+     MUXF7:I0->O           2   0.131   0.617  color<0>12 (color<0>)
+     LUT2:I1->O            1   0.205   0.579  Mmux_rgb11 (rgb_0_OBUF)
+     OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
+    ----------------------------------------
+    Total                     18.910ns (9.751ns logic, 9.159ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.578|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock vgaCtrl/clk25M
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+vgaCtrl/clk25M |    5.153|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.56 secs
+ 
+--> 
+
+Total memory usage is 259180 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

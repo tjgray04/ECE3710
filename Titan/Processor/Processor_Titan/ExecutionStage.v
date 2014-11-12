@@ -122,7 +122,7 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*/
 	Mux shiftSrcMUX(.d0(immediateExt), .d1(RtData), .select(shiftSrc), .out(ShiftMuxOUT));
 	 
-	/* Instantiate a MUX for data inputed back into regFile
+	/* Instantiate a MUX for data inputed back into dataRAM
 	*	input: ShiftDataOUT, output from Shifter
 	*	input: ALUDataOUT, output from ALU
 	*	input: memSrc, control signal from Logic Controller
