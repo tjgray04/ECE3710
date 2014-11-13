@@ -5,67 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 51: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
+<msg type="error" file="HDLCompiler" num="718" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" Line 41: Port connections cannot be mixed ordered and named
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 66: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 75: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 78: Result of <arg fmt="%d" index="1">10</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">9</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\vgaControl.v" Line 116: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" Line 50: Result of <arg fmt="%d" index="1">14</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">13</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\DisplayVGA.v" Line 48: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">hGlyphVGA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">7</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\DisplayVGA.v" Line 50: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">vGlyphVGA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">6</arg>-bit while actual signal size is <arg fmt="%d" index="1">7</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0655172\Downloads\ECE3710-master (2)\ECE3710-master\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal &lt;<arg fmt="%s" index="1">charROM</arg>&gt; in initial block is partially initialized.
-</msg>
-
-<msg type="warning" file="Xst" num="0" delta="new" >Value &quot;<arg fmt="%s" index="1">{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}</arg>&quot; of property &quot;<arg fmt="%s" index="2">RAM_STYLE</arg>&quot; is not applicable. List of valid values is &quot;<arg fmt="%s" index="3">auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed</arg>&quot; 
-</msg>
-
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clk</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-</msg>
-
-<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">charDispRAM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">CharacterDisplayRAM</arg>&apos;, is tied to its initial value.
-</msg>
-
-<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">charDispRAM</arg>&gt;, simulation mismatch.
-</msg>
-
-<msg type="warning" file="Xst" num="0" delta="new" >Value &quot;<arg fmt="%s" index="1">{AUTO | DISTRIBUTED | BLOCK}</arg>&quot; of property &quot;<arg fmt="%s" index="2">ROM_STYLE</arg>&quot; is not applicable. List of valid values is &quot;<arg fmt="%s" index="3">auto, block, distributed</arg>&quot; 
-</msg>
-
-<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">charROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">CharacterROM</arg>&apos;, is tied to its initial value.
-</msg>
-
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_charDispRAM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-</msg>
-
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_charROM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-</msg>
-
-<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">vgaCtrl/hCount_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DisplayVGA</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">vgaCtrl/hCount_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DisplayVGA</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">vgaCtrl/vCount_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DisplayVGA</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">vgaCtrl/vCount_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DisplayVGA</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="error" file="HDLCompiler" num="598" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" Line 21: Module &lt;<arg fmt="%s" index="1">System</arg>&gt; ignored due to previous errors.
 </msg>
 
 </messages>

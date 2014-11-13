@@ -24,6 +24,9 @@
   <files xmlns="http://www.xilinx.com/XMLSchema">
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_TestBench_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="ALU_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CharacterDisplayRAM.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="CharacterDisplayRAM.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="CharacterDisplayRAM.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CharacterDisplayRAM_TestBench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="CharacterDisplayRAM_TestBench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="CharacterDisplayRAM_TestBench_isim_beh.wdb"/>
@@ -108,6 +111,9 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Shifter_TestBench_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SignExtender_TestBench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SignExtender_TestBench_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="System.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="System.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="System.xst"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="Titan.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="Titan.lso"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Titan.prj"/>

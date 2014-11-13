@@ -25,7 +25,8 @@ module MemoryController#(parameter WIDTH = 32)
 	input [7:0] IOdata_IN,
 	input	[6:0] vgaData_IN,
 	output reg memData_wrEn, stackData_wrEn, vgaData_wrEn, IOdata_wrEn,
-	output reg [WIDTH-1:0] addressOUT, CPUdata_OUT, memData_OUT, stackData_OUT, 
+	output reg [WIDTH-1:0] CPUdata_OUT, memData_OUT, stackData_OUT,
+	output [WIDTH-1:0] addressOUT,
 	output reg [7:0] IOdata_OUT,
 	output reg [6:0] vgaData_OUT
     );
@@ -40,7 +41,7 @@ module MemoryController#(parameter WIDTH = 32)
 			stackData_wrEn = 0;
 			vgaData_wrEn = 0;
 			IOdata_wrEn = 0;
-			case(address[15:14])
+			case(addressIN[15:14])
 				// dataRAM
 				00:	begin
 							// only enable writing to dataRAM if the logic controller enables a write
@@ -71,11 +72,11 @@ module MemoryController#(parameter WIDTH = 32)
 				// IO memory
 				11:	begin
 							// only enable writing to dataRAM if the logic controller enables a write
-							IOData_wrEn = writeEn;
+							IOdata_wrEn = writeEn;
 							// Set the output of the Mem Controller to be the data output of the dataRAM
-							CPUdata_OUT = IOData_IN;
+							CPUdata_OUT = IOdata_IN;
 							// send the data from the CPU as write data to dataRAM that will be written IFF memData_wrEn = 1.
-							IOData_OUT = CPUdata_IN;
+							IOdata_OUT = CPUdata_IN;
 						end
 				// Set the default case
 				default:	begin

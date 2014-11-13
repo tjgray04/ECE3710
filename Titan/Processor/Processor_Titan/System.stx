@@ -1,0 +1,107 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: System.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
+Parsing module <ZeroPad>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
+Parsing module <SignExtender>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v" into library work
+Parsing module <Shifter>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
+Parsing module <RegFile>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" Line 47. parameter declaration becomes local in RegFile with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
+Parsing module <Mux>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
+Parsing module <ALU>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" Line 41. parameter declaration becomes local in ALU with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v" into library work
+Parsing module <vgaControl>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
+Parsing module <ProgramStatusRegister>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v" into library work
+Parsing module <ProgramCounter>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" into library work
+Parsing module <LogicController>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 33. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 34. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 38. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 48. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 59. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 64. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 68. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 71. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 82. parameter declaration becomes local in LogicController with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" into library work
+Parsing module <InstructionROM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v" into library work
+Parsing module <InstructionDecoder>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v" into library work
+Parsing module <ExecutionStage>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" into library work
+Parsing module <CharacterROM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
+Parsing module <CharacterDisplayRAM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v" into library work
+Parsing module <Titan>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\StackMemory.v" into library work
+Parsing module <StackMemory>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v" into library work
+Parsing module <MemoryController>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v" into library work
+Parsing module <IOMemory>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
+Parsing module <DisplayVGA>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v" into library work
+Parsing module <DataRAM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" into library work
+Parsing module <System>.
+ERROR:HDLCompiler:718 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" Line 41: Port connections cannot be mixed ordered and named
+ERROR:HDLCompiler:598 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" Line 21: Module <System> ignored due to previous errors.
+Verilog file C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v ignored due to errors
+--> 
+
+Total memory usage is 182460 kilobytes
+
+Number of errors   :    2 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

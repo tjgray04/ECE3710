@@ -19,13 +19,13 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module DisplayVGA(input clk, reset,
-						//cpuWriteEn,
-						//input [6:0] writeData,
+						cpuWriteEn,
+						input [6:0] writeData,
 						//input [7:0] hGlyphCPU,
 						//input [6:0] vGlyphCPU,
 						input [31:0] addrCPU,
 						output hSync, vSync,
-						//output [6:0] outputCPU,
+						output [6:0] outputCPU,
 						output [7:0] rgb
 						);
 
@@ -43,14 +43,14 @@ module DisplayVGA(input clk, reset,
 						   .hPixel(hPixel), .vPixel(vPixel));
 
 	CharacterDisplayRAM charDispRAM(.clk(clk), 
-											//.cpuWriteEn(cpuWriteEn), 
-											//.writeData(writeData),
+											.cpuWriteEn(cpuWriteEn), 
+											.writeData(writeData),
 											//.hGlyphCPU(hGlyphCPU),
 											.addrCPU(addrCPU[12:0]), // CharacterDisplayRAM only has 13-bits of addressing space
 											.hGlyphVGA(hGlyphVGA),
 											//.vGlyphCPU(vGlyphCPU), 
 											.vGlyphVGA(vGlyphVGA),
-											//.outputCPU(outputCPU), 
+											.outputCPU(outputCPU), 
 											.outputVGA(outputVGA));
 
 	CharacterROM charROM(.hPixel(hPixel[2:0]), .vPixel(vPixel[2:0]), .glyphAddr(outputVGA), .color(color));

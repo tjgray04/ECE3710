@@ -41,20 +41,23 @@
 *	output: PSRwrite, Program Status Register output from ALU
 */
 module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBITS = 18, ALUOPBITS = 3, WIDTH = 32)
-		(input clk, reset, enRAM, aluSrcb, shiftSrc, memSrc, memWrite, regWriteEn, RaWriteEn, shifttype, RtSrcReg, wbPSR,wbSrc,
+		(input clk, reset, aluSrcb, shiftSrc, memSrc, regWriteEn, RaWriteEn, shifttype, RtSrcReg, wbPSR,wbSrc,
 		input [OPBITS-1:0] opCode, 
 		input [FUNCTBITS-1:0] functCode,
 		input [REGBITS-1:0] Rs,Rt,Rdest,
 		input [IMMBITS-1:0] immediate,
 		input [WIDTH-1:0] returnAddr, RaWriteData, PSRcondExt,
 		input [ALUOPBITS-1:0] aluop,
+		input [WIDTH-1:0] memControllerData,
 		output [WIDTH-1:0] immediateExt,
 		output [WIDTH-1:0] RaData,
-		output [REGBITS-1:0] PSRwrite);
+		output [REGBITS-1:0] PSRwrite,
+		output [WIDTH-1:0] memAddr, memWriteData
+		);
 	
 	// Declare internal wires/bus
 	wire [WIDTH-1:0] RsData, RtData, ALUMuxOUT, ShiftMuxOUT;
-	wire [WIDTH-1:0] ShiftDataOUT, ALUDataOUT, Data_2_dataRAM, Data_2_RegFile, data_2_writeData, writeData, memData;
+	wire [WIDTH-1:0] ShiftDataOUT, ALUDataOUT, Data_2_dataRAM, Data_2_RegFile, data_2_writeData, writeData;
 	wire [REGBITS-1:0] RtReg, PSRsel;
 	
 	/*	Instantiate REGISTER FILE
@@ -72,6 +75,8 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*/
 	RegFile regfile(.clk(~clk), .reset(reset), .regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .Rs(Rs),	.Rt(Rt),
 						 .Rdest(Rdest), .writeData(writeData), .RsData(RsData), .RtData(RtData), .RaData(RaData));
+	
+	assign memWriteData = RtData;
 	
 	/* Instantiate a MUX for Rt source register; either Rt or Rdest
 	*	input: Rt, from Instruction Decoder
@@ -129,6 +134,8 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*	output: Data_2_RegFile, output data to 
 	*/
 	Mux memSrcMUX(.d0(ShiftDataOUT), .d1(ALUDataOUT), .select(memSrc), .out(Data_2_dataRAM));//ALU_2_dataRAM
+	
+	assign memAddr = Data_2_dataRAM;
 
 	/* Instantiate a SignExtender to extend the immediate value to 32-bits
 	*	input: immediate, 18-bit immdiate value from instruction decoder
@@ -136,26 +143,14 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*/
 	SignExtender SignExtend1(.data_in(immediate), .data_out(immediateExt));
 	
-	/*	DATA RANDOM ACCESS MEMORY
-	*	input: clk, global clock from top module
-	*	input: enRAM, 
-	*	input:
-	*	input:
-	*	input:
-	*	input:
-	*	output: memData
-	*	output:
-	*	output:
-	*/
-	DataRAM dataRAM(.clk(clk), .enRAM(enRAM), .memWrite(memWrite), .input_data(RtData), .address(Data_2_dataRAM), .memData(memData));
 	
 	/* Instantiate a MUX for data inputed back into regFile
-	*	input: memData, output from Shifter
+	*	input: memControllerData, output from Shifter
 	*	input: Data_2_dataRAM, output from ALU_2_dataRAM MUX
 	*	input: wbSrc, control signal from Logic Controller
 	*	output: Data_2_RegFile, output data to RegFile
 	*/
-	Mux wbSrcMUX(.d0(memData), .d1(Data_2_dataRAM), .select(wbSrc), .out(Data_2_RegFile));
+	Mux wbSrcMUX(.d0(memControllerData), .d1(Data_2_dataRAM), .select(wbSrc), .out(Data_2_RegFile));
 	
 	/* Instantiate a MUX for to determine if writing back value from wbSrcMUX, or value from PSRcondExt
 	*	input: Data_2_RegFile, data from ALU operation/memory

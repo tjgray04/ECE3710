@@ -24,12 +24,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 13)
 	(input clk, 
-	//cpuWriteEn,
-	//input [RAM_WIDTH-1:0] writeData,
+	input cpuWriteEn,
+	input [RAM_WIDTH-1:0] writeData,
 	input	[RAM_ADDR_BITS-1:0] addrCPU,
 	input [RAM_WIDTH-1:0] /*hGlyphCPU,*/ hGlyphVGA, // 7-bits of addressing for 80 glyphs
 	input [RAM_WIDTH-2:0] /*vGlyphCPU,*/ vGlyphVGA, // 6-bits of addressing for 60 glyphs
-	output [RAM_WIDTH-1:0] /*outputCPU,*/ outputVGA
+	output [RAM_WIDTH-1:0] outputCPU, outputVGA
     );
 
 	//setup address to read from
