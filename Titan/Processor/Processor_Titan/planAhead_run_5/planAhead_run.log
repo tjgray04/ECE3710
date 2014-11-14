@@ -1,0 +1,225 @@
+
+****** PlanAhead v14.7 (64-bit)
+  **** Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+    ** Copyright 1986-1999, 2001-2013 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/pa.fromHdl.tcl
+# create_project -name Processor_Titan -dir "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/planAhead_run_5" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "System.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {ZeroPad.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {SignExtender.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Shifter.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {RegFile.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Mux.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ALU.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {vgaControl.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ProgramStatusRegister.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ProgramCounter.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {LogicController.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {InstructionROM.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {InstructionDecoder.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {ExecutionStage.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {CharacterROM.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {CharacterDisplayRAM.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Titan.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {StackMemory.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {MemoryController.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {IOMemory.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {DisplayVGA.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {DataRAM.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {System.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top System $srcset
+# add_files [list {System.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ZeroPad.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/SignExtender.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/Shifter.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/Mux.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ALU.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/vgaControl.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ProgramStatusRegister.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ProgramCounter.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/InstructionROM.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/InstructionDecoder.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ExecutionStage.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/CharacterROM.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/Titan.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/StackMemory.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/MemoryController.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DataRAM.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v" into library work
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{AUTO | DISTRIBUTED | BLOCK}' specified for property 'ROM_STYLE'. Expecting type 'enum' with possible values of 'block,distributed'. The system will either use the default value or the property value will be dropped. Please verify your source files. [C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/InstructionROM.v:30]
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}' specified for property 'RAM_STYLE'. Expecting type 'enum' with possible values of 'block,distributed'. The system will either use the default value or the property value will be dropped. Please verify your source files. [C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DataRAM.v:52]
+CRITICAL WARNING: [EDIF 20-96] Could not resolve non-primitive black box cell 'IOMemory' instantiated as 'ioMem' [C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v:62]
+Resolution: File names need to match cell names: an EDIF definition will be found in IOMemory.edf; an HDL definition may be placed in any Verilog/VHDL file.
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}' specified for property 'RAM_STYLE'. Expecting type 'enum' with possible values of 'block,distributed'. The system will either use the default value or the property value will be dropped. Please verify your source files. [C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/StackMemory.v:36]
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}' specified for property 'RAM_STYLE'. Expecting type 'enum' with possible values of 'block,distributed'. The system will either use the default value or the property value will be dropped. Please verify your source files. [C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM.v:55]
+CRITICAL WARNING: [Netlist 29-72] Incorrect value '{AUTO | DISTRIBUTED | BLOCK}' specified for property 'ROM_STYLE'. Expecting type 'enum' with possible values of 'block,distributed'. The system will either use the default value or the property value will be dropped. Please verify your source files. [C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/CharacterROM.v:29]
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.ucf]
+Finished Parsing UCF File [C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 703a851c
+open_rtl_design: Time (s): elapsed = 00:05:58 . Memory (MB): peak = 630.754 ; gain = 208.824
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS33 [get_ports [list {leds[7]} {leds[6]} {leds[5]} {leds[4]} {leds[3]} {leds[2]} {leds[1]} {leds[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {rgb[7]} {rgb[6]} {rgb[5]} {rgb[4]} {rgb[3]} {rgb[2]} {rgb[1]} {rgb[0]}]]
+startgroup
+set_property package_pin T11 [get_ports {leds[7]}]
+endgroup
+startgroup
+set_property package_pin R11 [get_ports {leds[6]}]
+endgroup
+startgroup
+set_property package_pin N11 [get_ports {leds[5]}]
+endgroup
+startgroup
+set_property package_pin M11 [get_ports {leds[4]}]
+endgroup
+startgroup
+set_property package_pin V15 [get_ports {leds[3]}]
+endgroup
+startgroup
+set_property package_pin U15 [get_ports {leds[2]}]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {leds[1]}]
+endgroup
+startgroup
+set_property package_pin V16 [get_ports {leds[1]}]
+endgroup
+startgroup
+set_property package_pin U16 [get_ports {leds[0]}]
+endgroup
+startgroup
+set_property package_pin U7 [get_ports {rgb[7]}]
+endgroup
+startgroup
+set_property package_pin N6 [get_ports {rgb[6]}]
+endgroup
+startgroup
+set_property package_pin P7 [get_ports {rgb[5]}]
+endgroup
+startgroup
+set_property package_pin P8 [get_ports {rgb[4]}]
+endgroup
+startgroup
+set_property package_pin T6 [get_ports {rgb[3]}]
+endgroup
+startgroup
+set_property package_pin V6 [get_ports {rgb[2]}]
+endgroup
+startgroup
+set_property package_pin R7 [get_ports {rgb[1]}]
+endgroup
+startgroup
+set_property package_pin T7 [get_ports {rgb[0]}]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+startgroup
+set_property package_pin V10 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin N10 [get_ports pulse]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list pulse]]
+startgroup
+set_property package_pin T12 [get_ports NESinputData]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list NESinputData]]
+startgroup
+set_property package_pin V12 [get_ports latch]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list latch]]
+startgroup
+set_property package_pin C4 [get_ports reset]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list reset]]
+startgroup
+set_property package_pin V7 [get_ports {rgb[6]}]
+endgroup
+startgroup
+set_property package_pin N7 [get_ports {rgb[5]}]
+endgroup
+startgroup
+set_property package_pin N6 [get_ports hSync]
+endgroup
+startgroup
+set_property package_pin P7 [get_ports vSync]
+endgroup
+set_property iostandard LVCMOS33 [get_ports [list hSync]]
+save_constraints
+set_property iostandard LVCMOS33 [get_ports [list vSync]]
+save_constraints
+update_compile_order -fileset sources_1
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Thu Nov 13 17:11:57 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead

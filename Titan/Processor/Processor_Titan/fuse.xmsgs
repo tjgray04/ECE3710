@@ -5,13 +5,49 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 46: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">hGlyphVGA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">7</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" Line 47: Parameter declaration becomes local in <arg fmt="%s" index="1">RegFile</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 48: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">vGlyphVGA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">6</arg>-bit while actual signal size is <arg fmt="%d" index="1">7</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in <arg fmt="%s" index="1">ALU</arg> with formal parameter declaration list
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 50: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">outputVGA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">7</arg>-bit while actual signal size is <arg fmt="%d" index="1">6</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 33: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 34: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 38: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 48: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 59: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 64: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 68: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 71: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 82: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v" Line 58: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">input_data</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v" Line 59: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">IO_Data</arg>&gt;. Formal port size is <arg fmt="%d" index="2">32</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" Line 50: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">hGlyphVGA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">7</arg>-bit while actual signal size is <arg fmt="%d" index="1">8</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" Line 52: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">vGlyphVGA</arg>&gt;. Formal port size is <arg fmt="%d" index="2">6</arg>-bit while actual signal size is <arg fmt="%d" index="1">7</arg>-bit.
 </msg>
 
 </messages>

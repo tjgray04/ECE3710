@@ -1,21 +1,76 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench_isim_beh.exe -prj C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench_beh.prj work.CharacterDisplayRAM_TestBench work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System_TestBench_isim_beh.exe -prj C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System_TestBench_beh.prj work.System_TestBench work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM.v" into library work
-Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ZeroPad.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/SignExtender.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/Shifter.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" Line 47: Parameter declaration becomes local in RegFile with formal parameter declaration list
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/Mux.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ALU.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in ALU with formal parameter declaration list
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/vgaControl.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ProgramStatusRegister.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ProgramCounter.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 33: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 34: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 38: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 48: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 59: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 64: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 68: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 71: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 82: Parameter declaration becomes local in LogicController with formal parameter declaration list
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/InstructionROM.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/InstructionDecoder.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/ExecutionStage.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/CharacterROM.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/Titan.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/StackMemory.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/MemoryController.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/IOMemory.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DataRAM.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v" into library work
+Analyzing Verilog file "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System_TestBench.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:189 - "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 46: Size mismatch in connection of port <hGlyphVGA>. Formal port size is 7-bit while actual signal size is 8-bit.
-WARNING:HDLCompiler:189 - "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 48: Size mismatch in connection of port <vGlyphVGA>. Formal port size is 6-bit while actual signal size is 7-bit.
-WARNING:HDLCompiler:189 - "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 50: Size mismatch in connection of port <outputVGA>. Formal port size is 7-bit while actual signal size is 6-bit.
+WARNING:HDLCompiler:189 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v" Line 58: Size mismatch in connection of port <input_data>. Formal port size is 32-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v" Line 59: Size mismatch in connection of port <IO_Data>. Formal port size is 32-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" Line 50: Size mismatch in connection of port <hGlyphVGA>. Formal port size is 7-bit while actual signal size is 8-bit.
+WARNING:HDLCompiler:189 - "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" Line 52: Size mismatch in connection of port <vGlyphVGA>. Formal port size is 6-bit while actual signal size is 7-bit.
 Completed static elaboration
+Compiling module Mux
+Compiling module ProgramCounter
+Compiling module InstructionROM
+Compiling module InstructionDecoder
+Compiling module RegFile_default
+Compiling module ALU
+Compiling module Shifter
+Compiling module SignExtender
+Compiling module ExecutionStage
+Compiling module LogicController
+Compiling module ZeroPad
+Compiling module ProgramStatusRegister
+Compiling module Titan
+Compiling module MemoryController
+Compiling module DataRAM
+Compiling module IOMemory
+Compiling module StackMemory
+Compiling module vgaControl
 Compiling module CharacterDisplayRAM
-Compiling module CharacterDisplayRAM_TestBench
+Compiling module CharacterROM
+Compiling module DisplayVGA
+Compiling module System
+Compiling module System_TestBench
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 3 Verilog Units
-Built simulation executable C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench_isim_beh.exe
-Fuse Memory Usage: 27420 KB
-Fuse CPU Usage: 498 ms
+Waiting for 10 sub-compilation(s) to finish...
+Compiled 24 Verilog Units
+Built simulation executable C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System_TestBench_isim_beh.exe
+Fuse Memory Usage: 28492 KB
+Fuse CPU Usage: 717 ms

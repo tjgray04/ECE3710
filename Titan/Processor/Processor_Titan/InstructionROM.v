@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module InstructionROM#(parameter WIDTH = 32, ROM_ADDR_BITS = 17)// assures 2^17 address space for ~160kbit application size
+module InstructionROM#(parameter WIDTH = 32, ROM_ADDR_BITS = 12)// assures 2^17 address space for ~160kbit application size
 						(input clk, enable,
 						input [WIDTH-1:0] PCadr, // PC is 32 bits, not 17
 						output reg [WIDTH-1:0] instruction);
@@ -32,7 +32,7 @@ module InstructionROM#(parameter WIDTH = 32, ROM_ADDR_BITS = 17)// assures 2^17 
 //   <reg_or_wire> [ROM_ADDR_BITS-1:0] <address>; //this is PCadr
    
    initial
-      $readmemb("newFib.dat", inst_ROM, 0, ((2**ROM_ADDR_BITS)-1)); //, <begin_address>, <end_address>);
+      $readmemb("IOtestloop.dat", inst_ROM, 0, ((2**ROM_ADDR_BITS)-1)); //, <begin_address>, <end_address>);
 	// PCadr is a latched value from the program counter and will never be indeterminate, so we can 
 	// output instructions based on this signal.
    always @(*)

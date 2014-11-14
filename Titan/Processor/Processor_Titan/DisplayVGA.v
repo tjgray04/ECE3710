@@ -23,7 +23,7 @@ module DisplayVGA(input clk, reset,
 						input [6:0] writeData,
 						//input [7:0] hGlyphCPU,
 						//input [6:0] vGlyphCPU,
-						input [31:0] addrCPU,
+						input [13:0] addrCPU,
 						output hSync, vSync,
 						output [6:0] outputCPU,
 						output [7:0] rgb

@@ -26,7 +26,7 @@ module MemoryController#(parameter WIDTH = 32)
 	input	[6:0] vgaData_IN,
 	output reg memData_wrEn, stackData_wrEn, vgaData_wrEn, IOdata_wrEn,
 	output reg [WIDTH-1:0] CPUdata_OUT, memData_OUT, stackData_OUT,
-	output [WIDTH-1:0] addressOUT,
+	output [13:0] addressOUT,
 	output reg [7:0] IOdata_OUT,
 	output reg [6:0] vgaData_OUT
     );
@@ -41,6 +41,10 @@ module MemoryController#(parameter WIDTH = 32)
 			stackData_wrEn = 0;
 			vgaData_wrEn = 0;
 			IOdata_wrEn = 0;
+			memData_OUT = 0;
+			stackData_OUT = 0;
+			vgaData_OUT = 0;
+			IOdata_OUT = 0;
 			case(addressIN[15:14])
 				// dataRAM
 				00:	begin

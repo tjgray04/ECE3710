@@ -29,10 +29,10 @@
 *	output:
 *	output:
 */
-module DataRAM #(parameter WIDTH = 32, RAM_ADDR_BITS = 16)
+module DataRAM #(parameter WIDTH = 32, RAM_ADDR_BITS = 10)
 	(input clk, enRAM, memWrite,
 	 input [WIDTH-1:0] input_data,
-	 input [WIDTH-1:0] address,
+	 input [14-1:0] address,
 	 output [WIDTH-1:0] memData);
 
    (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
@@ -43,13 +43,13 @@ module DataRAM #(parameter WIDTH = 32, RAM_ADDR_BITS = 16)
 //   initial
 //      $readmemh("<data_file_name>", <rom_name>, <begin_address>, <end_address>);
 
-	assign memData = dataRAM[address];
+	assign memData = dataRAM[address[RAM_ADDR_BITS-1:0]];
 	
    always @(posedge clk)
       if (enRAM) begin
          if (memWrite) 
 //			begin
-            dataRAM[address] <= input_data; //input_data is RtData
+            dataRAM[address[RAM_ADDR_BITS-1:0]] <= input_data; //input_data is RtData
 //            memData <= input_data;
 //         end
 //         else

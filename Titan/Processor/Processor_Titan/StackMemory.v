@@ -18,22 +18,22 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module StackMemory #(parameter WIDTH = 32, RAM_ADDR_BITS = 14)
+module StackMemory #(parameter WIDTH = 32, RAM_ADDR_BITS = 10)
 	(input clk, en, memWrite,
 	 input [WIDTH-1:0] input_data,
-	 input [WIDTH-1:0] address,
+	 input [RAM_ADDR_BITS-1:0] address,
 	 output [WIDTH-1:0] stackData);
 
    (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
    reg [WIDTH-1:0] stackRAM [(2**RAM_ADDR_BITS)-1:0];
 
 	// Reads will be done asynchronously
-	assign stackData = stackRAM[address];
+	assign stackData = stackRAM[address[RAM_ADDR_BITS-1:0]];
 	
    always @(posedge clk)
       if (en) begin
          if (memWrite) 
-            stackRAM[address] <= input_data;
+            stackRAM[address[RAM_ADDR_BITS-1:0]] <= input_data;
       end
 		
 endmodule

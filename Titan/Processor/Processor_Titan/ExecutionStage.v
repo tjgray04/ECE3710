@@ -41,12 +41,12 @@
 *	output: PSRwrite, Program Status Register output from ALU
 */
 module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBITS = 18, ALUOPBITS = 3, WIDTH = 32)
-		(input clk, reset, aluSrcb, shiftSrc, memSrc, regWriteEn, RaWriteEn, shifttype, RtSrcReg, wbPSR,wbSrc,
+		(input clk, reset, aluSrcb, shiftSrc, memSrc, regWriteEn, RaWriteEn, shiftType, RtSrcReg, wbPSR,wbSrc,
 		input [OPBITS-1:0] opCode, 
 		input [FUNCTBITS-1:0] functCode,
 		input [REGBITS-1:0] Rs,Rt,Rdest,
 		input [IMMBITS-1:0] immediate,
-		input [WIDTH-1:0] returnAddr, RaWriteData, PSRcondExt,
+		input [WIDTH-1:0] returnAddr, PSRcondExt,
 		input [ALUOPBITS-1:0] aluop,
 		input [WIDTH-1:0] memControllerData,
 		output [WIDTH-1:0] immediateExt,
@@ -114,10 +114,10 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	/* Instantiate the Shifter
 	*	input: RsData, from RegFile - data to be shifted
 	* 	input: shiftammount = ShiftMuxOUT, from ShiftMUX
-	*	input: shifttype, from Logic Controller - either logical (shifttype = 0) or arithmetic shift (shifttype = 1)
+	*	input: shiftType, from Logic Controller - either logical (shiftType = 0) or arithmetic shift (shiftType = 1)
 	*	output: result = ShiftDataOUT, shifted data
 	*/
-	Shifter shifter (.arg(RsData), .shiftamount(ShiftMuxOUT), .shifttype(shifttype), .result(ShiftDataOUT));
+	Shifter shifter (.arg(RsData), .shiftamount(ShiftMuxOUT), .shiftType(shiftType), .result(ShiftDataOUT));
 
 	/* Instantiate a MUX for data inputed in to shifter
 	*	input: immediateExt, possible shift ammount, from Sign Extender

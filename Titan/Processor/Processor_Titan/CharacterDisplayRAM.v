@@ -36,12 +36,12 @@ module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 13)
 	wire [12:0] vgaAddress;
 
    (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
-   reg [RAM_WIDTH-1:0] charDispRAM [(2**RAM_ADDR_BITS)-1:0];
+   reg [RAM_WIDTH-1:0] charDispRAM [4799:0];
 
    //  The forllowing code is only necessary if you wish to initialize the RAM 
    //  contents via an external file (use $readmemb for binary data)
    initial
-      $readmemb("mTestRAM.dat", charDispRAM, 0, ((2**RAM_ADDR_BITS)-1));
+      $readmemb("mTestRAM.dat", charDispRAM, 0, 4799);
 
 	assign vgaAddress = hGlyphVGA + (80*vGlyphVGA);
 	

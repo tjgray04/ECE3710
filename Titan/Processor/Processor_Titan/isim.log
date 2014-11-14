@@ -1,13 +1,14 @@
 ISim log file
-Running: C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM_TestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench_isim_beh.wdb 
+Running: C:\Users\u0791587\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\System_TestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System_TestBench_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
 WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
 This is a Lite version of ISim.
-WARNING: File "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 32.  For instance CharacterDisplayRAM_TestBench/uut/, width 7 of formal port hGlyphVGA is not equal to width 8 of actual variable hPixelVGA. 
-WARNING: File "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 34.  For instance CharacterDisplayRAM_TestBench/uut/, width 6 of formal port vGlyphVGA is not equal to width 7 of actual variable vPixelVGA. 
-WARNING: File "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM_TestBench.v" Line 38.  For instance CharacterDisplayRAM_TestBench/uut/, width 7 of formal port outputVGA is not equal to width 6 of actual signal outputVGA.
+WARNING: File "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v" Line 32.  For instance uut/ioMem/, width 32 of formal port input_data is not equal to width 8 of actual signal IOdata_OUT.
+WARNING: File "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v" Line 32.  For instance uut/ioMem/, width 32 of formal port IO_Data is not equal to width 8 of actual signal IOdata_IN.
+WARNING: File "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" Line 36.  For instance dispVGA/charDispRAM/, width 7 of formal port hGlyphVGA is not equal to width 8 of actual signal hGlyphVGA.
+WARNING: File "C:/Users/u0791587/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" Line 37.  For instance dispVGA/charDispRAM/, width 6 of formal port vGlyphVGA is not equal to width 7 of actual signal vGlyphVGA.
 Time resolution is 1 ps
 # onerror resume
 # wave add /
