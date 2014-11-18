@@ -1,0 +1,11 @@
+MODULE MusicSynthesizer
+	SUBMODULE pulse_generator
+		INSTANCE XLXI_3
+	SUBMODULE Duration_FSM
+		INSTANCE XLXI_4
+	SUBMODULE Duration_FSM
+		INSTANCE XLXI_8
+	SUBMODULE song_library
+		INSTANCE XLXI_5
+	SUBMODULE sound_generator
+		INSTANCE XLXI_7

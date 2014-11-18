@@ -1,0 +1,27 @@
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 SoundGenerator.ngc SoundGenerator.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 SoundGenerator.ngc SoundGenerator.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 SoundGenerator.ngc SoundGenerator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SoundGenerator_map.ncd SoundGenerator.ngd SoundGenerator.pcf 
+par -w -intstyle ise -ol high -mt off SoundGenerator_map.ncd SoundGenerator.ncd SoundGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SoundGenerator.twx SoundGenerator.ncd -o SoundGenerator.twr SoundGenerator.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f SoundGenerator.ut SoundGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 SoundGenerator.ngc SoundGenerator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SoundGenerator_map.ncd SoundGenerator.ngd SoundGenerator.pcf 
+par -w -intstyle ise -ol high -mt off SoundGenerator_map.ncd SoundGenerator.ncd SoundGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SoundGenerator.twx SoundGenerator.ncd -o SoundGenerator.twr SoundGenerator.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f SoundGenerator.ut SoundGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.syr" 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 SoundGenerator.ngc SoundGenerator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SoundGenerator_map.ncd SoundGenerator.ngd SoundGenerator.pcf 
+par -w -intstyle ise -ol high -mt off SoundGenerator_map.ncd SoundGenerator.ncd SoundGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SoundGenerator.twx SoundGenerator.ncd -o SoundGenerator.twr SoundGenerator.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f SoundGenerator.ut SoundGenerator.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 SoundGenerator.ngc SoundGenerator.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o SoundGenerator_map.ncd SoundGenerator.ngd SoundGenerator.pcf 
+par -w -intstyle ise -ol high -mt off SoundGenerator_map.ncd SoundGenerator.ncd SoundGenerator.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml SoundGenerator.twx SoundGenerator.ncd -o SoundGenerator.twr SoundGenerator.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f SoundGenerator.ut SoundGenerator.ncd 

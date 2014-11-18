@@ -1,0 +1,6 @@
+verilog work "sound_generator.v"
+verilog work "song_library.v"
+verilog work "Pulse_generator.v"
+verilog work "Duration_FSM.v"
+verilog work "bass_library.v"
+verilog work "SoundGenerator.v"

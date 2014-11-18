@@ -1,0 +1,11 @@
+[Inputs]
+clk
+clr
+enable
+=duration[2:0]=
+[Outputs]
+nextNote
+[BiDir]
+[ATTRIBUTES]
+VeriModel Duration_FSM
+

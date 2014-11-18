@@ -1,0 +1,164 @@
+sch2sym -intstyle ise -family spartan6 -refsym MusicSynthesizer {U:/My Documents/Lab6/MusicSynthesizer.sch} {U:/My Documents/Lab6/MusicSynthesizer.sym} 
+sch2hdl -intstyle ise -family spartan6 -verilog MusicSynthesizer_drc.vf -w {U:/My Documents/Lab6/MusicSynthesizer.sch} 
+sch2sym -intstyle ise -family spartan6 -refsym MusicSynthesizer {U:/My Documents/Lab6/MusicSynthesizer.sch} {U:/My Documents/Lab6/MusicSynthesizer.sym} 
+sch2hdl -intstyle ise -family spartan6 -verilog MusicSynthesizer_drc.vf -w {U:/My Documents/Lab6/MusicSynthesizer.sch} 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+sch2sym -intstyle ise -family spartan6 -refsym MusicSynthesizer {U:/My Documents/Lab6/MusicSynthesizer.sch} {U:/My Documents/Lab6/MusicSynthesizer.sym} 
+sch2hdl -intstyle ise -family spartan6 -verilog MusicSynthesizer_drc.vf -w {U:/My Documents/Lab6/MusicSynthesizer.sch} 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+sch2sym -intstyle ise -family spartan6 -refsym MusicSynthesizer {U:/My Documents/Lab6/MusicSynthesizer.sch} {U:/My Documents/Lab6/MusicSynthesizer.sym} 
+sch2hdl -intstyle ise -family spartan6 -verilog MusicSynthesizer_drc.vf -w {U:/My Documents/Lab6/MusicSynthesizer.sch} 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/Lab6/MusicSynthesizer.xst" -ofn "U:/My Documents/Lab6/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 
+xst -intstyle ise -ifn "U:/My Documents/SoundGenerator/MusicSynthesizer.xst" -ofn "U:/My Documents/SoundGenerator/MusicSynthesizer.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p xc6slx16-csg324-3 "MusicSynthesizer.ngc" MusicSynthesizer.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o MusicSynthesizer_map.ncd MusicSynthesizer.ngd MusicSynthesizer.pcf 
+par -w -intstyle ise -ol high -mt off MusicSynthesizer_map.ncd MusicSynthesizer.ncd MusicSynthesizer.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml MusicSynthesizer.twx MusicSynthesizer.ncd -o MusicSynthesizer.twr MusicSynthesizer.pcf -ucf MusicSynthesizer.ucf 
+bitgen -intstyle ise -f MusicSynthesizer.ut MusicSynthesizer.ncd 

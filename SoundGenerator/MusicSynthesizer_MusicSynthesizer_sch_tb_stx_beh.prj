@@ -1,0 +1,8 @@
+verilog isim_temp "sound_generator.v"
+verilog isim_temp "song_library.v"
+verilog isim_temp "Pulse_generator.v"
+verilog isim_temp "Keyboard.v"
+verilog isim_temp "Duration_FSM.v"
+verilog isim_temp "MusicSynthesizer.vf"
+verilog isim_temp "TestSynthesizer.v"
+verilog isim_temp "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,90 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Nov 18 14:57:14 2014
+# Process ID: 4492
+# Log file: C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/planAhead_run_2/planAhead.log
+# Journal file: C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/pa.fromHdl.tcl
+# create_project -name SoundGenerator -dir "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/planAhead_run_2" -part xc6slx16csg324-3
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "MusicSynthesizer.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {sound_generator.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {song_library.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Pulse_generator.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {Duration_FSM.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {SoundGenerator.v}]]
+# set_property file_type Verilog $hdlfile
+# set_property library work $hdlfile
+# set_property top SoundGenerator $srcset
+# add_files [list {MusicSynthesizer.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx16csg324-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Analyzing Verilog file "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/sound_generator.v" into library work
+Analyzing Verilog file "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/song_library.v" into library work
+Analyzing Verilog file "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/Pulse_generator.v" into library work
+Analyzing Verilog file "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/Duration_FSM.v" into library work
+Analyzing Verilog file "C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.v" into library work
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx16/csg324/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'keys[2]' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:4]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'keys[1]' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:5]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'keys[0]' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:6]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sound' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:9]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'toggle_mode' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:10]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'keys[0]' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:14]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'keys[1]' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:15]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'keys[2]' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:16]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'toggle_mode' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:17]
+CRITICAL WARNING: [Constraints 18-11] Could not find net or pin 'sound' [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf:20]
+Finished Parsing UCF File [C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/MusicSynthesizer.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: e0a168ad
+open_rtl_design: Time (s): elapsed = 00:00:12 . Memory (MB): peak = 612.855 ; gain = 175.516
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS33 [get_ports [list soundBass]]
+set_property iostandard LVCMOS33 [get_ports [list soundMelody]]
+startgroup
+set_property package_pin G11 [get_ports soundBass]
+endgroup
+startgroup
+set_property package_pin F11 [get_ports soundMelody]
+endgroup
+save_constraints
+exit
+ERROR: [PlanAhead 12-106] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+ (See C:/Users/u0655172/Desktop/ECE3710/SoundGenerator\planAhead_pid4492.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Nov 18 15:01:03 2014...
+INFO: [Common 17-83] Releasing license: PlanAhead

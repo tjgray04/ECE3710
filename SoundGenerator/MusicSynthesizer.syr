@@ -1,0 +1,607 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: MusicSynthesizer.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "MusicSynthesizer.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "MusicSynthesizer"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : MusicSynthesizer
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\wannsee\users\u0655172\My Documents\SoundGenerator\sound_generator.v" into library work
+Parsing module <sound_generator>.
+Analyzing Verilog file "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" into library work
+Parsing module <song_library>.
+INFO:HDLCompiler:693 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 28. parameter declaration becomes local in song_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 29. parameter declaration becomes local in song_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 30. parameter declaration becomes local in song_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 31. parameter declaration becomes local in song_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 32. parameter declaration becomes local in song_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 33. parameter declaration becomes local in song_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 36. parameter declaration becomes local in song_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 47. parameter declaration becomes local in song_library with formal parameter declaration list
+Analyzing Verilog file "\\wannsee\users\u0655172\My Documents\SoundGenerator\Pulse_generator.v" into library work
+Parsing module <pulse_generator>.
+Analyzing Verilog file "\\wannsee\users\u0655172\My Documents\SoundGenerator\Keyboard.v" into library work
+Parsing module <Keyboard>.
+Analyzing Verilog file "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" into library work
+Parsing module <Duration_FSM>.
+Analyzing Verilog file "\\wannsee\users\u0655172\My Documents\SoundGenerator\MusicSynthesizer.vf" into library work
+Parsing module <MusicSynthesizer>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <MusicSynthesizer>.
+
+Elaborating module <pulse_generator>.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Pulse_generator.v" Line 54: Result of 28-bit expression is truncated to fit in 27-bit target.
+
+Elaborating module <Duration_FSM>.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 54: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 55: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 56: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 57: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 58: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 82: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 100: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 118: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 136: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v" Line 154: Result of 8-bit expression is truncated to fit in 7-bit target.
+
+Elaborating module <song_library>.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v" Line 55: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:189 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\MusicSynthesizer.vf" Line 53: Size mismatch in connection of port <ticks>. Formal port size is 18-bit while actual signal size is 23-bit.
+
+Elaborating module <Keyboard>.
+WARNING:HDLCompiler:189 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\MusicSynthesizer.vf" Line 55: Size mismatch in connection of port <ticks_in>. Formal port size is 18-bit while actual signal size is 23-bit.
+WARNING:HDLCompiler:189 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\MusicSynthesizer.vf" Line 57: Size mismatch in connection of port <ticks_out>. Formal port size is 18-bit while actual signal size is 23-bit.
+
+Elaborating module <sound_generator>.
+WARNING:HDLCompiler:413 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\sound_generator.v" Line 45: Result of 19-bit expression is truncated to fit in 18-bit target.
+WARNING:HDLCompiler:189 - "\\wannsee\users\u0655172\My Documents\SoundGenerator\MusicSynthesizer.vf" Line 60: Size mismatch in connection of port <ticks>. Formal port size is 18-bit while actual signal size is 23-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <MusicSynthesizer>.
+    Related source file is "\\wannsee\users\u0655172\My Documents\SoundGenerator\MusicSynthesizer.vf".
+    Summary:
+	no macro.
+Unit <MusicSynthesizer> synthesized.
+
+Synthesizing Unit <pulse_generator>.
+    Related source file is "\\wannsee\users\u0655172\My Documents\SoundGenerator\Pulse_generator.v".
+        maxCount = 550000
+    Found 1-bit register for signal <enable>.
+    Found 27-bit register for signal <count>.
+    Found 27-bit adder for signal <count[26]_GND_2_o_add_2_OUT> created at line 54.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+Unit <pulse_generator> synthesized.
+
+Synthesizing Unit <Duration_FSM>.
+    Related source file is "\\wannsee\users\u0655172\My Documents\SoundGenerator\Duration_FSM.v".
+        fetch = 0
+        quarter = 1
+        eigth = 2
+        third = 3
+        sixteenth = 4
+        sixth = 5
+    Found 1-bit register for signal <ended>.
+    Found 7-bit register for signal <count>.
+    Found 3-bit register for signal <PS>.
+    Found 7-bit adder for signal <count[6]_GND_3_o_add_27_OUT> created at line 154.
+    Found 3-bit 7-to-1 multiplexer for signal <NS> created at line 52.
+    Found 1-bit 7-to-1 multiplexer for signal <PS[2]_GND_3_o_Mux_30_o> created at line 66.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred  13 Multiplexer(s).
+Unit <Duration_FSM> synthesized.
+
+Synthesizing Unit <song_library>.
+    Related source file is "\\wannsee\users\u0655172\My Documents\SoundGenerator\song_library.v".
+        TICKBITS = 18
+    Found 6-bit register for signal <count>.
+    Found 6-bit adder for signal <count[5]_GND_4_o_add_2_OUT> created at line 55.
+    Found 64x21-bit Read Only RAM for signal <_n0091>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <song_library> synthesized.
+
+Synthesizing Unit <Keyboard>.
+    Related source file is "\\wannsee\users\u0655172\My Documents\SoundGenerator\Keyboard.v".
+        C = 191110
+        D = 170265
+        E = 151685
+        F = 143172
+        G = 127551
+        A = 113636
+        B = 101239
+        REST = 0
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Keyboard> synthesized.
+
+Synthesizing Unit <sound_generator>.
+    Related source file is "\\wannsee\users\u0655172\My Documents\SoundGenerator\sound_generator.v".
+        TICKBITS = 18
+    Found 18-bit register for signal <count>.
+    Found 1-bit register for signal <sound>.
+    Found 18-bit adder for signal <count[17]_GND_16_o_add_2_OUT> created at line 45.
+    Found 18-bit comparator equal for signal <count[17]_ticks[17]_equal_2_o> created at line 38
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <sound_generator> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 64x21-bit single-port Read Only RAM                   : 1
+# Adders/Subtractors                                   : 4
+ 18-bit adder                                          : 1
+ 27-bit adder                                          : 1
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Registers                                            : 8
+ 1-bit register                                        : 3
+ 18-bit register                                       : 1
+ 27-bit register                                       : 1
+ 3-bit register                                        : 1
+ 6-bit register                                        : 1
+ 7-bit register                                        : 1
+# Comparators                                          : 1
+ 18-bit comparator equal                               : 1
+# Multiplexers                                         : 17
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 1
+ 18-bit 2-to-1 multiplexer                             : 2
+ 3-bit 7-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 10
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <pulse_generator>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <pulse_generator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <song_library>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0091> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 21-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <count>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <song_library> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sound_generator>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <sound_generator> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 64x21-bit single-port distributed Read Only RAM       : 1
+# Adders/Subtractors                                   : 2
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 2
+ 18-bit up counter                                     : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 19
+ Flip-Flops                                            : 19
+# Comparators                                          : 1
+ 18-bit comparator equal                               : 1
+# Multiplexers                                         : 16
+ 1-bit 2-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 1
+ 18-bit 2-to-1 multiplexer                             : 1
+ 3-bit 7-to-1 multiplexer                              : 1
+ 6-bit 2-to-1 multiplexer                              : 2
+ 7-bit 2-to-1 multiplexer                              : 10
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <MusicSynthesizer> ...
+
+Optimizing unit <Duration_FSM> ...
+
+Optimizing unit <song_library> ...
+WARNING:Xst:1710 - FF/Latch <XLXI_3/count_20> (without init value) has a constant value of 0 in block <MusicSynthesizer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_3/count_21> (without init value) has a constant value of 0 in block <MusicSynthesizer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_3/count_22> (without init value) has a constant value of 0 in block <MusicSynthesizer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_3/count_23> (without init value) has a constant value of 0 in block <MusicSynthesizer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_3/count_24> (without init value) has a constant value of 0 in block <MusicSynthesizer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_3/count_25> (without init value) has a constant value of 0 in block <MusicSynthesizer>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <XLXI_3/count_26> (without init value) has a constant value of 0 in block <MusicSynthesizer>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block MusicSynthesizer, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 57
+ Flip-Flops                                            : 57
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : MusicSynthesizer.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 211
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 19
+#      LUT2                        : 25
+#      LUT3                        : 5
+#      LUT4                        : 6
+#      LUT5                        : 26
+#      LUT6                        : 45
+#      MUXCY                       : 43
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 38
+# FlipFlops/Latches                : 57
+#      FD                          : 1
+#      FDE                         : 13
+#      FDR                         : 43
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 5
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              57  out of  18224     0%  
+ Number of Slice LUTs:                  127  out of   9112     1%  
+    Number used as Logic:               127  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    129
+   Number with an unused Flip Flop:      72  out of    129    55%  
+   Number with an unused LUT:             2  out of    129     1%  
+   Number of fully used LUT-FF pairs:    55  out of    129    42%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    232     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 57    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 6.336ns (Maximum Frequency: 157.826MHz)
+   Minimum input arrival time before clock: 6.155ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.336ns (frequency: 157.826MHz)
+  Total number of paths / destination ports: 25476 / 90
+-------------------------------------------------------------------------
+Delay:               6.336ns (Levels of Logic = 28)
+  Source:            XLXI_5/count_1 (FF)
+  Destination:       XLXI_7/count_17 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: XLXI_5/count_1 to XLXI_7/count_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             27   0.447   1.565  XLXI_5/count_1 (XLXI_5/count_1)
+     LUT6:I1->O            1   0.203   0.580  XLXI_5_Mram__n009141 (XLXN_7<1>)
+     LUT5:I4->O            1   0.205   0.808  XLXI_6/Mmux_ticks_out101 (XLXN_8<1>)
+     LUT6:I3->O            1   0.205   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_lut<0> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<0> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<1> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<2> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<3> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<4> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<4>)
+     MUXCY:CI->O          20   0.019   1.093  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<5> (XLXI_7/count[17]_ticks[17]_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  XLXI_7/Mcount_count_lut<0> (XLXI_7/Mcount_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  XLXI_7/Mcount_count_cy<0> (XLXI_7/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<1> (XLXI_7/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<2> (XLXI_7/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<3> (XLXI_7/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<4> (XLXI_7/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<5> (XLXI_7/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<6> (XLXI_7/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<7> (XLXI_7/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<8> (XLXI_7/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<9> (XLXI_7/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<10> (XLXI_7/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<11> (XLXI_7/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<12> (XLXI_7/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<13> (XLXI_7/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<14> (XLXI_7/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<15> (XLXI_7/Mcount_count_cy<15>)
+     MUXCY:CI->O           0   0.019   0.000  XLXI_7/Mcount_count_cy<16> (XLXI_7/Mcount_count_cy<16>)
+     XORCY:CI->O           1   0.180   0.000  XLXI_7/Mcount_count_xor<17> (XLXI_7/Mcount_count17)
+     FDR:D                     0.102          XLXI_7/count_17
+    ----------------------------------------
+    Total                      6.336ns (2.290ns logic, 4.046ns route)
+                                       (36.1% logic, 63.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 13545 / 74
+-------------------------------------------------------------------------
+Offset:              6.155ns (Levels of Logic = 28)
+  Source:            toggle_mode (PAD)
+  Destination:       XLXI_7/count_17 (FF)
+  Destination Clock: clk rising
+
+  Data Path: toggle_mode to XLXI_7/count_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.394  toggle_mode_IBUF (toggle_mode_IBUF)
+     LUT5:I0->O            1   0.203   0.808  XLXI_6/Mmux_ticks_out101 (XLXN_8<1>)
+     LUT6:I3->O            1   0.205   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_lut<0> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<0> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<1> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<2> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<3> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<4> (XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<4>)
+     MUXCY:CI->O          20   0.019   1.093  XLXI_7/Mcompar_count[17]_ticks[17]_equal_2_o_cy<5> (XLXI_7/count[17]_ticks[17]_equal_2_o)
+     LUT2:I1->O            1   0.205   0.000  XLXI_7/Mcount_count_lut<0> (XLXI_7/Mcount_count_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  XLXI_7/Mcount_count_cy<0> (XLXI_7/Mcount_count_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<1> (XLXI_7/Mcount_count_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<2> (XLXI_7/Mcount_count_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<3> (XLXI_7/Mcount_count_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<4> (XLXI_7/Mcount_count_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<5> (XLXI_7/Mcount_count_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<6> (XLXI_7/Mcount_count_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<7> (XLXI_7/Mcount_count_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<8> (XLXI_7/Mcount_count_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<9> (XLXI_7/Mcount_count_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<10> (XLXI_7/Mcount_count_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<11> (XLXI_7/Mcount_count_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<12> (XLXI_7/Mcount_count_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<13> (XLXI_7/Mcount_count_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<14> (XLXI_7/Mcount_count_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  XLXI_7/Mcount_count_cy<15> (XLXI_7/Mcount_count_cy<15>)
+     MUXCY:CI->O           0   0.019   0.000  XLXI_7/Mcount_count_cy<16> (XLXI_7/Mcount_count_cy<16>)
+     XORCY:CI->O           1   0.180   0.000  XLXI_7/Mcount_count_xor<17> (XLXI_7/Mcount_count17)
+     FDR:D                     0.102          XLXI_7/count_17
+    ----------------------------------------
+    Total                      6.155ns (2.860ns logic, 3.295ns route)
+                                       (46.5% logic, 53.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            XLXI_7/sound (FF)
+  Destination:       sound (PAD)
+  Source Clock:      clk rising
+
+  Data Path: XLXI_7/sound to sound
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.616  XLXI_7/sound (XLXI_7/sound)
+     OBUF:I->O                 2.571          sound_OBUF (sound)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.336|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.84 secs
+ 
+--> 
+
+Total memory usage is 258988 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

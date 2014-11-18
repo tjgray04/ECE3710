@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# PlanAhead v14.4 (64-bit)
+# Build 222254 by xbuild on Tue Dec 18 05:21:09 MST 2012
+# Start of session at: Wed Apr 24 17:56:23 2013
+# Process ID: 3392
+# Log file: U:/My Documents/Lab6/planAhead_run_1/planAhead.log
+# Journal file: U:/My Documents/Lab6/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {U:/My Documents/Lab6/pa.fromHdl.tcl}
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS33 [get_ports [list {keys[2]} {keys[1]} {keys[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list clk]]
+set_property iostandard LVCMOS33 [get_ports [list clr]]
+set_property iostandard LVCMOS33 [get_ports [list sound]]
+set_property iostandard LVCMOS33 [get_ports [list toggle_mode]]
+startgroup
+set_property package_pin C4 [get_ports {keys[0]}]
+endgroup
+startgroup
+set_property package_pin B8 [get_ports {keys[1]}]
+endgroup
+startgroup
+set_property package_pin D9 [get_ports {keys[2]}]
+endgroup
+startgroup
+set_property package_pin T10 [get_ports toggle_mode]
+endgroup
+set_property package_pin "" [get_ports [list  sound]]
+startgroup
+set_property package_pin C9 [get_ports clr]
+endgroup
+startgroup
+set_property package_pin V10 [get_ports clk]
+endgroup
+startgroup
+set_property package_pin G11 [get_ports sound]
+endgroup
+save_constraints

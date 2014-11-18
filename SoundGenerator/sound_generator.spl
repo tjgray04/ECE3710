@@ -1,0 +1,10 @@
+[Inputs]
+clk
+clr
+=ticks[22:0]=
+[Outputs]
+sound
+[BiDir]
+[ATTRIBUTES]
+VeriModel sound_generator
+

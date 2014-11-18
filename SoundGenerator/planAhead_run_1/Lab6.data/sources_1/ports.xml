@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="keys">
+			<Port Id="2" Dir="IN"/>
+			<Port Id="1" Dir="IN"/>
+			<Port Id="0" Dir="IN"/>
+		</Bus>
+		<Port Id="clk" Dir="IN"/>
+		<Port Id="clr" Dir="IN"/>
+		<Port Id="toggle_mode" Dir="IN"/>
+		<Port Id="sound" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

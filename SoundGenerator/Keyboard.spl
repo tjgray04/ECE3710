@@ -1,0 +1,10 @@
+[Inputs]
+toggle_mode
+=ticks_in[22:0]=
+=keys[2:0]=
+[Outputs]
+=ticks_out[22:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel Keyboard
+

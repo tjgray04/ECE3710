@@ -1,0 +1,9 @@
+[Inputs]
+clk
+clr
+[Outputs]
+enable
+[BiDir]
+[ATTRIBUTES]
+VeriModel pulse_generator
+

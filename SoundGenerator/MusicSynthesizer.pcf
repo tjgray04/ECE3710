@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Thu Nov 06 15:40:48 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "keys<0>" LOCATE = SITE "C4" LEVEL 1;
+COMP "keys<1>" LOCATE = SITE "B8" LEVEL 1;
+COMP "keys<2>" LOCATE = SITE "D9" LEVEL 1;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "clr" LOCATE = SITE "C9" LEVEL 1;
+COMP "sound" LOCATE = SITE "G11" LEVEL 1;
+COMP "toggle_mode" LOCATE = SITE "T10" LEVEL 1;
+SCHEMATIC END;
+

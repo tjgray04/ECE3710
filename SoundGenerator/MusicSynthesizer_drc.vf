@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.4
+//  \   \         Application : sch2hdl
+//  /   /         Filename : MusicSynthesizer_drc.vf
+// /___/   /\     Timestamp : 04/25/2013 10:58:54
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -intstyle ise -family spartan6 -verilog MusicSynthesizer_drc.vf -w "U:/My Documents/Lab6/MusicSynthesizer.sch"
+//Design Name: MusicSynthesizer
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module MusicSynthesizer(clk, 
+                        clr, 
+                        keys, 
+                        toggle_mode, 
+                        sound);
+
+    input clk;
+    input clr;
+    input [2:0] keys;
+    input toggle_mode;
+   output sound;
+   
+   wire XLXN_3;
+   wire [2:0] XLXN_5;
+   wire XLXN_6;
+   wire [22:0] XLXN_7;
+   wire [22:0] XLXN_8;
+   
+   pulse_generator  XLXI_3 (.clk(clk), 
+                           .clr(clr), 
+                           .enable(XLXN_3));
+   Duration_FSM  XLXI_4 (.clk(clk), 
+                        .clr(clr), 
+                        .duration(XLXN_5[2:0]), 
+                        .enable(XLXN_3), 
+                        .nextNote(XLXN_6));
+   song_library  XLXI_5 (.clk(clk), 
+                        .clr(clr), 
+                        .nextNote(XLXN_6), 
+                        .duration(XLXN_5[2:0]), 
+                        .ticks(XLXN_7[22:0]));
+   Keyboard  XLXI_6 (.keys(keys[2:0]), 
+                    .ticks_in(XLXN_7[22:0]), 
+                    .toggle_mode(toggle_mode), 
+                    .ticks_out(XLXN_8[22:0]));
+   sound_generator  XLXI_7 (.clk(clk), 
+                           .clr(clr), 
+                           .ticks(XLXN_8[22:0]), 
+                           .sound(sound));
+endmodule

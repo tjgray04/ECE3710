@@ -1,0 +1,18 @@
+
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "clr" IOSTANDARD = LVCMOS33;
+
+
+NET "clr" LOC = C9;
+NET "clk" LOC = V10;
+
+# PlanAhead Generated IO constraints 
+
+NET "soundBass" IOSTANDARD = LVCMOS33;
+NET "soundMelody" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+
+NET "soundBass" LOC = G11;
+NET "soundMelody" LOC = F11;
