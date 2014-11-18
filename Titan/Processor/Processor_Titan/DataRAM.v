@@ -29,7 +29,7 @@
 *	output:
 *	output:
 */
-module DataRAM #(parameter WIDTH = 32, RAM_ADDR_BITS = 10)
+module DataRAM #(parameter WIDTH = 32, RAM_ADDR_BITS = 12)
 	(input clk, enRAM, memWrite,
 	 input [WIDTH-1:0] input_data,
 	 input [14-1:0] address,

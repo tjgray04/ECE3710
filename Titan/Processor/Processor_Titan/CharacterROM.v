@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module CharacterROM#(parameter ROM_WIDTH = 8, ROM_ADDR_BITS = 13, PIXEL_BITS = 3, CHAR_AMNT = 7)
+module CharacterROM#(parameter ROM_WIDTH = 8, ROM_ADDR_BITS = 12, PIXEL_BITS = 3, CHAR_AMNT = 7)
 	(input [PIXEL_BITS-1:0] hPixel,
 	 input [PIXEL_BITS-1:0] vPixel,
 	 input [CHAR_AMNT-1:0] glyphAddr,
