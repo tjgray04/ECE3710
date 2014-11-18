@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module InstructionROM#(parameter WIDTH = 32, ROM_ADDR_BITS = 12)// assures 2^17 address space for ~160kbit application size
+module InstructionROM#(parameter WIDTH = 32, ROM_ADDR_BITS = 12)// assures 2^12 address space for ~4k application size (16Kbytes)
 						(input clk, enable,
 						input [WIDTH-1:0] PCadr, // PC is 32 bits, not 17
 						output reg [WIDTH-1:0] instruction);
