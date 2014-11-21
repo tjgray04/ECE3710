@@ -25,7 +25,7 @@ module NES_CONTROLLER(
     );
 
 	//Instantiate a register to conatin the count that will be send out all the control signals.
-	reg [31:0] count;
+	reg [21:0] count; //was 31
 	
 	/*This always block will take care the the synchronous portion of NES controller,
 	 *every 1/60 seconds a latch pulse will be sent, 18us later the pulse signal will 

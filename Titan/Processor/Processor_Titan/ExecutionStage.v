@@ -42,12 +42,12 @@
 */
 module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBITS = 18, ALUOPBITS = 3, WIDTH = 32)
 		(input clk, reset, aluSrcb, shiftSrc, memSrc, regWriteEn, RaWriteEn, shiftType, RtSrcReg, wbPSR,wbSrc,
-		input [OPBITS-1:0] opCode, 
-		input [FUNCTBITS-1:0] functCode,
+//		input [OPBITS-1:0] opCode, Not needed for this stage
+//		input [FUNCTBITS-1:0] functCode,
 		input [REGBITS-1:0] Rs,Rt,Rdest,
 		input [IMMBITS-1:0] immediate,
 		input [WIDTH-1:0] returnAddr, PSRcondExt,
-		input [ALUOPBITS-1:0] aluop,
+		input [ALUOPBITS-1:0] aluop,//00
 		input [WIDTH-1:0] memControllerData,
 		output [WIDTH-1:0] immediateExt,
 		output [WIDTH-1:0] RaData,
@@ -73,9 +73,11 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*	output: RtData, source register B data output
 	*	output: RaData, return address for Program Counter
 	*/
-	RegFile regfile(.clk(~clk), .reset(reset), .regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .Rs(Rs),	.Rt(Rt),
+	RegFile regfile(.clk(~clk), .regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .Rs(Rs),	.Rt(RtReg),
 						 .Rdest(Rdest), .writeData(writeData), .RsData(RsData), .RtData(RtData), .RaData(RaData));
 	
+	/* This is an output line to go to the meory controller
+	*/
 	assign memWriteData = RtData;
 	
 	/* Instantiate a MUX for Rt source register; either Rt or Rdest
@@ -84,7 +86,7 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*	input: RtSrcReg, from Logic Controller
 	*	output: RtReg, register to be used as Rt in RegFile
 	*/
-	//Mux #(.WIDTH(5)) RtSrcRegMUX(.d0(Rt), .d1(Rdest), .select(RtSrcReg), .out(RtReg));
+	Mux #(.WIDTH(5)) RtSrcRegMUX(.d0(Rt), .d1(Rdest), .select(RtSrcReg), .out(RtReg));
 	
 	/* Instantiate a MUX for writeData (from memory, or from return address)
 	*	input: Data_2_RegFile, data from ALU operation/memory

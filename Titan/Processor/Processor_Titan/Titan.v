@@ -52,7 +52,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*	output: PC, Program Counter address
 	*/
 	ProgramCounter PC(.clk(clk), .reset(reset), .branch(branch), .jump(jump), .jumpRA(jumpRA), 
-							.PSRcond(PSRcond), .instruction(instruction), .immediate(immediateExt), .RaData(RaData),
+							.PSRcond(PSRcond), .instruction(instruction[27:0]), .immediate(immediateExt), .RaData(RaData),
 							.returnAddr(returnAddr), .PC(PCadr), .PCEn(PCEn));
 	
 	/* Instantiate Memory Blocks - InstructionROM
@@ -60,7 +60,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*  input: PCadr from Program Counter
 	*  output: instruction from memory
 	*/
-	InstructionROM instROM(.clk(clk), .enable(enROM), .PCadr(PCadr), .instruction(instruction));
+	InstructionROM instROM(/*.clk(clk), .enable(enROM),*/ .PCadr(PCadr), .instruction(instruction));
 	
 	/* Instantiate an Instruction Decoder
 	*	input: instruction, instructionROM
@@ -91,7 +91,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	* 	output: PSRwrite, PSR register to go into PSR module
 	*/
 	ExecutionStage ExStage(.clk(clk), .reset(reset), .aluSrcb(aluSrcb), .shiftSrc(shiftSrc), .memSrc(memSrc),
-		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .opCode(opCode), .functCode(functCode), .RtSrcReg(RtSrcReg), .wbPSR(wbPSR), 
+		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), /*.opCode(opCode), .functCode(functCode),*/ .RtSrcReg(RtSrcReg), .wbPSR(wbPSR), 
 		.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate), .returnAddr(returnAddr), .wbSrc(wbSrc), 
 		.PSRcondExt(PSRcondExt), .aluop(aluop), .shiftType(shiftType), .immediateExt(immediateExt), .RaData(RaData), .PSRwrite(PSRwrite),
 		.memControllerData(memControllerData), .memAddr(memAddr), .memWriteData(memWriteData));
@@ -120,7 +120,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	LogicController LogicCtrl(.clk(clk), .reset(reset), .opCode(opCode), .functionCode(functCode), .branch(branch),
 					.jump(jump), .jumpRA(jumpRA), .CFWrite(CFWrite), .LZNWrite(LZNWrite), .wbPSR(wbPSR), .RtSrcReg(RtSrcReg), 
 					.wbSrc(wbSrc), .memSrc(memSrc), .shiftSrc(shiftSrc), .aluSrcb(aluSrcb), .regWriteEn(regWriteEn),
-					.raWrite(RaWriteEn), .shiftType(shiftType), .memWrite(writeEn), .pcEn(PCEn), .enROM(enROM), .enRAM(enRAM), .aluop(aluop));
+					.raWrite(RaWriteEn), .shiftType(shiftType), .memWrite(writeEn), .pcEn(PCEn), /*.enROM(enROM),*/ .enRAM(enRAM), .aluop(aluop));
 	
 	/* Instantiate PSR Controller
 	*	input: clk, from global clk

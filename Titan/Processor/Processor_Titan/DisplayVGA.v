@@ -33,8 +33,8 @@ module DisplayVGA(input clk, reset,
 	wire [8:0]  vPixel;
 	wire [6:0]  outputVGA;
 	wire [7:0]  color;
-	wire [7:0] 	hGlyphVGA;
-	wire [6:0]  vGlyphVGA;
+	wire [6:0] 	hGlyphVGA; //7-bits
+	wire [5:0]  vGlyphVGA; //6-bits
 	
 	assign hGlyphVGA = hPixel[9:3];
 	assign vGlyphVGA = vPixel[8:3];

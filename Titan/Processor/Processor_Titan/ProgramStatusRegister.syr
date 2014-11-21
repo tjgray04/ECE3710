@@ -1,0 +1,377 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: ProgramStatusRegister.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ProgramStatusRegister.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ProgramStatusRegister"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : ProgramStatusRegister
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
+Parsing module <ZeroPad>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
+Parsing module <ProgramStatusRegister>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <ProgramStatusRegister>.
+
+Elaborating module <ZeroPad>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <ProgramStatusRegister>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v".
+        REGBITS = 5
+        WIDTH = 32
+    Found 1-bit register for signal <PSR<3>>.
+    Found 1-bit register for signal <PSR<2>>.
+    Found 1-bit register for signal <PSR<1>>.
+    Found 1-bit register for signal <PSR<0>>.
+    Found 1-bit register for signal <PSR<4>>.
+    Found 1-bit 15-to-1 multiplexer for signal <_n0085> created at line 29.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <ProgramStatusRegister> synthesized.
+
+Synthesizing Unit <ZeroPad>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v".
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <ZeroPad> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 5
+ 1-bit register                                        : 5
+# Multiplexers                                         : 2
+ 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+# Multiplexers                                         : 2
+ 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ProgramStatusRegister> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ProgramStatusRegister, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 5
+ Flip-Flops                                            : 5
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : ProgramStatusRegister.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 7
+#      GND                         : 1
+#      LUT2                        : 1
+#      LUT4                        : 2
+#      LUT5                        : 1
+#      LUT6                        : 2
+# FlipFlops/Latches                : 5
+#      FDRE                        : 5
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 46
+#      IBUF                        : 13
+#      OBUF                        : 33
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                    6  out of   9112     0%  
+    Number used as Logic:                 6  out of   9112     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      6
+   Number with an unused Flip Flop:       6  out of      6   100%  
+   Number with an unused LUT:             0  out of      6     0%  
+   Number of fully used LUT-FF pairs:     0  out of      6     0%  
+   Number of unique control sets:         2
+
+IO Utilization: 
+ Number of IOs:                          47
+ Number of bonded IOBs:                  47  out of    232    20%  
+    IOB Flip Flops/Latches:               5
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 5     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: 3.153ns
+   Maximum output required time after clock: 6.217ns
+   Maximum combinational path delay: 7.113ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 18 / 15
+-------------------------------------------------------------------------
+Offset:              3.153ns (Levels of Logic = 2)
+  Source:            CFwrite (PAD)
+  Destination:       PSR_3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: CFwrite to PSR_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.755  CFwrite_IBUF (CFwrite_IBUF)
+     LUT2:I0->O            3   0.203   0.650  _n0091_inv1 (_n0091_inv)
+     FDRE:CE                   0.322          PSR_3
+    ----------------------------------------
+    Total                      3.153ns (1.747ns logic, 1.405ns route)
+                                       (55.4% logic, 44.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 18 / 2
+-------------------------------------------------------------------------
+Offset:              6.217ns (Levels of Logic = 4)
+  Source:            PSR_4 (FF)
+  Destination:       PSRcondExt<0> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: PSR_4 to PSRcondExt<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.447   0.808  PSR_4 (PSR_4)
+     LUT4:I1->O            1   0.205   0.580  Mmux__n0085_6 (Mmux__n0085_6)
+     LUT6:I5->O            1   0.205   0.580  Mmux_PSRcond1_SW0 (N2)
+     LUT6:I5->O            2   0.205   0.616  Mmux_PSRcond1 (PSRcond_OBUF)
+     OBUF:I->O                 2.571          PSRcondExt_0_OBUF (PSRcondExt<0>)
+    ----------------------------------------
+    Total                      6.217ns (3.633ns logic, 2.584ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 24 / 2
+-------------------------------------------------------------------------
+Delay:               7.113ns (Levels of Logic = 5)
+  Source:            PSRsel<1> (PAD)
+  Destination:       PSRcondExt<0> (PAD)
+
+  Data Path: PSRsel<1> to PSRcondExt<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.931  PSRsel_1_IBUF (PSRsel_1_IBUF)
+     LUT4:I0->O            1   0.203   0.580  Mmux__n0085_6 (Mmux__n0085_6)
+     LUT6:I5->O            1   0.205   0.580  Mmux_PSRcond1_SW0 (N2)
+     LUT6:I5->O            2   0.205   0.616  Mmux_PSRcond1 (PSRcond_OBUF)
+     OBUF:I->O                 2.571          PSRcondExt_0_OBUF (PSRcondExt<0>)
+    ----------------------------------------
+    Total                      7.113ns (4.406ns logic, 2.707ns route)
+                                       (61.9% logic, 38.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.52 secs
+ 
+--> 
+
+Total memory usage is 252552 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

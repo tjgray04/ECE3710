@@ -31,10 +31,10 @@ module System#(parameter WIDTH = 32)(
 	//Processor wires
 	wire [WIDTH-1:0] memControllerData, memAddr, memWriteData;
 	//Memory Controller wires
-	wire [WIDTH-1:0] memData_IN, stackData_IN;
+	wire [WIDTH-1:0] memData_IN; //, stackData_IN;
 	wire [7:0] IOdata_IN, IOdata_OUT;
 	wire [6:0] vgaData_IN, vgaData_OUT;
-	wire [WIDTH-1:0] memData_OUT, stackData_OUT;
+	wire [WIDTH-1:0] memData_OUT; //, stackData_OUT;
 	wire [13:0] addressOUT;
 	
 //Processor
@@ -44,12 +44,12 @@ Titan titan(.clk(clk), .reset(reset), .memControllerData(memControllerData),.mem
 //Memory Controller
 MemoryController memController(.clk(clk), .writeEn(writeEn), .addressIN(memAddr),
 										.CPUdata_IN(memWriteData), .memData_IN(memData_IN),
-										.stackData_IN(stackData_IN), .IOdata_IN(IOdata_IN),
+										.IOdata_IN(IOdata_IN), //.stackData_IN(stackData_IN),
 										.vgaData_IN(vgaData_IN), .memData_wrEn(memData_wrEn),
-										.stackData_wrEn(stackData_wrEn), .vgaData_wrEn(vgaData_wrEn),
+										.vgaData_wrEn(vgaData_wrEn), //.stackData_wrEn(stackData_wrEn),
 										.IOdata_wrEn(IOdata_wrEn), .addressOUT(addressOUT),
 										.CPUdata_OUT(memControllerData), .memData_OUT(memData_OUT),
-										.stackData_OUT(stackData_OUT), .IOdata_OUT(IOdata_OUT),
+										.IOdata_OUT(IOdata_OUT), //.stackData_OUT(stackData_OUT),
 										.vgaData_OUT(vgaData_OUT));
 			
 
@@ -64,8 +64,8 @@ IOMemory ioMem(.clk(clk), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata
 					.latch(latch), .pulse(pulse), .leds(leds));
 					
 //Stack Memory					
-StackMemory stackMem(.clk(clk), .en(enRAM), .memWrite(stackData_wrEn), .input_data(stackData_OUT),
-							.address(addressOUT), .stackData(stackData_IN));
+//StackMemory stackMem(.clk(clk), .en(enRAM), .memWrite(stackData_wrEn), .input_data(stackData_OUT),
+//							.address(addressOUT), .stackData(stackData_IN));
 
 //VGA Display							
 DisplayVGA dispVGA(.clk(clk), .reset(reset), .cpuWriteEn(vgaData_wrEn), .writeData(vgaData_OUT),

@@ -32,17 +32,34 @@ Data Sheet report:
 -----------------
 All values displayed in nanoseconds (ns)
 
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+reset       |   24.850(R)|      SLOW  |   -1.654(R)|      FAST  |clk_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
 Clock clk to Pad
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-latch       |        11.920(R)|      SLOW  |         6.186(R)|      FAST  |clk_BUFGP         |   0.000|
-pulse       |        14.503(R)|      SLOW  |         6.060(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<0>      |        16.872(R)|      SLOW  |         5.917(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<1>      |        14.847(R)|      SLOW  |         5.697(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<5>      |        14.166(R)|      SLOW  |         6.364(R)|      FAST  |clk_BUFGP         |   0.000|
-rgb<7>      |        14.166(R)|      SLOW  |         6.434(R)|      FAST  |clk_BUFGP         |   0.000|
+latch       |        15.838(R)|      SLOW  |         8.589(R)|      FAST  |clk_BUFGP         |   0.000|
+leds<0>     |         7.717(R)|      SLOW  |         4.324(R)|      FAST  |clk_BUFGP         |   0.000|
+leds<1>     |         7.717(R)|      SLOW  |         4.324(R)|      FAST  |clk_BUFGP         |   0.000|
+leds<2>     |         7.532(R)|      SLOW  |         4.218(R)|      FAST  |clk_BUFGP         |   0.000|
+leds<3>     |         7.532(R)|      SLOW  |         4.218(R)|      FAST  |clk_BUFGP         |   0.000|
+leds<4>     |         7.916(R)|      SLOW  |         4.399(R)|      FAST  |clk_BUFGP         |   0.000|
+leds<5>     |         7.916(R)|      SLOW  |         4.399(R)|      FAST  |clk_BUFGP         |   0.000|
+leds<6>     |         7.527(R)|      SLOW  |         4.198(R)|      FAST  |clk_BUFGP         |   0.000|
+leds<7>     |         7.527(R)|      SLOW  |         4.198(R)|      FAST  |clk_BUFGP         |   0.000|
+pulse       |        17.482(R)|      SLOW  |         8.666(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<0>      |        20.899(R)|      SLOW  |         6.678(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<1>      |        22.725(R)|      SLOW  |         7.033(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<4>      |        19.377(R)|      SLOW  |         7.172(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<5>      |        19.738(R)|      SLOW  |         8.463(R)|      FAST  |clk_BUFGP         |   0.000|
+rgb<7>      |        19.538(R)|      SLOW  |         8.393(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -50,27 +67,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   17.717|         |         |         |
-reset          |   26.486|   31.517|         |         |
----------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock reset
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |         |         |    3.837|         |
+clk            |   21.613|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Nov 13 17:04:10 2014 
+Analysis completed Thu Nov 20 19:26:39 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 287 MB
+Peak Memory Usage: 295 MB
 
 
 
