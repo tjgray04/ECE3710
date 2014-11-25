@@ -4,7 +4,7 @@ gcon,LEDAddr,57343,		//Binary: 11_0_1111111111111
 gcon,VGABaseAddr,16384,	//Binary: 01_00000000000000
 
 //Initialization
-addi,r3,r0,2440,		//Load initial block glyph position into r3
+addi,r3,r0,2439,		//Load initial block glyph position into r3
 addi,r4,r0,1000,		//Put a max count used for waiting into r4
 addi,r6,r0,VGABaseAddr,		//Load VGA base address into r6
 
@@ -21,7 +21,7 @@ str,r2,r0,LEDAddr,			//Store the value to the LEDs
 //Up			xxxx1000
 //Up-Right		xxxx1001
 //UP-Left		xxxx1010
-//Down-Right		xxxx0101
+//Down-Right	xxxx0101
 //Down-Left		xxxx0110
 
 //Check Directions that are pressed. If so, check if the glyph is OK to move. Then move it.
@@ -54,7 +54,7 @@ checkDL:
 wait:
 addi,r23,r0,17,		//Debugging code.
 cmp,x,r4,r0,		//check to see if the counter is 0.
-subi,r4,r4,-1,		//r4 = r4-1
+subi,r4,r4,1,		//r4 = r4-1
 bne,wait:,		//if we're not done, branch to wait.
 addi,r4,r4,1000,	//r4 = 1000.
 j,loop:
