@@ -7,7 +7,7 @@ gcon,VGABaseAddr,32768,	//Binary: 10_00000000000000
 addi,r3,r0,2439,		//Load initial block glyph position into r3
 addi,r4,r0,1000,		//Put a max count used for waiting into r4
 addi,r6,r0,VGABaseAddr,		//Load VGA base address into r6
-
+addi,r12,r0,100,			//a glyph location to write to
 
 //Game Loop
 loop:
@@ -16,9 +16,16 @@ ld,r2,r1,0,   				//Load the controller value into r2
 str,r2,r0,LEDAddr,			//Store the value to the LEDs
 
 addi,r11,r0,32,				//Store the glyph index into r11
-addi,r12,r0,1000			//a glyph location to write to
+addi,r12,r12,1,			//a glyph location to write to
 addi,r13,r12,VGABaseAddr,		//glyph address to write to memory
 str,r11,r13,0,				//store the glyph index into the glyph address of r13
+
+addi,r4,r4,1000,			//r4 = 0 + 1000
+pause:
+cmp,x,r4,r0,		//check to see if the counter is 0.
+beq,loop:,		// if the counter has reached 0, jump to loop.
+subi,r4,r4,1,		// r4 =r4 -1.
+j,pause:,		//jump loop
 
 
 //Right			xxxx0001
