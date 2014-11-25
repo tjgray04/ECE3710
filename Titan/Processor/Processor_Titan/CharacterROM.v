@@ -25,7 +25,7 @@ module CharacterROM#(parameter ROM_WIDTH = 8, ROM_ADDR_BITS = 12, PIXEL_BITS = 3
 	 output [ROM_WIDTH-1:0] color
     );
 
-   (* ROM_STYLE="{AUTO | DISTRIBUTED | BLOCK}" *)
+//   (* ROM_STYLE="{AUTO | DISTRIBUTED | BLOCK}" *)
    reg [ROM_WIDTH-1:0] charROM [(2**ROM_ADDR_BITS)-1:0];
 //   reg [ROM_WIDTH-1:0] <output_data>;
 

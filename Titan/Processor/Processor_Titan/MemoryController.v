@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module MemoryController#(parameter WIDTH = 32)
-	(input clk, writeEn,
+	(input writeEn,
 	input [WIDTH-1:0] addressIN, CPUdata_IN,
 	input [WIDTH-1:0] memData_IN, //stackData_IN,
 	input [7:0] IOdata_IN,

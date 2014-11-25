@@ -35,7 +35,7 @@ module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 13)
 	//setup address to read from
 	wire [12:0] vgaAddress;
 
-   (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
+//   (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
    reg [RAM_WIDTH-1:0] charDispRAM [4799:0];
 
    //  The forllowing code is only necessary if you wish to initialize the RAM 

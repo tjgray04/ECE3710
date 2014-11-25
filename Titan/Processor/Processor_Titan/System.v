@@ -42,7 +42,7 @@ Titan titan(.clk(clk), .reset(reset), .memControllerData(memControllerData),.mem
 				.memWriteData(memWriteData), .writeEn(writeEn), .enRAM(enRAM));
 				
 //Memory Controller
-MemoryController memController(.clk(clk), .writeEn(writeEn), .addressIN(memAddr),
+MemoryController memController(.writeEn(writeEn), .addressIN(memAddr),
 										.CPUdata_IN(memWriteData), .memData_IN(memData_IN),
 										.IOdata_IN(IOdata_IN), //.stackData_IN(stackData_IN),
 										.vgaData_IN(vgaData_IN), .memData_wrEn(memData_wrEn),

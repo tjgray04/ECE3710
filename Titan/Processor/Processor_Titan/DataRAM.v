@@ -35,7 +35,7 @@ module DataRAM #(parameter WIDTH = 32, RAM_ADDR_BITS = 10) //11
 	 input [14-1:0] address,
 	 output [WIDTH-1:0] memData);
 
-   (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
+//   (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
    reg [WIDTH-1:0] dataRAM [(2**RAM_ADDR_BITS)-1:0];
 
    //  The forllowing code is only necessary if you wish to initialize the RAM 

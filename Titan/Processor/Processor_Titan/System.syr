@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: System.prj
 
@@ -204,7 +204,7 @@ Elaborating module <DataRAM>.
 Elaborating module <IOMemory>.
 
 Elaborating module <NES_CONTROLLER>.
-WARNING:HDLCompiler:413 - "C:\Users\u0499404\Desktop\ECE3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 189: Result of 23-bit expression is truncated to fit in 22-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0499404\Desktop\ECE3710\NES_CONTROLLER\NES_CONTROLLER.v" Line 193: Result of 23-bit expression is truncated to fit in 22-bit target.
 
 Elaborating module <DisplayVGA>.
 
@@ -1421,7 +1421,6 @@ Synthesizing Unit <MemoryController>.
     Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v".
         WIDTH = 32
 WARNING:Xst:647 - Input <addressIN<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32-bit 4-to-1 multiplexer for signal <CPUdata_OUT> created at line 48.
     Summary:
 	inferred   7 Multiplexer(s).
@@ -1431,7 +1430,6 @@ Synthesizing Unit <DataRAM>.
     Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v".
         WIDTH = 32
         RAM_ADDR_BITS = 10
-WARNING:Xst - Value "{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" of property "RAM_STYLE" is not applicable. List of valid values is "auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed" 
 WARNING:Xst:647 - Input <address<13:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1024x32-bit single-port RAM <Mram_dataRAM> for signal <dataRAM>.
     Summary:
@@ -1460,23 +1458,23 @@ Synthesizing Unit <NES_CONTROLLER>.
     Found 1-bit register for signal <controller_data<0>>.
     Found 22-bit register for signal <count>.
     Found 1-bit register for signal <controller_data<7>>.
-    Found 22-bit adder for signal <count[21]_GND_54_o_add_51_OUT> created at line 189.
-    Found 22-bit comparator greater for signal <latch> created at line 37
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_3_o> created at line 43
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_5_o> created at line 49
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_7_o> created at line 55
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_9_o> created at line 61
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_11_o> created at line 67
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_13_o> created at line 73
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_15_o> created at line 79
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_17_o> created at line 86
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_19_o> created at line 92
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_21_o> created at line 98
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_23_o> created at line 104
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_25_o> created at line 110
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_27_o> created at line 116
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_29_o> created at line 122
-    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_31_o> created at line 128
+    Found 22-bit adder for signal <count[21]_GND_54_o_add_51_OUT> created at line 193.
+    Found 22-bit comparator greater for signal <latch> created at line 41
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_3_o> created at line 47
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_5_o> created at line 53
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_7_o> created at line 59
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_9_o> created at line 65
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_11_o> created at line 71
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_13_o> created at line 77
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_15_o> created at line 83
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_17_o> created at line 90
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_19_o> created at line 96
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_21_o> created at line 102
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_23_o> created at line 108
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_25_o> created at line 114
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_27_o> created at line 120
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_29_o> created at line 126
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_31_o> created at line 132
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  30 D-type flip-flop(s).
@@ -1526,7 +1524,6 @@ Synthesizing Unit <CharacterDisplayRAM>.
     Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v".
         RAM_WIDTH = 7
         RAM_ADDR_BITS = 13
-WARNING:Xst - Value "{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" of property "RAM_STYLE" is not applicable. List of valid values is "auto, block, block_power1, block_power2, distributed, pipe_block, pipe_distributed" 
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <charDispRAM>, simulation mismatch.
     Found 4800x7-bit dual-port RAM <Mram_charDispRAM> for signal <charDispRAM>.
     Found 13-bit adder for signal <vgaAddress> created at line 46.
@@ -1543,7 +1540,6 @@ Synthesizing Unit <CharacterROM>.
         ROM_ADDR_BITS = 12
         PIXEL_BITS = 3
         CHAR_AMNT = 7
-WARNING:Xst - Value "{AUTO | DISTRIBUTED | BLOCK}" of property "ROM_STYLE" is not applicable. List of valid values is "auto, block, distributed" 
 WARNING:Xst:647 - Input <glyphAddr<6:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:2999 - Signal 'charROM', unconnected in block 'CharacterROM', is tied to its initial value.
     Found 4096x8-bit single-port Read Only RAM <Mram_charROM> for signal <charROM>.
@@ -1772,490 +1768,10 @@ Optimizing unit <IOMemory> ...
 Optimizing unit <NES_CONTROLLER> ...
 
 Optimizing unit <vgaControl> ...
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_225> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_235> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_245> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_255> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_265> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_275> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_285> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_295> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_305> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_315> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_06> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_120> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_220> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_37> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_46> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_56> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_66> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_76> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_86> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_96> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_106> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1110> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_126> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_136> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_146> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_156> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_166> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_176> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_186> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_196> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_244> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_254> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_264> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_274> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_284> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_294> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_304> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_314> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_05> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_118> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_218> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_36> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_45> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_55> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_65> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_75> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_85> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_95> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_105> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_119> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_125> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_135> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_145> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_155> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_165> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_175> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_185> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_195> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_205> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_219> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_187> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_197> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_207> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2111> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_228> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_237> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_247> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_257> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_267> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_277> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_287> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_297> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_307> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_317> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_08> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_129> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_229> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_39> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_48> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_58> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_68> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_78> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_88> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_98> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_108> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1112> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1210> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_138> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_148> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_158> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_206> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2110> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_226> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_236> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_246> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_256> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_266> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_276> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_286> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_296> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_306> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_316> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_07> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_127> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_227> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_38> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_47> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_57> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_67> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_77> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_87> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_97> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_107> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1111> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_128> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_137> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_147> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_157> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_167> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_177> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_30> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_31> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_02> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_112> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_212> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_33> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_42> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_52> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_62> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_72> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_82> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_92> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_102> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_113> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_122> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_132> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_142> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_152> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_162> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_172> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_182> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_192> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_202> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_213> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_222> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_232> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_242> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_252> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_262> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_272> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_0> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_4> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_5> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_6> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_7> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_8> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_9> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_10> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_11> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_12> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_13> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_14> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_15> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_16> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_17> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_18> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_19> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_20> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_21> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_22> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_23> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_24> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_25> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_26> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_27> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_28> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_29> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_263> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_273> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_283> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_293> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_303> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_313> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_04> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_116> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_216> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_35> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_44> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_54> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_64> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_74> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_84> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_94> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_104> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_117> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_124> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_134> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_144> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_154> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_164> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_174> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_184> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_194> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_204> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_217> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_224> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_234> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_282> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_292> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_302> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_312> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_03> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_114> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_214> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_34> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_43> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_53> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_63> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_73> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_83> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_93> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_103> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_115> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_123> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_133> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_143> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_153> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_163> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_173> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_183> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_193> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_203> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_215> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_223> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_233> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_243> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_253> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_613> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_713> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_813> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_913> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1013> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1117> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1215> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1313> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1413> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1513> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1613> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1713> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1813> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1913> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2013> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2117> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2215> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2313> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2413> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2513> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2613> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2713> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2813> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2913> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3013> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3113> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_014> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_180> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_280> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_324> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_812> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_912> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1012> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1116> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1214> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1312> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1412> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1512> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1612> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1712> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1812> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1912> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2012> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2116> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2214> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2312> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2412> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2512> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2612> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2712> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2812> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2912> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3012> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3112> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_013> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_170> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_270> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_323> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_413> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_513> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_290> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_325> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_415> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_515> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_615> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_715> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_815> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_915> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1015> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1119> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1217> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1315> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1415> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1515> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1615> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1715> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1815> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1915> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2015> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2119> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2217> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2315> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2415> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2515> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2615> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2715> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2815> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2915> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3015> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3115> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_414> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_514> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_614> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_714> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_814> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_914> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1014> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1118> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1216> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1314> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1414> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1514> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1614> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1714> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1814> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1914> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2014> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2118> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2216> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2314> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2414> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2514> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2614> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2714> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2814> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2914> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3014> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3114> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_015> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_190> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_149> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_159> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_169> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_179> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_189> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_199> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_209> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2113> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2211> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_239> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_249> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_259> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_269> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_279> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_289> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_299> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_309> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_319> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_010> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_140> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_240> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_320> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_410> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_510> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_610> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_710> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_810> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_910> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1010> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1114> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_168> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_178> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_188> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_198> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_208> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2112> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2210> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_238> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_248> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_258> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_268> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_278> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_288> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_298> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_308> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_318> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_09> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_130> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_230> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_310> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_49> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_59> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_69> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_79> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_89> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_99> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_109> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1113> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1211> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_139> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1011> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1115> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1213> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1311> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1411> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1511> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1611> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1711> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1811> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1911> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2011> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2115> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2213> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2311> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2411> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2511> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2611> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2711> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2811> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2911> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3011> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3111> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_012> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_160> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_260> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_322> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_412> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_512> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_612> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_712> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1212> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1310> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1410> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1510> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1610> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1710> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1810> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1910> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2010> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2114> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2212> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2310> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2410> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2510> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2610> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2710> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2810> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2910> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3010> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3110> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_011> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_150> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_250> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_321> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_411> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_511> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_611> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_711> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_811> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_911> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block System, actual ratio is 27.
+Found area constraint ratio of 100 (+ 5) on block System, actual ratio is 32.
 
 Final Macro Processing ...
 
@@ -2263,8 +1779,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 670
- Flip-Flops                                            : 670
+# Registers                                            : 1150
+ Flip-Flops                                            : 1150
 
 =========================================================================
 
@@ -2287,23 +1803,23 @@ Top Level Output File Name         : System.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2803
+# BELS                             : 3210
 #      GND                         : 1
 #      INV                         : 37
 #      LUT1                        : 73
-#      LUT2                        : 94
-#      LUT3                        : 108
-#      LUT4                        : 219
-#      LUT5                        : 324
-#      LUT6                        : 1336
+#      LUT2                        : 78
+#      LUT3                        : 119
+#      LUT4                        : 198
+#      LUT5                        : 266
+#      LUT6                        : 1758
 #      MUXCY                       : 238
-#      MUXF7                       : 156
+#      MUXF7                       : 225
 #      VCC                         : 1
 #      XORCY                       : 216
-# FlipFlops/Latches                : 670
+# FlipFlops/Latches                : 1150
 #      FDC                         : 15
 #      FDCE                        : 63
-#      FDE_1                       : 552
+#      FDE_1                       : 1032
 #      FDR                         : 27
 #      FDRE                        : 13
 # RAMS                             : 394
@@ -2326,18 +1842,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             670  out of  18224     3%  
- Number of Slice LUTs:                 3753  out of   9112    41%  
-    Number used as Logic:              2191  out of   9112    24%  
+ Number of Slice Registers:            1150  out of  18224     6%  
+ Number of Slice LUTs:                 4091  out of   9112    44%  
+    Number used as Logic:              2529  out of   9112    27%  
     Number used as Memory:             1562  out of   2176    71%  
        Number used as RAM:             1562
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4229
-   Number with an unused Flip Flop:    3559  out of   4229    84%  
-   Number with an unused LUT:           476  out of   4229    11%  
-   Number of fully used LUT-FF pairs:   194  out of   4229     4%  
-   Number of unique control sets:        38
+ Number of LUT Flip Flop pairs used:   4974
+   Number with an unused Flip Flop:    3824  out of   4974    76%  
+   Number with an unused LUT:           883  out of   4974    17%  
+   Number of fully used LUT-FF pairs:   267  out of   4974     5%  
+   Number of unique control sets:        53
 
 IO Utilization: 
  Number of IOs:                          23
@@ -2368,7 +1884,7 @@ Clock Information:
 ------------------------------------+-------------------------------------+-------+
 Clock Signal                        | Clock buffer(FF name)               | Load  |
 ------------------------------------+-------------------------------------+-------+
-clk                                 | BUFGP                               | 1010  |
+clk                                 | BUFGP                               | 1490  |
 pulse_OBUF(ioMem/nes/Mmux_pulse15:O)| NONE(*)(ioMem/nes/controller_data_7)| 8     |
 dispVGA/vgaCtrl/clk25M              | BUFG                                | 46    |
 ------------------------------------+-------------------------------------+-------+
@@ -2385,8 +1901,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 21.092ns (Maximum Frequency: 47.411MHz)
-   Minimum input arrival time before clock: 19.566ns
+   Minimum period: 21.197ns (Maximum Frequency: 47.176MHz)
+   Minimum input arrival time before clock: 19.579ns
    Maximum output required time after clock: 19.235ns
    Maximum combinational path delay: No path found
 
@@ -2396,42 +1912,42 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 21.092ns (frequency: 47.411MHz)
-  Total number of paths / destination ports: 58940125023 / 4906
+  Clock period: 21.197ns (frequency: 47.176MHz)
+  Total number of paths / destination ports: 108496408620 / 5866
 -------------------------------------------------------------------------
-Delay:               21.092ns (Levels of Logic = 11)
-  Source:            titan/PC/PC_8 (FF)
+Delay:               21.197ns (Levels of Logic = 11)
+  Source:            titan/PC/PC_3 (FF)
   Destination:       titan/ExStage/regfile/RAM_3131 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: titan/PC/PC_8 to titan/ExStage/regfile/RAM_3131
+  Data Path: titan/PC/PC_3 to titan/ExStage/regfile/RAM_3131
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            31   0.447   1.642  titan/PC/PC_8 (titan/PC/PC_8)
-     LUT6:I0->O            1   0.203   0.580  titan/instROM/Mram_inst_ROM59115 (titan/instROM/Mram_inst_ROM59114)
-     LUT6:I5->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM59116 (titan/instROM/Mram_inst_ROM59115)
-     LUT6:I5->O           40   0.205   1.634  titan/instROM/Mram_inst_ROM59119 (titan/instruction<30>)
-     LUT5:I2->O           17   0.205   1.027  titan/LogicCtrl/Mmux_RtSrcReg11_5 (titan/LogicCtrl/Mmux_RtSrcReg114)
-     MUXF7:S->O            1   0.148   0.924  titan/ExStage/regfile/mux43_82 (titan/ExStage/regfile/mux43_82)
-     LUT6:I1->O            7   0.203   0.774  titan/ExStage/regfile/mux43_4 (titan/ExStage/regfile/mux43_4)
-     LUT6:I5->O            9   0.205   0.829  titan/ExStage/aluSrcbMUX/Mmux_out121 (titan/ExStage/ALUMuxOUT<1>)
+     FDCE:C->Q            33   0.447   1.534  titan/PC/PC_3 (titan/PC/PC_3)
+     LUT4:I1->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM56114_SW0 (N5210)
+     LUT6:I5->O            1   0.205   0.684  titan/instROM/Mram_inst_ROM56114 (titan/instROM/Mram_inst_ROM56113)
+     LUT5:I3->O           44   0.203   1.463  titan/instROM/Mram_inst_ROM561112 (titan/instruction<28>)
+     LUT5:I4->O           15   0.205   0.982  titan/LogicCtrl/Mmux_RtSrcReg11_1 (titan/LogicCtrl/Mmux_RtSrcReg11)
+     LUT3:I2->O           18   0.205   1.050  titan/ExStage/RtSrcRegMUX/Mmux_out31_1 (titan/ExStage/RtSrcRegMUX/Mmux_out31)
+     LUT6:I5->O            7   0.205   0.878  titan/ExStage/regfile/mux43_3 (titan/ExStage/regfile/mux43_3)
+     LUT6:I4->O            9   0.203   0.829  titan/ExStage/aluSrcbMUX/Mmux_out121 (titan/ExStage/ALUMuxOUT<1>)
      DSP48A1:B1->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
      DSP48A1:C30->PCOUT47    1   2.689   0.000  titan/ExStage/alu/Mmult_n00361 (titan/ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
-     DSP48A1:PCIN47->P14    1   2.264   0.580  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<31>)
+     DSP48A1:PCIN47->P14    2   2.264   0.617  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<31>)
      LUT6:I5->O           17   0.205   0.000  titan/ExStage/RaWriteEnMUX/Mmux_out2515 (titan/ExStage/writeData<31>)
-     FDE_1:D                   0.102          titan/ExStage/regfile/RAM_311
+     FDE_1:D                   0.102          titan/ExStage/regfile/RAM_31
     ----------------------------------------
-    Total                     21.092ns (11.475ns logic, 9.617ns route)
+    Total                     21.197ns (11.532ns logic, 9.665ns route)
                                        (54.4% logic, 45.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'dispVGA/vgaCtrl/clk25M'
-  Clock period: 6.331ns (frequency: 157.965MHz)
+  Clock period: 6.474ns (frequency: 154.475MHz)
   Total number of paths / destination ports: 3335 / 77
 -------------------------------------------------------------------------
-Delay:               6.331ns (Levels of Logic = 4)
+Delay:               6.474ns (Levels of Logic = 4)
   Source:            dispVGA/vgaCtrl/hCount_2 (FF)
   Destination:       dispVGA/vgaCtrl/vPixel_8 (FF)
   Source Clock:      dispVGA/vgaCtrl/clk25M rising
@@ -2442,20 +1958,20 @@ Delay:               6.331ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              2   0.447   0.864  dispVGA/vgaCtrl/hCount_2 (dispVGA/vgaCtrl/hCount_2)
-     LUT4:I0->O            4   0.203   0.788  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o11 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o1)
-     LUT4:I2->O            1   0.203   0.684  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o3_SW0 (N1447)
+     LUT4:I0->O            4   0.203   0.931  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o11 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o1)
+     LUT4:I0->O            1   0.203   0.684  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o3_SW0 (N1669)
      LUT6:I4->O           27   0.203   1.585  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o3 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o_inv_inv)
      LUT6:I0->O            9   0.203   0.829  dispVGA/vgaCtrl/_n0150_inv5 (dispVGA/vgaCtrl/_n0150_inv)
      FDCE:CE                   0.322          dispVGA/vgaCtrl/vPixel_0
     ----------------------------------------
-    Total                      6.331ns (1.581ns logic, 4.750ns route)
-                                       (25.0% logic, 75.0% route)
+    Total                      6.474ns (1.581ns logic, 4.893ns route)
+                                       (24.4% logic, 75.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 385935321 / 4916
+  Total number of paths / destination ports: 800095046 / 5876
 -------------------------------------------------------------------------
-Offset:              19.566ns (Levels of Logic = 9)
+Offset:              19.579ns (Levels of Logic = 9)
   Source:            reset (PAD)
   Destination:       titan/ExStage/regfile/RAM_3131 (FF)
   Destination Clock: clk rising
@@ -2464,19 +1980,19 @@ Offset:              19.566ns (Levels of Logic = 9)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           269   1.222   2.296  reset_IBUF (reset_IBUF)
+     IBUF:I->O           268   1.222   2.296  reset_IBUF (reset_IBUF)
      LUT3:I0->O            2   0.205   0.617  titan/LogicCtrl/Mmux_RtSrcReg11_SW0 (N890)
-     LUT6:I5->O           37   0.205   1.727  titan/ExStage/RtSrcRegMUX/Mmux_out41_1 (titan/ExStage/RtSrcRegMUX/Mmux_out41)
-     LUT6:I0->O            7   0.203   0.774  titan/ExStage/regfile/mux43_4 (titan/ExStage/regfile/mux43_4)
-     LUT6:I5->O            9   0.205   0.829  titan/ExStage/aluSrcbMUX/Mmux_out121 (titan/ExStage/ALUMuxOUT<1>)
-     DSP48A1:B1->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     LUT6:I5->O           37   0.205   1.363  titan/ExStage/RtSrcRegMUX/Mmux_out41_1 (titan/ExStage/RtSrcRegMUX/Mmux_out41)
+     LUT6:I5->O           11   0.205   1.111  titan/ExStage/regfile/out11_1 (titan/ExStage/regfile/out11)
+     LUT6:I3->O            9   0.205   0.829  titan/ExStage/aluSrcbMUX/Mmux_out110 (titan/ExStage/ALUMuxOUT<0>)
+     DSP48A1:B0->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
      DSP48A1:C30->PCOUT47    1   2.689   0.000  titan/ExStage/alu/Mmult_n00361 (titan/ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
-     DSP48A1:PCIN47->P14    1   2.264   0.580  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<31>)
+     DSP48A1:PCIN47->P14    2   2.264   0.617  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<31>)
      LUT6:I5->O           17   0.205   0.000  titan/ExStage/RaWriteEnMUX/Mmux_out2515 (titan/ExStage/writeData<31>)
-     FDE_1:D                   0.102          titan/ExStage/regfile/RAM_311
+     FDE_1:D                   0.102          titan/ExStage/regfile/RAM_31
     ----------------------------------------
-    Total                     19.566ns (11.694ns logic, 7.872ns route)
-                                       (59.8% logic, 40.2% route)
+    Total                     19.579ns (11.696ns logic, 7.883ns route)
+                                       (59.7% logic, 40.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'pulse_OBUF'
@@ -2511,7 +2027,7 @@ Offset:              3.719ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           269   1.222   2.067  reset_IBUF (reset_IBUF)
+     IBUF:I->O           268   1.222   2.067  reset_IBUF (reset_IBUF)
      FDC:CLR                   0.430          dispVGA/vgaCtrl/bright
     ----------------------------------------
     Total                      3.719ns (1.652ns logic, 2.067ns route)
@@ -2538,8 +2054,8 @@ Offset:              19.235ns (Levels of Logic = 12)
      LUT6:I1->O            1   0.203   0.944  dispVGA/charROM/Mram_charROM71210 (dispVGA/charROM/Mram_charROM7129)
      LUT6:I0->O            1   0.203   0.684  dispVGA/charROM/Mram_charROM71211 (dispVGA/charROM/Mram_charROM71210)
      LUT5:I3->O            1   0.203   0.684  dispVGA/charROM/Mram_charROM712141 (dispVGA/charROM/Mram_charROM71213)
-     LUT6:I4->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM71229_SW0_F (N159)
-     MUXF7:I0->O           1   0.131   0.580  dispVGA/charROM/Mram_charROM71229_SW0 (N153)
+     LUT6:I4->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM71229_SW0_F (N165)
+     MUXF7:I0->O           1   0.131   0.580  dispVGA/charROM/Mram_charROM71229_SW0 (N159)
      LUT5:I4->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM71229 (dispVGA/color<0>)
      LUT2:I1->O            1   0.205   0.579  dispVGA/Mmux_rgb11 (rgb_0_OBUF)
      OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
@@ -2584,9 +2100,9 @@ Clock to Setup on destination clock clk
                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------+---------+---------+---------+---------+
-clk                   |   21.092|         |         |         |
+clk                   |   21.197|         |         |         |
 dispVGA/vgaCtrl/clk25M|    6.831|         |         |         |
-pulse_OBUF            |         |    3.377|         |         |
+pulse_OBUF            |         |    3.414|         |         |
 ----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock dispVGA/vgaCtrl/clk25M
@@ -2594,7 +2110,7 @@ Clock to Setup on destination clock dispVGA/vgaCtrl/clk25M
                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------+---------+---------+---------+---------+
-dispVGA/vgaCtrl/clk25M|    6.331|         |         |         |
+dispVGA/vgaCtrl/clk25M|    6.474|         |         |         |
 ----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock pulse_OBUF
@@ -2602,20 +2118,20 @@ Clock to Setup on destination clock pulse_OBUF
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    8.546|         |
+clk            |         |         |    8.648|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 35.00 secs
-Total CPU time to Xst completion: 35.79 secs
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 33.48 secs
  
 --> 
 
-Total memory usage is 314504 kilobytes
+Total memory usage is 317192 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  503 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
 Number of infos    :    5 (   0 filtered)
 
