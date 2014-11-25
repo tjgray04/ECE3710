@@ -51,7 +51,7 @@ checkDR:
 checkDL:
 
 //Wait
-//wait:
+wait:
 //addi,r23,r0,17,		//Debugging code.
 //cmp,x,r4,r0,		//check to see if the counter is 0.
 //subi,r4,r4,1,		//r4 = r4-1
