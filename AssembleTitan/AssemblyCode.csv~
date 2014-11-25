@@ -15,6 +15,12 @@ addi,r1,r0,controllerAddr,		//Load the controller address into r1
 ld,r2,r1,0,   				//Load the controller value into r2
 str,r2,r0,LEDAddr,			//Store the value to the LEDs
 
+addi,r11,r0,32,				//Store the glyph index into r11
+addi,r12,r0,1000			//a glyph location to write to
+addi,r13,r12,VGABaseAddr,		//glyph address to write to memory
+str,r11,r13,0,				//store the glyph index into the glyph address of r13
+
+
 //Right			xxxx0001
 //Left			xxxx0010
 //Down			xxxx0100
