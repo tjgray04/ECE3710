@@ -1,7 +1,7 @@
 //Global Variables
 gcon,controllerAddr,65535,	//Binary: 11_1_1111111111111
 gcon,LEDAddr,57343,		//Binary: 11_0_1111111111111
-gcon,VGABaseAddr,16384,	//Binary: 10_00000000000000
+gcon,VGABaseAddr,32768,	//Binary: 10_00000000000000
 
 //Initialization
 addi,r3,r0,2439,		//Load initial block glyph position into r3
