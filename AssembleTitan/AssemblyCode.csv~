@@ -16,11 +16,14 @@ ld,r2,r1,0,   				//Load the controller value into r2
 str,r2,r0,LEDAddr,			//Store the value to the LEDs
 
 addi,r11,r0,32,				//Store the glyph index into r11
-addi,r12,r12,1,			//a glyph location to write to
+addi,r17,r12,0,
+addi,r18,r17,VGABaseAddr,
 addi,r13,r12,VGABaseAddr,		//glyph address to write to memory
+str,r0,r18,0,
 str,r11,r13,0,				//store the glyph index into the glyph address of r13
-
+addi,r12,r12,1,				//a glyph location to write to
 addi,r4,r4,1000,			//r4 = 0 + 1000
+
 pause:
 cmp,x,r4,r0,		//check to see if the counter is 0.
 beq,loop:,		// if the counter has reached 0, jump to loop.
