@@ -38,7 +38,7 @@ module InstructionROM#(parameter WIDTH = 32, ROM_ADDR_BITS = 12)// assures 2^12 
 //		begin
 //			 inst_ROM[k] = 0;
 //		end
-      $readmemb("IOtestloop.dat", inst_ROM, 0, ((2**ROM_ADDR_BITS)-1)); //, <begin_address>, <end_address>);
+      $readmemb("ControllerTest.dat", inst_ROM, 0, ((2**ROM_ADDR_BITS)-1)); //, <begin_address>, <end_address>);
 	end
 	// PCadr is a latched value from the program counter and will never be indeterminate, so we can 
 	// output instructions based on this signal.

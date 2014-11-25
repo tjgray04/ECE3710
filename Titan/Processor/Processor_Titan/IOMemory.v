@@ -41,7 +41,7 @@ module IOMemory#(parameter WIDTH = 8, RAM_ADDR_BITS = 14)
 //      end
 
 //Define Registers
-wire [WIDTH-1:0] NESdata;
+wire [7:0] NESdata;
 
 //Instantiate NES Controller
 NES_CONTROLLER nes(.clock(clk), .reset(reset), .data(NESinputData), .latch(latch), .pulse(pulse), 
@@ -58,15 +58,17 @@ begin
 			begin
 				case(address[RAM_ADDR_BITS-1])
 					//Trying to write to NES space
-					1:
+					1'b1:
 						begin
 						//NOTHING HAPPENS
+						
 						leds <= 0;
 						end
 					//Trying to write to LED space
-					0:
+					1'b0:
 						begin
 						leds <= input_data;
+						
 						end
             endcase
 			end
@@ -78,12 +80,12 @@ always@(*)
 begin
 	case(address[RAM_ADDR_BITS-1])
 		//Trying to read from NES space
-		1:
+		1'b1:
 			begin
 			IO_Data = NESdata;
 			end
 		//Trying to read from LED space
-		0:
+		1'b0:
 			begin
 			IO_Data = 0;
 			end

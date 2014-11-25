@@ -10,49 +10,49 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Nov 20 19:21:50 2014
+Mapped Date    : Mon Nov 24 16:04:43 2014
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:   11
+Number of warnings:    1
 Slice Logic Utilization:
-  Number of Slice Registers:                   114 out of  18,224    1%
-    Number used as Flip Flops:                 114
+  Number of Slice Registers:                   671 out of  18,224    3%
+    Number used as Flip Flops:                 670
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      2,856 out of   9,112   31%
-    Number used as logic:                    1,317 out of   9,112   14%
-      Number using O6 output only:           1,106
-      Number using O5 output only:              65
-      Number using O5 and O6:                  146
+    Number used as AND/OR logics:                1
+  Number of Slice LUTs:                      3,541 out of   9,112   38%
+    Number used as logic:                    2,047 out of   9,112   22%
+      Number using O6 output only:           1,858
+      Number using O5 output only:              70
+      Number using O5 and O6:                  119
       Number used as ROM:                        0
-    Number used as Memory:                   1,535 out of   2,176   70%
-      Number used as Dual Port RAM:            948
-        Number using O6 output only:           908
+    Number used as Memory:                   1,487 out of   2,176   68%
+      Number used as Dual Port RAM:            900
+        Number using O6 output only:           900
         Number using O5 output only:             0
-        Number using O5 and O6:                 40
+        Number using O5 and O6:                  0
       Number used as Single Port RAM:          587
         Number using O6 output only:           587
         Number using O5 output only:             0
         Number using O5 and O6:                  0
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:      4
-      Number with same-slice register load:      0
+    Number used exclusively as route-thrus:      7
+      Number with same-slice register load:      3
       Number with same-slice carry load:         4
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   945 out of   2,278   41%
-  Number of MUXCYs used:                       284 out of   4,556    6%
-  Number of LUT Flip Flop pairs used:        2,864
-    Number with an unused Flip Flop:         2,761 out of   2,864   96%
-    Number with an unused LUT:                   8 out of   2,864    1%
-    Number of fully used LUT-FF pairs:          95 out of   2,864    3%
-    Number of unique control sets:              61
+  Number of occupied Slices:                 1,383 out of   2,278   60%
+  Number of MUXCYs used:                       252 out of   4,556    5%
+  Number of LUT Flip Flop pairs used:        3,841
+    Number with an unused Flip Flop:         3,199 out of   3,841   83%
+    Number with an unused LUT:                 300 out of   3,841    7%
+    Number of fully used LUT-FF pairs:         342 out of   3,841    8%
+    Number of unique control sets:              80
     Number of slice register sites lost
-      to control set restrictions:             327 out of  18,224    1%
+      to control set restrictions:             339 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -89,11 +89,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                7.89
+Average Fanout of Non-Clock Nets:                6.75
 
-Peak Memory Usage:  417 MB
-Total REAL time to MAP completion:  2 mins 51 secs 
-Total CPU time to MAP completion:   2 mins 50 secs 
+Peak Memory Usage:  433 MB
+Total REAL time to MAP completion:  2 mins 42 secs 
+Total CPU time to MAP completion:   2 mins 41 secs 
 
 Table of Contents
 -----------------
@@ -119,42 +119,12 @@ Section 2 - Warnings
 WARNING:PhysDesignRules:372 - Gated clock. Clock net pulse_OBUF is sourced by a
    combinatorial pin. This is not good design practice. Use the CE pin to
    control the loading of data into the flip-flop.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM1_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM11_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM14_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM2_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM3_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM4_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM12_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM13_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM5_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM15_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
 INFO:LIT:243 - Logical network dispVGA/charDispRAM/Mram_charDispRAM224/DPO has
    no load.
-INFO:LIT:395 - The above info message is repeated 41 more times for the
+INFO:LIT:395 - The above info message is repeated 37 more times for the
    following (max. 5 shown):
    dispVGA/charDispRAM/Mram_charDispRAM223/DPO,
    dispVGA/charDispRAM/Mram_charDispRAM225/DPO,
@@ -176,9 +146,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
- 252 block(s) removed
-  62 block(s) optimized away
- 269 signal(s) removed
+  32 block(s) removed
+   2 block(s) optimized away
+  32 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -188,669 +158,75 @@ The trimmed logic reported below is either:
    2. part of disabled logic
    3. a side-effect of other trimmed logic
 
-The signal "titan/CFWrite" is unused and has been removed.
- Unused block "titan/LogicCtrl/Mmux_CFWrite12" (ROM) removed.
-  The signal "titan/LogicCtrl/Mmux_CFWrite1" is unused and has been removed.
-   Unused block "titan/LogicCtrl/Mmux_CFWrite11" (ROM) removed.
-The signal "titan/PSRwrite<1>" is unused and has been removed.
- Unused block "titan/ExStage/alu/Mmux_PSRwrite28" (ROM) removed.
-  The signal "titan/ExStage/alu/Mmux_PSRwrite26" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Mmux_PSRwrite27" (ROM) removed.
-    The signal "titan/ExStage/alu/diff<26>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<26>" (XOR) removed.
-      The signal "titan/ExStage/alu/Msub_diff_cy<25>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_cy<25>" (MUX) removed.
-        The signal "titan/ExStage/alu/Msub_diff_cy<24>" is unused and has been removed.
-         Unused block "titan/ExStage/alu/Msub_diff_cy<24>" (MUX) removed.
-          The signal "titan/ExStage/alu/Msub_diff_cy<23>" is unused and has been removed.
-           Unused block "titan/ExStage/alu/Msub_diff_cy<23>" (MUX) removed.
-            The signal "titan/ExStage/alu/Msub_diff_cy<22>" is unused and has been removed.
-             Unused block "titan/ExStage/alu/Msub_diff_cy<22>" (MUX) removed.
-              The signal "titan/ExStage/alu/Msub_diff_cy<21>" is unused and has been removed.
-               Unused block "titan/ExStage/alu/Msub_diff_cy<21>" (MUX) removed.
-                The signal "titan/ExStage/alu/Msub_diff_cy<20>" is unused and has been removed.
-                 Unused block "titan/ExStage/alu/Msub_diff_cy<20>" (MUX) removed.
-                  The signal "titan/ExStage/alu/Msub_diff_cy<19>" is unused and has been removed.
-                   Unused block "titan/ExStage/alu/Msub_diff_cy<19>" (MUX) removed.
-                    The signal "titan/ExStage/alu/Msub_diff_cy<18>" is unused and has been removed.
-                     Unused block "titan/ExStage/alu/Msub_diff_cy<18>" (MUX) removed.
-                      The signal "titan/ExStage/alu/Msub_diff_cy<17>" is unused and has been removed.
-                       Unused block "titan/ExStage/alu/Msub_diff_cy<17>" (MUX) removed.
-                        The signal "titan/ExStage/alu/Msub_diff_cy<16>" is unused and has been removed.
-                         Unused block "titan/ExStage/alu/Msub_diff_cy<16>" (MUX) removed.
-                          The signal "titan/ExStage/alu/Msub_diff_cy<15>" is unused and has been removed.
-                           Unused block "titan/ExStage/alu/Msub_diff_cy<15>" (MUX) removed.
-                            The signal "titan/ExStage/alu/Msub_diff_cy<14>" is unused and has been removed.
-                             Unused block "titan/ExStage/alu/Msub_diff_cy<14>" (MUX) removed.
-                              The signal "titan/ExStage/alu/Msub_diff_cy<13>" is unused and has been removed.
-                               Unused block "titan/ExStage/alu/Msub_diff_cy<13>" (MUX) removed.
-                                The signal "titan/ExStage/alu/Msub_diff_cy<12>" is unused and has been removed.
-                                 Unused block "titan/ExStage/alu/Msub_diff_cy<12>" (MUX) removed.
-                                  The signal "titan/ExStage/alu/Msub_diff_cy<11>" is unused and has been removed.
-                                   Unused block "titan/ExStage/alu/Msub_diff_cy<11>" (MUX) removed.
-                                    The signal "titan/ExStage/alu/Msub_diff_cy<10>" is unused and has been removed.
-                                     Unused block "titan/ExStage/alu/Msub_diff_cy<10>" (MUX) removed.
-                                      The signal "titan/ExStage/alu/Msub_diff_cy<9>" is unused and has been removed.
-                                       Unused block "titan/ExStage/alu/Msub_diff_cy<9>" (MUX) removed.
-                                        The signal "titan/ExStage/alu/Msub_diff_cy<8>" is unused and has been removed.
-                                         Unused block "titan/ExStage/alu/Msub_diff_cy<8>" (MUX) removed.
-                                          The signal "titan/ExStage/alu/Msub_diff_cy<7>" is unused and has been removed.
-                                           Unused block "titan/ExStage/alu/Msub_diff_cy<7>" (MUX) removed.
-                                            The signal "titan/ExStage/alu/Msub_diff_cy<6>" is unused and has been removed.
-                                             Unused block "titan/ExStage/alu/Msub_diff_cy<6>" (MUX) removed.
-                                              The signal "titan/ExStage/alu/Msub_diff_cy<5>" is unused and has been removed.
-                                               Unused block "titan/ExStage/alu/Msub_diff_cy<5>" (MUX) removed.
-                                                The signal "titan/ExStage/alu/Msub_diff_cy<4>" is unused and has been removed.
-                                                 Unused block "titan/ExStage/alu/Msub_diff_cy<4>" (MUX) removed.
-*The signal "titan/ExStage/alu/Msub_diff_cy<3>" is unused and has been removed.
-* Unused block "titan/ExStage/alu/Msub_diff_cy<3>" (MUX) removed.
-*  The signal "titan/ExStage/alu/Msub_diff_cy<2>" is unused and has been removed.
-*   Unused block "titan/ExStage/alu/Msub_diff_cy<2>" (MUX) removed.
-*    The signal "titan/ExStage/alu/Msub_diff_cy<1>" is unused and has been removed.
-*     Unused block "titan/ExStage/alu/Msub_diff_cy<1>" (MUX) removed.
-*      The signal "titan/ExStage/alu/Msub_diff_cy<0>" is unused and has been removed.
-*       Unused block "titan/ExStage/alu/Msub_diff_cy<0>" (MUX) removed.
-*        The signal "titan/ExStage/alu/Msub_diff_lut<0>" is unused and has been removed.
-*         Unused block "titan/ExStage/alu/Msub_diff_lut<0>" (ROM) removed.
-*      The signal "titan/ExStage/alu/Msub_diff_lut<1>" is unused and has been removed.
-*       Unused block "titan/ExStage/alu/Msub_diff_lut<1>" (ROM) removed.
-*    The signal "titan/ExStage/alu/Msub_diff_lut<2>" is unused and has been removed.
-*     Unused block "titan/ExStage/alu/Msub_diff_lut<2>" (ROM) removed.
-*  The signal "titan/ExStage/alu/Msub_diff_lut<3>" is unused and has been removed.
-*   Unused block "titan/ExStage/alu/Msub_diff_lut<3>" (ROM) removed.
-*The signal "titan/ExStage/alu/Msub_diff_lut<4>" is unused and has been removed.
-* Unused block "titan/ExStage/alu/Msub_diff_lut<4>" (ROM) removed.
-                                                The signal "titan/ExStage/alu/Msub_diff_lut<5>" is unused and has been removed.
-                                                 Unused block "titan/ExStage/alu/Msub_diff_lut<5>" (ROM) removed.
-                                              The signal "titan/ExStage/alu/Msub_diff_lut<6>" is unused and has been removed.
-                                               Unused block "titan/ExStage/alu/Msub_diff_lut<6>" (ROM) removed.
-                                            The signal "titan/ExStage/alu/Msub_diff_lut<7>" is unused and has been removed.
-                                             Unused block "titan/ExStage/alu/Msub_diff_lut<7>" (ROM) removed.
-                                          The signal "titan/ExStage/alu/Msub_diff_lut<8>" is unused and has been removed.
-                                           Unused block "titan/ExStage/alu/Msub_diff_lut<8>" (ROM) removed.
-                                        The signal "titan/ExStage/alu/Msub_diff_lut<9>" is unused and has been removed.
-                                         Unused block "titan/ExStage/alu/Msub_diff_lut<9>" (ROM) removed.
-                                      The signal "titan/ExStage/alu/Msub_diff_lut<10>" is unused and has been removed.
-                                       Unused block "titan/ExStage/alu/Msub_diff_lut<10>" (ROM) removed.
-                                    The signal "titan/ExStage/alu/Msub_diff_lut<11>" is unused and has been removed.
-                                     Unused block "titan/ExStage/alu/Msub_diff_lut<11>" (ROM) removed.
-                                  The signal "titan/ExStage/alu/Msub_diff_lut<12>" is unused and has been removed.
-                                   Unused block "titan/ExStage/alu/Msub_diff_lut<12>" (ROM) removed.
-                                The signal "titan/ExStage/alu/Msub_diff_lut<13>" is unused and has been removed.
-                                 Unused block "titan/ExStage/alu/Msub_diff_lut<13>" (ROM) removed.
-                              The signal "titan/ExStage/alu/Msub_diff_lut<14>" is unused and has been removed.
-                               Unused block "titan/ExStage/alu/Msub_diff_lut<14>" (ROM) removed.
-                            The signal "titan/ExStage/alu/Msub_diff_lut<15>" is unused and has been removed.
-                             Unused block "titan/ExStage/alu/Msub_diff_lut<15>" (ROM) removed.
-                          The signal "titan/ExStage/alu/Msub_diff_lut<16>" is unused and has been removed.
-                           Unused block "titan/ExStage/alu/Msub_diff_lut<16>" (ROM) removed.
-                        The signal "titan/ExStage/alu/Msub_diff_lut<17>" is unused and has been removed.
-                         Unused block "titan/ExStage/alu/Msub_diff_lut<17>" (ROM) removed.
-                      The signal "titan/ExStage/alu/Msub_diff_lut<18>" is unused and has been removed.
-                       Unused block "titan/ExStage/alu/Msub_diff_lut<18>" (ROM) removed.
-                    The signal "titan/ExStage/alu/Msub_diff_lut<19>" is unused and has been removed.
-                     Unused block "titan/ExStage/alu/Msub_diff_lut<19>" (ROM) removed.
-                  The signal "titan/ExStage/alu/Msub_diff_lut<20>" is unused and has been removed.
-                   Unused block "titan/ExStage/alu/Msub_diff_lut<20>" (ROM) removed.
-                The signal "titan/ExStage/alu/Msub_diff_lut<21>" is unused and has been removed.
-                 Unused block "titan/ExStage/alu/Msub_diff_lut<21>" (ROM) removed.
-              The signal "titan/ExStage/alu/Msub_diff_lut<22>" is unused and has been removed.
-               Unused block "titan/ExStage/alu/Msub_diff_lut<22>" (ROM) removed.
-            The signal "titan/ExStage/alu/Msub_diff_lut<23>" is unused and has been removed.
-             Unused block "titan/ExStage/alu/Msub_diff_lut<23>" (ROM) removed.
-          The signal "titan/ExStage/alu/Msub_diff_lut<24>" is unused and has been removed.
-           Unused block "titan/ExStage/alu/Msub_diff_lut<24>" (ROM) removed.
-        The signal "titan/ExStage/alu/Msub_diff_lut<25>" is unused and has been removed.
-         Unused block "titan/ExStage/alu/Msub_diff_lut<25>" (ROM) removed.
-      The signal "titan/ExStage/alu/Msub_diff_lut<26>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_lut<26>" (ROM) removed.
-    The signal "titan/ExStage/alu/diff<25>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<25>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<27>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<27>" (XOR) removed.
-      The signal "titan/ExStage/alu/Msub_diff_cy<26>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_cy<26>" (MUX) removed.
-      The signal "titan/ExStage/alu/Msub_diff_lut<27>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_lut<27>" (ROM) removed.
-    The signal "titan/ExStage/alu/diff<28>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<28>" (XOR) removed.
-      The signal "titan/ExStage/alu/Msub_diff_cy<27>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_cy<27>" (MUX) removed.
-      The signal "titan/ExStage/alu/Msub_diff_lut<28>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_lut<28>" (ROM) removed.
-    The signal "titan/ExStage/alu/diff<29>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<29>" (XOR) removed.
-      The signal "titan/ExStage/alu/Msub_diff_cy<28>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_cy<28>" (MUX) removed.
-      The signal "titan/ExStage/alu/Msub_diff_lut<29>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_lut<29>" (ROM) removed.
-  The signal "titan/ExStage/alu/Mmux_PSRwrite22" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Mmux_PSRwrite23" (ROM) removed.
-    The signal "titan/ExStage/alu/diff<21>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<21>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<20>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<20>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<22>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<22>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<23>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<23>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<24>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<24>" (XOR) removed.
-  The signal "titan/ExStage/alu/Mmux_PSRwrite21" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Mmux_PSRwrite22" (ROM) removed.
-    The signal "titan/ExStage/alu/Mmux_PSRwrite2" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Mmux_PSRwrite21" (ROM) removed.
-      The signal "titan/ExStage/alu/diff<0>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_xor<0>" (XOR) removed.
-      The signal "titan/ExStage/alu/diff<1>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_xor<1>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<9>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<9>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<8>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<8>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<10>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<10>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<11>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<11>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<12>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<12>" (XOR) removed.
-  The signal "titan/ExStage/alu/Mmux_PSRwrite24" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Mmux_PSRwrite25" (ROM) removed.
-    The signal "titan/ExStage/alu/Mmux_PSRwrite23" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Mmux_PSRwrite24" (ROM) removed.
-      The signal "titan/ExStage/alu/diff<3>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_xor<3>" (XOR) removed.
-      The signal "titan/ExStage/alu/diff<2>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_xor<2>" (XOR) removed.
-      The signal "titan/ExStage/alu/diff<4>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_xor<4>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<5>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<5>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<6>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<6>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<7>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<7>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<19>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<19>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<30>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<30>" (XOR) removed.
-      The signal "titan/ExStage/alu/Msub_diff_cy<29>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_cy<29>" (MUX) removed.
-      The signal "titan/ExStage/alu/Msub_diff_lut<30>" is unused and has been removed.
-       Unused block "titan/ExStage/alu/Msub_diff_lut<30>" (ROM) removed.
-  The signal "titan/ExStage/alu/Mmux_PSRwrite25" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Mmux_PSRwrite26" (ROM) removed.
-    The signal "titan/ExStage/alu/diff<14>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<14>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<13>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<13>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<15>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<15>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<16>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<16>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<17>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<17>" (XOR) removed.
-    The signal "titan/ExStage/alu/diff<18>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_xor<18>" (XOR) removed.
-  The signal "titan/ExStage/alu/diff<31>" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Msub_diff_xor<31>" (XOR) removed.
-    The signal "titan/ExStage/alu/Msub_diff_cy<30>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_cy<30>" (MUX) removed.
-    The signal "titan/ExStage/alu/Msub_diff_lut<31>" is unused and has been removed.
-     Unused block "titan/ExStage/alu/Msub_diff_lut<31>" (ROM) removed.
-The signal "titan/PSRwrite<4>" is unused and has been removed.
- Unused block "titan/ExStage/alu/Mmux_PSRwrite5" (MUX) removed.
-  The signal "N1118" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Mmux_PSRwrite5_F" (ROM) removed.
-  The signal "N1119" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Mmux_PSRwrite5_G" (ROM) removed.
-  The signal "titan/ExStage/alu/Madd_n0047_cy<31>" is unused and has been removed.
-   Unused block "titan/ExStage/alu/Madd_n0047_cy<31>" (MUX) removed.
-The signal "titan/ExStage/alu/n0036<0>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<1>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<2>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<3>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<4>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<5>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<6>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<7>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<8>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<9>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<10>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<11>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<12>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<13>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<14>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<15>" is unused and has been removed.
-The signal "titan/ExStage/alu/n0036<16>" is unused and has been removed.
-The signal "titan/ExStage/shifter/Sh2421" is unused and has been removed.
- Unused block "titan/ExStage/shifter/Sh24211" (MUX) removed.
-  The signal "N1146" is unused and has been removed.
-   Unused block "titan/ExStage/shifter/Sh24211_F" (ROM) removed.
-  The signal "N1147" is unused and has been removed.
-   Unused block "titan/ExStage/shifter/Sh24211_G" (ROM) removed.
-The signal "titan/ExStage/shifter/Sh2411" is unused and has been removed.
- Unused block "titan/ExStage/shifter/Sh24111" (MUX) removed.
-  The signal "N1138" is unused and has been removed.
-   Unused block "titan/ExStage/shifter/Sh24111_F" (ROM) removed.
-  The signal "N1139" is unused and has been removed.
-   Unused block "titan/ExStage/shifter/Sh24111_G" (ROM) removed.
-The signal "titan/PC/Madd_BranchImm_lut<31>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_lut<31>" (ROM) removed.
-The signal "titan/PC/Madd_BranchImm_cy<30>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_cy<30>" (MUX) removed.
-  The signal "titan/PC/Madd_BranchImm_cy<29>" is unused and has been removed.
-   Unused block "titan/PC/Madd_BranchImm_cy<29>" (MUX) removed.
-    The signal "titan/PC/Madd_BranchImm_cy<28>" is unused and has been removed.
-     Unused block "titan/PC/Madd_BranchImm_cy<28>" (MUX) removed.
-      The signal "titan/PC/Madd_BranchImm_cy<27>" is unused and has been removed.
-       Unused block "titan/PC/Madd_BranchImm_cy<27>" (MUX) removed.
-        The signal "titan/PC/Madd_BranchImm_cy<26>" is unused and has been removed.
-         Unused block "titan/PC/Madd_BranchImm_cy<26>" (MUX) removed.
-          The signal "titan/PC/Madd_BranchImm_cy<25>" is unused and has been removed.
-           Unused block "titan/PC/Madd_BranchImm_cy<25>" (MUX) removed.
-            The signal "titan/PC/Madd_BranchImm_cy<24>" is unused and has been removed.
-             Unused block "titan/PC/Madd_BranchImm_cy<24>" (MUX) removed.
-              The signal "titan/PC/Madd_BranchImm_cy<23>" is unused and has been removed.
-               Unused block "titan/PC/Madd_BranchImm_cy<23>" (MUX) removed.
-                The signal "titan/PC/Madd_BranchImm_cy<22>" is unused and has been removed.
-                 Unused block "titan/PC/Madd_BranchImm_cy<22>" (MUX) removed.
-                  The signal "titan/PC/Madd_BranchImm_cy<21>" is unused and has been removed.
-                   Unused block "titan/PC/Madd_BranchImm_cy<21>" (MUX) removed.
-                    The signal "titan/PC/Madd_BranchImm_cy<20>" is unused and has been removed.
-                     Unused block "titan/PC/Madd_BranchImm_cy<20>" (MUX) removed.
-                      The signal "titan/PC/Madd_BranchImm_cy<19>" is unused and has been removed.
-                       Unused block "titan/PC/Madd_BranchImm_cy<19>" (MUX) removed.
-                        The signal "titan/PC/Madd_BranchImm_cy<18>" is unused and has been removed.
-                         Unused block "titan/PC/Madd_BranchImm_cy<18>" (MUX) removed.
-                          The signal "titan/PC/Madd_BranchImm_cy<17>" is unused and has been removed.
-                           Unused block "titan/PC/Madd_BranchImm_cy<17>" (MUX) removed.
-                            The signal "titan/PC/Madd_BranchImm_cy<16>" is unused and has been removed.
-                             Unused block "titan/PC/Madd_BranchImm_cy<16>" (MUX) removed.
-                              The signal "titan/PC/Madd_BranchImm_cy<15>" is unused and has been removed.
-                               Unused block "titan/PC/Madd_BranchImm_cy<15>" (MUX) removed.
-                                The signal "titan/PC/Madd_BranchImm_cy<14>" is unused and has been removed.
-                                 Unused block "titan/PC/Madd_BranchImm_cy<14>" (MUX) removed.
-                                  The signal "titan/PC/Madd_BranchImm_cy<13>" is unused and has been removed.
-                                   Unused block "titan/PC/Madd_BranchImm_cy<13>" (MUX) removed.
-                                    The signal "titan/PC/Madd_BranchImm_cy<12>" is unused and has been removed.
-                                     Unused block "titan/PC/Madd_BranchImm_cy<12>" (MUX) removed.
-                                      The signal "titan/PC/Madd_BranchImm_cy<11>" is unused and has been removed.
-                                       Unused block "titan/PC/Madd_BranchImm_cy<11>" (MUX) removed.
-                                        The signal "titan/PC/Madd_BranchImm_cy<10>" is unused and has been removed.
-                                         Unused block "titan/PC/Madd_BranchImm_cy<10>" (MUX) removed.
-                                          The signal "titan/PC/Madd_BranchImm_cy<9>" is unused and has been removed.
-                                           Unused block "titan/PC/Madd_BranchImm_cy<9>" (MUX) removed.
-                                            The signal "titan/PC/Madd_BranchImm_cy<8>" is unused and has been removed.
-                                             Unused block "titan/PC/Madd_BranchImm_cy<8>" (MUX) removed.
-                                              The signal "titan/PC/Madd_BranchImm_cy<7>" is unused and has been removed.
-                                               Unused block "titan/PC/Madd_BranchImm_cy<7>" (MUX) removed.
-                                                The signal "titan/PC/Madd_BranchImm_cy<6>" is unused and has been removed.
-                                                 Unused block "titan/PC/Madd_BranchImm_cy<6>" (MUX) removed.
-*The signal "titan/PC/Madd_BranchImm_cy<5>" is unused and has been removed.
-* Unused block "titan/PC/Madd_BranchImm_cy<5>" (MUX) removed.
-*  The signal "titan/PC/Madd_BranchImm_cy<4>" is unused and has been removed.
-*   Unused block "titan/PC/Madd_BranchImm_cy<4>" (MUX) removed.
-*    The signal "titan/PC/Madd_BranchImm_cy<3>" is unused and has been removed.
-*     Unused block "titan/PC/Madd_BranchImm_cy<3>" (MUX) removed.
-*      The signal "titan/PC/Madd_BranchImm_cy<2>" is unused and has been removed.
-*       Unused block "titan/PC/Madd_BranchImm_cy<2>" (MUX) removed.
-*        The signal "titan/PC/Madd_BranchImm_cy<1>" is unused and has been removed.
-*         Unused block "titan/PC/Madd_BranchImm_cy<1>" (MUX) removed.
-*          The signal "titan/PC/Madd_BranchImm_cy<0>" is unused and has been removed.
-*           Unused block "titan/PC/Madd_BranchImm_cy<0>" (MUX) removed.
-*            The signal "titan/PC/Madd_BranchImm_lut<0>" is unused and has been removed.
-*             Unused block "titan/PC/Madd_BranchImm_lut<0>" (ROM) removed.
-*          The signal "titan/PC/Madd_BranchImm_lut<1>" is unused and has been removed.
-*           Unused block "titan/PC/Madd_BranchImm_lut<1>" (ROM) removed.
-*        The signal "titan/PC/Madd_BranchImm_lut<2>" is unused and has been removed.
-*         Unused block "titan/PC/Madd_BranchImm_lut<2>" (ROM) removed.
-*      The signal "titan/PC/Madd_BranchImm_lut<3>" is unused and has been removed.
-*       Unused block "titan/PC/Madd_BranchImm_lut<3>" (ROM) removed.
-*    The signal "titan/PC/Madd_BranchImm_lut<4>" is unused and has been removed.
-*     Unused block "titan/PC/Madd_BranchImm_lut<4>" (ROM) removed.
-*  The signal "titan/PC/Madd_BranchImm_lut<5>" is unused and has been removed.
-*   Unused block "titan/PC/Madd_BranchImm_lut<5>" (ROM) removed.
-*The signal "titan/PC/Madd_BranchImm_lut<6>" is unused and has been removed.
-* Unused block "titan/PC/Madd_BranchImm_lut<6>" (ROM) removed.
-                                                The signal "titan/PC/Madd_BranchImm_lut<7>" is unused and has been removed.
-                                                 Unused block "titan/PC/Madd_BranchImm_lut<7>" (ROM) removed.
-                                              The signal "titan/PC/Madd_BranchImm_lut<8>" is unused and has been removed.
-                                               Unused block "titan/PC/Madd_BranchImm_lut<8>" (ROM) removed.
-                                            The signal "titan/PC/Madd_BranchImm_lut<9>" is unused and has been removed.
-                                             Unused block "titan/PC/Madd_BranchImm_lut<9>" (ROM) removed.
-                                          The signal "titan/PC/Madd_BranchImm_lut<10>" is unused and has been removed.
-                                           Unused block "titan/PC/Madd_BranchImm_lut<10>" (ROM) removed.
-                                        The signal "titan/PC/Madd_BranchImm_lut<11>" is unused and has been removed.
-                                         Unused block "titan/PC/Madd_BranchImm_lut<11>" (ROM) removed.
-                                      The signal "titan/PC/Madd_BranchImm_lut<12>" is unused and has been removed.
-                                       Unused block "titan/PC/Madd_BranchImm_lut<12>" (ROM) removed.
-                                    The signal "titan/PC/Madd_BranchImm_lut<13>" is unused and has been removed.
-                                     Unused block "titan/PC/Madd_BranchImm_lut<13>" (ROM) removed.
-                                  The signal "titan/PC/Madd_BranchImm_lut<14>" is unused and has been removed.
-                                   Unused block "titan/PC/Madd_BranchImm_lut<14>" (ROM) removed.
-                                The signal "titan/PC/Madd_BranchImm_lut<15>" is unused and has been removed.
-                                 Unused block "titan/PC/Madd_BranchImm_lut<15>" (ROM) removed.
-                              The signal "titan/PC/Madd_BranchImm_lut<16>" is unused and has been removed.
-                               Unused block "titan/PC/Madd_BranchImm_lut<16>" (ROM) removed.
-                            The signal "titan/PC/Madd_BranchImm_lut<17>" is unused and has been removed.
-                             Unused block "titan/PC/Madd_BranchImm_lut<17>" (ROM) removed.
-                          The signal "titan/PC/Madd_BranchImm_lut<18>" is unused and has been removed.
-                           Unused block "titan/PC/Madd_BranchImm_lut<18>" (ROM) removed.
-                        The signal "titan/PC/Madd_BranchImm_lut<19>" is unused and has been removed.
-                         Unused block "titan/PC/Madd_BranchImm_lut<19>" (ROM) removed.
-                      The signal "titan/PC/Madd_BranchImm_lut<20>" is unused and has been removed.
-                       Unused block "titan/PC/Madd_BranchImm_lut<20>" (ROM) removed.
-                    The signal "titan/PC/Madd_BranchImm_lut<21>" is unused and has been removed.
-                     Unused block "titan/PC/Madd_BranchImm_lut<21>" (ROM) removed.
-                  The signal "titan/PC/Madd_BranchImm_lut<22>" is unused and has been removed.
-                   Unused block "titan/PC/Madd_BranchImm_lut<22>" (ROM) removed.
-                The signal "titan/PC/Madd_BranchImm_lut<23>" is unused and has been removed.
-                 Unused block "titan/PC/Madd_BranchImm_lut<23>" (ROM) removed.
-              The signal "titan/PC/Madd_BranchImm_lut<24>" is unused and has been removed.
-               Unused block "titan/PC/Madd_BranchImm_lut<24>" (ROM) removed.
-            The signal "titan/PC/Madd_BranchImm_lut<25>" is unused and has been removed.
-             Unused block "titan/PC/Madd_BranchImm_lut<25>" (ROM) removed.
-          The signal "titan/PC/Madd_BranchImm_lut<26>" is unused and has been removed.
-           Unused block "titan/PC/Madd_BranchImm_lut<26>" (ROM) removed.
-        The signal "titan/PC/Madd_BranchImm_lut<27>" is unused and has been removed.
-         Unused block "titan/PC/Madd_BranchImm_lut<27>" (ROM) removed.
-      The signal "titan/PC/Madd_BranchImm_lut<28>" is unused and has been removed.
-       Unused block "titan/PC/Madd_BranchImm_lut<28>" (ROM) removed.
-    The signal "titan/PC/Madd_BranchImm_lut<29>" is unused and has been removed.
-     Unused block "titan/PC/Madd_BranchImm_lut<29>" (ROM) removed.
-  The signal "titan/PC/Madd_BranchImm_lut<30>" is unused and has been removed.
-   Unused block "titan/PC/Madd_BranchImm_lut<30>" (ROM) removed.
-The signal "titan/PC/BranchImm<0>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<0>" (XOR) removed.
-The signal "titan/PC/BranchImm<1>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<1>" (XOR) removed.
-The signal "titan/PC/BranchImm<2>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<2>" (XOR) removed.
-The signal "titan/PC/BranchImm<3>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<3>" (XOR) removed.
-The signal "titan/PC/BranchImm<4>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<4>" (XOR) removed.
-The signal "titan/PC/BranchImm<5>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<5>" (XOR) removed.
-The signal "titan/PC/BranchImm<6>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<6>" (XOR) removed.
-The signal "titan/PC/BranchImm<7>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<7>" (XOR) removed.
-The signal "titan/PC/BranchImm<8>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<8>" (XOR) removed.
-The signal "titan/PC/BranchImm<9>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<9>" (XOR) removed.
-The signal "titan/PC/BranchImm<10>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<10>" (XOR) removed.
-The signal "titan/PC/BranchImm<11>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<11>" (XOR) removed.
-The signal "titan/PC/BranchImm<12>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<12>" (XOR) removed.
-The signal "titan/PC/BranchImm<13>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<13>" (XOR) removed.
-The signal "titan/PC/BranchImm<14>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<14>" (XOR) removed.
-The signal "titan/PC/BranchImm<15>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<15>" (XOR) removed.
-The signal "titan/PC/BranchImm<16>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<16>" (XOR) removed.
-The signal "titan/PC/BranchImm<17>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<17>" (XOR) removed.
-The signal "titan/PC/BranchImm<18>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<18>" (XOR) removed.
-The signal "titan/PC/BranchImm<19>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<19>" (XOR) removed.
-The signal "titan/PC/BranchImm<20>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<20>" (XOR) removed.
-The signal "titan/PC/BranchImm<21>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<21>" (XOR) removed.
-The signal "titan/PC/BranchImm<22>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<22>" (XOR) removed.
-The signal "titan/PC/BranchImm<23>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<23>" (XOR) removed.
-The signal "titan/PC/BranchImm<24>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<24>" (XOR) removed.
-The signal "titan/PC/BranchImm<25>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<25>" (XOR) removed.
-The signal "titan/PC/BranchImm<26>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<26>" (XOR) removed.
-The signal "titan/PC/BranchImm<27>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<27>" (XOR) removed.
-The signal "titan/PC/BranchImm<28>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<28>" (XOR) removed.
-The signal "titan/PC/BranchImm<29>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<29>" (XOR) removed.
-The signal "titan/PC/BranchImm<30>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<30>" (XOR) removed.
-The signal "titan/PC/BranchImm<31>" is unused and has been removed.
- Unused block "titan/PC/Madd_BranchImm_xor<31>" (XOR) removed.
-The signal "titan/PSR/Mmux__n0085_6" is unused and has been removed.
- Unused block "titan/PSR/Mmux__n0085_6" (ROM) removed.
-  The signal "titan/PSR/PSR_4" is unused and has been removed.
-   Unused block "titan/PSR/PSR_4" (SFF) removed.
-  The signal "titan/PSR/PSR_1" is unused and has been removed.
-   Unused block "titan/PSR/PSR_1" (SFF) removed.
-    The signal "titan/PSR/_n0091_inv" is unused and has been removed.
-     Unused block "titan/PSR/_n0091_inv3" (ROM) removed.
-      The signal "titan/PSR/_n0091_inv2" is unused and has been removed.
-       Unused block "titan/PSR/_n0091_inv2" (ROM) removed.
-      The signal "titan/PSR/_n0091_inv1" is unused and has been removed.
-       Unused block "titan/PSR/_n0091_inv1" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out98" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out99" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out86" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out87" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out2510" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out2511" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out248" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out249" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out228" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out229" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out219" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out2110" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out207" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out208" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out197" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out198" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out187" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out188" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out176" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out177" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out168" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out169" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out158" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out159" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out148" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out149" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out138" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out139" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out118" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out119" (ROM) removed.
-The signal "titan/ExStage/RaWriteEnMUX/Mmux_out108" is unused and has been
-removed.
- Unused block "titan/ExStage/RaWriteEnMUX/Mmux_out109" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out17" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out19" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out24" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out210" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out34" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out37" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out45" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out46" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out54" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out55" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out65" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out66" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out75" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out76" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out127" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out127" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out236" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out236" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out266" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out266" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out275" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out276" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out285" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out286" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out293" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out294" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out305" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out306" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out316" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out316" (ROM) removed.
-The signal "titan/ExStage/memSrcMUX/Mmux_out325" is unused and has been removed.
- Unused block "titan/ExStage/memSrcMUX/Mmux_out325" (ROM) removed.
-The signal "N834" is unused and has been removed.
- Unused block "titan/ExStage/shifter/Mmux_result242_SW0" (ROM) removed.
-The signal "titan/ExStage/shifter/Mmux_result1511" is unused and has been
-removed.
- Unused block "titan/ExStage/shifter/Mmux_result1511" (ROM) removed.
-The signal "N854" is unused and has been removed.
- Unused block "titan/PC/jumpRAMux/Mmux_out1_SW0" (ROM) removed.
-The signal "titan/ExStage/shifter/out17" is unused and has been removed.
- Unused block "titan/ExStage/shifter/out17_1" (ROM) removed.
+The signal "titan/ExStage/regfile/mux31_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux31_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux30_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux30_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux29_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux29_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux28_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux28_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux27_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux27_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux26_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux26_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux25_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux25_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux24_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux24_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux23_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux23_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux22_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux22_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux21_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux21_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux20_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux20_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux19_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux19_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux18_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux18_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux17_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux17_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux16_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux16_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux15_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux15_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux14_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux14_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux13_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux13_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux12_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux12_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux11_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux11_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux10_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux10_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux9_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux9_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux8_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux8_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux7_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux7_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux6_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux6_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux5_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux5_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux4_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux4_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux3_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux3_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux2_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux2_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux1_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux1_31" (ROM) removed.
+The signal "titan/ExStage/regfile/mux_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux_31" (ROM) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1010_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1010_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1110_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1110_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1310_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1310_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1410_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1410_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1510_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1510_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1610_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out1610_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out178_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out178_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out189_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out189_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out199_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out199_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out209_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out209_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out2111_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out2111_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out2210_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out2210_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out2410_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out2410_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out2512_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out2512_SW1_F
-   optimized to 0
-LUT3 		titan/ExStage/RaWriteEnMUX/Mmux_out257
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out910_SW0_F
-   optimized to 0
-LUT6 		titan/ExStage/RaWriteEnMUX/Mmux_out910_SW1_F
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out110
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out128
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out211
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out237
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out267
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out277
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out287
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out307
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out317
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out326
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out38
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out47
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out56
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out67
-   optimized to 0
-LUT6 		titan/ExStage/memSrcMUX/Mmux_out77
-   optimized to 0
-LUT6 		titan/ExStage/shifter/Mmux_result1021
-   optimized to 0
-LUT6 		titan/ExStage/shifter/Mmux_result1721
-   optimized to 0
-LUT6 		titan/LogicCtrl/Mmux_aluop1
-   optimized to 0
-LUT4 		titan/LogicCtrl/Mmux_aluop1_SW0
-   optimized to 1
-LUT4 		titan/LogicCtrl/Mmux_aluop3_SW0
-   optimized to 1
-LUT6 		titan/LogicCtrl/Mmux_aluop41
-   optimized to 0
-LUT6 		titan/LogicCtrl/Mmux_aluop42
-   optimized to 0
-LUT5 		titan/LogicCtrl/Mmux_branch11
-   optimized to 0
-LUT5 		titan/LogicCtrl/Mmux_jumpRA11
-   optimized to 0
-LUT4 		titan/LogicCtrl/Mmux_regWriteEn1_SW0
-   optimized to 0
-LUT6 		titan/LogicCtrl/Mmux_shiftType11
-   optimized to 0
-LUT5 		titan/LogicCtrl/Mmux_wbPSR11
-   optimized to 0
-LUT4 		titan/PC/jumpRAMux/Mmux_out1111
-   optimized to 0
-LUT6 		titan/PC/jumpRAMux/Mmux_out2_SW0
-   optimized to 1
 
 To enable printing of redundant blocks removed and signals merged, set the
 detailed map report option and rerun map.

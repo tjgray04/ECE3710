@@ -57,7 +57,7 @@ module MemoryController#(parameter WIDTH = 32)
 						end
 						// STACK MEMORY NOT NEEDED
 				// Stack Memory
-//				01:	begin
+//				2'b01:	begin
 //							// only enable writing to dataRAM if the logic controller enables a write
 //							stackData_wrEn = writeEn;
 //							// Set the output of the Mem Controller to be the data output of the dataRAM
@@ -66,7 +66,7 @@ module MemoryController#(parameter WIDTH = 32)
 //							stackData_OUT = CPUdata_IN;
 //						end				
 				// VGA memory
-				2'b01:	begin
+				2'b10:	begin
 							// only enable writing to dataRAM if the logic controller enables a write
 							vgaData_wrEn = writeEn;
 							// Set the output of the Mem Controller to be the data output of the dataRAM

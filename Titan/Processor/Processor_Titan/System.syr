@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: System.prj
 
@@ -113,6 +113,7 @@ Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Proces
 Parsing module <Shifter>.
 Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
 Parsing module <RegFile>.
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" Line 47. parameter declaration becomes local in RegFile with formal parameter declaration list
 Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
 Parsing module <Mux>.
 Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
@@ -173,7 +174,7 @@ Elaborating module <ProgramCounter>.
 Elaborating module <Mux>.
 
 Elaborating module <InstructionROM>.
-Reading initialization file \"IOtestloop.dat\".
+Reading initialization file \"ControllerTest.dat\".
 WARNING:HDLCompiler:1670 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal <inst_ROM> in initial block is partially initialized.
 
 Elaborating module <InstructionDecoder>.
@@ -302,11 +303,1035 @@ Synthesizing Unit <RegFile>.
     Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v".
         REGBITS = 5
         WIDTH = 32
-WARNING:Xst:647 - Input <RaWriteEn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Found 32x32-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Found 1-bit register for signal <RAM<31><30>>.
+    Found 1-bit register for signal <RAM<31><29>>.
+    Found 1-bit register for signal <RAM<31><28>>.
+    Found 1-bit register for signal <RAM<31><27>>.
+    Found 1-bit register for signal <RAM<31><26>>.
+    Found 1-bit register for signal <RAM<31><25>>.
+    Found 1-bit register for signal <RAM<31><24>>.
+    Found 1-bit register for signal <RAM<31><23>>.
+    Found 1-bit register for signal <RAM<31><22>>.
+    Found 1-bit register for signal <RAM<31><21>>.
+    Found 1-bit register for signal <RAM<31><20>>.
+    Found 1-bit register for signal <RAM<31><19>>.
+    Found 1-bit register for signal <RAM<31><18>>.
+    Found 1-bit register for signal <RAM<31><17>>.
+    Found 1-bit register for signal <RAM<31><16>>.
+    Found 1-bit register for signal <RAM<31><15>>.
+    Found 1-bit register for signal <RAM<31><14>>.
+    Found 1-bit register for signal <RAM<31><13>>.
+    Found 1-bit register for signal <RAM<31><12>>.
+    Found 1-bit register for signal <RAM<31><11>>.
+    Found 1-bit register for signal <RAM<31><10>>.
+    Found 1-bit register for signal <RAM<31><9>>.
+    Found 1-bit register for signal <RAM<31><8>>.
+    Found 1-bit register for signal <RAM<31><7>>.
+    Found 1-bit register for signal <RAM<31><6>>.
+    Found 1-bit register for signal <RAM<31><5>>.
+    Found 1-bit register for signal <RAM<31><4>>.
+    Found 1-bit register for signal <RAM<31><3>>.
+    Found 1-bit register for signal <RAM<31><2>>.
+    Found 1-bit register for signal <RAM<31><1>>.
+    Found 1-bit register for signal <RAM<31><0>>.
+    Found 1-bit register for signal <RAM<30><31>>.
+    Found 1-bit register for signal <RAM<30><30>>.
+    Found 1-bit register for signal <RAM<30><29>>.
+    Found 1-bit register for signal <RAM<30><28>>.
+    Found 1-bit register for signal <RAM<30><27>>.
+    Found 1-bit register for signal <RAM<30><26>>.
+    Found 1-bit register for signal <RAM<30><25>>.
+    Found 1-bit register for signal <RAM<30><24>>.
+    Found 1-bit register for signal <RAM<30><23>>.
+    Found 1-bit register for signal <RAM<30><22>>.
+    Found 1-bit register for signal <RAM<30><21>>.
+    Found 1-bit register for signal <RAM<30><20>>.
+    Found 1-bit register for signal <RAM<30><19>>.
+    Found 1-bit register for signal <RAM<30><18>>.
+    Found 1-bit register for signal <RAM<30><17>>.
+    Found 1-bit register for signal <RAM<30><16>>.
+    Found 1-bit register for signal <RAM<30><15>>.
+    Found 1-bit register for signal <RAM<30><14>>.
+    Found 1-bit register for signal <RAM<30><13>>.
+    Found 1-bit register for signal <RAM<30><12>>.
+    Found 1-bit register for signal <RAM<30><11>>.
+    Found 1-bit register for signal <RAM<30><10>>.
+    Found 1-bit register for signal <RAM<30><9>>.
+    Found 1-bit register for signal <RAM<30><8>>.
+    Found 1-bit register for signal <RAM<30><7>>.
+    Found 1-bit register for signal <RAM<30><6>>.
+    Found 1-bit register for signal <RAM<30><5>>.
+    Found 1-bit register for signal <RAM<30><4>>.
+    Found 1-bit register for signal <RAM<30><3>>.
+    Found 1-bit register for signal <RAM<30><2>>.
+    Found 1-bit register for signal <RAM<30><1>>.
+    Found 1-bit register for signal <RAM<30><0>>.
+    Found 1-bit register for signal <RAM<29><31>>.
+    Found 1-bit register for signal <RAM<29><30>>.
+    Found 1-bit register for signal <RAM<29><29>>.
+    Found 1-bit register for signal <RAM<29><28>>.
+    Found 1-bit register for signal <RAM<29><27>>.
+    Found 1-bit register for signal <RAM<29><26>>.
+    Found 1-bit register for signal <RAM<29><25>>.
+    Found 1-bit register for signal <RAM<29><24>>.
+    Found 1-bit register for signal <RAM<29><23>>.
+    Found 1-bit register for signal <RAM<29><22>>.
+    Found 1-bit register for signal <RAM<29><21>>.
+    Found 1-bit register for signal <RAM<29><20>>.
+    Found 1-bit register for signal <RAM<29><19>>.
+    Found 1-bit register for signal <RAM<29><18>>.
+    Found 1-bit register for signal <RAM<29><17>>.
+    Found 1-bit register for signal <RAM<29><16>>.
+    Found 1-bit register for signal <RAM<29><15>>.
+    Found 1-bit register for signal <RAM<29><14>>.
+    Found 1-bit register for signal <RAM<29><13>>.
+    Found 1-bit register for signal <RAM<29><12>>.
+    Found 1-bit register for signal <RAM<29><11>>.
+    Found 1-bit register for signal <RAM<29><10>>.
+    Found 1-bit register for signal <RAM<29><9>>.
+    Found 1-bit register for signal <RAM<29><8>>.
+    Found 1-bit register for signal <RAM<29><7>>.
+    Found 1-bit register for signal <RAM<29><6>>.
+    Found 1-bit register for signal <RAM<29><5>>.
+    Found 1-bit register for signal <RAM<29><4>>.
+    Found 1-bit register for signal <RAM<29><3>>.
+    Found 1-bit register for signal <RAM<29><2>>.
+    Found 1-bit register for signal <RAM<29><1>>.
+    Found 1-bit register for signal <RAM<29><0>>.
+    Found 1-bit register for signal <RAM<28><31>>.
+    Found 1-bit register for signal <RAM<28><30>>.
+    Found 1-bit register for signal <RAM<28><29>>.
+    Found 1-bit register for signal <RAM<28><28>>.
+    Found 1-bit register for signal <RAM<28><27>>.
+    Found 1-bit register for signal <RAM<28><26>>.
+    Found 1-bit register for signal <RAM<28><25>>.
+    Found 1-bit register for signal <RAM<28><24>>.
+    Found 1-bit register for signal <RAM<28><23>>.
+    Found 1-bit register for signal <RAM<28><22>>.
+    Found 1-bit register for signal <RAM<28><21>>.
+    Found 1-bit register for signal <RAM<28><20>>.
+    Found 1-bit register for signal <RAM<28><19>>.
+    Found 1-bit register for signal <RAM<28><18>>.
+    Found 1-bit register for signal <RAM<28><17>>.
+    Found 1-bit register for signal <RAM<28><16>>.
+    Found 1-bit register for signal <RAM<28><15>>.
+    Found 1-bit register for signal <RAM<28><14>>.
+    Found 1-bit register for signal <RAM<28><13>>.
+    Found 1-bit register for signal <RAM<28><12>>.
+    Found 1-bit register for signal <RAM<28><11>>.
+    Found 1-bit register for signal <RAM<28><10>>.
+    Found 1-bit register for signal <RAM<28><9>>.
+    Found 1-bit register for signal <RAM<28><8>>.
+    Found 1-bit register for signal <RAM<28><7>>.
+    Found 1-bit register for signal <RAM<28><6>>.
+    Found 1-bit register for signal <RAM<28><5>>.
+    Found 1-bit register for signal <RAM<28><4>>.
+    Found 1-bit register for signal <RAM<28><3>>.
+    Found 1-bit register for signal <RAM<28><2>>.
+    Found 1-bit register for signal <RAM<28><1>>.
+    Found 1-bit register for signal <RAM<28><0>>.
+    Found 1-bit register for signal <RAM<27><31>>.
+    Found 1-bit register for signal <RAM<27><30>>.
+    Found 1-bit register for signal <RAM<27><29>>.
+    Found 1-bit register for signal <RAM<27><28>>.
+    Found 1-bit register for signal <RAM<27><27>>.
+    Found 1-bit register for signal <RAM<27><26>>.
+    Found 1-bit register for signal <RAM<27><25>>.
+    Found 1-bit register for signal <RAM<27><24>>.
+    Found 1-bit register for signal <RAM<27><23>>.
+    Found 1-bit register for signal <RAM<27><22>>.
+    Found 1-bit register for signal <RAM<27><21>>.
+    Found 1-bit register for signal <RAM<27><20>>.
+    Found 1-bit register for signal <RAM<27><19>>.
+    Found 1-bit register for signal <RAM<27><18>>.
+    Found 1-bit register for signal <RAM<27><17>>.
+    Found 1-bit register for signal <RAM<27><16>>.
+    Found 1-bit register for signal <RAM<27><15>>.
+    Found 1-bit register for signal <RAM<27><14>>.
+    Found 1-bit register for signal <RAM<27><13>>.
+    Found 1-bit register for signal <RAM<27><12>>.
+    Found 1-bit register for signal <RAM<27><11>>.
+    Found 1-bit register for signal <RAM<27><10>>.
+    Found 1-bit register for signal <RAM<27><9>>.
+    Found 1-bit register for signal <RAM<27><8>>.
+    Found 1-bit register for signal <RAM<27><7>>.
+    Found 1-bit register for signal <RAM<27><6>>.
+    Found 1-bit register for signal <RAM<27><5>>.
+    Found 1-bit register for signal <RAM<27><4>>.
+    Found 1-bit register for signal <RAM<27><3>>.
+    Found 1-bit register for signal <RAM<27><2>>.
+    Found 1-bit register for signal <RAM<27><1>>.
+    Found 1-bit register for signal <RAM<27><0>>.
+    Found 1-bit register for signal <RAM<26><31>>.
+    Found 1-bit register for signal <RAM<26><30>>.
+    Found 1-bit register for signal <RAM<26><29>>.
+    Found 1-bit register for signal <RAM<26><28>>.
+    Found 1-bit register for signal <RAM<26><27>>.
+    Found 1-bit register for signal <RAM<26><26>>.
+    Found 1-bit register for signal <RAM<26><25>>.
+    Found 1-bit register for signal <RAM<26><24>>.
+    Found 1-bit register for signal <RAM<26><23>>.
+    Found 1-bit register for signal <RAM<26><22>>.
+    Found 1-bit register for signal <RAM<26><21>>.
+    Found 1-bit register for signal <RAM<26><20>>.
+    Found 1-bit register for signal <RAM<26><19>>.
+    Found 1-bit register for signal <RAM<26><18>>.
+    Found 1-bit register for signal <RAM<26><17>>.
+    Found 1-bit register for signal <RAM<26><16>>.
+    Found 1-bit register for signal <RAM<26><15>>.
+    Found 1-bit register for signal <RAM<26><14>>.
+    Found 1-bit register for signal <RAM<26><13>>.
+    Found 1-bit register for signal <RAM<26><12>>.
+    Found 1-bit register for signal <RAM<26><11>>.
+    Found 1-bit register for signal <RAM<26><10>>.
+    Found 1-bit register for signal <RAM<26><9>>.
+    Found 1-bit register for signal <RAM<26><8>>.
+    Found 1-bit register for signal <RAM<26><7>>.
+    Found 1-bit register for signal <RAM<26><6>>.
+    Found 1-bit register for signal <RAM<26><5>>.
+    Found 1-bit register for signal <RAM<26><4>>.
+    Found 1-bit register for signal <RAM<26><3>>.
+    Found 1-bit register for signal <RAM<26><2>>.
+    Found 1-bit register for signal <RAM<26><1>>.
+    Found 1-bit register for signal <RAM<26><0>>.
+    Found 1-bit register for signal <RAM<25><31>>.
+    Found 1-bit register for signal <RAM<25><30>>.
+    Found 1-bit register for signal <RAM<25><29>>.
+    Found 1-bit register for signal <RAM<25><28>>.
+    Found 1-bit register for signal <RAM<25><27>>.
+    Found 1-bit register for signal <RAM<25><26>>.
+    Found 1-bit register for signal <RAM<25><25>>.
+    Found 1-bit register for signal <RAM<25><24>>.
+    Found 1-bit register for signal <RAM<25><23>>.
+    Found 1-bit register for signal <RAM<25><22>>.
+    Found 1-bit register for signal <RAM<25><21>>.
+    Found 1-bit register for signal <RAM<25><20>>.
+    Found 1-bit register for signal <RAM<25><19>>.
+    Found 1-bit register for signal <RAM<25><18>>.
+    Found 1-bit register for signal <RAM<25><17>>.
+    Found 1-bit register for signal <RAM<25><16>>.
+    Found 1-bit register for signal <RAM<25><15>>.
+    Found 1-bit register for signal <RAM<25><14>>.
+    Found 1-bit register for signal <RAM<25><13>>.
+    Found 1-bit register for signal <RAM<25><12>>.
+    Found 1-bit register for signal <RAM<25><11>>.
+    Found 1-bit register for signal <RAM<25><10>>.
+    Found 1-bit register for signal <RAM<25><9>>.
+    Found 1-bit register for signal <RAM<25><8>>.
+    Found 1-bit register for signal <RAM<25><7>>.
+    Found 1-bit register for signal <RAM<25><6>>.
+    Found 1-bit register for signal <RAM<25><5>>.
+    Found 1-bit register for signal <RAM<25><4>>.
+    Found 1-bit register for signal <RAM<25><3>>.
+    Found 1-bit register for signal <RAM<25><2>>.
+    Found 1-bit register for signal <RAM<25><1>>.
+    Found 1-bit register for signal <RAM<25><0>>.
+    Found 1-bit register for signal <RAM<24><31>>.
+    Found 1-bit register for signal <RAM<24><30>>.
+    Found 1-bit register for signal <RAM<24><29>>.
+    Found 1-bit register for signal <RAM<24><28>>.
+    Found 1-bit register for signal <RAM<24><27>>.
+    Found 1-bit register for signal <RAM<24><26>>.
+    Found 1-bit register for signal <RAM<24><25>>.
+    Found 1-bit register for signal <RAM<24><24>>.
+    Found 1-bit register for signal <RAM<24><23>>.
+    Found 1-bit register for signal <RAM<24><22>>.
+    Found 1-bit register for signal <RAM<24><21>>.
+    Found 1-bit register for signal <RAM<24><20>>.
+    Found 1-bit register for signal <RAM<24><19>>.
+    Found 1-bit register for signal <RAM<24><18>>.
+    Found 1-bit register for signal <RAM<24><17>>.
+    Found 1-bit register for signal <RAM<24><16>>.
+    Found 1-bit register for signal <RAM<24><15>>.
+    Found 1-bit register for signal <RAM<24><14>>.
+    Found 1-bit register for signal <RAM<24><13>>.
+    Found 1-bit register for signal <RAM<24><12>>.
+    Found 1-bit register for signal <RAM<24><11>>.
+    Found 1-bit register for signal <RAM<24><10>>.
+    Found 1-bit register for signal <RAM<24><9>>.
+    Found 1-bit register for signal <RAM<24><8>>.
+    Found 1-bit register for signal <RAM<24><7>>.
+    Found 1-bit register for signal <RAM<24><6>>.
+    Found 1-bit register for signal <RAM<24><5>>.
+    Found 1-bit register for signal <RAM<24><4>>.
+    Found 1-bit register for signal <RAM<24><3>>.
+    Found 1-bit register for signal <RAM<24><2>>.
+    Found 1-bit register for signal <RAM<24><1>>.
+    Found 1-bit register for signal <RAM<24><0>>.
+    Found 1-bit register for signal <RAM<23><31>>.
+    Found 1-bit register for signal <RAM<23><30>>.
+    Found 1-bit register for signal <RAM<23><29>>.
+    Found 1-bit register for signal <RAM<23><28>>.
+    Found 1-bit register for signal <RAM<23><27>>.
+    Found 1-bit register for signal <RAM<23><26>>.
+    Found 1-bit register for signal <RAM<23><25>>.
+    Found 1-bit register for signal <RAM<23><24>>.
+    Found 1-bit register for signal <RAM<23><23>>.
+    Found 1-bit register for signal <RAM<23><22>>.
+    Found 1-bit register for signal <RAM<23><21>>.
+    Found 1-bit register for signal <RAM<23><20>>.
+    Found 1-bit register for signal <RAM<23><19>>.
+    Found 1-bit register for signal <RAM<23><18>>.
+    Found 1-bit register for signal <RAM<23><17>>.
+    Found 1-bit register for signal <RAM<23><16>>.
+    Found 1-bit register for signal <RAM<23><15>>.
+    Found 1-bit register for signal <RAM<23><14>>.
+    Found 1-bit register for signal <RAM<23><13>>.
+    Found 1-bit register for signal <RAM<23><12>>.
+    Found 1-bit register for signal <RAM<23><11>>.
+    Found 1-bit register for signal <RAM<23><10>>.
+    Found 1-bit register for signal <RAM<23><9>>.
+    Found 1-bit register for signal <RAM<23><8>>.
+    Found 1-bit register for signal <RAM<23><7>>.
+    Found 1-bit register for signal <RAM<23><6>>.
+    Found 1-bit register for signal <RAM<23><5>>.
+    Found 1-bit register for signal <RAM<23><4>>.
+    Found 1-bit register for signal <RAM<23><3>>.
+    Found 1-bit register for signal <RAM<23><2>>.
+    Found 1-bit register for signal <RAM<23><1>>.
+    Found 1-bit register for signal <RAM<23><0>>.
+    Found 1-bit register for signal <RAM<22><31>>.
+    Found 1-bit register for signal <RAM<22><30>>.
+    Found 1-bit register for signal <RAM<22><29>>.
+    Found 1-bit register for signal <RAM<22><28>>.
+    Found 1-bit register for signal <RAM<22><27>>.
+    Found 1-bit register for signal <RAM<22><26>>.
+    Found 1-bit register for signal <RAM<22><25>>.
+    Found 1-bit register for signal <RAM<22><24>>.
+    Found 1-bit register for signal <RAM<22><23>>.
+    Found 1-bit register for signal <RAM<22><22>>.
+    Found 1-bit register for signal <RAM<22><21>>.
+    Found 1-bit register for signal <RAM<22><20>>.
+    Found 1-bit register for signal <RAM<22><19>>.
+    Found 1-bit register for signal <RAM<22><18>>.
+    Found 1-bit register for signal <RAM<22><17>>.
+    Found 1-bit register for signal <RAM<22><16>>.
+    Found 1-bit register for signal <RAM<22><15>>.
+    Found 1-bit register for signal <RAM<22><14>>.
+    Found 1-bit register for signal <RAM<22><13>>.
+    Found 1-bit register for signal <RAM<22><12>>.
+    Found 1-bit register for signal <RAM<22><11>>.
+    Found 1-bit register for signal <RAM<22><10>>.
+    Found 1-bit register for signal <RAM<22><9>>.
+    Found 1-bit register for signal <RAM<22><8>>.
+    Found 1-bit register for signal <RAM<22><7>>.
+    Found 1-bit register for signal <RAM<22><6>>.
+    Found 1-bit register for signal <RAM<22><5>>.
+    Found 1-bit register for signal <RAM<22><4>>.
+    Found 1-bit register for signal <RAM<22><3>>.
+    Found 1-bit register for signal <RAM<22><2>>.
+    Found 1-bit register for signal <RAM<22><1>>.
+    Found 1-bit register for signal <RAM<22><0>>.
+    Found 1-bit register for signal <RAM<21><31>>.
+    Found 1-bit register for signal <RAM<21><30>>.
+    Found 1-bit register for signal <RAM<21><29>>.
+    Found 1-bit register for signal <RAM<21><28>>.
+    Found 1-bit register for signal <RAM<21><27>>.
+    Found 1-bit register for signal <RAM<21><26>>.
+    Found 1-bit register for signal <RAM<21><25>>.
+    Found 1-bit register for signal <RAM<21><24>>.
+    Found 1-bit register for signal <RAM<21><23>>.
+    Found 1-bit register for signal <RAM<21><22>>.
+    Found 1-bit register for signal <RAM<21><21>>.
+    Found 1-bit register for signal <RAM<21><20>>.
+    Found 1-bit register for signal <RAM<21><19>>.
+    Found 1-bit register for signal <RAM<21><18>>.
+    Found 1-bit register for signal <RAM<21><17>>.
+    Found 1-bit register for signal <RAM<21><16>>.
+    Found 1-bit register for signal <RAM<21><15>>.
+    Found 1-bit register for signal <RAM<21><14>>.
+    Found 1-bit register for signal <RAM<21><13>>.
+    Found 1-bit register for signal <RAM<21><12>>.
+    Found 1-bit register for signal <RAM<21><11>>.
+    Found 1-bit register for signal <RAM<21><10>>.
+    Found 1-bit register for signal <RAM<21><9>>.
+    Found 1-bit register for signal <RAM<21><8>>.
+    Found 1-bit register for signal <RAM<21><7>>.
+    Found 1-bit register for signal <RAM<21><6>>.
+    Found 1-bit register for signal <RAM<21><5>>.
+    Found 1-bit register for signal <RAM<21><4>>.
+    Found 1-bit register for signal <RAM<21><3>>.
+    Found 1-bit register for signal <RAM<21><2>>.
+    Found 1-bit register for signal <RAM<21><1>>.
+    Found 1-bit register for signal <RAM<21><0>>.
+    Found 1-bit register for signal <RAM<20><31>>.
+    Found 1-bit register for signal <RAM<20><30>>.
+    Found 1-bit register for signal <RAM<20><29>>.
+    Found 1-bit register for signal <RAM<20><28>>.
+    Found 1-bit register for signal <RAM<20><27>>.
+    Found 1-bit register for signal <RAM<20><26>>.
+    Found 1-bit register for signal <RAM<20><25>>.
+    Found 1-bit register for signal <RAM<20><24>>.
+    Found 1-bit register for signal <RAM<20><23>>.
+    Found 1-bit register for signal <RAM<20><22>>.
+    Found 1-bit register for signal <RAM<20><21>>.
+    Found 1-bit register for signal <RAM<20><20>>.
+    Found 1-bit register for signal <RAM<20><19>>.
+    Found 1-bit register for signal <RAM<20><18>>.
+    Found 1-bit register for signal <RAM<20><17>>.
+    Found 1-bit register for signal <RAM<20><16>>.
+    Found 1-bit register for signal <RAM<20><15>>.
+    Found 1-bit register for signal <RAM<20><14>>.
+    Found 1-bit register for signal <RAM<20><13>>.
+    Found 1-bit register for signal <RAM<20><12>>.
+    Found 1-bit register for signal <RAM<20><11>>.
+    Found 1-bit register for signal <RAM<20><10>>.
+    Found 1-bit register for signal <RAM<20><9>>.
+    Found 1-bit register for signal <RAM<20><8>>.
+    Found 1-bit register for signal <RAM<20><7>>.
+    Found 1-bit register for signal <RAM<20><6>>.
+    Found 1-bit register for signal <RAM<20><5>>.
+    Found 1-bit register for signal <RAM<20><4>>.
+    Found 1-bit register for signal <RAM<20><3>>.
+    Found 1-bit register for signal <RAM<20><2>>.
+    Found 1-bit register for signal <RAM<20><1>>.
+    Found 1-bit register for signal <RAM<20><0>>.
+    Found 1-bit register for signal <RAM<19><31>>.
+    Found 1-bit register for signal <RAM<19><30>>.
+    Found 1-bit register for signal <RAM<19><29>>.
+    Found 1-bit register for signal <RAM<19><28>>.
+    Found 1-bit register for signal <RAM<19><27>>.
+    Found 1-bit register for signal <RAM<19><26>>.
+    Found 1-bit register for signal <RAM<19><25>>.
+    Found 1-bit register for signal <RAM<19><24>>.
+    Found 1-bit register for signal <RAM<19><23>>.
+    Found 1-bit register for signal <RAM<19><22>>.
+    Found 1-bit register for signal <RAM<19><21>>.
+    Found 1-bit register for signal <RAM<19><20>>.
+    Found 1-bit register for signal <RAM<19><19>>.
+    Found 1-bit register for signal <RAM<19><18>>.
+    Found 1-bit register for signal <RAM<19><17>>.
+    Found 1-bit register for signal <RAM<19><16>>.
+    Found 1-bit register for signal <RAM<19><15>>.
+    Found 1-bit register for signal <RAM<19><14>>.
+    Found 1-bit register for signal <RAM<19><13>>.
+    Found 1-bit register for signal <RAM<19><12>>.
+    Found 1-bit register for signal <RAM<19><11>>.
+    Found 1-bit register for signal <RAM<19><10>>.
+    Found 1-bit register for signal <RAM<19><9>>.
+    Found 1-bit register for signal <RAM<19><8>>.
+    Found 1-bit register for signal <RAM<19><7>>.
+    Found 1-bit register for signal <RAM<19><6>>.
+    Found 1-bit register for signal <RAM<19><5>>.
+    Found 1-bit register for signal <RAM<19><4>>.
+    Found 1-bit register for signal <RAM<19><3>>.
+    Found 1-bit register for signal <RAM<19><2>>.
+    Found 1-bit register for signal <RAM<19><1>>.
+    Found 1-bit register for signal <RAM<19><0>>.
+    Found 1-bit register for signal <RAM<18><31>>.
+    Found 1-bit register for signal <RAM<18><30>>.
+    Found 1-bit register for signal <RAM<18><29>>.
+    Found 1-bit register for signal <RAM<18><28>>.
+    Found 1-bit register for signal <RAM<18><27>>.
+    Found 1-bit register for signal <RAM<18><26>>.
+    Found 1-bit register for signal <RAM<18><25>>.
+    Found 1-bit register for signal <RAM<18><24>>.
+    Found 1-bit register for signal <RAM<18><23>>.
+    Found 1-bit register for signal <RAM<18><22>>.
+    Found 1-bit register for signal <RAM<18><21>>.
+    Found 1-bit register for signal <RAM<18><20>>.
+    Found 1-bit register for signal <RAM<18><19>>.
+    Found 1-bit register for signal <RAM<18><18>>.
+    Found 1-bit register for signal <RAM<18><17>>.
+    Found 1-bit register for signal <RAM<18><16>>.
+    Found 1-bit register for signal <RAM<18><15>>.
+    Found 1-bit register for signal <RAM<18><14>>.
+    Found 1-bit register for signal <RAM<18><13>>.
+    Found 1-bit register for signal <RAM<18><12>>.
+    Found 1-bit register for signal <RAM<18><11>>.
+    Found 1-bit register for signal <RAM<18><10>>.
+    Found 1-bit register for signal <RAM<18><9>>.
+    Found 1-bit register for signal <RAM<18><8>>.
+    Found 1-bit register for signal <RAM<18><7>>.
+    Found 1-bit register for signal <RAM<18><6>>.
+    Found 1-bit register for signal <RAM<18><5>>.
+    Found 1-bit register for signal <RAM<18><4>>.
+    Found 1-bit register for signal <RAM<18><3>>.
+    Found 1-bit register for signal <RAM<18><2>>.
+    Found 1-bit register for signal <RAM<18><1>>.
+    Found 1-bit register for signal <RAM<18><0>>.
+    Found 1-bit register for signal <RAM<17><31>>.
+    Found 1-bit register for signal <RAM<17><30>>.
+    Found 1-bit register for signal <RAM<17><29>>.
+    Found 1-bit register for signal <RAM<17><28>>.
+    Found 1-bit register for signal <RAM<17><27>>.
+    Found 1-bit register for signal <RAM<17><26>>.
+    Found 1-bit register for signal <RAM<17><25>>.
+    Found 1-bit register for signal <RAM<17><24>>.
+    Found 1-bit register for signal <RAM<17><23>>.
+    Found 1-bit register for signal <RAM<17><22>>.
+    Found 1-bit register for signal <RAM<17><21>>.
+    Found 1-bit register for signal <RAM<17><20>>.
+    Found 1-bit register for signal <RAM<17><19>>.
+    Found 1-bit register for signal <RAM<17><18>>.
+    Found 1-bit register for signal <RAM<17><17>>.
+    Found 1-bit register for signal <RAM<17><16>>.
+    Found 1-bit register for signal <RAM<17><15>>.
+    Found 1-bit register for signal <RAM<17><14>>.
+    Found 1-bit register for signal <RAM<17><13>>.
+    Found 1-bit register for signal <RAM<17><12>>.
+    Found 1-bit register for signal <RAM<17><11>>.
+    Found 1-bit register for signal <RAM<17><10>>.
+    Found 1-bit register for signal <RAM<17><9>>.
+    Found 1-bit register for signal <RAM<17><8>>.
+    Found 1-bit register for signal <RAM<17><7>>.
+    Found 1-bit register for signal <RAM<17><6>>.
+    Found 1-bit register for signal <RAM<17><5>>.
+    Found 1-bit register for signal <RAM<17><4>>.
+    Found 1-bit register for signal <RAM<17><3>>.
+    Found 1-bit register for signal <RAM<17><2>>.
+    Found 1-bit register for signal <RAM<17><1>>.
+    Found 1-bit register for signal <RAM<17><0>>.
+    Found 1-bit register for signal <RAM<16><31>>.
+    Found 1-bit register for signal <RAM<16><30>>.
+    Found 1-bit register for signal <RAM<16><29>>.
+    Found 1-bit register for signal <RAM<16><28>>.
+    Found 1-bit register for signal <RAM<16><27>>.
+    Found 1-bit register for signal <RAM<16><26>>.
+    Found 1-bit register for signal <RAM<16><25>>.
+    Found 1-bit register for signal <RAM<16><24>>.
+    Found 1-bit register for signal <RAM<16><23>>.
+    Found 1-bit register for signal <RAM<16><22>>.
+    Found 1-bit register for signal <RAM<16><21>>.
+    Found 1-bit register for signal <RAM<16><20>>.
+    Found 1-bit register for signal <RAM<16><19>>.
+    Found 1-bit register for signal <RAM<16><18>>.
+    Found 1-bit register for signal <RAM<16><17>>.
+    Found 1-bit register for signal <RAM<16><16>>.
+    Found 1-bit register for signal <RAM<16><15>>.
+    Found 1-bit register for signal <RAM<16><14>>.
+    Found 1-bit register for signal <RAM<16><13>>.
+    Found 1-bit register for signal <RAM<16><12>>.
+    Found 1-bit register for signal <RAM<16><11>>.
+    Found 1-bit register for signal <RAM<16><10>>.
+    Found 1-bit register for signal <RAM<16><9>>.
+    Found 1-bit register for signal <RAM<16><8>>.
+    Found 1-bit register for signal <RAM<16><7>>.
+    Found 1-bit register for signal <RAM<16><6>>.
+    Found 1-bit register for signal <RAM<16><5>>.
+    Found 1-bit register for signal <RAM<16><4>>.
+    Found 1-bit register for signal <RAM<16><3>>.
+    Found 1-bit register for signal <RAM<16><2>>.
+    Found 1-bit register for signal <RAM<16><1>>.
+    Found 1-bit register for signal <RAM<16><0>>.
+    Found 1-bit register for signal <RAM<15><31>>.
+    Found 1-bit register for signal <RAM<15><30>>.
+    Found 1-bit register for signal <RAM<15><29>>.
+    Found 1-bit register for signal <RAM<15><28>>.
+    Found 1-bit register for signal <RAM<15><27>>.
+    Found 1-bit register for signal <RAM<15><26>>.
+    Found 1-bit register for signal <RAM<15><25>>.
+    Found 1-bit register for signal <RAM<15><24>>.
+    Found 1-bit register for signal <RAM<15><23>>.
+    Found 1-bit register for signal <RAM<15><22>>.
+    Found 1-bit register for signal <RAM<15><21>>.
+    Found 1-bit register for signal <RAM<15><20>>.
+    Found 1-bit register for signal <RAM<15><19>>.
+    Found 1-bit register for signal <RAM<15><18>>.
+    Found 1-bit register for signal <RAM<15><17>>.
+    Found 1-bit register for signal <RAM<15><16>>.
+    Found 1-bit register for signal <RAM<15><15>>.
+    Found 1-bit register for signal <RAM<15><14>>.
+    Found 1-bit register for signal <RAM<15><13>>.
+    Found 1-bit register for signal <RAM<15><12>>.
+    Found 1-bit register for signal <RAM<15><11>>.
+    Found 1-bit register for signal <RAM<15><10>>.
+    Found 1-bit register for signal <RAM<15><9>>.
+    Found 1-bit register for signal <RAM<15><8>>.
+    Found 1-bit register for signal <RAM<15><7>>.
+    Found 1-bit register for signal <RAM<15><6>>.
+    Found 1-bit register for signal <RAM<15><5>>.
+    Found 1-bit register for signal <RAM<15><4>>.
+    Found 1-bit register for signal <RAM<15><3>>.
+    Found 1-bit register for signal <RAM<15><2>>.
+    Found 1-bit register for signal <RAM<15><1>>.
+    Found 1-bit register for signal <RAM<15><0>>.
+    Found 1-bit register for signal <RAM<14><31>>.
+    Found 1-bit register for signal <RAM<14><30>>.
+    Found 1-bit register for signal <RAM<14><29>>.
+    Found 1-bit register for signal <RAM<14><28>>.
+    Found 1-bit register for signal <RAM<14><27>>.
+    Found 1-bit register for signal <RAM<14><26>>.
+    Found 1-bit register for signal <RAM<14><25>>.
+    Found 1-bit register for signal <RAM<14><24>>.
+    Found 1-bit register for signal <RAM<14><23>>.
+    Found 1-bit register for signal <RAM<14><22>>.
+    Found 1-bit register for signal <RAM<14><21>>.
+    Found 1-bit register for signal <RAM<14><20>>.
+    Found 1-bit register for signal <RAM<14><19>>.
+    Found 1-bit register for signal <RAM<14><18>>.
+    Found 1-bit register for signal <RAM<14><17>>.
+    Found 1-bit register for signal <RAM<14><16>>.
+    Found 1-bit register for signal <RAM<14><15>>.
+    Found 1-bit register for signal <RAM<14><14>>.
+    Found 1-bit register for signal <RAM<14><13>>.
+    Found 1-bit register for signal <RAM<14><12>>.
+    Found 1-bit register for signal <RAM<14><11>>.
+    Found 1-bit register for signal <RAM<14><10>>.
+    Found 1-bit register for signal <RAM<14><9>>.
+    Found 1-bit register for signal <RAM<14><8>>.
+    Found 1-bit register for signal <RAM<14><7>>.
+    Found 1-bit register for signal <RAM<14><6>>.
+    Found 1-bit register for signal <RAM<14><5>>.
+    Found 1-bit register for signal <RAM<14><4>>.
+    Found 1-bit register for signal <RAM<14><3>>.
+    Found 1-bit register for signal <RAM<14><2>>.
+    Found 1-bit register for signal <RAM<14><1>>.
+    Found 1-bit register for signal <RAM<14><0>>.
+    Found 1-bit register for signal <RAM<13><31>>.
+    Found 1-bit register for signal <RAM<13><30>>.
+    Found 1-bit register for signal <RAM<13><29>>.
+    Found 1-bit register for signal <RAM<13><28>>.
+    Found 1-bit register for signal <RAM<13><27>>.
+    Found 1-bit register for signal <RAM<13><26>>.
+    Found 1-bit register for signal <RAM<13><25>>.
+    Found 1-bit register for signal <RAM<13><24>>.
+    Found 1-bit register for signal <RAM<13><23>>.
+    Found 1-bit register for signal <RAM<13><22>>.
+    Found 1-bit register for signal <RAM<13><21>>.
+    Found 1-bit register for signal <RAM<13><20>>.
+    Found 1-bit register for signal <RAM<13><19>>.
+    Found 1-bit register for signal <RAM<13><18>>.
+    Found 1-bit register for signal <RAM<13><17>>.
+    Found 1-bit register for signal <RAM<13><16>>.
+    Found 1-bit register for signal <RAM<13><15>>.
+    Found 1-bit register for signal <RAM<13><14>>.
+    Found 1-bit register for signal <RAM<13><13>>.
+    Found 1-bit register for signal <RAM<13><12>>.
+    Found 1-bit register for signal <RAM<13><11>>.
+    Found 1-bit register for signal <RAM<13><10>>.
+    Found 1-bit register for signal <RAM<13><9>>.
+    Found 1-bit register for signal <RAM<13><8>>.
+    Found 1-bit register for signal <RAM<13><7>>.
+    Found 1-bit register for signal <RAM<13><6>>.
+    Found 1-bit register for signal <RAM<13><5>>.
+    Found 1-bit register for signal <RAM<13><4>>.
+    Found 1-bit register for signal <RAM<13><3>>.
+    Found 1-bit register for signal <RAM<13><2>>.
+    Found 1-bit register for signal <RAM<13><1>>.
+    Found 1-bit register for signal <RAM<13><0>>.
+    Found 1-bit register for signal <RAM<12><31>>.
+    Found 1-bit register for signal <RAM<12><30>>.
+    Found 1-bit register for signal <RAM<12><29>>.
+    Found 1-bit register for signal <RAM<12><28>>.
+    Found 1-bit register for signal <RAM<12><27>>.
+    Found 1-bit register for signal <RAM<12><26>>.
+    Found 1-bit register for signal <RAM<12><25>>.
+    Found 1-bit register for signal <RAM<12><24>>.
+    Found 1-bit register for signal <RAM<12><23>>.
+    Found 1-bit register for signal <RAM<12><22>>.
+    Found 1-bit register for signal <RAM<12><21>>.
+    Found 1-bit register for signal <RAM<12><20>>.
+    Found 1-bit register for signal <RAM<12><19>>.
+    Found 1-bit register for signal <RAM<12><18>>.
+    Found 1-bit register for signal <RAM<12><17>>.
+    Found 1-bit register for signal <RAM<12><16>>.
+    Found 1-bit register for signal <RAM<12><15>>.
+    Found 1-bit register for signal <RAM<12><14>>.
+    Found 1-bit register for signal <RAM<12><13>>.
+    Found 1-bit register for signal <RAM<12><12>>.
+    Found 1-bit register for signal <RAM<12><11>>.
+    Found 1-bit register for signal <RAM<12><10>>.
+    Found 1-bit register for signal <RAM<12><9>>.
+    Found 1-bit register for signal <RAM<12><8>>.
+    Found 1-bit register for signal <RAM<12><7>>.
+    Found 1-bit register for signal <RAM<12><6>>.
+    Found 1-bit register for signal <RAM<12><5>>.
+    Found 1-bit register for signal <RAM<12><4>>.
+    Found 1-bit register for signal <RAM<12><3>>.
+    Found 1-bit register for signal <RAM<12><2>>.
+    Found 1-bit register for signal <RAM<12><1>>.
+    Found 1-bit register for signal <RAM<12><0>>.
+    Found 1-bit register for signal <RAM<11><31>>.
+    Found 1-bit register for signal <RAM<11><30>>.
+    Found 1-bit register for signal <RAM<11><29>>.
+    Found 1-bit register for signal <RAM<11><28>>.
+    Found 1-bit register for signal <RAM<11><27>>.
+    Found 1-bit register for signal <RAM<11><26>>.
+    Found 1-bit register for signal <RAM<11><25>>.
+    Found 1-bit register for signal <RAM<11><24>>.
+    Found 1-bit register for signal <RAM<11><23>>.
+    Found 1-bit register for signal <RAM<11><22>>.
+    Found 1-bit register for signal <RAM<11><21>>.
+    Found 1-bit register for signal <RAM<11><20>>.
+    Found 1-bit register for signal <RAM<11><19>>.
+    Found 1-bit register for signal <RAM<11><18>>.
+    Found 1-bit register for signal <RAM<11><17>>.
+    Found 1-bit register for signal <RAM<11><16>>.
+    Found 1-bit register for signal <RAM<11><15>>.
+    Found 1-bit register for signal <RAM<11><14>>.
+    Found 1-bit register for signal <RAM<11><13>>.
+    Found 1-bit register for signal <RAM<11><12>>.
+    Found 1-bit register for signal <RAM<11><11>>.
+    Found 1-bit register for signal <RAM<11><10>>.
+    Found 1-bit register for signal <RAM<11><9>>.
+    Found 1-bit register for signal <RAM<11><8>>.
+    Found 1-bit register for signal <RAM<11><7>>.
+    Found 1-bit register for signal <RAM<11><6>>.
+    Found 1-bit register for signal <RAM<11><5>>.
+    Found 1-bit register for signal <RAM<11><4>>.
+    Found 1-bit register for signal <RAM<11><3>>.
+    Found 1-bit register for signal <RAM<11><2>>.
+    Found 1-bit register for signal <RAM<11><1>>.
+    Found 1-bit register for signal <RAM<11><0>>.
+    Found 1-bit register for signal <RAM<10><31>>.
+    Found 1-bit register for signal <RAM<10><30>>.
+    Found 1-bit register for signal <RAM<10><29>>.
+    Found 1-bit register for signal <RAM<10><28>>.
+    Found 1-bit register for signal <RAM<10><27>>.
+    Found 1-bit register for signal <RAM<10><26>>.
+    Found 1-bit register for signal <RAM<10><25>>.
+    Found 1-bit register for signal <RAM<10><24>>.
+    Found 1-bit register for signal <RAM<10><23>>.
+    Found 1-bit register for signal <RAM<10><22>>.
+    Found 1-bit register for signal <RAM<10><21>>.
+    Found 1-bit register for signal <RAM<10><20>>.
+    Found 1-bit register for signal <RAM<10><19>>.
+    Found 1-bit register for signal <RAM<10><18>>.
+    Found 1-bit register for signal <RAM<10><17>>.
+    Found 1-bit register for signal <RAM<10><16>>.
+    Found 1-bit register for signal <RAM<10><15>>.
+    Found 1-bit register for signal <RAM<10><14>>.
+    Found 1-bit register for signal <RAM<10><13>>.
+    Found 1-bit register for signal <RAM<10><12>>.
+    Found 1-bit register for signal <RAM<10><11>>.
+    Found 1-bit register for signal <RAM<10><10>>.
+    Found 1-bit register for signal <RAM<10><9>>.
+    Found 1-bit register for signal <RAM<10><8>>.
+    Found 1-bit register for signal <RAM<10><7>>.
+    Found 1-bit register for signal <RAM<10><6>>.
+    Found 1-bit register for signal <RAM<10><5>>.
+    Found 1-bit register for signal <RAM<10><4>>.
+    Found 1-bit register for signal <RAM<10><3>>.
+    Found 1-bit register for signal <RAM<10><2>>.
+    Found 1-bit register for signal <RAM<10><1>>.
+    Found 1-bit register for signal <RAM<10><0>>.
+    Found 1-bit register for signal <RAM<9><31>>.
+    Found 1-bit register for signal <RAM<9><30>>.
+    Found 1-bit register for signal <RAM<9><29>>.
+    Found 1-bit register for signal <RAM<9><28>>.
+    Found 1-bit register for signal <RAM<9><27>>.
+    Found 1-bit register for signal <RAM<9><26>>.
+    Found 1-bit register for signal <RAM<9><25>>.
+    Found 1-bit register for signal <RAM<9><24>>.
+    Found 1-bit register for signal <RAM<9><23>>.
+    Found 1-bit register for signal <RAM<9><22>>.
+    Found 1-bit register for signal <RAM<9><21>>.
+    Found 1-bit register for signal <RAM<9><20>>.
+    Found 1-bit register for signal <RAM<9><19>>.
+    Found 1-bit register for signal <RAM<9><18>>.
+    Found 1-bit register for signal <RAM<9><17>>.
+    Found 1-bit register for signal <RAM<9><16>>.
+    Found 1-bit register for signal <RAM<9><15>>.
+    Found 1-bit register for signal <RAM<9><14>>.
+    Found 1-bit register for signal <RAM<9><13>>.
+    Found 1-bit register for signal <RAM<9><12>>.
+    Found 1-bit register for signal <RAM<9><11>>.
+    Found 1-bit register for signal <RAM<9><10>>.
+    Found 1-bit register for signal <RAM<9><9>>.
+    Found 1-bit register for signal <RAM<9><8>>.
+    Found 1-bit register for signal <RAM<9><7>>.
+    Found 1-bit register for signal <RAM<9><6>>.
+    Found 1-bit register for signal <RAM<9><5>>.
+    Found 1-bit register for signal <RAM<9><4>>.
+    Found 1-bit register for signal <RAM<9><3>>.
+    Found 1-bit register for signal <RAM<9><2>>.
+    Found 1-bit register for signal <RAM<9><1>>.
+    Found 1-bit register for signal <RAM<9><0>>.
+    Found 1-bit register for signal <RAM<8><31>>.
+    Found 1-bit register for signal <RAM<8><30>>.
+    Found 1-bit register for signal <RAM<8><29>>.
+    Found 1-bit register for signal <RAM<8><28>>.
+    Found 1-bit register for signal <RAM<8><27>>.
+    Found 1-bit register for signal <RAM<8><26>>.
+    Found 1-bit register for signal <RAM<8><25>>.
+    Found 1-bit register for signal <RAM<8><24>>.
+    Found 1-bit register for signal <RAM<8><23>>.
+    Found 1-bit register for signal <RAM<8><22>>.
+    Found 1-bit register for signal <RAM<8><21>>.
+    Found 1-bit register for signal <RAM<8><20>>.
+    Found 1-bit register for signal <RAM<8><19>>.
+    Found 1-bit register for signal <RAM<8><18>>.
+    Found 1-bit register for signal <RAM<8><17>>.
+    Found 1-bit register for signal <RAM<8><16>>.
+    Found 1-bit register for signal <RAM<8><15>>.
+    Found 1-bit register for signal <RAM<8><14>>.
+    Found 1-bit register for signal <RAM<8><13>>.
+    Found 1-bit register for signal <RAM<8><12>>.
+    Found 1-bit register for signal <RAM<8><11>>.
+    Found 1-bit register for signal <RAM<8><10>>.
+    Found 1-bit register for signal <RAM<8><9>>.
+    Found 1-bit register for signal <RAM<8><8>>.
+    Found 1-bit register for signal <RAM<8><7>>.
+    Found 1-bit register for signal <RAM<8><6>>.
+    Found 1-bit register for signal <RAM<8><5>>.
+    Found 1-bit register for signal <RAM<8><4>>.
+    Found 1-bit register for signal <RAM<8><3>>.
+    Found 1-bit register for signal <RAM<8><2>>.
+    Found 1-bit register for signal <RAM<8><1>>.
+    Found 1-bit register for signal <RAM<8><0>>.
+    Found 1-bit register for signal <RAM<7><31>>.
+    Found 1-bit register for signal <RAM<7><30>>.
+    Found 1-bit register for signal <RAM<7><29>>.
+    Found 1-bit register for signal <RAM<7><28>>.
+    Found 1-bit register for signal <RAM<7><27>>.
+    Found 1-bit register for signal <RAM<7><26>>.
+    Found 1-bit register for signal <RAM<7><25>>.
+    Found 1-bit register for signal <RAM<7><24>>.
+    Found 1-bit register for signal <RAM<7><23>>.
+    Found 1-bit register for signal <RAM<7><22>>.
+    Found 1-bit register for signal <RAM<7><21>>.
+    Found 1-bit register for signal <RAM<7><20>>.
+    Found 1-bit register for signal <RAM<7><19>>.
+    Found 1-bit register for signal <RAM<7><18>>.
+    Found 1-bit register for signal <RAM<7><17>>.
+    Found 1-bit register for signal <RAM<7><16>>.
+    Found 1-bit register for signal <RAM<7><15>>.
+    Found 1-bit register for signal <RAM<7><14>>.
+    Found 1-bit register for signal <RAM<7><13>>.
+    Found 1-bit register for signal <RAM<7><12>>.
+    Found 1-bit register for signal <RAM<7><11>>.
+    Found 1-bit register for signal <RAM<7><10>>.
+    Found 1-bit register for signal <RAM<7><9>>.
+    Found 1-bit register for signal <RAM<7><8>>.
+    Found 1-bit register for signal <RAM<7><7>>.
+    Found 1-bit register for signal <RAM<7><6>>.
+    Found 1-bit register for signal <RAM<7><5>>.
+    Found 1-bit register for signal <RAM<7><4>>.
+    Found 1-bit register for signal <RAM<7><3>>.
+    Found 1-bit register for signal <RAM<7><2>>.
+    Found 1-bit register for signal <RAM<7><1>>.
+    Found 1-bit register for signal <RAM<7><0>>.
+    Found 1-bit register for signal <RAM<6><31>>.
+    Found 1-bit register for signal <RAM<6><30>>.
+    Found 1-bit register for signal <RAM<6><29>>.
+    Found 1-bit register for signal <RAM<6><28>>.
+    Found 1-bit register for signal <RAM<6><27>>.
+    Found 1-bit register for signal <RAM<6><26>>.
+    Found 1-bit register for signal <RAM<6><25>>.
+    Found 1-bit register for signal <RAM<6><24>>.
+    Found 1-bit register for signal <RAM<6><23>>.
+    Found 1-bit register for signal <RAM<6><22>>.
+    Found 1-bit register for signal <RAM<6><21>>.
+    Found 1-bit register for signal <RAM<6><20>>.
+    Found 1-bit register for signal <RAM<6><19>>.
+    Found 1-bit register for signal <RAM<6><18>>.
+    Found 1-bit register for signal <RAM<6><17>>.
+    Found 1-bit register for signal <RAM<6><16>>.
+    Found 1-bit register for signal <RAM<6><15>>.
+    Found 1-bit register for signal <RAM<6><14>>.
+    Found 1-bit register for signal <RAM<6><13>>.
+    Found 1-bit register for signal <RAM<6><12>>.
+    Found 1-bit register for signal <RAM<6><11>>.
+    Found 1-bit register for signal <RAM<6><10>>.
+    Found 1-bit register for signal <RAM<6><9>>.
+    Found 1-bit register for signal <RAM<6><8>>.
+    Found 1-bit register for signal <RAM<6><7>>.
+    Found 1-bit register for signal <RAM<6><6>>.
+    Found 1-bit register for signal <RAM<6><5>>.
+    Found 1-bit register for signal <RAM<6><4>>.
+    Found 1-bit register for signal <RAM<6><3>>.
+    Found 1-bit register for signal <RAM<6><2>>.
+    Found 1-bit register for signal <RAM<6><1>>.
+    Found 1-bit register for signal <RAM<6><0>>.
+    Found 1-bit register for signal <RAM<5><31>>.
+    Found 1-bit register for signal <RAM<5><30>>.
+    Found 1-bit register for signal <RAM<5><29>>.
+    Found 1-bit register for signal <RAM<5><28>>.
+    Found 1-bit register for signal <RAM<5><27>>.
+    Found 1-bit register for signal <RAM<5><26>>.
+    Found 1-bit register for signal <RAM<5><25>>.
+    Found 1-bit register for signal <RAM<5><24>>.
+    Found 1-bit register for signal <RAM<5><23>>.
+    Found 1-bit register for signal <RAM<5><22>>.
+    Found 1-bit register for signal <RAM<5><21>>.
+    Found 1-bit register for signal <RAM<5><20>>.
+    Found 1-bit register for signal <RAM<5><19>>.
+    Found 1-bit register for signal <RAM<5><18>>.
+    Found 1-bit register for signal <RAM<5><17>>.
+    Found 1-bit register for signal <RAM<5><16>>.
+    Found 1-bit register for signal <RAM<5><15>>.
+    Found 1-bit register for signal <RAM<5><14>>.
+    Found 1-bit register for signal <RAM<5><13>>.
+    Found 1-bit register for signal <RAM<5><12>>.
+    Found 1-bit register for signal <RAM<5><11>>.
+    Found 1-bit register for signal <RAM<5><10>>.
+    Found 1-bit register for signal <RAM<5><9>>.
+    Found 1-bit register for signal <RAM<5><8>>.
+    Found 1-bit register for signal <RAM<5><7>>.
+    Found 1-bit register for signal <RAM<5><6>>.
+    Found 1-bit register for signal <RAM<5><5>>.
+    Found 1-bit register for signal <RAM<5><4>>.
+    Found 1-bit register for signal <RAM<5><3>>.
+    Found 1-bit register for signal <RAM<5><2>>.
+    Found 1-bit register for signal <RAM<5><1>>.
+    Found 1-bit register for signal <RAM<5><0>>.
+    Found 1-bit register for signal <RAM<4><31>>.
+    Found 1-bit register for signal <RAM<4><30>>.
+    Found 1-bit register for signal <RAM<4><29>>.
+    Found 1-bit register for signal <RAM<4><28>>.
+    Found 1-bit register for signal <RAM<4><27>>.
+    Found 1-bit register for signal <RAM<4><26>>.
+    Found 1-bit register for signal <RAM<4><25>>.
+    Found 1-bit register for signal <RAM<4><24>>.
+    Found 1-bit register for signal <RAM<4><23>>.
+    Found 1-bit register for signal <RAM<4><22>>.
+    Found 1-bit register for signal <RAM<4><21>>.
+    Found 1-bit register for signal <RAM<4><20>>.
+    Found 1-bit register for signal <RAM<4><19>>.
+    Found 1-bit register for signal <RAM<4><18>>.
+    Found 1-bit register for signal <RAM<4><17>>.
+    Found 1-bit register for signal <RAM<4><16>>.
+    Found 1-bit register for signal <RAM<4><15>>.
+    Found 1-bit register for signal <RAM<4><14>>.
+    Found 1-bit register for signal <RAM<4><13>>.
+    Found 1-bit register for signal <RAM<4><12>>.
+    Found 1-bit register for signal <RAM<4><11>>.
+    Found 1-bit register for signal <RAM<4><10>>.
+    Found 1-bit register for signal <RAM<4><9>>.
+    Found 1-bit register for signal <RAM<4><8>>.
+    Found 1-bit register for signal <RAM<4><7>>.
+    Found 1-bit register for signal <RAM<4><6>>.
+    Found 1-bit register for signal <RAM<4><5>>.
+    Found 1-bit register for signal <RAM<4><4>>.
+    Found 1-bit register for signal <RAM<4><3>>.
+    Found 1-bit register for signal <RAM<4><2>>.
+    Found 1-bit register for signal <RAM<4><1>>.
+    Found 1-bit register for signal <RAM<4><0>>.
+    Found 1-bit register for signal <RAM<3><31>>.
+    Found 1-bit register for signal <RAM<3><30>>.
+    Found 1-bit register for signal <RAM<3><29>>.
+    Found 1-bit register for signal <RAM<3><28>>.
+    Found 1-bit register for signal <RAM<3><27>>.
+    Found 1-bit register for signal <RAM<3><26>>.
+    Found 1-bit register for signal <RAM<3><25>>.
+    Found 1-bit register for signal <RAM<3><24>>.
+    Found 1-bit register for signal <RAM<3><23>>.
+    Found 1-bit register for signal <RAM<3><22>>.
+    Found 1-bit register for signal <RAM<3><21>>.
+    Found 1-bit register for signal <RAM<3><20>>.
+    Found 1-bit register for signal <RAM<3><19>>.
+    Found 1-bit register for signal <RAM<3><18>>.
+    Found 1-bit register for signal <RAM<3><17>>.
+    Found 1-bit register for signal <RAM<3><16>>.
+    Found 1-bit register for signal <RAM<3><15>>.
+    Found 1-bit register for signal <RAM<3><14>>.
+    Found 1-bit register for signal <RAM<3><13>>.
+    Found 1-bit register for signal <RAM<3><12>>.
+    Found 1-bit register for signal <RAM<3><11>>.
+    Found 1-bit register for signal <RAM<3><10>>.
+    Found 1-bit register for signal <RAM<3><9>>.
+    Found 1-bit register for signal <RAM<3><8>>.
+    Found 1-bit register for signal <RAM<3><7>>.
+    Found 1-bit register for signal <RAM<3><6>>.
+    Found 1-bit register for signal <RAM<3><5>>.
+    Found 1-bit register for signal <RAM<3><4>>.
+    Found 1-bit register for signal <RAM<3><3>>.
+    Found 1-bit register for signal <RAM<3><2>>.
+    Found 1-bit register for signal <RAM<3><1>>.
+    Found 1-bit register for signal <RAM<3><0>>.
+    Found 1-bit register for signal <RAM<2><31>>.
+    Found 1-bit register for signal <RAM<2><30>>.
+    Found 1-bit register for signal <RAM<2><29>>.
+    Found 1-bit register for signal <RAM<2><28>>.
+    Found 1-bit register for signal <RAM<2><27>>.
+    Found 1-bit register for signal <RAM<2><26>>.
+    Found 1-bit register for signal <RAM<2><25>>.
+    Found 1-bit register for signal <RAM<2><24>>.
+    Found 1-bit register for signal <RAM<2><23>>.
+    Found 1-bit register for signal <RAM<2><22>>.
+    Found 1-bit register for signal <RAM<2><21>>.
+    Found 1-bit register for signal <RAM<2><20>>.
+    Found 1-bit register for signal <RAM<2><19>>.
+    Found 1-bit register for signal <RAM<2><18>>.
+    Found 1-bit register for signal <RAM<2><17>>.
+    Found 1-bit register for signal <RAM<2><16>>.
+    Found 1-bit register for signal <RAM<2><15>>.
+    Found 1-bit register for signal <RAM<2><14>>.
+    Found 1-bit register for signal <RAM<2><13>>.
+    Found 1-bit register for signal <RAM<2><12>>.
+    Found 1-bit register for signal <RAM<2><11>>.
+    Found 1-bit register for signal <RAM<2><10>>.
+    Found 1-bit register for signal <RAM<2><9>>.
+    Found 1-bit register for signal <RAM<2><8>>.
+    Found 1-bit register for signal <RAM<2><7>>.
+    Found 1-bit register for signal <RAM<2><6>>.
+    Found 1-bit register for signal <RAM<2><5>>.
+    Found 1-bit register for signal <RAM<2><4>>.
+    Found 1-bit register for signal <RAM<2><3>>.
+    Found 1-bit register for signal <RAM<2><2>>.
+    Found 1-bit register for signal <RAM<2><1>>.
+    Found 1-bit register for signal <RAM<2><0>>.
+    Found 1-bit register for signal <RAM<1><31>>.
+    Found 1-bit register for signal <RAM<1><30>>.
+    Found 1-bit register for signal <RAM<1><29>>.
+    Found 1-bit register for signal <RAM<1><28>>.
+    Found 1-bit register for signal <RAM<1><27>>.
+    Found 1-bit register for signal <RAM<1><26>>.
+    Found 1-bit register for signal <RAM<1><25>>.
+    Found 1-bit register for signal <RAM<1><24>>.
+    Found 1-bit register for signal <RAM<1><23>>.
+    Found 1-bit register for signal <RAM<1><22>>.
+    Found 1-bit register for signal <RAM<1><21>>.
+    Found 1-bit register for signal <RAM<1><20>>.
+    Found 1-bit register for signal <RAM<1><19>>.
+    Found 1-bit register for signal <RAM<1><18>>.
+    Found 1-bit register for signal <RAM<1><17>>.
+    Found 1-bit register for signal <RAM<1><16>>.
+    Found 1-bit register for signal <RAM<1><15>>.
+    Found 1-bit register for signal <RAM<1><14>>.
+    Found 1-bit register for signal <RAM<1><13>>.
+    Found 1-bit register for signal <RAM<1><12>>.
+    Found 1-bit register for signal <RAM<1><11>>.
+    Found 1-bit register for signal <RAM<1><10>>.
+    Found 1-bit register for signal <RAM<1><9>>.
+    Found 1-bit register for signal <RAM<1><8>>.
+    Found 1-bit register for signal <RAM<1><7>>.
+    Found 1-bit register for signal <RAM<1><6>>.
+    Found 1-bit register for signal <RAM<1><5>>.
+    Found 1-bit register for signal <RAM<1><4>>.
+    Found 1-bit register for signal <RAM<1><3>>.
+    Found 1-bit register for signal <RAM<1><2>>.
+    Found 1-bit register for signal <RAM<1><1>>.
+    Found 1-bit register for signal <RAM<1><0>>.
+    Found 1-bit register for signal <RAM<0><31>>.
+    Found 1-bit register for signal <RAM<0><30>>.
+    Found 1-bit register for signal <RAM<0><29>>.
+    Found 1-bit register for signal <RAM<0><28>>.
+    Found 1-bit register for signal <RAM<0><27>>.
+    Found 1-bit register for signal <RAM<0><26>>.
+    Found 1-bit register for signal <RAM<0><25>>.
+    Found 1-bit register for signal <RAM<0><24>>.
+    Found 1-bit register for signal <RAM<0><23>>.
+    Found 1-bit register for signal <RAM<0><22>>.
+    Found 1-bit register for signal <RAM<0><21>>.
+    Found 1-bit register for signal <RAM<0><20>>.
+    Found 1-bit register for signal <RAM<0><19>>.
+    Found 1-bit register for signal <RAM<0><18>>.
+    Found 1-bit register for signal <RAM<0><17>>.
+    Found 1-bit register for signal <RAM<0><16>>.
+    Found 1-bit register for signal <RAM<0><15>>.
+    Found 1-bit register for signal <RAM<0><14>>.
+    Found 1-bit register for signal <RAM<0><13>>.
+    Found 1-bit register for signal <RAM<0><12>>.
+    Found 1-bit register for signal <RAM<0><11>>.
+    Found 1-bit register for signal <RAM<0><10>>.
+    Found 1-bit register for signal <RAM<0><9>>.
+    Found 1-bit register for signal <RAM<0><8>>.
+    Found 1-bit register for signal <RAM<0><7>>.
+    Found 1-bit register for signal <RAM<0><6>>.
+    Found 1-bit register for signal <RAM<0><5>>.
+    Found 1-bit register for signal <RAM<0><4>>.
+    Found 1-bit register for signal <RAM<0><3>>.
+    Found 1-bit register for signal <RAM<0><2>>.
+    Found 1-bit register for signal <RAM<0><1>>.
+    Found 1-bit register for signal <RAM<0><0>>.
+    Found 1-bit register for signal <RAM<31><31>>.
+    Found 32-bit 32-to-1 multiplexer for signal <Rs[4]_RAM[31][31]_wide_mux_36_OUT> created at line 66.
+    Found 32-bit 32-to-1 multiplexer for signal <Rt[4]_RAM[31][31]_wide_mux_39_OUT> created at line 67.
     Summary:
-	inferred   2 RAM(s).
-	inferred   2 Multiplexer(s).
+	inferred 1024 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
 Unit <RegFile> synthesized.
 
 Synthesizing Unit <Mux_1>.
@@ -485,7 +1510,7 @@ Synthesizing Unit <vgaControl>.
     Found 12-bit comparator greater for signal <hCount[11]_GND_56_o_LessThan_2_o> created at line 54
     Found 12-bit comparator lessequal for signal <n0002> created at line 61
     Found 12-bit comparator greater for signal <hCount[11]_GND_56_o_LessThan_4_o> created at line 61
-    Found 12-bit comparator greater for signal <GND_56_o_INV_131_o> created at line 69
+    Found 12-bit comparator greater for signal <GND_56_o_INV_136_o> created at line 69
     Found 12-bit comparator lessequal for signal <n0010> created at line 77
     Found 12-bit comparator greater for signal <vCount[11]_GND_56_o_LessThan_9_o> created at line 77
     Found 12-bit comparator greater for signal <vCount[11]_GND_56_o_LessThan_25_o> created at line 86
@@ -530,9 +1555,8 @@ Unit <CharacterROM> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 6
+# RAMs                                                 : 4
  1024x32-bit single-port RAM                           : 1
- 32x32-bit dual-port RAM                               : 2
  4096x32-bit single-port Read Only RAM                 : 1
  4096x8-bit single-port Read Only RAM                  : 1
  4800x7-bit dual-port RAM                              : 1
@@ -550,13 +1574,13 @@ Macro Statistics
  32-bit subtractor                                     : 1
  33-bit adder                                          : 1
  9-bit adder                                           : 1
-# Registers                                            : 27
+# Registers                                            : 59
  1-bit register                                        : 19
  10-bit register                                       : 1
  12-bit register                                       : 2
  2-bit register                                        : 1
  22-bit register                                       : 1
- 32-bit register                                       : 1
+ 32-bit register                                       : 33
  8-bit register                                        : 1
  9-bit register                                        : 1
 # Comparators                                          : 27
@@ -565,13 +1589,14 @@ Macro Statistics
  22-bit comparator greater                             : 16
  32-bit comparator greater                             : 2
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 97
+# Multiplexers                                         : 99
  1-bit 15-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 47
  10-bit 2-to-1 multiplexer                             : 1
  12-bit 2-to-1 multiplexer                             : 5
  3-bit 2-to-1 multiplexer                              : 8
  32-bit 2-to-1 multiplexer                             : 19
+ 32-bit 32-to-1 multiplexer                            : 2
  32-bit 4-to-1 multiplexer                             : 1
  32-bit 8-to-1 multiplexer                             : 1
  5-bit 2-to-1 multiplexer                              : 8
@@ -661,41 +1686,6 @@ Synthesizing (advanced) Unit <NES_CONTROLLER>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
 Unit <NES_CONTROLLER> synthesized (advanced).
 
-Synthesizing (advanced) Unit <RegFile>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 32-word x 32-bit                    |          |
-    |     clkA           | connected to signal <clk>           | fall     |
-    |     weA            | connected to signal <regWriteEn>    | high     |
-    |     addrA          | connected to signal <Rdest>         |          |
-    |     diA            | connected to signal <writeData>     |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 32-word x 32-bit                    |          |
-    |     addrB          | connected to signal <Rs>            |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
-    -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 32-word x 32-bit                    |          |
-    |     clkA           | connected to signal <clk>           | fall     |
-    |     weA            | connected to signal <regWriteEn>    | high     |
-    |     addrA          | connected to signal <Rdest>         |          |
-    |     diA            | connected to signal <writeData>     |          |
-    -----------------------------------------------------------------------
-    | Port B                                                              |
-    |     aspect ratio   | 32-word x 32-bit                    |          |
-    |     addrB          | connected to signal <Rt>            |          |
-    |     doB            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-Unit <RegFile> synthesized (advanced).
-
 Synthesizing (advanced) Unit <vgaControl>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
 The following registers are absorbed into counter <hPixel>: 1 register on signal <hPixel>.
@@ -705,9 +1695,8 @@ Unit <vgaControl> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 6
+# RAMs                                                 : 4
  1024x32-bit single-port distributed RAM               : 1
- 32x32-bit dual-port distributed RAM                   : 2
  4096x32-bit single-port distributed Read Only RAM     : 1
  4096x8-bit single-port distributed Read Only RAM      : 1
  4800x7-bit dual-port distributed RAM                  : 1
@@ -726,17 +1715,18 @@ Macro Statistics
  10-bit up counter                                     : 1
  2-bit up counter                                      : 1
  22-bit up counter                                     : 1
-# Registers                                            : 92
- Flip-Flops                                            : 92
+# Registers                                            : 1116
+ Flip-Flops                                            : 1116
 # Comparators                                          : 27
  12-bit comparator greater                             : 6
  12-bit comparator lessequal                           : 2
  22-bit comparator greater                             : 16
  32-bit comparator greater                             : 2
  32-bit comparator lessequal                           : 1
-# Multiplexers                                         : 96
+# Multiplexers                                         : 160
  1-bit 15-to-1 multiplexer                             : 1
  1-bit 2-to-1 multiplexer                              : 47
+ 1-bit 32-to-1 multiplexer                             : 64
  12-bit 2-to-1 multiplexer                             : 5
  3-bit 2-to-1 multiplexer                              : 8
  32-bit 2-to-1 multiplexer                             : 19
@@ -765,6 +1755,8 @@ Optimizing unit <System> ...
 
 Optimizing unit <ExecutionStage> ...
 
+Optimizing unit <RegFile> ...
+
 Optimizing unit <ALU> ...
 
 Optimizing unit <Shifter> ...
@@ -780,19 +1772,490 @@ Optimizing unit <IOMemory> ...
 Optimizing unit <NES_CONTROLLER> ...
 
 Optimizing unit <vgaControl> ...
-WARNING:Xst:2677 - Node <titan/PSR/PSR_0> of sequential type is unconnected in block <System>.
-WARNING:Xst:2677 - Node <titan/PSR/PSR_2> of sequential type is unconnected in block <System>.
-WARNING:Xst:2677 - Node <titan/PSR/PSR_3> of sequential type is unconnected in block <System>.
-WARNING:Xst:1710 - FF/Latch <dispVGA/vgaCtrl/hCount_11> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/hCount_10> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/vCount_11> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/vCount_10> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <ioMem/nes/count_0> in Unit <System> is equivalent to the following FF/Latch, which will be removed : <dispVGA/vgaCtrl/count_0> 
-INFO:Xst:2261 - The FF/Latch <ioMem/nes/count_1> in Unit <System> is equivalent to the following FF/Latch, which will be removed : <dispVGA/vgaCtrl/count_1> 
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_225> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_235> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_245> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_255> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_265> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_275> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_285> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_295> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_305> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_315> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_06> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_120> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_220> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_37> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_46> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_56> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_66> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_76> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_86> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_96> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_106> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1110> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_126> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_136> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_146> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_156> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_166> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_176> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_186> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_196> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_244> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_254> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_264> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_274> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_284> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_294> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_304> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_314> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_05> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_118> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_218> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_36> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_45> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_55> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_65> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_75> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_85> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_95> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_105> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_119> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_125> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_135> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_145> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_155> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_165> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_175> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_185> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_195> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_205> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_219> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_187> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_197> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_207> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2111> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_228> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_237> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_247> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_257> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_267> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_277> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_287> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_297> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_307> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_317> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_08> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_129> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_229> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_39> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_48> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_58> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_68> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_78> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_88> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_98> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_108> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1112> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1210> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_138> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_148> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_158> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_206> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2110> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_226> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_236> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_246> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_256> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_266> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_276> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_286> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_296> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_306> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_316> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_07> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_127> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_227> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_38> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_47> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_57> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_67> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_77> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_87> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_97> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_107> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1111> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_128> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_137> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_147> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_157> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_167> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_177> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_30> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_31> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_02> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_112> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_212> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_33> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_42> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_52> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_62> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_72> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_82> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_92> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_102> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_113> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_122> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_132> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_142> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_152> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_162> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_172> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_182> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_192> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_202> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_213> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_222> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_232> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_242> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_252> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_262> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_272> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_0> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_4> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_5> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_6> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_7> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_8> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_9> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_10> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_11> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_12> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_13> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_14> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_15> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_16> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_17> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_18> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_19> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_20> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_21> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_22> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_23> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_24> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_25> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_26> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_27> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_28> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_29> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_263> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_273> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_283> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_293> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_303> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_313> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_04> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_116> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_216> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_35> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_44> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_54> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_64> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_74> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_84> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_94> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_104> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_117> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_124> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_134> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_144> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_154> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_164> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_174> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_184> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_194> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_204> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_217> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_224> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_234> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_282> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_292> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_302> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_312> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_03> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_114> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_214> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_34> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_43> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_53> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_63> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_73> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_83> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_93> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_103> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_115> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_123> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_133> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_143> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_153> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_163> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_173> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_183> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_193> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_203> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_215> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_223> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_233> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_243> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_253> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_613> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_713> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_813> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_913> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1013> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1117> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1215> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1313> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1413> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1513> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1613> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1713> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1813> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1913> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2013> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2117> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2215> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2313> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2413> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2513> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2613> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2713> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2813> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2913> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3013> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3113> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_014> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_180> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_280> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_324> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_812> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_912> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1012> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1116> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1214> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1312> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1412> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1512> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1612> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1712> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1812> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1912> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2012> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2116> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2214> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2312> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2412> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2512> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2612> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2712> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2812> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2912> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3012> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3112> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_013> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_170> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_270> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_323> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_413> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_513> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_290> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_325> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_415> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_515> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_615> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_715> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_815> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_915> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1015> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1119> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1217> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1315> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1415> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1515> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1615> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1715> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1815> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1915> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2015> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2119> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2217> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2315> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2415> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2515> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2615> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2715> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2815> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2915> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3015> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3115> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_414> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_514> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_614> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_714> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_814> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_914> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1014> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1118> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1216> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1314> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1414> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1514> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1614> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1714> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1814> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1914> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2014> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2118> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2216> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2314> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2414> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2514> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2614> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2714> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2814> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2914> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3014> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3114> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_015> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_190> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_149> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_159> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_169> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_179> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_189> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_199> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_209> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2113> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2211> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_239> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_249> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_259> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_269> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_279> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_289> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_299> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_309> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_319> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_010> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_140> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_240> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_320> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_410> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_510> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_610> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_710> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_810> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_910> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1010> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1114> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_168> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_178> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_188> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_198> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_208> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2112> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2210> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_238> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_248> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_258> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_268> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_278> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_288> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_298> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_308> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_318> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_09> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_130> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_230> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_310> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_49> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_59> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_69> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_79> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_89> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_99> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_109> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1113> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1211> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_139> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1011> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1115> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1213> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1311> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1411> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1511> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1611> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1711> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1811> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1911> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2011> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2115> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2213> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2311> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2411> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2511> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2611> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2711> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2811> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2911> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3011> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3111> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_012> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_160> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_260> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_322> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_412> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_512> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_612> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_712> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1212> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1310> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1410> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1510> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1610> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1710> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1810> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_1910> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2010> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2114> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2212> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2310> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2410> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2510> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2610> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2710> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2810> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_2910> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3010> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_3110> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_011> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_150> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_250> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_321> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_411> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_511> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_611> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_711> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_811> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <titan/ExStage/regfile/RAM_911> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block System, actual ratio is 18.
+Found area constraint ratio of 100 (+ 5) on block System, actual ratio is 27.
 
 Final Macro Processing ...
 
@@ -800,8 +2263,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 117
- Flip-Flops                                            : 117
+# Registers                                            : 670
+ Flip-Flops                                            : 670
 
 =========================================================================
 
@@ -824,30 +2287,28 @@ Top Level Output File Name         : System.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1992
+# BELS                             : 2803
 #      GND                         : 1
-#      INV                         : 35
-#      LUT1                        : 69
-#      LUT2                        : 104
-#      LUT3                        : 100
-#      LUT4                        : 192
-#      LUT5                        : 175
-#      LUT6                        : 821
-#      MUXCY                       : 204
-#      MUXF7                       : 78
+#      INV                         : 37
+#      LUT1                        : 73
+#      LUT2                        : 94
+#      LUT3                        : 108
+#      LUT4                        : 219
+#      LUT5                        : 324
+#      LUT6                        : 1336
+#      MUXCY                       : 238
+#      MUXF7                       : 156
 #      VCC                         : 1
-#      XORCY                       : 212
-# FlipFlops/Latches                : 117
-#      FDC                         : 13
-#      FDCE                        : 61
-#      FDE_1                       : 8
-#      FDR                         : 25
-#      FDRE                        : 10
-# RAMS                             : 408
+#      XORCY                       : 216
+# FlipFlops/Latches                : 670
+#      FDC                         : 15
+#      FDCE                        : 63
+#      FDE_1                       : 552
+#      FDR                         : 27
+#      FDRE                        : 13
+# RAMS                             : 394
 #      RAM128X1D                   : 259
 #      RAM256X1S                   : 128
-#      RAM32M                      : 10
-#      RAM32X1D                    : 4
 #      RAM64X1D                    : 7
 # Clock Buffers                    : 2
 #      BUFG                        : 1
@@ -865,18 +2326,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             117  out of  18224     0%  
- Number of Slice LUTs:                 3106  out of   9112    34%  
-    Number used as Logic:              1496  out of   9112    16%  
-    Number used as Memory:             1610  out of   2176    73%  
-       Number used as RAM:             1610
+ Number of Slice Registers:             670  out of  18224     3%  
+ Number of Slice LUTs:                 3753  out of   9112    41%  
+    Number used as Logic:              2191  out of   9112    24%  
+    Number used as Memory:             1562  out of   2176    71%  
+       Number used as RAM:             1562
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3122
-   Number with an unused Flip Flop:    3005  out of   3122    96%  
-   Number with an unused LUT:            16  out of   3122     0%  
-   Number of fully used LUT-FF pairs:   101  out of   3122     3%  
-   Number of unique control sets:        20
+ Number of LUT Flip Flop pairs used:   4229
+   Number with an unused Flip Flop:    3559  out of   4229    84%  
+   Number with an unused LUT:           476  out of   4229    11%  
+   Number of fully used LUT-FF pairs:   194  out of   4229     4%  
+   Number of unique control sets:        38
 
 IO Utilization: 
  Number of IOs:                          23
@@ -907,9 +2368,9 @@ Clock Information:
 ------------------------------------+-------------------------------------+-------+
 Clock Signal                        | Clock buffer(FF name)               | Load  |
 ------------------------------------+-------------------------------------+-------+
-clk                                 | BUFGP                               | 475   |
+clk                                 | BUFGP                               | 1010  |
 pulse_OBUF(ioMem/nes/Mmux_pulse15:O)| NONE(*)(ioMem/nes/controller_data_7)| 8     |
-dispVGA/vgaCtrl/clk25M              | BUFG                                | 42    |
+dispVGA/vgaCtrl/clk25M              | BUFG                                | 46    |
 ------------------------------------+-------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
 and XST is not able to identify which are the primary clock signals.
@@ -924,8 +2385,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 19.602ns (Maximum Frequency: 51.016MHz)
-   Minimum input arrival time before clock: 18.852ns
+   Minimum period: 21.092ns (Maximum Frequency: 47.411MHz)
+   Minimum input arrival time before clock: 19.566ns
    Maximum output required time after clock: 19.235ns
    Maximum combinational path delay: No path found
 
@@ -935,84 +2396,87 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 19.602ns (frequency: 51.016MHz)
-  Total number of paths / destination ports: 2237420084 / 3922
+  Clock period: 21.092ns (frequency: 47.411MHz)
+  Total number of paths / destination ports: 58940125023 / 4906
 -------------------------------------------------------------------------
-Delay:               19.602ns (Levels of Logic = 9)
-  Source:            titan/PC/PC_11 (FF)
-  Destination:       titan/ExStage/regfile/Mram_RAM5 (RAM)
+Delay:               21.092ns (Levels of Logic = 11)
+  Source:            titan/PC/PC_8 (FF)
+  Destination:       titan/ExStage/regfile/RAM_3131 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: titan/PC/PC_11 to titan/ExStage/regfile/Mram_RAM5
+  Data Path: titan/PC/PC_8 to titan/ExStage/regfile/RAM_3131
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             6   0.447   1.089  titan/PC/PC_11 (titan/PC/PC_11)
-     LUT5:I0->O            1   0.203   0.580  titan/instROM/Mram_inst_ROM48111 (titan/instROM/Mram_inst_ROM4811)
-     LUT6:I5->O           62   0.205   1.855  titan/instROM/Mram_inst_ROM48114 (titan/instruction<28>)
-     LUT4:I1->O            9   0.205   0.830  titan/LogicCtrl/Mmux_CFWrite111 (titan/LogicCtrl/Mmux_CFWrite11)
-     LUT6:I5->O           17   0.205   1.028  titan/LogicCtrl/Mmux_aluSrcb11_1 (titan/LogicCtrl/Mmux_aluSrcb11)
-     LUT3:I2->O            3   0.205   0.650  titan/ExStage/aluSrcbMUX/Mmux_out81 (titan/ExStage/ALUMuxOUT<16>)
-     DSP48A1:B16->P47     18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     FDCE:C->Q            31   0.447   1.642  titan/PC/PC_8 (titan/PC/PC_8)
+     LUT6:I0->O            1   0.203   0.580  titan/instROM/Mram_inst_ROM59115 (titan/instROM/Mram_inst_ROM59114)
+     LUT6:I5->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM59116 (titan/instROM/Mram_inst_ROM59115)
+     LUT6:I5->O           40   0.205   1.634  titan/instROM/Mram_inst_ROM59119 (titan/instruction<30>)
+     LUT5:I2->O           17   0.205   1.027  titan/LogicCtrl/Mmux_RtSrcReg11_5 (titan/LogicCtrl/Mmux_RtSrcReg114)
+     MUXF7:S->O            1   0.148   0.924  titan/ExStage/regfile/mux43_82 (titan/ExStage/regfile/mux43_82)
+     LUT6:I1->O            7   0.203   0.774  titan/ExStage/regfile/mux43_4 (titan/ExStage/regfile/mux43_4)
+     LUT6:I5->O            9   0.205   0.829  titan/ExStage/aluSrcbMUX/Mmux_out121 (titan/ExStage/ALUMuxOUT<1>)
+     DSP48A1:B1->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
      DSP48A1:C30->PCOUT47    1   2.689   0.000  titan/ExStage/alu/Mmult_n00361 (titan/ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
-     DSP48A1:PCIN47->P7    1   2.264   0.580  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<24>)
-     LUT6:I5->O            2   0.205   0.616  titan/ExStage/RaWriteEnMUX/Mmux_out1711 (titan/ExStage/writeData<24>)
-     RAM32M:DIA0               0.303          titan/ExStage/regfile/Mram_RAM15
+     DSP48A1:PCIN47->P14    1   2.264   0.580  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<31>)
+     LUT6:I5->O           17   0.205   0.000  titan/ExStage/RaWriteEnMUX/Mmux_out2515 (titan/ExStage/writeData<31>)
+     FDE_1:D                   0.102          titan/ExStage/regfile/RAM_311
     ----------------------------------------
-    Total                     19.602ns (11.325ns logic, 8.277ns route)
-                                       (57.8% logic, 42.2% route)
+    Total                     21.092ns (11.475ns logic, 9.617ns route)
+                                       (54.4% logic, 45.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'dispVGA/vgaCtrl/clk25M'
-  Clock period: 5.789ns (frequency: 172.750MHz)
-  Total number of paths / destination ports: 2635 / 71
+  Clock period: 6.331ns (frequency: 157.965MHz)
+  Total number of paths / destination ports: 3335 / 77
 -------------------------------------------------------------------------
-Delay:               5.789ns (Levels of Logic = 4)
-  Source:            dispVGA/vgaCtrl/vCount_8 (FF)
+Delay:               6.331ns (Levels of Logic = 4)
+  Source:            dispVGA/vgaCtrl/hCount_2 (FF)
   Destination:       dispVGA/vgaCtrl/vPixel_8 (FF)
   Source Clock:      dispVGA/vgaCtrl/clk25M rising
   Destination Clock: dispVGA/vgaCtrl/clk25M rising
 
-  Data Path: dispVGA/vgaCtrl/vCount_8 to dispVGA/vgaCtrl/vPixel_8
+  Data Path: dispVGA/vgaCtrl/hCount_2 to dispVGA/vgaCtrl/vPixel_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             4   0.447   0.931  dispVGA/vgaCtrl/vCount_8 (dispVGA/vgaCtrl/vCount_8)
-     LUT4:I0->O            2   0.203   0.981  dispVGA/vgaCtrl/_n013521 (dispVGA/vgaCtrl/_n01352)
-     LUT6:I0->O           11   0.203   0.883  dispVGA/vgaCtrl/vCount[11]_GND_56_o_LessThan_25_o11 (dispVGA/vgaCtrl/vCount[11]_GND_56_o_LessThan_25_o)
-     LUT2:I1->O            1   0.205   0.580  dispVGA/vgaCtrl/_n0150_inv1 (dispVGA/vgaCtrl/_n0150_inv1)
-     LUT6:I5->O            9   0.205   0.829  dispVGA/vgaCtrl/_n0150_inv5 (dispVGA/vgaCtrl/_n0150_inv)
+     FDC:C->Q              2   0.447   0.864  dispVGA/vgaCtrl/hCount_2 (dispVGA/vgaCtrl/hCount_2)
+     LUT4:I0->O            4   0.203   0.788  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o11 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o1)
+     LUT4:I2->O            1   0.203   0.684  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o3_SW0 (N1447)
+     LUT6:I4->O           27   0.203   1.585  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o3 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o_inv_inv)
+     LUT6:I0->O            9   0.203   0.829  dispVGA/vgaCtrl/_n0150_inv5 (dispVGA/vgaCtrl/_n0150_inv)
      FDCE:CE                   0.322          dispVGA/vgaCtrl/vPixel_0
     ----------------------------------------
-    Total                      5.789ns (1.585ns logic, 4.204ns route)
-                                       (27.4% logic, 72.6% route)
+    Total                      6.331ns (1.581ns logic, 4.750ns route)
+                                       (25.0% logic, 75.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 19909450 / 3901
+  Total number of paths / destination ports: 385935321 / 4916
 -------------------------------------------------------------------------
-Offset:              18.852ns (Levels of Logic = 8)
+Offset:              19.566ns (Levels of Logic = 9)
   Source:            reset (PAD)
-  Destination:       titan/ExStage/regfile/Mram_RAM5 (RAM)
+  Destination:       titan/ExStage/regfile/RAM_3131 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to titan/ExStage/regfile/Mram_RAM5
+  Data Path: reset to titan/ExStage/regfile/RAM_3131
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           244   1.222   2.409  reset_IBUF (reset_IBUF)
-     LUT5:I0->O            4   0.203   0.684  titan/LogicCtrl/Mmux_RtSrcReg11_1 (titan/LogicCtrl/Mmux_RtSrcReg11)
-     LUT6:I5->O           19   0.205   1.176  titan/ExStage/regfile/out11_1 (titan/ExStage/regfile/out11)
-     LUT3:I1->O            3   0.203   0.650  titan/ExStage/aluSrcbMUX/Mmux_out81 (titan/ExStage/ALUMuxOUT<16>)
-     DSP48A1:B16->P47     18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     IBUF:I->O           269   1.222   2.296  reset_IBUF (reset_IBUF)
+     LUT3:I0->O            2   0.205   0.617  titan/LogicCtrl/Mmux_RtSrcReg11_SW0 (N890)
+     LUT6:I5->O           37   0.205   1.727  titan/ExStage/RtSrcRegMUX/Mmux_out41_1 (titan/ExStage/RtSrcRegMUX/Mmux_out41)
+     LUT6:I0->O            7   0.203   0.774  titan/ExStage/regfile/mux43_4 (titan/ExStage/regfile/mux43_4)
+     LUT6:I5->O            9   0.205   0.829  titan/ExStage/aluSrcbMUX/Mmux_out121 (titan/ExStage/ALUMuxOUT<1>)
+     DSP48A1:B1->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
      DSP48A1:C30->PCOUT47    1   2.689   0.000  titan/ExStage/alu/Mmult_n00361 (titan/ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
-     DSP48A1:PCIN47->P7    1   2.264   0.580  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<24>)
-     LUT6:I5->O            2   0.205   0.616  titan/ExStage/RaWriteEnMUX/Mmux_out1711 (titan/ExStage/writeData<24>)
-     RAM32M:DIA0               0.303          titan/ExStage/regfile/Mram_RAM15
+     DSP48A1:PCIN47->P14    1   2.264   0.580  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<31>)
+     LUT6:I5->O           17   0.205   0.000  titan/ExStage/RaWriteEnMUX/Mmux_out2515 (titan/ExStage/writeData<31>)
+     FDE_1:D                   0.102          titan/ExStage/regfile/RAM_311
     ----------------------------------------
-    Total                     18.852ns (11.688ns logic, 7.164ns route)
-                                       (62.0% logic, 38.0% route)
+    Total                     19.566ns (11.694ns logic, 7.872ns route)
+                                       (59.8% logic, 40.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'pulse_OBUF'
@@ -1028,7 +2492,7 @@ Offset:              2.910ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   1.222   0.579  NESinputData_IBUF (NESinputData_IBUF)
-     INV:I->O              8   0.206   0.802  ioMem/nes/data_INV_123_o1_INV_0 (ioMem/nes/data_INV_123_o)
+     INV:I->O              8   0.206   0.802  ioMem/nes/data_INV_128_o1_INV_0 (ioMem/nes/data_INV_128_o)
      FDE_1:D                   0.102          ioMem/nes/controller_data_5
     ----------------------------------------
     Total                      2.910ns (1.530ns logic, 1.380ns route)
@@ -1036,9 +2500,9 @@ Offset:              2.910ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'dispVGA/vgaCtrl/clk25M'
-  Total number of paths / destination ports: 42 / 42
+  Total number of paths / destination ports: 46 / 46
 -------------------------------------------------------------------------
-Offset:              3.716ns (Levels of Logic = 1)
+Offset:              3.719ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       dispVGA/vgaCtrl/hPixel_9 (FF)
   Destination Clock: dispVGA/vgaCtrl/clk25M rising
@@ -1047,11 +2511,11 @@ Offset:              3.716ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           244   1.222   2.064  reset_IBUF (reset_IBUF)
+     IBUF:I->O           269   1.222   2.067  reset_IBUF (reset_IBUF)
      FDC:CLR                   0.430          dispVGA/vgaCtrl/bright
     ----------------------------------------
-    Total                      3.716ns (1.652ns logic, 2.064ns route)
-                                       (44.5% logic, 55.5% route)
+    Total                      3.719ns (1.652ns logic, 2.067ns route)
+                                       (44.4% logic, 55.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'dispVGA/vgaCtrl/clk25M'
@@ -1074,8 +2538,8 @@ Offset:              19.235ns (Levels of Logic = 12)
      LUT6:I1->O            1   0.203   0.944  dispVGA/charROM/Mram_charROM71210 (dispVGA/charROM/Mram_charROM7129)
      LUT6:I0->O            1   0.203   0.684  dispVGA/charROM/Mram_charROM71211 (dispVGA/charROM/Mram_charROM71210)
      LUT5:I3->O            1   0.203   0.684  dispVGA/charROM/Mram_charROM712141 (dispVGA/charROM/Mram_charROM71213)
-     LUT6:I4->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM71229_SW0_F (N5810)
-     MUXF7:I0->O           1   0.131   0.580  dispVGA/charROM/Mram_charROM71229_SW0 (N5210)
+     LUT6:I4->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM71229_SW0_F (N159)
+     MUXF7:I0->O           1   0.131   0.580  dispVGA/charROM/Mram_charROM71229_SW0 (N153)
      LUT5:I4->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM71229 (dispVGA/color<0>)
      LUT2:I1->O            1   0.205   0.579  dispVGA/Mmux_rgb11 (rgb_0_OBUF)
      OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
@@ -1098,7 +2562,7 @@ Offset:              12.683ns (Levels of Logic = 9)
     ----------------------------------------  ------------
      FDR:C->Q             15   0.447   1.210  ioMem/nes/count_8 (ioMem/nes/count_8)
      LUT3:I0->O            3   0.205   1.015  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3111 (ioMem/nes/count[21]_GND_54_o_LessThan_31_o311)
-     LUT6:I0->O            1   0.203   0.827  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3_SW0 (N902)
+     LUT6:I0->O            1   0.203   0.827  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3_SW0 (N866)
      LUT6:I2->O            2   0.203   0.961  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3 (ioMem/nes/count[21]_GND_54_o_LessThan_31_o)
      LUT5:I0->O            2   0.203   0.961  ioMem/nes/Mmux_pulse11111 (ioMem/nes/Mmux_pulse1111)
      LUT6:I1->O            1   0.203   0.827  ioMem/nes/Mmux_pulse11 (ioMem/nes/Mmux_pulse1)
@@ -1120,9 +2584,9 @@ Clock to Setup on destination clock clk
                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------+---------+---------+---------+---------+
-clk                   |   19.602|         |         |         |
+clk                   |   21.092|         |         |         |
 dispVGA/vgaCtrl/clk25M|    6.831|         |         |         |
-pulse_OBUF            |         |    4.194|         |         |
+pulse_OBUF            |         |    3.377|         |         |
 ----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock dispVGA/vgaCtrl/clk25M
@@ -1130,7 +2594,7 @@ Clock to Setup on destination clock dispVGA/vgaCtrl/clk25M
                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------+---------+---------+---------+---------+
-dispVGA/vgaCtrl/clk25M|    5.789|         |         |         |
+dispVGA/vgaCtrl/clk25M|    6.331|         |         |         |
 ----------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock pulse_OBUF
@@ -1138,20 +2602,20 @@ Clock to Setup on destination clock pulse_OBUF
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |         |         |    8.648|         |
+clk            |         |         |    8.546|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 21.00 secs
-Total CPU time to Xst completion: 21.23 secs
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 35.79 secs
  
 --> 
 
-Total memory usage is 273288 kilobytes
+Total memory usage is 314504 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   31 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of warnings :  503 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
 

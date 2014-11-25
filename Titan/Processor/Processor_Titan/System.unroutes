@@ -1,22 +1,9 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Nov 20 19:26:20 2014
+Mon Nov 24 16:13:15 2014
 
 All signals are completely routed.
 
-WARNING:ParHelpers:361 - There are 10 loadless signals in this design. This design will cause Bitgen to issue DRC
-   warnings.
-
-   titan/ExStage/regfile/Mram_RAM11_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM12_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM13_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM14_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM15_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM1_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM2_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM3_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM4_RAMD_D1_O
-   titan/ExStage/regfile/Mram_RAM5_RAMD_D1_O
 
 

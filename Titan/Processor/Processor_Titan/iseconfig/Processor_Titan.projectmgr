@@ -8,7 +8,9 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/ExecutionStage C:|Users|u0499404|ECE3710|Processor_Titan01|ExecutionStage.v</ClosedNode>
-         <ClosedNode>/System C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan</ClosedNode>
+         <ClosedNode>/System C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/dispVGA - DisplayVGA</ClosedNode>
+         <ClosedNode>/System C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/PC - ProgramCounter</ClosedNode>
+         <ClosedNode>/System C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/PSR - ProgramStatusRegister</ClosedNode>
          <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/dispVGA - DisplayVGA</ClosedNode>
          <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/ioMem - IOMemory</ClosedNode>
          <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan</ClosedNode>
@@ -39,13 +41,13 @@
          <ClosedNode>/vgaControl_TestBench C:|Users|u0791587|Documents|GitHub|ECE3710|Titan|Processor|Processor_Titan|vgaControl_TestBench.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>System (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.v)</SelectedItem>
+         <SelectedItem>dataRAM - DataRAM (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/DataRAM.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >4</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >20</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b90000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000018e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000018e0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>System (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.v)</CurrentItem>
+      <CurrentItem>dataRAM - DataRAM (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/DataRAM.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -60,13 +62,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Synthesize - XST</SelectedItem>
+         <SelectedItem>Check Syntax</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000bf000000010000000100000000000000000000000064ffffffff000000810000000000000001000000bf0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000016d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000016d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Synthesize - XST</CurrentItem>
+      <CurrentItem>Check Syntax</CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -87,28 +89,30 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000bf000000010001000100000000000000000000000064ffffffff000000810000000000000001000000bf0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000016d000000010001000100000000000000000000000064ffffffff0000008100000000000000010000016d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff000000000000000200000187000000b601000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
-         <ClosedNode>/ALU_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|ALU_TestBench.v</ClosedNode>
          <ClosedNode>/CharacterDisplayRAM_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|CharacterDisplayRAM_TestBench.v</ClosedNode>
          <ClosedNode>/DataRAM_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|DataRAM_TestBench.v</ClosedNode>
          <ClosedNode>/DisplayVGA_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|DisplayVGA_TestBench.v</ClosedNode>
-         <ClosedNode>/ExecutionStage_TestBench02 C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|ExecutionStage_TestBench02.v</ClosedNode>
          <ClosedNode>/InstructionDecoder_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|InstructionDecoder_TestBench.v</ClosedNode>
          <ClosedNode>/InstructionROM_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|InstructionROM_TestBench.v</ClosedNode>
-         <ClosedNode>/LogicController_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|LogicController_TestBench.v</ClosedNode>
          <ClosedNode>/ProgramCounter_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|ProgramCounter_TestBench.v</ClosedNode>
          <ClosedNode>/ProgramStatusRegister_TestBench02 C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|ProgramStatusRegister_TestBench02.v</ClosedNode>
          <ClosedNode>/RegFile_TestBench2 C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|RegFile_TestBench2.v</ClosedNode>
          <ClosedNode>/Shifter_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|Shifter_TestBench.v</ClosedNode>
          <ClosedNode>/SignExtender_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SignExtender_TestBench.v</ClosedNode>
+         <ClosedNode>/SystemControllerIntegration_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SystemControllerIntegration_TestBench.v/uut - System/dispVGA - DisplayVGA</ClosedNode>
+         <ClosedNode>/SystemControllerIntegration_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SystemControllerIntegration_TestBench.v/uut - System/titan - Titan/ExStage - ExecutionStage</ClosedNode>
+         <ClosedNode>/SystemControllerIntegration_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SystemControllerIntegration_TestBench.v/uut - System/titan - Titan/PC - ProgramCounter</ClosedNode>
+         <ClosedNode>/SystemControllerIntegration_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SystemControllerIntegration_TestBench.v/uut - System/titan - Titan/PSR - ProgramStatusRegister</ClosedNode>
+         <ClosedNode>/System_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System_TestBench.v</ClosedNode>
          <ClosedNode>/System_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System_TestBench.v/uut - System/dispVGA - DisplayVGA</ClosedNode>
          <ClosedNode>/System_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System_TestBench.v/uut - System/ioMem - IOMemory</ClosedNode>
          <ClosedNode>/System_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System_TestBench.v/uut - System/titan - Titan/ExStage - ExecutionStage</ClosedNode>
@@ -121,13 +125,13 @@
          <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>ProgramStatusRegister_TestBench02 (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ProgramStatusRegister_TestBench02.v)</SelectedItem>
+         <SelectedItem>uut - ALU (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >7</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001d4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001d40000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001f6000000020000000000000000000000000200000064ffffffff000000810000000300000002000001f60000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>ProgramStatusRegister_TestBench02 (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ProgramStatusRegister_TestBench02.v)</CurrentItem>
+      <CurrentItem>uut - ALU (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -139,7 +143,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000dc000000010000000100000000000000000000000064ffffffff000000810000000000000001000000dc0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000013f000000010000000100000000000000000000000064ffffffff0000008100000000000000010000013f0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -152,7 +156,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000156000000010000000100000000000000000000000064ffffffff000000810000000000000001000001560000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000016d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000016d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>
@@ -166,7 +170,21 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000bf000000010000000100000000000000000000000064ffffffff000000810000000000000001000000bf0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001c6000000010000000100000000000000000000000064ffffffff000000810000000000000001000001c60000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001a0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001a00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
