@@ -1,0 +1,12 @@
+digraph AssemblerFlowChart {
+	node [ shape = circle ];
+	
+	"Load\nConfiguration\nFile" -> "Load\nAssembly\nCode"
+	"Load\nAssembly\nCode" -> "Assembly\nPass 1"
+	"Assembly\nPass 1" -> "Assembly\nPass 2"
+	"Assembly\nPass 2" -> "Write\nFile"
+	
+	
+	
+	
+}
