@@ -24,7 +24,7 @@
 static const char *ng0 = "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {1, 0};
-static unsigned int ng3[] = {1U, 0U};
+static unsigned int ng3[] = {0U, 0U};
 
 
 

@@ -66,8 +66,8 @@ Compiling module System
 Compiling module SystemControllerIntegration_Test...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 10 sub-compilation(s) to finish...
+Waiting for 2 sub-compilation(s) to finish...
 Compiled 25 Verilog Units
 Built simulation executable C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.exe
-Fuse Memory Usage: 29136 KB
-Fuse CPU Usage: 639 ms
+Fuse Memory Usage: 29092 KB
+Fuse CPU Usage: 655 ms

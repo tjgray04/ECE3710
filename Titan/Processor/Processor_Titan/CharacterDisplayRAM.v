@@ -43,7 +43,14 @@ module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 13)
    initial
       $readmemb("mTestRAM.dat", charDispRAM, 0, 4799);
 
-	assign vgaAddress = hGlyphVGA + (80*vGlyphVGA);
+	//Test function to get rid of warning
+	function [12:0] trunc_14_to_13(input [13:0] val);
+		trunc_14_to_13 = val[12:0];
+	endfunction
+
+	assign vgaAddress = trunc_14_to_13(hGlyphVGA + (80*vGlyphVGA));
+
+	//assign vgaAddress = hGlyphVGA + (80*vGlyphVGA);
 	
 	//Reads are done asynchronously
 	assign outputVGA = charDispRAM[vgaAddress];
