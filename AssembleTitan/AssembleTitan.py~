@@ -267,8 +267,7 @@ class Assembler:
 			for line in reader:
 				if line != []: #Ignore empty lines 
 					if not(line[0].startswith('//')): #Ignore lines that start with '//'
-						if not(line[0].startswith('	')):
-							lines.append(line)
+						lines.append(line)
 		return lines	
 
 	def dec2bin(self,integer,length):
