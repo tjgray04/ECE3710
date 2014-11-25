@@ -1,7 +1,7 @@
 //Global Variables
 gcon,controllerAddr,65535,	//Binary: 11_1_1111111111111
 gcon,LEDAddr,57343,		//Binary: 11_0_1111111111111
-gcon,VGABaseAddr,16384,	//Binary: 01_00000000000000
+gcon,VGABaseAddr,16384,	//Binary: 10_00000000000000
 
 //Initialization
 addi,r3,r0,2439,		//Load initial block glyph position into r3
@@ -38,8 +38,8 @@ cmpi,x,r8,0,			//See if the location is valid
 bne,wait:,			//Go to wait if location is invalid
 add,r9,r3,r6,		//Load the location address of the current glyph position into r9.
 ld,r10,r9,0,		//Load the glyph index of the current glyph location into r10.
-str,r0,r9,0,		//Make the glyph at the current glyph position black.
 str,r10,r7,0,		//Store the current glyph index into the future glyph position.
+str,r0,r9,0,		//Make the glyph at the current glyph position black.
 addi,r3,r3,1,		//update the variable that contains the current glyph position.
 
 checkL:
