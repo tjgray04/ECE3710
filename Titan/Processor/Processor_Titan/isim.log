@@ -1,6 +1,5 @@
 ISim log file
-Running: C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\SystemControllerIntegration_TestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.wdb 
-INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
+Running: C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SystemControllerIntegration_TestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.wdb 
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -12,7 +11,8 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# restart
 # run 1.00ms
-Stopped at time : 166319 ns : File "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ProgramCounter.v" Line 58
-# run 1.00ms
-Stopped at time : 645919 ns : File "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/InstructionDecoder.v" Line 44
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 603095 ns : File "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v" Line 71

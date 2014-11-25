@@ -24,6 +24,12 @@ module NES_CONTROLLER(
 		output reg [7:0] controller_data
     );
 
+	//Initialize the controller data
+	initial
+	begin
+		controller_data = 8'b00000000;
+	end
+	
 	//Instantiate a register to conatin the count that will be send out all the control signals.
 	reg [21:0] count; //was 31
 	

@@ -67,9 +67,11 @@ module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
 	assign Fsub = (arg1[WIDTH-1] & ~arg2[WIDTH-1] & ~sum[WIDTH-1]) + (~arg1[WIDTH-1] & arg2[WIDTH-1] & sum[WIDTH-1]);
 	
 	//Unsigned Comparator
+	wire L;
 	assign L = (arg1 < arg2);
 	
 	//Signed Comparator
+	wire N;
 	assign N = ($signed(arg1) < $signed(arg2));
 	
 	//ALU behavior
