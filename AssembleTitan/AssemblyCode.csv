@@ -1,53 +1,29 @@
-<<<<<<< HEAD
 //Global Variables
-gcon,VGABaseAddr,32768,	//Binary: 10_00000000000000
+gcon,VGABaseAddr,32768,		//Binary: 10_00_0000_0000_0000, this is the base address to the VGA memory space
+gcon,IOBaseAddr,49152		//Binary: 11_00_0000_0000_0000, this is the base address to the IO memory space
 
-//Initialization
-addi,r12,r0,100,			//a glyph location to write to
-addi,r13,r12,VGABaseAddr,
-addi,r11,r0,32,				//Store the glyph index into r11
-str,r11,r13,0,	
+//Initialization - stores a glyph into a location on the VGA screen
+addi,r12,r0,100,			//r12 = 100, a glyph location to write to
+addi,r13,r12,VGABaseAddr,	//add r12 to the base address and store it in r13 as a location to write to
+addi,r11,r0,32,			 	//Store the glyph index into r11
+str,r11,r13,0,				//store the value of the glyph index in r11 in to the glyph location of r13
 
 //Game Loop
 loop:
-addi,r17,r12,0,
-addi,r18,r17,VGABaseAddr,
-addi,r12,r12,1,				//a glyph location to write to
-addi,r13,r12,VGABaseAddr,		//glyph address to write to memory
-str,r0,r18,0,
+addi,r17,r12,0,				//add r12 to r17, so r17 starts at 100
+addi,r18,r17,VGABaseAddr,	//add r17 to the base address for VGA and store it into r18 as the new location to write to
+addi,r12,r12,1,				//increment the glyph location to write to
+addi,r13,r12,VGABaseAddr,	//add r12 to the base address for VGA and store it into r13 as the new location to write to
+//str,r0,r18,0,				//This is not necessary
 str,r11,r13,0,				//store the glyph index into the glyph address of r13
+str,r11,r18,0,				//store the glyph index into the glyph address of r18
 
-addi,r4,r4,262143,			//r4 = 0 + 1000
+addi,r4,r0,131071,			//r4 = 0 + 1000
 
 pause:
 cmp,x,r4,r0,		//check to see if the counter is 0.
-beq,loop:,		// if the counter has reached 0, jump to loop.
+beq,loop:,			// if the counter has reached 0, jump to loop.
 subi,r4,r4,1,		// r4 =r4 -1.
-j,pause:,		//jump loop
+j,pause:,			//jump loop
 
 
-=======
-gcon,iterate,14
-
-//Start the Fibonacci code
-Fib:
-addi,r2,r0,128
-addi,r3,r0,14
-addi,r4,r0,1
-addi,r5,r0,-1
-
-	//
-//Enter the Fib loop
-loop:
-cmp,x,r3,r0
-beq,end:,//Branches to the end
-add,r4,r4,r5
-sub,r5,r4,r5
-str,r4,r2,0
-addi,r2,r2,1
-addi,r3,r3,-1
-j,loop:
-
-end:
-//This is the end
->>>>>>> 433285208176e7c6e265fee6dbcfc858b685d3cd
