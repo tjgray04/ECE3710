@@ -1,0 +1,6 @@
+verilog work "SignExtender.v"
+verilog work "Shifter.v"
+verilog work "RegFile.v"
+verilog work "Mux.v"
+verilog work "ALU.v"
+verilog work "ExecutionStage.v"

@@ -1,0 +1,759 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: Titan.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Titan.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Titan"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : Titan
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
+Parsing module <ZeroPad>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
+Parsing module <SignExtender>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v" into library work
+Parsing module <Shifter>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
+Parsing module <RegFile>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
+Parsing module <Mux>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
+Parsing module <ALU>.
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" Line 41. parameter declaration becomes local in ALU with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
+Parsing module <ProgramStatusRegister>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v" into library work
+Parsing module <ProgramCounter>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" into library work
+Parsing module <LogicController>.
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 31. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 32. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 37. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 47. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 58. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 63. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 67. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 70. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 81. parameter declaration becomes local in LogicController with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" into library work
+Parsing module <InstructionROM>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v" into library work
+Parsing module <InstructionDecoder>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v" into library work
+Parsing module <ExecutionStage>.
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v" into library work
+Parsing module <Titan>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <Titan>.
+
+Elaborating module <ProgramCounter>.
+
+Elaborating module <Mux>.
+
+Elaborating module <InstructionROM>.
+Reading initialization file \"IOtestloop.dat\".
+WARNING:HDLCompiler:1670 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 35: Signal <inst_ROM> in initial block is partially initialized.
+
+Elaborating module <InstructionDecoder>.
+
+Elaborating module <ExecutionStage>.
+
+Elaborating module <RegFile>.
+
+Elaborating module <Mux(WIDTH=5)>.
+
+Elaborating module <ALU>.
+
+Elaborating module <Shifter>.
+
+Elaborating module <SignExtender>.
+
+Elaborating module <LogicController>.
+
+Elaborating module <ProgramStatusRegister>.
+
+Elaborating module <ZeroPad>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Titan>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v".
+        ALUOPBITS = 3
+        OPBITS = 4
+        FUNCTBITS = 4
+        REGBITS = 5
+        IMMBITS = 18
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <Titan> synthesized.
+
+Synthesizing Unit <ProgramCounter>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v".
+        REGBITS = 5
+        WIDTH = 32
+    Found 32-bit register for signal <PC>.
+    Found 32-bit adder for signal <returnAddr> created at line 52.
+    Found 32-bit adder for signal <BranchImm> created at line 54.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <ProgramCounter> synthesized.
+
+Synthesizing Unit <Mux>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
+        WIDTH = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux> synthesized.
+
+Synthesizing Unit <InstructionROM>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v".
+        WIDTH = 32
+        ROM_ADDR_BITS = 12
+WARNING:Xst:647 - Input <PCadr<31:12>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'inst_ROM', unconnected in block 'InstructionROM', is tied to its initial value.
+    Found 4096x32-bit single-port Read Only RAM <Mram_inst_ROM> for signal <inst_ROM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <InstructionROM> synthesized.
+
+Synthesizing Unit <InstructionDecoder>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v".
+        OPBITS = 4
+        FUNCTBITS = 4
+        REGBITS = 5
+        IMMBITS = 18
+        WIDTH = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <InstructionDecoder> synthesized.
+
+Synthesizing Unit <ExecutionStage>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v".
+        OPBITS = 4
+        FUNCTBITS = 4
+        REGBITS = 5
+        IMMBITS = 18
+        ALUOPBITS = 3
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <ExecutionStage> synthesized.
+
+Synthesizing Unit <RegFile>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v".
+        REGBITS = 5
+        WIDTH = 32
+WARNING:Xst:647 - Input <RaWriteEn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32x32-bit dual-port RAM <Mram_RAM> for signal <RAM>.
+    Summary:
+	inferred   2 RAM(s).
+	inferred   2 Multiplexer(s).
+Unit <RegFile> synthesized.
+
+Synthesizing Unit <Mux_1>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
+        WIDTH = 5
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_1> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v".
+        ALUOPBITS = 3
+        REGBITS = 5
+        WIDTH = 32
+    Found 32-bit subtractor for signal <diff> created at line 61.
+    Found 33-bit adder for signal <n0047> created at line 52.
+    Found 1-bit adder for signal <n0039> created at line 67.
+    Found 32x32-bit multiplier for signal <n0036> created at line 112.
+    Found 32-bit 8-to-1 multiplexer for signal <aluop[2]_diff[31]_wide_mux_11_OUT> created at line 85.
+    Found 32-bit comparator greater for signal <L> created at line 70
+    Found 32-bit comparator greater for signal <N> created at line 73
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <Shifter>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v".
+        WIDTH = 32
+    Found 32-bit adder for signal <shiftmag> created at line 34.
+    Found 32-bit shifter logical right for signal <arg[31]_shiftmag[31]_shift_right_5_OUT[31:0]> created at line 47
+    Found 32-bit shifter logical left for signal <arg[31]_shiftamount[31]_shift_left_8_OUT[31:0]> created at line 54
+    Found 32-bit shifter arithmetic right for signal <arg[31]_shiftmag[31]_shift_right_9_OUT[31:0]> created at line 58
+    Found 32-bit comparator lessequal for signal <n0005> created at line 53
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <Shifter> synthesized.
+
+Synthesizing Unit <SignExtender>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v".
+        IMMBITS = 18
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <SignExtender> synthesized.
+
+Synthesizing Unit <LogicController>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v".
+        OPBITS = 4
+        FUNCTBITS = 4
+        REGBITS = 5
+    Found 1-bit register for signal <NS>.
+    Found 1-bit register for signal <PS>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <LogicController> synthesized.
+
+Synthesizing Unit <ProgramStatusRegister>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v".
+        REGBITS = 5
+        WIDTH = 32
+    Found 1-bit register for signal <PSR<3>>.
+    Found 1-bit register for signal <PSR<2>>.
+    Found 1-bit register for signal <PSR<1>>.
+    Found 1-bit register for signal <PSR<0>>.
+    Found 1-bit register for signal <PSR<4>>.
+    Found 1-bit 15-to-1 multiplexer for signal <_n0085> created at line 29.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <ProgramStatusRegister> synthesized.
+
+Synthesizing Unit <ZeroPad>.
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v".
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <ZeroPad> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 32x32-bit dual-port RAM                               : 2
+ 4096x32-bit single-port Read Only RAM                 : 1
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 6
+ 1-bit adder                                           : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 1
+# Registers                                            : 8
+ 1-bit register                                        : 7
+ 32-bit register                                       : 1
+# Comparators                                          : 3
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 61
+ 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 25
+ 3-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 18
+ 32-bit 8-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 8
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <InstructionROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_inst_ROM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 32-bit                  |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <PCadr>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <InstructionROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <RegFile>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <regWriteEn>    | high     |
+    |     addrA          | connected to signal <Rdest>         |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <Rs>            |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_RAM1> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | fall     |
+    |     weA            | connected to signal <regWriteEn>    | high     |
+    |     addrA          | connected to signal <Rdest>         |          |
+    |     diA            | connected to signal <writeData>     |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32-word x 32-bit                    |          |
+    |     addrB          | connected to signal <Rt>            |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <RegFile> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 32x32-bit dual-port distributed RAM                   : 2
+ 4096x32-bit single-port distributed Read Only RAM     : 1
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 6
+ 1-bit adder                                           : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 1
+# Registers                                            : 39
+ Flip-Flops                                            : 39
+# Comparators                                          : 3
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 61
+ 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 25
+ 3-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 18
+ 32-bit 8-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 8
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mmult_n00363> of sequential type is unconnected in block <ALU>.
+
+Optimizing unit <Titan> ...
+
+Optimizing unit <ExecutionStage> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <Shifter> ...
+
+Optimizing unit <ProgramCounter> ...
+
+Optimizing unit <LogicController> ...
+
+Optimizing unit <ProgramStatusRegister> ...
+WARNING:Xst:2677 - Node <PSR/PSR_0> of sequential type is unconnected in block <Titan>.
+WARNING:Xst:2677 - Node <PSR/PSR_2> of sequential type is unconnected in block <Titan>.
+WARNING:Xst:2677 - Node <PSR/PSR_3> of sequential type is unconnected in block <Titan>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Titan, actual ratio is 9.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 36
+ Flip-Flops                                            : 36
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Titan.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1271
+#      GND                         : 1
+#      INV                         : 31
+#      LUT1                        : 30
+#      LUT2                        : 99
+#      LUT3                        : 58
+#      LUT4                        : 76
+#      LUT5                        : 140
+#      LUT6                        : 455
+#      MUXCY                       : 156
+#      MUXF7                       : 64
+#      VCC                         : 1
+#      XORCY                       : 160
+# FlipFlops/Latches                : 36
+#      FDCE                        : 32
+#      FDR                         : 2
+#      FDRE                        : 2
+# RAMS                             : 14
+#      RAM32M                      : 10
+#      RAM32X1D                    : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 99
+#      IBUF                        : 33
+#      OBUF                        : 66
+# DSPs                             : 3
+#      DSP48A1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              36  out of  18224     0%  
+ Number of Slice LUTs:                  937  out of   9112    10%  
+    Number used as Logic:               889  out of   9112     9%  
+    Number used as Memory:               48  out of   2176     2%  
+       Number used as RAM:               48
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    946
+   Number with an unused Flip Flop:     910  out of    946    96%  
+   Number with an unused LUT:             9  out of    946     0%  
+   Number of fully used LUT-FF pairs:    27  out of    946     2%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                         100
+ Number of bonded IOBs:                 100  out of    232    43%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 50    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 19.405ns (Maximum Frequency: 51.533MHz)
+   Minimum input arrival time before clock: 18.835ns
+   Maximum output required time after clock: 22.876ns
+   Maximum combinational path delay: 22.306ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 19.405ns (frequency: 51.533MHz)
+  Total number of paths / destination ports: 306215203 / 185
+-------------------------------------------------------------------------
+Delay:               19.405ns (Levels of Logic = 9)
+  Source:            PC/PC_11 (FF)
+  Destination:       ExStage/regfile/Mram_RAM5 (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PC/PC_11 to ExStage/regfile/Mram_RAM5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.447   1.089  PC/PC_11 (PC/PC_11)
+     LUT5:I0->O            1   0.203   0.580  instROM/Mram_inst_ROM48111 (instROM/Mram_inst_ROM4811)
+     LUT6:I5->O           40   0.205   1.634  instROM/Mram_inst_ROM48114 (instruction<28>)
+     LUT5:I2->O            5   0.205   0.715  LogicCtrl/Mmux_RtSrcReg11 (RtSrcReg)
+     LUT6:I5->O           17   0.205   1.132  ExStage/regfile/out11_1 (ExStage/regfile/out11)
+     LUT3:I1->O            3   0.203   0.650  ExStage/aluSrcbMUX/Mmux_out81 (ExStage/ALUMuxOUT<16>)
+     DSP48A1:B16->P47     18   4.394   1.049  ExStage/alu/Mmult_n0036 (ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  ExStage/alu/Mmult_n00361 (ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
+     DSP48A1:PCIN47->P7    2   2.264   0.617  ExStage/alu/Mmult_n00362 (ExStage/alu/n0036<24>)
+     LUT6:I5->O            2   0.205   0.616  ExStage/RaWriteEnMUX/Mmux_out171 (ExStage/writeData<24>)
+     RAM32M:DIA0               0.303          ExStage/regfile/Mram_RAM15
+    ----------------------------------------
+    Total                     19.405ns (11.323ns logic, 8.082ns route)
+                                       (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 2580223 / 187
+-------------------------------------------------------------------------
+Offset:              18.835ns (Levels of Logic = 8)
+  Source:            reset (PAD)
+  Destination:       ExStage/regfile/Mram_RAM5 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: reset to ExStage/regfile/Mram_RAM5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           166   1.222   2.367  reset_IBUF (reset_IBUF)
+     LUT5:I0->O            5   0.203   0.715  LogicCtrl/Mmux_RtSrcReg11 (RtSrcReg)
+     LUT6:I5->O           17   0.205   1.132  ExStage/regfile/out11_1 (ExStage/regfile/out11)
+     LUT3:I1->O            3   0.203   0.650  ExStage/aluSrcbMUX/Mmux_out81 (ExStage/ALUMuxOUT<16>)
+     DSP48A1:B16->P47     18   4.394   1.049  ExStage/alu/Mmult_n0036 (ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  ExStage/alu/Mmult_n00361 (ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
+     DSP48A1:PCIN47->P7    2   2.264   0.617  ExStage/alu/Mmult_n00362 (ExStage/alu/n0036<24>)
+     LUT6:I5->O            2   0.205   0.616  ExStage/RaWriteEnMUX/Mmux_out171 (ExStage/writeData<24>)
+     RAM32M:DIA0               0.303          ExStage/regfile/Mram_RAM15
+    ----------------------------------------
+    Total                     18.835ns (11.688ns logic, 7.147ns route)
+                                       (62.1% logic, 37.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 148851344 / 66
+-------------------------------------------------------------------------
+Offset:              22.876ns (Levels of Logic = 11)
+  Source:            PC/PC_11 (FF)
+  Destination:       memAddr<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: PC/PC_11 to memAddr<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.447   1.089  PC/PC_11 (PC/PC_11)
+     LUT5:I0->O            1   0.203   0.580  instROM/Mram_inst_ROM48111 (instROM/Mram_inst_ROM4811)
+     LUT6:I5->O           40   0.205   1.634  instROM/Mram_inst_ROM48114 (instruction<28>)
+     LUT5:I2->O            5   0.205   0.715  LogicCtrl/Mmux_RtSrcReg11 (RtSrcReg)
+     LUT6:I5->O           17   0.205   1.132  ExStage/regfile/out11_1 (ExStage/regfile/out11)
+     LUT3:I1->O            3   0.203   0.650  ExStage/aluSrcbMUX/Mmux_out81 (ExStage/ALUMuxOUT<16>)
+     DSP48A1:B16->P47     18   4.394   1.049  ExStage/alu/Mmult_n0036 (ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  ExStage/alu/Mmult_n00361 (ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
+     DSP48A1:PCIN47->P14    2   2.264   0.845  ExStage/alu/Mmult_n00362 (ExStage/alu/n0036<31>)
+     LUT6:I3->O            1   0.205   0.808  ExStage/memSrcMUX/Mmux_out2510 (ExStage/memSrcMUX/Mmux_out259)
+     LUT6:I3->O            1   0.205   0.579  ExStage/memSrcMUX/Mmux_out2512 (memAddr_31_OBUF)
+     OBUF:I->O                 2.571          memAddr_31_OBUF (memAddr<31>)
+    ----------------------------------------
+    Total                     22.876ns (13.796ns logic, 9.080ns route)
+                                       (60.3% logic, 39.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1251870 / 66
+-------------------------------------------------------------------------
+Delay:               22.306ns (Levels of Logic = 10)
+  Source:            reset (PAD)
+  Destination:       memAddr<31> (PAD)
+
+  Data Path: reset to memAddr<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           166   1.222   2.367  reset_IBUF (reset_IBUF)
+     LUT5:I0->O            5   0.203   0.715  LogicCtrl/Mmux_RtSrcReg11 (RtSrcReg)
+     LUT6:I5->O           17   0.205   1.132  ExStage/regfile/out11_1 (ExStage/regfile/out11)
+     LUT3:I1->O            3   0.203   0.650  ExStage/aluSrcbMUX/Mmux_out81 (ExStage/ALUMuxOUT<16>)
+     DSP48A1:B16->P47     18   4.394   1.049  ExStage/alu/Mmult_n0036 (ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  ExStage/alu/Mmult_n00361 (ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
+     DSP48A1:PCIN47->P14    2   2.264   0.845  ExStage/alu/Mmult_n00362 (ExStage/alu/n0036<31>)
+     LUT6:I3->O            1   0.205   0.808  ExStage/memSrcMUX/Mmux_out2510 (ExStage/memSrcMUX/Mmux_out259)
+     LUT6:I3->O            1   0.205   0.579  ExStage/memSrcMUX/Mmux_out2512 (memAddr_31_OBUF)
+     OBUF:I->O                 2.571          memAddr_31_OBUF (memAddr<31>)
+    ----------------------------------------
+    Total                     22.306ns (14.161ns logic, 8.145ns route)
+                                       (63.5% logic, 36.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   19.405|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.54 secs
+ 
+--> 
+
+Total memory usage is 263432 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    8 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

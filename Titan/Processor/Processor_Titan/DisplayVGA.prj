@@ -1,0 +1,4 @@
+verilog work "vgaControl.v"
+verilog work "CharacterROM.v"
+verilog work "CharacterDisplayRAM.v"
+verilog work "DisplayVGA.v"
