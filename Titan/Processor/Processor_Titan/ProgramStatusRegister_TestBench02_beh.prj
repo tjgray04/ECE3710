@@ -1,4 +1,0 @@
-verilog work "ZeroPad.v"
-verilog work "ProgramStatusRegister.v"
-verilog work "ProgramStatusRegister_TestBench02.v"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,3 +1,0 @@
-verilog isim_temp "InstructionDecoder.v"
-verilog isim_temp "InstructionDecoder_TestBench.v"
-verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

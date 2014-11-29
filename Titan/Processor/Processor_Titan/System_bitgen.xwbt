@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.ncd
-OUTFILE=C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.bit
-FAMILY=Spartan6
-PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan
-LICENSE=WebPack
-USER_INFO=176175080_0_0_415

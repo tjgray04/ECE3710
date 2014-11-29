@@ -1,6 +1,0 @@
-verilog isim_temp "vgaControl.v"
-verilog isim_temp "CharacterROM.v"
-verilog isim_temp "CharacterDisplayRAM.v"
-verilog isim_temp "DisplayVGA.v"
-verilog isim_temp "DisplayVGA_TestBench.v"
-verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
