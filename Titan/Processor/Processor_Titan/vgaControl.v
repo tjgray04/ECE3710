@@ -92,7 +92,7 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 							vSync <= 0;
 						end
 					// if vCount is 521 lines
-					else if(vCount >= 12'd520)
+					else if(vCount > 12'd520)
 						begin
 							vCount <= 0;
 							vPixel <= 0;
