@@ -26,10 +26,10 @@ str,r11,r18,0,				//store the glyph index into the glyph address of r18
 
 addi,r4,r0,25000,			//r4 = 0 + 25000
 
-subi,r11,r11,1,				// subtract 1 from the glyph to decrease the glyh index
-cmp,x,r11,r0,				//check to see if all glyphs were drawn.
-bne,pause:,				//If not continue
-addi,r11,r0,32,			//start glpyh indexing over.
+//subi,r11,r11,1,				// subtract 1 from the glyph to decrease the glyh index
+//cmp,x,r11,r0,				//check to see if all glyphs were drawn.
+//bne,pause:,				//If not continue
+//addi,r11,r0,32,			//start glpyh indexing over.
 
 pause:
 cmp,x,r4,r0,		//check to see if the counter is 0.
