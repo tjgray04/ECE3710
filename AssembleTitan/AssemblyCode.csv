@@ -7,9 +7,15 @@ addi,r12,r0,100,			//r12 = 100, a glyph location to write to
 addi,r13,r12,VGABaseAddr,	//add r12 to the base address and store it in r13 as a location to write to
 addi,r11,r0,32,			 	//Store the glyph index into r11
 str,r11,r13,0,				//store the value of the glyph index in r11 in to the glyph location of r13
+addi,r23,r0,4799
 
 //Game Loop
 loop:
+cmp,x,r12,r23,			//check to see if we have reached the final indexing position
+bne,continue:,
+addi,r12,r0,100,		//If we have reached the final position we want to reset back to 100.
+
+continue:
 addi,r17,r12,0,				//add r12 to r17, so r17 starts at 100
 addi,r18,r17,VGABaseAddr,	//add r17 to the base address for VGA and store it into r18 as the new location to write to
 addi,r12,r12,1,				//increment the glyph location to write to
@@ -18,7 +24,12 @@ addi,r13,r12,VGABaseAddr,	//add r12 to the base address for VGA and store it int
 str,r11,r13,0,				//store the glyph index into the glyph address of r13
 str,r11,r18,0,				//store the glyph index into the glyph address of r18
 
-addi,r4,r0,131071,			//r4 = 0 + 1000
+addi,r4,r0,25000,			//r4 = 0 + 25000
+
+subi,r11,r11,1,				// subtract 1 from the glyph to decrease the glyh index
+cmp,x,r11,r0,				//check to see if all glyphs were drawn.
+bne,pause:,				//If not continue
+addi,r11,r0,32,			//start glpyh indexing over.
 
 pause:
 cmp,x,r4,r0,		//check to see if the counter is 0.
