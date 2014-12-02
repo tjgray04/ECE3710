@@ -34,7 +34,7 @@
 module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 							 (input clk, reset, branch, jump, jumpRA, PSRcond, PCEn,
 							 input  [27:0] instruction,
-							 input  [WIDTH-1:0] immediate, RaData,
+							 input  [WIDTH-1:0] immediate, RsData,
 							 output [WIDTH-1:0] returnAddr,
 							 output reg [WIDTH-1:0] PC);
 
@@ -61,7 +61,7 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 	// jump mux
 	Mux jumpMux(.d0(PC2), .d1(JumpImm), .select(jump), .out(PC3));
 	// jumpRA mux
-	Mux jumpRAMux(.d0(PC3), .d1(RaData), .select(jumpRA), .out(PC4));
+	Mux jumpRAMux(.d0(PC3), .d1(RsData), .select(jumpRA), .out(PC4));
 	// If we enabled, advanced to the next state, else, keep the current state
 	assign PC_Next = PCEn ? PC4 : PC;
 	

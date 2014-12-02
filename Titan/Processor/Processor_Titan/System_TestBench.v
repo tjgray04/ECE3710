@@ -27,6 +27,7 @@ module System_TestBench;
 	// Inputs
 	reg clk;
 	reg reset;
+	reg NESinputData;
 
 	// Outputs
 	wire hSync;
@@ -36,7 +37,8 @@ module System_TestBench;
 	// Instantiate the Unit Under Test (UUT)
 	System uut (
 		.clk(clk), 
-		.reset(reset), 
+		.reset(reset),
+		.NESinputData(NESinputData),		
 		.hSync(hSync), 
 		.vSync(vSync), 
 		.rgb(rgb)
@@ -46,6 +48,7 @@ module System_TestBench;
 		// Initialize Inputs
 		clk = 0;
 		reset = 1;
+		NESinputData = 0;
 
 		// Wait 100 ns for global reset to finish
 		#10;

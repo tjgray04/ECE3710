@@ -50,13 +50,12 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 		input [ALUOPBITS-1:0] aluop,//00
 		input [WIDTH-1:0] memControllerData,
 		output [WIDTH-1:0] immediateExt,
-		output [WIDTH-1:0] RaData,
 		output [REGBITS-1:0] PSRwrite,
-		output [WIDTH-1:0] memAddr, memWriteData
+		output [WIDTH-1:0] memAddr, memWriteData, RsData
 		);
 	
 	// Declare internal wires/bus
-	wire [WIDTH-1:0] RsData, RtData, ALUMuxOUT, ShiftMuxOUT;
+	wire [WIDTH-1:0] RtData, ALUMuxOUT, ShiftMuxOUT;
 	wire [WIDTH-1:0] ShiftDataOUT, ALUDataOUT, Data_2_dataRAM, Data_2_RegFile, data_2_writeData, writeData;
 	wire [REGBITS-1:0] RtReg, PSRsel;
 	
@@ -74,7 +73,7 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*	output: RaData, return address for Program Counter
 	*/
 	RegFile regfile(.clk(~clk), .regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .Rs(Rs),	.Rt(RtReg),
-						 .Rdest(Rdest), .writeData(writeData), .RsData(RsData), .RtData(RtData), .RaData(RaData));
+						 .Rdest(Rdest), .writeData(writeData), .RsData(RsData), .RtData(RtData));
 	
 	/* This is an output line to go to the meory controller
 	*/

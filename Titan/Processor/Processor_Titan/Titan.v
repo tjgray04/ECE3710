@@ -30,7 +30,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 		output writeEn, enRAM
 	);
 
-	wire [WIDTH-1:0] instruction, immediateExt, RaData, returnAddr, PCadr,PSRcondExt;
+	wire [WIDTH-1:0] instruction, immediateExt, RsData, returnAddr, PCadr,PSRcondExt;
 	wire [ALUOPBITS-1:0] aluop;
 	wire [OPBITS-1:0] opCode;
 	wire [FUNCTBITS-1:0] functCode;
@@ -52,7 +52,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*	output: PC, Program Counter address
 	*/
 	ProgramCounter PC(.clk(clk), .reset(reset), .branch(branch), .jump(jump), .jumpRA(jumpRA), 
-							.PSRcond(PSRcond), .instruction(instruction[27:0]), .immediate(immediateExt), .RaData(RaData),
+							.PSRcond(PSRcond), .instruction(instruction[27:0]), .immediate(immediateExt), .RsData(RsData),
 							.returnAddr(returnAddr), .PC(PCadr), .PCEn(PCEn));
 	
 	/* Instantiate Memory Blocks - InstructionROM
@@ -93,7 +93,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	ExecutionStage ExStage(.clk(clk), .reset(reset), .aluSrcb(aluSrcb), .shiftSrc(shiftSrc), .memSrc(memSrc),
 		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), /*.opCode(opCode), .functCode(functCode),*/ .RtSrcReg(RtSrcReg), .wbPSR(wbPSR), 
 		.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate), .returnAddr(returnAddr), .wbSrc(wbSrc), 
-		.PSRcondExt(PSRcondExt), .aluop(aluop), .shiftType(shiftType), .immediateExt(immediateExt), .RaData(RaData), .PSRwrite(PSRwrite),
+		.PSRcondExt(PSRcondExt), .aluop(aluop), .shiftType(shiftType), .immediateExt(immediateExt), .RsData(RsData), .PSRwrite(PSRwrite),
 		.memControllerData(memControllerData), .memAddr(memAddr), .memWriteData(memWriteData));
 	
 	/* Instantiate Logic Controller	

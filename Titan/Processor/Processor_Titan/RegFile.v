@@ -34,14 +34,13 @@
 *	output: RaData, return address for Program Counter
 */
 module RegFile#(parameter REGBITS = 5, WIDTH = 32)(
-		input clk, regWriteEn, RaWriteEn,
+		input clk, regWriteEn, RaWriteEn, //jumpRA,
 		input[REGBITS-1:0] Rs,			//left argument
 		input[REGBITS-1:0] Rt,			//right argument
 		input[REGBITS-1:0] Rdest,		//write destination
 		input[WIDTH-1:0] writeData,   //data to be written back to a register
 		output [WIDTH-1:0] RsData,
-		output [WIDTH-1:0] RtData,
-		output [WIDTH-1:0] RaData
+		output [WIDTH-1:0] RtData
     );
 	
 	parameter [REGBITS-1:0] RA = 5'd31; //Return address register is RAM[31]
@@ -60,12 +59,9 @@ module RegFile#(parameter REGBITS = 5, WIDTH = 32)(
 		else if(RaWriteEn)
 			RAM[RA] <= writeData;
 	end
-
-
-
-assign RsData = Rs ? RAM[Rs] : 0;
-assign RtData = Rt ? RAM[Rt] : 0;
-//assign RaData = 0;
-assign RaData = RAM[RA];
+	
+	// Just read out the data
+	assign RsData = Rs ? RAM[Rs] : 0;
+	assign RtData = Rt ? RAM[Rt] : 0;
 
 endmodule

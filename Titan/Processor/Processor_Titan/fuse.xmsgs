@@ -38,5 +38,8 @@
 <msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 81: Parameter declaration becomes local in <arg fmt="%s" index="1">LogicController</arg> with formal parameter declaration list
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System_TestBench.v" Line 37: Port <arg fmt="%s" index="1">NESinputData</arg> is not connected to this instance
+</msg>
+
 </messages>
 
