@@ -3,14 +3,14 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh1.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="SystemControllerIntegration_TestBench" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="46" />
+   <WVObjectSize size="48" />
    <wvobject fp_name="/SystemControllerIntegration_TestBench/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -192,6 +192,10 @@
       <obj_property name="ElementShortName">vSync</obj_property>
       <obj_property name="ObjectShortName">vSync</obj_property>
    </wvobject>
+   <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/memController/vgaData_wrEn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vgaData_wrEn</obj_property>
+      <obj_property name="ObjectShortName">vgaData_wrEn</obj_property>
+   </wvobject>
    <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/dispVGA/charDispRAM/writeData" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">writeData[6:0]</obj_property>
       <obj_property name="ObjectShortName">writeData[6:0]</obj_property>
@@ -205,6 +209,11 @@
    <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/dispVGA/charDispRAM/outputCPU" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">outputCPU[6:0]</obj_property>
       <obj_property name="ObjectShortName">outputCPU[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/memController/vgaData_IN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">vgaData_IN[6:0]</obj_property>
+      <obj_property name="ObjectShortName">vgaData_IN[6:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/dispVGA/charDispRAM/outputVGA" type="array" db_ref_id="1">

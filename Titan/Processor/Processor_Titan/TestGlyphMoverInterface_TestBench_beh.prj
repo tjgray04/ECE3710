@@ -1,8 +1,0 @@
-verilog work "vgaControl.v"
-verilog work "CharacterROM.v"
-verilog work "CharacterDisplayRAM.v"
-verilog work "TestGlyphMover.v"
-verilog work "DisplayVGA.v"
-verilog work "TestGlyphMoverInterface.v"
-verilog work "TestGlyphMoverInterface_TestBench.v"
-verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

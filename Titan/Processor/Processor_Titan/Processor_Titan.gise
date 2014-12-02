@@ -143,7 +143,9 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="System.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="System.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="System.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SystemControllerIntegration_TestBench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SystemControllerIntegration_TestBench_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="SystemControllerIntegration_TestBench_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SystemControllerIntegration_TestBench_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="System_TestBench_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="System_TestBench_stx_beh.prj"/>
@@ -184,9 +186,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="TestGlyphMoverInterface.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="TestGlyphMoverInterface.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="TestGlyphMoverInterface.xst"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TestGlyphMoverInterface_TestBench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="TestGlyphMoverInterface_TestBench_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="TestGlyphMoverInterface_TestBench_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="TestGlyphMoverInterface_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="TestGlyphMoverInterface_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="TestGlyphMoverInterface_map.map" xil_pn:subbranch="Map"/>
@@ -266,11 +266,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1417479539" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1417479539">
+    <transform xil_pn:end_ts="1417483541" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1417483541">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417482529" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1417482529">
+    <transform xil_pn:end_ts="1417483542" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1417483541">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -325,19 +325,19 @@
       <outfile xil_pn:name="vgaControl_TestBench.v"/>
       <outfile xil_pn:name="vga_Control_TestBenchM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1417479621" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="4473170805248415348" xil_pn:start_ts="1417479621">
+    <transform xil_pn:end_ts="1417483542" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6149391708259591907" xil_pn:start_ts="1417483542">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417479621" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="4741620745562183218" xil_pn:start_ts="1417479621">
+    <transform xil_pn:end_ts="1417483542" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7650743676947473569" xil_pn:start_ts="1417483542">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417479539" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4751532117924283682" xil_pn:start_ts="1417479539">
+    <transform xil_pn:end_ts="1417483542" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="4751532117924283682" xil_pn:start_ts="1417483542">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417482529" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1417482529">
+    <transform xil_pn:end_ts="1417483542" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1417483542">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -393,7 +393,7 @@
       <outfile xil_pn:name="vgaControl_TestBench.v"/>
       <outfile xil_pn:name="vga_Control_TestBenchM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1417482532" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-8550101045892556633" xil_pn:start_ts="1417482529">
+    <transform xil_pn:end_ts="1417483546" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1446140294608778171" xil_pn:start_ts="1417483542">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -402,21 +402,21 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TestGlyphMoverInterface_TestBench_beh.prj"/>
-      <outfile xil_pn:name="TestGlyphMoverInterface_TestBench_isim_beh.exe"/>
+      <outfile xil_pn:name="SystemControllerIntegration_TestBench_beh.prj"/>
+      <outfile xil_pn:name="SystemControllerIntegration_TestBench_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1417482532" xil_pn:in_ck="-6893969228478278490" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="6511592207992430506" xil_pn:start_ts="1417482532">
+    <transform xil_pn:end_ts="1417485238" xil_pn:in_ck="-6893969228478278490" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5527096037533788120" xil_pn:start_ts="1417485237">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="TestGlyphMoverInterface_TestBench_isim_beh.wdb"/>
+      <outfile xil_pn:name="SystemControllerIntegration_TestBench_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
@@ -454,7 +454,9 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="DisplayVGA.ngr"/>
       <outfile xil_pn:name="TestGlyphMoverInterface.lso"/>
       <outfile xil_pn:name="TestGlyphMoverInterface.ngc"/>
@@ -463,7 +465,6 @@
       <outfile xil_pn:name="TestGlyphMoverInterface.stx"/>
       <outfile xil_pn:name="TestGlyphMoverInterface.syr"/>
       <outfile xil_pn:name="TestGlyphMoverInterface.xst"/>
-      <outfile xil_pn:name="TestGlyphMoverInterface_TestBench_beh.prj"/>
       <outfile xil_pn:name="TestGlyphMoverInterface_xst.xrpt"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
