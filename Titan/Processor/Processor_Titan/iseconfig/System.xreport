@@ -2,8 +2,8 @@
 <report-views version="2.0" >
  <header>
   <ImplementationReportsDirectory>C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan\</ImplementationReportsDirectory>
-  <ModuleName>TestGlyphMoverInterface</ModuleName>
-  <DateModified>2014-12-01T15:58:37</DateModified>
+  <ModuleName>System</ModuleName>
+  <DateModified>2014-12-02T14:47:29</DateModified>
   <SavedFilePath>C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/iseconfig/System.xreport</SavedFilePath>
   <DateInitialized>2014-12-01T15:58:36</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>

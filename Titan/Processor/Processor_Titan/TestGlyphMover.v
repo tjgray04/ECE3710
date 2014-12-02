@@ -64,43 +64,106 @@ end
 //Next state block
 always@(*)
 begin
-	if(reset)
-	 begin
-		NS <= RESET;
-	 end
-	else
-	 begin
-		case(PS)
-			RESET: NS <= FETCH;
-			FETCH: NS <= DRAWOVER;
-			DRAWOVER: 
-						begin
-						if(moved)
-							NS <= DRAWNEW;
-						 else
-							NS <= FETCH;
-						end
-			DRAWNEW: NS <= WAIT;
-			WAIT: begin
-					if(moveEn)
+	case(PS)
+		RESET: NS <= FETCH;
+		FETCH: NS <= DRAWOVER;
+		DRAWOVER: 
+					begin
+					if(moved)
+						NS <= DRAWNEW;
+					 else
 						NS <= FETCH;
-					else
-						NS <= WAIT;
 					end
-		endcase
-	 end
+		DRAWNEW: NS <= WAIT;
+		WAIT: begin
+				if(moveEn)
+					NS <= FETCH;
+				else
+					NS <= WAIT;
+				end
+		default:
+				begin
+				NS <= RESET;
+				end
+	endcase
 end
 
-//Make the block move
-always@(PS)
+//Sequential outputs
+always@(posedge clk)
 begin
 	if(reset)
 	 begin
 		glyphPos <= 13'd2439;
+		index <= 0;
+	 end
+	else
+	 begin
+		case(PS)
+		RESET:
+					begin
+					glyphPos <= 13'd2439;
+					index <= 0;
+					end
+		FETCH:
+					begin
+					glyphPos <= glyphPos;
+					index <= VGAdataIN;
+					end
+		DRAWOVER:
+					begin
+					if(bR)
+					 begin
+						glyphPos <= glyphPos + 1'b1;
+						index <= index;
+					 end
+					else if(bL)
+					 begin
+						glyphPos <= glyphPos - 1'b1;
+						index <= index;
+					 end
+					else if(bU)
+					 begin
+						glyphPos <= trunc_14_to_13(glyphPos - 80);
+						index <= index;
+					 end
+					else if(bD)
+					 begin
+						glyphPos <= trunc_32_to_13(glyphPos + 80);
+						index <= index;
+					 end
+					else
+					 begin
+						glyphPos <= glyphPos;
+						index <= index;
+					 end
+					end
+		DRAWNEW:
+					begin
+					glyphPos <= glyphPos;
+					index <= index;
+					end
+		WAIT:
+					begin
+					glyphPos <= glyphPos;
+					index <= index;
+					end
+		default:
+					begin
+					glyphPos <= glyphPos;
+					index <= index;
+					end
+	endcase
+	 end
+end
+
+//Make the block move
+always@(*)
+begin
+	if(reset)
+	 begin
 		VGAwriteEn <= 0;
 		addr <= 0;
 		writeData <= 0;
-		index <= 0;
 		moved <= 0;
 		countEn <= 0;
 	 end
@@ -109,21 +172,17 @@ begin
 	case(PS)
 		RESET:
 					begin
-					glyphPos <= 13'd2439;
 					VGAwriteEn <= 0;
 					addr <= 0;
 					writeData <= 0;
-					index <= 0;
 					moved <= 0;
 					countEn <= 0;
 					end
 		FETCH:
 					begin
-					glyphPos <= glyphPos;
 					VGAwriteEn <= 0;
 					addr <= glyphPos;
 					writeData <= 0;
-					index <= VGAdataIN;
 					moved <= 0;
 					countEn <= 0;
 					end
@@ -131,88 +190,74 @@ begin
 					begin
 					if(bR)
 					 begin
-						glyphPos <= glyphPos + 1'b1;
 						VGAwriteEn <= 1'b1;
 						addr <= glyphPos;
 						writeData <= 0;
-						index <= index;
 						moved <= 1'b1;
 						countEn <= 0;
 					 end
 					else if(bL)
 					 begin
-						glyphPos <= glyphPos - 1'b1;
 						VGAwriteEn <= 1'b1;
 						addr <= glyphPos;
 						writeData <= 0;
-						index <= index;
 						moved <= 1'b1;
 						countEn <= 0;
 					 end
 					else if(bU)
 					 begin
-						glyphPos <= trunc_14_to_13(glyphPos + 80);
 						VGAwriteEn <= 1'b1;
 						addr <= glyphPos;
 						writeData <= 0;
-						index <= index;
 						moved <= 1'b1;
 						countEn <= 0;
 					 end
 					else if(bD)
 					 begin
-						glyphPos <= trunc_32_to_13(glyphPos - 80);
 						VGAwriteEn <= 1'b1;
 						addr <= glyphPos;
 						writeData <= 0;
-						index <= index;
 						moved <= 1'b1;
 						countEn <= 0;
 					 end
 					else
 					 begin
-						glyphPos <= glyphPos;
 						VGAwriteEn <= 1'b0;
 						addr <= glyphPos;
 						writeData <= 0;
-						index <= index;
 						moved <= 1'b0;
 						countEn <= 0;
 					 end
 					end
 		DRAWNEW:
 					begin
-					glyphPos <= glyphPos;
 					VGAwriteEn <= 1'b1;
 					addr <= glyphPos;
 					writeData <= 6'd32;
-					index <= index;
 					moved <= 1'b0;
 					countEn <= 0;
 					end
 		WAIT:
 					begin
-					glyphPos <= glyphPos;
 					VGAwriteEn <= 1'b0;
 					addr <= glyphPos;
 					writeData <= index;
-					index <= index;
 					moved <= 1'b0;
 					countEn <= 1;
 					end
 		default:
 					begin
-					glyphPos <= glyphPos;
 					VGAwriteEn <= 1'b0;
 					addr <= glyphPos;
 					writeData <= index;
-					index <= index;
 					moved <= 1'b0;
 					countEn <= 0;
 					end
 	endcase
 	end
 end
+
+
 
 //Wait loop
 always@(posedge clk)
@@ -224,7 +269,7 @@ begin
 	 end
 	else
 	 begin
-		if(waitCount == 27'd100000000)
+		if(waitCount == 27'd16666667)
 		 begin
 			moveEn <= 1'b1;
 			waitCount <= 0;
