@@ -1,0 +1,52 @@
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestGlyphMoverInterface.ucf -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ngd TestGlyphMoverInterface.pcf 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestGlyphMoverInterface.ucf -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ngd TestGlyphMoverInterface.pcf 
+par -w -intstyle ise -ol high -mt off TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ncd TestGlyphMoverInterface.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestGlyphMoverInterface.twx TestGlyphMoverInterface.ncd -o TestGlyphMoverInterface.twr TestGlyphMoverInterface.pcf -ucf TestGlyphMoverInterface.ucf 
+bitgen -intstyle ise -f TestGlyphMoverInterface.ut TestGlyphMoverInterface.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestGlyphMoverInterface.ucf -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ngd TestGlyphMoverInterface.pcf 
+par -w -intstyle ise -ol high -mt off TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ncd TestGlyphMoverInterface.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestGlyphMoverInterface.twx TestGlyphMoverInterface.ncd -o TestGlyphMoverInterface.twr TestGlyphMoverInterface.pcf -ucf TestGlyphMoverInterface.ucf 
+bitgen -intstyle ise -f TestGlyphMoverInterface.ut TestGlyphMoverInterface.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestGlyphMoverInterface.ucf -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ngd TestGlyphMoverInterface.pcf 
+par -w -intstyle ise -ol high -mt off TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ncd TestGlyphMoverInterface.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestGlyphMoverInterface.twx TestGlyphMoverInterface.ncd -o TestGlyphMoverInterface.twr TestGlyphMoverInterface.pcf -ucf TestGlyphMoverInterface.ucf 
+bitgen -intstyle ise -f TestGlyphMoverInterface.ut TestGlyphMoverInterface.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestGlyphMoverInterface.ucf -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ngd TestGlyphMoverInterface.pcf 
+par -w -intstyle ise -ol high -mt off TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ncd TestGlyphMoverInterface.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestGlyphMoverInterface.twx TestGlyphMoverInterface.ncd -o TestGlyphMoverInterface.twr TestGlyphMoverInterface.pcf -ucf TestGlyphMoverInterface.ucf 
+bitgen -intstyle ise -f TestGlyphMoverInterface.ut TestGlyphMoverInterface.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestGlyphMoverInterface.ucf -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ngd TestGlyphMoverInterface.pcf 
+par -w -intstyle ise -ol high -mt off TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ncd TestGlyphMoverInterface.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestGlyphMoverInterface.twx TestGlyphMoverInterface.ncd -o TestGlyphMoverInterface.twr TestGlyphMoverInterface.pcf -ucf TestGlyphMoverInterface.ucf 
+bitgen -intstyle ise -f TestGlyphMoverInterface.ut TestGlyphMoverInterface.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestGlyphMoverInterface.ucf -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ngd TestGlyphMoverInterface.pcf 
+par -w -intstyle ise -ol high -mt off TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ncd TestGlyphMoverInterface.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestGlyphMoverInterface.twx TestGlyphMoverInterface.ncd -o TestGlyphMoverInterface.twr TestGlyphMoverInterface.pcf -ucf TestGlyphMoverInterface.ucf 
+bitgen -intstyle ise -f TestGlyphMoverInterface.ut TestGlyphMoverInterface.ncd 
+xst -intstyle ise -ifn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.xst" -ofn "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc TestGlyphMoverInterface.ucf -p xc6slx16-csg324-3 TestGlyphMoverInterface.ngc TestGlyphMoverInterface.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ngd TestGlyphMoverInterface.pcf 
+par -w -intstyle ise -ol high -mt off TestGlyphMoverInterface_map.ncd TestGlyphMoverInterface.ncd TestGlyphMoverInterface.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml TestGlyphMoverInterface.twx TestGlyphMoverInterface.ncd -o TestGlyphMoverInterface.twr TestGlyphMoverInterface.pcf -ucf TestGlyphMoverInterface.ucf 
+bitgen -intstyle ise -f TestGlyphMoverInterface.ut TestGlyphMoverInterface.ncd 

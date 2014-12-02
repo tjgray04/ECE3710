@@ -62,7 +62,7 @@ module SystemControllerIntegration_TestBench;
         
 		// Add stimulus here
 		//Make controller always turn right
-		NESinputData = 1'b1;
+		NESinputData = 1'b0;
 	end
       
 always #1 clk = ~clk;

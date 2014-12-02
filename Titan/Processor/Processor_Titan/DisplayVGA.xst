@@ -1,9 +1,6 @@
-set -tmpdir "xst/projnav.tmp"
-set -xsthdpdir "xst"
-run
--ifn DisplayVGA.prj
--ofn DisplayVGA
--ofmt NGC
+set -tmpdir "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/xst"
+run -compileonly yes
 -p xc6slx16-3-csg324
 -top DisplayVGA
 -opt_mode Speed
@@ -50,3 +47,4 @@ run
 -iob Auto
 -equivalent_register_removal YES
 -slice_utilization_ratio_maxmargin 5
+-ifn DisplayVGA.prj

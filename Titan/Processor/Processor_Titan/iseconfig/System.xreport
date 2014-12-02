@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <ImplementationReportsDirectory>C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan\</ImplementationReportsDirectory>
-  <ModuleName>System</ModuleName>
-  <DateModified>2014-11-25T09:50:34</DateModified>
-  <SavedFilePath>C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/iseconfig/System.xreport</SavedFilePath>
-  <DateInitialized>2014-11-18T16:09:40</DateInitialized>
+  <ImplementationReportsDirectory>C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan\</ImplementationReportsDirectory>
+  <ModuleName>TestGlyphMoverInterface</ModuleName>
+  <DateModified>2014-12-01T15:58:37</DateModified>
+  <SavedFilePath>C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/iseconfig/System.xreport</SavedFilePath>
+  <DateInitialized>2014-12-01T15:58:36</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
-  <SummaryTimeStamp>2014-11-25T09:48:59</SummaryTimeStamp>
+  <SummaryTimeStamp>2014-11-25T11:15:06</SummaryTimeStamp>
  </header>
 </report-views>

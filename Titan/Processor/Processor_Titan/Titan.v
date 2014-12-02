@@ -60,7 +60,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*  input: PCadr from Program Counter
 	*  output: instruction from memory
 	*/
-	InstructionROM instROM(/*.clk(clk), .enable(enROM),*/ .PCadr(PCadr), .instruction(instruction));
+	InstructionROM instROM(/*.clk(clk), .enable(enROM),*/ .PCadr(PCadr[11:0]), .instruction(instruction));
 	
 	/* Instantiate an Instruction Decoder
 	*	input: instruction, instructionROM

@@ -1,0 +1,30 @@
+Command line:
+   TestGlyphMoverInterface_TestBench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56668
+
+Mon Dec 01 18:08:54 2014
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 667.415 Meg
+
+ Total Signals          : 67
+ Total Nets             : 119
+ Total Signal Drivers   : 26
+ Total Blocks           : 11
+ Total Primitive Blocks : 5
+ Total Processes        : 38
+ Total Traceable Variables  : 63
+ Total Scalar Nets and Variables : 67007
+Total Line Count : 245
+Total Line Count : 245
+
+ Total Simulation Time: 8.67365 sec
+
+ Current Memory Usage: 667.415 Meg
+
+Mon Dec 01 18:11:17 2014
+

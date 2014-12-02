@@ -1,0 +1,959 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: TestGlyphMoverInterface.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "TestGlyphMoverInterface.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "TestGlyphMoverInterface"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : TestGlyphMoverInterface
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v" into library work
+Parsing module <vgaControl>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" into library work
+Parsing module <CharacterROM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
+Parsing module <CharacterDisplayRAM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" into library work
+Parsing module <TestGlyphMover>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
+Parsing module <DisplayVGA>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMoverInterface.v" into library work
+Parsing module <TestGlyphMoverInterface>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <TestGlyphMoverInterface>.
+
+Elaborating module <TestGlyphMover>.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 97: Signal <reset> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 122: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 124: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 126: Signal <VGAdataIN> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 132: Signal <bR> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 134: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 136: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 138: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 142: Signal <bL> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 144: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 146: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 148: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 152: Signal <bU> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 154: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 156: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 158: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 162: Signal <bD> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 164: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 166: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 168: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 174: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 176: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 178: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 185: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 187: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 189: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 195: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 197: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 198: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 199: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 205: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 207: Signal <glyphPos> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 208: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 209: Signal <index> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+Elaborating module <DisplayVGA>.
+
+Elaborating module <vgaControl>.
+
+Elaborating module <CharacterDisplayRAM>.
+Reading initialization file \"mTestRAM.dat\".
+
+Elaborating module <CharacterROM>.
+Reading initialization file \"TestROM.dat\".
+WARNING:HDLCompiler:1670 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal <charROM> in initial block is partially initialized.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <TestGlyphMoverInterface>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMoverInterface.v".
+    Summary:
+	no macro.
+Unit <TestGlyphMoverInterface> synthesized.
+
+Synthesizing Unit <TestGlyphMover>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v".
+        FETCH = 3'b000
+        DRAWOVER = 3'b001
+        DRAWNEW = 3'b010
+        RESET = 3'b011
+        WAIT = 3'b100
+    Found 1-bit register for signal <moveEn>.
+    Found 27-bit register for signal <waitCount>.
+    Found 3-bit register for signal <PS>.
+    Found 13-bit subtractor for signal <glyphPos[12]_GND_2_o_sub_12_OUT> created at line 144.
+    Found 13-bit adder for signal <glyphPos[12]_GND_2_o_add_10_OUT> created at line 134.
+    Found 13-bit adder for signal <glyphPos[12]_GND_2_o_add_12_OUT> created at line 154.
+    Found 27-bit adder for signal <waitCount[26]_GND_2_o_add_51_OUT> created at line 237.
+    Found 13-bit subtractor for signal <GND_2_o_GND_2_o_sub_14_OUT<12:0>> created at line 164.
+    Found 8x4-bit Read Only RAM for signal <_n0158>
+WARNING:Xst:737 - Found 1-bit latch for signal <NS<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <NS<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <glyphPos<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <index<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <index<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <index<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <index<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <index<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <index<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <index<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <NS<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  31 D-type flip-flop(s).
+	inferred  23 Latch(s).
+	inferred  45 Multiplexer(s).
+Unit <TestGlyphMover> synthesized.
+
+Synthesizing Unit <DisplayVGA>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v".
+WARNING:Xst:647 - Input <addrCPU<13:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <DisplayVGA> synthesized.
+
+Synthesizing Unit <vgaControl>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v".
+    Found 12-bit register for signal <hCount>.
+    Found 12-bit register for signal <vCount>.
+    Found 10-bit register for signal <hPixel>.
+    Found 9-bit register for signal <vPixel>.
+    Found 1-bit register for signal <vSync>.
+    Found 1-bit register for signal <bright>.
+    Found 1-bit register for signal <hSync>.
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <clk25M>.
+    Found 12-bit adder for signal <hCount[11]_GND_28_o_add_0_OUT> created at line 51.
+    Found 10-bit adder for signal <hPixel[9]_GND_28_o_add_5_OUT> created at line 67.
+    Found 12-bit adder for signal <vCount[11]_GND_28_o_add_8_OUT> created at line 76.
+    Found 9-bit adder for signal <vPixel[8]_GND_28_o_add_12_OUT> created at line 81.
+    Found 2-bit adder for signal <count[1]_GND_28_o_add_40_OUT> created at line 120.
+    Found 12-bit comparator greater for signal <hCount[11]_GND_28_o_LessThan_2_o> created at line 54
+    Found 12-bit comparator lessequal for signal <n0002> created at line 61
+    Found 12-bit comparator greater for signal <hCount[11]_GND_28_o_LessThan_4_o> created at line 61
+    Found 12-bit comparator greater for signal <n0006> created at line 66
+    Found 12-bit comparator greater for signal <GND_28_o_INV_30_o> created at line 70
+    Found 12-bit comparator lessequal for signal <n0013> created at line 78
+    Found 12-bit comparator greater for signal <vCount[11]_GND_28_o_LessThan_11_o> created at line 78
+    Found 12-bit comparator greater for signal <n0017> created at line 80
+    Found 12-bit comparator greater for signal <vCount[11]_GND_28_o_LessThan_29_o> created at line 90
+    Found 12-bit comparator greater for signal <GND_28_o_vCount[11]_LessThan_30_o> created at line 95
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred  10 Comparator(s).
+	inferred  12 Multiplexer(s).
+Unit <vgaControl> synthesized.
+
+Synthesizing Unit <CharacterDisplayRAM>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v".
+        RAM_WIDTH = 7
+        RAM_ADDR_BITS = 13
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <charDispRAM>, simulation mismatch.
+    Found 4800x7-bit dual-port RAM <Mram_charDispRAM> for signal <charDispRAM>.
+    Found 13-bit adder for signal <vgaAddress> created at line 51.
+    Found 7x6-bit multiplier for signal <n0016> created at line 51.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <CharacterDisplayRAM> synthesized.
+
+Synthesizing Unit <CharacterROM>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v".
+        ROM_WIDTH = 8
+        ROM_ADDR_BITS = 12
+        PIXEL_BITS = 3
+        CHAR_AMNT = 7
+WARNING:Xst:647 - Input <glyphAddr<6:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'charROM', unconnected in block 'CharacterROM', is tied to its initial value.
+    Found 4096x8-bit single-port Read Only RAM <Mram_charROM> for signal <charROM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <CharacterROM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 4096x8-bit single-port Read Only RAM                  : 1
+ 4800x7-bit dual-port RAM                              : 1
+ 8x4-bit single-port Read Only RAM                     : 1
+# Multipliers                                          : 1
+ 7x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 8
+ 10-bit adder                                          : 1
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 1
+ 13-bit addsub                                         : 1
+ 2-bit adder                                           : 1
+ 27-bit adder                                          : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 12
+ 1-bit register                                        : 5
+ 10-bit register                                       : 1
+ 12-bit register                                       : 2
+ 2-bit register                                        : 1
+ 27-bit register                                       : 1
+ 3-bit register                                        : 1
+ 9-bit register                                        : 1
+# Latches                                              : 23
+ 1-bit latch                                           : 23
+# Comparators                                          : 10
+ 12-bit comparator greater                             : 8
+ 12-bit comparator lessequal                           : 2
+# Multiplexers                                         : 58
+ 1-bit 2-to-1 multiplexer                              : 42
+ 10-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 2
+ 14-bit 2-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CharacterDisplayRAM>.
+	Multiplier <Mmult_n0016> in block <CharacterDisplayRAM> and adder/subtractor <Madd_vgaAddress> in block <CharacterDisplayRAM> are combined into a MAC<Maddsub_n0016>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_charDispRAM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4800-word x 7-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <cpuWriteEn>    | high     |
+    |     addrA          | connected to signal <addrCPU>       |          |
+    |     diA            | connected to signal <writeData>     |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4800-word x 7-bit                   |          |
+    |     addrB          | connected to signal <vgaAddress>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CharacterDisplayRAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CharacterROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_charROM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(glyphAddr,vPixel,hPixel)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CharacterROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TestGlyphMover>.
+The following registers are absorbed into counter <waitCount>: 1 register on signal <waitCount>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0158> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <PS>            |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <TestGlyphMover> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vgaControl>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <hPixel>: 1 register on signal <hPixel>.
+Unit <vgaControl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 4096x8-bit single-port distributed Read Only RAM      : 1
+ 4800x7-bit dual-port distributed RAM                  : 1
+ 8x4-bit single-port distributed Read Only RAM         : 1
+# MACs                                                 : 1
+ 7x6-to-13-bit MAC                                     : 1
+# Adders/Subtractors                                   : 4
+ 12-bit adder                                          : 2
+ 13-bit addsub                                         : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 27-bit up counter                                     : 1
+# Registers                                            : 41
+ Flip-Flops                                            : 41
+# Comparators                                          : 10
+ 12-bit comparator greater                             : 8
+ 12-bit comparator lessequal                           : 2
+# Multiplexers                                         : 57
+ 1-bit 2-to-1 multiplexer                              : 42
+ 12-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 2
+ 14-bit 2-to-1 multiplexer                             : 2
+ 7-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <TestGlyphMoverInterface> ...
+
+Optimizing unit <TestGlyphMover> ...
+
+Optimizing unit <vgaControl> ...
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM223> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM224> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM225> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM226> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM227> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM230> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM228> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM229> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM231> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM232> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM233> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM234> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM235> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM236> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM239> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM237> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM238> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM240> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM241> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM242> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM243> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM244> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM245> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM248> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM246> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM247> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM249> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM250> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM251> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM252> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM253> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM254> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM257> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM255> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM256> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM258> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM259> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <dispVGA/charDispRAM/Mram_charDispRAM266> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:2677 - Node <tg/index_6> of sequential type is unconnected in block <TestGlyphMoverInterface>.
+WARNING:Xst:1710 - FF/Latch <dispVGA/vgaCtrl/hCount_11> (without init value) has a constant value of 0 in block <TestGlyphMoverInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/hCount_10> (without init value) has a constant value of 0 in block <TestGlyphMoverInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/vCount_11> (without init value) has a constant value of 0 in block <TestGlyphMoverInterface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/vCount_10> (without init value) has a constant value of 0 in block <TestGlyphMoverInterface>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block TestGlyphMoverInterface, actual ratio is 7.
+FlipFlop tg/PS_0 has been replicated 2 time(s)
+FlipFlop tg/PS_1 has been replicated 2 time(s)
+FlipFlop tg/PS_2 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 82
+ Flip-Flops                                            : 82
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : TestGlyphMoverInterface.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 612
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 44
+#      LUT2                        : 28
+#      LUT3                        : 33
+#      LUT4                        : 27
+#      LUT5                        : 51
+#      LUT6                        : 285
+#      MUXCY                       : 65
+#      MUXF7                       : 3
+#      VCC                         : 1
+#      XORCY                       : 70
+# FlipFlops/Latches                : 104
+#      FDC                         : 24
+#      FDCE                        : 18
+#      FDR                         : 7
+#      FDRE                        : 27
+#      FDS                         : 6
+#      LDC                         : 14
+#      LDP                         : 8
+# RAMS                             : 228
+#      RAM128X1D                   : 222
+#      RAM64X1D                    : 6
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 15
+#      IBUF                        : 5
+#      OBUF                        : 10
+# DSPs                             : 1
+#      DSP48A1                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             104  out of  18224     0%  
+ Number of Slice LUTs:                 1372  out of   9112    15%  
+    Number used as Logic:               472  out of   9112     5%  
+    Number used as Memory:              900  out of   2176    41%  
+       Number used as RAM:              900
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1379
+   Number with an unused Flip Flop:    1275  out of   1379    92%  
+   Number with an unused LUT:             7  out of   1379     0%  
+   Number of fully used LUT-FF pairs:    97  out of   1379     7%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          16
+ Number of bonded IOBs:                  16  out of    232     6%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------------------------+------------------------+-------+
+Clock Signal                                          | Clock buffer(FF name)  | Load  |
+------------------------------------------------------+------------------------+-------+
+clk                                                   | BUFGP                  | 268   |
+tg/PS[2]_GND_6_o_Mux_29_o(tg/PS[2]_GND_6_o_Mux_29_o:O)| NONE(*)(tg/glyphPos_0) | 13    |
+tg/Mram__n01581(tg/Mram__n0158111:O)                  | NONE(*)(tg/index_0)    | 6     |
+tg/Mram__n01583(tg/Mram__n015831:O)                   | NONE(*)(tg/NS_1)       | 3     |
+dispVGA/vgaCtrl/clk25M                                | BUFG                   | 42    |
+------------------------------------------------------+------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.077ns (Maximum Frequency: 196.963MHz)
+   Minimum input arrival time before clock: 8.046ns
+   Maximum output required time after clock: 19.690ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.077ns (frequency: 196.963MHz)
+  Total number of paths / destination ports: 11224 / 2134
+-------------------------------------------------------------------------
+Delay:               5.077ns (Levels of Logic = 3)
+  Source:            tg/PS_0_1 (FF)
+  Destination:       dispVGA/charDispRAM/Mram_charDispRAM1 (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: tg/PS_0_1 to dispVGA/charDispRAM/Mram_charDispRAM1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q             12   0.447   1.137  tg/PS_0_1 (tg/PS_0_1)
+     LUT5:I2->O           25   0.205   1.557  tg/Mmux_addr131 (addr<9>)
+     LUT6:I0->O            1   0.203   0.580  inst_LPM_DECODE61 (N8)
+     LUT6:I5->O            6   0.205   0.744  write_ctrl6 (write_ctrl6)
+     RAM128X1D:WE              0.000          dispVGA/charDispRAM/Mram_charDispRAM7
+    ----------------------------------------
+    Total                      5.077ns (1.060ns logic, 4.017ns route)
+                                       (20.9% logic, 79.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'tg/PS[2]_GND_6_o_Mux_29_o'
+  Clock period: 2.948ns (frequency: 339.201MHz)
+  Total number of paths / destination ports: 169 / 13
+-------------------------------------------------------------------------
+Delay:               2.948ns (Levels of Logic = 15)
+  Source:            tg/glyphPos_0 (LATCH)
+  Destination:       tg/glyphPos_12 (LATCH)
+  Source Clock:      tg/PS[2]_GND_6_o_Mux_29_o falling
+  Destination Clock: tg/PS[2]_GND_6_o_Mux_29_o falling
+
+  Data Path: tg/glyphPos_0 to tg/glyphPos_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDP:G->Q              2   0.498   0.864  tg/glyphPos_0 (tg/glyphPos_0)
+     LUT4:I0->O            1   0.203   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_lut<0> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<0> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<1> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<2> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<3> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<4> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<5> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<6> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<7> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<8> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<9> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<10> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<10>)
+     MUXCY:CI->O           0   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<11> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<11>)
+     XORCY:CI->O           1   0.180   0.580  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_xor<12> (tg/glyphPos[12]_glyphPos[12]_mux_17_OUT<12>)
+     LUT2:I1->O            1   0.205   0.000  tg/Mmux_PS[2]_glyphPos[12]_wide_mux_18_OUT<12>11 (tg/PS[2]_glyphPos[12]_wide_mux_18_OUT<12>)
+     LDC:D                     0.037          tg/glyphPos_12
+    ----------------------------------------
+    Total                      2.948ns (1.504ns logic, 1.444ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dispVGA/vgaCtrl/clk25M'
+  Clock period: 4.963ns (frequency: 201.485MHz)
+  Total number of paths / destination ports: 2136 / 60
+-------------------------------------------------------------------------
+Delay:               4.963ns (Levels of Logic = 3)
+  Source:            dispVGA/vgaCtrl/hCount_2 (FF)
+  Destination:       dispVGA/vgaCtrl/vPixel_8 (FF)
+  Source Clock:      dispVGA/vgaCtrl/clk25M rising
+  Destination Clock: dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: dispVGA/vgaCtrl/hCount_2 to dispVGA/vgaCtrl/vPixel_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.864  dispVGA/vgaCtrl/hCount_2 (dispVGA/vgaCtrl/hCount_2)
+     LUT4:I0->O           16   0.203   1.005  dispVGA/vgaCtrl/GND_28_o_hCount[11]_AND_1_o11 (dispVGA/vgaCtrl/GND_28_o_hCount[11]_AND_1_o1)
+     LUT6:I5->O           11   0.205   0.883  dispVGA/vgaCtrl/_n01485 (dispVGA/vgaCtrl/_n01485)
+     LUT4:I3->O            9   0.205   0.829  dispVGA/vgaCtrl/_n0165_inv5 (dispVGA/vgaCtrl/_n0165_inv)
+     FDCE:CE                   0.322          dispVGA/vgaCtrl/vPixel_1
+    ----------------------------------------
+    Total                      4.963ns (1.382ns logic, 3.581ns route)
+                                       (27.8% logic, 72.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 4363 / 2113
+-------------------------------------------------------------------------
+Offset:              6.956ns (Levels of Logic = 4)
+  Source:            reset (PAD)
+  Destination:       dispVGA/charDispRAM/Mram_charDispRAM1 (RAM)
+  Destination Clock: clk rising
+
+  Data Path: reset to dispVGA/charDispRAM/Mram_charDispRAM1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           145   1.222   2.243  reset_IBUF (reset_IBUF)
+     LUT5:I1->O           25   0.203   1.557  tg/Mmux_addr131 (addr<9>)
+     LUT6:I0->O            1   0.203   0.580  inst_LPM_DECODE61 (N8)
+     LUT6:I5->O            6   0.205   0.744  write_ctrl6 (write_ctrl6)
+     RAM128X1D:WE              0.000          dispVGA/charDispRAM/Mram_charDispRAM7
+    ----------------------------------------
+    Total                      6.956ns (1.833ns logic, 5.123ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'tg/PS[2]_GND_6_o_Mux_29_o'
+  Total number of paths / destination ports: 325 / 26
+-------------------------------------------------------------------------
+Offset:              4.469ns (Levels of Logic = 16)
+  Source:            bR (PAD)
+  Destination:       tg/glyphPos_12 (LATCH)
+  Destination Clock: tg/PS[2]_GND_6_o_Mux_29_o falling
+
+  Data Path: bR to tg/glyphPos_12
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.222   1.233  bR_IBUF (bR_IBUF)
+     LUT3:I0->O            1   0.205   0.579  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_AS_inv2 (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_AS_inv)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<0> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<1> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<2> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<3> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<4> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<5> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<6> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<7> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<8> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<9> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<10> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<10>)
+     MUXCY:CI->O           0   0.019   0.000  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<11> (tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_cy<11>)
+     XORCY:CI->O           1   0.180   0.580  tg/Mmux_glyphPos[12]_glyphPos[12]_mux_17_OUT_rs_xor<12> (tg/glyphPos[12]_glyphPos[12]_mux_17_OUT<12>)
+     LUT2:I1->O            1   0.205   0.000  tg/Mmux_PS[2]_glyphPos[12]_wide_mux_18_OUT<12>11 (tg/PS[2]_glyphPos[12]_wide_mux_18_OUT<12>)
+     LDC:D                     0.037          tg/glyphPos_12
+    ----------------------------------------
+    Total                      4.469ns (2.077ns logic, 2.392ns route)
+                                       (46.5% logic, 53.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'tg/Mram__n01581'
+  Total number of paths / destination ports: 198 / 12
+-------------------------------------------------------------------------
+Offset:              8.046ns (Levels of Logic = 5)
+  Source:            reset (PAD)
+  Destination:       tg/index_0 (LATCH)
+  Destination Clock: tg/Mram__n01581 falling
+
+  Data Path: reset to tg/index_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           145   1.222   2.243  reset_IBUF (reset_IBUF)
+     LUT5:I1->O           48   0.203   1.884  tg/Mmux_addr31 (addr<11>)
+     LUT6:I0->O            1   0.203   0.827  inst_LPM_MUX_111 (inst_LPM_MUX_111)
+     LUT6:I2->O            1   0.203   0.827  inst_LPM_MUX_6 (inst_LPM_MUX_6)
+     LUT6:I2->O            1   0.203   0.000  tg/Mmux_PS[2]_index[6]_wide_mux_22_OUT<0>1 (tg/PS[2]_index[6]_wide_mux_22_OUT<0>)
+     LDC:D                     0.037          tg/index_0
+    ----------------------------------------
+    Total                      8.046ns (2.266ns logic, 5.780ns route)
+                                       (28.2% logic, 71.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'tg/Mram__n01583'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              4.311ns (Levels of Logic = 3)
+  Source:            bL (PAD)
+  Destination:       tg/NS_1 (LATCH)
+  Destination Clock: tg/Mram__n01583 falling
+
+  Data Path: bL to tg/NS_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.222   1.252  bL_IBUF (bL_IBUF)
+     LUT5:I1->O           39   0.203   1.392  tg/PS[2]_NS[2]_wide_mux_5_OUT<1>11 (tg/PS[2]_NS[2]_wide_mux_5_OUT<1>_bdd0)
+     LUT4:I3->O            1   0.205   0.000  tg/PS[2]_NS[2]_wide_mux_5_OUT<1>2 (tg/PS[2]_NS[2]_wide_mux_5_OUT<1>)
+     LDP:D                     0.037          tg/NS_1
+    ----------------------------------------
+    Total                      4.311ns (1.667ns logic, 2.644ns route)
+                                       (38.7% logic, 61.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dispVGA/vgaCtrl/clk25M'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              3.647ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       dispVGA/vgaCtrl/hPixel_9 (FF)
+  Destination Clock: dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: reset to dispVGA/vgaCtrl/hPixel_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           145   1.222   1.995  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.430          dispVGA/vgaCtrl/bright
+    ----------------------------------------
+    Total                      3.647ns (1.652ns logic, 1.995ns route)
+                                       (45.3% logic, 54.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dispVGA/vgaCtrl/clk25M'
+  Total number of paths / destination ports: 43279 / 7
+-------------------------------------------------------------------------
+Offset:              19.690ns (Levels of Logic = 11)
+  Source:            dispVGA/vgaCtrl/vPixel_3 (FF)
+  Destination:       rgb<1> (PAD)
+  Source Clock:      dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: dispVGA/vgaCtrl/vPixel_3 to rgb<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.447   0.773  dispVGA/vgaCtrl/vPixel_3 (dispVGA/vgaCtrl/vPixel_3)
+     DSP48A1:A0->P11      48   4.560   1.884  dispVGA/charDispRAM/Maddsub_n0016 (dispVGA/charDispRAM/vgaAddress<11>)
+     LUT6:I0->O            1   0.203   0.827  inst_LPM_MUX8_122 (inst_LPM_MUX8_122)
+     LUT6:I2->O            1   0.203   0.684  inst_LPM_MUX8_7 (inst_LPM_MUX8_7)
+     LUT6:I4->O           28   0.203   1.579  dispVGA/charDispRAM/vgaAddress<12>11 (dispVGA/outputVGA<1>)
+     LUT6:I1->O            1   0.203   0.684  dispVGA/charROM/Mram_charROM14123_F (N2810)
+     LUT3:I1->O            1   0.203   0.944  dispVGA/charROM/Mram_charROM141231 (dispVGA/charROM/Mram_charROM14122)
+     LUT6:I0->O            1   0.203   0.827  dispVGA/charROM/Mram_charROM141211 (dispVGA/charROM/Mram_charROM141210)
+     LUT5:I1->O            1   0.203   0.924  dispVGA/charROM/Mram_charROM141218 (dispVGA/charROM/Mram_charROM141217)
+     LUT6:I1->O            1   0.203   0.580  dispVGA/charROM/Mram_charROM141234 (dispVGA/color<1>)
+     LUT2:I1->O            1   0.205   0.579  dispVGA/Mmux_rgb21 (rgb_1_OBUF)
+     OBUF:I->O                 2.571          rgb_1_OBUF (rgb<1>)
+    ----------------------------------------
+    Total                     19.690ns (9.407ns logic, 10.283ns route)
+                                       (47.8% logic, 52.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 107 / 5
+-------------------------------------------------------------------------
+Offset:              12.559ns (Levels of Logic = 9)
+  Source:            dispVGA/charDispRAM/Mram_charDispRAM261 (RAM)
+  Destination:       rgb<1> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: dispVGA/charDispRAM/Mram_charDispRAM261 to rgb<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM64X1D:WCLK->DPO    1   0.854   0.580  dispVGA/charDispRAM/Mram_charDispRAM261 (N561)
+     LUT3:I2->O            1   0.205   0.808  inst_LPM_MUX8_8 (inst_LPM_MUX8_8)
+     LUT6:I3->O           28   0.205   1.579  dispVGA/charDispRAM/vgaAddress<12>11 (dispVGA/outputVGA<1>)
+     LUT6:I1->O            1   0.203   0.684  dispVGA/charROM/Mram_charROM14123_F (N2810)
+     LUT3:I1->O            1   0.203   0.944  dispVGA/charROM/Mram_charROM141231 (dispVGA/charROM/Mram_charROM14122)
+     LUT6:I0->O            1   0.203   0.827  dispVGA/charROM/Mram_charROM141211 (dispVGA/charROM/Mram_charROM141210)
+     LUT5:I1->O            1   0.203   0.924  dispVGA/charROM/Mram_charROM141218 (dispVGA/charROM/Mram_charROM141217)
+     LUT6:I1->O            1   0.203   0.580  dispVGA/charROM/Mram_charROM141234 (dispVGA/color<1>)
+     LUT2:I1->O            1   0.205   0.579  dispVGA/Mmux_rgb21 (rgb_1_OBUF)
+     OBUF:I->O                 2.571          rgb_1_OBUF (rgb<1>)
+    ----------------------------------------
+    Total                     12.559ns (5.055ns logic, 7.504ns route)
+                                       (40.2% logic, 59.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+clk                      |    5.077|         |         |         |
+dispVGA/vgaCtrl/clk25M   |    6.802|         |         |         |
+tg/Mram__n01581          |         |    1.564|         |         |
+tg/Mram__n01583          |         |    1.250|         |         |
+tg/PS[2]_GND_6_o_Mux_29_o|         |    5.017|         |         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dispVGA/vgaCtrl/clk25M
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+dispVGA/vgaCtrl/clk25M|    4.963|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock tg/Mram__n01581
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+clk                      |         |         |    6.707|         |
+tg/PS[2]_GND_6_o_Mux_29_o|         |         |    6.041|         |
+-------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock tg/Mram__n01583
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.937|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock tg/PS[2]_GND_6_o_Mux_29_o
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+clk                      |         |         |    2.471|         |
+tg/PS[2]_GND_6_o_Mux_29_o|         |         |    2.948|         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.28 secs
+ 
+--> 
+
+Total memory usage is 261928 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  105 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

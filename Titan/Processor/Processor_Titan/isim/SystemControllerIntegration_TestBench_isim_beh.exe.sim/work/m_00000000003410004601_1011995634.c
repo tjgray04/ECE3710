@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/InstructionROM.v";
+static const char *ng0 = "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/InstructionROM.v";
 static const char *ng1 = "AssemblyCode.dat";
 static int ng2[] = {0, 0};
 static int ng3[] = {2, 0};
@@ -97,7 +97,7 @@ LAB2:    xsi_set_current_line(48, ng0);
     t11 = *((char **)t10);
     t12 = (t0 + 1320U);
     t13 = *((char **)t12);
-    xsi_vlog_generic_get_array_select_value(t5, 32, t4, t8, t11, 2, 1, t13, 32, 2);
+    xsi_vlog_generic_get_array_select_value(t5, 32, t4, t8, t11, 2, 1, t13, 12, 2);
     t12 = (t0 + 3448);
     t14 = (t12 + 56U);
     t15 = *((char **)t14);
