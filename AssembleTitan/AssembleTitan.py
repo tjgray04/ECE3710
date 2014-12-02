@@ -104,7 +104,8 @@ class Assembler:
 						if type == 'rtype':
 							func = code[3]
 						break	
-			
+				
+				
 				#Handle the assembly of different types
 				if type == 'jtype':
 					newline = self.insertConstants(constants,line,type)
@@ -112,7 +113,10 @@ class Assembler:
 					
 					
 				elif type == 'itype':
-					newline = self.insertConstants(constants,line,type)
+					if opCode == '0110':
+						newline = self.jRA()
+					else:
+						newline = self.insertConstants(constants,line,type)
 					binary = self.iType(opCode,newline,reg)
 					
 				elif type == 'rtype':
@@ -131,7 +135,11 @@ class Assembler:
 				PC+=1
 		
 		return assembledCode,labels,address
-		
+	
+	def jRA(self):
+		newline = ['jra','r0','r31','0']
+		return newline
+	
 	def insertConstants(self,constants,line,type):
 		newLine = line
 		if type == 'jtype':
@@ -146,8 +154,9 @@ class Assembler:
 					if line[3] == const:
 						immediate = constants[const]
 						newLine = newLine = [line[0],line[1],line[2],immediate] 
-		
-		
+	                    	
+	                            
+                        
 		return newLine					
 		
 		
@@ -205,6 +214,16 @@ class Assembler:
 			newline = ['b','x',opCode,line[1]]
 			binary = self.iType('1100',newline,reg)
 		return binary
+        
+        
+        
+        
+        
+        
+        
+
+
+
 		
 	def iType(self,opCode,line,reg):
 		'''

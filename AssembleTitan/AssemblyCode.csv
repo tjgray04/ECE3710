@@ -1,5 +1,7 @@
 gcon,iterate,14
 
+jra
+
 //Start the Fibonacci code
 Fib:
 addi,r2,r0,128

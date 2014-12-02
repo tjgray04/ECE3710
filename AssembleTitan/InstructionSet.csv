@@ -43,10 +43,10 @@ op,itype,ori,0010
 op,itype,xoi,0011
 op,itype,lshi,1000
 op,itype,ashi,1000
+op,itype,jra,0110
 
 //J-Type
 op,jtype,jal,1111
-op,jtype,jra,0110
 op,jtype,j,1101
 
 
