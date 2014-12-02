@@ -5,25 +5,178 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal &lt;<arg fmt="%s" index="1">inst_ROM</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 97: Signal &lt;<arg fmt="%s" index="1">reset</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 195: Result of <arg fmt="%d" index="1">23</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">22</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 122: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal &lt;<arg fmt="%s" index="1">charROM</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 124: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">inst_ROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">InstructionROM</arg>&apos;, is tied to its initial value.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 126: Signal &lt;<arg fmt="%s" index="1">VGAdataIN</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addressIN&lt;31:16&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 132: Signal &lt;<arg fmt="%s" index="1">bR</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">address&lt;13:10&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 134: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">address&lt;12:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 136: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 138: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 142: Signal &lt;<arg fmt="%s" index="1">bL</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 144: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 146: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 148: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 152: Signal &lt;<arg fmt="%s" index="1">bU</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 154: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 156: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 158: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 162: Signal &lt;<arg fmt="%s" index="1">bD</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 164: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 166: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 168: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 174: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 176: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 178: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 185: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 187: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 189: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 195: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 197: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 198: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 199: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 205: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 207: Signal &lt;<arg fmt="%s" index="1">glyphPos</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 208: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\TestGlyphMover.v" Line 209: Signal &lt;<arg fmt="%s" index="1">index</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal &lt;<arg fmt="%s" index="1">charROM</arg>&gt; in initial block is partially initialized.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">NS&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">NS&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;12&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;11&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;10&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;9&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;8&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;7&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">glyphPos&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">index&lt;6&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">index&lt;5&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">index&lt;4&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">index&lt;3&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">index&lt;2&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">index&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="old" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">index&lt;0&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="new" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">NS&lt;1&gt;</arg>&gt;. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addrCPU&lt;13:13&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -38,19 +191,145 @@
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">charROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">CharacterROM</arg>&apos;, is tied to its initial value.
 </msg>
 
+<msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_charDispRAM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_charROM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_dataRAM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="info" file="Xst" num="3218" delta="new" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0158</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
-<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_inst_ROM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM223</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mmult_n00363</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM224</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM225</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM226</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM227</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM230</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM228</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM229</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM231</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM232</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM233</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM234</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM235</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM236</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM239</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM237</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM238</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM240</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM241</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM242</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM243</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM244</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM245</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM248</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM246</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM247</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM249</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM250</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM251</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM252</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM253</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM254</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM257</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM255</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM256</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM258</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM259</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">dispVGA/charDispRAM/Mram_charDispRAM266</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">tg/index_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TestGlyphMoverInterface</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">dispVGA/vgaCtrl/hCount_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">TestGlyphMoverInterface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">dispVGA/vgaCtrl/hCount_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">TestGlyphMoverInterface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">dispVGA/vgaCtrl/vCount_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">TestGlyphMoverInterface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">dispVGA/vgaCtrl/vCount_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">TestGlyphMoverInterface</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
