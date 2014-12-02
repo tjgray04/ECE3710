@@ -42,13 +42,13 @@
          <ClosedNode>/vgaControl_TestBench C:|Users|u0791587|Documents|GitHub|ECE3710|Titan|Processor|Processor_Titan|vgaControl_TestBench.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>System (C:/Users/Travis/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v)</SelectedItem>
+         <SelectedItem>System (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >8</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000020c000000020000000000000000000000000200000064ffffffff0000008100000003000000020000020c0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>System (C:/Users/Travis/Documents/GitHub/ECE3710/Titan/Processor/Processor_Titan/System.v)</CurrentItem>
+      <CurrentItem>System (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -66,7 +66,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001c3000000010000000100000000000000000000000064ffffffff000000810000000000000001000001c30000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000191000000010000000100000000000000000000000064ffffffff000000810000000000000001000001910000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Configure Target Device</CurrentItem>
    </ItemView>
@@ -77,7 +77,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000038e000000040101000100000000000000000000000064ffffffff000000810000000000000004000000d800000001000000000000009d0000000100000000000000660000000100000000000001b30000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000004b1000000040101000100000000000000000000000064ffffffff000000810000000000000004000000d800000001000000000000009d0000000100000000000000660000000100000000000002d60000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>ALU.v</CurrentItem>
    </ItemView>
@@ -89,12 +89,12 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000118000000010001000100000000000000000000000064ffffffff000000810000000000000001000001180000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000000bc000000010001000100000000000000000000000064ffffffff000000810000000000000001000000bc0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff0000000000000002000000d60000017e01000000050100000002</SourceProcessView>
-   <CurrentView>Implementation</CurrentView>
+   <SourceProcessView>000000ff00000000000000020000018b000000a601000000050100000002</SourceProcessView>
+   <CurrentView>Behavioral Simulation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
@@ -107,7 +107,6 @@
          <ClosedNode>/RegFile_TestBench2 C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|RegFile_TestBench2.v</ClosedNode>
          <ClosedNode>/Shifter_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|Shifter_TestBench.v</ClosedNode>
          <ClosedNode>/SignExtender_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SignExtender_TestBench.v</ClosedNode>
-         <ClosedNode>/SystemControllerIntegration_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SystemControllerIntegration_TestBench.v/uut - System/dispVGA - DisplayVGA</ClosedNode>
          <ClosedNode>/SystemControllerIntegration_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SystemControllerIntegration_TestBench.v/uut - System/titan - Titan/ExStage - ExecutionStage</ClosedNode>
          <ClosedNode>/SystemControllerIntegration_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SystemControllerIntegration_TestBench.v/uut - System/titan - Titan/PC - ProgramCounter</ClosedNode>
          <ClosedNode>/SystemControllerIntegration_TestBench C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|SystemControllerIntegration_TestBench.v/uut - System/titan - Titan/PSR - ProgramStatusRegister</ClosedNode>
@@ -124,13 +123,13 @@
          <ClosedNode>PROJECT</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+         <SelectedItem>SystemControllerIntegration_TestBench (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >37</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >33</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000025e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000025e0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001f6000000020000000000000000000000000200000064ffffffff000000810000000300000002000001f60000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+      <CurrentItem>SystemControllerIntegration_TestBench (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -138,13 +137,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000002ae000000010000000100000000000000000000000064ffffffff000000810000000000000001000002ae0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000191000000010000000100000000000000000000000064ffffffff000000810000000000000001000001910000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -153,9 +152,9 @@
       <SelectedItems>
          <SelectedItem>Simulate Behavioral Model</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >1</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000126000000010000000100000000000000000000000064ffffffff000000810000000000000001000001260000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000bc000000010000000100000000000000000000000064ffffffff000000810000000000000001000000bc0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Simulate Behavioral Model</CurrentItem>
    </ItemView>

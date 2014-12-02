@@ -49,12 +49,15 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 				vSync  <= 1;
 				bright <= 0;
 				hCount <= hCount + 1'b1; // hCount keeps track of the clock ticks
+					
 					/******************HSYNC**********************/
+					
 					// keep hSync low for the necessary pulse width
 					if(hCount < 12'd95) //0-95 is 96 pulse ticks
 						begin
 							hSync  <= 0;
 						end
+					
 					// wait for the pulse width (96 clk ticks) + back porch (48 clk ticks) = 144 clock ticks, 143 including 0
 					// bright remains high for the duration of the display time (640 clock ticks), till 783 ticks, including zero
 					// hPixel increments for the duration of the display time
@@ -73,13 +76,18 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 							hSync  <= 0;
 							hPixel <= 0;
 							//increment vCount
-							vCount <= vCount + 1'b1;
+							if(vCount < 12'd520)
+								vCount <= vCount + 1'b1;
+							// if vCount is 521 lines
+							else if(vCount >= 12'd520)
+								begin
+									vCount <= 0;
+									vPixel <= 0;
+									vSync  <= 0;
+								end
 							// check if vCount is a position to increase vPixel
-							if(vCount >= 12'd30 && vCount < 12'd510)
-							begin
-								if(vCount >= 12'd31)
+							if(vCount >= 12'd31 && vCount < 12'd510)
 									vPixel <= vPixel + 1'b1;
-							end
 							// if vCount is 12'd1, then at this point we want to let go of holding vSync low
 							if(vCount == 12'd1)
 								vSync <= 1;
@@ -91,13 +99,13 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 						begin
 							vSync <= 0;
 						end
-					// if vCount is 521 lines
-					else if(vCount > 12'd520)
-						begin
-							vCount <= 0;
-							vPixel <= 0;
-							vSync  <= 0;
-						end
+//					// if vCount is 521 lines
+//					else if(vCount >= 12'd520)
+//						begin
+//							vCount <= 0;
+//							vPixel <= 0;
+//							vSync  <= 0;
+//						end
 				end// end of else statement
 		end // end always block
 		

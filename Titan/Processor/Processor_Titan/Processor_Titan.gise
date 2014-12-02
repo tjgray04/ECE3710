@@ -143,7 +143,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="System.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="System.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="System.xst"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SystemControllerIntegration_TestBench_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SystemControllerIntegration_TestBench_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="SystemControllerIntegration_TestBench_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="SystemControllerIntegration_TestBench_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="SystemControllerIntegration_TestBench_stx_beh.prj"/>
@@ -223,17 +223,13 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1417282595" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1417282595">
+    <transform xil_pn:end_ts="1417480439" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1417480439">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417282673" xil_pn:in_ck="296772724022462009" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1417282673">
+    <transform xil_pn:end_ts="1417482220" xil_pn:in_ck="296772724022462009" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1417482220">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALU_TestBench.v"/>
       <outfile xil_pn:name="CharacterDisplayRAM.v"/>
@@ -278,26 +274,21 @@
       <outfile xil_pn:name="vgaControl_TestBench.v"/>
       <outfile xil_pn:name="vga_Control_TestBenchM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1417282595" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6149391708259591907" xil_pn:start_ts="1417282595">
+    <transform xil_pn:end_ts="1417480439" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6149391708259591907" xil_pn:start_ts="1417480439">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417282595" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7650743676947473569" xil_pn:start_ts="1417282595">
+    <transform xil_pn:end_ts="1417480439" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7650743676947473569" xil_pn:start_ts="1417480439">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417282595" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7855717574961685975" xil_pn:start_ts="1417282595">
+    <transform xil_pn:end_ts="1417480439" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7855717574961685975" xil_pn:start_ts="1417480439">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417282674" xil_pn:in_ck="296772724022462009" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1417282674">
+    <transform xil_pn:end_ts="1417482220" xil_pn:in_ck="296772724022462009" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1417482220">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
       <outfile xil_pn:name="ALU_TestBench.v"/>
       <outfile xil_pn:name="CharacterDisplayRAM.v"/>
@@ -342,13 +333,10 @@
       <outfile xil_pn:name="vgaControl_TestBench.v"/>
       <outfile xil_pn:name="vga_Control_TestBenchM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1417282679" xil_pn:in_ck="296772724022462009" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1446140294608778171" xil_pn:start_ts="1417282674">
+    <transform xil_pn:end_ts="1417482223" xil_pn:in_ck="296772724022462009" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1446140294608778171" xil_pn:start_ts="1417482220">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SystemControllerIntegration_TestBench_beh.prj"/>
       <outfile xil_pn:name="SystemControllerIntegration_TestBench_isim_beh.exe"/>
@@ -357,10 +345,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1417282680" xil_pn:in_ck="-5407010030201323361" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5527096037533788120" xil_pn:start_ts="1417282679">
+    <transform xil_pn:end_ts="1417482224" xil_pn:in_ck="-5407010030201323361" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5527096037533788120" xil_pn:start_ts="1417482223">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SystemControllerIntegration_TestBench_isim_beh.wdb"/>
@@ -399,8 +386,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="DisplayVGA.ngr"/>
       <outfile xil_pn:name="ExecutionStage.ngr"/>
       <outfile xil_pn:name="ProgramStatusRegister.ngr"/>
@@ -411,7 +401,6 @@
       <outfile xil_pn:name="System.stx"/>
       <outfile xil_pn:name="System.syr"/>
       <outfile xil_pn:name="System.xst"/>
-      <outfile xil_pn:name="SystemControllerIntegration_TestBench_beh.prj"/>
       <outfile xil_pn:name="SystemControllerIntegration_TestBench_stx_beh.prj"/>
       <outfile xil_pn:name="System_TestBench_stx_beh.prj"/>
       <outfile xil_pn:name="System_xst.xrpt"/>
@@ -427,6 +416,7 @@
     <transform xil_pn:end_ts="1417291205" xil_pn:in_ck="1168239609492310641" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3898234420971544778" xil_pn:start_ts="1417291198">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="System.bld"/>
       <outfile xil_pn:name="System.ngd"/>
       <outfile xil_pn:name="System_ngdbuild.xrpt"/>
@@ -436,6 +426,7 @@
     <transform xil_pn:end_ts="1417291328" xil_pn:in_ck="4464177924888244184" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1417291205">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="System.pcf"/>
@@ -451,6 +442,7 @@
     <transform xil_pn:end_ts="1417291788" xil_pn:in_ck="-3998260762820564598" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1417291328">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="System.ncd"/>
       <outfile xil_pn:name="System.pad"/>
       <outfile xil_pn:name="System.par"/>
@@ -466,6 +458,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="System.ut"/>
@@ -480,10 +473,12 @@
     <transform xil_pn:end_ts="1417291849" xil_pn:in_ck="4350697006764764211" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1417291826">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1417291788" xil_pn:in_ck="6360245694250744016" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1417291705">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="System.twr"/>
       <outfile xil_pn:name="System.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
