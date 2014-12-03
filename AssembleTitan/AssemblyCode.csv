@@ -37,14 +37,12 @@ andi,r5,r2,1,		//Put only the bits indicating direction into r5
 checkR:
 cmpi,x,r5,1,		//Check if direction pressed is right
 bne,checkL:,		//Check next direction if check fails
-addi,r30,r0,8,		//print
 addi,r7,r3,1,		//Put the glyph location we are trying to move to into r7
 add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
 ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
 cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
 bne,wait:,			//Go to wait if location is invalid
 
-addi,r28,r0,7,		//print
 
 //The position to the right is a valid position
 add,r9,r3,r6,		//r9 contains the current glyph location address
@@ -55,11 +53,28 @@ str,r10,r7,0,       //store the glyph character into the valid position
 str,r0,r9,0,        //Sets the old position to be the background
 addi,r3,r3,1,       //Update our current position
 
-addi,r29,r0,7,		//print
+
 
 checkL:
-addi,r27,r0,7,		//print
-//checkD:
+andi,r5,r2,2,		//Put only the bits indicating direction into r5
+cmpi,x,r5,2,		//Check if direction pressed is right
+bne,checkD:,		//Check next direction if check fails
+addi,r7,r3,-1,		//Put the glyph location we are trying to move to into r7
+add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
+ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
+cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
+bne,wait:,			//Go to wait if location is invalid
+
+//The position to the right is a valid position
+add,r9,r3,r6,		//r9 contains the current glyph location address
+ld,r10,r9,0,        //r10 contatins the current glyph index 
+str,r10,r7,0,       //store the glyph character into the valid position
+
+//Set the old position to be the background glyph (glyph 0)
+str,r0,r9,0,        //Sets the old position to be the background
+addi,r3,r3,1,       //Update our current position
+
+checkD:
 //checkU:
 //checkUR:
 //checkUL:
@@ -68,7 +83,7 @@ addi,r27,r0,7,		//print
 
 //Wait
 wait:
-str,r4,r4,0,		//print
+
 addi,r4,r4,-1
 cmp,x,r4,r0
 bne,wait:
