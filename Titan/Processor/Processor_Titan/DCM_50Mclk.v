@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    18:13:47 12/02/2014 
+// Create Date:    21:50:53 12/02/2014 
 // Design Name: 
-// Module Name:    DCM_25Mclk 
+// Module Name:    DCM_50Mclk 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,15 +18,21 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module DCM_25Mclk(
+module DCM_50Mclk(
+	input clk, reset,
+	output clk_50M
     );
 
  DCM_50M instance_name
    (// Clock in ports
-    .CLK_IN1(CLK_IN1),      // IN
+    .CLK_IN1(clk),      	// 100MHz xtal clock from FPGA
     // Clock out ports
-    .CLK_OUT1(CLK_OUT1),     // OUT
+    .CLK_OUT1(clk_50M),    // 50MHz clock output
     // Status and control signals
-    .RESET(RESET),// IN
-    .LOCKED(LOCKED));      // OUT
+    .RESET(reset),			// system reset signal
+    .LOCKED(locked));      // 0 = DCM is attempting to lock onto CLKIN frequency. DCM clock outputs
+									// are not valid.
+									// 1 = DCM is locked onto CLKIN frequency. DCM clock outputs are valid.
+	 
 endmodule
+

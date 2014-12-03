@@ -15,7 +15,7 @@
 
   <!--                                                          -->
 
-  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+  <!-- Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved. -->
 
   <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
 
@@ -32,6 +32,7 @@
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="CharacterDisplayRAM_TestBench_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="CharacterDisplayRAM_TestBench_stx_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="CharacterDisplayRAM_isim_beh.exe"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="DCM_50Mclk_TestBench_isim_beh.exe"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="DataRAM_isim_beh.exe"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="DisplayVGA.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="DisplayVGA.cmd_log"/>
@@ -273,12 +274,11 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417561425" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1417561425">
+    <transform xil_pn:end_ts="1417582815" xil_pn:in_ck="-5152156457724469982" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1417582815">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ALU.v"/>
@@ -286,6 +286,8 @@
       <outfile xil_pn:name="CharacterDisplayRAM.v"/>
       <outfile xil_pn:name="CharacterDisplayRAM_TestBench.v"/>
       <outfile xil_pn:name="CharacterROM.v"/>
+      <outfile xil_pn:name="DCM_50Mclk.v"/>
+      <outfile xil_pn:name="DCM_50Mclk_TestBench.v"/>
       <outfile xil_pn:name="DataRAM.v"/>
       <outfile xil_pn:name="DataRAM_TestBench.v"/>
       <outfile xil_pn:name="DisplayVGA.v"/>
@@ -329,21 +331,19 @@
       <outfile xil_pn:name="vgaControl_TestBench.v"/>
       <outfile xil_pn:name="vga_Control_TestBenchM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1417559412" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6149391708259591907" xil_pn:start_ts="1417559412">
+    <transform xil_pn:end_ts="1417582747" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="6149391708259591907" xil_pn:start_ts="1417582746">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417559412" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7650743676947473569" xil_pn:start_ts="1417559412">
+    <transform xil_pn:end_ts="1417582747" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="7650743676947473569" xil_pn:start_ts="1417582747">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417559412" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7855717574961685975" xil_pn:start_ts="1417559412">
+    <transform xil_pn:end_ts="1417582407" xil_pn:in_ck="3916250710430039084" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7855717574961685975" xil_pn:start_ts="1417582407">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
     </transform>
-    <transform xil_pn:end_ts="1417561425" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1417561425">
+    <transform xil_pn:end_ts="1417582815" xil_pn:in_ck="-5152156457724469982" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1417582815">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
@@ -356,6 +356,8 @@
       <outfile xil_pn:name="CharacterDisplayRAM.v"/>
       <outfile xil_pn:name="CharacterDisplayRAM_TestBench.v"/>
       <outfile xil_pn:name="CharacterROM.v"/>
+      <outfile xil_pn:name="DCM_50Mclk.v"/>
+      <outfile xil_pn:name="DCM_50Mclk_TestBench.v"/>
       <outfile xil_pn:name="DataRAM.v"/>
       <outfile xil_pn:name="DataRAM_TestBench.v"/>
       <outfile xil_pn:name="DisplayVGA.v"/>
@@ -399,14 +401,12 @@
       <outfile xil_pn:name="vgaControl_TestBench.v"/>
       <outfile xil_pn:name="vga_Control_TestBenchM.v"/>
     </transform>
-    <transform xil_pn:end_ts="1417561428" xil_pn:in_ck="1951514235906581725" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1446140294608778171" xil_pn:start_ts="1417561425">
+    <transform xil_pn:end_ts="1417582823" xil_pn:in_ck="3822345892737153306" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1446140294608778171" xil_pn:start_ts="1417582815">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SystemControllerIntegration_TestBench_beh.prj"/>
@@ -416,10 +416,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1417562129" xil_pn:in_ck="-6893969228478278490" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5527096037533788120" xil_pn:start_ts="1417562128">
+    <transform xil_pn:end_ts="1417582823" xil_pn:in_ck="8698595352735396403" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5527096037533788120" xil_pn:start_ts="1417582823">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForProperties"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
@@ -455,13 +454,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1417568488" xil_pn:in_ck="9022545067776148714" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2650511322985255976" xil_pn:start_ts="1417568450">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1417586122" xil_pn:in_ck="8956970328429021517" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2650511322985255976" xil_pn:start_ts="1417586091">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="DisplayVGA.ngr"/>
       <outfile xil_pn:name="ExecutionStage.ngr"/>
       <outfile xil_pn:name="ProgramStatusRegister.ngr"/>
@@ -469,10 +465,10 @@
       <outfile xil_pn:name="System.ngc"/>
       <outfile xil_pn:name="System.ngr"/>
       <outfile xil_pn:name="System.prj"/>
-      <outfile xil_pn:name="System.stx"/>
       <outfile xil_pn:name="System.syr"/>
       <outfile xil_pn:name="System.xst"/>
       <outfile xil_pn:name="SystemControllerIntegration_TestBench_beh.prj"/>
+      <outfile xil_pn:name="SystemControllerIntegration_TestBench_stx_beh.prj"/>
       <outfile xil_pn:name="System_TestBench_stx_beh.prj"/>
       <outfile xil_pn:name="System_xst.xrpt"/>
       <outfile xil_pn:name="Titan.ngr"/>
@@ -487,25 +483,21 @@
     <transform xil_pn:end_ts="1417568498" xil_pn:in_ck="8282500562381546837" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3898234420971544778" xil_pn:start_ts="1417568488">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="System.bld"/>
-      <outfile xil_pn:name="System.ngd"/>
-      <outfile xil_pn:name="System_ngdbuild.xrpt"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1417568678" xil_pn:in_ck="1214485533525576221" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1417568498">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="System.pcf"/>
-      <outfile xil_pn:name="System_map.map"/>
-      <outfile xil_pn:name="System_map.mrp"/>
-      <outfile xil_pn:name="System_map.ngm"/>
-      <outfile xil_pn:name="System_map.xrpt"/>
-      <outfile xil_pn:name="System_summary.xml"/>
-      <outfile xil_pn:name="System_usage.xml"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1417564801" xil_pn:in_ck="-9223228476675132632" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1417564138">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -528,10 +520,11 @@
       <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1417565430" xil_pn:in_ck="-1758945406459457698" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1417565429">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
       <status xil_pn:value="InputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1417564801" xil_pn:in_ck="-894715708470839407" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1417564678">

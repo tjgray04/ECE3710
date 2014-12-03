@@ -38,7 +38,7 @@ module System#(parameter WIDTH = 32)(
 	wire [13:0] addressOUT;
 	
 //Processor
-Titan titan(.clk(clk), .reset(reset), .memControllerData(memControllerData),.memAddr(memAddr),
+Titan titan(.clk(clk_50M), .reset(reset), .memControllerData(memControllerData),.memAddr(memAddr),
 				.memWriteData(memWriteData), .writeEn(writeEn), .enRAM(enRAM));
 				
 //Memory Controller
@@ -55,7 +55,7 @@ MemoryController memController(.writeEn(writeEn), .addressIN(memAddr),
 
 
 //General Memory
-DataRAM dataRAM(.clk(clk), .enRAM(enRAM), .memWrite(memData_wrEn), .input_data(memData_OUT),
+DataRAM dataRAM(.clk(clk_50M), .enRAM(enRAM), .memWrite(memData_wrEn), .input_data(memData_OUT),
 					.address(addressOUT), .memData(memData_IN));
 
 //IO Memory				
@@ -71,5 +71,8 @@ IOMemory ioMem(.clk(clk), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata
 DisplayVGA dispVGA(.clk(clk), .reset(reset), .cpuWriteEn(vgaData_wrEn), .writeData(vgaData_OUT),
 						.addrCPU(addressOUT), .hSync(hSync), .vSync(vSync), .outputCPU(vgaData_IN),
 						.rgb(rgb));
+
+//DCM Clock
+DCM_50Mclk dcm_clk(.clk(clk), .reset(reset), .clk_50M(clk_50M));
 
 endmodule

@@ -5,13 +5,19 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal &lt;<arg fmt="%s" index="1">inst_ROM</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal &lt;<arg fmt="%s" index="1">inst_ROM</arg>&gt; in initial block is partially initialized.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 195: Result of <arg fmt="%d" index="1">23</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">22</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 195: Result of <arg fmt="%d" index="1">23</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">22</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal &lt;<arg fmt="%s" index="1">charROM</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal &lt;<arg fmt="%s" index="1">charROM</arg>&gt; in initial block is partially initialized.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 130: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DCM_50Mclk.v" Line 33: Assignment to <arg fmt="%s" index="1">locked</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">inst_ROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">InstructionROM</arg>&apos;, is tied to its initial value.
@@ -38,6 +44,9 @@
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">charROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">CharacterROM</arg>&apos;, is tied to its initial value.
 </msg>
 
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DCM_50Mclk.v</arg>&quot; line <arg fmt="%s" index="2">26</arg>: Output port &lt;<arg fmt="%s" index="3">LOCKED</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">instance_name</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_charDispRAM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
@@ -50,10 +59,34 @@
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_inst_ROM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_RAM</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_RAM1</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mmult_n00363</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">ALU</arg>&gt;.
 </msg>
 
-<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">dispVGA/vgaCtrl/vCount_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">System</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">dispVGA/vgaCtrl/vCount_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">System</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">dispVGA/vgaCtrl/hCount_11</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">System</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">dispVGA/vgaCtrl/hCount_10</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">System</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ioMem/nes/count_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">System</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;dispVGA/vgaCtrl/count_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ioMem/nes/count_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">System</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;dispVGA/vgaCtrl/count_1&gt; </arg>
+</msg>
+
+<msg type="error" file="Xst" num="2035" delta="old" >Port &lt;<arg fmt="%s" index="1">clk</arg>&gt; has illegal connections. This port is connected to an input buffer and other components.
 </msg>
 
 </messages>

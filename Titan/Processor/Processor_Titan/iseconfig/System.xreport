@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <ImplementationReportsDirectory>C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan\</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan\</ImplementationReportsDirectory>
   <ModuleName>System</ModuleName>
-  <DateModified>2014-12-02T15:17:45</DateModified>
-  <SavedFilePath>C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/iseconfig/System.xreport</SavedFilePath>
+  <DateModified>2014-12-02T22:03:05</DateModified>
+  <SavedFilePath>C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/iseconfig/System.xreport</SavedFilePath>
   <DateInitialized>2014-12-01T15:58:36</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
   <SummaryTimeStamp>2014-11-25T11:15:06</SummaryTimeStamp>
