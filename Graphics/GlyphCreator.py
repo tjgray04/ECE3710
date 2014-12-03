@@ -20,6 +20,14 @@ class GlyphCreator:
 				pixelData.append(pixel[0])
 			print '	Created '+glyph[0]
 		
+		#Zero padd to the end of the memory
+		lines = 4096 - len(pixelData)
+		print ''
+		print str(lines)+' lines of zeros will be added to the glyph library'
+		
+		for i in range(lines):
+			pixelData.append('00000000')
+		
 		#Save the pixel data into a '.dat' file
 		self.saveFile('GlyphLibrary',pixelData)
 	
