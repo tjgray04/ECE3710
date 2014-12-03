@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Sat Nov 29 13:00:07 2014
+Mapped Date    : Tue Dec 02 15:18:08 2014
 
 Design Summary
 --------------
@@ -22,11 +22,11 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      3,794 out of   9,112   41%
-    Number used as logic:                    2,292 out of   9,112   25%
-      Number using O6 output only:           2,115
-      Number using O5 output only:              70
-      Number using O5 and O6:                  107
+  Number of Slice LUTs:                      4,059 out of   9,112   44%
+    Number used as logic:                    2,551 out of   9,112   27%
+      Number using O6 output only:           2,374
+      Number using O5 output only:              61
+      Number using O5 and O6:                  116
       Number used as ROM:                        0
     Number used as Memory:                   1,487 out of   2,176   68%
       Number used as Dual Port RAM:            900
@@ -38,18 +38,18 @@ Slice Logic Utilization:
         Number using O5 output only:             0
         Number using O5 and O6:                  0
       Number used as Shift Register:             0
-    Number used exclusively as route-thrus:     15
-      Number with same-slice register load:     11
-      Number with same-slice carry load:         4
+    Number used exclusively as route-thrus:     21
+      Number with same-slice register load:     18
+      Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,735 out of   2,278   76%
-  Number of MUXCYs used:                       252 out of   4,556    5%
-  Number of LUT Flip Flop pairs used:        4,393
-    Number with an unused Flip Flop:         3,281 out of   4,393   74%
-    Number with an unused LUT:                 599 out of   4,393   13%
-    Number of fully used LUT-FF pairs:         513 out of   4,393   11%
+  Number of occupied Slices:                 1,724 out of   2,278   75%
+  Number of MUXCYs used:                       264 out of   4,556    5%
+  Number of LUT Flip Flop pairs used:        4,554
+    Number with an unused Flip Flop:         3,431 out of   4,554   75%
+    Number with an unused LUT:                 495 out of   4,554   10%
+    Number of fully used LUT-FF pairs:         628 out of   4,554   13%
     Number of unique control sets:              95
     Number of slice register sites lost
       to control set restrictions:             339 out of  18,224    1%
@@ -89,11 +89,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                6.14
+Average Fanout of Non-Clock Nets:                5.82
 
-Peak Memory Usage:  478 MB
-Total REAL time to MAP completion:  1 mins 59 secs 
-Total CPU time to MAP completion:   1 mins 55 secs 
+Peak Memory Usage:  449 MB
+Total REAL time to MAP completion:  2 mins 58 secs 
+Total CPU time to MAP completion:   2 mins 58 secs 
 
 Table of Contents
 -----------------
@@ -146,10 +146,338 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
+ 160 block(s) removed
    2 block(s) optimized away
+ 160 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "titan/ExStage/regfile/mux31_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux31_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux31_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux31_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux31_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux31_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux31_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux31_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux31_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux31_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux30_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux30_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux30_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux30_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux30_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux30_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux30_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux30_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux30_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux30_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux29_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux29_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux29_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux29_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux29_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux29_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux29_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux29_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux29_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux29_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux28_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux28_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux28_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux28_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux28_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux28_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux28_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux28_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux28_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux28_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux27_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux27_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux27_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux27_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux27_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux27_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux27_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux27_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux27_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux27_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux26_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux26_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux26_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux26_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux26_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux26_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux26_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux26_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux26_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux26_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux25_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux25_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux25_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux25_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux25_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux25_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux25_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux25_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux25_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux25_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux24_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux24_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux24_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux24_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux24_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux24_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux24_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux24_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux24_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux24_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux23_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux23_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux23_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux23_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux23_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux23_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux23_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux23_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux23_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux23_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux22_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux22_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux22_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux22_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux22_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux22_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux22_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux22_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux22_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux22_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux21_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux21_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux21_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux21_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux21_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux21_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux21_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux21_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux21_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux21_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux20_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux20_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux20_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux20_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux20_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux20_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux20_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux20_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux20_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux20_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux19_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux19_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux19_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux19_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux19_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux19_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux19_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux19_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux19_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux19_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux18_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux18_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux18_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux18_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux18_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux18_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux18_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux18_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux18_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux18_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux17_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux17_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux17_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux17_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux17_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux17_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux17_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux17_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux17_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux17_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux16_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux16_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux16_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux16_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux16_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux16_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux16_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux16_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux16_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux16_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux15_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux15_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux15_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux15_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux15_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux15_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux15_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux15_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux15_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux15_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux14_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux14_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux14_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux14_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux14_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux14_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux14_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux14_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux14_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux14_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux13_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux13_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux13_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux13_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux13_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux13_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux13_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux13_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux13_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux13_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux12_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux12_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux12_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux12_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux12_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux12_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux12_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux12_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux12_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux12_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux11_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux11_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux11_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux11_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux11_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux11_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux11_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux11_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux11_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux11_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux10_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux10_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux10_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux10_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux10_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux10_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux10_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux10_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux10_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux10_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux9_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux9_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux9_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux9_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux9_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux9_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux9_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux9_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux9_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux9_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux8_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux8_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux8_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux8_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux8_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux8_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux8_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux8_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux8_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux8_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux7_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux7_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux7_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux7_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux7_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux7_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux7_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux7_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux7_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux7_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux6_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux6_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux6_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux6_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux6_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux6_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux6_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux6_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux6_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux6_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux5_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux5_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux5_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux5_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux5_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux5_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux5_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux5_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux5_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux5_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux4_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux4_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux4_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux4_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux4_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux4_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux4_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux4_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux4_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux4_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux3_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux3_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux3_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux3_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux3_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux3_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux3_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux3_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux3_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux3_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux2_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux2_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux2_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux2_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux2_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux2_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux2_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux2_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux2_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux2_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux1_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux1_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux1_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux1_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux1_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux1_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux1_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux1_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux1_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux1_3" (ROM) removed.
+The signal "titan/ExStage/regfile/mux_7" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux_7" (ROM) removed.
+The signal "titan/ExStage/regfile/mux_8" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux_8" (ROM) removed.
+The signal "titan/ExStage/regfile/mux_81" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux_81" (ROM) removed.
+The signal "titan/ExStage/regfile/mux_9" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux_9" (ROM) removed.
+The signal "titan/ExStage/regfile/mux_3" is unused and has been removed.
+ Unused block "titan/ExStage/regfile/mux_3" (ROM) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK

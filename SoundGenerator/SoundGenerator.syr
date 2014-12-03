@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: SoundGenerator.prj
 
@@ -105,8 +105,17 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\TestSoundManipulator.v" into library work
+Parsing module <TestSoundManipulator>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\sound_generator.v" into library work
 Parsing module <sound_generator>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" into library work
+Parsing module <SoundMux>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" Line 28. parameter declaration becomes local in SoundMux with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" Line 29. parameter declaration becomes local in SoundMux with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" Line 30. parameter declaration becomes local in SoundMux with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundControllerReg.v" into library work
+Parsing module <SoundControllerReg>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" into library work
 Parsing module <melody_library>.
 INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 28. parameter declaration becomes local in melody_library with formal parameter declaration list
@@ -164,12 +173,24 @@ WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\soun
 Elaborating module <bass_library>.
 WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 55: Result of 7-bit expression is truncated to fit in 6-bit target.
 
+Elaborating module <TestSoundManipulator>.
+WARNING:HDLCompiler:1127 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\TestSoundManipulator.v" Line 31: Assignment to writeEn ignored, since the identifier is never used
+
+Elaborating module <SoundControllerReg>.
+
+Elaborating module <SoundMux>.
+WARNING:HDLCompiler:634 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v" Line 33: Net <laser[17]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v" Line 59: Net <writeEn> does not have a driver.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <SoundGenerator>.
     Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v".
+WARNING:Xst:653 - Signal <laser> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <death> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <writeEn> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <SoundGenerator> synthesized.
@@ -246,6 +267,32 @@ Synthesizing Unit <bass_library>.
 	inferred   2 Multiplexer(s).
 Unit <bass_library> synthesized.
 
+Synthesizing Unit <TestSoundManipulator>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\TestSoundManipulator.v".
+        BASS = 2'b00
+        LASER = 2'b01
+        DEATH = 2'b10
+WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <writeEn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	no macro.
+Unit <TestSoundManipulator> synthesized.
+
+Synthesizing Unit <SoundControllerReg>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundControllerReg.v".
+    Found 2-bit register for signal <soundReg>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <SoundControllerReg> synthesized.
+
+Synthesizing Unit <SoundMux>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v".
+        TICKBITS = 18
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <SoundMux> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
@@ -259,19 +306,20 @@ Macro Statistics
  27-bit adder                                          : 1
  6-bit adder                                           : 2
  7-bit adder                                           : 2
-# Registers                                            : 14
+# Registers                                            : 15
  1-bit register                                        : 5
  18-bit register                                       : 2
+ 2-bit register                                        : 1
  27-bit register                                       : 1
  3-bit register                                        : 2
  6-bit register                                        : 2
  7-bit register                                        : 2
 # Comparators                                          : 2
  18-bit comparator equal                               : 2
-# Multiplexers                                         : 32
+# Multiplexers                                         : 35
  1-bit 2-to-1 multiplexer                              : 2
  1-bit 7-to-1 multiplexer                              : 2
- 18-bit 2-to-1 multiplexer                             : 2
+ 18-bit 2-to-1 multiplexer                             : 5
  3-bit 7-to-1 multiplexer                              : 2
  6-bit 2-to-1 multiplexer                              : 4
  7-bit 2-to-1 multiplexer                              : 20
@@ -282,6 +330,10 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1290 - Hierarchical block <tm> is unconnected in block <SoundGenerator>.
+   It will be removed from the design.
+WARNING:Xst:1710 - FF/Latch <soundReg_0> (without init value) has a constant value of 0 in block <scr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <soundReg_1> (without init value) has a constant value of 0 in block <scr>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <bass_library>.
 INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_duration> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
@@ -344,13 +396,14 @@ Macro Statistics
 # Counters                                             : 3
  18-bit up counter                                     : 2
  27-bit up counter                                     : 1
-# Registers                                            : 37
- Flip-Flops                                            : 37
+# Registers                                            : 39
+ Flip-Flops                                            : 39
 # Comparators                                          : 2
  18-bit comparator equal                               : 2
-# Multiplexers                                         : 30
+# Multiplexers                                         : 33
  1-bit 2-to-1 multiplexer                              : 2
  1-bit 7-to-1 multiplexer                              : 2
+ 18-bit 2-to-1 multiplexer                             : 3
  3-bit 7-to-1 multiplexer                              : 2
  6-bit 2-to-1 multiplexer                              : 4
  7-bit 2-to-1 multiplexer                              : 20
@@ -360,6 +413,8 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <soundReg_0> (without init value) has a constant value of 0 in block <SoundControllerReg>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <soundReg_1> (without init value) has a constant value of 0 in block <SoundControllerReg>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <SoundGenerator> ...
 
@@ -555,10 +610,10 @@ Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
 -------------------------------------------------------------------------
 Offset:              4.652ns (Levels of Logic = 2)
   Source:            clr (PAD)
-  Destination:       pulseGen/count_0 (FF)
+  Destination:       pulseGen/count_2 (FF)
   Destination Clock: clk rising
 
-  Data Path: clr to pulseGen/count_0
+  Data Path: clr to pulseGen/count_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
@@ -604,14 +659,14 @@ clk            |    5.551|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.33 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.80 secs
  
 --> 
 
-Total memory usage is 254848 kilobytes
+Total memory usage is 259112 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   23 (   0 filtered)
+Number of warnings :   37 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

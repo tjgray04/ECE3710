@@ -20,6 +20,7 @@
          <ClosedNode>/System C:|Users|u0791587|Documents|GitHub|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/ExStage - ExecutionStage</ClosedNode>
          <ClosedNode>/System C:|Users|u0791587|Documents|GitHub|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/PC - ProgramCounter</ClosedNode>
          <ClosedNode>/System C:|Users|u0791587|Documents|GitHub|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/PSR - ProgramStatusRegister</ClosedNode>
+         <ClosedNode>/TestGlyphMoverInterface C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|TestGlyphMoverInterface.v/dispVGA - DisplayVGA</ClosedNode>
          <ClosedNode>/Titan C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|Titan.v</ClosedNode>
          <ClosedNode>/Titan C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|Titan.v/ExStage - ExecutionStage</ClosedNode>
          <ClosedNode>/Titan C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|Titan.v/PC - ProgramCounter</ClosedNode>
@@ -43,13 +44,13 @@
          <ClosedNode>/vgaControl_TestBench C:|Users|u0791587|Documents|GitHub|ECE3710|Titan|Processor|Processor_Titan|vgaControl_TestBench.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>System (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.v)</SelectedItem>
+         <SelectedItem>charDispRAM - CharacterDisplayRAM (C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>System (C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.v)</CurrentItem>
+      <CurrentItem>charDispRAM - CharacterDisplayRAM (C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -64,13 +65,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Synthesize - XST</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >2</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018a000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018a0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001c5000000010000000100000000000000000000000064ffffffff000000810000000000000001000001c50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Synthesize - XST</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -79,7 +80,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000448000000040101000100000000000000000000000064ffffffff000000810000000000000004000000d800000001000000000000009d00000001000000000000006600000001000000000000026d0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000252000000040101000100000000000000000000000064ffffffff000000810000000000000004000000d800000001000000000000009d0000000100000000000000660000000100000000000000770000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>ALU.v</CurrentItem>
    </ItemView>
@@ -91,7 +92,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000001000000000000000000000000000000000000019b000000010001000100000000000000000000000064ffffffff0000008100000000000000010000019b0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
@@ -157,13 +158,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000127000000010000000100000000000000000000000064ffffffff000000810000000000000001000001270000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
@@ -171,13 +172,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000122000000010000000100000000000000000000000064ffffffff000000810000000000000001000001220000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001c5000000010000000100000000000000000000000064ffffffff000000810000000000000001000001c50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -185,13 +186,13 @@
          <ClosedNode>Design Utilities</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000124000000010000000100000000000000000000000064ffffffff000000810000000000000001000001240000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001c5000000010000000100000000000000000000000064ffffffff000000810000000000000001000001c50000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
 </Project>
 <?xml version="1.0" encoding="utf-8"?>

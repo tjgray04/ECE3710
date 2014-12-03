@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-11-20T14:28:08</DateModified>
+  <DateModified>2014-12-02T16:40:53</DateModified>
   <ModuleName>SoundGenerator</ModuleName>
-  <SummaryTimeStamp>2014-11-20T14:27:59</SummaryTimeStamp>
+  <SummaryTimeStamp>2014-12-02T16:39:49</SummaryTimeStamp>
   <SavedFilePath>C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/iseconfig/SoundGenerator.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/u0655172/Desktop/ECE3710/SoundGenerator</ImplementationReportsDirectory>
-  <DateInitialized>2014-11-20T14:27:12</DateInitialized>
+  <ImplementationReportsDirectory>C:/Users/u0655172/Desktop/ECE3710/SoundGenerator\</ImplementationReportsDirectory>
+  <DateInitialized>2014-12-02T16:40:53</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

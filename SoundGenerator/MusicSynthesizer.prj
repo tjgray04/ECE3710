@@ -1,6 +1,4 @@
 verilog work "sound_generator.v"
-verilog work "song_library.v"
 verilog work "Pulse_generator.v"
-verilog work "Keyboard.v"
 verilog work "Duration_FSM.v"
 verilog work "MusicSynthesizer.vf"

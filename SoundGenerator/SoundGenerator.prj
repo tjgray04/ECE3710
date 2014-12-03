@@ -1,4 +1,7 @@
+verilog work "TestSoundManipulator.v"
 verilog work "sound_generator.v"
+verilog work "SoundMux.v"
+verilog work "SoundControllerReg.v"
 verilog work "song_library.v"
 verilog work "Pulse_generator.v"
 verilog work "Duration_FSM.v"

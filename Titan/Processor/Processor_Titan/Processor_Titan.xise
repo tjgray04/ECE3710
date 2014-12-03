@@ -244,9 +244,6 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
-    <file xil_pn:name="TestGlyphMoverInterface.ucf" xil_pn:type="FILE_UCF">
-      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
-    </file>
     <file xil_pn:name="TestGlyphMoverInterface_TestBench.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="293"/>
@@ -259,6 +256,7 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="299"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="299"/>
     </file>
+    <file xil_pn:name="ControllerTest.dat" xil_pn:type="FILE_USERDOC"/>
   </files>
 
   <properties>
@@ -591,7 +589,6 @@
   <bindings>
     <binding xil_pn:location="/DisplayVGA" xil_pn:name="DisplayVGA.ucf"/>
     <binding xil_pn:location="/System" xil_pn:name="System.ucf"/>
-    <binding xil_pn:location="/System" xil_pn:name="TestGlyphMoverInterface.ucf"/>
   </bindings>
 
   <libraries/>

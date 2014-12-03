@@ -215,35 +215,37 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1416347803" xil_pn:in_ck="-5023832686438473451" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5674584959111725701" xil_pn:start_ts="1416347801">
+    <transform xil_pn:end_ts="1417563666" xil_pn:in_ck="-5023832686438473451" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="5674584959111725701" xil_pn:start_ts="1417563664">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="MusicSynthesizer.vf"/>
     </transform>
-    <transform xil_pn:end_ts="1416347803" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-452316894725289132" xil_pn:start_ts="1416347803">
+    <transform xil_pn:end_ts="1417563666" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-452316894725289132" xil_pn:start_ts="1417563666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1416347803" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1416347803">
+    <transform xil_pn:end_ts="1417563666" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1417563666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1416347803" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="1015367007062711815" xil_pn:start_ts="1416347803">
+    <transform xil_pn:end_ts="1417563666" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="1015367007062711815" xil_pn:start_ts="1417563666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1416348074" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1416348074">
+    <transform xil_pn:end_ts="1417563666" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="1106364426758808884" xil_pn:start_ts="1417563666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1416348074" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-2967756807614232610" xil_pn:start_ts="1416348074">
+    <transform xil_pn:end_ts="1417563666" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-2967756807614232610" xil_pn:start_ts="1417563666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1416518879" xil_pn:in_ck="956125251532194849" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7933588483428056995" xil_pn:start_ts="1416518864">
+    <transform xil_pn:end_ts="1417563679" xil_pn:in_ck="-2502154266719325712" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="7933588483428056995" xil_pn:start_ts="1417563666">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SoundGenerator.lso"/>
       <outfile xil_pn:name="SoundGenerator.ngc"/>
       <outfile xil_pn:name="SoundGenerator.ngr"/>
@@ -256,25 +258,22 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1416348339" xil_pn:in_ck="-5023832686438471275" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1011176859639483954" xil_pn:start_ts="1416348339">
+    <transform xil_pn:end_ts="1417563679" xil_pn:in_ck="-5023832686438471275" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="1011176859639483954" xil_pn:start_ts="1417563679">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1416351235" xil_pn:in_ck="4852582764131517082" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="7979715634436506293" xil_pn:start_ts="1416351227">
+    <transform xil_pn:end_ts="1417563686" xil_pn:in_ck="4852582764131517082" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="7979715634436506293" xil_pn:start_ts="1417563679">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="SoundGenerator.bld"/>
       <outfile xil_pn:name="SoundGenerator.ngd"/>
       <outfile xil_pn:name="SoundGenerator_ngdbuild.xrpt"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1416351245" xil_pn:in_ck="1734801398026142556" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1416351235">
+    <transform xil_pn:end_ts="1417563697" xil_pn:in_ck="1734801398026142556" xil_pn:name="TRANEXT_map_spartan6" xil_pn:prop_ck="1463976855095865663" xil_pn:start_ts="1417563686">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SoundGenerator.pcf"/>
@@ -287,10 +286,9 @@
       <outfile xil_pn:name="SoundGenerator_usage.xml"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1416351260" xil_pn:in_ck="8220499371385069390" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1416351245">
+    <transform xil_pn:end_ts="1417563712" xil_pn:in_ck="8220499371385069390" xil_pn:name="TRANEXT_par_spartan6" xil_pn:prop_ck="-1178055513630676559" xil_pn:start_ts="1417563697">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="SoundGenerator.ncd"/>
       <outfile xil_pn:name="SoundGenerator.pad"/>
       <outfile xil_pn:name="SoundGenerator.par"/>
@@ -302,12 +300,9 @@
       <outfile xil_pn:name="SoundGenerator_par.xrpt"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
-    <transform xil_pn:end_ts="1416351274" xil_pn:in_ck="-1584354892794588033" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1416351260">
+    <transform xil_pn:end_ts="1417563726" xil_pn:in_ck="-1584354892794588033" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1417563712">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="SoundGenerator.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="soundgenerator.bgn"/>
@@ -317,15 +312,13 @@
       <outfile xil_pn:name="webtalk.log"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1416351285" xil_pn:in_ck="2756896577113335571" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1416351274">
+    <transform xil_pn:end_ts="1417563729" xil_pn:in_ck="2756896577113335571" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="8482462020707587906" xil_pn:start_ts="1417563726">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1416351260" xil_pn:in_ck="7453572102325444436" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1416351254">
+    <transform xil_pn:end_ts="1417563712" xil_pn:in_ck="7453572102325444436" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416185" xil_pn:start_ts="1417563705">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="SoundGenerator.twr"/>
       <outfile xil_pn:name="SoundGenerator.twx"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
