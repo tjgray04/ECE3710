@@ -29,13 +29,15 @@ module DCM_50Mclk_TestBench;
 	reg reset;
 
 	// Outputs
+	wire clk_100M;
 	wire clk_50M;
 	wire locked;
 
 	// Instantiate the Unit Under Test (UUT)
 	DCM_50Mclk uut (
 		.clk(clk), 
-		.reset(reset), 
+		.reset(reset),
+		.clk_100M(clk_100M),
 		.clk_50M(clk_50M), 
 		.locked(locked)
 	);

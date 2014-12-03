@@ -51,10 +51,10 @@ add wave -noupdate -format Literal -radix ascii /DCM_50M_tb/test_phase
 add wave -noupdate -divider {Input clocks}
 add wave -noupdate -format Logic /DCM_50M_tb/CLK_IN1
 add wave -noupdate -divider {Output clocks}
-add wave -noupdate -format Logic /DCM_50M_tb/dut/clk
+add wave -noupdate -format Literal -expand /DCM_50M_tb/dut/clk
 add wave -noupdate -divider Status/control
 add wave -noupdate -format Logic /DCM_50M_tb/RESET
 add wave -noupdate -format Logic /DCM_50M_tb/LOCKED
 add wave -noupdate -divider Counters
 add wave -noupdate -format Literal -radix hexadecimal /DCM_50M_tb/COUNT
-add wave -noupdate -format Literal -radix hexadecimal /DCM_50M_tb/dut/counter
+add wave -noupdate -format Literal -radix hexadecimal -expand /DCM_50M_tb/dut/counter

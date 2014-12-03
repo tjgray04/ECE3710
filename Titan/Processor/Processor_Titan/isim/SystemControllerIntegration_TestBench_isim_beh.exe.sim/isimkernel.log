@@ -2,31 +2,30 @@ Command line:
    SystemControllerIntegration_TestBench_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49364
+     -socket  49260
 
-Tue Dec 02 22:00:26 2014
+Wed Dec 03 12:30:03 2014
 
 
- Elaboration Time: 0.078 sec
+ Elaboration Time: 0.078001 sec
 
  Current Memory Usage: 506.118 Meg
 
- Total Signals          : 342
- Total Nets             : 1317
- Total Signal Drivers   : 143
- Total Blocks           : 43
+ Total Signals          : 340
+ Total Nets             : 1319
+ Total Signal Drivers   : 144
+ Total Blocks           : 42
  Total Primitive Blocks : 31
- Total Processes        : 264
+ Total Processes        : 265
  Total Traceable Variables  : 360
- Total Scalar Nets and Variables : 239961
-Total Line Count : 1498
-Total Line Count : 1498
-Total Line Count : 1498
-Total Line Count : 1498
+ Total Scalar Nets and Variables : 239963
+Total Line Count : 1499
+Total Line Count : 1499
+Total Line Count : 1499
 
- Total Simulation Time: 0.998406 sec
+ Total Simulation Time: 0.499204 sec
 
  Current Memory Usage: 506.118 Meg
 
-Tue Dec 02 22:03:02 2014
+Wed Dec 03 12:31:18 2014
 

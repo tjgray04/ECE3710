@@ -1,7 +1,6 @@
 # Output products list for <DCM_50M>
 DCM_50M.asy
 DCM_50M.gise
-DCM_50M.sym
 DCM_50M.ucf
 DCM_50M.v
 DCM_50M.veo
@@ -52,3 +51,4 @@ DCM_50M\simulation\timing\vcs_session.tcl
 DCM_50M\simulation\timing\wave.do
 DCM_50M_flist.txt
 DCM_50M_xmdf.tcl
+_xmsgs\pn_parser.xmsgs

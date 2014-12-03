@@ -1,0 +1,53 @@
+INFO:sim:172 - Generating IP...
+Resolving generics for 'DCM_100M'...
+Applying external generics to 'DCM_100M'...
+Delivering associated files for 'DCM_100M'...
+WARNING:sim - Component clk_wiz_v3_6 does not have a valid model name for
+   Verilog synthesis
+Delivering EJava files for 'DCM_100M'...
+Delivered 3 files into directory C:/Users/Steve
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
+M
+Delivered 1 file into directory C:/Users/Steve
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
+M
+Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '6slx16.nph' in environment
+C:\Xilinx\14.4\ISE_DS\ISE\.
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'DCM_100M'...
+Generating ISE project...
+XCO file found: DCM_100M.xco
+XMDF file found: DCM_100M_xmdf.tcl
+Adding C:/Users/Steve
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
+M/example_design/DCM_100M_exdes.ucf -view all -origin_type created
+Adding C:/Users/Steve
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
+M/example_design/DCM_100M_exdes.v -view all -origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file "C:/Users/Steve
+   Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_
+   100M/example_design/DCM_100M_exdes.v" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding C:/Users/Steve
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
+M.asy -view all -origin_type imported
+Adding C:/Users/Steve
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
+M.v -view all -origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file "C:/Users/Steve
+   Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_
+   100M.v" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding C:/Users/Steve
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
+M.veo -view all -origin_type imported
+WARNING: This core does not have a top level called "/DCM_100M"
+WARNING: Top level has been set to "/DCM_100M_exdes"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'DCM_100M'.

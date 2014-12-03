@@ -40,12 +40,20 @@ utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M/clk_
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
 incr fcount
 
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M/example_design/DCM_50M_exdes.ucf
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type ucf
+incr fcount
+
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M/doc/clk_wiz_ds709.pdf
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
 incr fcount
 
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M/doc/clk_wiz_gsg521.pdf
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type Ignore
+incr fcount
+
+utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M/example_design/DCM_50M_exdes.v
+utilities_xmdf::xmdfSetData $instance FileSet $fcount type verilog
 incr fcount
 
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M/implement/implement.bat
@@ -110,10 +118,6 @@ incr fcount
 
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M.ejp
 utilities_xmdf::xmdfSetData $instance FileSet $fcount type AnyView
-incr fcount
-
-utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M.ucf
-utilities_xmdf::xmdfSetData $instance FileSet $fcount type ucf
 incr fcount
 
 utilities_xmdf::xmdfSetData $instance FileSet $fcount relative_path DCM_50M.v

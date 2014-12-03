@@ -59,7 +59,7 @@ DataRAM dataRAM(.clk(clk_50M), .enRAM(enRAM), .memWrite(memData_wrEn), .input_da
 					.address(addressOUT), .memData(memData_IN));
 
 //IO Memory				
-IOMemory ioMem(.clk(clk), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata_OUT),
+IOMemory ioMem(.clk(clk_100M), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata_OUT),
 					.address(addressOUT), .IO_Data(IOdata_IN), .reset(reset), .NESinputData(NESinputData),
 					.latch(latch), .pulse(pulse), .leds(leds));
 					
@@ -68,11 +68,21 @@ IOMemory ioMem(.clk(clk), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata
 //							.address(addressOUT), .stackData(stackData_IN));
 
 //VGA Display							
-DisplayVGA dispVGA(.clk(clk), .reset(reset), .cpuWriteEn(vgaData_wrEn), .writeData(vgaData_OUT),
+DisplayVGA dispVGA(.clk(clk_100M), .reset(reset), .cpuWriteEn(vgaData_wrEn), .writeData(vgaData_OUT),
 						.addrCPU(addressOUT), .hSync(hSync), .vSync(vSync), .outputCPU(vgaData_IN),
 						.rgb(rgb));
 
-//DCM Clock
-DCM_50Mclk dcm_clk(.clk(clk), .reset(reset), .clk_50M(clk_50M));
+//DCM Clocks
+DCM_50M dcm_50M(
+	 // Clock in ports
+    .CLK_IN1(clk),      	// 100MHz xtal clock from FPGA
+    // Clock out ports
+	 .CLK_OUT1(clk_100M),	// 100MHz clock output
+    .CLK_OUT2(clk_50M),    // 50MHz clock output
+    // Status and control signals
+    .RESET(reset),			// system reset signal
+    .LOCKED());      		// 0 = DCM is attempting to lock onto CLKIN frequency. DCM clock outputs
+									// are not valid.
+									// 1 = DCM is locked onto CLKIN frequency. DCM clock outputs are valid
 
 endmodule

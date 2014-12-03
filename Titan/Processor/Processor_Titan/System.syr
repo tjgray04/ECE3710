@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.18 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: System.prj
 
@@ -110,6 +110,8 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" into library work
 Parsing module <DCM_50M>.
+Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M\example_design\DCM_50M_exdes.v" into library work
+Parsing module <DCM_50M_exdes>.
 Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
 Parsing module <ZeroPad>.
 Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
@@ -160,8 +162,6 @@ Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Pro
 Parsing module <IOMemory>.
 Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
 Parsing module <DisplayVGA>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DCM_50Mclk.v" into library work
-Parsing module <DCM_50Mclk>.
 Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v" into library work
 Parsing module <DataRAM>.
 Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" into library work
@@ -223,15 +223,14 @@ Elaborating module <CharacterROM>.
 Reading initialization file \"TestROM.dat\".
 WARNING:HDLCompiler:1670 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal <charROM> in initial block is partially initialized.
 
-Elaborating module <DCM_50Mclk>.
-
 Elaborating module <DCM_50M>.
 
 Elaborating module <IBUFG>.
 
 Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 130: Assignment to status_int ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DCM_50Mclk.v" Line 33: Assignment to locked ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 132: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -240,6 +239,7 @@ WARNING:HDLCompiler:1127 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor
 Synthesizing Unit <System>.
     Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v".
         WIDTH = 32
+INFO:Xst:3210 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" line 76: Output port <LOCKED> of the instance <dcm_50M> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <System> synthesized.
@@ -532,13 +532,6 @@ WARNING:Xst:2999 - Signal 'charROM', unconnected in block 'CharacterROM', is tie
 	inferred   1 RAM(s).
 Unit <CharacterROM> synthesized.
 
-Synthesizing Unit <DCM_50Mclk>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DCM_50Mclk.v".
-INFO:Xst:3210 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DCM_50Mclk.v" line 26: Output port <LOCKED> of the instance <instance_name> is unconnected or connected to loadless signal.
-    Summary:
-	no macro.
-Unit <DCM_50Mclk> synthesized.
-
 Synthesizing Unit <DCM_50M>.
     Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v".
     Summary:
@@ -785,12 +778,6 @@ WARNING:Xst:2677 - Node <Mmult_n00363> of sequential type is unconnected in bloc
 
 Optimizing unit <System> ...
 
-Optimizing unit <IOMemory> ...
-
-Optimizing unit <NES_CONTROLLER> ...
-
-Optimizing unit <vgaControl> ...
-
 Optimizing unit <ExecutionStage> ...
 
 Optimizing unit <RegFile> ...
@@ -804,6 +791,12 @@ Optimizing unit <ProgramCounter> ...
 Optimizing unit <LogicController> ...
 
 Optimizing unit <ProgramStatusRegister> ...
+
+Optimizing unit <IOMemory> ...
+
+Optimizing unit <NES_CONTROLLER> ...
+
+Optimizing unit <vgaControl> ...
 WARNING:Xst:1710 - FF/Latch <dispVGA/vgaCtrl/vCount_11> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/vCount_10> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/hCount_11> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
@@ -812,317 +805,376 @@ INFO:Xst:2261 - The FF/Latch <ioMem/nes/count_0> in Unit <System> is equivalent 
 INFO:Xst:2261 - The FF/Latch <ioMem/nes/count_1> in Unit <System> is equivalent to the following FF/Latch, which will be removed : <dispVGA/vgaCtrl/count_1> 
 
 Mapping all equations...
-ERROR:Xst:2035 - Port <clk> has illegal connections. This port is connected to an input buffer and other components.
-Input Buffer:
-   Port <I> of node <dcm_clk/instance_name/clkin1_buf> (IBUFG) in unit <System>
-Other Components:
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM3> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM1> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM2> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM4> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM5> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM6> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM7> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM10> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM8> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM9> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM11> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM12> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM13> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM14> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM17> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM15> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM16> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM18> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM19> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM20> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM21> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM24> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM22> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM23> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM25> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM26> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM27> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM28> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM31> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM29> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM30> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM32> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM33> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM34> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM35> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM38> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM36> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM37> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM39> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM40> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM41> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM42> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM45> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM43> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM44> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM46> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM47> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM48> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM49> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM50> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM51> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM52> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM53> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM54> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM55> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM56> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM57> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM60> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM58> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM59> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM61> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM62> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM63> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM64> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM67> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM65> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM66> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM68> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM69> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM70> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM71> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM74> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM72> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM73> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM75> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM76> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM77> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM78> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM81> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM79> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM80> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM82> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM83> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM84> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM85> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM88> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM86> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM87> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM89> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM90> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM91> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM92> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM95> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM93> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM94> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM96> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM97> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM98> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM99> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM102> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM100> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM101> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM103> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM104> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM105> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM106> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM107> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM108> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM109> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM110> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM111> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM112> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM113> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM114> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM117> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM115> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM116> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM118> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM119> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM120> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM121> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM124> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM122> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM123> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM125> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM126> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM127> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM128> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM131> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM129> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM130> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM132> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM133> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM134> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM135> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM138> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM136> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM137> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM139> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM140> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM141> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM142> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM145> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM143> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM144> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM146> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM147> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM148> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM149> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM152> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM150> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM151> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM153> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM154> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM155> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM156> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM159> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM157> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM158> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM160> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM161> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM162> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM163> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM166> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM164> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM165> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM167> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM168> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM169> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM170> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM173> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM171> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM172> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM174> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM175> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM176> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM177> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM180> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM178> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM179> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM181> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM182> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM183> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM184> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM187> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM185> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM186> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM188> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM189> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM190> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM191> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM194> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM192> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM193> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM195> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM196> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM197> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM198> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM201> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM199> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM200> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM202> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM203> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM204> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM205> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM208> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM206> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM207> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM209> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM210> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM211> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM212> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM215> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM213> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM214> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM216> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM217> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM218> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM219> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM220> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM221> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM222> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM223> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM224> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM225> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM226> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM227> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM230> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM228> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM229> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM231> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM232> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM233> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM234> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM237> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM235> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM236> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM238> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM239> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM240> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM241> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM244> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM242> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM243> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM245> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM246> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM247> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM248> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM251> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM249> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM250> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM252> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM253> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM254> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM255> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM258> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM256> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM257> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM259> (RAM128X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM260> (RAM64X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM261> (RAM64X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM262> (RAM64X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM265> (RAM64X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM263> (RAM64X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM264> (RAM64X1D) in unit <System>
-   Port <WCLK> of node <dispVGA/charDispRAM/Mram_charDispRAM266> (RAM64X1D) in unit <System>
-   Port <C> of node <ioMem/leds_0> (FDRE) in unit <System>
-   Port <C> of node <ioMem/leds_1> (FDRE) in unit <System>
-   Port <C> of node <ioMem/leds_2> (FDRE) in unit <System>
-   Port <C> of node <ioMem/leds_3> (FDRE) in unit <System>
-   Port <C> of node <ioMem/leds_4> (FDRE) in unit <System>
-   Port <C> of node <ioMem/leds_5> (FDRE) in unit <System>
-   Port <C> of node <ioMem/leds_6> (FDRE) in unit <System>
-   Port <C> of node <ioMem/leds_7> (FDRE) in unit <System>
-   Port <C> of node <ioMem/nes/count_1> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_2> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_3> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_4> (FDRS) in unit <System>
-   Port <C> of node <ioMem/nes/count_5> (FDRS) in unit <System>
-   Port <C> of node <ioMem/nes/count_8> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_6> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_7> (FDRS) in unit <System>
-   Port <C> of node <ioMem/nes/count_9> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_10> (FDRS) in unit <System>
-   Port <C> of node <ioMem/nes/count_11> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_12> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_15> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_13> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_14> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_18> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_16> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_17> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_21> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_19> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_20> (FDR) in unit <System>
-   Port <C> of node <ioMem/nes/count_0> (FDR) in unit <System>
-   Port <C> of node <dispVGA/vgaCtrl/clk25M> (FDR) in unit <System>
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block System, actual ratio is 20.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 120
+ Flip-Flops                                            : 120
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : System.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2198
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 60
+#      LUT2                        : 85
+#      LUT3                        : 89
+#      LUT4                        : 314
+#      LUT5                        : 262
+#      LUT6                        : 858
+#      MUXCY                       : 242
+#      MUXF7                       : 61
+#      VCC                         : 1
+#      XORCY                       : 221
+# FlipFlops/Latches                : 120
+#      FD                          : 8
+#      FDC                         : 13
+#      FDCE                        : 61
+#      FDE_1                       : 8
+#      FDR                         : 21
+#      FDRE                        : 5
+#      FDS                         : 4
+# RAMS                             : 408
+#      RAM128X1D                   : 259
+#      RAM256X1S                   : 128
+#      RAM32M                      : 10
+#      RAM32X1D                    : 4
+#      RAM64X1D                    : 7
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 23
+#      IBUF                        : 2
+#      IBUFG                       : 1
+#      OBUF                        : 20
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# DSPs                             : 4
+#      DSP48A1                     : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
 
 
-Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 26.20 secs
+Slice Logic Utilization: 
+ Number of Slice Registers:             120  out of  18224     0%  
+ Number of Slice LUTs:                 3282  out of   9112    36%  
+    Number used as Logic:              1672  out of   9112    18%  
+    Number used as Memory:             1610  out of   2176    73%  
+       Number used as RAM:             1610
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3298
+   Number with an unused Flip Flop:    3178  out of   3298    96%  
+   Number with an unused LUT:            16  out of   3298     0%  
+   Number of fully used LUT-FF pairs:   104  out of   3298     3%  
+   Number of unique control sets:        21
+
+IO Utilization: 
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+ Number of DSP48A1s:                      4  out of     32    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------+-------------------------------------+-------+
+Clock Signal                        | Clock buffer(FF name)               | Load  |
+------------------------------------+-------------------------------------+-------+
+clk                                 | DCM_SP:CLK0                         | 297   |
+clk                                 | DCM_SP:CLKDV                        | 181   |
+pulse_OBUF(ioMem/nes/Mmux_pulse15:O)| NONE(*)(ioMem/nes/controller_data_7)| 8     |
+dispVGA/vgaCtrl/clk25M              | BUFG                                | 42    |
+------------------------------------+-------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 17.377ns (Maximum Frequency: 57.546MHz)
+   Minimum input arrival time before clock: 21.665ns
+   Maximum output required time after clock: 18.694ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 17.377ns (frequency: 57.546MHz)
+  Total number of paths / destination ports: 3460604227 / 3960
+-------------------------------------------------------------------------
+Delay:               17.377ns (Levels of Logic = 11)
+  Source:            titan/PC/PC_10 (FF)
+  Destination:       dispVGA/charDispRAM/Mram_charDispRAM260 (RAM)
+  Source Clock:      clk rising 0.5X
+  Destination Clock: clk rising
+
+  Data Path: titan/PC/PC_10 to dispVGA/charDispRAM/Mram_charDispRAM260
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            28   0.447   1.463  titan/PC/PC_10 (titan/PC/PC_10)
+     LUT3:I0->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM62119_SW0 (N661)
+     LUT6:I5->O            1   0.205   0.808  titan/instROM/Mram_inst_ROM62119 (titan/instROM/Mram_inst_ROM62118)
+     LUT5:I2->O           35   0.205   1.439  titan/instROM/Mram_inst_ROM621113 (titan/instruction<31>)
+     LUT5:I3->O           10   0.203   0.857  titan/LogicCtrl/Mmux_RtSrcReg11_1 (titan/LogicCtrl/Mmux_RtSrcReg11)
+     LUT6:I5->O           11   0.205   0.883  titan/ExStage/regfile/out11_2 (titan/ExStage/regfile/out111)
+     LUT4:I3->O            6   0.205   0.744  titan/ExStage/aluSrcbMUX/Mmux_out110 (titan/ExStage/ALUMuxOUT<0>)
+     DSP48A1:B0->P7        3   4.394   0.995  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/n0036<7>)
+     LUT6:I1->O            1   0.203   0.000  titan/ExStage/memSrcMUX/Mmux_out309_2_G (N1119)
+     MUXF7:I1->O          17   0.140   1.132  titan/ExStage/memSrcMUX/Mmux_out309_2 (titan/ExStage/memSrcMUX/Mmux_out309_1)
+     LUT6:I4->O            1   0.203   0.580  inst_LPM_DECODE371 (N39)
+     LUT4:I3->O            7   0.205   0.773  write_ctrl37 (write_ctrl37)
+     RAM64X1D:WE               0.304          dispVGA/charDispRAM/Mram_charDispRAM260
+    ----------------------------------------
+    Total                     17.377ns (7.124ns logic, 10.253ns route)
+                                       (41.0% logic, 59.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dispVGA/vgaCtrl/clk25M'
+  Clock period: 6.488ns (frequency: 154.123MHz)
+  Total number of paths / destination ports: 3916 / 71
+-------------------------------------------------------------------------
+Delay:               6.488ns (Levels of Logic = 4)
+  Source:            dispVGA/vgaCtrl/hCount_2 (FF)
+  Destination:       dispVGA/vgaCtrl/vPixel_8 (FF)
+  Source Clock:      dispVGA/vgaCtrl/clk25M rising
+  Destination Clock: dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: dispVGA/vgaCtrl/hCount_2 to dispVGA/vgaCtrl/vPixel_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.898  dispVGA/vgaCtrl/hCount_2 (dispVGA/vgaCtrl/hCount_2)
+     LUT4:I0->O            4   0.203   1.028  dispVGA/vgaCtrl/hCount[11]_GND_56_o_LessThan_4_o21 (dispVGA/vgaCtrl/hCount[11]_GND_56_o_LessThan_4_o2)
+     LUT6:I1->O            1   0.203   0.580  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1103_o3 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1103_o2)
+     LUT6:I5->O           26   0.205   1.571  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1103_o4 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1103_o_inv_inv)
+     LUT6:I0->O            9   0.203   0.829  dispVGA/vgaCtrl/_n0133_inv1 (dispVGA/vgaCtrl/_n0133_inv)
+     FDCE:CE                   0.322          dispVGA/vgaCtrl/vPixel_0
+    ----------------------------------------
+    Total                      6.488ns (1.583ns logic, 4.905ns route)
+                                       (24.4% logic, 75.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 19137839 / 3972
+-------------------------------------------------------------------------
+Offset:              21.665ns (Levels of Logic = 11)
+  Source:            reset (PAD)
+  Destination:       titan/ExStage/regfile/Mram_RAM15 (RAM)
+  Destination Clock: clk rising 0.5X
+
+  Data Path: reset to titan/ExStage/regfile/Mram_RAM15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           273   1.222   2.413  reset_IBUF (reset_IBUF)
+     LUT5:I0->O            2   0.203   0.617  titan/LogicCtrl/Mmux_CFWrite111_SW1 (N959)
+     LUT6:I5->O           17   0.205   1.132  titan/LogicCtrl/Mmux_aluSrcb11_1 (titan/LogicCtrl/Mmux_aluSrcb11)
+     LUT4:I2->O            7   0.203   0.773  titan/ExStage/aluSrcbMUX/Mmux_out41 (titan/ExStage/ALUMuxOUT<12>)
+     DSP48A1:B12->P47     18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  titan/ExStage/alu/Mmult_n00361 (titan/ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
+     DSP48A1:PCIN47->P10    1   2.264   0.808  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<27>)
+     LUT6:I3->O            1   0.205   0.827  titan/ExStage/RaWriteEnMUX/Mmux_out209 (titan/ExStage/RaWriteEnMUX/Mmux_out208)
+     LUT5:I1->O            1   0.203   0.580  titan/ExStage/RaWriteEnMUX/Mmux_out2011_SW0 (N1014)
+     LUT6:I5->O            1   0.205   0.827  titan/ExStage/RaWriteEnMUX/Mmux_out2011 (titan/ExStage/RaWriteEnMUX/Mmux_out2010)
+     LUT6:I2->O            2   0.203   0.616  titan/ExStage/RaWriteEnMUX/Mmux_out2012 (titan/ExStage/writeData<27>)
+     RAM32M:DIB1               0.028          titan/ExStage/regfile/Mram_RAM6
+    ----------------------------------------
+    Total                     21.665ns (12.024ns logic, 9.641ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'pulse_OBUF'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.910ns (Levels of Logic = 2)
+  Source:            NESinputData (PAD)
+  Destination:       ioMem/nes/controller_data_7 (FF)
+  Destination Clock: pulse_OBUF falling
+
+  Data Path: NESinputData to ioMem/nes/controller_data_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  NESinputData_IBUF (NESinputData_IBUF)
+     INV:I->O              8   0.206   0.802  ioMem/nes/data_INV_123_o1_INV_0 (ioMem/nes/data_INV_123_o)
+     FDE_1:D                   0.102          ioMem/nes/controller_data_5
+    ----------------------------------------
+    Total                      2.910ns (1.530ns logic, 1.380ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dispVGA/vgaCtrl/clk25M'
+  Total number of paths / destination ports: 42 / 42
+-------------------------------------------------------------------------
+Offset:              3.720ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       dispVGA/vgaCtrl/vCount_9 (FF)
+  Destination Clock: dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: reset to dispVGA/vgaCtrl/vCount_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           273   1.222   2.068  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.430          dispVGA/vgaCtrl/bright
+    ----------------------------------------
+    Total                      3.720ns (1.652ns logic, 2.068ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dispVGA/vgaCtrl/clk25M'
+  Total number of paths / destination ports: 33625 / 7
+-------------------------------------------------------------------------
+Offset:              18.694ns (Levels of Logic = 11)
+  Source:            dispVGA/vgaCtrl/vPixel_8 (FF)
+  Destination:       rgb<0> (PAD)
+  Source Clock:      dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: dispVGA/vgaCtrl/vPixel_8 to rgb<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.616  dispVGA/vgaCtrl/vPixel_8 (dispVGA/vgaCtrl/vPixel_8)
+     DSP48A1:A5->P11      48   4.560   1.884  dispVGA/charDispRAM/Maddsub_n0016 (dispVGA/charDispRAM/vgaAddress<11>)
+     LUT6:I0->O            1   0.203   0.827  inst_LPM_MUX8_122 (inst_LPM_MUX8_122)
+     LUT6:I2->O            1   0.203   0.684  inst_LPM_MUX8_7 (inst_LPM_MUX8_7)
+     LUT6:I4->O           21   0.203   1.458  dispVGA/charDispRAM/vgaAddress<12>11 (dispVGA/outputVGA<1>)
+     LUT6:I1->O            2   0.203   0.981  dispVGA/charROM/Mram_charROM71220 (dispVGA/charROM/Mram_charROM71219)
+     LUT6:I0->O            1   0.203   0.827  dispVGA/charROM/Mram_charROM71228 (dispVGA/charROM/Mram_charROM71227)
+     LUT6:I2->O            1   0.203   0.924  dispVGA/charROM/Mram_charROM71231 (dispVGA/charROM/Mram_charROM71230)
+     LUT6:I1->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM71232_F (N2041)
+     MUXF7:I0->O           1   0.131   0.580  dispVGA/charROM/Mram_charROM71232 (dispVGA/color<0>)
+     LUT2:I1->O            1   0.205   0.579  dispVGA/Mmux_rgb11 (rgb_0_OBUF)
+     OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
+    ----------------------------------------
+    Total                     18.694ns (9.335ns logic, 9.359ns route)
+                                       (49.9% logic, 50.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 537 / 15
+-------------------------------------------------------------------------
+Offset:              12.683ns (Levels of Logic = 9)
+  Source:            ioMem/nes/count_8 (FF)
+  Destination:       pulse (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ioMem/nes/count_8 to pulse
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             15   0.447   1.210  ioMem/nes/count_8 (ioMem/nes/count_8)
+     LUT3:I0->O            3   0.205   1.015  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3111 (ioMem/nes/count[21]_GND_54_o_LessThan_31_o311)
+     LUT6:I0->O            1   0.203   0.827  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3_SW0 (N862)
+     LUT6:I2->O            2   0.203   0.961  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3 (ioMem/nes/count[21]_GND_54_o_LessThan_31_o)
+     LUT5:I0->O            2   0.203   0.961  ioMem/nes/Mmux_pulse11111 (ioMem/nes/Mmux_pulse1111)
+     LUT6:I1->O            1   0.203   0.827  ioMem/nes/Mmux_pulse11 (ioMem/nes/Mmux_pulse1)
+     LUT6:I2->O            1   0.203   0.827  ioMem/nes/Mmux_pulse12 (ioMem/nes/Mmux_pulse11)
+     LUT6:I2->O            1   0.203   0.580  ioMem/nes/Mmux_pulse13 (ioMem/nes/Mmux_pulse12)
+     LUT6:I5->O            9   0.205   0.829  ioMem/nes/Mmux_pulse15 (pulse_OBUF)
+     OBUF:I->O                 2.571          pulse_OBUF (pulse)
+    ----------------------------------------
+    Total                     12.683ns (4.646ns logic, 8.037ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk                   |   23.346|         |         |         |
+dispVGA/vgaCtrl/clk25M|    6.675|         |         |         |
+pulse_OBUF            |         |    4.051|         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dispVGA/vgaCtrl/clk25M
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+dispVGA/vgaCtrl/clk25M|    6.488|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pulse_OBUF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    8.648|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 16.22 secs
  
 --> 
 
-Total memory usage is 271620 kilobytes
+Total memory usage is 271108 kilobytes
 
-Number of errors   :    1 (   0 filtered)
-Number of warnings :   18 (   0 filtered)
-Number of infos    :    9 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
 
