@@ -1,5 +1,4 @@
 Black_Background,// BLACK (1-64) 0x00
-Top_Left_Head_Blue,// BLUE (65-128) 0x03
 BlueMan1,//Top Left Head - BLUE (65-128) 0x03
 BlueMan2,//Top Right Head - BLUE (129-192) 0x03
 BlueMan3,//Bottom Left Head - BLUE 0x03
@@ -16,11 +15,25 @@ REDMan5,//Left Arm - RED
 REDMan6,//Right Arm - RED 
 REDMan7,//Left Leg - RED 
 REDMan8,//Right Leg - RED 
-GREENMan1,//Top Left Head - GREEN 
-GREENMan2,//Top Right Head - GREEN
-GREENMan3,//Bottom Left Head - GREEN 
-GREENMan4,//Bottom Right Head - GREEN 
-GREENMan5,//Left Arm - GREEN 
-GREENMan6,//Right Arm - GREEN 
-GREENMan7,//Left Leg - GREEN 
-GREENMan8,//Right Leg - GREEN 
+GreenMan1,//Top Left Head - Green 
+GreenMan2,//Top Right Head - Green
+GreenMan3,//Bottom Left Head - Green 
+GreenMan4,//Bottom Right Head - Green 
+GreenMan5,//Left Arm - Green 
+GreenMan6,//Right Arm - Green 
+GreenMan7,//Left Leg - Green 
+GreenMan8,//Right Leg - Green 
+WhiteMan1,//Top Left Head - White 
+WhiteMan2,//Top Right Head - White
+WhiteMan3,//Bottom Left Head - White 
+WhiteMan4,//Bottom Right Head - White 
+WhiteMan5,//Left Arm - White 
+WhiteMan6,//Right Arm - White 
+WhiteMan7,//Left Leg - White 
+WhiteMan8,//Right Leg - White 
+GreyWall,//Wall - GREY 0xA0
+BlueLaser,
+RedLaserLeft, //Direction matters for the red laser
+RedLaserRight,
+GreenLaser,
+WhiteLaser,
