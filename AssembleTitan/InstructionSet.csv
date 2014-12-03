@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 //Op codes
 //R-Type
 op,rtype,add,0000,0101
@@ -45,9 +44,9 @@ op,itype,xoi,0011
 op,itype,lshi,1000
 op,itype,ashi,1000
 op,itype,jra,0110
+op,itype,jal,1111
 
 //J-Type
-op,jtype,jal,1111
 op,jtype,j,1101
 
 
@@ -260,4 +259,4 @@ reg,r28,11100
 reg,r29,11101
 reg,r30,11110
 reg,r31,11111
->>>>>>> 4fd10520c593c52da80a267a5c08e1e319fa0fdd
+

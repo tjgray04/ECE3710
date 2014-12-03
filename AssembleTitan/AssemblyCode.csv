@@ -1,51 +1,79 @@
+jal
 //Global Variables
-gcon,VGABaseAddr,32768,		//Binary: 10_00_0000_0000_0000, this is the base address to the VGA memory space
-gcon,IOBaseAddr,49152		//Binary: 11_00_0000_0000_0000, this is the base address to the IO memory space
+gcon,controllerAddr,49151,	//Binary: 10_1_1_1111_1111_1111, This gets us into IO memory space
+gcon,LEDAddr,40959,			//Binary: 10_0_1_1111_1111_1111, This gets us into IO memory space for the LEDs
+gcon,VGABaseAddr,16384,	    //Binary: 01_00_0000_0000_0000, This is the base address for the VGA
 
-<<<<<<< HEAD
-jra
+//Initialization
+addi,r3,r0,2439,			//Load initial block glyph position into r3
+addi,r4,r0,10000,			//Wait timer count in r4
+addi,r6,r0,VGABaseAddr,		//Load VGA base address into r6
+addi,r1,r0,controllerAddr,	//Load the controller address into r1
 
-//Start the Fibonacci code
-Fib:
-addi,r2,r0,128
-addi,r3,r0,14
-addi,r4,r0,1
-addi,r5,r0,-1
-=======
-//Initialization - stores a glyph into a location on the VGA screen
-addi,r12,r0,100,			//r12 = 100, a glyph location to write to
-addi,r13,r12,VGABaseAddr,	//add r12 to the base address and store it in r13 as a location to write to
-addi,r11,r0,32,			 	//Store the glyph index into r11
-str,r11,r13,0,				//store the value of the glyph index in r11 in to the glyph location of r13
-addi,r23,r0,4799
->>>>>>> 4fd10520c593c52da80a267a5c08e1e319fa0fdd
+delay:
+addi,r4,r4,-1
+cmpi,x,r4,0
+bne,delay:
+addi,r4,r0,10000
 
-//Game Loop
+//LED Testing Loop
 loop:
-cmp,x,r12,r23,			//check to see if we have reached the final indexing position
-bne,continue:,
-addi,r12,r0,100,		//If we have reached the final position we want to reset back to 100.
+ld,r2,r1,0,   			//Load the controller value into r2
+str,r2,r0,LEDAddr,		//Store the value to the LEDs
 
-continue:
-addi,r17,r12,0,				//add r12 to r17, so r17 starts at 100
-addi,r18,r17,VGABaseAddr,	//add r17 to the base address for VGA and store it into r18 as the new location to write to
-addi,r12,r12,1,				//increment the glyph location to write to
-addi,r13,r12,VGABaseAddr,	//add r12 to the base address for VGA and store it into r13 as the new location to write to
-//str,r0,r18,0,				//This is not necessary
-str,r11,r13,0,				//store the glyph index into the glyph address of r13
-str,r11,r18,0,				//store the glyph index into the glyph address of r18
+//Check for movement
+//Right			xxxx0001
+//Left			xxxx0010
+//Down			xxxx0100
+//Up			xxxx1000
+//Up-Right		xxxx1001
+//UP-Left		xxxx1010
+//Down-Right	xxxx0101
+//Down-Left		xxxx0110
 
-addi,r4,r0,25000,			//r4 = 0 + 25000
+//Check Directions that are pressed. If so, check if the glyph is OK to move. Then move it.
+andi,r5,r2,1,		//Put only the bits indicating direction into r5
 
-//subi,r11,r11,1,				// subtract 1 from the glyph to decrease the glyh index
-//cmp,x,r11,r0,				//check to see if all glyphs were drawn.
-//bne,pause:,				//If not continue
-//addi,r11,r0,32,			//start glpyh indexing over.
+checkR:
+cmpi,x,r5,1,		//Check if direction pressed is right
+bne,checkL:,		//Check next direction if check fails
+addi,r30,r0,8,		//print
+addi,r7,r3,1,		//Put the glyph location we are trying to move to into r7
+add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
+ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
+cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
+bne,wait:,			//Go to wait if location is invalid
 
-pause:
-cmp,x,r4,r0,		//check to see if the counter is 0.
-beq,loop:,			// if the counter has reached 0, jump to loop.
-subi,r4,r4,1,		// r4 =r4 -1.
-j,pause:,			//jump loop
+addi,r28,r0,7,		//print
+
+//The position to the right is a valid position
+add,r9,r3,r6,		//r9 contains the current glyph location address
+ld,r10,r9,0,        //r10 contatins the current glyph index 
+str,r10,r7,0,       //store the glyph character into the valid position
+
+//Set the old position to be the background glyph (glyph 0)
+str,r0,r9,0,        //Sets the old position to be the background
+addi,r3,r3,1,       //Update our current position
+
+addi,r29,r0,7,		//print
+
+checkL:
+addi,r27,r0,7,		//print
+//checkD:
+//checkU:
+//checkUR:
+//checkUL:
+//checkDR:
+//checkDL:
+
+//Wait
+wait:
+str,r4,r4,0,		//print
+addi,r4,r4,-1
+cmp,x,r4,r0
+bne,wait:
+addi,r4,r0,10000
+j,loop:
+
 
 
