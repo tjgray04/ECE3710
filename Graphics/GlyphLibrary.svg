@@ -15,7 +15,7 @@
    version="1.1"
    inkscape:version="0.48.5 r10040"
    sodipodi:docname="GlyphLibrary.svg"
-   inkscape:export-filename="C:\Users\Mark\Documents\ECE 3710 - Computer Design Lab\ECE3710\Graphics\RedLaserLeft.png"
+   inkscape:export-filename="C:\Users\Mark\Documents\ECE 3710 - Computer Design Lab\ECE3710\Graphics\BlueLaser.png"
    inkscape:export-xdpi="90.5"
    inkscape:export-ydpi="90.5">
   <defs
@@ -31,7 +31,7 @@
      inkscape:cx="2.193261"
      inkscape:cy="5.1514266"
      inkscape:document-units="px"
-     inkscape:current-layer="layer36"
+     inkscape:current-layer="layer39"
      showgrid="false"
      inkscape:window-width="1366"
      inkscape:window-height="691"
@@ -69,7 +69,8 @@
      inkscape:groupmode="layer"
      id="layer35"
      inkscape:label="RedLaserRight"
-     style="display:none">
+     style="display:none"
+     sodipodi:insensitive="true">
     <rect
        style="fill:#ff0000"
        id="rect4354"
@@ -107,7 +108,8 @@
      inkscape:groupmode="layer"
      id="layer36"
      inkscape:label="RedLaserLeft"
-     style="display:inline">
+     style="display:none"
+     sodipodi:insensitive="true">
     <rect
        style="fill:#ff0000"
        id="rect4354-2"
@@ -124,6 +126,72 @@
        x="-6.060915"
        y="-5.0326767"
        transform="scale(-1,-1)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer38"
+     inkscape:label="WhiteLaser"
+     style="display:none"
+     sodipodi:insensitive="true">
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffffff"
+       id="path4427"
+       sodipodi:cx="4.3861609"
+       sodipodi:cy="5.1763391"
+       sodipodi:rx="3.203125"
+       sodipodi:ry="3.203125"
+       d="m 7.5892859,5.1763391 a 3.203125,3.203125 0 1 1 -6.40625,0 3.203125,3.203125 0 1 1 6.40625,0 z"
+       transform="translate(-0.38839299,-1.09375)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer39"
+     inkscape:label="BlueLaser">
+    <path
+       sodipodi:type="arc"
+       style="fill:#00ffff"
+       id="path4430"
+       sodipodi:cx="0.78125"
+       sodipodi:cy="4.015625"
+       sodipodi:rx="0.58035713"
+       sodipodi:ry="0.5691964"
+       d="m 1.3616071,4.015625 a 0.58035713,0.5691964 0 1 1 -1.16071423,0 0.58035713,0.5691964 0 1 1 1.16071423,0 z"
+       transform="matrix(1,0,0,2.0980393,0.24553571,-4.4539568)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00ffff"
+       id="path4430-3"
+       sodipodi:cx="0.78125"
+       sodipodi:cy="4.015625"
+       sodipodi:rx="0.58035713"
+       sodipodi:ry="0.5691964"
+       d="m 1.3616071,4.015625 a 0.58035713,0.5691964 0 1 1 -1.16071423,0 0.58035713,0.5691964 0 1 1 1.16071423,0 z"
+       transform="matrix(1,0,0,2.0980393,3.1919644,-4.4651176)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00ffff"
+       id="path4430-6"
+       sodipodi:cx="0.78125"
+       sodipodi:cy="4.015625"
+       sodipodi:rx="0.58035713"
+       sodipodi:ry="0.5691964"
+       d="m 1.3616071,4.015625 a 0.58035713,0.5691964 0 1 1 -1.16071423,0 0.58035713,0.5691964 0 1 1 1.16071423,0 z"
+       transform="matrix(1,0,0,2.0980393,6.09375,-4.4427963)" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer37"
+     inkscape:label="GreenLaser"
+     style="display:none">
+    <rect
+       style="fill:#00ff00"
+       id="rect4424"
+       width="7.2991071"
+       height="2.8125"
+       x="0.3125"
+       y="2.7321429"
+       ry="1.40625" />
   </g>
   <g
      inkscape:groupmode="layer"
