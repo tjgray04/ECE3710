@@ -33,18 +33,18 @@
 *	output: RtData, source register B data output
 *	output: RaData, return address for Program Counter
 */
-module RegFile#(parameter REGBITS = 5,WIDTH = 32)(
-		input clk, reset, regWriteEn, RaWriteEn,
+module RegFile#(parameter REGBITS = 5, WIDTH = 32)(
+		input clk, regWriteEn, RaWriteEn, //jumpRA,
 		input[REGBITS-1:0] Rs,			//left argument
 		input[REGBITS-1:0] Rt,			//right argument
 		input[REGBITS-1:0] Rdest,		//write destination
 		input[WIDTH-1:0] writeData,   //data to be written back to a register
 		output [WIDTH-1:0] RsData,
-		output [WIDTH-1:0] RtData,
-		output [WIDTH-1:0] RaData
+		output [WIDTH-1:0] RtData
     );
 	
-	parameter [REGBITS-1:0] RA = ((1<<REGBITS)-1); //Return address register is RAM[31]
+	parameter [REGBITS-1:0] RA = 5'd31; //Return address register is RAM[31]
+	
 	//Registers
 	reg[WIDTH-1:0] RAM [(1<<REGBITS)-1:0];	//normally 32 32-bit registers, RAM in this case referes to our 32 available registers
 	
@@ -52,7 +52,6 @@ module RegFile#(parameter REGBITS = 5,WIDTH = 32)(
 	// Write back on the negative edge of the clock to ensure data propagation through execution stage
 	always@(negedge clk)
 	begin
-		RAM[0] <= 0;
 		// if we are writing back to the register file and the destination register is not the zero register
 		if(regWriteEn)
 			RAM[Rdest] <= writeData;
@@ -60,8 +59,9 @@ module RegFile#(parameter REGBITS = 5,WIDTH = 32)(
 		else if(RaWriteEn)
 			RAM[RA] <= writeData;
 	end
+	
+	// Just read out the data
+	assign RsData = Rs ? RAM[Rs] : 0;
+	assign RtData = Rt ? RAM[Rt] : 0;
 
-assign RsData = Rs ? RAM[Rs] : 0;
-assign RtData = Rt ? RAM[Rt] : 0;
-assign RaData = RAM[RA];
 endmodule

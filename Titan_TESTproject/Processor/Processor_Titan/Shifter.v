@@ -26,7 +26,7 @@
 */
 module Shifter#(parameter WIDTH = 32)
 					(input [WIDTH-1:0] arg, shiftamount,
-					 input shifttype,
+					 input shiftType,
 					 output reg [WIDTH-1:0] result);
 
 	//Two's complement shift amount magnitude calculator
@@ -36,8 +36,8 @@ module Shifter#(parameter WIDTH = 32)
 	//Shifter behaviour
 	always@(*)
 	begin
-		// Perform a logical shift when shifttype is a zero
-		if(shifttype == 0)	//lsh and lshi
+		// Perform a logical shift when shiftType is a zero
+		if(shiftType == 0)	//lsh and lshi
 		begin
 			// if the shift amount is greater than or equal to zero as a signed number, shift to the right
 			if($signed(shiftamount) >= 0)
@@ -46,8 +46,8 @@ module Shifter#(parameter WIDTH = 32)
 			else
 				result = arg >> shiftmag;	
 		end
-		// Perform an arithmetic shift when shifttype is a one
-		else if(shifttype)
+		// Perform an arithmetic shift when shiftType is a one
+		else if(shiftType)
 		begin
 			// if the shift amount is greater than or equal to zero as a signed number, shift to the right
 			if($signed(shiftamount) >= 0)	//ash and ashi

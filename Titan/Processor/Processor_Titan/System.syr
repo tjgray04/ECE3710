@@ -99,66 +99,69 @@ DSP48 Utilization Ratio            : 100
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
 
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
 =========================================================================
 
 
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
 Parsing module <ZeroPad>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
 Parsing module <SignExtender>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v" into library work
 Parsing module <Shifter>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
 Parsing module <RegFile>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" Line 46. parameter declaration becomes local in RegFile with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" Line 46. parameter declaration becomes local in RegFile with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
 Parsing module <Mux>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
 Parsing module <ALU>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" Line 41. parameter declaration becomes local in ALU with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v" into library work
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" Line 41. parameter declaration becomes local in ALU with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v" into library work
 Parsing module <vgaControl>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
 Parsing module <ProgramStatusRegister>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v" into library work
 Parsing module <ProgramCounter>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" into library work
 Parsing module <NES_CONTROLLER>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" into library work
 Parsing module <LogicController>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 31. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 32. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 37. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 47. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 58. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 63. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 67. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 70. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 81. parameter declaration becomes local in LogicController with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" into library work
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 31. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 32. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 37. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 47. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 58. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 63. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 67. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 70. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 81. parameter declaration becomes local in LogicController with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" into library work
 Parsing module <InstructionROM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v" into library work
 Parsing module <InstructionDecoder>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v" into library work
 Parsing module <ExecutionStage>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" into library work
 Parsing module <CharacterROM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
 Parsing module <CharacterDisplayRAM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v" into library work
 Parsing module <Titan>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v" into library work
 Parsing module <MemoryController>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v" into library work
 Parsing module <IOMemory>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
 Parsing module <DisplayVGA>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v" into library work
 Parsing module <DataRAM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" into library work
+Analyzing Verilog file "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" into library work
 Parsing module <System>.
 
 =========================================================================
@@ -175,7 +178,7 @@ Elaborating module <Mux>.
 
 Elaborating module <InstructionROM>.
 Reading initialization file \"ControllerTest.dat\".
-WARNING:HDLCompiler:1670 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal <inst_ROM> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal <inst_ROM> in initial block is partially initialized.
 
 Elaborating module <InstructionDecoder>.
 
@@ -204,7 +207,7 @@ Elaborating module <DataRAM>.
 Elaborating module <IOMemory>.
 
 Elaborating module <NES_CONTROLLER>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 195: Result of 23-bit expression is truncated to fit in 22-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 195: Result of 23-bit expression is truncated to fit in 22-bit target.
 
 Elaborating module <DisplayVGA>.
 
@@ -215,21 +218,21 @@ Reading initialization file \"mTestRAM.dat\".
 
 Elaborating module <CharacterROM>.
 Reading initialization file \"TestROM.dat\".
-WARNING:HDLCompiler:1670 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal <charROM> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal <charROM> in initial block is partially initialized.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <System>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v".
         WIDTH = 32
     Summary:
 	no macro.
 Unit <System> synthesized.
 
 Synthesizing Unit <Titan>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v".
         ALUOPBITS = 3
         OPBITS = 4
         FUNCTBITS = 4
@@ -241,7 +244,7 @@ Synthesizing Unit <Titan>.
 Unit <Titan> synthesized.
 
 Synthesizing Unit <ProgramCounter>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v".
         REGBITS = 5
         WIDTH = 32
     Found 32-bit register for signal <PC>.
@@ -253,14 +256,14 @@ Synthesizing Unit <ProgramCounter>.
 Unit <ProgramCounter> synthesized.
 
 Synthesizing Unit <Mux>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
         WIDTH = 32
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux> synthesized.
 
 Synthesizing Unit <InstructionROM>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v".
         WIDTH = 32
         ROM_ADDR_BITS = 12
 WARNING:Xst:2999 - Signal 'inst_ROM', unconnected in block 'InstructionROM', is tied to its initial value.
@@ -270,7 +273,7 @@ WARNING:Xst:2999 - Signal 'inst_ROM', unconnected in block 'InstructionROM', is 
 Unit <InstructionROM> synthesized.
 
 Synthesizing Unit <InstructionDecoder>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v".
         OPBITS = 4
         FUNCTBITS = 4
         REGBITS = 5
@@ -281,7 +284,7 @@ Synthesizing Unit <InstructionDecoder>.
 Unit <InstructionDecoder> synthesized.
 
 Synthesizing Unit <ExecutionStage>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v".
         OPBITS = 4
         FUNCTBITS = 4
         REGBITS = 5
@@ -293,7 +296,7 @@ Synthesizing Unit <ExecutionStage>.
 Unit <ExecutionStage> synthesized.
 
 Synthesizing Unit <RegFile>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v".
         REGBITS = 5
         WIDTH = 32
     Found 1-bit register for signal <RAM<31><30>>.
@@ -1320,22 +1323,22 @@ Synthesizing Unit <RegFile>.
     Found 1-bit register for signal <RAM<0><1>>.
     Found 1-bit register for signal <RAM<0><0>>.
     Found 1-bit register for signal <RAM<31><31>>.
-    Found 32-bit 32-to-1 multiplexer for signal <Rs[4]_RAM[31][31]_wide_mux_36_OUT> created at line 64.
-    Found 32-bit 32-to-1 multiplexer for signal <Rt[4]_RAM[31][31]_wide_mux_39_OUT> created at line 65.
+    Found 32-bit 32-to-1 multiplexer for signal <Rs[4]_RAM[31][31]_wide_mux_36_OUT> created at line 71.
+    Found 32-bit 32-to-1 multiplexer for signal <Rt[4]_RAM[31][31]_wide_mux_39_OUT> created at line 72.
     Summary:
 	inferred 1024 D-type flip-flop(s).
 	inferred   4 Multiplexer(s).
 Unit <RegFile> synthesized.
 
 Synthesizing Unit <Mux_1>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
         WIDTH = 5
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux_1> synthesized.
 
 Synthesizing Unit <ALU>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v".
         ALUOPBITS = 3
         REGBITS = 5
         WIDTH = 32
@@ -1354,7 +1357,7 @@ Synthesizing Unit <ALU>.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <Shifter>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v".
         WIDTH = 32
     Found 32-bit adder for signal <shiftmag> created at line 34.
     Found 32-bit shifter logical right for signal <arg[31]_shiftmag[31]_shift_right_5_OUT[31:0]> created at line 47
@@ -1369,7 +1372,7 @@ Synthesizing Unit <Shifter>.
 Unit <Shifter> synthesized.
 
 Synthesizing Unit <SignExtender>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v".
         IMMBITS = 18
         WIDTH = 32
     Summary:
@@ -1377,7 +1380,7 @@ Synthesizing Unit <SignExtender>.
 Unit <SignExtender> synthesized.
 
 Synthesizing Unit <LogicController>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v".
         OPBITS = 4
         FUNCTBITS = 4
         REGBITS = 5
@@ -1389,7 +1392,7 @@ Synthesizing Unit <LogicController>.
 Unit <LogicController> synthesized.
 
 Synthesizing Unit <ProgramStatusRegister>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v".
         REGBITS = 5
         WIDTH = 32
     Found 1-bit register for signal <PSR<3>>.
@@ -1404,14 +1407,14 @@ Synthesizing Unit <ProgramStatusRegister>.
 Unit <ProgramStatusRegister> synthesized.
 
 Synthesizing Unit <ZeroPad>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v".
         WIDTH = 32
     Summary:
 	no macro.
 Unit <ZeroPad> synthesized.
 
 Synthesizing Unit <MemoryController>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v".
         WIDTH = 32
 WARNING:Xst:647 - Input <addressIN<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32-bit 4-to-1 multiplexer for signal <CPUdata_OUT> created at line 46.
@@ -1420,7 +1423,7 @@ WARNING:Xst:647 - Input <addressIN<31:16>> is never used. This port will be pres
 Unit <MemoryController> synthesized.
 
 Synthesizing Unit <DataRAM>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v".
         WIDTH = 32
         RAM_ADDR_BITS = 10
 WARNING:Xst:647 - Input <address<13:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1430,7 +1433,7 @@ WARNING:Xst:647 - Input <address<13:10>> is never used. This port will be preser
 Unit <DataRAM> synthesized.
 
 Synthesizing Unit <IOMemory>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v".
         WIDTH = 8
         RAM_ADDR_BITS = 14
 WARNING:Xst:647 - Input <address<12:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -1441,7 +1444,7 @@ WARNING:Xst:647 - Input <address<12:0>> is never used. This port will be preserv
 Unit <IOMemory> synthesized.
 
 Synthesizing Unit <NES_CONTROLLER>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v".
     Found 1-bit register for signal <controller_data<6>>.
     Found 1-bit register for signal <controller_data<5>>.
     Found 1-bit register for signal <controller_data<4>>.
@@ -1476,14 +1479,14 @@ Synthesizing Unit <NES_CONTROLLER>.
 Unit <NES_CONTROLLER> synthesized.
 
 Synthesizing Unit <DisplayVGA>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v".
 WARNING:Xst:647 - Input <addrCPU<13:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <DisplayVGA> synthesized.
 
 Synthesizing Unit <vgaControl>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v".
     Found 12-bit register for signal <hCount>.
     Found 12-bit register for signal <vCount>.
     Found 10-bit register for signal <hPixel>.
@@ -1515,7 +1518,7 @@ Synthesizing Unit <vgaControl>.
 Unit <vgaControl> synthesized.
 
 Synthesizing Unit <CharacterDisplayRAM>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v".
         RAM_WIDTH = 7
         RAM_ADDR_BITS = 13
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <charDispRAM>, simulation mismatch.
@@ -1529,7 +1532,7 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <charDis
 Unit <CharacterDisplayRAM> synthesized.
 
 Synthesizing Unit <CharacterROM>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v".
+    Related source file is "C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v".
         ROM_WIDTH = 8
         ROM_ADDR_BITS = 12
         PIXEL_BITS = 3
@@ -1799,15 +1802,15 @@ Top Level Output File Name         : System.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3355
+# BELS                             : 3360
 #      GND                         : 1
 #      INV                         : 36
 #      LUT1                        : 62
-#      LUT2                        : 67
+#      LUT2                        : 71
 #      LUT3                        : 442
 #      LUT4                        : 198
 #      LUT5                        : 434
-#      LUT6                        : 1554
+#      LUT6                        : 1555
 #      MUXCY                       : 246
 #      MUXF7                       : 89
 #      VCC                         : 1
@@ -1816,8 +1819,9 @@ Primitive and Black Box Usage:
 #      FDC                         : 15
 #      FDCE                        : 63
 #      FDE_1                       : 1032
-#      FDR                         : 27
+#      FDR                         : 23
 #      FDRE                        : 13
+#      FDS                         : 4
 # RAMS                             : 394
 #      RAM128X1D                   : 259
 #      RAM256X1S                   : 128
@@ -1839,16 +1843,16 @@ Selected Device : 6slx16csg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:            1150  out of  18224     6%  
- Number of Slice LUTs:                 4355  out of   9112    47%  
-    Number used as Logic:              2793  out of   9112    30%  
+ Number of Slice LUTs:                 4360  out of   9112    47%  
+    Number used as Logic:              2798  out of   9112    30%  
     Number used as Memory:             1562  out of   2176    71%  
        Number used as RAM:             1562
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   5272
-   Number with an unused Flip Flop:    4122  out of   5272    78%  
-   Number with an unused LUT:           917  out of   5272    17%  
-   Number of fully used LUT-FF pairs:   233  out of   5272     4%  
+ Number of LUT Flip Flop pairs used:   5277
+   Number with an unused Flip Flop:    4127  out of   5277    78%  
+   Number with an unused LUT:           917  out of   5277    17%  
+   Number of fully used LUT-FF pairs:   233  out of   5277     4%  
    Number of unique control sets:        53
 
 IO Utilization: 
@@ -1898,7 +1902,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 21.402ns (Maximum Frequency: 46.724MHz)
-   Minimum input arrival time before clock: 19.613ns
+   Minimum input arrival time before clock: 19.614ns
    Maximum output required time after clock: 19.079ns
    Maximum combinational path delay: No path found
 
@@ -1909,7 +1913,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 21.402ns (frequency: 46.724MHz)
-  Total number of paths / destination ports: 113122441159 / 5866
+  Total number of paths / destination ports: 113122441159 / 5862
 -------------------------------------------------------------------------
 Delay:               21.402ns (Levels of Logic = 21)
   Source:            titan/PC/PC_10 (FF)
@@ -1975,9 +1979,9 @@ Delay:               6.618ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 730546487 / 5876
+  Total number of paths / destination ports: 730546491 / 5880
 -------------------------------------------------------------------------
-Offset:              19.613ns (Levels of Logic = 19)
+Offset:              19.614ns (Levels of Logic = 19)
   Source:            reset (PAD)
   Destination:       titan/ExStage/regfile/RAM_431 (FF)
   Destination Clock: clk rising
@@ -1986,7 +1990,7 @@ Offset:              19.613ns (Levels of Logic = 19)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           265   1.222   2.412  reset_IBUF (reset_IBUF)
+     IBUF:I->O           270   1.222   2.413  reset_IBUF (reset_IBUF)
      LUT5:I0->O           19   0.203   1.072  titan/LogicCtrl/Mmux_RtSrcReg11_7 (titan/LogicCtrl/Mmux_RtSrcReg116)
      LUT5:I4->O            1   0.205   0.944  titan/ExStage/regfile/mux43_82 (titan/ExStage/regfile/mux43_82)
      LUT6:I0->O            2   0.203   0.721  titan/ExStage/regfile/mux43_4 (titan/ExStage/regfile/mux43_4)
@@ -2007,7 +2011,7 @@ Offset:              19.613ns (Levels of Logic = 19)
      LUT6:I5->O           17   0.205   0.000  titan/ExStage/RaWriteEnMUX/Mmux_out274 (titan/ExStage/writeData<4>)
      FDE_1:D                   0.102          titan/ExStage/regfile/RAM_4
     ----------------------------------------
-    Total                     19.613ns (4.872ns logic, 14.741ns route)
+    Total                     19.614ns (4.872ns logic, 14.742ns route)
                                        (24.8% logic, 75.2% route)
 
 =========================================================================
@@ -2034,7 +2038,7 @@ Offset:              2.910ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'dispVGA/vgaCtrl/clk25M'
   Total number of paths / destination ports: 46 / 46
 -------------------------------------------------------------------------
-Offset:              3.719ns (Levels of Logic = 1)
+Offset:              3.720ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       dispVGA/vgaCtrl/vCount_11 (FF)
   Destination Clock: dispVGA/vgaCtrl/clk25M rising
@@ -2043,10 +2047,10 @@ Offset:              3.719ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           265   1.222   2.067  reset_IBUF (reset_IBUF)
+     IBUF:I->O           270   1.222   2.068  reset_IBUF (reset_IBUF)
      FDC:CLR                   0.430          dispVGA/vgaCtrl/bright
     ----------------------------------------
-    Total                      3.719ns (1.652ns logic, 2.067ns route)
+    Total                      3.720ns (1.652ns logic, 2.068ns route)
                                        (44.4% logic, 55.6% route)
 
 =========================================================================
@@ -2140,12 +2144,12 @@ clk            |         |         |    8.648|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 35.00 secs
-Total CPU time to Xst completion: 34.36 secs
+Total REAL time to Xst completion: 34.00 secs
+Total CPU time to Xst completion: 34.62 secs
  
 --> 
 
-Total memory usage is 320680 kilobytes
+Total memory usage is 319028 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   12 (   0 filtered)

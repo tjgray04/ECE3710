@@ -48,7 +48,8 @@ static int ng23[] = {3, 0};
 static int ng24[] = {2, 0};
 static int ng25[] = {1, 0};
 static int ng26[] = {0, 0};
-static unsigned int ng27[] = {1666667U, 0U};
+static unsigned int ng27[] = {1200U, 0U};
+static unsigned int ng28[] = {1666667U, 0U};
 
 
 
@@ -4652,7 +4653,7 @@ LAB7:    xsi_set_current_line(191, ng0);
     t2 = (t0 + 2248);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
-    t5 = ((char*)((ng27)));
+    t5 = ((char*)((ng28)));
     memset(t13, 0, 8);
     t11 = (t4 + 4);
     t12 = (t5 + 4);
@@ -4699,7 +4700,7 @@ LAB15:
 LAB8:    goto LAB2;
 
 LAB6:    xsi_set_current_line(189, ng0);
-    t11 = ((char*)((ng1)));
+    t11 = ((char*)((ng27)));
     t12 = (t0 + 2248);
     xsi_vlogvar_wait_assign_value(t12, t11, 0, 0, 22, 0LL);
     goto LAB8;

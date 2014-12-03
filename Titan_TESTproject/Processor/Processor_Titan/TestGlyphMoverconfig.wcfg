@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/TestGlyphMoverInterface_TestBench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="TestGlyphMoverInterface_TestBench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/hSync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hSync</obj_property>
+      <obj_property name="ObjectShortName">hSync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/vSync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vSync</obj_property>
+      <obj_property name="ObjectShortName">vSync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/rgb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rgb[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rgb[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/bR" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bR</obj_property>
+      <obj_property name="ObjectShortName">bR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/bL" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bL</obj_property>
+      <obj_property name="ObjectShortName">bL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/bU" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bU</obj_property>
+      <obj_property name="ObjectShortName">bU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/bD" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">bD</obj_property>
+      <obj_property name="ObjectShortName">bD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/PS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">PS[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/NS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NS[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NS[1:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/glyphPos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">glyphPos[12:0]</obj_property>
+      <obj_property name="ObjectShortName">glyphPos[12:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/waitCount" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">waitCount[26:0]</obj_property>
+      <obj_property name="ObjectShortName">waitCount[26:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/index" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">index[6:0]</obj_property>
+      <obj_property name="ObjectShortName">index[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/moveEn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">moveEn</obj_property>
+      <obj_property name="ObjectShortName">moveEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/moved" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">moved</obj_property>
+      <obj_property name="ObjectShortName">moved</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/VGAdataIN" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VGAdataIN[6:0]</obj_property>
+      <obj_property name="ObjectShortName">VGAdataIN[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/VGAwriteEn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">VGAwriteEn</obj_property>
+      <obj_property name="ObjectShortName">VGAwriteEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/writeData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">writeData[6:0]</obj_property>
+      <obj_property name="ObjectShortName">writeData[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TestGlyphMoverInterface_TestBench/uut/tg/addr" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addr[13:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[13:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+</wave_config>

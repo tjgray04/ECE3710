@@ -57,25 +57,31 @@ module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
 	
 	//Subtractor
 	wire [WIDTH-1:0] diff;
+	wire Z;
 	assign diff = $signed(arg1) - $signed(arg2);
 	// for compare, set the Z flag high if the difference is zero
-	assign Z = diff ? 0 : 1'b1;
+	assign Z = diff ? 1'b0 : 1'b1;
 	
 	//Subtraction overflow checker
 	wire Fsub;
 	assign Fsub = (arg1[WIDTH-1] & ~arg2[WIDTH-1] & ~sum[WIDTH-1]) + (~arg1[WIDTH-1] & arg2[WIDTH-1] & sum[WIDTH-1]);
 	
 	//Unsigned Comparator
+	wire L;
 	assign L = (arg1 < arg2);
 	
 	//Signed Comparator
+	wire N;
 	assign N = ($signed(arg1) < $signed(arg2));
 	
 	//ALU behavior
 	always@(*)
 	begin
 		if(reset)
+		begin
 			PSRwrite = 5'b0;
+			result = sum[WIDTH-1:0];
+		end
 		else
 		begin
 			case(aluop)
@@ -105,7 +111,7 @@ module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
 						PSRwrite = 5'b0;
 						end
 				MULT: begin
-						result = $signed(arg1) * $signed(arg2);
+						result = ($signed(arg1) * $signed(arg2));
 						PSRwrite = 5'b0;
 						end
 				CMP:  begin
@@ -113,7 +119,7 @@ module ALU#(parameter ALUOPBITS = 3, REGBITS = 5, WIDTH = 32)(
 						PSRwrite = {1'b0,L,1'b0,Z,N};
 						end
 			default: begin
-						result = sum;
+						result = sum[WIDTH-1:0];
 						PSRwrite = 5'b0;
 						end
 			endcase

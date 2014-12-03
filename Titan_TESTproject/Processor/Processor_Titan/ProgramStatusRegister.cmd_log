@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ProgramStatusRegister.xst" -ofn "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ProgramStatusRegister.syr" 

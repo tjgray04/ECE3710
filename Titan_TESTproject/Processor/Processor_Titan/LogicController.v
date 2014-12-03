@@ -21,18 +21,17 @@
 module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 		( input clk, reset,
 		  input [OPBITS-1:0] opCode,
-		  input [REGBITS-1:0] Rs,
 		  input [FUNCTBITS-1:0] functionCode,
 		  output reg branch, jump, jumpRA, CFWrite, LZNWrite, wbPSR, RtSrcReg, wbSrc, memSrc, shiftSrc, aluSrcb ,regWriteEn,
-		  output reg raWrite, shiftType, memWrite, pcEn, enROM, enRAM,
-		  output reg [2:0] aluop,
-		  output [REGBITS-1:0] PSRsel
+		  output reg raWrite, shiftType, memWrite, pcEn, /*enROM,*/ enRAM,
+		  output reg [2:0] aluop
 		);
 		
 		//Declare State variables.
-		parameter	EX  = 2'b00;
-		parameter   MEM = 2'b01;
-		reg [1:0]	PS, NS;
+		parameter	EX  = 1'b0;
+		parameter   MEM = 1'b1;
+		reg 			PS, NS; // only two possible states in the Execution Stage
+//		reg [1:0]	PS, NS;
 		
 		//Declare ALU operations
 		parameter	opADD = 3'b000,
@@ -84,8 +83,6 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 					 ASH  = 4'b0110,
 					 ASHI = 4'b0011; //001s, s is taken care of in the shifter.
 			
-		// Assign Rs to PSRsel
-		assign PSRsel = Rs;
 		
 		//Present state update
 		always@(posedge clk)
@@ -386,7 +383,7 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 			if(reset)
 			begin
 				pcEn <= 0;
-				enROM <= 0;
+//				enROM <= 0;
 			end
 			else
 			begin
@@ -395,21 +392,21 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 								if((opCode == LOAD) || (opCode == STR))
 								begin	
 									pcEn <= 1'b0;	//if the instruction is a load or a store, pause the program counter
-									enROM <= 1'b0;	// pause the instruction ROM when the PC is disabled
+//									enROM <= 1'b0;	// pause the instruction ROM when the PC is disabled
 								end
 								else
 								begin
 									pcEn <= 1'b1;	//otherwise increment
-									enROM <= 1'b1; // resume the instruction ROM
+//									enROM <= 1'b1; // resume the instruction ROM
 								end
 							end
 					MEM:	begin
 							pcEn <= 1'b1;	//automatically go back to incrementing
-							enROM <= 1'b1;	// resume the instruction ROM
+//							enROM <= 1'b1;	// resume the instruction ROM
 							end
 					default:	begin 
 								pcEn <= 1'b0;
-								enROM <= 1'b0;
+//								enROM <= 1'b0;
 								end
 				endcase
 			end

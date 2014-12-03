@@ -30,7 +30,6 @@ module ProgramStatusRegister#(parameter REGBITS = 5, WIDTH = 32)
 							output [WIDTH-1:0] PSRcondExt);
 	
 	reg [REGBITS-1:0] PSR;
-//	wire [REGBITS-1:0] PSR_next0, PSR_next;
 
 	// PSRwrite[4:0] = {C,L,F,Z,N}
 	// Retain the value of the PSRwrite, to use the signals in the combinational logic
@@ -40,26 +39,27 @@ module ProgramStatusRegister#(parameter REGBITS = 5, WIDTH = 32)
 			PSR <= 5'b0;
 		else
 		begin
-//			PSR <= PSR_next;
 			if(CFwrite)
 			begin
 				PSR[4] <= PSRwrite[4];
 				PSR[2] <= PSRwrite[2];
+				// Latch the L,Z,N values
+				PSR[3] <= PSR[3];
+				PSR[1:0] <= PSR[1:0];
 			end
 			else if(LZNwrite)
 			begin
 				PSR[3] <= PSRwrite[3];
 				PSR[1:0] <= PSRwrite[1:0];
+				// Latch the C,F files
+				PSR[4] <= PSR[4];
+				PSR[2] <= PSR[2];
 			end
 			else
 				PSR <= PSR;
 		end
 	end
-	
-	// the logic controller gaurantees that CFwrite and LZNwrite will never go high at the same time
-//	assign PSR_next0 = CFwrite  ? {PSRwrite[4], PSR[3], PSRwrite[2], PSR[1:0]} : PSR;
-//	assign PSR_next  = LZNwrite ? {PSR[4], PSRwrite[3], PSR[2], PSRwrite[1:0]} : PSR_next0;
-	
+		
    always @(*)
 	begin
       case (PSRsel)

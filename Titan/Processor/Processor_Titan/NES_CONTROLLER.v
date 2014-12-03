@@ -186,7 +186,7 @@ always@(posedge clock)
 begin
 	//If a reset occurs reset the counter.
 	if(reset)
-		count <= 32'b0;
+		count <= 32'd1200;
 	//Else if the counter has reached the maximum value, reset the counter
 	else if(count == 32'd1666667)
 		count<= 32'b0;

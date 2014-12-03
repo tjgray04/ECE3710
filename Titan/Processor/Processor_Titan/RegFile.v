@@ -43,10 +43,17 @@ module RegFile#(parameter REGBITS = 5, WIDTH = 32)(
 		output [WIDTH-1:0] RtData
     );
 	
-	parameter [REGBITS-1:0] RA = 5'd31; //Return address register is RAM[31]
+//	parameter [REGBITS-1:0] RA = 5'd31; //Return address register is RAM[31]
 	
 	//Registers
 	reg[WIDTH-1:0] RAM [(1<<REGBITS)-1:0];	//normally 32 32-bit registers, RAM in this case referes to our 32 available registers
+	
+	integer i;
+	initial
+		begin
+			for (i = 31; i >= 0; i=i-1)
+				RAM[i] = 32'd0;
+		end
 	
 	//Register behavior
 	// Write back on the negative edge of the clock to ensure data propagation through execution stage
@@ -57,7 +64,7 @@ module RegFile#(parameter REGBITS = 5, WIDTH = 32)(
 			RAM[Rdest] <= writeData;
 		// if we are writing back to the return address register
 		else if(RaWriteEn)
-			RAM[RA] <= writeData;
+			RAM[Rs] <= writeData;
 	end
 	
 	// Just read out the data

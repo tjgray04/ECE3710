@@ -1,0 +1,2153 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: System.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "System.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "System"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : System
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
+Parsing module <ZeroPad>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
+Parsing module <SignExtender>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v" into library work
+Parsing module <Shifter>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
+Parsing module <RegFile>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" Line 46. parameter declaration becomes local in RegFile with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
+Parsing module <Mux>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
+Parsing module <ALU>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" Line 41. parameter declaration becomes local in ALU with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v" into library work
+Parsing module <vgaControl>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
+Parsing module <ProgramStatusRegister>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v" into library work
+Parsing module <ProgramCounter>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" into library work
+Parsing module <NES_CONTROLLER>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" into library work
+Parsing module <LogicController>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 31. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 32. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 37. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 47. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 58. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 63. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 67. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 70. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 81. parameter declaration becomes local in LogicController with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" into library work
+Parsing module <InstructionROM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v" into library work
+Parsing module <InstructionDecoder>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v" into library work
+Parsing module <ExecutionStage>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" into library work
+Parsing module <CharacterROM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
+Parsing module <CharacterDisplayRAM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v" into library work
+Parsing module <Titan>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v" into library work
+Parsing module <MemoryController>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v" into library work
+Parsing module <IOMemory>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
+Parsing module <DisplayVGA>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v" into library work
+Parsing module <DataRAM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" into library work
+Parsing module <System>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <System>.
+
+Elaborating module <Titan>.
+
+Elaborating module <ProgramCounter>.
+
+Elaborating module <Mux>.
+
+Elaborating module <InstructionROM>.
+Reading initialization file \"ControllerTest.dat\".
+WARNING:HDLCompiler:1670 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal <inst_ROM> in initial block is partially initialized.
+
+Elaborating module <InstructionDecoder>.
+
+Elaborating module <ExecutionStage>.
+
+Elaborating module <RegFile>.
+
+Elaborating module <Mux(WIDTH=5)>.
+
+Elaborating module <ALU>.
+
+Elaborating module <Shifter>.
+
+Elaborating module <SignExtender>.
+
+Elaborating module <LogicController>.
+
+Elaborating module <ProgramStatusRegister>.
+
+Elaborating module <ZeroPad>.
+
+Elaborating module <MemoryController>.
+
+Elaborating module <DataRAM>.
+
+Elaborating module <IOMemory>.
+
+Elaborating module <NES_CONTROLLER>.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 195: Result of 23-bit expression is truncated to fit in 22-bit target.
+
+Elaborating module <DisplayVGA>.
+
+Elaborating module <vgaControl>.
+
+Elaborating module <CharacterDisplayRAM>.
+Reading initialization file \"mTestRAM.dat\".
+
+Elaborating module <CharacterROM>.
+Reading initialization file \"TestROM.dat\".
+WARNING:HDLCompiler:1670 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal <charROM> in initial block is partially initialized.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <System>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v".
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <System> synthesized.
+
+Synthesizing Unit <Titan>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v".
+        ALUOPBITS = 3
+        OPBITS = 4
+        FUNCTBITS = 4
+        REGBITS = 5
+        IMMBITS = 18
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <Titan> synthesized.
+
+Synthesizing Unit <ProgramCounter>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v".
+        REGBITS = 5
+        WIDTH = 32
+    Found 32-bit register for signal <PC>.
+    Found 32-bit adder for signal <returnAddr> created at line 52.
+    Found 32-bit adder for signal <BranchImm> created at line 54.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <ProgramCounter> synthesized.
+
+Synthesizing Unit <Mux>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
+        WIDTH = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux> synthesized.
+
+Synthesizing Unit <InstructionROM>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v".
+        WIDTH = 32
+        ROM_ADDR_BITS = 12
+WARNING:Xst:2999 - Signal 'inst_ROM', unconnected in block 'InstructionROM', is tied to its initial value.
+    Found 4096x32-bit single-port Read Only RAM <Mram_inst_ROM> for signal <inst_ROM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <InstructionROM> synthesized.
+
+Synthesizing Unit <InstructionDecoder>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v".
+        OPBITS = 4
+        FUNCTBITS = 4
+        REGBITS = 5
+        IMMBITS = 18
+        WIDTH = 32
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <InstructionDecoder> synthesized.
+
+Synthesizing Unit <ExecutionStage>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v".
+        OPBITS = 4
+        FUNCTBITS = 4
+        REGBITS = 5
+        IMMBITS = 18
+        ALUOPBITS = 3
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <ExecutionStage> synthesized.
+
+Synthesizing Unit <RegFile>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v".
+        REGBITS = 5
+        WIDTH = 32
+    Found 1-bit register for signal <RAM<31><30>>.
+    Found 1-bit register for signal <RAM<31><29>>.
+    Found 1-bit register for signal <RAM<31><28>>.
+    Found 1-bit register for signal <RAM<31><27>>.
+    Found 1-bit register for signal <RAM<31><26>>.
+    Found 1-bit register for signal <RAM<31><25>>.
+    Found 1-bit register for signal <RAM<31><24>>.
+    Found 1-bit register for signal <RAM<31><23>>.
+    Found 1-bit register for signal <RAM<31><22>>.
+    Found 1-bit register for signal <RAM<31><21>>.
+    Found 1-bit register for signal <RAM<31><20>>.
+    Found 1-bit register for signal <RAM<31><19>>.
+    Found 1-bit register for signal <RAM<31><18>>.
+    Found 1-bit register for signal <RAM<31><17>>.
+    Found 1-bit register for signal <RAM<31><16>>.
+    Found 1-bit register for signal <RAM<31><15>>.
+    Found 1-bit register for signal <RAM<31><14>>.
+    Found 1-bit register for signal <RAM<31><13>>.
+    Found 1-bit register for signal <RAM<31><12>>.
+    Found 1-bit register for signal <RAM<31><11>>.
+    Found 1-bit register for signal <RAM<31><10>>.
+    Found 1-bit register for signal <RAM<31><9>>.
+    Found 1-bit register for signal <RAM<31><8>>.
+    Found 1-bit register for signal <RAM<31><7>>.
+    Found 1-bit register for signal <RAM<31><6>>.
+    Found 1-bit register for signal <RAM<31><5>>.
+    Found 1-bit register for signal <RAM<31><4>>.
+    Found 1-bit register for signal <RAM<31><3>>.
+    Found 1-bit register for signal <RAM<31><2>>.
+    Found 1-bit register for signal <RAM<31><1>>.
+    Found 1-bit register for signal <RAM<31><0>>.
+    Found 1-bit register for signal <RAM<30><31>>.
+    Found 1-bit register for signal <RAM<30><30>>.
+    Found 1-bit register for signal <RAM<30><29>>.
+    Found 1-bit register for signal <RAM<30><28>>.
+    Found 1-bit register for signal <RAM<30><27>>.
+    Found 1-bit register for signal <RAM<30><26>>.
+    Found 1-bit register for signal <RAM<30><25>>.
+    Found 1-bit register for signal <RAM<30><24>>.
+    Found 1-bit register for signal <RAM<30><23>>.
+    Found 1-bit register for signal <RAM<30><22>>.
+    Found 1-bit register for signal <RAM<30><21>>.
+    Found 1-bit register for signal <RAM<30><20>>.
+    Found 1-bit register for signal <RAM<30><19>>.
+    Found 1-bit register for signal <RAM<30><18>>.
+    Found 1-bit register for signal <RAM<30><17>>.
+    Found 1-bit register for signal <RAM<30><16>>.
+    Found 1-bit register for signal <RAM<30><15>>.
+    Found 1-bit register for signal <RAM<30><14>>.
+    Found 1-bit register for signal <RAM<30><13>>.
+    Found 1-bit register for signal <RAM<30><12>>.
+    Found 1-bit register for signal <RAM<30><11>>.
+    Found 1-bit register for signal <RAM<30><10>>.
+    Found 1-bit register for signal <RAM<30><9>>.
+    Found 1-bit register for signal <RAM<30><8>>.
+    Found 1-bit register for signal <RAM<30><7>>.
+    Found 1-bit register for signal <RAM<30><6>>.
+    Found 1-bit register for signal <RAM<30><5>>.
+    Found 1-bit register for signal <RAM<30><4>>.
+    Found 1-bit register for signal <RAM<30><3>>.
+    Found 1-bit register for signal <RAM<30><2>>.
+    Found 1-bit register for signal <RAM<30><1>>.
+    Found 1-bit register for signal <RAM<30><0>>.
+    Found 1-bit register for signal <RAM<29><31>>.
+    Found 1-bit register for signal <RAM<29><30>>.
+    Found 1-bit register for signal <RAM<29><29>>.
+    Found 1-bit register for signal <RAM<29><28>>.
+    Found 1-bit register for signal <RAM<29><27>>.
+    Found 1-bit register for signal <RAM<29><26>>.
+    Found 1-bit register for signal <RAM<29><25>>.
+    Found 1-bit register for signal <RAM<29><24>>.
+    Found 1-bit register for signal <RAM<29><23>>.
+    Found 1-bit register for signal <RAM<29><22>>.
+    Found 1-bit register for signal <RAM<29><21>>.
+    Found 1-bit register for signal <RAM<29><20>>.
+    Found 1-bit register for signal <RAM<29><19>>.
+    Found 1-bit register for signal <RAM<29><18>>.
+    Found 1-bit register for signal <RAM<29><17>>.
+    Found 1-bit register for signal <RAM<29><16>>.
+    Found 1-bit register for signal <RAM<29><15>>.
+    Found 1-bit register for signal <RAM<29><14>>.
+    Found 1-bit register for signal <RAM<29><13>>.
+    Found 1-bit register for signal <RAM<29><12>>.
+    Found 1-bit register for signal <RAM<29><11>>.
+    Found 1-bit register for signal <RAM<29><10>>.
+    Found 1-bit register for signal <RAM<29><9>>.
+    Found 1-bit register for signal <RAM<29><8>>.
+    Found 1-bit register for signal <RAM<29><7>>.
+    Found 1-bit register for signal <RAM<29><6>>.
+    Found 1-bit register for signal <RAM<29><5>>.
+    Found 1-bit register for signal <RAM<29><4>>.
+    Found 1-bit register for signal <RAM<29><3>>.
+    Found 1-bit register for signal <RAM<29><2>>.
+    Found 1-bit register for signal <RAM<29><1>>.
+    Found 1-bit register for signal <RAM<29><0>>.
+    Found 1-bit register for signal <RAM<28><31>>.
+    Found 1-bit register for signal <RAM<28><30>>.
+    Found 1-bit register for signal <RAM<28><29>>.
+    Found 1-bit register for signal <RAM<28><28>>.
+    Found 1-bit register for signal <RAM<28><27>>.
+    Found 1-bit register for signal <RAM<28><26>>.
+    Found 1-bit register for signal <RAM<28><25>>.
+    Found 1-bit register for signal <RAM<28><24>>.
+    Found 1-bit register for signal <RAM<28><23>>.
+    Found 1-bit register for signal <RAM<28><22>>.
+    Found 1-bit register for signal <RAM<28><21>>.
+    Found 1-bit register for signal <RAM<28><20>>.
+    Found 1-bit register for signal <RAM<28><19>>.
+    Found 1-bit register for signal <RAM<28><18>>.
+    Found 1-bit register for signal <RAM<28><17>>.
+    Found 1-bit register for signal <RAM<28><16>>.
+    Found 1-bit register for signal <RAM<28><15>>.
+    Found 1-bit register for signal <RAM<28><14>>.
+    Found 1-bit register for signal <RAM<28><13>>.
+    Found 1-bit register for signal <RAM<28><12>>.
+    Found 1-bit register for signal <RAM<28><11>>.
+    Found 1-bit register for signal <RAM<28><10>>.
+    Found 1-bit register for signal <RAM<28><9>>.
+    Found 1-bit register for signal <RAM<28><8>>.
+    Found 1-bit register for signal <RAM<28><7>>.
+    Found 1-bit register for signal <RAM<28><6>>.
+    Found 1-bit register for signal <RAM<28><5>>.
+    Found 1-bit register for signal <RAM<28><4>>.
+    Found 1-bit register for signal <RAM<28><3>>.
+    Found 1-bit register for signal <RAM<28><2>>.
+    Found 1-bit register for signal <RAM<28><1>>.
+    Found 1-bit register for signal <RAM<28><0>>.
+    Found 1-bit register for signal <RAM<27><31>>.
+    Found 1-bit register for signal <RAM<27><30>>.
+    Found 1-bit register for signal <RAM<27><29>>.
+    Found 1-bit register for signal <RAM<27><28>>.
+    Found 1-bit register for signal <RAM<27><27>>.
+    Found 1-bit register for signal <RAM<27><26>>.
+    Found 1-bit register for signal <RAM<27><25>>.
+    Found 1-bit register for signal <RAM<27><24>>.
+    Found 1-bit register for signal <RAM<27><23>>.
+    Found 1-bit register for signal <RAM<27><22>>.
+    Found 1-bit register for signal <RAM<27><21>>.
+    Found 1-bit register for signal <RAM<27><20>>.
+    Found 1-bit register for signal <RAM<27><19>>.
+    Found 1-bit register for signal <RAM<27><18>>.
+    Found 1-bit register for signal <RAM<27><17>>.
+    Found 1-bit register for signal <RAM<27><16>>.
+    Found 1-bit register for signal <RAM<27><15>>.
+    Found 1-bit register for signal <RAM<27><14>>.
+    Found 1-bit register for signal <RAM<27><13>>.
+    Found 1-bit register for signal <RAM<27><12>>.
+    Found 1-bit register for signal <RAM<27><11>>.
+    Found 1-bit register for signal <RAM<27><10>>.
+    Found 1-bit register for signal <RAM<27><9>>.
+    Found 1-bit register for signal <RAM<27><8>>.
+    Found 1-bit register for signal <RAM<27><7>>.
+    Found 1-bit register for signal <RAM<27><6>>.
+    Found 1-bit register for signal <RAM<27><5>>.
+    Found 1-bit register for signal <RAM<27><4>>.
+    Found 1-bit register for signal <RAM<27><3>>.
+    Found 1-bit register for signal <RAM<27><2>>.
+    Found 1-bit register for signal <RAM<27><1>>.
+    Found 1-bit register for signal <RAM<27><0>>.
+    Found 1-bit register for signal <RAM<26><31>>.
+    Found 1-bit register for signal <RAM<26><30>>.
+    Found 1-bit register for signal <RAM<26><29>>.
+    Found 1-bit register for signal <RAM<26><28>>.
+    Found 1-bit register for signal <RAM<26><27>>.
+    Found 1-bit register for signal <RAM<26><26>>.
+    Found 1-bit register for signal <RAM<26><25>>.
+    Found 1-bit register for signal <RAM<26><24>>.
+    Found 1-bit register for signal <RAM<26><23>>.
+    Found 1-bit register for signal <RAM<26><22>>.
+    Found 1-bit register for signal <RAM<26><21>>.
+    Found 1-bit register for signal <RAM<26><20>>.
+    Found 1-bit register for signal <RAM<26><19>>.
+    Found 1-bit register for signal <RAM<26><18>>.
+    Found 1-bit register for signal <RAM<26><17>>.
+    Found 1-bit register for signal <RAM<26><16>>.
+    Found 1-bit register for signal <RAM<26><15>>.
+    Found 1-bit register for signal <RAM<26><14>>.
+    Found 1-bit register for signal <RAM<26><13>>.
+    Found 1-bit register for signal <RAM<26><12>>.
+    Found 1-bit register for signal <RAM<26><11>>.
+    Found 1-bit register for signal <RAM<26><10>>.
+    Found 1-bit register for signal <RAM<26><9>>.
+    Found 1-bit register for signal <RAM<26><8>>.
+    Found 1-bit register for signal <RAM<26><7>>.
+    Found 1-bit register for signal <RAM<26><6>>.
+    Found 1-bit register for signal <RAM<26><5>>.
+    Found 1-bit register for signal <RAM<26><4>>.
+    Found 1-bit register for signal <RAM<26><3>>.
+    Found 1-bit register for signal <RAM<26><2>>.
+    Found 1-bit register for signal <RAM<26><1>>.
+    Found 1-bit register for signal <RAM<26><0>>.
+    Found 1-bit register for signal <RAM<25><31>>.
+    Found 1-bit register for signal <RAM<25><30>>.
+    Found 1-bit register for signal <RAM<25><29>>.
+    Found 1-bit register for signal <RAM<25><28>>.
+    Found 1-bit register for signal <RAM<25><27>>.
+    Found 1-bit register for signal <RAM<25><26>>.
+    Found 1-bit register for signal <RAM<25><25>>.
+    Found 1-bit register for signal <RAM<25><24>>.
+    Found 1-bit register for signal <RAM<25><23>>.
+    Found 1-bit register for signal <RAM<25><22>>.
+    Found 1-bit register for signal <RAM<25><21>>.
+    Found 1-bit register for signal <RAM<25><20>>.
+    Found 1-bit register for signal <RAM<25><19>>.
+    Found 1-bit register for signal <RAM<25><18>>.
+    Found 1-bit register for signal <RAM<25><17>>.
+    Found 1-bit register for signal <RAM<25><16>>.
+    Found 1-bit register for signal <RAM<25><15>>.
+    Found 1-bit register for signal <RAM<25><14>>.
+    Found 1-bit register for signal <RAM<25><13>>.
+    Found 1-bit register for signal <RAM<25><12>>.
+    Found 1-bit register for signal <RAM<25><11>>.
+    Found 1-bit register for signal <RAM<25><10>>.
+    Found 1-bit register for signal <RAM<25><9>>.
+    Found 1-bit register for signal <RAM<25><8>>.
+    Found 1-bit register for signal <RAM<25><7>>.
+    Found 1-bit register for signal <RAM<25><6>>.
+    Found 1-bit register for signal <RAM<25><5>>.
+    Found 1-bit register for signal <RAM<25><4>>.
+    Found 1-bit register for signal <RAM<25><3>>.
+    Found 1-bit register for signal <RAM<25><2>>.
+    Found 1-bit register for signal <RAM<25><1>>.
+    Found 1-bit register for signal <RAM<25><0>>.
+    Found 1-bit register for signal <RAM<24><31>>.
+    Found 1-bit register for signal <RAM<24><30>>.
+    Found 1-bit register for signal <RAM<24><29>>.
+    Found 1-bit register for signal <RAM<24><28>>.
+    Found 1-bit register for signal <RAM<24><27>>.
+    Found 1-bit register for signal <RAM<24><26>>.
+    Found 1-bit register for signal <RAM<24><25>>.
+    Found 1-bit register for signal <RAM<24><24>>.
+    Found 1-bit register for signal <RAM<24><23>>.
+    Found 1-bit register for signal <RAM<24><22>>.
+    Found 1-bit register for signal <RAM<24><21>>.
+    Found 1-bit register for signal <RAM<24><20>>.
+    Found 1-bit register for signal <RAM<24><19>>.
+    Found 1-bit register for signal <RAM<24><18>>.
+    Found 1-bit register for signal <RAM<24><17>>.
+    Found 1-bit register for signal <RAM<24><16>>.
+    Found 1-bit register for signal <RAM<24><15>>.
+    Found 1-bit register for signal <RAM<24><14>>.
+    Found 1-bit register for signal <RAM<24><13>>.
+    Found 1-bit register for signal <RAM<24><12>>.
+    Found 1-bit register for signal <RAM<24><11>>.
+    Found 1-bit register for signal <RAM<24><10>>.
+    Found 1-bit register for signal <RAM<24><9>>.
+    Found 1-bit register for signal <RAM<24><8>>.
+    Found 1-bit register for signal <RAM<24><7>>.
+    Found 1-bit register for signal <RAM<24><6>>.
+    Found 1-bit register for signal <RAM<24><5>>.
+    Found 1-bit register for signal <RAM<24><4>>.
+    Found 1-bit register for signal <RAM<24><3>>.
+    Found 1-bit register for signal <RAM<24><2>>.
+    Found 1-bit register for signal <RAM<24><1>>.
+    Found 1-bit register for signal <RAM<24><0>>.
+    Found 1-bit register for signal <RAM<23><31>>.
+    Found 1-bit register for signal <RAM<23><30>>.
+    Found 1-bit register for signal <RAM<23><29>>.
+    Found 1-bit register for signal <RAM<23><28>>.
+    Found 1-bit register for signal <RAM<23><27>>.
+    Found 1-bit register for signal <RAM<23><26>>.
+    Found 1-bit register for signal <RAM<23><25>>.
+    Found 1-bit register for signal <RAM<23><24>>.
+    Found 1-bit register for signal <RAM<23><23>>.
+    Found 1-bit register for signal <RAM<23><22>>.
+    Found 1-bit register for signal <RAM<23><21>>.
+    Found 1-bit register for signal <RAM<23><20>>.
+    Found 1-bit register for signal <RAM<23><19>>.
+    Found 1-bit register for signal <RAM<23><18>>.
+    Found 1-bit register for signal <RAM<23><17>>.
+    Found 1-bit register for signal <RAM<23><16>>.
+    Found 1-bit register for signal <RAM<23><15>>.
+    Found 1-bit register for signal <RAM<23><14>>.
+    Found 1-bit register for signal <RAM<23><13>>.
+    Found 1-bit register for signal <RAM<23><12>>.
+    Found 1-bit register for signal <RAM<23><11>>.
+    Found 1-bit register for signal <RAM<23><10>>.
+    Found 1-bit register for signal <RAM<23><9>>.
+    Found 1-bit register for signal <RAM<23><8>>.
+    Found 1-bit register for signal <RAM<23><7>>.
+    Found 1-bit register for signal <RAM<23><6>>.
+    Found 1-bit register for signal <RAM<23><5>>.
+    Found 1-bit register for signal <RAM<23><4>>.
+    Found 1-bit register for signal <RAM<23><3>>.
+    Found 1-bit register for signal <RAM<23><2>>.
+    Found 1-bit register for signal <RAM<23><1>>.
+    Found 1-bit register for signal <RAM<23><0>>.
+    Found 1-bit register for signal <RAM<22><31>>.
+    Found 1-bit register for signal <RAM<22><30>>.
+    Found 1-bit register for signal <RAM<22><29>>.
+    Found 1-bit register for signal <RAM<22><28>>.
+    Found 1-bit register for signal <RAM<22><27>>.
+    Found 1-bit register for signal <RAM<22><26>>.
+    Found 1-bit register for signal <RAM<22><25>>.
+    Found 1-bit register for signal <RAM<22><24>>.
+    Found 1-bit register for signal <RAM<22><23>>.
+    Found 1-bit register for signal <RAM<22><22>>.
+    Found 1-bit register for signal <RAM<22><21>>.
+    Found 1-bit register for signal <RAM<22><20>>.
+    Found 1-bit register for signal <RAM<22><19>>.
+    Found 1-bit register for signal <RAM<22><18>>.
+    Found 1-bit register for signal <RAM<22><17>>.
+    Found 1-bit register for signal <RAM<22><16>>.
+    Found 1-bit register for signal <RAM<22><15>>.
+    Found 1-bit register for signal <RAM<22><14>>.
+    Found 1-bit register for signal <RAM<22><13>>.
+    Found 1-bit register for signal <RAM<22><12>>.
+    Found 1-bit register for signal <RAM<22><11>>.
+    Found 1-bit register for signal <RAM<22><10>>.
+    Found 1-bit register for signal <RAM<22><9>>.
+    Found 1-bit register for signal <RAM<22><8>>.
+    Found 1-bit register for signal <RAM<22><7>>.
+    Found 1-bit register for signal <RAM<22><6>>.
+    Found 1-bit register for signal <RAM<22><5>>.
+    Found 1-bit register for signal <RAM<22><4>>.
+    Found 1-bit register for signal <RAM<22><3>>.
+    Found 1-bit register for signal <RAM<22><2>>.
+    Found 1-bit register for signal <RAM<22><1>>.
+    Found 1-bit register for signal <RAM<22><0>>.
+    Found 1-bit register for signal <RAM<21><31>>.
+    Found 1-bit register for signal <RAM<21><30>>.
+    Found 1-bit register for signal <RAM<21><29>>.
+    Found 1-bit register for signal <RAM<21><28>>.
+    Found 1-bit register for signal <RAM<21><27>>.
+    Found 1-bit register for signal <RAM<21><26>>.
+    Found 1-bit register for signal <RAM<21><25>>.
+    Found 1-bit register for signal <RAM<21><24>>.
+    Found 1-bit register for signal <RAM<21><23>>.
+    Found 1-bit register for signal <RAM<21><22>>.
+    Found 1-bit register for signal <RAM<21><21>>.
+    Found 1-bit register for signal <RAM<21><20>>.
+    Found 1-bit register for signal <RAM<21><19>>.
+    Found 1-bit register for signal <RAM<21><18>>.
+    Found 1-bit register for signal <RAM<21><17>>.
+    Found 1-bit register for signal <RAM<21><16>>.
+    Found 1-bit register for signal <RAM<21><15>>.
+    Found 1-bit register for signal <RAM<21><14>>.
+    Found 1-bit register for signal <RAM<21><13>>.
+    Found 1-bit register for signal <RAM<21><12>>.
+    Found 1-bit register for signal <RAM<21><11>>.
+    Found 1-bit register for signal <RAM<21><10>>.
+    Found 1-bit register for signal <RAM<21><9>>.
+    Found 1-bit register for signal <RAM<21><8>>.
+    Found 1-bit register for signal <RAM<21><7>>.
+    Found 1-bit register for signal <RAM<21><6>>.
+    Found 1-bit register for signal <RAM<21><5>>.
+    Found 1-bit register for signal <RAM<21><4>>.
+    Found 1-bit register for signal <RAM<21><3>>.
+    Found 1-bit register for signal <RAM<21><2>>.
+    Found 1-bit register for signal <RAM<21><1>>.
+    Found 1-bit register for signal <RAM<21><0>>.
+    Found 1-bit register for signal <RAM<20><31>>.
+    Found 1-bit register for signal <RAM<20><30>>.
+    Found 1-bit register for signal <RAM<20><29>>.
+    Found 1-bit register for signal <RAM<20><28>>.
+    Found 1-bit register for signal <RAM<20><27>>.
+    Found 1-bit register for signal <RAM<20><26>>.
+    Found 1-bit register for signal <RAM<20><25>>.
+    Found 1-bit register for signal <RAM<20><24>>.
+    Found 1-bit register for signal <RAM<20><23>>.
+    Found 1-bit register for signal <RAM<20><22>>.
+    Found 1-bit register for signal <RAM<20><21>>.
+    Found 1-bit register for signal <RAM<20><20>>.
+    Found 1-bit register for signal <RAM<20><19>>.
+    Found 1-bit register for signal <RAM<20><18>>.
+    Found 1-bit register for signal <RAM<20><17>>.
+    Found 1-bit register for signal <RAM<20><16>>.
+    Found 1-bit register for signal <RAM<20><15>>.
+    Found 1-bit register for signal <RAM<20><14>>.
+    Found 1-bit register for signal <RAM<20><13>>.
+    Found 1-bit register for signal <RAM<20><12>>.
+    Found 1-bit register for signal <RAM<20><11>>.
+    Found 1-bit register for signal <RAM<20><10>>.
+    Found 1-bit register for signal <RAM<20><9>>.
+    Found 1-bit register for signal <RAM<20><8>>.
+    Found 1-bit register for signal <RAM<20><7>>.
+    Found 1-bit register for signal <RAM<20><6>>.
+    Found 1-bit register for signal <RAM<20><5>>.
+    Found 1-bit register for signal <RAM<20><4>>.
+    Found 1-bit register for signal <RAM<20><3>>.
+    Found 1-bit register for signal <RAM<20><2>>.
+    Found 1-bit register for signal <RAM<20><1>>.
+    Found 1-bit register for signal <RAM<20><0>>.
+    Found 1-bit register for signal <RAM<19><31>>.
+    Found 1-bit register for signal <RAM<19><30>>.
+    Found 1-bit register for signal <RAM<19><29>>.
+    Found 1-bit register for signal <RAM<19><28>>.
+    Found 1-bit register for signal <RAM<19><27>>.
+    Found 1-bit register for signal <RAM<19><26>>.
+    Found 1-bit register for signal <RAM<19><25>>.
+    Found 1-bit register for signal <RAM<19><24>>.
+    Found 1-bit register for signal <RAM<19><23>>.
+    Found 1-bit register for signal <RAM<19><22>>.
+    Found 1-bit register for signal <RAM<19><21>>.
+    Found 1-bit register for signal <RAM<19><20>>.
+    Found 1-bit register for signal <RAM<19><19>>.
+    Found 1-bit register for signal <RAM<19><18>>.
+    Found 1-bit register for signal <RAM<19><17>>.
+    Found 1-bit register for signal <RAM<19><16>>.
+    Found 1-bit register for signal <RAM<19><15>>.
+    Found 1-bit register for signal <RAM<19><14>>.
+    Found 1-bit register for signal <RAM<19><13>>.
+    Found 1-bit register for signal <RAM<19><12>>.
+    Found 1-bit register for signal <RAM<19><11>>.
+    Found 1-bit register for signal <RAM<19><10>>.
+    Found 1-bit register for signal <RAM<19><9>>.
+    Found 1-bit register for signal <RAM<19><8>>.
+    Found 1-bit register for signal <RAM<19><7>>.
+    Found 1-bit register for signal <RAM<19><6>>.
+    Found 1-bit register for signal <RAM<19><5>>.
+    Found 1-bit register for signal <RAM<19><4>>.
+    Found 1-bit register for signal <RAM<19><3>>.
+    Found 1-bit register for signal <RAM<19><2>>.
+    Found 1-bit register for signal <RAM<19><1>>.
+    Found 1-bit register for signal <RAM<19><0>>.
+    Found 1-bit register for signal <RAM<18><31>>.
+    Found 1-bit register for signal <RAM<18><30>>.
+    Found 1-bit register for signal <RAM<18><29>>.
+    Found 1-bit register for signal <RAM<18><28>>.
+    Found 1-bit register for signal <RAM<18><27>>.
+    Found 1-bit register for signal <RAM<18><26>>.
+    Found 1-bit register for signal <RAM<18><25>>.
+    Found 1-bit register for signal <RAM<18><24>>.
+    Found 1-bit register for signal <RAM<18><23>>.
+    Found 1-bit register for signal <RAM<18><22>>.
+    Found 1-bit register for signal <RAM<18><21>>.
+    Found 1-bit register for signal <RAM<18><20>>.
+    Found 1-bit register for signal <RAM<18><19>>.
+    Found 1-bit register for signal <RAM<18><18>>.
+    Found 1-bit register for signal <RAM<18><17>>.
+    Found 1-bit register for signal <RAM<18><16>>.
+    Found 1-bit register for signal <RAM<18><15>>.
+    Found 1-bit register for signal <RAM<18><14>>.
+    Found 1-bit register for signal <RAM<18><13>>.
+    Found 1-bit register for signal <RAM<18><12>>.
+    Found 1-bit register for signal <RAM<18><11>>.
+    Found 1-bit register for signal <RAM<18><10>>.
+    Found 1-bit register for signal <RAM<18><9>>.
+    Found 1-bit register for signal <RAM<18><8>>.
+    Found 1-bit register for signal <RAM<18><7>>.
+    Found 1-bit register for signal <RAM<18><6>>.
+    Found 1-bit register for signal <RAM<18><5>>.
+    Found 1-bit register for signal <RAM<18><4>>.
+    Found 1-bit register for signal <RAM<18><3>>.
+    Found 1-bit register for signal <RAM<18><2>>.
+    Found 1-bit register for signal <RAM<18><1>>.
+    Found 1-bit register for signal <RAM<18><0>>.
+    Found 1-bit register for signal <RAM<17><31>>.
+    Found 1-bit register for signal <RAM<17><30>>.
+    Found 1-bit register for signal <RAM<17><29>>.
+    Found 1-bit register for signal <RAM<17><28>>.
+    Found 1-bit register for signal <RAM<17><27>>.
+    Found 1-bit register for signal <RAM<17><26>>.
+    Found 1-bit register for signal <RAM<17><25>>.
+    Found 1-bit register for signal <RAM<17><24>>.
+    Found 1-bit register for signal <RAM<17><23>>.
+    Found 1-bit register for signal <RAM<17><22>>.
+    Found 1-bit register for signal <RAM<17><21>>.
+    Found 1-bit register for signal <RAM<17><20>>.
+    Found 1-bit register for signal <RAM<17><19>>.
+    Found 1-bit register for signal <RAM<17><18>>.
+    Found 1-bit register for signal <RAM<17><17>>.
+    Found 1-bit register for signal <RAM<17><16>>.
+    Found 1-bit register for signal <RAM<17><15>>.
+    Found 1-bit register for signal <RAM<17><14>>.
+    Found 1-bit register for signal <RAM<17><13>>.
+    Found 1-bit register for signal <RAM<17><12>>.
+    Found 1-bit register for signal <RAM<17><11>>.
+    Found 1-bit register for signal <RAM<17><10>>.
+    Found 1-bit register for signal <RAM<17><9>>.
+    Found 1-bit register for signal <RAM<17><8>>.
+    Found 1-bit register for signal <RAM<17><7>>.
+    Found 1-bit register for signal <RAM<17><6>>.
+    Found 1-bit register for signal <RAM<17><5>>.
+    Found 1-bit register for signal <RAM<17><4>>.
+    Found 1-bit register for signal <RAM<17><3>>.
+    Found 1-bit register for signal <RAM<17><2>>.
+    Found 1-bit register for signal <RAM<17><1>>.
+    Found 1-bit register for signal <RAM<17><0>>.
+    Found 1-bit register for signal <RAM<16><31>>.
+    Found 1-bit register for signal <RAM<16><30>>.
+    Found 1-bit register for signal <RAM<16><29>>.
+    Found 1-bit register for signal <RAM<16><28>>.
+    Found 1-bit register for signal <RAM<16><27>>.
+    Found 1-bit register for signal <RAM<16><26>>.
+    Found 1-bit register for signal <RAM<16><25>>.
+    Found 1-bit register for signal <RAM<16><24>>.
+    Found 1-bit register for signal <RAM<16><23>>.
+    Found 1-bit register for signal <RAM<16><22>>.
+    Found 1-bit register for signal <RAM<16><21>>.
+    Found 1-bit register for signal <RAM<16><20>>.
+    Found 1-bit register for signal <RAM<16><19>>.
+    Found 1-bit register for signal <RAM<16><18>>.
+    Found 1-bit register for signal <RAM<16><17>>.
+    Found 1-bit register for signal <RAM<16><16>>.
+    Found 1-bit register for signal <RAM<16><15>>.
+    Found 1-bit register for signal <RAM<16><14>>.
+    Found 1-bit register for signal <RAM<16><13>>.
+    Found 1-bit register for signal <RAM<16><12>>.
+    Found 1-bit register for signal <RAM<16><11>>.
+    Found 1-bit register for signal <RAM<16><10>>.
+    Found 1-bit register for signal <RAM<16><9>>.
+    Found 1-bit register for signal <RAM<16><8>>.
+    Found 1-bit register for signal <RAM<16><7>>.
+    Found 1-bit register for signal <RAM<16><6>>.
+    Found 1-bit register for signal <RAM<16><5>>.
+    Found 1-bit register for signal <RAM<16><4>>.
+    Found 1-bit register for signal <RAM<16><3>>.
+    Found 1-bit register for signal <RAM<16><2>>.
+    Found 1-bit register for signal <RAM<16><1>>.
+    Found 1-bit register for signal <RAM<16><0>>.
+    Found 1-bit register for signal <RAM<15><31>>.
+    Found 1-bit register for signal <RAM<15><30>>.
+    Found 1-bit register for signal <RAM<15><29>>.
+    Found 1-bit register for signal <RAM<15><28>>.
+    Found 1-bit register for signal <RAM<15><27>>.
+    Found 1-bit register for signal <RAM<15><26>>.
+    Found 1-bit register for signal <RAM<15><25>>.
+    Found 1-bit register for signal <RAM<15><24>>.
+    Found 1-bit register for signal <RAM<15><23>>.
+    Found 1-bit register for signal <RAM<15><22>>.
+    Found 1-bit register for signal <RAM<15><21>>.
+    Found 1-bit register for signal <RAM<15><20>>.
+    Found 1-bit register for signal <RAM<15><19>>.
+    Found 1-bit register for signal <RAM<15><18>>.
+    Found 1-bit register for signal <RAM<15><17>>.
+    Found 1-bit register for signal <RAM<15><16>>.
+    Found 1-bit register for signal <RAM<15><15>>.
+    Found 1-bit register for signal <RAM<15><14>>.
+    Found 1-bit register for signal <RAM<15><13>>.
+    Found 1-bit register for signal <RAM<15><12>>.
+    Found 1-bit register for signal <RAM<15><11>>.
+    Found 1-bit register for signal <RAM<15><10>>.
+    Found 1-bit register for signal <RAM<15><9>>.
+    Found 1-bit register for signal <RAM<15><8>>.
+    Found 1-bit register for signal <RAM<15><7>>.
+    Found 1-bit register for signal <RAM<15><6>>.
+    Found 1-bit register for signal <RAM<15><5>>.
+    Found 1-bit register for signal <RAM<15><4>>.
+    Found 1-bit register for signal <RAM<15><3>>.
+    Found 1-bit register for signal <RAM<15><2>>.
+    Found 1-bit register for signal <RAM<15><1>>.
+    Found 1-bit register for signal <RAM<15><0>>.
+    Found 1-bit register for signal <RAM<14><31>>.
+    Found 1-bit register for signal <RAM<14><30>>.
+    Found 1-bit register for signal <RAM<14><29>>.
+    Found 1-bit register for signal <RAM<14><28>>.
+    Found 1-bit register for signal <RAM<14><27>>.
+    Found 1-bit register for signal <RAM<14><26>>.
+    Found 1-bit register for signal <RAM<14><25>>.
+    Found 1-bit register for signal <RAM<14><24>>.
+    Found 1-bit register for signal <RAM<14><23>>.
+    Found 1-bit register for signal <RAM<14><22>>.
+    Found 1-bit register for signal <RAM<14><21>>.
+    Found 1-bit register for signal <RAM<14><20>>.
+    Found 1-bit register for signal <RAM<14><19>>.
+    Found 1-bit register for signal <RAM<14><18>>.
+    Found 1-bit register for signal <RAM<14><17>>.
+    Found 1-bit register for signal <RAM<14><16>>.
+    Found 1-bit register for signal <RAM<14><15>>.
+    Found 1-bit register for signal <RAM<14><14>>.
+    Found 1-bit register for signal <RAM<14><13>>.
+    Found 1-bit register for signal <RAM<14><12>>.
+    Found 1-bit register for signal <RAM<14><11>>.
+    Found 1-bit register for signal <RAM<14><10>>.
+    Found 1-bit register for signal <RAM<14><9>>.
+    Found 1-bit register for signal <RAM<14><8>>.
+    Found 1-bit register for signal <RAM<14><7>>.
+    Found 1-bit register for signal <RAM<14><6>>.
+    Found 1-bit register for signal <RAM<14><5>>.
+    Found 1-bit register for signal <RAM<14><4>>.
+    Found 1-bit register for signal <RAM<14><3>>.
+    Found 1-bit register for signal <RAM<14><2>>.
+    Found 1-bit register for signal <RAM<14><1>>.
+    Found 1-bit register for signal <RAM<14><0>>.
+    Found 1-bit register for signal <RAM<13><31>>.
+    Found 1-bit register for signal <RAM<13><30>>.
+    Found 1-bit register for signal <RAM<13><29>>.
+    Found 1-bit register for signal <RAM<13><28>>.
+    Found 1-bit register for signal <RAM<13><27>>.
+    Found 1-bit register for signal <RAM<13><26>>.
+    Found 1-bit register for signal <RAM<13><25>>.
+    Found 1-bit register for signal <RAM<13><24>>.
+    Found 1-bit register for signal <RAM<13><23>>.
+    Found 1-bit register for signal <RAM<13><22>>.
+    Found 1-bit register for signal <RAM<13><21>>.
+    Found 1-bit register for signal <RAM<13><20>>.
+    Found 1-bit register for signal <RAM<13><19>>.
+    Found 1-bit register for signal <RAM<13><18>>.
+    Found 1-bit register for signal <RAM<13><17>>.
+    Found 1-bit register for signal <RAM<13><16>>.
+    Found 1-bit register for signal <RAM<13><15>>.
+    Found 1-bit register for signal <RAM<13><14>>.
+    Found 1-bit register for signal <RAM<13><13>>.
+    Found 1-bit register for signal <RAM<13><12>>.
+    Found 1-bit register for signal <RAM<13><11>>.
+    Found 1-bit register for signal <RAM<13><10>>.
+    Found 1-bit register for signal <RAM<13><9>>.
+    Found 1-bit register for signal <RAM<13><8>>.
+    Found 1-bit register for signal <RAM<13><7>>.
+    Found 1-bit register for signal <RAM<13><6>>.
+    Found 1-bit register for signal <RAM<13><5>>.
+    Found 1-bit register for signal <RAM<13><4>>.
+    Found 1-bit register for signal <RAM<13><3>>.
+    Found 1-bit register for signal <RAM<13><2>>.
+    Found 1-bit register for signal <RAM<13><1>>.
+    Found 1-bit register for signal <RAM<13><0>>.
+    Found 1-bit register for signal <RAM<12><31>>.
+    Found 1-bit register for signal <RAM<12><30>>.
+    Found 1-bit register for signal <RAM<12><29>>.
+    Found 1-bit register for signal <RAM<12><28>>.
+    Found 1-bit register for signal <RAM<12><27>>.
+    Found 1-bit register for signal <RAM<12><26>>.
+    Found 1-bit register for signal <RAM<12><25>>.
+    Found 1-bit register for signal <RAM<12><24>>.
+    Found 1-bit register for signal <RAM<12><23>>.
+    Found 1-bit register for signal <RAM<12><22>>.
+    Found 1-bit register for signal <RAM<12><21>>.
+    Found 1-bit register for signal <RAM<12><20>>.
+    Found 1-bit register for signal <RAM<12><19>>.
+    Found 1-bit register for signal <RAM<12><18>>.
+    Found 1-bit register for signal <RAM<12><17>>.
+    Found 1-bit register for signal <RAM<12><16>>.
+    Found 1-bit register for signal <RAM<12><15>>.
+    Found 1-bit register for signal <RAM<12><14>>.
+    Found 1-bit register for signal <RAM<12><13>>.
+    Found 1-bit register for signal <RAM<12><12>>.
+    Found 1-bit register for signal <RAM<12><11>>.
+    Found 1-bit register for signal <RAM<12><10>>.
+    Found 1-bit register for signal <RAM<12><9>>.
+    Found 1-bit register for signal <RAM<12><8>>.
+    Found 1-bit register for signal <RAM<12><7>>.
+    Found 1-bit register for signal <RAM<12><6>>.
+    Found 1-bit register for signal <RAM<12><5>>.
+    Found 1-bit register for signal <RAM<12><4>>.
+    Found 1-bit register for signal <RAM<12><3>>.
+    Found 1-bit register for signal <RAM<12><2>>.
+    Found 1-bit register for signal <RAM<12><1>>.
+    Found 1-bit register for signal <RAM<12><0>>.
+    Found 1-bit register for signal <RAM<11><31>>.
+    Found 1-bit register for signal <RAM<11><30>>.
+    Found 1-bit register for signal <RAM<11><29>>.
+    Found 1-bit register for signal <RAM<11><28>>.
+    Found 1-bit register for signal <RAM<11><27>>.
+    Found 1-bit register for signal <RAM<11><26>>.
+    Found 1-bit register for signal <RAM<11><25>>.
+    Found 1-bit register for signal <RAM<11><24>>.
+    Found 1-bit register for signal <RAM<11><23>>.
+    Found 1-bit register for signal <RAM<11><22>>.
+    Found 1-bit register for signal <RAM<11><21>>.
+    Found 1-bit register for signal <RAM<11><20>>.
+    Found 1-bit register for signal <RAM<11><19>>.
+    Found 1-bit register for signal <RAM<11><18>>.
+    Found 1-bit register for signal <RAM<11><17>>.
+    Found 1-bit register for signal <RAM<11><16>>.
+    Found 1-bit register for signal <RAM<11><15>>.
+    Found 1-bit register for signal <RAM<11><14>>.
+    Found 1-bit register for signal <RAM<11><13>>.
+    Found 1-bit register for signal <RAM<11><12>>.
+    Found 1-bit register for signal <RAM<11><11>>.
+    Found 1-bit register for signal <RAM<11><10>>.
+    Found 1-bit register for signal <RAM<11><9>>.
+    Found 1-bit register for signal <RAM<11><8>>.
+    Found 1-bit register for signal <RAM<11><7>>.
+    Found 1-bit register for signal <RAM<11><6>>.
+    Found 1-bit register for signal <RAM<11><5>>.
+    Found 1-bit register for signal <RAM<11><4>>.
+    Found 1-bit register for signal <RAM<11><3>>.
+    Found 1-bit register for signal <RAM<11><2>>.
+    Found 1-bit register for signal <RAM<11><1>>.
+    Found 1-bit register for signal <RAM<11><0>>.
+    Found 1-bit register for signal <RAM<10><31>>.
+    Found 1-bit register for signal <RAM<10><30>>.
+    Found 1-bit register for signal <RAM<10><29>>.
+    Found 1-bit register for signal <RAM<10><28>>.
+    Found 1-bit register for signal <RAM<10><27>>.
+    Found 1-bit register for signal <RAM<10><26>>.
+    Found 1-bit register for signal <RAM<10><25>>.
+    Found 1-bit register for signal <RAM<10><24>>.
+    Found 1-bit register for signal <RAM<10><23>>.
+    Found 1-bit register for signal <RAM<10><22>>.
+    Found 1-bit register for signal <RAM<10><21>>.
+    Found 1-bit register for signal <RAM<10><20>>.
+    Found 1-bit register for signal <RAM<10><19>>.
+    Found 1-bit register for signal <RAM<10><18>>.
+    Found 1-bit register for signal <RAM<10><17>>.
+    Found 1-bit register for signal <RAM<10><16>>.
+    Found 1-bit register for signal <RAM<10><15>>.
+    Found 1-bit register for signal <RAM<10><14>>.
+    Found 1-bit register for signal <RAM<10><13>>.
+    Found 1-bit register for signal <RAM<10><12>>.
+    Found 1-bit register for signal <RAM<10><11>>.
+    Found 1-bit register for signal <RAM<10><10>>.
+    Found 1-bit register for signal <RAM<10><9>>.
+    Found 1-bit register for signal <RAM<10><8>>.
+    Found 1-bit register for signal <RAM<10><7>>.
+    Found 1-bit register for signal <RAM<10><6>>.
+    Found 1-bit register for signal <RAM<10><5>>.
+    Found 1-bit register for signal <RAM<10><4>>.
+    Found 1-bit register for signal <RAM<10><3>>.
+    Found 1-bit register for signal <RAM<10><2>>.
+    Found 1-bit register for signal <RAM<10><1>>.
+    Found 1-bit register for signal <RAM<10><0>>.
+    Found 1-bit register for signal <RAM<9><31>>.
+    Found 1-bit register for signal <RAM<9><30>>.
+    Found 1-bit register for signal <RAM<9><29>>.
+    Found 1-bit register for signal <RAM<9><28>>.
+    Found 1-bit register for signal <RAM<9><27>>.
+    Found 1-bit register for signal <RAM<9><26>>.
+    Found 1-bit register for signal <RAM<9><25>>.
+    Found 1-bit register for signal <RAM<9><24>>.
+    Found 1-bit register for signal <RAM<9><23>>.
+    Found 1-bit register for signal <RAM<9><22>>.
+    Found 1-bit register for signal <RAM<9><21>>.
+    Found 1-bit register for signal <RAM<9><20>>.
+    Found 1-bit register for signal <RAM<9><19>>.
+    Found 1-bit register for signal <RAM<9><18>>.
+    Found 1-bit register for signal <RAM<9><17>>.
+    Found 1-bit register for signal <RAM<9><16>>.
+    Found 1-bit register for signal <RAM<9><15>>.
+    Found 1-bit register for signal <RAM<9><14>>.
+    Found 1-bit register for signal <RAM<9><13>>.
+    Found 1-bit register for signal <RAM<9><12>>.
+    Found 1-bit register for signal <RAM<9><11>>.
+    Found 1-bit register for signal <RAM<9><10>>.
+    Found 1-bit register for signal <RAM<9><9>>.
+    Found 1-bit register for signal <RAM<9><8>>.
+    Found 1-bit register for signal <RAM<9><7>>.
+    Found 1-bit register for signal <RAM<9><6>>.
+    Found 1-bit register for signal <RAM<9><5>>.
+    Found 1-bit register for signal <RAM<9><4>>.
+    Found 1-bit register for signal <RAM<9><3>>.
+    Found 1-bit register for signal <RAM<9><2>>.
+    Found 1-bit register for signal <RAM<9><1>>.
+    Found 1-bit register for signal <RAM<9><0>>.
+    Found 1-bit register for signal <RAM<8><31>>.
+    Found 1-bit register for signal <RAM<8><30>>.
+    Found 1-bit register for signal <RAM<8><29>>.
+    Found 1-bit register for signal <RAM<8><28>>.
+    Found 1-bit register for signal <RAM<8><27>>.
+    Found 1-bit register for signal <RAM<8><26>>.
+    Found 1-bit register for signal <RAM<8><25>>.
+    Found 1-bit register for signal <RAM<8><24>>.
+    Found 1-bit register for signal <RAM<8><23>>.
+    Found 1-bit register for signal <RAM<8><22>>.
+    Found 1-bit register for signal <RAM<8><21>>.
+    Found 1-bit register for signal <RAM<8><20>>.
+    Found 1-bit register for signal <RAM<8><19>>.
+    Found 1-bit register for signal <RAM<8><18>>.
+    Found 1-bit register for signal <RAM<8><17>>.
+    Found 1-bit register for signal <RAM<8><16>>.
+    Found 1-bit register for signal <RAM<8><15>>.
+    Found 1-bit register for signal <RAM<8><14>>.
+    Found 1-bit register for signal <RAM<8><13>>.
+    Found 1-bit register for signal <RAM<8><12>>.
+    Found 1-bit register for signal <RAM<8><11>>.
+    Found 1-bit register for signal <RAM<8><10>>.
+    Found 1-bit register for signal <RAM<8><9>>.
+    Found 1-bit register for signal <RAM<8><8>>.
+    Found 1-bit register for signal <RAM<8><7>>.
+    Found 1-bit register for signal <RAM<8><6>>.
+    Found 1-bit register for signal <RAM<8><5>>.
+    Found 1-bit register for signal <RAM<8><4>>.
+    Found 1-bit register for signal <RAM<8><3>>.
+    Found 1-bit register for signal <RAM<8><2>>.
+    Found 1-bit register for signal <RAM<8><1>>.
+    Found 1-bit register for signal <RAM<8><0>>.
+    Found 1-bit register for signal <RAM<7><31>>.
+    Found 1-bit register for signal <RAM<7><30>>.
+    Found 1-bit register for signal <RAM<7><29>>.
+    Found 1-bit register for signal <RAM<7><28>>.
+    Found 1-bit register for signal <RAM<7><27>>.
+    Found 1-bit register for signal <RAM<7><26>>.
+    Found 1-bit register for signal <RAM<7><25>>.
+    Found 1-bit register for signal <RAM<7><24>>.
+    Found 1-bit register for signal <RAM<7><23>>.
+    Found 1-bit register for signal <RAM<7><22>>.
+    Found 1-bit register for signal <RAM<7><21>>.
+    Found 1-bit register for signal <RAM<7><20>>.
+    Found 1-bit register for signal <RAM<7><19>>.
+    Found 1-bit register for signal <RAM<7><18>>.
+    Found 1-bit register for signal <RAM<7><17>>.
+    Found 1-bit register for signal <RAM<7><16>>.
+    Found 1-bit register for signal <RAM<7><15>>.
+    Found 1-bit register for signal <RAM<7><14>>.
+    Found 1-bit register for signal <RAM<7><13>>.
+    Found 1-bit register for signal <RAM<7><12>>.
+    Found 1-bit register for signal <RAM<7><11>>.
+    Found 1-bit register for signal <RAM<7><10>>.
+    Found 1-bit register for signal <RAM<7><9>>.
+    Found 1-bit register for signal <RAM<7><8>>.
+    Found 1-bit register for signal <RAM<7><7>>.
+    Found 1-bit register for signal <RAM<7><6>>.
+    Found 1-bit register for signal <RAM<7><5>>.
+    Found 1-bit register for signal <RAM<7><4>>.
+    Found 1-bit register for signal <RAM<7><3>>.
+    Found 1-bit register for signal <RAM<7><2>>.
+    Found 1-bit register for signal <RAM<7><1>>.
+    Found 1-bit register for signal <RAM<7><0>>.
+    Found 1-bit register for signal <RAM<6><31>>.
+    Found 1-bit register for signal <RAM<6><30>>.
+    Found 1-bit register for signal <RAM<6><29>>.
+    Found 1-bit register for signal <RAM<6><28>>.
+    Found 1-bit register for signal <RAM<6><27>>.
+    Found 1-bit register for signal <RAM<6><26>>.
+    Found 1-bit register for signal <RAM<6><25>>.
+    Found 1-bit register for signal <RAM<6><24>>.
+    Found 1-bit register for signal <RAM<6><23>>.
+    Found 1-bit register for signal <RAM<6><22>>.
+    Found 1-bit register for signal <RAM<6><21>>.
+    Found 1-bit register for signal <RAM<6><20>>.
+    Found 1-bit register for signal <RAM<6><19>>.
+    Found 1-bit register for signal <RAM<6><18>>.
+    Found 1-bit register for signal <RAM<6><17>>.
+    Found 1-bit register for signal <RAM<6><16>>.
+    Found 1-bit register for signal <RAM<6><15>>.
+    Found 1-bit register for signal <RAM<6><14>>.
+    Found 1-bit register for signal <RAM<6><13>>.
+    Found 1-bit register for signal <RAM<6><12>>.
+    Found 1-bit register for signal <RAM<6><11>>.
+    Found 1-bit register for signal <RAM<6><10>>.
+    Found 1-bit register for signal <RAM<6><9>>.
+    Found 1-bit register for signal <RAM<6><8>>.
+    Found 1-bit register for signal <RAM<6><7>>.
+    Found 1-bit register for signal <RAM<6><6>>.
+    Found 1-bit register for signal <RAM<6><5>>.
+    Found 1-bit register for signal <RAM<6><4>>.
+    Found 1-bit register for signal <RAM<6><3>>.
+    Found 1-bit register for signal <RAM<6><2>>.
+    Found 1-bit register for signal <RAM<6><1>>.
+    Found 1-bit register for signal <RAM<6><0>>.
+    Found 1-bit register for signal <RAM<5><31>>.
+    Found 1-bit register for signal <RAM<5><30>>.
+    Found 1-bit register for signal <RAM<5><29>>.
+    Found 1-bit register for signal <RAM<5><28>>.
+    Found 1-bit register for signal <RAM<5><27>>.
+    Found 1-bit register for signal <RAM<5><26>>.
+    Found 1-bit register for signal <RAM<5><25>>.
+    Found 1-bit register for signal <RAM<5><24>>.
+    Found 1-bit register for signal <RAM<5><23>>.
+    Found 1-bit register for signal <RAM<5><22>>.
+    Found 1-bit register for signal <RAM<5><21>>.
+    Found 1-bit register for signal <RAM<5><20>>.
+    Found 1-bit register for signal <RAM<5><19>>.
+    Found 1-bit register for signal <RAM<5><18>>.
+    Found 1-bit register for signal <RAM<5><17>>.
+    Found 1-bit register for signal <RAM<5><16>>.
+    Found 1-bit register for signal <RAM<5><15>>.
+    Found 1-bit register for signal <RAM<5><14>>.
+    Found 1-bit register for signal <RAM<5><13>>.
+    Found 1-bit register for signal <RAM<5><12>>.
+    Found 1-bit register for signal <RAM<5><11>>.
+    Found 1-bit register for signal <RAM<5><10>>.
+    Found 1-bit register for signal <RAM<5><9>>.
+    Found 1-bit register for signal <RAM<5><8>>.
+    Found 1-bit register for signal <RAM<5><7>>.
+    Found 1-bit register for signal <RAM<5><6>>.
+    Found 1-bit register for signal <RAM<5><5>>.
+    Found 1-bit register for signal <RAM<5><4>>.
+    Found 1-bit register for signal <RAM<5><3>>.
+    Found 1-bit register for signal <RAM<5><2>>.
+    Found 1-bit register for signal <RAM<5><1>>.
+    Found 1-bit register for signal <RAM<5><0>>.
+    Found 1-bit register for signal <RAM<4><31>>.
+    Found 1-bit register for signal <RAM<4><30>>.
+    Found 1-bit register for signal <RAM<4><29>>.
+    Found 1-bit register for signal <RAM<4><28>>.
+    Found 1-bit register for signal <RAM<4><27>>.
+    Found 1-bit register for signal <RAM<4><26>>.
+    Found 1-bit register for signal <RAM<4><25>>.
+    Found 1-bit register for signal <RAM<4><24>>.
+    Found 1-bit register for signal <RAM<4><23>>.
+    Found 1-bit register for signal <RAM<4><22>>.
+    Found 1-bit register for signal <RAM<4><21>>.
+    Found 1-bit register for signal <RAM<4><20>>.
+    Found 1-bit register for signal <RAM<4><19>>.
+    Found 1-bit register for signal <RAM<4><18>>.
+    Found 1-bit register for signal <RAM<4><17>>.
+    Found 1-bit register for signal <RAM<4><16>>.
+    Found 1-bit register for signal <RAM<4><15>>.
+    Found 1-bit register for signal <RAM<4><14>>.
+    Found 1-bit register for signal <RAM<4><13>>.
+    Found 1-bit register for signal <RAM<4><12>>.
+    Found 1-bit register for signal <RAM<4><11>>.
+    Found 1-bit register for signal <RAM<4><10>>.
+    Found 1-bit register for signal <RAM<4><9>>.
+    Found 1-bit register for signal <RAM<4><8>>.
+    Found 1-bit register for signal <RAM<4><7>>.
+    Found 1-bit register for signal <RAM<4><6>>.
+    Found 1-bit register for signal <RAM<4><5>>.
+    Found 1-bit register for signal <RAM<4><4>>.
+    Found 1-bit register for signal <RAM<4><3>>.
+    Found 1-bit register for signal <RAM<4><2>>.
+    Found 1-bit register for signal <RAM<4><1>>.
+    Found 1-bit register for signal <RAM<4><0>>.
+    Found 1-bit register for signal <RAM<3><31>>.
+    Found 1-bit register for signal <RAM<3><30>>.
+    Found 1-bit register for signal <RAM<3><29>>.
+    Found 1-bit register for signal <RAM<3><28>>.
+    Found 1-bit register for signal <RAM<3><27>>.
+    Found 1-bit register for signal <RAM<3><26>>.
+    Found 1-bit register for signal <RAM<3><25>>.
+    Found 1-bit register for signal <RAM<3><24>>.
+    Found 1-bit register for signal <RAM<3><23>>.
+    Found 1-bit register for signal <RAM<3><22>>.
+    Found 1-bit register for signal <RAM<3><21>>.
+    Found 1-bit register for signal <RAM<3><20>>.
+    Found 1-bit register for signal <RAM<3><19>>.
+    Found 1-bit register for signal <RAM<3><18>>.
+    Found 1-bit register for signal <RAM<3><17>>.
+    Found 1-bit register for signal <RAM<3><16>>.
+    Found 1-bit register for signal <RAM<3><15>>.
+    Found 1-bit register for signal <RAM<3><14>>.
+    Found 1-bit register for signal <RAM<3><13>>.
+    Found 1-bit register for signal <RAM<3><12>>.
+    Found 1-bit register for signal <RAM<3><11>>.
+    Found 1-bit register for signal <RAM<3><10>>.
+    Found 1-bit register for signal <RAM<3><9>>.
+    Found 1-bit register for signal <RAM<3><8>>.
+    Found 1-bit register for signal <RAM<3><7>>.
+    Found 1-bit register for signal <RAM<3><6>>.
+    Found 1-bit register for signal <RAM<3><5>>.
+    Found 1-bit register for signal <RAM<3><4>>.
+    Found 1-bit register for signal <RAM<3><3>>.
+    Found 1-bit register for signal <RAM<3><2>>.
+    Found 1-bit register for signal <RAM<3><1>>.
+    Found 1-bit register for signal <RAM<3><0>>.
+    Found 1-bit register for signal <RAM<2><31>>.
+    Found 1-bit register for signal <RAM<2><30>>.
+    Found 1-bit register for signal <RAM<2><29>>.
+    Found 1-bit register for signal <RAM<2><28>>.
+    Found 1-bit register for signal <RAM<2><27>>.
+    Found 1-bit register for signal <RAM<2><26>>.
+    Found 1-bit register for signal <RAM<2><25>>.
+    Found 1-bit register for signal <RAM<2><24>>.
+    Found 1-bit register for signal <RAM<2><23>>.
+    Found 1-bit register for signal <RAM<2><22>>.
+    Found 1-bit register for signal <RAM<2><21>>.
+    Found 1-bit register for signal <RAM<2><20>>.
+    Found 1-bit register for signal <RAM<2><19>>.
+    Found 1-bit register for signal <RAM<2><18>>.
+    Found 1-bit register for signal <RAM<2><17>>.
+    Found 1-bit register for signal <RAM<2><16>>.
+    Found 1-bit register for signal <RAM<2><15>>.
+    Found 1-bit register for signal <RAM<2><14>>.
+    Found 1-bit register for signal <RAM<2><13>>.
+    Found 1-bit register for signal <RAM<2><12>>.
+    Found 1-bit register for signal <RAM<2><11>>.
+    Found 1-bit register for signal <RAM<2><10>>.
+    Found 1-bit register for signal <RAM<2><9>>.
+    Found 1-bit register for signal <RAM<2><8>>.
+    Found 1-bit register for signal <RAM<2><7>>.
+    Found 1-bit register for signal <RAM<2><6>>.
+    Found 1-bit register for signal <RAM<2><5>>.
+    Found 1-bit register for signal <RAM<2><4>>.
+    Found 1-bit register for signal <RAM<2><3>>.
+    Found 1-bit register for signal <RAM<2><2>>.
+    Found 1-bit register for signal <RAM<2><1>>.
+    Found 1-bit register for signal <RAM<2><0>>.
+    Found 1-bit register for signal <RAM<1><31>>.
+    Found 1-bit register for signal <RAM<1><30>>.
+    Found 1-bit register for signal <RAM<1><29>>.
+    Found 1-bit register for signal <RAM<1><28>>.
+    Found 1-bit register for signal <RAM<1><27>>.
+    Found 1-bit register for signal <RAM<1><26>>.
+    Found 1-bit register for signal <RAM<1><25>>.
+    Found 1-bit register for signal <RAM<1><24>>.
+    Found 1-bit register for signal <RAM<1><23>>.
+    Found 1-bit register for signal <RAM<1><22>>.
+    Found 1-bit register for signal <RAM<1><21>>.
+    Found 1-bit register for signal <RAM<1><20>>.
+    Found 1-bit register for signal <RAM<1><19>>.
+    Found 1-bit register for signal <RAM<1><18>>.
+    Found 1-bit register for signal <RAM<1><17>>.
+    Found 1-bit register for signal <RAM<1><16>>.
+    Found 1-bit register for signal <RAM<1><15>>.
+    Found 1-bit register for signal <RAM<1><14>>.
+    Found 1-bit register for signal <RAM<1><13>>.
+    Found 1-bit register for signal <RAM<1><12>>.
+    Found 1-bit register for signal <RAM<1><11>>.
+    Found 1-bit register for signal <RAM<1><10>>.
+    Found 1-bit register for signal <RAM<1><9>>.
+    Found 1-bit register for signal <RAM<1><8>>.
+    Found 1-bit register for signal <RAM<1><7>>.
+    Found 1-bit register for signal <RAM<1><6>>.
+    Found 1-bit register for signal <RAM<1><5>>.
+    Found 1-bit register for signal <RAM<1><4>>.
+    Found 1-bit register for signal <RAM<1><3>>.
+    Found 1-bit register for signal <RAM<1><2>>.
+    Found 1-bit register for signal <RAM<1><1>>.
+    Found 1-bit register for signal <RAM<1><0>>.
+    Found 1-bit register for signal <RAM<0><31>>.
+    Found 1-bit register for signal <RAM<0><30>>.
+    Found 1-bit register for signal <RAM<0><29>>.
+    Found 1-bit register for signal <RAM<0><28>>.
+    Found 1-bit register for signal <RAM<0><27>>.
+    Found 1-bit register for signal <RAM<0><26>>.
+    Found 1-bit register for signal <RAM<0><25>>.
+    Found 1-bit register for signal <RAM<0><24>>.
+    Found 1-bit register for signal <RAM<0><23>>.
+    Found 1-bit register for signal <RAM<0><22>>.
+    Found 1-bit register for signal <RAM<0><21>>.
+    Found 1-bit register for signal <RAM<0><20>>.
+    Found 1-bit register for signal <RAM<0><19>>.
+    Found 1-bit register for signal <RAM<0><18>>.
+    Found 1-bit register for signal <RAM<0><17>>.
+    Found 1-bit register for signal <RAM<0><16>>.
+    Found 1-bit register for signal <RAM<0><15>>.
+    Found 1-bit register for signal <RAM<0><14>>.
+    Found 1-bit register for signal <RAM<0><13>>.
+    Found 1-bit register for signal <RAM<0><12>>.
+    Found 1-bit register for signal <RAM<0><11>>.
+    Found 1-bit register for signal <RAM<0><10>>.
+    Found 1-bit register for signal <RAM<0><9>>.
+    Found 1-bit register for signal <RAM<0><8>>.
+    Found 1-bit register for signal <RAM<0><7>>.
+    Found 1-bit register for signal <RAM<0><6>>.
+    Found 1-bit register for signal <RAM<0><5>>.
+    Found 1-bit register for signal <RAM<0><4>>.
+    Found 1-bit register for signal <RAM<0><3>>.
+    Found 1-bit register for signal <RAM<0><2>>.
+    Found 1-bit register for signal <RAM<0><1>>.
+    Found 1-bit register for signal <RAM<0><0>>.
+    Found 1-bit register for signal <RAM<31><31>>.
+    Found 32-bit 32-to-1 multiplexer for signal <Rs[4]_RAM[31][31]_wide_mux_36_OUT> created at line 64.
+    Found 32-bit 32-to-1 multiplexer for signal <Rt[4]_RAM[31][31]_wide_mux_39_OUT> created at line 65.
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <RegFile> synthesized.
+
+Synthesizing Unit <Mux_1>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
+        WIDTH = 5
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <Mux_1> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v".
+        ALUOPBITS = 3
+        REGBITS = 5
+        WIDTH = 32
+    Found 32-bit subtractor for signal <diff> created at line 61.
+    Found 33-bit adder for signal <n0047> created at line 52.
+    Found 1-bit adder for signal <n0039> created at line 67.
+    Found 32x32-bit multiplier for signal <n0036> created at line 114.
+    Found 32-bit 8-to-1 multiplexer for signal <aluop[2]_diff[31]_wide_mux_11_OUT> created at line 87.
+    Found 32-bit comparator greater for signal <L> created at line 71
+    Found 32-bit comparator greater for signal <N> created at line 75
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <Shifter>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v".
+        WIDTH = 32
+    Found 32-bit adder for signal <shiftmag> created at line 34.
+    Found 32-bit shifter logical right for signal <arg[31]_shiftmag[31]_shift_right_5_OUT[31:0]> created at line 47
+    Found 32-bit shifter logical left for signal <arg[31]_shiftamount[31]_shift_left_8_OUT[31:0]> created at line 54
+    Found 32-bit shifter arithmetic right for signal <arg[31]_shiftmag[31]_shift_right_9_OUT[31:0]> created at line 58
+    Found 32-bit comparator lessequal for signal <n0005> created at line 53
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   6 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <Shifter> synthesized.
+
+Synthesizing Unit <SignExtender>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v".
+        IMMBITS = 18
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <SignExtender> synthesized.
+
+Synthesizing Unit <LogicController>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v".
+        OPBITS = 4
+        FUNCTBITS = 4
+        REGBITS = 5
+    Found 1-bit register for signal <NS>.
+    Found 1-bit register for signal <PS>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <LogicController> synthesized.
+
+Synthesizing Unit <ProgramStatusRegister>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v".
+        REGBITS = 5
+        WIDTH = 32
+    Found 1-bit register for signal <PSR<3>>.
+    Found 1-bit register for signal <PSR<2>>.
+    Found 1-bit register for signal <PSR<1>>.
+    Found 1-bit register for signal <PSR<0>>.
+    Found 1-bit register for signal <PSR<4>>.
+    Found 1-bit 15-to-1 multiplexer for signal <_n0085> created at line 29.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <ProgramStatusRegister> synthesized.
+
+Synthesizing Unit <ZeroPad>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v".
+        WIDTH = 32
+    Summary:
+	no macro.
+Unit <ZeroPad> synthesized.
+
+Synthesizing Unit <MemoryController>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v".
+        WIDTH = 32
+WARNING:Xst:647 - Input <addressIN<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32-bit 4-to-1 multiplexer for signal <CPUdata_OUT> created at line 46.
+    Summary:
+	inferred   7 Multiplexer(s).
+Unit <MemoryController> synthesized.
+
+Synthesizing Unit <DataRAM>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v".
+        WIDTH = 32
+        RAM_ADDR_BITS = 10
+WARNING:Xst:647 - Input <address<13:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x32-bit single-port RAM <Mram_dataRAM> for signal <dataRAM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <DataRAM> synthesized.
+
+Synthesizing Unit <IOMemory>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v".
+        WIDTH = 8
+        RAM_ADDR_BITS = 14
+WARNING:Xst:647 - Input <address<12:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <leds>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <IOMemory> synthesized.
+
+Synthesizing Unit <NES_CONTROLLER>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v".
+    Found 1-bit register for signal <controller_data<6>>.
+    Found 1-bit register for signal <controller_data<5>>.
+    Found 1-bit register for signal <controller_data<4>>.
+    Found 1-bit register for signal <controller_data<3>>.
+    Found 1-bit register for signal <controller_data<2>>.
+    Found 1-bit register for signal <controller_data<1>>.
+    Found 1-bit register for signal <controller_data<0>>.
+    Found 22-bit register for signal <count>.
+    Found 1-bit register for signal <controller_data<7>>.
+    Found 22-bit adder for signal <count[21]_GND_54_o_add_51_OUT> created at line 195.
+    Found 22-bit comparator greater for signal <latch> created at line 43
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_3_o> created at line 49
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_5_o> created at line 55
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_7_o> created at line 61
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_9_o> created at line 67
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_11_o> created at line 73
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_13_o> created at line 79
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_15_o> created at line 85
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_17_o> created at line 92
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_19_o> created at line 98
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_21_o> created at line 104
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_23_o> created at line 110
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_25_o> created at line 116
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_27_o> created at line 122
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_29_o> created at line 128
+    Found 22-bit comparator greater for signal <count[21]_GND_54_o_LessThan_31_o> created at line 134
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  30 D-type flip-flop(s).
+	inferred  16 Comparator(s).
+	inferred  15 Multiplexer(s).
+Unit <NES_CONTROLLER> synthesized.
+
+Synthesizing Unit <DisplayVGA>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v".
+WARNING:Xst:647 - Input <addrCPU<13:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <DisplayVGA> synthesized.
+
+Synthesizing Unit <vgaControl>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v".
+    Found 12-bit register for signal <hCount>.
+    Found 12-bit register for signal <vCount>.
+    Found 10-bit register for signal <hPixel>.
+    Found 9-bit register for signal <vPixel>.
+    Found 1-bit register for signal <vSync>.
+    Found 1-bit register for signal <bright>.
+    Found 1-bit register for signal <hSync>.
+    Found 2-bit register for signal <count>.
+    Found 1-bit register for signal <clk25M>.
+    Found 12-bit adder for signal <hCount[11]_GND_56_o_add_0_OUT> created at line 51.
+    Found 10-bit adder for signal <hPixel[9]_GND_56_o_add_5_OUT> created at line 70.
+    Found 12-bit adder for signal <vCount[11]_GND_56_o_add_9_OUT> created at line 80.
+    Found 9-bit adder for signal <vPixel[8]_GND_56_o_add_17_OUT> created at line 90.
+    Found 2-bit adder for signal <count[1]_GND_56_o_add_39_OUT> created at line 128.
+    Found 12-bit comparator greater for signal <hCount[11]_GND_56_o_LessThan_2_o> created at line 56
+    Found 12-bit comparator lessequal for signal <n0002> created at line 64
+    Found 12-bit comparator greater for signal <hCount[11]_GND_56_o_LessThan_4_o> created at line 64
+    Found 12-bit comparator greater for signal <n0006> created at line 69
+    Found 12-bit comparator greater for signal <GND_56_o_INV_137_o> created at line 73
+    Found 12-bit comparator greater for signal <vCount[11]_GND_56_o_LessThan_9_o> created at line 79
+    Found 12-bit comparator lessequal for signal <n0022> created at line 89
+    Found 12-bit comparator greater for signal <vCount[11]_GND_56_o_LessThan_17_o> created at line 89
+    Found 12-bit comparator greater for signal <vCount[11]_GND_56_o_LessThan_33_o> created at line 98
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   9 Comparator(s).
+	inferred  15 Multiplexer(s).
+Unit <vgaControl> synthesized.
+
+Synthesizing Unit <CharacterDisplayRAM>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v".
+        RAM_WIDTH = 7
+        RAM_ADDR_BITS = 13
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <charDispRAM>, simulation mismatch.
+    Found 4800x7-bit dual-port RAM <Mram_charDispRAM> for signal <charDispRAM>.
+    Found 13-bit adder for signal <vgaAddress> created at line 51.
+    Found 7x6-bit multiplier for signal <n0016> created at line 51.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <CharacterDisplayRAM> synthesized.
+
+Synthesizing Unit <CharacterROM>.
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v".
+        ROM_WIDTH = 8
+        ROM_ADDR_BITS = 12
+        PIXEL_BITS = 3
+        CHAR_AMNT = 7
+WARNING:Xst:647 - Input <glyphAddr<6:6>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'charROM', unconnected in block 'CharacterROM', is tied to its initial value.
+    Found 4096x8-bit single-port Read Only RAM <Mram_charROM> for signal <charROM>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <CharacterROM> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 1024x32-bit single-port RAM                           : 1
+ 4096x32-bit single-port Read Only RAM                 : 1
+ 4096x8-bit single-port Read Only RAM                  : 1
+ 4800x7-bit dual-port RAM                              : 1
+# Multipliers                                          : 2
+ 32x32-bit multiplier                                  : 1
+ 7x6-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 13
+ 1-bit adder                                           : 1
+ 10-bit adder                                          : 1
+ 12-bit adder                                          : 2
+ 13-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 22-bit adder                                          : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 59
+ 1-bit register                                        : 19
+ 10-bit register                                       : 1
+ 12-bit register                                       : 2
+ 2-bit register                                        : 1
+ 22-bit register                                       : 1
+ 32-bit register                                       : 33
+ 8-bit register                                        : 1
+ 9-bit register                                        : 1
+# Comparators                                          : 28
+ 12-bit comparator greater                             : 7
+ 12-bit comparator lessequal                           : 2
+ 22-bit comparator greater                             : 16
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 102
+ 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 52
+ 10-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 4
+ 3-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 19
+ 32-bit 32-to-1 multiplexer                            : 2
+ 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 8
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+ 9-bit 2-to-1 multiplexer                              : 1
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <CharacterDisplayRAM>.
+	Multiplier <Mmult_n0016> in block <CharacterDisplayRAM> and adder/subtractor <Madd_vgaAddress> in block <CharacterDisplayRAM> are combined into a MAC<Maddsub_n0016>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_charDispRAM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4800-word x 7-bit                   |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <cpuWriteEn>    | high     |
+    |     addrA          | connected to signal <addrCPU>       |          |
+    |     diA            | connected to signal <writeData>     |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4800-word x 7-bit                   |          |
+    |     addrB          | connected to signal <vgaAddress>    |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CharacterDisplayRAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CharacterROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_charROM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(glyphAddr,vPixel,hPixel)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CharacterROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DataRAM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_dataRAM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <memWrite_0>    | high     |
+    |     addrA          | connected to signal <address>       |          |
+    |     diA            | connected to signal <input_data>    |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <DataRAM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <InstructionROM>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_inst_ROM> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4096-word x 32-bit                  |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <PCadr>         |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <InstructionROM> synthesized (advanced).
+
+Synthesizing (advanced) Unit <NES_CONTROLLER>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+Unit <NES_CONTROLLER> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vgaControl>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <vCount>: 1 register on signal <vCount>.
+The following registers are absorbed into counter <hPixel>: 1 register on signal <hPixel>.
+The following registers are absorbed into counter <vPixel>: 1 register on signal <vPixel>.
+Unit <vgaControl> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 4
+ 1024x32-bit single-port distributed RAM               : 1
+ 4096x32-bit single-port distributed Read Only RAM     : 1
+ 4096x8-bit single-port distributed Read Only RAM      : 1
+ 4800x7-bit dual-port distributed RAM                  : 1
+# MACs                                                 : 1
+ 7x6-to-13-bit MAC                                     : 1
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 7
+ 1-bit adder                                           : 1
+ 12-bit adder                                          : 1
+ 32-bit adder                                          : 3
+ 32-bit subtractor                                     : 1
+ 33-bit adder                                          : 1
+# Counters                                             : 5
+ 10-bit up counter                                     : 1
+ 12-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 22-bit up counter                                     : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 1095
+ Flip-Flops                                            : 1095
+# Comparators                                          : 28
+ 12-bit comparator greater                             : 7
+ 12-bit comparator lessequal                           : 2
+ 22-bit comparator greater                             : 16
+ 32-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 161
+ 1-bit 15-to-1 multiplexer                             : 1
+ 1-bit 2-to-1 multiplexer                              : 52
+ 1-bit 32-to-1 multiplexer                             : 64
+ 12-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 8
+ 32-bit 2-to-1 multiplexer                             : 19
+ 32-bit 4-to-1 multiplexer                             : 1
+ 32-bit 8-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 8
+ 7-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+# Logic shifters                                       : 3
+ 32-bit shifter arithmetic right                       : 1
+ 32-bit shifter logical left                           : 1
+ 32-bit shifter logical right                          : 1
+# Xors                                                 : 2
+ 1-bit xor2                                            : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2677 - Node <Mmult_n00363> of sequential type is unconnected in block <ALU>.
+
+Optimizing unit <System> ...
+
+Optimizing unit <ExecutionStage> ...
+
+Optimizing unit <RegFile> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <Shifter> ...
+
+Optimizing unit <ProgramCounter> ...
+
+Optimizing unit <LogicController> ...
+
+Optimizing unit <ProgramStatusRegister> ...
+
+Optimizing unit <IOMemory> ...
+
+Optimizing unit <NES_CONTROLLER> ...
+
+Optimizing unit <vgaControl> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block System, actual ratio is 32.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1150
+ Flip-Flops                                            : 1150
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : System.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3355
+#      GND                         : 1
+#      INV                         : 36
+#      LUT1                        : 62
+#      LUT2                        : 67
+#      LUT3                        : 442
+#      LUT4                        : 198
+#      LUT5                        : 434
+#      LUT6                        : 1554
+#      MUXCY                       : 246
+#      MUXF7                       : 89
+#      VCC                         : 1
+#      XORCY                       : 225
+# FlipFlops/Latches                : 1150
+#      FDC                         : 15
+#      FDCE                        : 63
+#      FDE_1                       : 1032
+#      FDR                         : 27
+#      FDRE                        : 13
+# RAMS                             : 394
+#      RAM128X1D                   : 259
+#      RAM256X1S                   : 128
+#      RAM64X1D                    : 7
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 22
+#      IBUF                        : 2
+#      OBUF                        : 20
+# DSPs                             : 4
+#      DSP48A1                     : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1150  out of  18224     6%  
+ Number of Slice LUTs:                 4355  out of   9112    47%  
+    Number used as Logic:              2793  out of   9112    30%  
+    Number used as Memory:             1562  out of   2176    71%  
+       Number used as RAM:             1562
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   5272
+   Number with an unused Flip Flop:    4122  out of   5272    78%  
+   Number with an unused LUT:           917  out of   5272    17%  
+   Number of fully used LUT-FF pairs:   233  out of   5272     4%  
+   Number of unique control sets:        53
+
+IO Utilization: 
+ Number of IOs:                          23
+ Number of bonded IOBs:                  23  out of    232     9%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                      4  out of     32    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+------------------------------------+-------------------------------------+-------+
+Clock Signal                        | Clock buffer(FF name)               | Load  |
+------------------------------------+-------------------------------------+-------+
+clk                                 | BUFGP                               | 1490  |
+pulse_OBUF(ioMem/nes/Mmux_pulse15:O)| NONE(*)(ioMem/nes/controller_data_7)| 8     |
+dispVGA/vgaCtrl/clk25M              | BUFG                                | 46    |
+------------------------------------+-------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 21.402ns (Maximum Frequency: 46.724MHz)
+   Minimum input arrival time before clock: 19.613ns
+   Maximum output required time after clock: 19.079ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 21.402ns (frequency: 46.724MHz)
+  Total number of paths / destination ports: 113122441159 / 5866
+-------------------------------------------------------------------------
+Delay:               21.402ns (Levels of Logic = 21)
+  Source:            titan/PC/PC_10 (FF)
+  Destination:       titan/ExStage/regfile/RAM_431 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: titan/PC/PC_10 to titan/ExStage/regfile/RAM_431
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            28   0.447   1.463  titan/PC/PC_10 (titan/PC/PC_10)
+     LUT3:I0->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM62119_SW0 (N6810)
+     LUT6:I5->O            1   0.205   0.808  titan/instROM/Mram_inst_ROM62119 (titan/instROM/Mram_inst_ROM62118)
+     LUT5:I2->O           40   0.205   1.510  titan/instROM/Mram_inst_ROM621113 (titan/instruction<31>)
+     LUT5:I3->O           19   0.203   1.072  titan/LogicCtrl/Mmux_RtSrcReg11_7 (titan/LogicCtrl/Mmux_RtSrcReg116)
+     LUT5:I4->O            1   0.205   0.944  titan/ExStage/regfile/mux43_82 (titan/ExStage/regfile/mux43_82)
+     LUT6:I0->O            2   0.203   0.721  titan/ExStage/regfile/mux43_4 (titan/ExStage/regfile/mux43_4)
+     LUT6:I4->O           13   0.203   0.933  titan/ExStage/regfile/Mmux_RtData121 (memWriteData<1>)
+     LUT3:I2->O            1   0.205   0.000  titan/ExStage/shifter/n0088<1>1 (titan/ExStage/shifter/n0088<1>)
+     XORCY:LI->O          47   0.136   1.505  titan/ExStage/shifter/Madd_shiftmag_xor<1> (titan/ExStage/shifter/shiftmag<1>)
+     LUT6:I5->O            5   0.205   0.715  titan/ExStage/shifter/Sh1221 (titan/ExStage/shifter/Sh122)
+     LUT6:I5->O            2   0.205   0.721  titan/ExStage/shifter/Sh14611 (titan/ExStage/shifter/Sh1461)
+     LUT6:I4->O            3   0.203   0.651  titan/ExStage/shifter/Mmux_result1911 (titan/ExStage/shifter/Mmux_result191)
+     LUT6:I5->O            1   0.205   0.000  titan/ExStage/memSrcMUX/Mmux_out22_G (N1737)
+     MUXF7:I1->O           1   0.140   0.580  titan/ExStage/memSrcMUX/Mmux_out22 (titan/ExStage/memSrcMUX/Mmux_out21)
+     LUT6:I5->O            5   0.205   0.715  titan/ExStage/memSrcMUX/Mmux_out24 (titan/ExStage/memSrcMUX/Mmux_out22)
+     LUT6:I5->O           14   0.205   0.958  titan/ExStage/memSrcMUX/Mmux_out213_3 (titan/ExStage/memSrcMUX/Mmux_out213_1)
+     LUT6:I5->O            1   0.205   0.808  inst_LPM_MUX36_10 (inst_LPM_MUX36_10)
+     LUT6:I3->O            1   0.205   0.808  inst_LPM_MUX36_6 (inst_LPM_MUX36_6)
+     LUT6:I3->O            1   0.205   0.580  titan/ExStage/RaWriteEnMUX/Mmux_out272 (titan/ExStage/RaWriteEnMUX/Mmux_out271)
+     LUT6:I5->O            2   0.205   0.617  titan/ExStage/RaWriteEnMUX/Mmux_out273 (titan/ExStage/RaWriteEnMUX/Mmux_out272)
+     LUT6:I5->O           17   0.205   0.000  titan/ExStage/RaWriteEnMUX/Mmux_out274 (titan/ExStage/writeData<4>)
+     FDE_1:D                   0.102          titan/ExStage/regfile/RAM_4
+    ----------------------------------------
+    Total                     21.402ns (4.712ns logic, 16.690ns route)
+                                       (22.0% logic, 78.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'dispVGA/vgaCtrl/clk25M'
+  Clock period: 6.618ns (frequency: 151.100MHz)
+  Total number of paths / destination ports: 5056 / 77
+-------------------------------------------------------------------------
+Delay:               6.618ns (Levels of Logic = 4)
+  Source:            dispVGA/vgaCtrl/hCount_2 (FF)
+  Destination:       dispVGA/vgaCtrl/vPixel_8 (FF)
+  Source Clock:      dispVGA/vgaCtrl/clk25M rising
+  Destination Clock: dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: dispVGA/vgaCtrl/hCount_2 to dispVGA/vgaCtrl/vPixel_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.898  dispVGA/vgaCtrl/hCount_2 (dispVGA/vgaCtrl/hCount_2)
+     LUT4:I0->O            4   0.203   1.028  dispVGA/vgaCtrl/hCount[11]_GND_56_o_LessThan_4_o21 (dispVGA/vgaCtrl/hCount[11]_GND_56_o_LessThan_4_o2)
+     LUT6:I1->O           12   0.203   0.909  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o1 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o)
+     LUT5:I4->O           17   0.205   1.372  dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o4 (dispVGA/vgaCtrl/GND_56_o_hCount[11]_AND_1165_o_inv_inv)
+     LUT5:I0->O            9   0.203   0.829  dispVGA/vgaCtrl/_n0133_inv1 (dispVGA/vgaCtrl/_n0133_inv)
+     FDCE:CE                   0.322          dispVGA/vgaCtrl/vPixel_0
+    ----------------------------------------
+    Total                      6.618ns (1.583ns logic, 5.035ns route)
+                                       (23.9% logic, 76.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 730546487 / 5876
+-------------------------------------------------------------------------
+Offset:              19.613ns (Levels of Logic = 19)
+  Source:            reset (PAD)
+  Destination:       titan/ExStage/regfile/RAM_431 (FF)
+  Destination Clock: clk rising
+
+  Data Path: reset to titan/ExStage/regfile/RAM_431
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           265   1.222   2.412  reset_IBUF (reset_IBUF)
+     LUT5:I0->O           19   0.203   1.072  titan/LogicCtrl/Mmux_RtSrcReg11_7 (titan/LogicCtrl/Mmux_RtSrcReg116)
+     LUT5:I4->O            1   0.205   0.944  titan/ExStage/regfile/mux43_82 (titan/ExStage/regfile/mux43_82)
+     LUT6:I0->O            2   0.203   0.721  titan/ExStage/regfile/mux43_4 (titan/ExStage/regfile/mux43_4)
+     LUT6:I4->O           13   0.203   0.933  titan/ExStage/regfile/Mmux_RtData121 (memWriteData<1>)
+     LUT3:I2->O            1   0.205   0.000  titan/ExStage/shifter/n0088<1>1 (titan/ExStage/shifter/n0088<1>)
+     XORCY:LI->O          47   0.136   1.505  titan/ExStage/shifter/Madd_shiftmag_xor<1> (titan/ExStage/shifter/shiftmag<1>)
+     LUT6:I5->O            5   0.205   0.715  titan/ExStage/shifter/Sh1221 (titan/ExStage/shifter/Sh122)
+     LUT6:I5->O            2   0.205   0.721  titan/ExStage/shifter/Sh14611 (titan/ExStage/shifter/Sh1461)
+     LUT6:I4->O            3   0.203   0.651  titan/ExStage/shifter/Mmux_result1911 (titan/ExStage/shifter/Mmux_result191)
+     LUT6:I5->O            1   0.205   0.000  titan/ExStage/memSrcMUX/Mmux_out22_G (N1737)
+     MUXF7:I1->O           1   0.140   0.580  titan/ExStage/memSrcMUX/Mmux_out22 (titan/ExStage/memSrcMUX/Mmux_out21)
+     LUT6:I5->O            5   0.205   0.715  titan/ExStage/memSrcMUX/Mmux_out24 (titan/ExStage/memSrcMUX/Mmux_out22)
+     LUT6:I5->O           14   0.205   0.958  titan/ExStage/memSrcMUX/Mmux_out213_3 (titan/ExStage/memSrcMUX/Mmux_out213_1)
+     LUT6:I5->O            1   0.205   0.808  inst_LPM_MUX36_10 (inst_LPM_MUX36_10)
+     LUT6:I3->O            1   0.205   0.808  inst_LPM_MUX36_6 (inst_LPM_MUX36_6)
+     LUT6:I3->O            1   0.205   0.580  titan/ExStage/RaWriteEnMUX/Mmux_out272 (titan/ExStage/RaWriteEnMUX/Mmux_out271)
+     LUT6:I5->O            2   0.205   0.617  titan/ExStage/RaWriteEnMUX/Mmux_out273 (titan/ExStage/RaWriteEnMUX/Mmux_out272)
+     LUT6:I5->O           17   0.205   0.000  titan/ExStage/RaWriteEnMUX/Mmux_out274 (titan/ExStage/writeData<4>)
+     FDE_1:D                   0.102          titan/ExStage/regfile/RAM_4
+    ----------------------------------------
+    Total                     19.613ns (4.872ns logic, 14.741ns route)
+                                       (24.8% logic, 75.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'pulse_OBUF'
+  Total number of paths / destination ports: 8 / 8
+-------------------------------------------------------------------------
+Offset:              2.910ns (Levels of Logic = 2)
+  Source:            NESinputData (PAD)
+  Destination:       ioMem/nes/controller_data_7 (FF)
+  Destination Clock: pulse_OBUF falling
+
+  Data Path: NESinputData to ioMem/nes/controller_data_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  NESinputData_IBUF (NESinputData_IBUF)
+     INV:I->O              8   0.206   0.802  ioMem/nes/data_INV_128_o1_INV_0 (ioMem/nes/data_INV_128_o)
+     FDE_1:D                   0.102          ioMem/nes/controller_data_5
+    ----------------------------------------
+    Total                      2.910ns (1.530ns logic, 1.380ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'dispVGA/vgaCtrl/clk25M'
+  Total number of paths / destination ports: 46 / 46
+-------------------------------------------------------------------------
+Offset:              3.719ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       dispVGA/vgaCtrl/vCount_11 (FF)
+  Destination Clock: dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: reset to dispVGA/vgaCtrl/vCount_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           265   1.222   2.067  reset_IBUF (reset_IBUF)
+     FDC:CLR                   0.430          dispVGA/vgaCtrl/bright
+    ----------------------------------------
+    Total                      3.719ns (1.652ns logic, 2.067ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'dispVGA/vgaCtrl/clk25M'
+  Total number of paths / destination ports: 32022 / 7
+-------------------------------------------------------------------------
+Offset:              19.079ns (Levels of Logic = 12)
+  Source:            dispVGA/vgaCtrl/vPixel_8 (FF)
+  Destination:       rgb<0> (PAD)
+  Source Clock:      dispVGA/vgaCtrl/clk25M rising
+
+  Data Path: dispVGA/vgaCtrl/vPixel_8 to rgb<0>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.616  dispVGA/vgaCtrl/vPixel_8 (dispVGA/vgaCtrl/vPixel_8)
+     DSP48A1:A5->P11      48   4.560   1.884  dispVGA/charDispRAM/Maddsub_n0016 (dispVGA/charDispRAM/vgaAddress<11>)
+     LUT6:I0->O            1   0.203   0.827  inst_LPM_MUX40_122 (inst_LPM_MUX40_122)
+     LUT6:I2->O            1   0.203   0.684  inst_LPM_MUX40_7 (inst_LPM_MUX40_7)
+     LUT6:I4->O           22   0.203   1.478  dispVGA/charDispRAM/vgaAddress<12>11 (dispVGA/outputVGA<1>)
+     LUT6:I1->O            1   0.203   0.944  dispVGA/charROM/Mram_charROM71210 (dispVGA/charROM/Mram_charROM7129)
+     LUT6:I0->O            1   0.203   0.684  dispVGA/charROM/Mram_charROM71211 (dispVGA/charROM/Mram_charROM71210)
+     LUT5:I3->O            1   0.203   0.684  dispVGA/charROM/Mram_charROM712141 (dispVGA/charROM/Mram_charROM71213)
+     LUT6:I4->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM71229_SW0_F (N2061)
+     MUXF7:I0->O           1   0.131   0.580  dispVGA/charROM/Mram_charROM71229_SW0 (N2001)
+     LUT5:I4->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM71229 (dispVGA/color<0>)
+     LUT2:I1->O            1   0.205   0.579  dispVGA/Mmux_rgb11 (rgb_0_OBUF)
+     OBUF:I->O                 2.571          rgb_0_OBUF (rgb<0>)
+    ----------------------------------------
+    Total                     19.079ns (9.540ns logic, 9.539ns route)
+                                       (50.0% logic, 50.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 533 / 15
+-------------------------------------------------------------------------
+Offset:              12.683ns (Levels of Logic = 9)
+  Source:            ioMem/nes/count_8 (FF)
+  Destination:       pulse (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ioMem/nes/count_8 to pulse
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             15   0.447   1.210  ioMem/nes/count_8 (ioMem/nes/count_8)
+     LUT3:I0->O            3   0.205   1.015  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3111 (ioMem/nes/count[21]_GND_54_o_LessThan_31_o311)
+     LUT6:I0->O            1   0.203   0.827  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3_SW0 (N910)
+     LUT6:I2->O            2   0.203   0.961  ioMem/nes/count[21]_GND_54_o_LessThan_31_o3 (ioMem/nes/count[21]_GND_54_o_LessThan_31_o)
+     LUT5:I0->O            2   0.203   0.961  ioMem/nes/Mmux_pulse11111 (ioMem/nes/Mmux_pulse1111)
+     LUT6:I1->O            1   0.203   0.827  ioMem/nes/Mmux_pulse11 (ioMem/nes/Mmux_pulse1)
+     LUT6:I2->O            1   0.203   0.827  ioMem/nes/Mmux_pulse12 (ioMem/nes/Mmux_pulse11)
+     LUT6:I2->O            1   0.203   0.580  ioMem/nes/Mmux_pulse13 (ioMem/nes/Mmux_pulse12)
+     LUT6:I5->O            9   0.205   0.829  ioMem/nes/Mmux_pulse15 (pulse_OBUF)
+     OBUF:I->O                 2.571          pulse_OBUF (pulse)
+    ----------------------------------------
+    Total                     12.683ns (4.646ns logic, 8.037ns route)
+                                       (36.6% logic, 63.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+clk                   |   21.402|         |         |         |
+dispVGA/vgaCtrl/clk25M|    6.675|         |         |         |
+pulse_OBUF            |         |    3.414|         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock dispVGA/vgaCtrl/clk25M
+----------------------+---------+---------+---------+---------+
+                      | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------+---------+---------+---------+---------+
+dispVGA/vgaCtrl/clk25M|    6.618|         |         |         |
+----------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock pulse_OBUF
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    8.648|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 35.00 secs
+Total CPU time to Xst completion: 34.36 secs
+ 
+--> 
+
+Total memory usage is 320680 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   12 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+

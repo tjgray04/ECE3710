@@ -33,7 +33,8 @@
 */
 module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 							 (input clk, reset, branch, jump, jumpRA, PSRcond, PCEn,
-							 input  [WIDTH-1:0] instruction, immediate, RaData,
+							 input  [27:0] instruction,
+							 input  [WIDTH-1:0] immediate, RsData,
 							 output [WIDTH-1:0] returnAddr,
 							 output reg [WIDTH-1:0] PC);
 
@@ -52,7 +53,7 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 	// Branch adder
 	assign BranchImm = returnAddr + $signed(immediate);
 	// Jump based on immediate value {[returnAddr[31:28],instruction[27:0]}
-	assign JumpImm = {returnAddr[WIDTH-1:(WIDTH-REGBITS)+1], instruction[(WIDTH-REGBITS):0]};
+	assign JumpImm = {returnAddr[WIDTH-1:(WIDTH-REGBITS)+1], instruction};
 	// branch and PSR[] both need to be asserted for a branch to happen
 	assign branchTrue = branch & PSRcond;
 	// branch mux
@@ -60,7 +61,7 @@ module ProgramCounter#(parameter REGBITS = 5, WIDTH = 32)
 	// jump mux
 	Mux jumpMux(.d0(PC2), .d1(JumpImm), .select(jump), .out(PC3));
 	// jumpRA mux
-	Mux jumpRAMux(.d0(PC3), .d1(RaData), .select(jumpRA), .out(PC4));
+	Mux jumpRAMux(.d0(PC3), .d1(RsData), .select(jumpRA), .out(PC4));
 	// If we enabled, advanced to the next state, else, keep the current state
 	assign PC_Next = PCEn ? PC4 : PC;
 	

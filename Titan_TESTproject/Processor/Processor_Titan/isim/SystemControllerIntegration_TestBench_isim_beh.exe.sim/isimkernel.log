@@ -1,0 +1,10 @@
+Command line:
+   SystemControllerIntegration_TestBench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  51758
+
+Mon Dec 01 18:53:59 2014
+
+
+ Elaboration Time: 0.0624 sec

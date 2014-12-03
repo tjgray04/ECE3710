@@ -24,26 +24,33 @@
 //////////////////////////////////////////////////////////////////////////////////
 module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 13)
 	(input clk, 
-	//cpuWriteEn,
-	//input [RAM_WIDTH-1:0] writeData,
+	input cpuWriteEn,
+	input [RAM_WIDTH-1:0] writeData,
 	input	[RAM_ADDR_BITS-1:0] addrCPU,
 	input [RAM_WIDTH-1:0] /*hGlyphCPU,*/ hGlyphVGA, // 7-bits of addressing for 80 glyphs
 	input [RAM_WIDTH-2:0] /*vGlyphCPU,*/ vGlyphVGA, // 6-bits of addressing for 60 glyphs
-	output [RAM_WIDTH-1:0] /*outputCPU,*/ outputVGA
+	output [RAM_WIDTH-1:0] outputCPU, outputVGA
     );
 
 	//setup address to read from
 	wire [12:0] vgaAddress;
 
-   (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
-   reg [RAM_WIDTH-1:0] charDispRAM [(2**RAM_ADDR_BITS)-1:0];
+//   (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
+   reg [RAM_WIDTH-1:0] charDispRAM [4799:0];
 
    //  The forllowing code is only necessary if you wish to initialize the RAM 
    //  contents via an external file (use $readmemb for binary data)
    initial
-      $readmemb("mTestRAM.dat", charDispRAM, 0, ((2**RAM_ADDR_BITS)-1));
+      $readmemb("mTestRAM.dat", charDispRAM, 0, 4799);
 
-	assign vgaAddress = hGlyphVGA + (80*vGlyphVGA);
+	//Test function to get rid of warning
+	function [12:0] trunc_14_to_13(input [13:0] val);
+		trunc_14_to_13 = val[12:0];
+	endfunction
+
+	assign vgaAddress = trunc_14_to_13(hGlyphVGA + (80*vGlyphVGA));
+
+	//assign vgaAddress = hGlyphVGA + (80*vGlyphVGA);
 	
 	//Reads are done asynchronously
 	assign outputVGA = charDispRAM[vgaAddress];

@@ -3,14 +3,14 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh1.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="SystemControllerIntegration_TestBench" />
             <top_module name="glbl" />
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="48" />
+   <WVObjectSize size="50" />
    <wvobject fp_name="/SystemControllerIntegration_TestBench/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -82,6 +82,15 @@
       <obj_property name="ElementShortName">Rdest[4:0]</obj_property>
       <obj_property name="ObjectShortName">Rdest[4:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/titan/LogicCtrl/regWriteEn" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">regWriteEn</obj_property>
+      <obj_property name="ObjectShortName">regWriteEn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/titan/ExStage/regfile/writeData" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">writeData[31:0]</obj_property>
+      <obj_property name="ObjectShortName">writeData[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/titan/InstDec/immediate" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">immediate[17:0]</obj_property>

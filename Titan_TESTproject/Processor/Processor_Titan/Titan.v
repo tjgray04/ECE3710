@@ -24,9 +24,13 @@
 *	input:
 */
 module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBITS = 18, WIDTH = 32)
-	(input clk, reset);
+	(	input clk, reset,
+		input [WIDTH-1:0] memControllerData,
+		output [WIDTH-1:0] memAddr, memWriteData,
+		output writeEn, enRAM
+	);
 
-	wire [WIDTH-1:0] instruction, immediateExt, RaData, returnAddr, PCadr, RaWriteData, PSRcondExt;
+	wire [WIDTH-1:0] instruction, immediateExt, RsData, returnAddr, PCadr,PSRcondExt;
 	wire [ALUOPBITS-1:0] aluop;
 	wire [OPBITS-1:0] opCode;
 	wire [FUNCTBITS-1:0] functCode;
@@ -48,7 +52,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*	output: PC, Program Counter address
 	*/
 	ProgramCounter PC(.clk(clk), .reset(reset), .branch(branch), .jump(jump), .jumpRA(jumpRA), 
-							.PSRcond(PSRcond), .instruction(instruction), .immediate(immediateExt), .RaData(RaData),
+							.PSRcond(PSRcond), .instruction(instruction[27:0]), .immediate(immediateExt), .RsData(RsData),
 							.returnAddr(returnAddr), .PC(PCadr), .PCEn(PCEn));
 	
 	/* Instantiate Memory Blocks - InstructionROM
@@ -56,7 +60,7 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*  input: PCadr from Program Counter
 	*  output: instruction from memory
 	*/
-	InstructionROM instROM(.clk(clk), .enable(enROM), .PCadr(PCadr), .instruction(instruction));
+	InstructionROM instROM(/*.clk(clk), .enable(enROM),*/ .PCadr(PCadr[11:0]), .instruction(instruction));
 	
 	/* Instantiate an Instruction Decoder
 	*	input: instruction, instructionROM
@@ -82,14 +86,15 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*	input: RaWriteData, from Logic Controllers
 	*	input: PSRcondExt, from PSR module
 	*	input: aluop, is the ALU operation determined by the Logic Controller
-	*	input: shifttype, from Logic Controller
+	*	input: shiftType, from Logic Controller
 	*	output: immediateExt, extended immediate value to be used in Program Counter
 	* 	output: PSRwrite, PSR register to go into PSR module
 	*/
-	ExecutionStage ExStage(.clk(clk), .reset(reset), .enRAM(enRAM), .aluSrcb(aluSrcb), .shiftSrc(shiftSrc), .memSrc(memSrc), .memWrite(memWrite),
-		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .opCode(opCode), .functCode(functCode), .RtSrcReg(RtSrcReg), .wbPSR(wbPSR), 
-		.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate), .returnAddr(returnAddr), .RaWriteData(RaWriteData), .wbSrc(wbSrc), 
-		.PSRcondExt(PSRcondExt), .aluop(aluop), .shifttype(shifttype), .immediateExt(immediateExt), .RaData(RaData), .PSRwrite(PSRwrite));
+	ExecutionStage ExStage(.clk(clk), .reset(reset), .aluSrcb(aluSrcb), .shiftSrc(shiftSrc), .memSrc(memSrc),
+		.regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), /*.opCode(opCode), .functCode(functCode),*/ .RtSrcReg(RtSrcReg), .wbPSR(wbPSR), 
+		.Rs(Rs), .Rt(Rt), .Rdest(Rdest), .immediate(immediate), .returnAddr(returnAddr), .wbSrc(wbSrc), 
+		.PSRcondExt(PSRcondExt), .aluop(aluop), .shiftType(shiftType), .immediateExt(immediateExt), .RsData(RsData), .PSRwrite(PSRwrite),
+		.memControllerData(memControllerData), .memAddr(memAddr), .memWriteData(memWriteData));
 	
 	/* Instantiate Logic Controller	
 	*	input: opCode, from Instruction Decoder
@@ -112,10 +117,10 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*	output: jumpRA, control signal to jumpRA MUX signifying a jumpRA will take place
 	*	output: PSRsel, control signal to PSR MUX to determine output bit based on desired condition
 	*/
-	LogicController LogicCtrl(.clk(clk), .reset(reset), .opCode(opCode), .Rs(Rs), .functionCode(functCode), .branch(branch),
+	LogicController LogicCtrl(.clk(clk), .reset(reset), .opCode(opCode), .functionCode(functCode), .branch(branch),
 					.jump(jump), .jumpRA(jumpRA), .CFWrite(CFWrite), .LZNWrite(LZNWrite), .wbPSR(wbPSR), .RtSrcReg(RtSrcReg), 
 					.wbSrc(wbSrc), .memSrc(memSrc), .shiftSrc(shiftSrc), .aluSrcb(aluSrcb), .regWriteEn(regWriteEn),
-					.raWrite(RaWriteEn), .shiftType(shiftType), .memWrite(memWrite), .pcEn(PCEn), .enROM(enROM), .enRAM(enRAM), .aluop(aluop), .PSRsel(PSRsel));
+					.raWrite(RaWriteEn), .shiftType(shiftType), .memWrite(writeEn), .pcEn(PCEn), /*.enROM(enROM),*/ .enRAM(enRAM), .aluop(aluop));
 	
 	/* Instantiate PSR Controller
 	*	input: clk, from global clk
@@ -125,6 +130,6 @@ module Titan#(parameter ALUOPBITS = 3, OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, I
 	*	input: PSRwrite from ALU in the Execution Stage
 	*	output: PSRcond, 1-bit, returns 1 (true) if condition (i.e. EQ, NE, GE, etc.) was true based on PSRwrite
 	*/
-	ProgramStatusRegister PSR(.clk(clk), .reset(reset), .CFwrite(CFWrite), .LZNwrite(LZNWrite), .PSRsel(instruction[22:18]), .PSRwrite(PSRwrite), .PSRcond(PSRcond), .PSRcondExt(PSRcondExt));
+	ProgramStatusRegister PSR(.clk(clk), .reset(reset), .CFwrite(CFWrite), .LZNwrite(LZNWrite), .PSRsel(Rs), .PSRwrite(PSRwrite), .PSRcond(PSRcond), .PSRcondExt(PSRcondExt));
 	
 	endmodule

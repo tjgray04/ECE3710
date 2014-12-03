@@ -1,4 +1,4 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System_TestBench_isim_beh.exe -prj C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System_TestBench_beh.prj work.System_TestBench work.glbl 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.exe -prj C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_beh.prj work.SystemControllerIntegration_TestBench work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -7,7 +7,7 @@ Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Proces
 Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SignExtender.v" into library work
 Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/Shifter.v" into library work
 Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" into library work
-WARNING:HDLCompiler:693 - "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" Line 47: Parameter declaration becomes local in RegFile with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" Line 46: Parameter declaration becomes local in RegFile with formal parameter declaration list
 Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/Mux.v" into library work
 Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v" into library work
 WARNING:HDLCompiler:693 - "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in ALU with formal parameter declaration list
@@ -36,10 +36,9 @@ Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Proces
 Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" into library work
 Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/DataRAM.v" into library work
 Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.v" into library work
-Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System_TestBench.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench.v" into library work
 Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System_TestBench.v" Line 37: Port NESinputData is not connected to this instance
 Completed static elaboration
 Compiling module Mux
 Compiling module ProgramCounter
@@ -64,11 +63,11 @@ Compiling module CharacterDisplayRAM
 Compiling module CharacterROM
 Compiling module DisplayVGA
 Compiling module System
-Compiling module System_TestBench
+Compiling module SystemControllerIntegration_Test...
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 18 sub-compilation(s) to finish...
+Waiting for 2 sub-compilation(s) to finish...
 Compiled 25 Verilog Units
-Built simulation executable C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/System_TestBench_isim_beh.exe
-Fuse Memory Usage: 29148 KB
-Fuse CPU Usage: 748 ms
+Built simulation executable C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.exe
+Fuse Memory Usage: 29084 KB
+Fuse CPU Usage: 655 ms

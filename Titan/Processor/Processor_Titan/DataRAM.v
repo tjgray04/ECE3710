@@ -37,11 +37,13 @@ module DataRAM #(parameter WIDTH = 32, RAM_ADDR_BITS = 10) //11
 
 //   (* RAM_STYLE="{AUTO | BLOCK |  BLOCK_POWER1 | BLOCK_POWER2}" *)
    reg [WIDTH-1:0] dataRAM [(2**RAM_ADDR_BITS)-1:0];
-
-   //  The forllowing code is only necessary if you wish to initialize the RAM 
-   //  contents via an external file (use $readmemb for binary data)
-//   initial
-//      $readmemh("<data_file_name>", <rom_name>, <begin_address>, <end_address>);
+	
+	integer i;
+	initial
+		begin
+			for (i = (2**RAM_ADDR_BITS)-1; i >= 0; i=i-1)
+				dataRAM[i] = 32'd0;
+		end
 
 	assign memData = dataRAM[address[RAM_ADDR_BITS-1:0]];
 	
