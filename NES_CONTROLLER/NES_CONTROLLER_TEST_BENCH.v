@@ -52,23 +52,35 @@ module NES_CONTROLLER_TEST_BENCH;
 		reset = 1;
 
 		// Wait 1 us for global reset to finish
-		#1000;
+		#20;
 		
 		reset = 0;
         
 		// Add stimulus here
-		#16666667;
+//		#16666667;
+//		data = 1;
+//		#22000
+//		data = 1'b0;
+//		#6000	
+//		data = 1'b1;
+//		#6000
+//		data = 1'b0;
+//		#6000 
+//		data = 1'b1;
+		
+		#833333;
 		data = 1;
-		#22000
+		#11000
 		data = 1'b0;
-		#6000
+		#3000
 		data = 1'b1;
-		#6000
-		data = 1'b0;
-		#6000 
+		#3000
+		data = 1'b0; 
+		#3000 
 		data = 1'b1;
 	end
       
-		always #5 clock = ~clock;
+//		always #5 clock = ~clock;
+		always #10 clock = ~clock;
 endmodule
 

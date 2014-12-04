@@ -2,9 +2,28 @@ Command line:
    NES_CONTROLLER_TEST_BENCH_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  62671
+     -socket  50257
 
-Mon Nov 10 13:44:51 2014
+Wed Dec 03 20:16:00 2014
 
 
- Elaboration Time: 0.0468 sec
+ Elaboration Time: 0.062401 sec
+
+ Current Memory Usage: 501.776 Meg
+
+ Total Signals          : 19
+ Total Nets             : 26
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 18
+ Total Traceable Variables  : 25
+ Total Scalar Nets and Variables : 140
+Total Line Count : 130
+
+ Total Simulation Time: 1.88761 sec
+
+ Current Memory Usage: 501.776 Meg
+
+Wed Dec 03 20:16:26 2014
+

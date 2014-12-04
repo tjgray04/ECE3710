@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="51" />
+   <WVObjectSize size="52" />
    <wvobject fp_name="/SystemControllerIntegration_TestBench/clk" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -18,6 +18,10 @@
    <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/clk_50M" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">clk_50M</obj_property>
       <obj_property name="ObjectShortName">clk_50M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SystemControllerIntegration_TestBench/uut/clk_25M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_25M</obj_property>
+      <obj_property name="ObjectShortName">clk_25M</obj_property>
    </wvobject>
    <wvobject fp_name="/SystemControllerIntegration_TestBench/reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">reset</obj_property>

@@ -18,15 +18,15 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module vgaControl(input clk100M, reset, 		// system clock and reset
+module vgaControl(input clk25M, reset, 		// system clock and reset
 						output reg hSync, vSync,  	// sync signals to the VGA interface
 						output reg bright, 		  		// asserted when the pizel is bright
 						output reg [9:0] hPixel, 	// horizontal and vertical pixel index
 						output reg [8:0] vPixel 
 						);	
 
-	reg clk25M; // this is the 25Mhz clock for the VGA
-	reg [1:0] count; // everytime count == 3, clk25M will equal 1 for one clock cycle.
+//	reg clk25M; // this is the 25Mhz clock for the VGA
+//	reg [1:0] count; // everytime count == 3, clk25M will equal 1 for one clock cycle.
 	reg [11:0] hCount, vCount; // horizontal and vertical count 
 		
 	always@(posedge reset, posedge clk25M) //or posedge clk
@@ -110,24 +110,24 @@ module vgaControl(input clk100M, reset, 		// system clock and reset
 		end // end always block
 		
 	
-	//25Mhz pulse generator	
-	always @(posedge clk100M) //clk100M connects to pin V10
-	begin	
-		if (reset) // reset is of the highest priority
-			begin
-				count <= 0;
-				clk25M  <= 0;
-			end
-		else if (count == 2'b11) // always check if the counter has reached defined time (4 clk ticks)
-			begin
-				count <= 0; // if the counter is at defined time, set it back to zero
-				clk25M  <= 1;
-			end
-		else 
-			begin
-				count <= count + 1'b1; //always add one to the counter.
-				clk25M <= 1'b0; // clk25M is 0 while counting
-			end
-	end // end of always block
+//	//25Mhz pulse generator	
+//	always @(posedge clk100M) //clk100M connects to pin V10
+//	begin	
+//		if (reset) // reset is of the highest priority
+//			begin
+//				count <= 0;
+//				clk25M  <= 0;
+//			end
+//		else if (count == 2'b11) // always check if the counter has reached defined time (4 clk ticks)
+//			begin
+//				count <= 0; // if the counter is at defined time, set it back to zero
+//				clk25M  <= 1;
+//			end
+//		else 
+//			begin
+//				count <= count + 1'b1; //always add one to the counter.
+//				clk25M <= 1'b0; // clk25M is 0 while counting
+//			end
+//	end // end of always block
 
 endmodule

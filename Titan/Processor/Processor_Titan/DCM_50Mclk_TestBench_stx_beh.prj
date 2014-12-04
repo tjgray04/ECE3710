@@ -1,0 +1,5 @@
+verilog isim_temp "ipcore_dir/DCM_50M.v"
+verilog isim_temp "ipcore_dir/DCM_50M/example_design/DCM_50M_exdes.v"
+verilog isim_temp "DCM_50Mclk.v"
+verilog isim_temp "DCM_50Mclk_TestBench.v"
+verilog isim_temp "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"

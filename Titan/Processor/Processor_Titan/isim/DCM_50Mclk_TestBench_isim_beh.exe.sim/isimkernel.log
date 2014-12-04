@@ -2,28 +2,28 @@ Command line:
    DCM_50Mclk_TestBench_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  49255
+     -socket  49834
 
-Wed Dec 03 12:25:46 2014
+Wed Dec 03 19:09:17 2014
 
 
- Elaboration Time: 0.0312 sec
+ Elaboration Time: 0.0468 sec
 
  Current Memory Usage: 501.858 Meg
 
- Total Signals          : 77
- Total Nets             : 67
+ Total Signals          : 83
+ Total Nets             : 66
  Total Signal Drivers   : 56
- Total Blocks           : 11
- Total Primitive Blocks : 7
+ Total Blocks           : 14
+ Total Primitive Blocks : 10
  Total Processes        : 150
  Total Traceable Variables  : 197
- Total Scalar Nets and Variables : 5057
-Total Line Count : 905
+ Total Scalar Nets and Variables : 5056
+Total Line Count : 902
 
- Total Simulation Time: 0.1092 sec
+ Total Simulation Time: 0.124801 sec
 
  Current Memory Usage: 501.858 Meg
 
-Wed Dec 03 12:26:12 2014
+Wed Dec 03 19:09:42 2014
 

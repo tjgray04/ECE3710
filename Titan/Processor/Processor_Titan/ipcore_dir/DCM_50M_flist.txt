@@ -1,6 +1,7 @@
 # Output products list for <DCM_50M>
 DCM_50M.asy
 DCM_50M.gise
+DCM_50M.sym
 DCM_50M.ucf
 DCM_50M.v
 DCM_50M.veo

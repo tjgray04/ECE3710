@@ -57,7 +57,7 @@ module SystemControllerIntegration_TestBench;
 		NESinputData = 0;
 
 		// Wait 100 ns for global reset to finish
-		#10;
+		#100;
 		reset = 0;
         
 		// Add stimulus here
@@ -65,6 +65,6 @@ module SystemControllerIntegration_TestBench;
 		NESinputData = 1'b0;
 	end
       
-always #1 clk = ~clk;
+always #10 clk = ~clk;
 endmodule
 

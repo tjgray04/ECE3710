@@ -1,8 +1,8 @@
 INTSTYLE=impact
-INFILE=C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\impact.xsl
-OUTFILE=C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\impact.xsl
+INFILE=C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\impact.xsl
+OUTFILE=C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\impact.xsl
 FAMILY=Single
 PART=Single
-WORKINGDIR=C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan
+WORKINGDIR=C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan
 LICENSE=iMPACT
 USER_INFO=iMPACT

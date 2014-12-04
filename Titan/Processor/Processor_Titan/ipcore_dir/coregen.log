@@ -1,53 +1,57 @@
 INFO:sim:172 - Generating IP...
-Resolving generics for 'DCM_100M'...
-Applying external generics to 'DCM_100M'...
-Delivering associated files for 'DCM_100M'...
+Applying current project options...
+Finished applying current project options.
+WARNING:sim - A core named 'DCM_50M' already exists in the project. Output
+   products for this core may be overwritten.
+Resolving generics for 'DCM_50M'...
+WARNING:sim - A core named 'DCM_50M' already exists in the project. Output
+   products for this core may be overwritten.
+Applying external generics to 'DCM_50M'...
+Delivering associated files for 'DCM_50M'...
 WARNING:sim - Component clk_wiz_v3_6 does not have a valid model name for
    Verilog synthesis
-Delivering EJava files for 'DCM_100M'...
+Delivering EJava files for 'DCM_50M'...
 Delivered 3 files into directory C:/Users/Steve
-Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
-M
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_50M
 Delivered 1 file into directory C:/Users/Steve
-Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
-M
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_50M
 Generating ASY schematic symbol...
 Loading device for application Rf_Device from file '6slx16.nph' in environment
 C:\Xilinx\14.4\ISE_DS\ISE\.
 INFO:sim:949 - Finished generation of ASY schematic symbol.
-Generating SYM schematic symbol for 'DCM_100M'...
+Generating SYM schematic symbol for 'DCM_50M'...
 Generating ISE project...
-XCO file found: DCM_100M.xco
-XMDF file found: DCM_100M_xmdf.tcl
+XCO file found: DCM_50M.xco
+XMDF file found: DCM_50M_xmdf.tcl
 Adding C:/Users/Steve
-Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
-M/example_design/DCM_100M_exdes.ucf -view all -origin_type created
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_50M
+/example_design/DCM_50M_exdes.ucf -view all -origin_type created
 Adding C:/Users/Steve
-Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
-M/example_design/DCM_100M_exdes.v -view all -origin_type created
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_50M
+/example_design/DCM_50M_exdes.v -view all -origin_type created
 INFO:HDLCompiler:1845 - Analyzing Verilog file "C:/Users/Steve
    Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_
-   100M/example_design/DCM_100M_exdes.v" into library work
+   50M/example_design/DCM_50M_exdes.v" into library work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
 Adding C:/Users/Steve
-Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
-M.asy -view all -origin_type imported
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_50M
+.asy -view all -origin_type imported
 Adding C:/Users/Steve
-Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
-M.v -view all -origin_type created
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_50M
+.v -view all -origin_type created
 INFO:HDLCompiler:1845 - Analyzing Verilog file "C:/Users/Steve
    Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_
-   100M.v" into library work
+   50M.v" into library work
 INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
 Adding C:/Users/Steve
-Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_100
-M.veo -view all -origin_type imported
-WARNING: This core does not have a top level called "/DCM_100M"
-WARNING: Top level has been set to "/DCM_100M_exdes"
+Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/tmp/_cg/DCM_50M
+.veo -view all -origin_type imported
+WARNING: This core does not have a top level called "/DCM_50M"
+WARNING: Top level has been set to "/DCM_50M_exdes"
 Generating README file...
 Generating FLIST file...
 INFO:sim:948 - Finished FLIST file generation.
 Launching README viewer...
 Moving files to output directory...
 Finished moving files to output directory
-Wrote CGP file for project 'DCM_100M'.
+Wrote CGP file for project 'DCM_50M'.

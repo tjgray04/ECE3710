@@ -143,15 +143,15 @@ LAB19:    goto LAB12;
 
 LAB15:    xsi_set_current_line(62, ng0);
 
-LAB20:    xsi_set_current_line(65, ng0);
+LAB20:    xsi_set_current_line(64, ng0);
     t30 = ((char*)((ng2)));
     t31 = (t0 + 3320);
     xsi_vlogvar_wait_assign_value(t31, t30, 0, 0, 8, 0LL);
     goto LAB19;
 
-LAB17:    xsi_set_current_line(69, ng0);
+LAB17:    xsi_set_current_line(68, ng0);
 
-LAB21:    xsi_set_current_line(70, ng0);
+LAB21:    xsi_set_current_line(69, ng0);
     t3 = (t0 + 1960U);
     t4 = *((char **)t3);
     t3 = (t0 + 3320);
@@ -160,7 +160,7 @@ LAB21:    xsi_set_current_line(70, ng0);
 
 }
 
-static void Always_79_1(char *t0)
+static void Always_77_1(char *t0)
 {
     char t6[8];
     char *t1;
@@ -187,7 +187,7 @@ LAB0:    t1 = (t0 + 4488U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(79, ng0);
+LAB2:    xsi_set_current_line(77, ng0);
     t2 = (t0 + 4824);
     *((int *)t2) = 1;
     t3 = (t0 + 4520);
@@ -195,9 +195,9 @@ LAB2:    xsi_set_current_line(79, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(80, ng0);
+LAB4:    xsi_set_current_line(78, ng0);
 
-LAB5:    xsi_set_current_line(81, ng0);
+LAB5:    xsi_set_current_line(79, ng0);
     t4 = (t0 + 2120U);
     t5 = *((char **)t4);
     memset(t6, 0, 8);
@@ -225,18 +225,18 @@ LAB8:    t2 = ((char*)((ng3)));
 LAB10:
 LAB11:    goto LAB2;
 
-LAB7:    xsi_set_current_line(84, ng0);
+LAB7:    xsi_set_current_line(82, ng0);
 
-LAB12:    xsi_set_current_line(85, ng0);
+LAB12:    xsi_set_current_line(83, ng0);
     t16 = (t0 + 2760U);
     t17 = *((char **)t16);
     t16 = (t0 + 3160);
     xsi_vlogvar_assign_value(t16, t17, 0, 0, 8);
     goto LAB11;
 
-LAB9:    xsi_set_current_line(89, ng0);
+LAB9:    xsi_set_current_line(87, ng0);
 
-LAB13:    xsi_set_current_line(90, ng0);
+LAB13:    xsi_set_current_line(88, ng0);
     t3 = ((char*)((ng2)));
     t4 = (t0 + 3160);
     xsi_vlogvar_assign_value(t4, t3, 0, 0, 8);
@@ -247,7 +247,7 @@ LAB13:    xsi_set_current_line(90, ng0);
 
 extern void work_m_00000000003386722771_0192370499_init()
 {
-	static char *pe[] = {(void *)Always_53_0,(void *)Always_79_1};
+	static char *pe[] = {(void *)Always_53_0,(void *)Always_77_1};
 	xsi_register_didat("work_m_00000000003386722771_0192370499", "isim/SystemControllerIntegration_TestBench_isim_beh.exe.sim/work/m_00000000003386722771_0192370499.didat");
 	xsi_register_executes(pe);
 }

@@ -61,14 +61,12 @@ begin
 					1'b1:
 						begin
 						//NOTHING HAPPENS
-						
-						leds <= 0;
+							leds <= 0;
 						end
 					//Trying to write to LED space
 					1'b0:
 						begin
-						leds <= input_data;
-						
+							leds <= input_data;
 						end
             endcase
 			end
@@ -82,12 +80,12 @@ begin
 		//Trying to read from NES space
 		1'b1:
 			begin
-			IO_Data = NESdata;
+				IO_Data = NESdata;
 			end
 		//Trying to read from LED space
 		1'b0:
 			begin
-			IO_Data = 0;
+				IO_Data = 0;
 			end
 	endcase
 end

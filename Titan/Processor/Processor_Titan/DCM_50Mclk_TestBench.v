@@ -29,7 +29,7 @@ module DCM_50Mclk_TestBench;
 	reg reset;
 
 	// Outputs
-	wire clk_100M;
+	wire clk_25M;
 	wire clk_50M;
 	wire locked;
 
@@ -37,7 +37,7 @@ module DCM_50Mclk_TestBench;
 	DCM_50Mclk uut (
 		.clk(clk), 
 		.reset(reset),
-		.clk_100M(clk_100M),
+		.clk_25M(clk_25M),
 		.clk_50M(clk_50M), 
 		.locked(locked)
 	);

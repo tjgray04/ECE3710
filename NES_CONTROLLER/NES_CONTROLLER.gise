@@ -42,7 +42,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="NES_CONTROLLER.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="NES_CONTROLLER.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="NES_CONTROLLER.xst"/>
-    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="NES_CONTROLLER_TEST_BENCH_beh.prj"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="NES_CONTROLLER_TEST_BENCH_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="NES_CONTROLLER_TEST_BENCH_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="NES_CONTROLLER_TEST_BENCH_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="NES_CONTROLLER_TEST_BENCH_stx_beh.prj"/>
@@ -88,50 +88,38 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1415650553" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1415650553">
+    <transform xil_pn:end_ts="1417657422" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1417657422">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415652287" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1415652287">
+    <transform xil_pn:end_ts="1417662951" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1417662951">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="NES_CONTROLLER.v"/>
       <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH.v"/>
     </transform>
-    <transform xil_pn:end_ts="1415650553" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1328510011678258754" xil_pn:start_ts="1415650553">
+    <transform xil_pn:end_ts="1417657422" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1328510011678258754" xil_pn:start_ts="1417657422">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415650553" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8203109227808432772" xil_pn:start_ts="1415650553">
+    <transform xil_pn:end_ts="1417657422" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-8203109227808432772" xil_pn:start_ts="1417657422">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415650553" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="993346597711110637" xil_pn:start_ts="1415650553">
+    <transform xil_pn:end_ts="1417657422" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="993346597711110637" xil_pn:start_ts="1417657422">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1415652287" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1415652287">
+    <transform xil_pn:end_ts="1417662951" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1417662951">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="NES_CONTROLLER.v"/>
       <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH.v"/>
     </transform>
-    <transform xil_pn:end_ts="1415652290" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2892142004527485115" xil_pn:start_ts="1415652287">
+    <transform xil_pn:end_ts="1417662957" xil_pn:in_ck="5832463513536530488" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="2892142004527485115" xil_pn:start_ts="1417662951">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH_beh.prj"/>
       <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH_isim_beh.exe"/>
@@ -140,10 +128,9 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1415652290" xil_pn:in_ck="-552179662513062930" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6723327982916606210" xil_pn:start_ts="1415652290">
+    <transform xil_pn:end_ts="1417662957" xil_pn:in_ck="-552179662513062930" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6723327982916606210" xil_pn:start_ts="1417662957">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH_isim_beh.wdb"/>
@@ -185,6 +172,7 @@
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="NES_CONTROLLER.lso"/>
       <outfile xil_pn:name="NES_CONTROLLER.ngc"/>
       <outfile xil_pn:name="NES_CONTROLLER.ngr"/>
@@ -192,7 +180,6 @@
       <outfile xil_pn:name="NES_CONTROLLER.stx"/>
       <outfile xil_pn:name="NES_CONTROLLER.syr"/>
       <outfile xil_pn:name="NES_CONTROLLER.xst"/>
-      <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH_beh.prj"/>
       <outfile xil_pn:name="NES_CONTROLLER_TEST_BENCH_stx_beh.prj"/>
       <outfile xil_pn:name="NES_CONTROLLER_stx_beh.prj"/>
       <outfile xil_pn:name="NES_CONTROLLER_xst.xrpt"/>
