@@ -52,20 +52,14 @@ MemoryController memController(.writeEn(writeEn), .addressIN(memAddr),
 										.IOdata_OUT(IOdata_OUT), //.stackData_OUT(stackData_OUT),
 										.vgaData_OUT(vgaData_OUT));
 			
-
-
 //General Memory
 DataRAM dataRAM(.clk(clk_50M), .enRAM(enRAM), .memWrite(memData_wrEn), .input_data(memData_OUT),
 					.address(addressOUT), .memData(memData_IN));
 
 //IO Memory				
-IOMemory ioMem(.clk(clk_100M), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata_OUT),
+IOMemory ioMem(.clk(clk_50M), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata_OUT),
 					.address(addressOUT), .IO_Data(IOdata_IN), .reset(reset), .NESinputData(NESinputData),
 					.latch(latch), .pulse(pulse), .leds(leds));
-					
-//Stack Memory					
-//StackMemory stackMem(.clk(clk), .en(enRAM), .memWrite(stackData_wrEn), .input_data(stackData_OUT),
-//							.address(addressOUT), .stackData(stackData_IN));
 
 //VGA Display							
 DisplayVGA dispVGA(.clk(clk_100M), .reset(reset), .cpuWriteEn(vgaData_wrEn), .writeData(vgaData_OUT),

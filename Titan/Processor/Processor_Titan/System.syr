@@ -1,16 +1,16 @@
-Release 14.4 - xst P.49d (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: System.prj
 
@@ -108,63 +108,63 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" into library work
 Parsing module <DCM_50M>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M\example_design\DCM_50M_exdes.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M\example_design\DCM_50M_exdes.v" into library work
 Parsing module <DCM_50M_exdes>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
 Parsing module <ZeroPad>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
 Parsing module <SignExtender>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\Shifter.v" into library work
 Parsing module <Shifter>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
 Parsing module <RegFile>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
 Parsing module <Mux>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
 Parsing module <ALU>.
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" Line 41. parameter declaration becomes local in ALU with formal parameter declaration list
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v" into library work
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ALU.v" Line 41. parameter declaration becomes local in ALU with formal parameter declaration list
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v" into library work
 Parsing module <vgaControl>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
 Parsing module <ProgramStatusRegister>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v" into library work
 Parsing module <ProgramCounter>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" into library work
 Parsing module <NES_CONTROLLER>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" into library work
 Parsing module <LogicController>.
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 31. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 32. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 37. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 47. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 58. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 63. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 67. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 70. parameter declaration becomes local in LogicController with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 81. parameter declaration becomes local in LogicController with formal parameter declaration list
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" into library work
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 31. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 32. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 37. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 47. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 58. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 63. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 67. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 70. parameter declaration becomes local in LogicController with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v" Line 81. parameter declaration becomes local in LogicController with formal parameter declaration list
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" into library work
 Parsing module <InstructionROM>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v" into library work
 Parsing module <InstructionDecoder>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v" into library work
 Parsing module <ExecutionStage>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" into library work
 Parsing module <CharacterROM>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
 Parsing module <CharacterDisplayRAM>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\Titan.v" into library work
 Parsing module <Titan>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v" into library work
 Parsing module <MemoryController>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v" into library work
 Parsing module <IOMemory>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v" into library work
 Parsing module <DisplayVGA>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v" into library work
 Parsing module <DataRAM>.
-Analyzing Verilog file "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" into library work
+Analyzing Verilog file "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\System.v" into library work
 Parsing module <System>.
 
 =========================================================================
@@ -181,7 +181,7 @@ Elaborating module <Mux>.
 
 Elaborating module <InstructionROM>.
 Reading initialization file \"ControllerTest.dat\".
-WARNING:HDLCompiler:1670 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal <inst_ROM> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal <inst_ROM> in initial block is partially initialized.
 
 Elaborating module <InstructionDecoder>.
 
@@ -210,7 +210,7 @@ Elaborating module <DataRAM>.
 Elaborating module <IOMemory>.
 
 Elaborating module <NES_CONTROLLER>.
-WARNING:HDLCompiler:413 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 195: Result of 23-bit expression is truncated to fit in 22-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 195: Result of 23-bit expression is truncated to fit in 22-bit target.
 
 Elaborating module <DisplayVGA>.
 
@@ -221,14 +221,14 @@ Reading initialization file \"mTestRAM.dat\".
 
 Elaborating module <CharacterROM>.
 Reading initialization file \"TestROM.dat\".
-WARNING:HDLCompiler:1670 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal <charROM> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal <charROM> in initial block is partially initialized.
 
 Elaborating module <DCM_50M>.
 
 Elaborating module <IBUFG>.
 
 Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
-WARNING:HDLCompiler:1127 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 132: Assignment to status_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 132: Assignment to status_int ignored, since the identifier is never used
 
 Elaborating module <BUFG>.
 
@@ -237,15 +237,15 @@ Elaborating module <BUFG>.
 =========================================================================
 
 Synthesizing Unit <System>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\System.v".
         WIDTH = 32
-INFO:Xst:3210 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\System.v" line 76: Output port <LOCKED> of the instance <dcm_50M> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\System.v" line 70: Output port <LOCKED> of the instance <dcm_50M> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <System> synthesized.
 
 Synthesizing Unit <Titan>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\Titan.v".
         ALUOPBITS = 3
         OPBITS = 4
         FUNCTBITS = 4
@@ -257,7 +257,7 @@ Synthesizing Unit <Titan>.
 Unit <Titan> synthesized.
 
 Synthesizing Unit <ProgramCounter>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v".
         REGBITS = 5
         WIDTH = 32
     Found 32-bit register for signal <PC>.
@@ -269,14 +269,14 @@ Synthesizing Unit <ProgramCounter>.
 Unit <ProgramCounter> synthesized.
 
 Synthesizing Unit <Mux>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
         WIDTH = 32
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux> synthesized.
 
 Synthesizing Unit <InstructionROM>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v".
         WIDTH = 32
         ROM_ADDR_BITS = 12
 WARNING:Xst:2999 - Signal 'inst_ROM', unconnected in block 'InstructionROM', is tied to its initial value.
@@ -286,7 +286,7 @@ WARNING:Xst:2999 - Signal 'inst_ROM', unconnected in block 'InstructionROM', is 
 Unit <InstructionROM> synthesized.
 
 Synthesizing Unit <InstructionDecoder>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\InstructionDecoder.v".
         OPBITS = 4
         FUNCTBITS = 4
         REGBITS = 5
@@ -297,7 +297,7 @@ Synthesizing Unit <InstructionDecoder>.
 Unit <InstructionDecoder> synthesized.
 
 Synthesizing Unit <ExecutionStage>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ExecutionStage.v".
         OPBITS = 4
         FUNCTBITS = 4
         REGBITS = 5
@@ -309,7 +309,7 @@ Synthesizing Unit <ExecutionStage>.
 Unit <ExecutionStage> synthesized.
 
 Synthesizing Unit <RegFile>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\RegFile.v".
         REGBITS = 5
         WIDTH = 32
     Found 32x32-bit dual-port RAM <Mram_RAM> for signal <RAM>.
@@ -319,14 +319,14 @@ Synthesizing Unit <RegFile>.
 Unit <RegFile> synthesized.
 
 Synthesizing Unit <Mux_1>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\Mux.v".
         WIDTH = 5
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <Mux_1> synthesized.
 
 Synthesizing Unit <ALU>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ALU.v".
         ALUOPBITS = 3
         REGBITS = 5
         WIDTH = 32
@@ -345,7 +345,7 @@ Synthesizing Unit <ALU>.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <Shifter>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\Shifter.v".
         WIDTH = 32
     Found 32-bit adder for signal <shiftmag> created at line 34.
     Found 32-bit shifter logical right for signal <arg[31]_shiftmag[31]_shift_right_5_OUT[31:0]> created at line 47
@@ -360,7 +360,7 @@ Synthesizing Unit <Shifter>.
 Unit <Shifter> synthesized.
 
 Synthesizing Unit <SignExtender>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v".
         IMMBITS = 18
         WIDTH = 32
     Summary:
@@ -368,7 +368,7 @@ Synthesizing Unit <SignExtender>.
 Unit <SignExtender> synthesized.
 
 Synthesizing Unit <LogicController>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LogicController.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\LogicController.v".
         OPBITS = 4
         FUNCTBITS = 4
         REGBITS = 5
@@ -380,7 +380,7 @@ Synthesizing Unit <LogicController>.
 Unit <LogicController> synthesized.
 
 Synthesizing Unit <ProgramStatusRegister>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v".
         REGBITS = 5
         WIDTH = 32
     Found 1-bit register for signal <PSR<3>>.
@@ -395,14 +395,14 @@ Synthesizing Unit <ProgramStatusRegister>.
 Unit <ProgramStatusRegister> synthesized.
 
 Synthesizing Unit <ZeroPad>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v".
         WIDTH = 32
     Summary:
 	no macro.
 Unit <ZeroPad> synthesized.
 
 Synthesizing Unit <MemoryController>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v".
         WIDTH = 32
 WARNING:Xst:647 - Input <addressIN<31:16>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32-bit 4-to-1 multiplexer for signal <CPUdata_OUT> created at line 46.
@@ -411,7 +411,7 @@ WARNING:Xst:647 - Input <addressIN<31:16>> is never used. This port will be pres
 Unit <MemoryController> synthesized.
 
 Synthesizing Unit <DataRAM>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\DataRAM.v".
         WIDTH = 32
         RAM_ADDR_BITS = 10
 WARNING:Xst:647 - Input <address<13:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -421,7 +421,7 @@ WARNING:Xst:647 - Input <address<13:10>> is never used. This port will be preser
 Unit <DataRAM> synthesized.
 
 Synthesizing Unit <IOMemory>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v".
         WIDTH = 8
         RAM_ADDR_BITS = 14
 WARNING:Xst:647 - Input <address<12:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -432,7 +432,7 @@ WARNING:Xst:647 - Input <address<12:0>> is never used. This port will be preserv
 Unit <IOMemory> synthesized.
 
 Synthesizing Unit <NES_CONTROLLER>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v".
     Found 1-bit register for signal <controller_data<6>>.
     Found 1-bit register for signal <controller_data<5>>.
     Found 1-bit register for signal <controller_data<4>>.
@@ -467,14 +467,14 @@ Synthesizing Unit <NES_CONTROLLER>.
 Unit <NES_CONTROLLER> synthesized.
 
 Synthesizing Unit <DisplayVGA>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\DisplayVGA.v".
 WARNING:Xst:647 - Input <addrCPU<13:13>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <DisplayVGA> synthesized.
 
 Synthesizing Unit <vgaControl>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v".
     Found 12-bit register for signal <hCount>.
     Found 12-bit register for signal <vCount>.
     Found 10-bit register for signal <hPixel>.
@@ -506,7 +506,7 @@ Synthesizing Unit <vgaControl>.
 Unit <vgaControl> synthesized.
 
 Synthesizing Unit <CharacterDisplayRAM>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v".
         RAM_WIDTH = 7
         RAM_ADDR_BITS = 13
 WARNING:Xst:3035 - Index value(s) does not match array range for signal <charDispRAM>, simulation mismatch.
@@ -520,7 +520,7 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <charDis
 Unit <CharacterDisplayRAM> synthesized.
 
 Synthesizing Unit <CharacterROM>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v".
         ROM_WIDTH = 8
         ROM_ADDR_BITS = 12
         PIXEL_BITS = 3
@@ -533,7 +533,7 @@ WARNING:Xst:2999 - Signal 'charROM', unconnected in block 'CharacterROM', is tie
 Unit <CharacterROM> synthesized.
 
 Synthesizing Unit <DCM_50M>.
-    Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v".
+    Related source file is "C:\Users\Travis\Documents\GitHub\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v".
     Summary:
 	no macro.
 Unit <DCM_50M> synthesized.
@@ -801,8 +801,6 @@ WARNING:Xst:1710 - FF/Latch <dispVGA/vgaCtrl/vCount_11> (without init value) has
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/vCount_10> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/hCount_11> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <dispVGA/vgaCtrl/hCount_10> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <ioMem/nes/count_0> in Unit <System> is equivalent to the following FF/Latch, which will be removed : <dispVGA/vgaCtrl/count_0> 
-INFO:Xst:2261 - The FF/Latch <ioMem/nes/count_1> in Unit <System> is equivalent to the following FF/Latch, which will be removed : <dispVGA/vgaCtrl/count_1> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -814,8 +812,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 120
- Flip-Flops                                            : 120
+# Registers                                            : 122
+ Flip-Flops                                            : 122
 
 =========================================================================
 
@@ -838,26 +836,25 @@ Top Level Output File Name         : System.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 2198
+# BELS                             : 2212
 #      GND                         : 1
-#      INV                         : 4
+#      INV                         : 5
 #      LUT1                        : 60
-#      LUT2                        : 85
-#      LUT3                        : 89
-#      LUT4                        : 314
-#      LUT5                        : 262
-#      LUT6                        : 858
+#      LUT2                        : 86
+#      LUT3                        : 87
+#      LUT4                        : 282
+#      LUT5                        : 246
+#      LUT6                        : 924
 #      MUXCY                       : 242
-#      MUXF7                       : 61
+#      MUXF7                       : 57
 #      VCC                         : 1
 #      XORCY                       : 221
-# FlipFlops/Latches                : 120
-#      FD                          : 8
+# FlipFlops/Latches                : 122
 #      FDC                         : 13
 #      FDCE                        : 61
 #      FDE_1                       : 8
-#      FDR                         : 21
-#      FDRE                        : 5
+#      FDR                         : 23
+#      FDRE                        : 13
 #      FDS                         : 4
 # RAMS                             : 408
 #      RAM128X1D                   : 259
@@ -883,17 +880,17 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             120  out of  18224     0%  
- Number of Slice LUTs:                 3282  out of   9112    36%  
-    Number used as Logic:              1672  out of   9112    18%  
+ Number of Slice Registers:             122  out of  18224     0%  
+ Number of Slice LUTs:                 3300  out of   9112    36%  
+    Number used as Logic:              1690  out of   9112    18%  
     Number used as Memory:             1610  out of   2176    73%  
        Number used as RAM:             1610
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3298
-   Number with an unused Flip Flop:    3178  out of   3298    96%  
-   Number with an unused LUT:            16  out of   3298     0%  
-   Number of fully used LUT-FF pairs:   104  out of   3298     3%  
+ Number of LUT Flip Flop pairs used:   3316
+   Number with an unused Flip Flop:    3194  out of   3316    96%  
+   Number with an unused LUT:            16  out of   3316     0%  
+   Number of fully used LUT-FF pairs:   106  out of   3316     3%  
    Number of unique control sets:        21
 
 IO Utilization: 
@@ -925,8 +922,8 @@ Clock Information:
 ------------------------------------+-------------------------------------+-------+
 Clock Signal                        | Clock buffer(FF name)               | Load  |
 ------------------------------------+-------------------------------------+-------+
-clk                                 | DCM_SP:CLK0                         | 297   |
-clk                                 | DCM_SP:CLKDV                        | 181   |
+clk                                 | DCM_SP:CLK0                         | 269   |
+clk                                 | DCM_SP:CLKDV                        | 211   |
 pulse_OBUF(ioMem/nes/Mmux_pulse15:O)| NONE(*)(ioMem/nes/controller_data_7)| 8     |
 dispVGA/vgaCtrl/clk25M              | BUFG                                | 42    |
 ------------------------------------+-------------------------------------+-------+
@@ -943,8 +940,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 17.377ns (Maximum Frequency: 57.546MHz)
-   Minimum input arrival time before clock: 21.665ns
+   Minimum period: 17.307ns (Maximum Frequency: 57.781MHz)
+   Minimum input arrival time before clock: 21.849ns
    Maximum output required time after clock: 18.694ns
    Maximum combinational path delay: No path found
 
@@ -954,35 +951,35 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 17.377ns (frequency: 57.546MHz)
-  Total number of paths / destination ports: 3460604227 / 3960
+  Clock period: 17.307ns (frequency: 57.781MHz)
+  Total number of paths / destination ports: 3258119649 / 3980
 -------------------------------------------------------------------------
-Delay:               17.377ns (Levels of Logic = 11)
+Delay:               17.307ns (Levels of Logic = 11)
   Source:            titan/PC/PC_10 (FF)
-  Destination:       dispVGA/charDispRAM/Mram_charDispRAM260 (RAM)
+  Destination:       dispVGA/charDispRAM/Mram_charDispRAM9 (RAM)
   Source Clock:      clk rising 0.5X
   Destination Clock: clk rising
 
-  Data Path: titan/PC/PC_10 to dispVGA/charDispRAM/Mram_charDispRAM260
+  Data Path: titan/PC/PC_10 to dispVGA/charDispRAM/Mram_charDispRAM9
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q            28   0.447   1.463  titan/PC/PC_10 (titan/PC/PC_10)
      LUT3:I0->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM62119_SW0 (N661)
      LUT6:I5->O            1   0.205   0.808  titan/instROM/Mram_inst_ROM62119 (titan/instROM/Mram_inst_ROM62118)
-     LUT5:I2->O           35   0.205   1.439  titan/instROM/Mram_inst_ROM621113 (titan/instruction<31>)
-     LUT5:I3->O           10   0.203   0.857  titan/LogicCtrl/Mmux_RtSrcReg11_1 (titan/LogicCtrl/Mmux_RtSrcReg11)
+     LUT5:I2->O           33   0.205   1.410  titan/instROM/Mram_inst_ROM621113 (titan/instruction<31>)
+     LUT5:I3->O           19   0.203   1.072  titan/LogicCtrl/Mmux_RtSrcReg11 (titan/RtSrcReg)
      LUT6:I5->O           11   0.205   0.883  titan/ExStage/regfile/out11_2 (titan/ExStage/regfile/out111)
      LUT4:I3->O            6   0.205   0.744  titan/ExStage/aluSrcbMUX/Mmux_out110 (titan/ExStage/ALUMuxOUT<0>)
-     DSP48A1:B0->P7        3   4.394   0.995  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/n0036<7>)
-     LUT6:I1->O            1   0.203   0.000  titan/ExStage/memSrcMUX/Mmux_out309_2_G (N1119)
-     MUXF7:I1->O          17   0.140   1.132  titan/ExStage/memSrcMUX/Mmux_out309_2 (titan/ExStage/memSrcMUX/Mmux_out309_1)
-     LUT6:I4->O            1   0.203   0.580  inst_LPM_DECODE371 (N39)
-     LUT4:I3->O            7   0.205   0.773  write_ctrl37 (write_ctrl37)
-     RAM64X1D:WE               0.304          dispVGA/charDispRAM/Mram_charDispRAM260
+     DSP48A1:B0->P14       2   4.394   0.961  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/n0036<14>)
+     LUT6:I1->O            1   0.203   0.000  titan/ExStage/memSrcMUX/Mmux_out69_1_G (N1163)
+     MUXF7:I1->O           4   0.140   0.788  titan/ExStage/memSrcMUX/Mmux_out69_1 (titan/ExStage/memSrcMUX/Mmux_out69)
+     LUT4:I2->O           16   0.203   1.005  inst_LPM_DECODE81_SW0 (N963)
+     LUT6:I5->O            7   0.205   0.773  write_ctrl8 (write_ctrl8)
+     RAM128X1D:WE              0.000          dispVGA/charDispRAM/Mram_charDispRAM9
     ----------------------------------------
-    Total                     17.377ns (7.124ns logic, 10.253ns route)
-                                       (41.0% logic, 59.0% route)
+    Total                     17.307ns (6.820ns logic, 10.487ns route)
+                                       (39.4% logic, 60.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'dispVGA/vgaCtrl/clk25M'
@@ -1011,9 +1008,9 @@ Delay:               6.488ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 19137839 / 3972
+  Total number of paths / destination ports: 18071714 / 3990
 -------------------------------------------------------------------------
-Offset:              21.665ns (Levels of Logic = 11)
+Offset:              21.849ns (Levels of Logic = 11)
   Source:            reset (PAD)
   Destination:       titan/ExStage/regfile/Mram_RAM15 (RAM)
   Destination Clock: clk rising 0.5X
@@ -1022,21 +1019,21 @@ Offset:              21.665ns (Levels of Logic = 11)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           273   1.222   2.413  reset_IBUF (reset_IBUF)
-     LUT5:I0->O            2   0.203   0.617  titan/LogicCtrl/Mmux_CFWrite111_SW1 (N959)
-     LUT6:I5->O           17   0.205   1.132  titan/LogicCtrl/Mmux_aluSrcb11_1 (titan/LogicCtrl/Mmux_aluSrcb11)
-     LUT4:I2->O            7   0.203   0.773  titan/ExStage/aluSrcbMUX/Mmux_out41 (titan/ExStage/ALUMuxOUT<12>)
-     DSP48A1:B12->P47     18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     IBUF:I->O           323   1.222   2.418  reset_IBUF (reset_IBUF)
+     LUT5:I0->O           19   0.203   1.072  titan/LogicCtrl/Mmux_RtSrcReg11 (titan/RtSrcReg)
+     LUT6:I5->O           11   0.205   0.883  titan/ExStage/regfile/out11_2 (titan/ExStage/regfile/out111)
+     LUT4:I3->O            6   0.205   0.744  titan/ExStage/aluSrcbMUX/Mmux_out110 (titan/ExStage/ALUMuxOUT<0>)
+     DSP48A1:B0->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
      DSP48A1:C30->PCOUT47    1   2.689   0.000  titan/ExStage/alu/Mmult_n00361 (titan/ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
      DSP48A1:PCIN47->P10    1   2.264   0.808  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<27>)
      LUT6:I3->O            1   0.205   0.827  titan/ExStage/RaWriteEnMUX/Mmux_out209 (titan/ExStage/RaWriteEnMUX/Mmux_out208)
-     LUT5:I1->O            1   0.203   0.580  titan/ExStage/RaWriteEnMUX/Mmux_out2011_SW0 (N1014)
+     LUT5:I1->O            1   0.203   0.580  titan/ExStage/RaWriteEnMUX/Mmux_out2011_SW0 (N1086)
      LUT6:I5->O            1   0.205   0.827  titan/ExStage/RaWriteEnMUX/Mmux_out2011 (titan/ExStage/RaWriteEnMUX/Mmux_out2010)
      LUT6:I2->O            2   0.203   0.616  titan/ExStage/RaWriteEnMUX/Mmux_out2012 (titan/ExStage/writeData<27>)
      RAM32M:DIB1               0.028          titan/ExStage/regfile/Mram_RAM6
     ----------------------------------------
-    Total                     21.665ns (12.024ns logic, 9.641ns route)
-                                       (55.5% logic, 44.5% route)
+    Total                     21.849ns (12.026ns logic, 9.823ns route)
+                                       (55.0% logic, 45.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'pulse_OBUF'
@@ -1062,7 +1059,7 @@ Offset:              2.910ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'dispVGA/vgaCtrl/clk25M'
   Total number of paths / destination ports: 42 / 42
 -------------------------------------------------------------------------
-Offset:              3.720ns (Levels of Logic = 1)
+Offset:              3.725ns (Levels of Logic = 1)
   Source:            reset (PAD)
   Destination:       dispVGA/vgaCtrl/vCount_9 (FF)
   Destination Clock: dispVGA/vgaCtrl/clk25M rising
@@ -1071,10 +1068,10 @@ Offset:              3.720ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           273   1.222   2.068  reset_IBUF (reset_IBUF)
+     IBUF:I->O           323   1.222   2.073  reset_IBUF (reset_IBUF)
      FDC:CLR                   0.430          dispVGA/vgaCtrl/bright
     ----------------------------------------
-    Total                      3.720ns (1.652ns logic, 2.068ns route)
+    Total                      3.725ns (1.652ns logic, 2.073ns route)
                                        (44.4% logic, 55.6% route)
 
 =========================================================================
@@ -1113,7 +1110,7 @@ Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
 Offset:              12.683ns (Levels of Logic = 9)
   Source:            ioMem/nes/count_8 (FF)
   Destination:       pulse (PAD)
-  Source Clock:      clk rising
+  Source Clock:      clk rising 0.5X
 
   Data Path: ioMem/nes/count_8 to pulse
                                 Gate     Net
@@ -1143,7 +1140,7 @@ Clock to Setup on destination clock clk
                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------+---------+---------+---------+---------+
-clk                   |   23.346|         |         |         |
+clk                   |   23.533|         |         |         |
 dispVGA/vgaCtrl/clk25M|    6.675|         |         |         |
 pulse_OBUF            |         |    4.051|         |         |
 ----------------------+---------+---------+---------+---------+
@@ -1168,13 +1165,13 @@ clk            |         |         |    8.648|         |
 
 
 Total REAL time to Xst completion: 16.00 secs
-Total CPU time to Xst completion: 16.22 secs
+Total CPU time to Xst completion: 16.27 secs
  
 --> 
 
-Total memory usage is 271108 kilobytes
+Total memory usage is 284264 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   17 (   0 filtered)
-Number of infos    :   10 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
 
