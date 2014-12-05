@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Dec 05 10:29:09 2014
+Mapped Date    : Fri Dec 05 13:30:23 2014
 
 Design Summary
 --------------
@@ -22,17 +22,17 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      3,354 out of   9,112   36%
-    Number used as logic:                    1,816 out of   9,112   19%
-      Number using O6 output only:           1,604
+  Number of Slice LUTs:                      3,289 out of   9,112   36%
+    Number used as logic:                    1,755 out of   9,112   19%
+      Number using O6 output only:           1,538
       Number using O5 output only:              57
-      Number using O5 and O6:                  155
+      Number using O5 and O6:                  160
       Number used as ROM:                        0
-    Number used as Memory:                   1,535 out of   2,176   70%
-      Number used as Dual Port RAM:            948
-        Number using O6 output only:           908
+    Number used as Memory:                   1,531 out of   2,176   70%
+      Number used as Dual Port RAM:            944
+        Number using O6 output only:           900
         Number using O5 output only:             0
-        Number using O5 and O6:                 40
+        Number using O5 and O6:                 44
       Number used as Single Port RAM:          587
         Number using O6 output only:           587
         Number using O5 output only:             0
@@ -44,12 +44,12 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,097 out of   2,278   48%
+  Number of occupied Slices:                 1,088 out of   2,278   47%
   Number of MUXCYs used:                       264 out of   4,556    5%
-  Number of LUT Flip Flop pairs used:        3,358
-    Number with an unused Flip Flop:         3,250 out of   3,358   96%
-    Number with an unused LUT:                   4 out of   3,358    1%
-    Number of fully used LUT-FF pairs:         104 out of   3,358    3%
+  Number of LUT Flip Flop pairs used:        3,291
+    Number with an unused Flip Flop:         3,188 out of   3,291   96%
+    Number with an unused LUT:                   2 out of   3,291    1%
+    Number of fully used LUT-FF pairs:         101 out of   3,291    3%
     Number of unique control sets:              62
     Number of slice register sites lost
       to control set restrictions:             330 out of  18,224    1%
@@ -95,11 +95,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                7.58
+Average Fanout of Non-Clock Nets:                7.59
 
-Peak Memory Usage:  422 MB
-Total REAL time to MAP completion:  3 mins 10 secs 
-Total CPU time to MAP completion:   3 mins 8 secs 
+Peak Memory Usage:  420 MB
+Total REAL time to MAP completion:  3 mins 20 secs 
+Total CPU time to MAP completion:   3 mins 16 secs 
 
 Table of Contents
 -----------------
@@ -123,10 +123,13 @@ Section 1 - Errors
 Section 2 - Warnings
 --------------------
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM5_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM11_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM11_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM1_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <titan/ExStage/regfile/Mram_RAM3_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM13_RAMD_D1_O> is incomplete. The signal does
@@ -135,22 +138,19 @@ WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM14_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM6_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM2_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM3_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM4_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM12_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM15_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM12_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM5_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <titan/ExStage/regfile/Mram_RAM4_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 
 Section 3 - Informational

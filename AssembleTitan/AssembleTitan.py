@@ -34,7 +34,6 @@ class Assembler:
 		reg = {}
 
 
-
 		#Import CSV Configuration file
 		configuration = self.importCSVfile(configurationFile)
 
@@ -114,6 +113,7 @@ class Assembler:
 				
 				#Handle the assembly of different types
 				if type == 'jtype':
+					print line
 					newline = self.insertConstants(constants,line,type)
 					binary = self.jtype(opCode,newline)
 					

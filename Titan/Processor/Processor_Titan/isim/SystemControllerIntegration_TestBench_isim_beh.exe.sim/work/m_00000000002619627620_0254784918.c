@@ -247,7 +247,7 @@ LAB9:    t29 = *((unsigned int *)t13);
     xsi_vlogvar_wait_assign_value(t11, t12, 0, *((unsigned int *)t14), t32, 0LL);
     goto LAB10;
 
-LAB11:    xsi_set_current_line(67, ng0);
+LAB11:    xsi_set_current_line(68, ng0);
     t4 = (t0 + 2280U);
     t5 = *((char **)t4);
     t4 = (t0 + 3000);
@@ -257,7 +257,7 @@ LAB11:    xsi_set_current_line(67, ng0);
     t16 = (t0 + 3000);
     t17 = (t16 + 64U);
     t18 = *((char **)t17);
-    t19 = (t0 + 1800U);
+    t19 = (t0 + 2120U);
     t20 = *((char **)t19);
     xsi_vlog_generic_convert_array_indices(t13, t14, t15, t18, 2, 1, t20, 5, 2);
     t19 = (t13 + 4);
@@ -281,7 +281,7 @@ LAB14:    t29 = *((unsigned int *)t13);
 
 }
 
-static void Cont_71_2(char *t0)
+static void Cont_72_2(char *t0)
 {
     char t3[8];
     char t4[8];
@@ -328,7 +328,7 @@ LAB0:    t1 = (t0 + 4576U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(71, ng0);
+LAB2:    xsi_set_current_line(72, ng0);
     t2 = (t0 + 1800U);
     t5 = *((char **)t2);
     memset(t4, 0, 8);
@@ -410,7 +410,7 @@ LAB14:    memcpy(t3, t19, 8);
 
 }
 
-static void Cont_72_3(char *t0)
+static void Cont_73_3(char *t0)
 {
     char t3[8];
     char t4[8];
@@ -457,7 +457,7 @@ LAB0:    t1 = (t0 + 4824U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(72, ng0);
+LAB2:    xsi_set_current_line(73, ng0);
     t2 = (t0 + 1960U);
     t5 = *((char **)t2);
     memset(t4, 0, 8);
@@ -542,7 +542,7 @@ LAB14:    memcpy(t3, t19, 8);
 
 extern void work_m_00000000002619627620_0254784918_init()
 {
-	static char *pe[] = {(void *)Initial_52_0,(void *)Always_60_1,(void *)Cont_71_2,(void *)Cont_72_3};
+	static char *pe[] = {(void *)Initial_52_0,(void *)Always_60_1,(void *)Cont_72_2,(void *)Cont_73_3};
 	xsi_register_didat("work_m_00000000002619627620_0254784918", "isim/SystemControllerIntegration_TestBench_isim_beh.exe.sim/work/m_00000000002619627620_0254784918.didat");
 	xsi_register_executes(pe);
 }

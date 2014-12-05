@@ -37,8 +37,8 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-NESinputData|    5.276(R)|      SLOW  |   -1.564(R)|      FAST  |clk_50M           |   0.000|
-reset       |   29.390(R)|      SLOW  |   -2.816(R)|      FAST  |clk_50M           |   0.000|
+NESinputData|    4.702(R)|      SLOW  |   -1.825(R)|      FAST  |clk_50M           |   0.000|
+reset       |   27.590(R)|      SLOW  |   -3.171(R)|      FAST  |clk_50M           |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -46,17 +46,17 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-latch       |         9.340(R)|      SLOW  |         4.492(R)|      FAST  |clk_50M           |   0.000|
-leds<0>     |         5.821(R)|      SLOW  |         3.808(R)|      FAST  |clk_50M           |   0.000|
-leds<1>     |         5.821(R)|      SLOW  |         3.808(R)|      FAST  |clk_50M           |   0.000|
-leds<2>     |         5.636(R)|      SLOW  |         3.702(R)|      FAST  |clk_50M           |   0.000|
-leds<3>     |         5.636(R)|      SLOW  |         3.702(R)|      FAST  |clk_50M           |   0.000|
-leds<4>     |         5.947(R)|      SLOW  |         3.845(R)|      FAST  |clk_50M           |   0.000|
-leds<5>     |         5.947(R)|      SLOW  |         3.845(R)|      FAST  |clk_50M           |   0.000|
-leds<6>     |         5.558(R)|      SLOW  |         3.644(R)|      FAST  |clk_50M           |   0.000|
-leds<7>     |         5.558(R)|      SLOW  |         3.644(R)|      FAST  |clk_50M           |   0.000|
-pulse       |        11.475(R)|      SLOW  |         4.716(R)|      FAST  |clk_50M           |   0.000|
-rgb<0>      |        23.584(R)|      SLOW  |         6.171(R)|      FAST  |clk_50M           |   0.000|
+latch       |         9.723(R)|      SLOW  |         5.337(R)|      FAST  |clk_50M           |   0.000|
+leds<0>     |         5.766(R)|      SLOW  |         3.773(R)|      FAST  |clk_50M           |   0.000|
+leds<1>     |         5.766(R)|      SLOW  |         3.773(R)|      FAST  |clk_50M           |   0.000|
+leds<2>     |         5.581(R)|      SLOW  |         3.667(R)|      FAST  |clk_50M           |   0.000|
+leds<3>     |         5.581(R)|      SLOW  |         3.667(R)|      FAST  |clk_50M           |   0.000|
+leds<4>     |         5.964(R)|      SLOW  |         3.847(R)|      FAST  |clk_50M           |   0.000|
+leds<5>     |         5.964(R)|      SLOW  |         3.847(R)|      FAST  |clk_50M           |   0.000|
+leds<6>     |         5.575(R)|      SLOW  |         3.646(R)|      FAST  |clk_50M           |   0.000|
+leds<7>     |         5.575(R)|      SLOW  |         3.646(R)|      FAST  |clk_50M           |   0.000|
+pulse       |        11.714(R)|      SLOW  |         5.407(R)|      FAST  |clk_50M           |   0.000|
+rgb<0>      |        23.571(R)|      SLOW  |         5.246(R)|      FAST  |clk_50M           |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -64,11 +64,11 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   27.985|         |         |         |
+clk            |   26.524|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Dec 05 10:36:43 2014 
+Analysis completed Fri Dec 05 13:37:34 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
