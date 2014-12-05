@@ -28,8 +28,6 @@ module NES_CONTROLLER(
 	initial
 	begin
 		controller_data = 8'b00000000;
-//		latch = 1'b1;
-//		pulse = 1'b1;
 	end
 	
 	//Instantiate a register to conatin the count that will be send out all the control signals.

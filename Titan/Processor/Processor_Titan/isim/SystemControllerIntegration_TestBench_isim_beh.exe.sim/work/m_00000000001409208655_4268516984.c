@@ -21,8 +21,8 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "C:/Users/u0499404/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterROM.v";
-static const char *ng1 = "TestROM.dat";
+static const char *ng0 = "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterROM.v";
+static const char *ng1 = "GlyphLibrary.dat";
 static int ng2[] = {0, 0};
 static int ng3[] = {2, 0};
 static int ng4[] = {1, 0};

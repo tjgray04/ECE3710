@@ -41,7 +41,7 @@ module CharacterDisplayRAM#(parameter RAM_WIDTH = 7, RAM_ADDR_BITS = 13)
    //  The forllowing code is only necessary if you wish to initialize the RAM 
    //  contents via an external file (use $readmemb for binary data)
    initial
-      $readmemb("mTestRAM.dat", charDispRAM, 0, 4799);
+      $readmemb("InitialMap.dat", charDispRAM, 0, 4799);
 
 	//Test function to get rid of warning
 	function [12:0] trunc_14_to_13(input [13:0] val);

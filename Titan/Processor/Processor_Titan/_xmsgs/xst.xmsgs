@@ -5,16 +5,2887 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal &lt;<arg fmt="%s" index="1">inst_ROM</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal &lt;<arg fmt="%s" index="1">inst_ROM</arg>&gt; in initial block is partially initialized.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 226: Result of <arg fmt="%d" index="1">22</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">21</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 224: Result of <arg fmt="%d" index="1">22</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">21</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterROM.v" Line 35: Signal &lt;<arg fmt="%s" index="1">charROM</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\u0499404\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 130: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="568" delta="old" >Constant value is truncated to fit in &lt;<arg fmt="%d" index="1">8</arg>&gt; bits.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 130: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">inst_ROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">InstructionROM</arg>&apos;, is tied to its initial value.

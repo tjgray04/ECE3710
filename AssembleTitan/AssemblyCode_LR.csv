@@ -1,0 +1,91 @@
+//Global Variables
+gcon,controllerAddr,49151,	//Binary: 10_1_1_1111_1111_1111, This gets us into IO memory space
+gcon,LEDAddr,40959,			//Binary: 10_0_1_1111_1111_1111, This gets us into IO memory space for the LEDs
+gcon,VGABaseAddr,16384,	    //Binary: 01_00_0000_0000_0000, This is the base address for the VGA
+
+//Initialization
+addi,r3,r0,2439,			//Load initial block glyph position into r3
+addi,r4,r0,10000,			//Wait timer count in r4
+addi,r6,r0,VGABaseAddr,		//Load VGA base address into r6
+addi,r1,r0,controllerAddr,	//Load the controller address into r1
+test:
+delay:
+addi,r4,r4,-1
+cmpi,x,r4,0
+bne,delay:
+addi,r4,r0,10000
+
+//LED Testing Loop
+loop:
+ld,r2,r1,0,   			//Load the controller value into r2
+str,r2,r0,LEDAddr,		//Store the value to the LEDs
+
+//Check for movement
+//Right			xxxx0001
+//Left			xxxx0010
+//Down			xxxx0100
+//Up			xxxx1000
+//Up-Right		xxxx1001
+//UP-Left		xxxx1010
+//Down-Right	xxxx0101
+//Down-Left		xxxx0110
+
+//Check Directions that are pressed. If so, check if the glyph is OK to move. Then move it.
+andi,r5,r2,1,		//Put only the bits indicating direction into r5
+
+checkR:
+cmpi,x,r5,1,		//Check if direction pressed is right
+bne,checkL:,		//Check next direction if check fails
+addi,r7,r3,1,		//Put the glyph location we are trying to move to into r7
+add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
+ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
+cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
+bne,wait:,			//Go to wait if location is invalid
+
+
+//The position to the right is a valid position
+add,r9,r3,r6,		//r9 contains the current glyph location address
+ld,r10,r9,0,        //r10 contatins the current glyph index 
+str,r10,r7,0,       //store the glyph character into the valid position
+
+//Set the old position to be the background glyph (glyph 0)
+str,r0,r9,0,        //Sets the old position to be the background
+addi,r3,r3,1,       //Update our current position
+
+checkL:
+andi,r5,r2,2,		//Put only the bits indicating direction into r5
+cmpi,x,r5,2,		//Check if direction pressed is right
+bne,checkD:,		//Check next direction if check fails
+addi,r7,r3,-1,		//Put the glyph location we are trying to move to into r7
+add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
+ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
+cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
+bne,wait:,			//Go to wait if location is invalid
+
+//The position to the right is a valid position
+add,r9,r3,r6,		//r9 contains the current glyph location address
+ld,r10,r9,0,        //r10 contatins the current glyph index 
+str,r10,r7,0,       //store the glyph character into the valid position
+
+//Set the old position to be the background glyph (glyph 0)
+str,r0,r9,0,        //Sets the old position to be the background
+addi,r3,r3,1,       //Update our current position
+
+checkD:
+//checkU:
+//checkUR:
+//checkUL:
+//checkDR:
+//checkDL:
+
+//Wait
+wait:
+
+addi,r4,r4,-1
+cmp,x,r4,r0
+bne,wait:
+addi,r4,r0,10000
+j,loop:
+
+
+

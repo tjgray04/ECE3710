@@ -1,14 +1,14 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (nt64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Release 14.4 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
 -n 3 -fastpaths -xml System.twx System.ncd -o System.twr System.pcf -ucf
 System.ucf
 
 Design file:              System.ncd
 Physical constraint file: System.pcf
-Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2012-12-04)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -37,8 +37,8 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-NESinputData|    5.513(R)|      SLOW  |   -2.108(R)|      FAST  |clk_50M           |   0.000|
-reset       |   27.883(R)|      SLOW  |   -2.293(R)|      FAST  |clk_50M           |   0.000|
+NESinputData|    4.511(R)|      SLOW  |   -1.499(R)|      FAST  |clk_50M           |   0.000|
+reset       |   29.712(R)|      SLOW  |   -3.492(R)|      FAST  |clk_50M           |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -46,21 +46,17 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-latch       |        10.738(R)|      SLOW  |         6.110(R)|      FAST  |clk_50M           |   0.000|
-leds<0>     |         5.765(R)|      SLOW  |         3.772(R)|      FAST  |clk_50M           |   0.000|
-leds<1>     |         5.765(R)|      SLOW  |         3.772(R)|      FAST  |clk_50M           |   0.000|
-leds<2>     |         5.580(R)|      SLOW  |         3.666(R)|      FAST  |clk_50M           |   0.000|
-leds<3>     |         5.580(R)|      SLOW  |         3.666(R)|      FAST  |clk_50M           |   0.000|
-leds<4>     |         5.964(R)|      SLOW  |         3.847(R)|      FAST  |clk_50M           |   0.000|
-leds<5>     |         5.964(R)|      SLOW  |         3.847(R)|      FAST  |clk_50M           |   0.000|
-leds<6>     |         5.575(R)|      SLOW  |         3.646(R)|      FAST  |clk_50M           |   0.000|
-leds<7>     |         5.575(R)|      SLOW  |         3.646(R)|      FAST  |clk_50M           |   0.000|
-pulse       |        13.424(R)|      SLOW  |         5.842(R)|      FAST  |clk_50M           |   0.000|
-rgb<0>      |        16.951(R)|      SLOW  |         6.356(R)|      FAST  |clk_50M           |   0.000|
-rgb<1>      |        16.856(R)|      SLOW  |         6.260(R)|      FAST  |clk_50M           |   0.000|
-rgb<4>      |        13.805(R)|      SLOW  |         5.896(R)|      FAST  |clk_50M           |   0.000|
-rgb<5>      |        14.088(R)|      SLOW  |         6.253(R)|      FAST  |clk_50M           |   0.000|
-rgb<7>      |        14.041(R)|      SLOW  |         6.192(R)|      FAST  |clk_50M           |   0.000|
+latch       |        11.283(R)|      SLOW  |         5.695(R)|      FAST  |clk_50M           |   0.000|
+leds<0>     |         5.766(R)|      SLOW  |         3.799(R)|      FAST  |clk_50M           |   0.000|
+leds<1>     |         5.766(R)|      SLOW  |         3.799(R)|      FAST  |clk_50M           |   0.000|
+leds<2>     |         5.784(R)|      SLOW  |         3.776(R)|      FAST  |clk_50M           |   0.000|
+leds<3>     |         6.011(R)|      SLOW  |         3.918(R)|      FAST  |clk_50M           |   0.000|
+leds<4>     |         5.717(R)|      SLOW  |         3.712(R)|      FAST  |clk_50M           |   0.000|
+leds<5>     |         5.717(R)|      SLOW  |         3.712(R)|      FAST  |clk_50M           |   0.000|
+leds<6>     |         5.737(R)|      SLOW  |         3.744(R)|      FAST  |clk_50M           |   0.000|
+leds<7>     |         5.737(R)|      SLOW  |         3.744(R)|      FAST  |clk_50M           |   0.000|
+pulse       |        12.751(R)|      SLOW  |         5.540(R)|      FAST  |clk_50M           |   0.000|
+rgb<0>      |        26.927(R)|      SLOW  |         7.821(R)|      FAST  |clk_50M           |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -68,18 +64,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   25.116|         |         |         |
+clk            |   27.337|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Dec 04 16:40:31 2014 
+Analysis completed Thu Dec 04 20:04:22 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 304 MB
+Peak Memory Usage: 301 MB
 
 
 

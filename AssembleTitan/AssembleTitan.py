@@ -135,8 +135,8 @@ class Assembler:
 				#Record each assembled line
 				assembledCode.append(binary)
 			
-			#increment the Program Counter	
-			PC+=1
+				#increment the Program Counter	
+				PC+=1
 
 		return assembledCode,labels,address
 
