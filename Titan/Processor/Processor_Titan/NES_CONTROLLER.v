@@ -28,8 +28,8 @@ module NES_CONTROLLER(
 	initial
 	begin
 		controller_data = 8'b00000000;
-		latch = 1'b1;
-		pulse = 1'b1;
+//		latch = 1'b1;
+//		pulse = 1'b1;
 	end
 	
 	//Instantiate a register to conatin the count that will be send out all the control signals.
@@ -168,42 +168,43 @@ module NES_CONTROLLER(
  *is active low so the data will be inverted and stored into an output register
  *
  */
-always@(negedge pulse)
+always@(posedge clock)
 begin
+	if(reset)
+		controller_data = 8'b00000000;
 		//Capture A
 //   if ((count >= 1200) && (count < 1800))
-		if ((count >= 600) && (count < 900))
+	else if (count == 600) //(count >= 599) && (count < 601))
 		controller_data[7] = ~data;
 		//Capture B
 //	else if((count >= 2400) && (count < 3000))
-	else if((count >= 1200) && (count < 1500))
+	else if(count == 1200)//(count >= 1199) && (count < 1201))
 		controller_data[6] = ~data;
 		//Caputre Select
 //	else if((count >= 3600) && (count < 4200))
-	else if((count >= 1800) && (count < 2100))
+	else if(count == 1800)//(count >= 1799) && (count < 1801))
 		controller_data[5] = ~data;	
 	//Caputre Start
 //	else if((count >= 4800) && (count <5400))
-	else if((count >= 2400) && (count <2700))
+	else if(count == 2400)//(count >= 2399) && (count < 2401))
 		controller_data[4] = ~data;
 	//Caputre Up			
 //	else if((count >= 6000) && (count < 6600))
-	else if((count >= 3000) && (count < 3300))
+	else if(count == 3000)//(count >= 2999) && (count < 3001))
 		controller_data[3] = ~data;
 	//Caputre Down
 //	else if((count >= 7200) && (count < 7800))
-	else if((count >= 3600) && (count < 3900))
+	else if(count == 3600)//(count >= 3599) && (count < 3601))
 		controller_data[2] = ~data;	
 	//Caputre Left
 //	else if((count >= 8400) && (count < 9000))
-	else if((count >= 4200) && (count < 4500))
+	else if(count == 4200)//(count >= 4199) && (count < 4201))
 		controller_data[1] = ~data;	
 	//Caputre Right
 //	else if((count >= 9600) &&(count < 10200))
-	else if((count >= 4800) &&(count < 5100))
+	else if(count == 4800)//(count >= 4799) && (count < 4801))
 		controller_data[0] = ~data;
 end
-
 
 
 /*This always block will take care of the counter that will be used to control.
@@ -224,5 +225,6 @@ begin
 	else
 		count <= count + 1;
 end
+
 
 endmodule

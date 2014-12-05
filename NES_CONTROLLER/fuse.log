@@ -1,18 +1,28 @@
-Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Steve Brown/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH_isim_beh.exe -prj C:/Users/Steve Brown/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH_beh.prj work.NES_CONTROLLER_TEST_BENCH work.glbl 
-ISim P.49d (signature 0x7708f090)
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/u0499404/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH_isim_beh.exe -prj C:/Users/u0499404/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH_beh.prj work.NES_CONTROLLER_TEST_BENCH work.glbl 
+ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER.v" into library work
-Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH.v" into library work
-Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/NES_CONTROLLER/ipcore_dir/DCM_50M.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER.v" into library work
+Analyzing Verilog file "C:/Users/u0499404/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
+Compiling module IBUFG
+Compiling module dcm_sp_clock_divide_by_2
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_clock_lost
+Compiling module DCM_SP
+Compiling module BUFG
+Compiling module DCM_50M
 Compiling module NES_CONTROLLER
 Compiling module NES_CONTROLLER_TEST_BENCH
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Compiled 3 Verilog Units
-Built simulation executable C:/Users/Steve Brown/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH_isim_beh.exe
-Fuse Memory Usage: 27912 KB
-Fuse CPU Usage: 1014 ms
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 11 Verilog Units
+Built simulation executable C:/Users/u0499404/Desktop/ECE3710/NES_CONTROLLER/NES_CONTROLLER_TEST_BENCH_isim_beh.exe
+Fuse Memory Usage: 31828 KB
+Fuse CPU Usage: 545 ms

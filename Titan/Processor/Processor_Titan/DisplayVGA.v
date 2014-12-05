@@ -39,7 +39,7 @@ module DisplayVGA(input clk, reset,
 	assign hGlyphVGA = hPixel[9:3];
 	assign vGlyphVGA = vPixel[8:3];
 	
-	vgaControl	vgaCtrl (.clk25M(clk), .reset(reset), .hSync(hSync), .vSync(vSync), .bright(bright), 		
+	vgaControl	vgaCtrl (.clk50M(clk), .reset(reset), .hSync(hSync), .vSync(vSync), .bright(bright), 		
 						   .hPixel(hPixel), .vPixel(vPixel));
 
 	CharacterDisplayRAM charDispRAM(.clk(clk), 

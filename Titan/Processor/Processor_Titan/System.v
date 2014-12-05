@@ -37,8 +37,10 @@ module System#(parameter WIDTH = 32)(
 	wire [WIDTH-1:0] memData_OUT; //, stackData_OUT;
 	wire [13:0] addressOUT;
 	
+	assign systemReset = reset || !locked;
+	
 //Processor
-Titan titan(.clk(clk_50M), .reset(reset), .memControllerData(memControllerData),.memAddr(memAddr),
+Titan titan(.clk(clk_50M), .reset(systemReset), .memControllerData(memControllerData),.memAddr(memAddr),
 				.memWriteData(memWriteData), .writeEn(writeEn), .enRAM(enRAM));
 				
 //Memory Controller
@@ -58,11 +60,11 @@ DataRAM dataRAM(.clk(clk_50M), .enRAM(enRAM), .memWrite(memData_wrEn), .input_da
 
 //IO Memory				
 IOMemory ioMem(.clk(clk_50M), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata_OUT),
-					.address(addressOUT), .IO_Data(IOdata_IN), .reset(reset), .NESinputData(NESinputData),
+					.address(addressOUT), .IO_Data(IOdata_IN), .reset(systemReset), .NESinputData(NESinputData),
 					.latch(latch), .pulse(pulse), .leds(leds));
 
 //VGA Display							
-DisplayVGA dispVGA(.clk(clk_25M), .reset(reset), .cpuWriteEn(vgaData_wrEn), .writeData(vgaData_OUT),
+DisplayVGA dispVGA(.clk(clk_50M), .reset(systemReset), .cpuWriteEn(vgaData_wrEn), .writeData(vgaData_OUT),
 						.addrCPU(addressOUT), .hSync(hSync), .vSync(vSync), .outputCPU(vgaData_IN),
 						.rgb(rgb));
 
@@ -71,11 +73,10 @@ DCM_50M dcm_50M(
 	 // Clock in ports
     .CLK_IN1(clk),      	// 100MHz xtal clock from FPGA
     // Clock out ports
-	 .CLK_OUT1(clk_50M),	// 100MHz clock output
-    .CLK_OUT2(clk_25M),    // 50MHz clock output
+	 .CLK_OUT1(clk_50M),	// 50MHz clock output
     // Status and control signals
     .RESET(reset),			// system reset signal
-    .LOCKED());      		// 0 = DCM is attempting to lock onto CLKIN frequency. DCM clock outputs
+    .LOCKED(locked));      		// 0 = DCM is attempting to lock onto CLKIN frequency. DCM clock outputs
 									// are not valid.
 									// 1 = DCM is locked onto CLKIN frequency. DCM clock outputs are valid
 

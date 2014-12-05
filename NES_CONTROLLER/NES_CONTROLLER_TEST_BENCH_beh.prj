@@ -1,3 +1,4 @@
+verilog work "ipcore_dir/DCM_50M.v"
 verilog work "NES_CONTROLLER.v"
 verilog work "NES_CONTROLLER_TEST_BENCH.v"
-verilog work "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

@@ -32,6 +32,8 @@ module NES_CONTROLLER_TEST_BENCH;
 	// Outputs
 	wire latch;
 	wire pulse;
+	wire clk_50M;
+	wire locked;
 
 	wire [7:0] controller_data;
 
@@ -42,7 +44,9 @@ module NES_CONTROLLER_TEST_BENCH;
 		.reset(reset),
 		.latch(latch), 
 		.pulse(pulse), 
-		.controller_data(controller_data)
+		.controller_data(controller_data),
+		.clk_50M(clk_50M),
+		.locked(locked)
 	);
 
 	initial begin
@@ -52,7 +56,7 @@ module NES_CONTROLLER_TEST_BENCH;
 		reset = 1;
 
 		// Wait 1 us for global reset to finish
-		#20;
+		#100;
 		
 		reset = 0;
         
@@ -80,7 +84,7 @@ module NES_CONTROLLER_TEST_BENCH;
 		data = 1'b1;
 	end
       
-//		always #5 clock = ~clock;
-		always #10 clock = ~clock;
+		always #5 clock = ~clock;
+//		always #10 clock = ~clock;
 endmodule
 

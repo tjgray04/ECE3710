@@ -248,15 +248,16 @@
 module NES_CONTROLLER(
 		input clock, reset, data, //Input a clock , reset and data. The data line will be the output line containing the data from the controller.
 		output reg latch, pulse, 
-		output reg [7:0] controller_data
+		output reg [7:0] controller_data,
+		output clk_50M, locked
     );
 
 	//Initialize the controller data
 	initial
 	begin
 		controller_data = 8'b00000000;
-		latch = 1'b1;
-		pulse = 1'b1;
+//		latch = 1'b1;
+//		pulse = 1'b1;
 	end
 	
 	//Instantiate a register to conatin the count that will be send out all the control signals.
@@ -268,7 +269,7 @@ module NES_CONTROLLER(
 	 *toggle with every 6us. the negative edge of the pulse will be used to latch the data.
 	 *
 	 */
-	always@(posedge count)
+	always@(count)
 	begin
 //			if (count < 1200)
 			if (count < 600)
@@ -397,49 +398,58 @@ module NES_CONTROLLER(
  */
 always@(negedge pulse)
 begin
+	if(reset || !locked)
+		controller_data <= 8'b00000000;
 		//Capture A
 //   if ((count >= 1200) && (count < 1800))
-		if ((count >= 600) && (count < 900))
+	else if (count == 600)
 		controller_data[7] = ~data;
 		//Capture B
 //	else if((count >= 2400) && (count < 3000))
-	else if((count >= 1200) && (count < 1500))
+	else if(count == 1200)
 		controller_data[6] = ~data;
 		//Caputre Select
 //	else if((count >= 3600) && (count < 4200))
-	else if((count >= 1800) && (count < 2100))
+	else if(count == 1800)
 		controller_data[5] = ~data;	
 	//Caputre Start
 //	else if((count >= 4800) && (count <5400))
-	else if((count >= 2400) && (count <2700))
+	else if(count == 2400)
 		controller_data[4] = ~data;
 	//Caputre Up			
 //	else if((count >= 6000) && (count < 6600))
-	else if((count >= 3000) && (count < 3300))
+	else if(count == 3000)
 		controller_data[3] = ~data;
 	//Caputre Down
 //	else if((count >= 7200) && (count < 7800))
-	else if((count >= 3600) && (count < 3900))
+	else if(count == 3600)
 		controller_data[2] = ~data;	
 	//Caputre Left
 //	else if((count >= 8400) && (count < 9000))
-	else if((count >= 4200) && (count < 4500))
+	else if(count == 4200)
 		controller_data[1] = ~data;	
 	//Caputre Right
 //	else if((count >= 9600) &&(count < 10200))
-	else if((count >= 4800) &&(count < 5100))
+	else if(count == 4800)
 		controller_data[0] = ~data;
 end
 
-
+  DCM_50M dcm_50M
+   (// Clock in ports
+    .CLK_IN1(clock),      // IN
+    // Clock out ports
+    .CLK_OUT1(clk_50M),     // OUT
+    // Status and control signals
+    .RESET(reset),// IN
+    .LOCKED(locked));
 
 /*This always block will take care of the counter that will be used to control.
  *
  */
-always@(posedge clock)
+always@(posedge clk_50M)
 begin
 	//If a reset occurs reset the counter.
-	if(reset)
+	if(reset || !locked)
 //		count <= 21'd1200;
 		count <= 20'd0;
 	//Else if the counter has reached the maximum value, reset the counter
