@@ -1,4 +1,3 @@
-jal
 //Global Variables
 gcon,controllerAddr,49151,	//Binary: 10_1_1_1111_1111_1111, This gets us into IO memory space
 gcon,LEDAddr,40959,			//Binary: 10_0_1_1111_1111_1111, This gets us into IO memory space for the LEDs
@@ -9,7 +8,7 @@ addi,r3,r0,2439,			//Load initial block glyph position into r3
 addi,r4,r0,10000,			//Wait timer count in r4
 addi,r6,r0,VGABaseAddr,		//Load VGA base address into r6
 addi,r1,r0,controllerAddr,	//Load the controller address into r1
-
+test:
 delay:
 addi,r4,r4,-1
 cmpi,x,r4,0
