@@ -160,7 +160,7 @@ str,r0,r9,0,		//set the old position to be the background
 
 //CALL THE GLYPH FUNCTION TO DRAW THE GLYPH TO THE NEW LOCATION
 addi,r3,r3,1,		//make sure the r3 contains the location to move to (+1 GLYPH TO RIGHT)
-b,glyph:,			//call the glyph function to draw the character
+j,glyph:,			//call the glyph function to draw the character
 
 //CHECK LEFT MOVEMENT
 checkL:
@@ -221,7 +221,7 @@ str,r0,r9,0,		//set the old position to be the background
 
 //call the glyph function to draw the glyph to the new location
 addi,r3,r3,-1,		//make sure the r3 contains the location to move to (-1 GLYPH TO LEFT)
-b,glyph:,			//call the glyph function to draw the character
+j,glyph:,			//call the glyph function to draw the character
 
 //CHECK DOWN MOVEMENT
 checkD:
@@ -270,7 +270,7 @@ str,r0,r9,0,		//set the old position to be the background
 
 //call the glyph function to draw the glyph to the new location
 addi,r3,r3,80,		//make sure the r3 contains the location to move to
-b,glyph:,			//call the glyph function to draw the character
+j,glyph:,			//call the glyph function to draw the character
 
 //CHECK UP MOVEMENT
 checkU:
@@ -319,7 +319,7 @@ str,r0,r9,0,		//set the old position to be the background
 
 //call the glyph function to draw the glyph to the new location
 addi,r3,r3,-80,		//make sure the r3 contains the location to move to
-b,glyph:,			//call the glyph function to draw the character
+j,glyph:,			//call the glyph function to draw the character
 
 checkUR:
 //checkUL:

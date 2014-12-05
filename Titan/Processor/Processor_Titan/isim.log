@@ -12,13 +12,12 @@ Time resolution is 1 ps
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # restart
-# run 160.00us
+# run 1.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 160.00us
-# run 160.00us
-# run 160.00us
-# run 160.00us
-# run 160.00us
-# run 160.00us
-# run 160.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
