@@ -64,7 +64,8 @@ module RegFile#(parameter REGBITS = 5, WIDTH = 32)(
 			RAM[Rdest] <= writeData;
 		// if we are writing back to the return address register
 		else if(RaWriteEn)
-			RAM[Rs] <= writeData;
+			//RAM[Rs] <= writeData;
+			RAM[Rdest] <= writeData;
 	end
 	
 	// Just read out the data

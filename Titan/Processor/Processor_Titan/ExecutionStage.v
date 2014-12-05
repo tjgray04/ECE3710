@@ -53,11 +53,11 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 		output [REGBITS-1:0] PSRwrite,
 		output [WIDTH-1:0] memAddr, memWriteData, RsData
 		);
-	
+
 	// Declare internal wires/bus
 	wire [WIDTH-1:0] RtData, ALUMuxOUT, ShiftMuxOUT;
 	wire [WIDTH-1:0] ShiftDataOUT, ALUDataOUT, Data_2_dataRAM, Data_2_RegFile, data_2_writeData, writeData;
-	wire [REGBITS-1:0] RtReg, PSRsel;
+	wire [REGBITS-1:0] RtReg, PSRsel, Rdest2;
 	
 	/*	Instantiate REGISTER FILE
 	*	input: clk, global clock from top module
@@ -73,7 +73,9 @@ module ExecutionStage#(parameter  OPBITS = 4, FUNCTBITS = 4, REGBITS = 5, IMMBIT
 	*	output: RaData, return address for Program Counter
 	*/
 	RegFile regfile(.clk(~clk), .regWriteEn(regWriteEn), .RaWriteEn(RaWriteEn), .Rs(Rs),	.Rt(RtReg),
-						 .Rdest(Rdest), .writeData(writeData), .RsData(RsData), .RtData(RtData));
+						 .Rdest(Rdest2), .writeData(writeData), .RsData(RsData), .RtData(RtData));
+	
+	assign Rdest2 = RaWriteEn ? 5'd31 : Rdest;
 	
 	/* This is an output line to go to the meory controller
 	*/

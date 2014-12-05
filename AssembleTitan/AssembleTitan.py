@@ -13,6 +13,11 @@ I-Type[Op][Rd][Rs][    Imm      ]
 
 4            28
 J-Type[Op][                     ]
+
+
+def jal(self):
+	newline = ['jal','r31','r0','0']
+	return newline
 '''
 
 
@@ -116,8 +121,8 @@ class Assembler:
 				elif type == 'itype':
 					if opCode == '0110':
 						newline = self.jRA()# handle jra separately
-					elif opCode == '1111':
-						newline = self.jal() #take care of jal in the assembler
+					#elif opCode == '1111':
+					#	newline = self.jal() #take care of jal in the assembler
 					else:
 						newline = self.insertConstants(constants,line,type)
 					binary = self.iType(opCode,newline,reg)
@@ -142,10 +147,6 @@ class Assembler:
 
 	def jRA(self):
 		newline = ['jra','r0','r31','0']
-		return newline
-
-	def jal(self):
-		newline = ['jal','r31','r0','0']
 		return newline
 
 	def insertConstants(self,constants,line,type):

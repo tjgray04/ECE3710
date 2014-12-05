@@ -43,12 +43,13 @@ op,itype,ori,0010
 op,itype,xoi,0011
 op,itype,lshi,1000
 op,itype,ashi,1000
+op,itype,jRA,0110
 op,itype,jra,0110
-op,itype,jal,1111
+//op,itype,jal,1111
 
 //J-Type
 op,jtype,j,1101
-
+op,jtype,jal,1111
 
 //Branch
 op,itype,b,1100

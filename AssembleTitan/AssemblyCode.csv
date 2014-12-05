@@ -77,6 +77,8 @@ str,r12,r9,0,			//store the right leg
 //addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
 //str,r12,r9,0,			//store the right leg
 
+jal,end:	
+
 delay:
 addi,r4,r4,-1
 cmpi,x,r4,0
@@ -370,3 +372,6 @@ addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
 str,r12,r9,0,			//store the right leg
 
 j,wait:,					//jump back to the wait loop
+
+end:
+jRA						//jump to the return address
