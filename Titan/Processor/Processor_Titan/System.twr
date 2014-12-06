@@ -37,8 +37,8 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-NESinputData|    5.701(R)|      SLOW  |   -1.668(R)|      FAST  |clk_50M           |   0.000|
-reset       |   28.370(R)|      SLOW  |   -3.376(R)|      FAST  |clk_50M           |   0.000|
+NESinputData|    5.451(R)|      SLOW  |   -1.995(R)|      FAST  |clk_50M           |   0.000|
+reset       |   28.839(R)|      SLOW  |   -3.035(R)|      FAST  |clk_50M           |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -46,17 +46,23 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-latch       |         9.585(R)|      SLOW  |         4.654(R)|      FAST  |clk_50M           |   0.000|
-leds<0>     |         5.766(R)|      SLOW  |         3.773(R)|      FAST  |clk_50M           |   0.000|
-leds<1>     |         5.766(R)|      SLOW  |         3.773(R)|      FAST  |clk_50M           |   0.000|
-leds<2>     |         5.581(R)|      SLOW  |         3.667(R)|      FAST  |clk_50M           |   0.000|
-leds<3>     |         5.581(R)|      SLOW  |         3.667(R)|      FAST  |clk_50M           |   0.000|
-leds<4>     |         6.133(R)|      SLOW  |         3.965(R)|      FAST  |clk_50M           |   0.000|
-leds<5>     |         6.145(R)|      SLOW  |         3.959(R)|      FAST  |clk_50M           |   0.000|
-leds<6>     |         5.945(R)|      SLOW  |         3.864(R)|      FAST  |clk_50M           |   0.000|
-leds<7>     |         5.799(R)|      SLOW  |         3.768(R)|      FAST  |clk_50M           |   0.000|
-pulse       |        11.650(R)|      SLOW  |         5.079(R)|      FAST  |clk_50M           |   0.000|
-rgb<0>      |        22.805(R)|      SLOW  |         6.335(R)|      FAST  |clk_50M           |   0.000|
+latch       |         9.978(R)|      SLOW  |         5.409(R)|      FAST  |clk_50M           |   0.000|
+leds<0>     |         6.775(R)|      SLOW  |         4.390(R)|      FAST  |clk_50M           |   0.000|
+leds<1>     |         6.775(R)|      SLOW  |         4.390(R)|      FAST  |clk_50M           |   0.000|
+leds<2>     |         6.558(R)|      SLOW  |         4.278(R)|      FAST  |clk_50M           |   0.000|
+leds<3>     |         6.558(R)|      SLOW  |         4.278(R)|      FAST  |clk_50M           |   0.000|
+leds<4>     |         6.626(R)|      SLOW  |         4.236(R)|      FAST  |clk_50M           |   0.000|
+leds<5>     |         6.626(R)|      SLOW  |         4.236(R)|      FAST  |clk_50M           |   0.000|
+leds<6>     |         6.645(R)|      SLOW  |         4.285(R)|      FAST  |clk_50M           |   0.000|
+leds<7>     |         6.250(R)|      SLOW  |         4.041(R)|      FAST  |clk_50M           |   0.000|
+pulse       |        13.656(R)|      SLOW  |         5.533(R)|      FAST  |clk_50M           |   0.000|
+rgb<0>      |        23.557(R)|      SLOW  |         6.281(R)|      FAST  |clk_50M           |   0.000|
+rgb<2>      |        23.470(R)|      SLOW  |         7.112(R)|      FAST  |clk_50M           |   0.000|
+rgb<3>      |        22.622(R)|      SLOW  |         7.621(R)|      FAST  |clk_50M           |   0.000|
+rgb<4>      |        24.828(R)|      SLOW  |         6.990(R)|      FAST  |clk_50M           |   0.000|
+rgb<5>      |        17.657(R)|      SLOW  |         6.794(R)|      FAST  |clk_50M           |   0.000|
+rgb<6>      |        20.722(R)|      SLOW  |         7.369(R)|      FAST  |clk_50M           |   0.000|
+rgb<7>      |        20.938(R)|      SLOW  |         7.248(R)|      FAST  |clk_50M           |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -64,18 +70,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |   24.804|         |         |         |
+clk            |   26.270|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Fri Dec 05 18:24:08 2014 
+Analysis completed Fri Dec 05 19:39:21 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 301 MB
+Peak Memory Usage: 308 MB
 
 
 

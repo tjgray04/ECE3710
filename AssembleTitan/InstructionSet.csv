@@ -129,7 +129,7 @@ reg,r28,11100
 reg,r29,11101
 reg,r30,11110
 reg,r31,11111
-=======
+
 //Op codes
 //R-Type
 op,rtype,add,0000,0101

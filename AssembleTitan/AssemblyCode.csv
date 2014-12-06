@@ -15,21 +15,24 @@ gcon,glREDMAN,157,		//Initial glyph LOCATION of the RED MAN
 gcon,glGREENMAN,4401,	//Initial glyph LOCATION of the GREEN MAN
 gcon,glWHITEMAN,4477,	//Initial glyph LOCATION of the WHITE MAN
 
-//**************INITIALIZATION************************
+//*********************INITIALIZATION************************
 init:
 //LOAD THE GLYPH CHARACTERS TO THE SCREEN
 //BLUE MAN
 addi,r1,r0,glBLUEMAN,	//Parameter r1: takes in value of glyph INDEX - r7 for BLUE MAN
 addi,r2,r0,glBLUEMAN,	//Parameter r2: takes in value of glyph LOCATION - r11 for BLUE MAN
 jal,DrawGlyph:,			//Draw the RED MAN first
+
 //RED MAN
 addi,r1,r0,giREDMAN,	//Parameter r1: takes in value of glyph INDEX - r8 for RED MAN
 addi,r2,r0,glREDMAN,	//Parameter r2: takes in value of glyph LOCATION - r12 for RED MAN
 jal,DrawGlyph:,			//Draw the BLUE MAN second
+
 //GREEN MAN
 addi,r1,r0,giGREENMAN,	//Parameter r1: takes in value of glyph INDEX - r9 for GREEN MAN
 addi,r2,r0,glGREENMAN,	//Parameter r2: takes in value of glyph LOCATION - r13 for GREEN MAN
 jal,DrawGlyph:,			//Draw the GREEN MAN third
+
 //WHITE MAN
 addi,r1,r0,giWHITEMAN,	//Parameter r1: takes in value of glyph INDEX - r10 for WHITE MAN
 addi,r2,r0,glWHITEMAN,	//Parameter r2: takes in value of glyph LOCATION - r14 for WHITE MAN
@@ -95,7 +98,7 @@ j,main:,				//Loop back to main
 // This function will do nothing for the duration of the timer
 // PARAMETERS:
 // LOCAL VARIABLES:		r1 - timer decrement register 
-// GLOBAL VARIABLES:	
+// GLOBAL VARIABLES:	TIMER - Wait time
 // RETURN VARIABLES:	
 
 waitLoop:
@@ -115,7 +118,7 @@ jra,					//jump to the Return Address of where the function was called
 // GLOBAL VARIABLES:	CTRLR - Memory location of the Controller
 //						LED - Memory location of the LED's
 // RETURN VARIABLES:	r24 - Return the controller value
- 
+
 ctrlr2led:
 ld,r24,r0,CTRLR,		//Load the Controller value into r23 to return
 str,r24,r0,LED,			//Store the value to the LEDs
@@ -132,7 +135,6 @@ jra,					//jump to the Return Address of where the function was called
 
 DrawGlyph:
 //TOP LEFT HEAD
-//LINE 136 DOESN'T HAPPEN BECAUSE ASSEMBLER THINKS DrawGlyph starts with str - jumps one line too far
 addi,r3,r2,VGA,			//r3 contains the glyph MEMORY location
 str,r1,r3,0,			//store the glyph INDEX into the glyph MEMORY location
 
@@ -249,15 +251,24 @@ cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
 bne,endMovement:,			//Branch to the end if invalid movement
 
 //If RIGHT movement is valid, update the position
-//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
-jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
-
-//PARAMETERS:	r1 - glyph INDEX to store
-// 				r2 - glyph LOCATION to store into
-addi,r2,r2,1,				//Update glyph LOCATION to store to
+//First, get the glyph INDEX value of the current glyph LOCATION
 addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
 ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,1,				//Update glyph LOCATION to store to - glyph LOCATION to the RIGHT
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
 jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
 
 //*********CHECK LEFT MOVEMENT************
 checkL:
@@ -290,15 +301,24 @@ cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
 bne,endMovement:,			//Branch to the end if invalid movement
 
 //If LEFT movement is valid, update the position
-//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
-jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
-
-//PARAMETERS:	r1 - glyph INDEX to store
-// 				r2 - glyph LOCATION to store into
-addi,r2,r2,-1,				//Update glyph LOCATION to store to 
+//First, get the glyph INDEX value of the current glyph LOCATION
 addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
 ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,-1,				//Update glyph LOCATION to store to - glyph LOCATION to the LEFT
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
 jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
 
 //**********CHECK DOWN MOVEMENT************
 checkD:
@@ -319,15 +339,24 @@ cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
 bne,endMovement:,			//Branch to the end if invalid movement
 
 //If DOWN movement is valid, update the position
-//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
-jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
-
-//PARAMETERS:	r1 - glyph INDEX to store
-// 				r2 - glyph LOCATION to store into
-addi,r2,r2,80,				//Update glyph LOCATION to store to 
+//First, get the glyph INDEX value of the current glyph LOCATION
 addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
 ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,80,				//Update glyph LOCATION to store to - glyph LOCATION DOWN
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
 jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
 
 //**********CHECK UP MOVEMENT************
 checkU:
@@ -347,16 +376,26 @@ ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
 cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
 bne,endMovement:,			//Branch to the end if invalid movement
 
-//If DOWN movement is valid, update the position
-//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
-jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
-
-//PARAMETERS:	r1 - glyph INDEX to store
-// 				r2 - glyph LOCATION to store into
-addi,r2,r2,-80,				//Update glyph LOCATION to store to 
+//If UP movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
 addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
 ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,-80,				//Update glyph LOCATION to store to - glyph LOCATION UP
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
 jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
 
+j,endMovement:,				//Jump to the end of the function to exit
+
+//END OF MOVEMENT FUNCTION
 endMovement:
 jra,						//jump to the Return Address of where the function was called
