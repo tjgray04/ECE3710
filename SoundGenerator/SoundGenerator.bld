@@ -5,8 +5,8 @@ Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 -intstyle ise -dd _ngo -nt timestamp -uc MusicSynthesizer.ucf -p
 xc6slx16-csg324-3 SoundGenerator.ngc SoundGenerator.ngd
 
-Reading NGO file
-"C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.ngc" ...
+Reading NGO file "C:/Users/u0655172/Desktop/SoundGenerator/SoundGenerator.ngc"
+...
 Gathering constraint information from source properties...
 Done.
 
@@ -28,7 +28,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 162768 kilobytes
+Total memory usage is 163920 kilobytes
 
 Writing NGD file "SoundGenerator.ngd" ...
 Total REAL time to NGDBUILD completion:  5 sec

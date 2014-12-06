@@ -18,7 +18,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-	module sound_generator#(parameter TICKBITS = 18)(
+	module sound_generator#(parameter TICKBITS = 20)(
 		input clk,clr,
 		input [TICKBITS-1:0]ticks,
 		output reg sound
@@ -42,7 +42,7 @@ always@(posedge clk)
 		end
 	 else
 	   begin
-		  count<=count+1;
+		  count<=count+1'b1;
 		  sound<=sound;
 		end
 	end

@@ -1,11 +1,13 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Dec 02 16:41:35 2014
+// Written by: Map P.20131013 on Sat Dec 06 15:35:49 2014
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "soundMelody" LOCATE = SITE "F11" LEVEL 1;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
 COMP "clr" LOCATE = SITE "C9" LEVEL 1;
+COMP "btnL" LOCATE = SITE "C4" LEVEL 1;
+COMP "btnR" LOCATE = SITE "D9" LEVEL 1;
 COMP "soundBass" LOCATE = SITE "G11" LEVEL 1;
-COMP "soundMelody" LOCATE = SITE "F11" LEVEL 1;
 SCHEMATIC END;
 

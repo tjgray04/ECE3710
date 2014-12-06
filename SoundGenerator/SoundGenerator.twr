@@ -37,7 +37,9 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-clr         |    6.265(R)|      SLOW  |    0.192(R)|      SLOW  |clk_BUFGP         |   0.000|
+btnL        |    1.280(R)|      FAST  |   -0.422(R)|      SLOW  |clk_BUFGP         |   0.000|
+btnR        |    1.142(R)|      FAST  |    0.049(R)|      SLOW  |clk_BUFGP         |   0.000|
+clr         |    7.008(R)|      SLOW  |    0.429(R)|      SLOW  |clk_BUFGP         |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -45,8 +47,8 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-soundBass   |         7.550(R)|      SLOW  |         4.224(R)|      FAST  |clk_BUFGP         |   0.000|
-soundMelody |         7.566(R)|      SLOW  |         4.231(R)|      FAST  |clk_BUFGP         |   0.000|
+soundBass   |         7.548(R)|      SLOW  |         4.207(R)|      FAST  |clk_BUFGP         |   0.000|
+soundMelody |         7.593(R)|      SLOW  |         4.247(R)|      FAST  |clk_BUFGP         |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -54,18 +56,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.400|         |         |         |
+clk            |    8.336|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Tue Dec 02 16:41:50 2014 
+Analysis completed Sat Dec 06 15:36:06 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 220 MB
+Peak Memory Usage: 223 MB
 
 
 

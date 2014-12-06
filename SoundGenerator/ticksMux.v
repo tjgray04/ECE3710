@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    16:08:06 12/02/2014 
+// Create Date:    17:54:32 12/04/2014 
 // Design Name: 
-// Module Name:    SoundMux 
+// Module Name:    ticksMux 
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
@@ -18,23 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module SoundMux#(parameter TICKBITS = 20)(
-		input [TICKBITS-1:0] bass, sfx,
+module ticksMux#(parameter WIDTH = 20)(
 		input select,
-		output reg [TICKBITS-1:0] bassSound
+		input [WIDTH-1:0] arg1, arg2,
+		output [WIDTH-1:0] result
     );
 
-//Define parameters
-parameter BASS = 1'b0;
-parameter SFX = 1'b1;
-
-//Mux behavior
-always@(*)
-begin
-	case(select)
-		BASS: bassSound <= bass;
-		SFX: bassSound <= sfx;
-	endcase
-end
+assign result = select ? arg2: arg1;
 
 endmodule

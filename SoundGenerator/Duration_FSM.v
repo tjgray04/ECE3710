@@ -79,7 +79,7 @@ always@(posedge clk)
 		    else if(enable)		//If the pulse arrives, then continue count
 			   begin
 			     ended<=0;
-			  	  count<=count+1;
+			  	  count<=count+1'b1;
 		      end
 		    else						//Otherwise retain count
 		      begin
@@ -97,7 +97,7 @@ always@(posedge clk)
 		    else if(enable)
 			   begin
 			     ended<=0;
-				  count<=count+1;
+				  count<=count+1'b1;
 		      end
 		    else
 		      begin
@@ -115,7 +115,7 @@ always@(posedge clk)
 		    else if(enable)
 			   begin
 			     ended<=0;
-				  count<=count+1;
+				  count<=count+1'b1;
 		      end
 		    else
 		      begin
@@ -133,7 +133,7 @@ always@(posedge clk)
 		    else if(enable)
 			   begin
 			     ended<=0;
-				  count<=count+1;
+				  count<=count+1'b1;
 		      end
 		    else
 		      begin
@@ -151,7 +151,7 @@ always@(posedge clk)
 		    else if(enable)
 			   begin
 			     ended<=0;
-				  count<=count+1;
+				  count<=count+1'b1;
 		      end
 		    else
 		      begin

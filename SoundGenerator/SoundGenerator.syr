@@ -105,42 +105,67 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\TestSoundManipulator.v" into library work
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\ticksMux.v" into library work
+Parsing module <ticksMux>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\TestSoundManipulator.v" into library work
 Parsing module <TestSoundManipulator>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\sound_generator.v" into library work
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\sound_generator.v" into library work
 Parsing module <sound_generator>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" into library work
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\SoundRegControlFSM.v" into library work
+Parsing module <SoundRegControlFSM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\SoundMux.v" into library work
 Parsing module <SoundMux>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" Line 28. parameter declaration becomes local in SoundMux with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" Line 29. parameter declaration becomes local in SoundMux with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" Line 30. parameter declaration becomes local in SoundMux with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundControllerReg.v" into library work
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundMux.v" Line 28. parameter declaration becomes local in SoundMux with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundMux.v" Line 29. parameter declaration becomes local in SoundMux with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" into library work
+Parsing module <SoundFX_FSM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\SoundControllerReg.v" into library work
 Parsing module <SoundControllerReg>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" into library work
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" into library work
 Parsing module <melody_library>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 28. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 29. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 30. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 31. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 32. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 33. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 36. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 47. parameter declaration becomes local in melody_library with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Pulse_generator.v" into library work
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" Line 28. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" Line 29. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" Line 30. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" Line 31. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" Line 32. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" Line 33. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" Line 36. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v" Line 59. parameter declaration becomes local in melody_library with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\Pulse_generator.v" into library work
 Parsing module <pulse_generator>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" into library work
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" into library work
+Parsing module <LaserSFXLibrary>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 29. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 30. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 31. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 32. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 33. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 34. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 37. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 48. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\Duration_FSM.v" into library work
 Parsing module <Duration_FSM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" into library work
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" into library work
+Parsing module <DeathSFXLibrary>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 29. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 30. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 31. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 32. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 33. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 34. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 37. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 48. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" into library work
 Parsing module <bass_library>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 28. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 29. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 30. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 31. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 32. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 33. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 36. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 47. parameter declaration becomes local in bass_library with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v" into library work
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" Line 28. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" Line 29. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" Line 30. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" Line 31. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" Line 32. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" Line 33. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" Line 36. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v" Line 71. parameter declaration becomes local in bass_library with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\SoundGenerator\SoundGenerator.v" into library work
 Parsing module <SoundGenerator>.
 
 =========================================================================
@@ -150,54 +175,62 @@ Parsing module <SoundGenerator>.
 Elaborating module <SoundGenerator>.
 
 Elaborating module <pulse_generator>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Pulse_generator.v" Line 54: Result of 28-bit expression is truncated to fit in 27-bit target.
 
 Elaborating module <Duration_FSM>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 54: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 55: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 56: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 57: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 58: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 82: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 100: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 118: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 136: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 154: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\Duration_FSM.v" Line 54: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\Duration_FSM.v" Line 55: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\Duration_FSM.v" Line 56: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\Duration_FSM.v" Line 57: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\Duration_FSM.v" Line 58: Result of 32-bit expression is truncated to fit in 3-bit target.
 
 Elaborating module <melody_library>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 55: Result of 7-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <sound_generator>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\sound_generator.v" Line 45: Result of 19-bit expression is truncated to fit in 18-bit target.
 
 Elaborating module <bass_library>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 55: Result of 7-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <TestSoundManipulator>.
-WARNING:HDLCompiler:1127 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\TestSoundManipulator.v" Line 31: Assignment to writeEn ignored, since the identifier is never used
+
+Elaborating module <SoundRegControlFSM>.
+
+Elaborating module <SoundFX_FSM>.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 76: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 83: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 90: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 97: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 104: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 130: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 148: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 166: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 184: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v" Line 202: Result of 8-bit expression is truncated to fit in 7-bit target.
+
+Elaborating module <LaserSFXLibrary>.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v" Line 63: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+Elaborating module <DeathSFXLibrary>.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v" Line 63: Result of 7-bit expression is truncated to fit in 6-bit target.
+
+Elaborating module <ticksMux>.
 
 Elaborating module <SoundControllerReg>.
 
 Elaborating module <SoundMux>.
-WARNING:HDLCompiler:634 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v" Line 33: Net <laser[17]> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v" Line 59: Net <writeEn> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <SoundGenerator>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v".
-WARNING:Xst:653 - Signal <laser> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <death> is used but never assigned. This sourceless signal will be automatically connected to value GND.
-WARNING:Xst:653 - Signal <writeEn> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\SoundGenerator.v".
+        TICKBITS = 20
     Summary:
 	no macro.
 Unit <SoundGenerator> synthesized.
 
 Synthesizing Unit <pulse_generator>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Pulse_generator.v".
-        maxCount = 550000
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\Pulse_generator.v".
+        maxCount = 375000
     Found 1-bit register for signal <enable>.
     Found 27-bit register for signal <count>.
     Found 27-bit adder for signal <count[26]_GND_2_o_add_2_OUT> created at line 54.
@@ -207,7 +240,7 @@ Synthesizing Unit <pulse_generator>.
 Unit <pulse_generator> synthesized.
 
 Synthesizing Unit <Duration_FSM>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v".
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\Duration_FSM.v".
         fetch = 0
         quarter = 1
         eigth = 2
@@ -227,70 +260,168 @@ Synthesizing Unit <Duration_FSM>.
 Unit <Duration_FSM> synthesized.
 
 Synthesizing Unit <melody_library>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v".
-        TICKBITS = 18
-    Found 6-bit register for signal <count>.
-    Found 6-bit adder for signal <count[5]_GND_4_o_add_2_OUT> created at line 55.
-    Found 64x21-bit Read Only RAM for signal <_n0091>
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\song_library.v".
+        TICKBITS = 20
+    Found 9-bit register for signal <count>.
+    Found 9-bit adder for signal <count[8]_GND_4_o_add_2_OUT> created at line 67.
+    Found 512x23-bit Read Only RAM for signal <_n0538>
     Summary:
 	inferred   1 RAM(s).
 	inferred   1 Adder/Subtractor(s).
-	inferred   6 D-type flip-flop(s).
+	inferred   9 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
 Unit <melody_library> synthesized.
 
 Synthesizing Unit <sound_generator>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\sound_generator.v".
-        TICKBITS = 18
-    Found 18-bit register for signal <count>.
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\sound_generator.v".
+        TICKBITS = 20
+    Found 20-bit register for signal <count>.
     Found 1-bit register for signal <sound>.
-    Found 18-bit adder for signal <count[17]_GND_5_o_add_2_OUT> created at line 45.
-    Found 18-bit comparator equal for signal <count[17]_ticks[17]_equal_2_o> created at line 38
+    Found 20-bit adder for signal <count[19]_GND_5_o_add_2_OUT> created at line 45.
+    Found 20-bit comparator equal for signal <count[19]_ticks[19]_equal_2_o> created at line 38
     Summary:
 	inferred   1 Adder/Subtractor(s).
-	inferred  19 D-type flip-flop(s).
+	inferred  21 D-type flip-flop(s).
 	inferred   1 Comparator(s).
 	inferred   1 Multiplexer(s).
 Unit <sound_generator> synthesized.
 
 Synthesizing Unit <bass_library>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v".
-        TICKBITS = 18
-    Found 6-bit register for signal <count>.
-    Found 6-bit adder for signal <count[5]_GND_6_o_add_2_OUT> created at line 55.
-    Found 64x3-bit Read Only RAM for signal <duration>
-    Found 64x18-bit Read Only RAM for signal <ticks>
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\bass_library.v".
+        TICKBITS = 20
+    Found 9-bit register for signal <count>.
+    Found 9-bit adder for signal <count[8]_GND_6_o_add_2_OUT> created at line 79.
     Summary:
-	inferred   2 RAM(s).
 	inferred   1 Adder/Subtractor(s).
-	inferred   6 D-type flip-flop(s).
+	inferred   9 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
 Unit <bass_library> synthesized.
 
 Synthesizing Unit <TestSoundManipulator>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\TestSoundManipulator.v".
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\TestSoundManipulator.v".
+        NOTPRESSED = 3'b000
+        LTRANS = 3'b001
+        LPRESSED = 3'b010
+        RTRANS = 3'b011
+        RPRESSED = 3'b100
         BASS = 2'b00
         LASER = 2'b01
-        DEATH = 2'b10
-WARNING:Xst:647 - Input <clk> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-WARNING:Xst:647 - Input <writeEn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+        DEATH = 2'b11
+    Found 3-bit register for signal <PS>.
+    Found finite state machine <FSM_0> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
     Summary:
-	no macro.
+	inferred   1 Finite State Machine(s).
 Unit <TestSoundManipulator> synthesized.
 
+Synthesizing Unit <SoundRegControlFSM>.
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\SoundRegControlFSM.v".
+        DEATH = 2'b11
+        ENABLED = 3'b000
+        DISABLED = 3'b001
+        TRANS = 3'b010
+        DISABLED2 = 3'b011
+        REENABLE = 3'b100
+    Found 3-bit register for signal <PS>.
+    Found finite state machine <FSM_1> for signal <PS>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  12 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <SoundRegControlFSM> synthesized.
+
+Synthesizing Unit <SoundFX_FSM>.
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\SoundFX_FSM.v".
+        fetch = 0
+        quarter = 1
+        eigth = 2
+        third = 3
+        sixteenth = 4
+        sixth = 5
+        WAIT = 6
+        DONE = 7
+    Found 1-bit register for signal <ended>.
+    Found 7-bit register for signal <count>.
+    Found 3-bit register for signal <PS>.
+    Found 7-bit adder for signal <count[6]_GND_9_o_add_37_OUT> created at line 202.
+    Found 8x1-bit Read Only RAM for signal <done>
+    Found 3-bit 8-to-1 multiplexer for signal <NS> created at line 54.
+    Found 1-bit 7-to-1 multiplexer for signal <PS[2]_GND_9_o_Mux_40_o> created at line 114.
+    Found 7-bit 7-to-1 multiplexer for signal <PS[2]_GND_9_o_wide_mux_41_OUT> created at line 114.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred  21 Multiplexer(s).
+Unit <SoundFX_FSM> synthesized.
+
+Synthesizing Unit <LaserSFXLibrary>.
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\LaserSFXLibrary.v".
+        TICKBITS = 20
+    Found 1-bit register for signal <SFXended>.
+    Found 6-bit register for signal <count>.
+    Found 6-bit adder for signal <count[5]_GND_10_o_add_2_OUT> created at line 63.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <LaserSFXLibrary> synthesized.
+
+Synthesizing Unit <DeathSFXLibrary>.
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\DeathSFXLibrary.v".
+        TICKBITS = 20
+    Found 1-bit register for signal <SFXended>.
+    Found 6-bit register for signal <count>.
+    Found 6-bit adder for signal <count[5]_GND_11_o_add_2_OUT> created at line 63.
+    Found 8x20-bit Read Only RAM for signal <_n0047>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <DeathSFXLibrary> synthesized.
+
+Synthesizing Unit <ticksMux>.
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\ticksMux.v".
+        WIDTH = 20
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <ticksMux> synthesized.
+
 Synthesizing Unit <SoundControllerReg>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundControllerReg.v".
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\SoundControllerReg.v".
     Found 2-bit register for signal <soundReg>.
     Summary:
 	inferred   2 D-type flip-flop(s).
 Unit <SoundControllerReg> synthesized.
 
 Synthesizing Unit <SoundMux>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v".
-        TICKBITS = 18
+    Related source file is "C:\Users\u0655172\Desktop\SoundGenerator\SoundMux.v".
+        TICKBITS = 20
     Summary:
-	inferred   3 Multiplexer(s).
+	inferred   1 Multiplexer(s).
 Unit <SoundMux> synthesized.
 
 =========================================================================
@@ -298,31 +429,39 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 3
- 64x18-bit single-port Read Only RAM                   : 1
- 64x21-bit single-port Read Only RAM                   : 1
- 64x3-bit single-port Read Only RAM                    : 1
-# Adders/Subtractors                                   : 7
- 18-bit adder                                          : 2
+ 512x23-bit single-port Read Only RAM                  : 1
+ 8x1-bit single-port Read Only RAM                     : 1
+ 8x20-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 10
+ 20-bit adder                                          : 2
  27-bit adder                                          : 1
  6-bit adder                                           : 2
- 7-bit adder                                           : 2
-# Registers                                            : 15
- 1-bit register                                        : 5
- 18-bit register                                       : 2
+ 7-bit adder                                           : 3
+ 9-bit adder                                           : 2
+# Registers                                            : 22
+ 1-bit register                                        : 8
  2-bit register                                        : 1
+ 20-bit register                                       : 2
  27-bit register                                       : 1
- 3-bit register                                        : 2
+ 3-bit register                                        : 3
  6-bit register                                        : 2
- 7-bit register                                        : 2
+ 7-bit register                                        : 3
+ 9-bit register                                        : 2
 # Comparators                                          : 2
- 18-bit comparator equal                               : 2
-# Multiplexers                                         : 35
- 1-bit 2-to-1 multiplexer                              : 2
- 1-bit 7-to-1 multiplexer                              : 2
- 18-bit 2-to-1 multiplexer                             : 5
+ 20-bit comparator equal                               : 2
+# Multiplexers                                         : 72
+ 1-bit 2-to-1 multiplexer                              : 12
+ 1-bit 7-to-1 multiplexer                              : 3
+ 2-bit 2-to-1 multiplexer                              : 6
+ 20-bit 2-to-1 multiplexer                             : 5
+ 3-bit 2-to-1 multiplexer                              : 8
  3-bit 7-to-1 multiplexer                              : 2
+ 3-bit 8-to-1 multiplexer                              : 1
  6-bit 2-to-1 multiplexer                              : 4
- 7-bit 2-to-1 multiplexer                              : 20
+ 7-bit 2-to-1 multiplexer                              : 26
+ 7-bit 7-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 2
 
 =========================================================================
 
@@ -330,43 +469,42 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
-WARNING:Xst:1290 - Hierarchical block <tm> is unconnected in block <SoundGenerator>.
-   It will be removed from the design.
-WARNING:Xst:1710 - FF/Latch <soundReg_0> (without init value) has a constant value of 0 in block <scr>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <soundReg_1> (without init value) has a constant value of 0 in block <scr>. This FF/Latch will be trimmed during the optimization process.
 
-Synthesizing (advanced) Unit <bass_library>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_duration> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+Synthesizing (advanced) Unit <DeathSFXLibrary>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0047> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 64-word x 3-bit                     |          |
+    |     aspect ratio   | 8-word x 20-bit                     |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <count>         |          |
+    |     addrA          | connected to signal <count<2:0>>    |          |
     |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <duration>      |          |
+    |     doA            | connected to internal node          |          |
     -----------------------------------------------------------------------
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ticks> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+Unit <DeathSFXLibrary> synthesized (advanced).
+
+Synthesizing (advanced) Unit <SoundFX_FSM>.
+INFO:Xst:3231 - The small RAM <Mram_done> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 64-word x 18-bit                    |          |
+    |     aspect ratio   | 8-word x 1-bit                      |          |
     |     weA            | connected to signal <GND>           | high     |
-    |     addrA          | connected to signal <count>         |          |
+    |     addrA          | connected to signal <PS>            |          |
     |     diA            | connected to signal <GND>           |          |
-    |     doA            | connected to signal <ticks>         |          |
+    |     doA            | connected to signal <done>          |          |
     -----------------------------------------------------------------------
-Unit <bass_library> synthesized (advanced).
+Unit <SoundFX_FSM> synthesized (advanced).
 
 Synthesizing (advanced) Unit <melody_library>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0091> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0538> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
     -----------------------------------------------------------------------
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 64-word x 21-bit                    |          |
+    |     aspect ratio   | 512-word x 23-bit                   |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <count>         |          |
     |     diA            | connected to signal <GND>           |          |
@@ -387,34 +525,61 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 3
- 64x18-bit single-port distributed Read Only RAM       : 1
- 64x21-bit single-port distributed Read Only RAM       : 1
- 64x3-bit single-port distributed Read Only RAM        : 1
-# Adders/Subtractors                                   : 4
+ 512x23-bit single-port distributed Read Only RAM      : 1
+ 8x1-bit single-port distributed Read Only RAM         : 1
+ 8x20-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 7
  6-bit adder                                           : 2
- 7-bit adder                                           : 2
+ 7-bit adder                                           : 3
+ 9-bit adder                                           : 2
 # Counters                                             : 3
- 18-bit up counter                                     : 2
+ 20-bit up counter                                     : 2
  27-bit up counter                                     : 1
-# Registers                                            : 39
- Flip-Flops                                            : 39
+# Registers                                            : 70
+ Flip-Flops                                            : 70
 # Comparators                                          : 2
- 18-bit comparator equal                               : 2
-# Multiplexers                                         : 33
- 1-bit 2-to-1 multiplexer                              : 2
- 1-bit 7-to-1 multiplexer                              : 2
- 18-bit 2-to-1 multiplexer                             : 3
+ 20-bit comparator equal                               : 2
+# Multiplexers                                         : 70
+ 1-bit 2-to-1 multiplexer                              : 12
+ 1-bit 7-to-1 multiplexer                              : 3
+ 2-bit 2-to-1 multiplexer                              : 6
+ 20-bit 2-to-1 multiplexer                             : 3
+ 3-bit 2-to-1 multiplexer                              : 8
  3-bit 7-to-1 multiplexer                              : 2
+ 3-bit 8-to-1 multiplexer                              : 1
  6-bit 2-to-1 multiplexer                              : 4
- 7-bit 2-to-1 multiplexer                              : 20
+ 7-bit 2-to-1 multiplexer                              : 26
+ 7-bit 7-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 4
+# FSMs                                                 : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-WARNING:Xst:1710 - FF/Latch <soundReg_0> (without init value) has a constant value of 0 in block <SoundControllerReg>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <soundReg_1> (without init value) has a constant value of 0 in block <SoundControllerReg>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <PS[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 011   | 011
+ 010   | 010
+ 100   | 110
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <srcRSM/FSM_1> on signal <PS[1:5]> with one-hot encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00001
+ 001   | 00010
+ 010   | 00100
+ 100   | 01000
+ 011   | 10000
+-------------------
 
 Optimizing unit <SoundGenerator> ...
 
@@ -423,19 +588,37 @@ Optimizing unit <Duration_FSM> ...
 Optimizing unit <melody_library> ...
 
 Optimizing unit <bass_library> ...
+
+Optimizing unit <SoundRegControlFSM> ...
+
+Optimizing unit <SoundFX_FSM> ...
+
+Optimizing unit <LaserSFXLibrary> ...
+
+Optimizing unit <DeathSFXLibrary> ...
 WARNING:Xst:1710 - FF/Latch <bassDurationFSM/PS_2> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <bassDurationFSM/PS_1> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <pulseGen/count_22> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <pulseGen/count_19> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_20> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_21> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_23> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_21> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_22> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_26> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_24> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_25> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <pulseGen/count_26> (without init value) has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <laserLib/count_5> has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <laserLib/count_4> has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <laserLib/count_3> has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <deathLib/count_5> has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <deathLib/count_4> has a constant value of 0 in block <SoundGenerator>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block SoundGenerator, actual ratio is 1.
+Found area constraint ratio of 100 (+ 5) on block SoundGenerator, actual ratio is 5.
+FlipFlop blibrary/count_0 has been replicated 1 time(s)
+FlipFlop blibrary/count_2 has been replicated 1 time(s)
+FlipFlop blibrary/count_3 has been replicated 1 time(s)
+FlipFlop blibrary/count_4 has been replicated 2 time(s)
+FlipFlop blibrary/count_6 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -443,8 +626,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 91
- Flip-Flops                                            : 91
+# Registers                                            : 137
+ Flip-Flops                                            : 137
 
 =========================================================================
 
@@ -467,27 +650,29 @@ Top Level Output File Name         : SoundGenerator.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 302
+# BELS                             : 610
 #      GND                         : 1
-#      INV                         : 1
-#      LUT1                        : 19
-#      LUT2                        : 52
-#      LUT3                        : 11
-#      LUT4                        : 4
-#      LUT5                        : 11
-#      LUT6                        : 78
-#      MUXCY                       : 67
-#      MUXF7                       : 1
+#      INV                         : 3
+#      LUT1                        : 18
+#      LUT2                        : 53
+#      LUT3                        : 35
+#      LUT4                        : 39
+#      LUT5                        : 90
+#      LUT6                        : 218
+#      MUXCY                       : 72
+#      MUXF7                       : 21
 #      VCC                         : 1
-#      XORCY                       : 56
-# FlipFlops/Latches                : 91
-#      FD                          : 2
-#      FDE                         : 26
-#      FDR                         : 63
+#      XORCY                       : 59
+# FlipFlops/Latches                : 137
+#      FD                          : 13
+#      FDE                         : 45
+#      FDR                         : 75
+#      FDRE                        : 3
+#      FDS                         : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 3
-#      IBUF                        : 1
+# IO Buffers                       : 5
+#      IBUF                        : 3
 #      OBUF                        : 2
 
 Device utilization summary:
@@ -497,20 +682,20 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              91  out of  18224     0%  
- Number of Slice LUTs:                  176  out of   9112     1%  
-    Number used as Logic:               176  out of   9112     1%  
+ Number of Slice Registers:             137  out of  18224     0%  
+ Number of Slice LUTs:                  456  out of   9112     5%  
+    Number used as Logic:               456  out of   9112     5%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    179
-   Number with an unused Flip Flop:      88  out of    179    49%  
-   Number with an unused LUT:             3  out of    179     1%  
-   Number of fully used LUT-FF pairs:    88  out of    179    49%  
-   Number of unique control sets:         7
+ Number of LUT Flip Flop pairs used:    470
+   Number with an unused Flip Flop:     333  out of    470    70%  
+   Number with an unused LUT:            14  out of    470     2%  
+   Number of fully used LUT-FF pairs:   123  out of    470    26%  
+   Number of unique control sets:        13
 
 IO Utilization: 
- Number of IOs:                           4
- Number of bonded IOBs:                   4  out of    232     1%  
+ Number of IOs:                           6
+ Number of bonded IOBs:                   6  out of    232     2%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
@@ -536,7 +721,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 91    |
+clk                                | BUFGP                  | 137   |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -547,8 +732,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 5.551ns (Maximum Frequency: 180.140MHz)
-   Minimum input arrival time before clock: 4.652ns
+   Minimum period: 8.097ns (Maximum Frequency: 123.507MHz)
+   Minimum input arrival time before clock: 5.201ns
    Maximum output required time after clock: 3.634ns
    Maximum combinational path delay: No path found
 
@@ -558,71 +743,53 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.551ns (frequency: 180.140MHz)
-  Total number of paths / destination ports: 49728 / 137
+  Clock period: 8.097ns (frequency: 123.507MHz)
+  Total number of paths / destination ports: 425364 / 206
 -------------------------------------------------------------------------
-Delay:               5.551ns (Levels of Logic = 27)
-  Source:            mlibrary/count_1 (FF)
-  Destination:       sgMelody/count_17 (FF)
+Delay:               8.097ns (Levels of Logic = 8)
+  Source:            mlibrary/count_7 (FF)
+  Destination:       sgMelody/sound (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: mlibrary/count_1 to sgMelody/count_17
+  Data Path: mlibrary/count_7 to sgMelody/sound
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             27   0.447   1.565  mlibrary/count_1 (mlibrary/count_1)
-     LUT6:I1->O            1   0.203   0.808  mlibrary_Mram__n009141 (ticksMelody<1>)
-     LUT6:I3->O            1   0.205   0.000  sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_lut<0> (sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<0> (sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<1> (sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<2> (sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<3> (sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<4> (sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<4>)
-     MUXCY:CI->O          20   0.019   1.093  sgMelody/Mcompar_count[17]_ticks[17]_equal_2_o_cy<5> (sgMelody/count[17]_ticks[17]_equal_2_o)
-     LUT2:I1->O            1   0.205   0.000  sgMelody/Mcount_count_lut<0> (sgMelody/Mcount_count_lut<0>)
-     MUXCY:S->O            1   0.172   0.000  sgMelody/Mcount_count_cy<0> (sgMelody/Mcount_count_cy<0>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<1> (sgMelody/Mcount_count_cy<1>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<2> (sgMelody/Mcount_count_cy<2>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<3> (sgMelody/Mcount_count_cy<3>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<4> (sgMelody/Mcount_count_cy<4>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<5> (sgMelody/Mcount_count_cy<5>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<6> (sgMelody/Mcount_count_cy<6>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<7> (sgMelody/Mcount_count_cy<7>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<8> (sgMelody/Mcount_count_cy<8>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<9> (sgMelody/Mcount_count_cy<9>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<10> (sgMelody/Mcount_count_cy<10>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<11> (sgMelody/Mcount_count_cy<11>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<12> (sgMelody/Mcount_count_cy<12>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<13> (sgMelody/Mcount_count_cy<13>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<14> (sgMelody/Mcount_count_cy<14>)
-     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcount_count_cy<15> (sgMelody/Mcount_count_cy<15>)
-     MUXCY:CI->O           0   0.019   0.000  sgMelody/Mcount_count_cy<16> (sgMelody/Mcount_count_cy<16>)
-     XORCY:CI->O           1   0.180   0.000  sgMelody/Mcount_count_xor<17> (sgMelody/Mcount_count17)
-     FDR:D                     0.102          sgMelody/count_17
+     FDE:C->Q             89   0.447   2.169  mlibrary/count_7 (mlibrary/count_7)
+     LUT6:I0->O            1   0.203   0.827  mlibrary_Mram__n053896113 (mlibrary_Mram__n053896112)
+     LUT6:I2->O            1   0.203   0.580  mlibrary_Mram__n053896116 (mlibrary_Mram__n053896115)
+     LUT5:I4->O            1   0.205   0.808  mlibrary_Mram__n053896117 (ticksMelody<13>)
+     LUT6:I3->O            1   0.205   0.000  sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_lut<4> (sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_lut<4>)
+     MUXCY:S->O            1   0.172   0.000  sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_cy<4> (sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_cy<5> (sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_cy<5>)
+     MUXCY:CI->O          22   0.019   1.133  sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_cy<6> (sgMelody/count[19]_ticks[19]_equal_2_o)
+     INV:I->O              1   0.206   0.579  sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_cy<6>_inv_INV_0 (sgMelody/Mcompar_count[19]_ticks[19]_equal_2_o_cy<6>_inv)
+     FDRE:CE                   0.322          sgMelody/sound
     ----------------------------------------
-    Total                      5.551ns (2.085ns logic, 3.466ns route)
-                                       (37.6% logic, 62.4% route)
+    Total                      8.097ns (2.001ns logic, 6.096ns route)
+                                       (24.7% logic, 75.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 87 / 87
+  Total number of paths / destination ports: 155 / 147
 -------------------------------------------------------------------------
-Offset:              4.652ns (Levels of Logic = 2)
+Offset:              5.201ns (Levels of Logic = 3)
   Source:            clr (PAD)
-  Destination:       pulseGen/count_2 (FF)
+  Destination:       mlibrary/count_8 (FF)
   Destination Clock: clk rising
 
-  Data Path: clr to pulseGen/count_2
+  Data Path: clr to mlibrary/count_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            58   1.222   1.705  clr_IBUF (clr_IBUF)
-     LUT2:I0->O           20   0.203   1.092  pulseGen/Mcount_count_val271 (pulseGen/Mcount_count_val)
-     FDR:R                     0.430          pulseGen/count_0
+     IBUF:I->O            94   1.222   1.838  clr_IBUF (clr_IBUF)
+     LUT5:I4->O            1   0.205   0.580  mlibrary/_n0025_inv1 (mlibrary/_n0025_inv1)
+     LUT5:I4->O            9   0.205   0.829  mlibrary/_n0025_inv3 (mlibrary/_n0025_inv)
+     FDE:CE                    0.322          mlibrary/count_0
     ----------------------------------------
-    Total                      4.652ns (1.855ns logic, 2.797ns route)
-                                       (39.9% logic, 60.1% route)
+    Total                      5.201ns (1.954ns logic, 3.247ns route)
+                                       (37.6% logic, 62.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -637,7 +804,7 @@ Offset:              3.634ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.447   0.616  sgMelody/sound (sgMelody/sound)
+     FDRE:C->Q             2   0.447   0.616  sgMelody/sound (sgMelody/sound)
      OBUF:I->O                 2.571          soundMelody_OBUF (soundMelody)
     ----------------------------------------
     Total                      3.634ns (3.018ns logic, 0.616ns route)
@@ -653,20 +820,20 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    5.551|         |         |         |
+clk            |    8.097|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.80 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 15.41 secs
  
 --> 
 
-Total memory usage is 259112 kilobytes
+Total memory usage is 264104 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   37 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
 Number of infos    :    3 (   0 filtered)
 

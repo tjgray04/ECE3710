@@ -18,19 +18,21 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module SoundGenerator( 
+module SoundGenerator#(parameter TICKBITS = 20)( 
 		input clk, clr,
+		input btnL,btnR,
 		output soundMelody,
 		output soundBass
     );
 
 //Wires
 wire [2:0] durationMelody;
-wire [17:0] ticksMelody;
+wire [TICKBITS-1:0] ticksMelody;
 wire [2:0] durationBass;
-wire [17:0] ticksBass;
-wire [1:0] writeData, soundSelect;
-wire [17:0] bass, laser, death;
+wire [2:0] durationDeath, durationLaser;
+wire [TICKBITS-1:0] ticksBass;
+wire [1:0] writeData, soundSelect, writeDataCPU;
+wire [TICKBITS-1:0] bass, laser, death, laserTicks, deathTicks, SFXticks;
 
 //Instantiate pulse generator
 pulse_generator pulseGen(.clk(clk), .clr(clr), .enable(enable));
@@ -56,14 +58,36 @@ bass_library blibrary(.clk(clk), .clr(clr), .nextNote(nextNoteBass), .duration(d
 								.ticks(bass));
 
 //TestSoundManipulator
-TestSoundManipulator tm(.clk(clk), .reset(clr), .writeEn(writeEn), .writeData(writeData));
+TestSoundManipulator tm(.clk(clk), .reset(clr), .writeEn(CPUwriteEn), .writeData(writeDataCPU), .btnL(btnL), .btnR(btnR));
+
+//SoundRegControlFSM
+SoundRegControlFSM srcRSM(.clk(clk), .reset(clr), .done(done), .CPUwriteEn(CPUwriteEn), .writeDataIN(writeDataCPU),
+									.writeEn(writeEn), .writeDataOUT(writeData));
+
+//SoundFX_FSM
+SoundFX_FSM sfxFSM(.clk(clk), .clr(clr), .enable(enable), .SFXended(SFXended), .durationLaser(durationLaser),
+						.durationDeath(durationDeath), .soundRegBits(soundSelect), .nextNoteLaser(nextNoteLaser),
+						.nextNoteDeath(nextNoteDeath), .done(done));
+						
+//LaserSFXLibrary
+LaserSFXLibrary laserLib(.clk(clk),.clr(clr),.nextNote(nextNoteLaser),.duration(durationLaser),
+								.ticks(laserTicks),.SFXended(SFXendedLaser));
+								
+//DeathSFXLibrary
+DeathSFXLibrary deathLib(.clk(clk),.clr(clr),.nextNote(nextNoteDeath),.duration(durationDeath),
+								.ticks(deathTicks),.SFXended(SFXendedDeath));
+
+assign SFXended = SFXendedLaser || SFXendedDeath;
+
+//SFXmux
+ticksMux tmux(.select(soundSelect[1]),.arg1(laserTicks), .arg2(deathTicks), .result(SFXticks));
 
 //SoundControllerReg
 SoundControllerReg scr(.clk(clk), .reset(clr), .writeEn(writeEn), .writeData(writeData),
 									.soundSelect(soundSelect));
 									
 //SoundMux
-SoundMux mux(.bass(bass), .laser(laser), .death(death), .select(soundSelect),
+SoundMux mux(.bass(bass), .sfx(SFXticks), .select(soundSelect[0]),
 					.bassSound(ticksBass));
 
 //Instantiate bass sound generator

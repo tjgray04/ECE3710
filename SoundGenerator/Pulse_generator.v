@@ -32,7 +32,7 @@ module pulse_generator(
  *	where Q is the duration of a quarter note in seconds.
  */
 
-parameter maxCount = 550000;
+parameter maxCount = 375000;	//This is for a tempo of 160 beats/min
 
 //Define a reg to hold the count
 reg [26:0]count;
@@ -51,7 +51,7 @@ always@(posedge clk)
 	   end
     else
       begin
-        count<=count+1;
+        count<=count+1'b1;
 	     enable<=0;
 	   end
   end
