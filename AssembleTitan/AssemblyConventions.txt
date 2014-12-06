@@ -1,33 +1,56 @@
-Assembly Conventions:
+ASSEMBLY CONVENTIONS:
 r0 - Zero Register
-r1 - Argument 1
-r2 - Argument 2
-r3 - Argument 3
-r4 - Argument 4
-r5
-r6
-r7
-r8
-r9
-r10
-r11
-r12
-r13
-r14
-r15
-r16
-r17
-r18
-r19
-r20
-r21
-r22
-r23
-r24
-r25
-r26
-r27
-r28
-r29
-r30
+
+r1 - Argument 1 - TEMPORARY REGISTER - glyph INDEX
+r2 - Argument 2 - TEMPORARY REGISTER - glyph LOCATION
+r3 - Argument 3 - TEMPORARY REGISTER
+r4 - Argument 4 - TEMPORARY REGISTER
+r5 - Argument 5 - TEMPORARY REGISTER
+r6 - Argument 6 - TEMPORARY REGISTER
+
+//DONT NEED THESE REGISTERS
+r7 - BLUE MAN glyph INDEX value (giBLUEMAN)
+r8 - RED MAN glyph INDEX value (giREDMAN)
+r9 - GREEN MAN glyph INDEX value (giGREENMAN)
+r10 - WHITE MAN glyph INDEX value (giWHITEMAN)
+r11 - BLUE MAN glyph LOCATION (glBLUEMAN)
+r12 - RED MAN glyph LOCATION (glREDMAN)
+r13 - GREEN MAN glyph LOCATION (glGREENMAN)
+r14 - WHITE MAN glyph LOCATION (glWHITEMAN)
+
+
+r15 - BLUE MAN CONTROLLER value
+r16 - RED MAN CONTROLLER value
+r17 - GREEN MAN CONTROLLER value
+r18 - WHITE MAN CONTROLLER value
+
+r19 - comparison value for GREEN MAN Controller
+r20 - comparison value for WHITE MAN Controller
+r21 - 
+
+r22 - Return 3
+r23 - Return 2
+r24 - Return 1
+
+//DONT NEED THESE REGISTERS
+r25 - Sound Generator Address
+r26 - Timer
+r27 - VGA Base Address (VGA = 16384)
+r28 - LED Address (LED = 40959)
+r29 - Controller Address (CTRLR = 49151)
+r30 - Stack Pointer
 r31 - Return Address
+
+
+TERMINOLOGY:
+Glyph INDEX - Value stored in Glyph MEMORY Location that indicates which glyph to look at in characterROM
+Glyph LOCATION - A value between 0-4799 representing the screen location of the glyph
+Glyph MEMORY Location - Value of (Glyph Location + VGA Base Address) where glyph is stored in characterRAM
+
+
+Functions:
+waitLoop();
+ctrlr2led();
+DrawGlyph(r1,r2);
+DrawBackground(r2);
+movement(r1,r2);

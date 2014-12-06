@@ -1,377 +1,362 @@
-//Global Variables
-gcon,controllerAddr,49151,	//Binary: 10_1_1_1111_1111_1111, This gets us into IO memory space
-gcon,LEDAddr,40959,			//Binary: 10_0_1_1111_1111_1111, This gets us into IO memory space for the LEDs
-gcon,VGABaseAddr,16384,		//Binary: 01_00_0000_0000_0000, This is the base address for the VGA
+//**************GLOBAL VARIABLES********************
+gcon,TIMER,50000,		//Initial wait timer value
 
-//Initialization
-addi,r3,r0,2279,			//Load initial block glyph position into r3
-addi,r4,r0,10000,			//Wait timer count in r4
-addi,r6,r0,VGABaseAddr,		//Load VGA base address into r6
-addi,r1,r0,controllerAddr,	//Load the controller address into r1
+gcon,VGA,16384,			//Binary: 01_00_0000_0000_0000, This is the base address for the VGA
+gcon,LED,40959,			//Binary: 10_0_1_1111_1111_1111, This is IO memory space for the LEDs
+gcon,CTRLR,49151,		//Binary: 10_1_1_1111_1111_1111, This is IO memory space for the Controller
 
-//LOAD THE WALL GLYPH AS THOUGH IT WERE A COMPLETE CHARACTER
+gcon,giBLUEMAN,1,		//Glyph INDEX value of BLUE MAN
+gcon,giREDMAN,9,		//Glyph INDEX value of RED MAN
+gcon,giGREENMAN,17,		//Glyph INDEX value of GREEN MAN
+gcon,giWHITEMAN,25,		//Glyph INDEX value of WHITE MAN
+
+gcon,glBLUEMAN,81,		//Initial glyph LOCATION of the BLUE MAN
+gcon,glREDMAN,157,		//Initial glyph LOCATION of the RED MAN
+gcon,glGREENMAN,4401,	//Initial glyph LOCATION of the GREEN MAN
+gcon,glWHITEMAN,4477,	//Initial glyph LOCATION of the WHITE MAN
+
+//**************INITIALIZATION************************
+init:
+//LOAD THE GLYPH CHARACTERS TO THE SCREEN
+//BLUE MAN
+addi,r1,r0,giBLUEMAN,	//Parameter r1: takes in value of glyph INDEX - r7 for BLUE MAN
+addi,r2,r0,glBLUEMAN,	//Parameter r2: takes in value of glyph LOCATION - r11 for BLUE MAN
+jal,DrawGlyph:,			//Draw the RED MAN first
+//RED MAN
+addi,r1,r0,giREDMAN,	//Parameter r1: takes in value of glyph INDEX - r8 for RED MAN
+addi,r2,r0,glREDMAN,	//Parameter r2: takes in value of glyph LOCATION - r12 for RED MAN
+jal,DrawGlyph:,			//Draw the BLUE MAN second
+//GREEN MAN
+addi,r1,r0,giGREENMAN,	//Parameter r1: takes in value of glyph INDEX - r9 for GREEN MAN
+addi,r2,r0,glGREENMAN,	//Parameter r2: takes in value of glyph LOCATION - r13 for GREEN MAN
+jal,DrawGlyph:,			//Draw the GREEN MAN third
+//WHITE MAN
+addi,r1,r0,giWHITEMAN,	//Parameter r1: takes in value of glyph INDEX - r10 for WHITE MAN
+addi,r2,r0,glWHITEMAN,	//Parameter r2: takes in value of glyph LOCATION - r14 for WHITE MAN
+jal,DrawGlyph:,			//Draw the WHITE MAN last
+
+//CALL THE WAIT LOOP DURING INITIALIZATION
+jal,waitLoop:,			//jump and link to the wait loop
+
+//*************************************MAIN FUNCTION***********************************************
+// This function is the main game loop
+// PARAMETERS:
+// LOCAL VARIABLES:
+// GLOBAL VARIABLES:
+// RETURN VARIABLES:	
+
+main:
+//LOAD THE CONTROLLER VALUE TO LEDS
+jal,ctrlr2led:,			//jump and link to CTRLR 2 LED function
+						//return register r24 contains value from controller
+
+//CHECK FOR MOVEMENT
+
+//BLUE MAN   0000_0000__0000_0000__0000_0000__1111_1111 = 255
+andi,r15,r24,255,		//Collect bits relating only to BLUE MAN Controller
+
+//movement PARAMETERS:	r1 - controller value
+// 						r2 - glyph LOCATION of current glyph	
+addi,r1,r15,0,			//Put the controller value into the argument register r1
+addi,r2,r0,glBLUEMAN,	//Put the current glyph LOCATION into argument register r2
+jal,movement:,			//Jump to the movement function
+
+//RED MAN   0000_0000__0000_0000__1111_1111__0000_0000 = 65280
+andi,r16,r24,65280,		//Collect bits relating only to BLUE MAN Controller
+
+//movement PARAMETERS:	r1 - controller value
+//		 				r2 - glyph LOCATION of current glyph	
+addi,r1,r16,0,			//Put the controller value into the argument register r1
+addi,r2,r0,glBLUEMAN,	//Put the current glyph LOCATION into argument register r2
+jal,movement:,			//Jump to the movement function
+
+//GREEN MAN   0000_0000__1111_1111__0000_0000__0000_0000 = 16711680
+andi,r17,r24,65280,		//Collect bits relating only to BLUE MAN Controller
+
+//movement PARAMETERS:	r1 - controller value
+//		 				r2 - glyph LOCATION of current glyph	
+addi,r1,r17,0,			//Put the controller value into the argument register r1
+addi,r2,r0,glBLUEMAN,	//Put the current glyph LOCATION into argument register r2
+jal,movement:,			//Jump to the movement function
+
+//WHITE MAN   1111_1111__0000_0000__0000_0000__0000_0000 = 4278190080
+andi,r18,r24,65280,		//Collect bits relating only to BLUE MAN Controller
+
+//movement PARAMETERS:	r1 - controller value
+//		 				r2 - glyph LOCATION of current glyph	
+addi,r1,r18,0,			//Put the controller value into the argument register r1
+addi,r2,r0,glBLUEMAN,	//Put the current glyph LOCATION into argument register r2
+jal,movement:,			//Jump to the movement function
+
+jal,waitLoop:,			//Jump to the wait loop
+j,main:,				//Loop back to main
+
+//**************WAIT LOOP FUNCTION**********************
+// This function will do nothing for the duration of the timer
+// PARAMETERS:
+// LOCAL VARIABLES:		r1 - timer decrement register 
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:	
+
+waitLoop:
+addi,r1,r0,TIMER,		//store the timer into a temporary register
+
+waitLoop2:
+addi,r1,r1,-1,			//decrement the timer
+cmpi,x,r1,0,			//check to see if timer is done
+bne,waitLoop2:,			//stay in timer until done
+
+jra,					//jump to the Return Address of where the function was called
+
+//**************CONTROLLER 2 LED FUNCTION**********************
+// This function will load the value from the Controller onto the LEDs
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	CTRLR - Memory location of the Controller
+//						LED - Memory location of the LED's
+// RETURN VARIABLES:	r24 - Return the controller value
+ 
+ctrlr2led:
+ld,r24,r0,CTRLR,		//Load the Controller value into r23 to return
+str,r24,r0,LED,			//Store the value to the LEDs
+
+jra,					//jump to the Return Address of where the function was called
+
+//*******************DRAW GLYPH FUNCTION*******************
+// This function will draw a glyph character
+// PARAMETERS: 			r1 - glyph INDEX to store
+// 						r2 - glyph LOCATION to store into
+// LOCAL VARIABLES: 	r3 - glyph MEMORY location to store into
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:	
+
+DrawGlyph:
 //TOP LEFT HEAD
-addi,r12,r0,33,			//load a wall glyph into r5
-add,r9,r3,r6,			//r9 contains the current glyph location address - middle of screen
-str,r12,r9,0,			//store the wall glyph into the current location
+//LINE 136 DOESN'T HAPPEN BECAUSE ASSEMBLER THINKS DrawGlyph starts with str - jumps one line too far
+addi,r3,r2,VGA,			//r3 contains the glyph MEMORY location
+str,r1,r3,0,			//store the glyph INDEX into the glyph MEMORY location
+
 //TOP RIGHT HEAD
-//addi,r12,r12,1,			//get the next glyph - top right head
-addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-str,r12,r9,0,			//store the top right glyph
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
 //BOTTOM LEFT HEAD
-//addi,r12,r12,1,			//get the next glyph - bottom left head
-addi,r9,r9,79,			//next glyph location in down one line and to the left one
-str,r12,r9,0,			//store the bottom left head.
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+s	tr,r1,r3,0,			//store the bottom left head.
+
 //BOTTOM RIGHT HEAD
-//addi,r12,r12,1,			//get the next glyph - bottom right head
-addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-str,r12,r9,0,			//store the bottom right glyph
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
 //LEFT ARM
-//addi,r12,r12,1,			//get the next glyph - left arm
-addi,r9,r9,79,			//next glyph location in down one line and to the left one
-str,r12,r9,0,			//store the left arm
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+str,r1,r3,0,			//store the bottom left head.
+
 //RIGHT ARM
-//addi,r12,r12,1,			//get the next glyph - right arm
-addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-str,r12,r9,0,			//store the right arm
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
 //LEFT LEG
-//addi,r12,r12,1,			//get the next glyph - left leg
-addi,r9,r9,79,			//next glyph location in down one line and to the left one
-str,r12,r9,0,			//store the left leg
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+str,r1,r3,0,			//store the bottom left head.
+
 //RIGHT LEG
-//addi,r12,r12,1,			//get the next glyph - right leg
-addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-str,r12,r9,0,			//store the right leg
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
 
-//INITIALIZE A GLYPH CHARACTER TO THE SCREEN
-//loadGlyph:
-//RED MAN TOP LEFT HEAD
-//addi,r12,r0,9,			//Begin with the top left glyph of the red character
-//str,r12,r9,0,			//store the top left glyph
-//RED MAN TOP RIGHT HEAD
-//addi,r12,r12,1,			//get the next glyph - top right head
-//addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-//str,r12,r9,0,			//store the top right glyph
-//RED MAN BOTTOM LEFT HEAD
-//addi,r12,r12,1,			//get the next glyph - bottom left head
-//addi,r9,r9,79,			//next glyph location in down one line and to the left one
-//str,r12,r9,0,			//store the bottom left head.
-//RED MAN BOTTOM RIGHT HEAD
-//addi,r12,r12,1,			//get the next glyph - bottom right head
-//addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-//str,r12,r9,0,			//store the bottom right glyph
-//RED MAN LEFT ARM
-//addi,r12,r12,1,			//get the next glyph - left arm
-//addi,r9,r9,79,			//next glyph location in down one line and to the left one
-//str,r12,r9,0,			//store the left arm
-//RED MAN RIGHT ARM
-//addi,r12,r12,1,			//get the next glyph - right arm
-//addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-//str,r12,r9,0,			//store the right arm
-//RED MAN LEFT LEG
-//addi,r12,r12,1,			//get the next glyph - left leg
-//addi,r9,r9,79,			//next glyph location in down one line and to the left one
-//str,r12,r9,0,			//store the left leg
-//RED MAN RIGHT LEG
-//addi,r12,r12,1,			//get the next glyph - right leg
-//addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-//str,r12,r9,0,			//store the right leg
+jra,					//jump to the Return Address of where the function was called
 
-jal,end:,
+//******************DRAW BACKGROUND FUNCTION*********************
+// This function will draw a glyph character
+// PARAMETERS: 			r2 - glyph LOCATION to write over
+// LOCAL VARIABLES: 	r3 - glyph MEMORY location to write over
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:	
 
-delay:
-addi,r4,r4,-1
-cmpi,x,r4,0
-bne,delay:
-addi,r4,r0,100000
-
-//LED Testing Loop
-loop:
-ld,r2,r1,0,				//Load the controller value into r2
-str,r2,r0,LEDAddr,		//Store the value to the LEDs
-
-//Check for movement
-//Right			xxxx0001
-//Left			xxxx0010
-//Down			xxxx0100
-//Up			xxxx1000
-//Up-Right		xxxx1001
-//UP-Left		xxxx1010
-//Down-Right	xxxx0101
-//Down-Left		xxxx0110
-
-//Check Directions that are pressed. If so, check if the glyph is OK to move. Then move it.
-andi,r11,r2,15,		//Put only the bits indicating direction into r5
-
-//CHECK RIGHT MOVEMENT
-checkR:
-andi,r5,r11,1,		//Get right directional value
-cmpi,x,r5,1,		//Check if direction pressed is right
-bne,checkL:,		//Check next direction if check fails
-//NEW CODE TO CHECK RIGHT MOVEMENT FOR AN ENTIRE GLYPH
-//check top right head
-addi,r7,r3,2,		//Put the glyph location we are trying to move to into r7 - top right head
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-//check bottom right head
-addi,r7,r3,82,		//Put the glyph location we are trying to move to into r7 - bottom right head
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-//check right arm
-addi,r7,r3,162,		//Put the glyph location we are trying to move to into r7 - right arm
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-//check right leg
-addi,r7,r3,242,		//Put the glyph location we are trying to move to into r7 - right leg
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-
-//Set the old position to be the background glyph (glyph 0) first
+DrawBackground:
 //TOP LEFT HEAD
-add,r9,r3,r6,		//r9 contains the current glyph location address
-str,r0,r9,0,        //Sets the old position to be the background
+addi,r3,r2,VGA,			//r3 contains the current glyph location address
+str,r0,r3,0,        	//Sets the old position to be the background
 //TOP RIGHT HEAD
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+addi,r3,r3,1,       	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
 //BOTTOM LEFT HEAD
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+addi,r3,r3,79,      	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
 //BOTTOM RIGHT HEAD
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+addi,r3,r3,1,       	//go to the next glyph location
+str,r0,r3,0,			/set the old position to be the background
 //LEFT ARM
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+addi,r3,r3,79,      	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
 //RIGHT ARM
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+addi,r3,r3,1,       	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
 //LEFT LEG
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+addi,r3,r3,79,      	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
 //RIGHT LEG
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+addi,r3,r3,1,       	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
 
-//CALL THE GLYPH FUNCTION TO DRAW THE GLYPH TO THE NEW LOCATION
-addi,r3,r3,1,		//make sure the r3 contains the location to move to (+1 GLYPH TO RIGHT)
-j,glyph:,			//call the glyph function to draw the character
+jra,					//jump to the Return Address of where the function was called
 
-//CHECK LEFT MOVEMENT
+//***********************MOVEMENT FUNCTION********************
+// This function will check the movement of a glyph character
+// PARAMETERS: 			r1 - controller value
+// 						r2 - glyph LOCATION of current glyph
+// LOCAL VARIABLES: 	r3 - directional value (result of controller value AND direction being checked)
+//						r4 - glyph MEMORY location
+//						r5 - glyph INDEX value of position to MOVE INTO
+// GLOBAL VARIABLES:	r27 - VGA Base Address
+// RETURN VARIABLES:
+
+movement:
+//********CHECK RIGHT MOVEMENT*********
+andi,r3,r1,1,				//Get the right directional value
+cmpi,x,r3,1,				//Check if direction pressed is RIGHT
+bne,checkL:,				//Check LEFT direction if fails
+//Check TOP RIGHT HEAD
+addi,r4,r2,2,				//Check location next to top right head (2 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check BOTTOM RIGHT HEAD
+addi,r4,r2,82,				//Check location next to bottom right head (82 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT ARM
+addi,r4,r2,162,				//Check location next to right arm (162 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT LEG
+addi,r4,r2,242,				//Check location next to right leg (242 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If RIGHT movement is valid, update the position
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,1,				//Update glyph LOCATION to store to
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+//*********CHECK LEFT MOVEMENT************
 checkL:
-andi,r5,r11,2,		//Get the left directional value
-cmpi,x,r5,2,		//Check if direction pressed is right
-bne,checkD:,		//Check next direction if check fails
-//NEW CODE TO CHECK LEFT MOVEMENT FOR AN ENTIRE GLYPH
-//check top left head
-addi,r7,r3,-1,		//Put the glyph location we are trying to move to into r7 - top left head
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-//check bottom left head
-addi,r7,r3,79,		//Put the glyph location we are trying to move to into r7 - bottom left head
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-//check left arm
-addi,r7,r3,159,		//Put the glyph location we are trying to move to into r7 - left arm
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-//check left leg
-addi,r7,r3,239,		//Put the glyph location we are trying to move to into r7 - left leg
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
+andi,r3,r1,2,				//Get the left directional value
+cmpi,x,r3,2,				//Check if direction pressed is LEFT
+bne,checkD:,				//Check DOWN direction if fails
+//Check TOP LEFT HEAD
+addi,r4,r2,-1,				//Check location next to top left head (-1 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check BOTTOM LEFT HEAD
+addi,r4,r2,79,				//Check location next to bottom left head (79 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check LEFT ARM
+addi,r4,r2,159,				//Check location next to left arm (159 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check LEFT LEG
+addi,r4,r2,239,				//Check location next to left leg (239 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
 
-//Set the old position to be the background glyph (glyph 0) first
-//TOP LEFT HEAD
-add,r9,r3,r6,		//r9 contains the current glyph location address
-str,r0,r9,0,        //Sets the old position to be the background
-//TOP RIGHT HEAD
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//BOTTOM LEFT HEAD
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//BOTTOM RIGHT HEAD
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//LEFT ARM
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//RIGHT ARM
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//LEFT LEG
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//RIGHT LEG
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+//If LEFT movement is valid, update the position
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
 
-//call the glyph function to draw the glyph to the new location
-addi,r3,r3,-1,		//make sure the r3 contains the location to move to (-1 GLYPH TO LEFT)
-j,glyph:,			//call the glyph function to draw the character
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,-1,				//Update glyph LOCATION to store to 
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
 
-//CHECK DOWN MOVEMENT
+//**********CHECK DOWN MOVEMENT************
 checkD:
-andi,r5,r11,4,		//Get the left directional value
-cmpi,x,r5,4,		//Check if direction pressed is right
-bne,checkU:,		//Check next direction if check fails
-//NEW CODE TO CHECK DOWN MOVEMENT FOR AN ENTIRE GLYPH
-//check left leg
-addi,r7,r3,320,		//Put the glyph location we are trying to move to into r7 - left leg
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-//check right leg
-addi,r7,r3,321,		//Put the glyph location we are trying to move to into r7 - right leg
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
+andi,r3,r1,4,				//Get the down directional value
+cmpi,x,r3,4,				//Check if direction pressed is DOWN
+bne,checkU:,				//Check UP direction if fails
+//Check LEFT LEG
+addi,r4,r2,320,				//Check location next to left leg (320 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT LEG
+addi,r4,r2,321,				//Check location next to right leg (321 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
 
-//Set the old position to be the background glyph (glyph 0) first
-//TOP LEFT HEAD
-add,r9,r3,r6,		//r9 contains the current glyph location address
-str,r0,r9,0,        //Sets the old position to be the background
-//TOP RIGHT HEAD
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//BOTTOM LEFT HEAD
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//BOTTOM RIGHT HEAD
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//LEFT ARM
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//RIGHT ARM
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//LEFT LEG
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//RIGHT LEG
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+//If DOWN movement is valid, update the position
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
 
-//call the glyph function to draw the glyph to the new location
-addi,r3,r3,80,		//make sure the r3 contains the location to move to
-j,glyph:,			//call the glyph function to draw the character
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,80,				//Update glyph LOCATION to store to 
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
 
-//CHECK UP MOVEMENT
+//**********CHECK UP MOVEMENT************
 checkU:
-andi,r5,r11,8,		//Get the left directional value
-cmpi,x,r5,8,		//Check if direction pressed is right
-bne,checkUR:,		//Check next direction if check fails
-//NEW CODE TO CHECK UP MOVEMENT FOR AN ENTIRE GLYPH
-//check top left head
-addi,r7,r3,-80,		//Put the glyph location we are trying to move to into r7 - top left head
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
-//check top right head
-addi,r7,r3,-79,		//Put the glyph location we are trying to move to into r7 - top right head
-add,r7,r7,r6,		//Put the address to read from/write to the VGA into r7
-ld,r8,r7,0,			//Load the glyph character of the glyph location we are trying to move to into r8
-cmpi,x,r8,0,		//See if the location is valid, 0 represents the background glyph
-bne,wait:,			//Go to wait if location is invalid
+andi,r3,r1,8,				//Get the up directional value
+cmpi,x,r3,8,				//Check if direction pressed is UP
+bne,endMovement:,			//Branch to the end if fails
+//Check TOP LEFT HEAD
+addi,r4,r2,320,				//Check location next to top left head (-80 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check TOP RIGHT HEAD
+addi,r4,r2,321,				//Check location next to top right head (-79 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
 
-//Set the old position to be the background glyph (glyph 0) first
-//TOP LEFT HEAD
-add,r9,r3,r6,		//r9 contains the current glyph location address
-str,r0,r9,0,        //Sets the old position to be the background
-//TOP RIGHT HEAD
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//BOTTOM LEFT HEAD
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//BOTTOM RIGHT HEAD
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//LEFT ARM
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//RIGHT ARM
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//LEFT LEG
-addi,r9,r9,79,      //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
-//RIGHT LEG
-addi,r9,r9,1,       //go to the next glyph location
-str,r0,r9,0,		//set the old position to be the background
+//If DOWN movement is valid, update the position
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
 
-//call the glyph function to draw the glyph to the new location
-addi,r3,r3,-80,		//make sure the r3 contains the location to move to
-j,glyph:,			//call the glyph function to draw the character
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,-80,				//Update glyph LOCATION to store to 
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
 
-checkUR:
-//checkUL:
-//checkDR:
-//checkDL:
-
-//Wait loop
-wait:
-addi,r4,r4,-1
-cmp,x,r4,r0
-bne,wait:
-addi,r4,r0,100000
-j,loop:
-
-// This function will draw a glyph character - CALCULATIONS BASED ON r3
-glyph:
-//TOP LEFT HEAD
-addi,r12,r0,33,			//load a wall glyph into r5
-add,r9,r3,r6,			//r9 contains the current glyph location address - middle of screen
-str,r12,r9,0,			//store the wall glyph into the current location
-//TOP RIGHT HEAD
-//addi,r12,r12,1,			//get the next glyph - top right head
-addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-str,r12,r9,0,			//store the top right glyph
-//BOTTOM LEFT HEAD
-//addi,r12,r12,1,			//get the next glyph - bottom left head
-addi,r9,r9,79,			//next glyph location in down one line and to the left one
-str,r12,r9,0,			//store the bottom left head.
-//BOTTOM RIGHT HEAD
-//addi,r12,r12,1,			//get the next glyph - bottom right head
-addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-str,r12,r9,0,			//store the bottom right glyph
-//LEFT ARM
-//addi,r12,r12,1,			//get the next glyph - left arm
-addi,r9,r9,79,			//next glyph location in down one line and to the left one
-str,r12,r9,0,			//store the left arm
-//RIGHT ARM
-//addi,r12,r12,1,			//get the next glyph - right arm
-addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-str,r12,r9,0,			//store the right arm
-//LEFT LEG
-//addi,r12,r12,1,			//get the next glyph - left leg
-addi,r9,r9,79,			//next glyph location in down one line and to the left one
-str,r12,r9,0,			//store the left leg
-//RIGHT LEG
-//addi,r12,r12,1,			//get the next glyph - right leg
-addi,r9,r9,1,			//draw in the next glyph location - one glyph to the right
-str,r12,r9,0,			//store the right leg
-
-j,wait:,					//jump back to the wait loop
-
-end:
-jRA,						//jump to the return address
+endMovement:
+jra,						//jump to the Return Address of where the function was called

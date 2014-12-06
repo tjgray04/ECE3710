@@ -50,7 +50,7 @@ LAB0:    xsi_set_current_line(35, ng0);
     t4 = ((char*)((ng4)));
     memset(t7, 0, 8);
     xsi_vlog_signed_minus(t7, 32, t6, 32, t4, 32);
-    xsi_vlogfile_readmemh(ng1, 0, t1, 1, *((unsigned int *)t2), 1, *((unsigned int *)t7));
+    xsi_vlogfile_readmemb(ng1, 0, t1, 1, *((unsigned int *)t2), 1, *((unsigned int *)t7));
 
 LAB1:    return;
 }

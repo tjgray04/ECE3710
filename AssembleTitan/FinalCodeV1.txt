@@ -1,0 +1,228 @@
+//**************GLOBAL VARIABLES********************
+gcon,TIMER,50000,		//Initial wait timer value
+
+gcon,VGA,16384,			//Binary: 01_00_0000_0000_0000, This is the base address for the VGA
+gcon,LED,40959,			//Binary: 10_0_1_1111_1111_1111, This is IO memory space for the LEDs
+gcon,CTRLR,49151,		//Binary: 10_1_1_1111_1111_1111, This is IO memory space for the Controller
+
+gcon,giBLUEMAN,1,		//Glyph INDEX value of BLUE MAN
+gcon,giREDMAN,9,		//Glyph INDEX value of RED MAN
+gcon,giGREENMAN,17,		//Glyph INDEX value of GREEN MAN
+gcon,giWHITEMAN,25,		//Glyph INDEX value of WHITE MAN
+
+gcon,glBLUEMAN,81,		//Initial glyph LOCATION of the BLUE MAN
+gcon,glREDMAN,157,		//Initial glyph LOCATION of the RED MAN
+gcon,glGREENMAN,4401,	//Initial glyph LOCATION of the GREEN MAN
+gcon,glWHITEMAN,4477,	//Initial glyph LOCATION of the WHITE MAN
+
+//**************INITIALIZATION************************
+init:
+//Load timer value
+addi,r26,r0,TIMER,		//Wait timer count in r26
+
+//Load memory address values
+addi,r27,r0,VGA,		//The VGA Base Address into r27
+addi,r28,r0,LED,		//The LED Address into r28
+addi,r29,r0,CTRLR,		//The Controller Address into r29
+
+//Load glyph index values
+addi,r7,r0,giBLUEMAN,		//The initial glyph INDEX of the BLUE MAN
+addi,r8,r0,giREDMAN,		//The initial glyph INDEX of the RED MAN
+addi,r9,r0,giGREENMAN,		//The initial glyph INDEX of the RED MAN
+addi,r10,r0,ilWHITEMAN,		//The initial glyph INDEX of the BLUE MAN
+
+//Load glyph location values
+addi,r11,r0,glBLUEMAN,		//The initial glyph LOCATION of the BLUE MAN
+addi,r12,r0,glREDMAN,		//The initial glyph LOCATION of the RED MAN
+addi,r13,r0,glGREENMAN,		//The initial glyph LOCATION of the RED MAN
+addi,r14,r0,glWHITEMAN,		//The initial glyph LOCATION of the BLUE MAN
+
+//LOAD THE GLYPH CHARACTERS TO THE SCREEN
+//BLUE MAN
+addi,r1,r7,0,			//Parameter r1: takes in value of glyph INDEX - r7 for BLUE MAN
+addi,r2,r11,0,			//Parameter r2: takes in value of glyph LOCATION - r11 for BLUE MAN
+jal,DrawGlyph:,			//Draw the RED MAN first
+//RED MAN
+addi,r1,r8,0,			//Parameter r1: takes in value of glyph INDEX - r8 for RED MAN
+addi,r2,r12,0,			//Parameter r2: takes in value of glyph LOCATION - r12 for RED MAN
+jal,DrawGlyph:,			//Draw the BLUE MAN second
+//GREEN MAN
+addi,r1,r9,0,			//Parameter r1: takes in value of glyph INDEX - r9 for GREEN MAN
+addi,r2,r13,0,			//Parameter r2: takes in value of glyph LOCATION - r13 for GREEN MAN
+jal,DrawGlyph:,			//Draw the GREEN MAN third
+//WHITE MAN
+addi,r1,r10,0,			//Parameter r1: takes in value of glyph INDEX - r10 for WHITE MAN
+addi,r2,r14,0,			//Parameter r2: takes in value of glyph LOCATION - r14 for WHITE MAN
+jal,DrawGlyph:,			//Draw the WHITE MAN last
+
+//CALL THE WAIT LOOP DURING INITIALIZATION
+jal,waitLoop:,			//jump and link to the wait loop
+
+//***************MAIN FUNCTION*******************
+// This function is the main game loop
+// PARAMETERS:
+// LOCAL VARIABLES:
+// GLOBAL VARIABLES:
+// RETURN VARIABLES:	
+
+main:
+//LOAD THE CONTROLLER VALUE TO LEDS
+jal,ctrlr2led:,		//jump and link to CTRLR 2 LED function
+					//return register r24 contains value from controller
+
+//CHECK FOR MOVEMENT
+//BLUE MAN MOVEMENT
+andi,r15,r24,255,	//Collect bits relating only to BLUE MAN Controller
+addi,r1,r15,0,		//Put the controller value into the argument register
+jal,movement:,		//Jump to the movement function
+
+andi,r1,r15,1,		//get right directional value
+cmpi,x,r1,1,		//check if the direction pressed was to go right
+bne,BLUEMANleft:,
+jal,checkR:,
+//Check Left Movement
+jal,checkL:,
+//Check Down Movement
+jal,checkD:,
+//Check Up Movement
+jal,checkU:,
+
+
+
+
+//**************WAIT LOOP FUNCTION**********************
+// This function will do nothing for the duration of the timer
+// PARAMETERS:
+// LOCAL VARIABLES:		r1 - timer decrement register 
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:	
+
+waitLoop:
+addi,r1,r0,TIMER,		//store the timer into a temporary register
+
+waitLoop2:
+addi,r1,r1,-1,		//decrement the timer
+cmpi,x,r1,0,		//check to see if timer is done
+bne,waitLoop2:,		//stay in timer until done
+
+jra,				//jump to the Return Address of where the function was called
+
+//**************LED LOOP FUNCTION**********************
+// This function will load the value from the Controller onto the LEDs
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	CTRLR - Memory location of the Controller
+//						LED - Memory location of the LED's
+// RETURN VARIABLES:	r24 - Return the controller value
+ 
+ctrlr2led:
+ld,r24,r0,CTRLR,	//Load the Controller value into r23 to return
+str,r24,r0,LED,		//Store the value to the LEDs
+
+jra,				//jump to the Return Address of where the function was called
+
+//***************DRAW GLYPH FUNCTION*******************
+// This function will draw a glyph character
+// PARAMETERS: 			r1 - glyph INDEX
+// 						r2 - glyph LOCATION
+// LOCAL VARIABLES: 	r3 - glyph MEMORY location
+// GLOBAL VARIABLES:	r27 - VGA Base Address
+// RETURN VARIABLES:	
+
+DrawGlyph:
+//TOP LEFT HEAD
+add,r3,r2,r27,			//r3 contains the glyph MEMORY location
+str,r1,r3,0,			//store the glyph INDEX into the glyph MEMORY location
+
+//TOP RIGHT HEAD
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
+//BOTTOM LEFT HEAD
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+str,r1,r3,0,			//store the bottom left head.
+
+//BOTTOM RIGHT HEAD
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
+//LEFT ARM
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+str,r1,r3,0,			//store the bottom left head.
+
+//RIGHT ARM
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
+//LEFT LEG
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+str,r1,r3,0,			//store the bottom left head.
+
+//RIGHT LEG
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
+jra,					//jump to the Return Address of where the function was called
+
+//***********************MOVEMENT FUNCTION********************
+// This function will check the movement of a glyph character
+// PARAMETERS: 			r1 - controller value
+// 						r2 - glyph LOCATION
+// LOCAL VARIABLES: 	r3 - directional value (result of controller value AND direction being checked)
+//						r4 - glyph MEMORY location
+//						r5 - glyph INDEX value
+// GLOBAL VARIABLES:	r27 - VGA Base Address
+// RETURN VARIABLES:
+
+checkR:
+andi,r3,r1,1,			//Get the right directional value
+cmpi,x,r3,1,			//Check if direction pressed is right
+bne,checkL:,			//Check left direction if fails
+//Check TOP RIGHT HEAD
+addi,r4,r2,2,			//Check location next to top right head (2 glyph locations away from current glyph LOCATION)
+add,r4,r4,
+
+jra,					//jump to the Return Address of where the function was called
+
+//***********************CHECK LEFT FUNCTION********************
+// This function will draw a glyph character
+// PARAMETERS: 			r1 - glyph INDEX
+// 						r2 - glyph LOCATION
+// LOCAL VARIABLES: 	r3 - glyph MEMORY location
+// GLOBAL VARIABLES:	r27 - VGA Base Address
+// RETURN VARIABLES:
+
+checkL:
+
+jra,					//jump to the Return Address of where the function was called
+
+//***********************CHECK DOWN FUNCTION********************
+// This function will draw a glyph character
+// PARAMETERS: 			r1 - glyph INDEX
+// 						r2 - glyph LOCATION
+// LOCAL VARIABLES: 	r3 - glyph MEMORY location
+// GLOBAL VARIABLES:	r27 - VGA Base Address
+// RETURN VARIABLES:
+
+checkD:
+
+jra,					//jump to the Return Address of where the function was called
+
+//***********************CHECK UP FUNCTION********************
+// This function will draw a glyph character
+// PARAMETERS: 			r1 - glyph INDEX
+// 						r2 - glyph LOCATION
+// LOCAL VARIABLES: 	r3 - glyph MEMORY location
+// GLOBAL VARIABLES:	r27 - VGA Base Address
+// RETURN VARIABLES:
+
+checkU:
+
+jra,					//jump to the Return Address of where the function was called

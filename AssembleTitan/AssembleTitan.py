@@ -113,7 +113,7 @@ class Assembler:
 				
 				#Handle the assembly of different types
 				if type == 'jtype':
-					print line
+					#print line
 					newline = self.insertConstants(constants,line,type)
 					binary = self.jtype(opCode,newline)
 					
