@@ -115,7 +115,7 @@ jra,					//jump to the Return Address of where the function was called
 // GLOBAL VARIABLES:	CTRLR - Memory location of the Controller
 //						LED - Memory location of the LED's
 // RETURN VARIABLES:	r24 - Return the controller value
- 
+// HAD SPACE
 ctrlr2led:
 ld,r24,r0,CTRLR,		//Load the Controller value into r23 to return
 str,r24,r0,LED,			//Store the value to the LEDs
@@ -144,7 +144,7 @@ str,r1,r3,0,			//store the top right glyph
 //BOTTOM LEFT HEAD
 addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
 addi,r3,r3,79,			//next glyph location is down one line and to the left one
-s	tr,r1,r3,0,			//store the bottom left head.
+str,r1,r3,0,			//store the bottom left head.
 
 //BOTTOM RIGHT HEAD
 addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
