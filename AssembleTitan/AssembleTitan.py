@@ -23,17 +23,20 @@ def jal(self):
 
 
 class Assembler:
-	def run(self):
+	def run(self,codeFile):
 		print "Run"
 
 		#Setup
 		configurationFile = "InstructionSet.csv"
-		codeFile = "AssemblyCode.csv"
+		if codeFile == 'none':
+			codeFile = "AssemblyCode.csv"
 		#codeFile = "C:\Users\Mark\Dropbox\Assembly Code\AssemblyCode.csv"
 		op = []
 		reg = {}
 
-
+		
+		print codeFile
+		
 		#Import CSV Configuration file
 		configuration = self.importCSVfile(configurationFile)
 
@@ -364,5 +367,9 @@ class Assembler:
 				
 				
 if __name__ == "__main__":
+	try:
+		CodeFile = sys.argv[1] 
+	except:
+		CodeFile = 'none'
 	Assembler = Assembler()
-	Assembler.run()
+	Assembler.run(CodeFile)
