@@ -23,6 +23,8 @@ addi,r1,r0,glBLUEMAN,	//Parameter r1: takes in value of glyph INDEX - r7 for BLU
 addi,r2,r0,glBLUEMAN,	//Parameter r2: takes in value of glyph LOCATION - r11 for BLUE MAN
 jal,DrawGlyph:,			//Draw the RED MAN first
 
+balsdfkj,giBLUEMAN
+b,giBLUEMAN
 //RED MAN
 addi,r1,r0,giREDMAN,	//Parameter r1: takes in value of glyph INDEX - r8 for RED MAN
 addi,r2,r0,glREDMAN,	//Parameter r2: takes in value of glyph LOCATION - r12 for RED MAN

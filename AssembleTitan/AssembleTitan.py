@@ -35,6 +35,7 @@ class Assembler:
 		op = []
 		reg = {}
 		
+		
 		#Import CSV Configuration file
 		configuration = self.importCSVfile(configurationFile)
 
@@ -49,7 +50,7 @@ class Assembler:
 		assemblyCode = self.importCSVfile(codeFile)
 
 		#Assemble assemble the code
-		assembledCode,labels,address = self.assembleCode(assemblyCode,op,reg)
+		assembledCode,labels,address,errors = self.assembleCode(assemblyCode,op,reg)
 
 
 		#Implement labels & Jumps
@@ -65,6 +66,15 @@ class Assembler:
 		#Write to CSV file
 		self.saveFile(codeFile,assembledCode)
 
+		#print errors and warrnings
+		print ''
+		for error in errors:
+			print error
+		
+		print ''
+		print ''
+		
+		
 	def saveFile(self,filename,assembledCode):
 		file = filename[:-4]+'.dat'
 		with open(file, 'wb') as f:
@@ -83,11 +93,13 @@ class Assembler:
 		address = {}
 		constants = {}
 		assembledCode = []
+		errors = []
 		PC = 0
 
 		for line in assemblyCode:
 			binary = ''
 			opCode = ''
+			noOpCode = True
 			func = ''
 			type = ''
 			
@@ -105,6 +117,7 @@ class Assembler:
 				#Determine the type,opCode,and function code
 				for code in op:
 					if code[1] == line[0]:
+						noOpCode = False
 						opCode = code[2]
 						type = code[0]
 						if type == 'rtype':
@@ -112,21 +125,27 @@ class Assembler:
 						break	
 				
 				
+				#Record Op Code Errors
+				if noOpCode == True:
+					errors.append("******* PC = "+str(PC)+" does not have a valid op Code *******")
+					binary = ''
 				#Handle the assembly of different types
-				if type == 'jtype':
-					#print line
+				elif type == 'jtype':
 					newline = self.insertConstants(constants,line,type)
 					binary = self.jtype(opCode,newline)
 					
 					
 				elif type == 'itype':
-					if opCode == '0110':
-						newline = self.jRA()# handle jra separately
-					#elif opCode == '1111':
-					#	newline = self.jal() #take care of jal in the assembler
+					if line[0] == 'b':
+						errors.append('******* PC = '+str(PC)+' has the invalid opcode "b" use "j" instead *******')
 					else:
-						newline = self.insertConstants(constants,line,type)
-					binary = self.iType(opCode,newline,reg)
+						if opCode == '0110':
+							newline = self.jRA()# handle jra separately
+						#elif opCode == '1111':
+						#	newline = self.jal() #take care of jal in the assembler
+						else:
+							newline = self.insertConstants(constants,line,type)
+						binary = self.iType(opCode,newline,reg)
 					
 				elif type == 'rtype':
 					binary = self.rType(opCode,func,line,reg)
@@ -144,7 +163,7 @@ class Assembler:
 				#increment the Program Counter	
 				PC+=1
 
-		return assembledCode,labels,address
+		return assembledCode,labels,address,errors
 
 	def jRA(self):
 		newline = ['jra','r0','r31','0']
