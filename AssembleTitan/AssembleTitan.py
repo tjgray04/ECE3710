@@ -3,6 +3,7 @@
 
 import csv
 import math
+import sys
 
 '''
 4  5   5   5    9    4
@@ -367,9 +368,10 @@ class Assembler:
 				
 				
 if __name__ == "__main__":
-	try:
-		CodeFile = sys.argv[1] 
-	except:
-		CodeFile = 'none'
+	#try:
+	CodeFile = str(sys.argv[1]) 
+	#except:
+	#	CodeFile = 'none'
+	print CodeFile
 	Assembler = Assembler()
 	Assembler.run(CodeFile)

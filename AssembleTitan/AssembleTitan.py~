@@ -3,35 +3,44 @@
 
 import csv
 import math
+import sys
 
 '''
-        4  5   5   5    9    4
+4  5   5   5    9    4
 R-Type[Op][Rd][Rs][Rt][Imm][Func]
 
-       4   5   5       18
+4   5   5       18
 I-Type[Op][Rd][Rs][    Imm      ]
 
-       4            28
+4            28
 J-Type[Op][                     ]
+
+
+def jal(self):
+	newline = ['jal','r31','r0','0']
+	return newline
 '''
 
 
 
 class Assembler:
-	def run(self):
+	def run(self,codeFile):
 		print "Run"
-		
+
 		#Setup
 		configurationFile = "InstructionSet.csv"
-		codeFile = "AssemblyCode.csv"
+		if codeFile == 'none':
+			codeFile = "AssemblyCode.csv"
+		#codeFile = "C:\Users\Mark\Dropbox\Assembly Code\AssemblyCode.csv"
 		op = []
 		reg = {}
+
 		
-		
+		print codeFile
 		
 		#Import CSV Configuration file
 		configuration = self.importCSVfile(configurationFile)
-		
+
 		#Break Down the configuration 
 		for line in configuration:
 			if line[0] == 'op':
@@ -41,33 +50,33 @@ class Assembler:
 				
 		#Import Assembly.csv file
 		assemblyCode = self.importCSVfile(codeFile)
-		
+
 		#Assemble assemble the code
 		assembledCode,labels,address = self.assembleCode(assemblyCode,op,reg)
 
-		
+
 		#Implement labels & Jumps
 		assembledCode = self.insertLabels(assembledCode,labels,address)
-		
-		
+
+
 		print ''
 		for inst in assembledCode:
 			print inst
 
 		#Implement branches
-		
+
 		#Write to CSV file
 		self.saveFile(codeFile,assembledCode)
-		
+
 	def saveFile(self,filename,assembledCode):
-			file = filename[:-4]+'.dat'
-			with open(file, 'wb') as f:
-				writer = csv.writer(f)
-				for line in assembledCode:
-					writer.writerow([line])
-			print ''
-			print 'Saved the assembled code as '+file
-		
+		file = filename[:-4]+'.dat'
+		with open(file, 'wb') as f:
+			writer = csv.writer(f)
+			for line in assembledCode:
+				writer.writerow([line])
+		print ''
+		print 'Saved the assembled code as '+file
+
 	def assembleCode(self,assemblyCode,op,reg):
 		'''
 		Takes in an array of assembly code lines from the CSV reader. Then assembles
@@ -78,7 +87,7 @@ class Assembler:
 		constants = {}
 		assembledCode = []
 		PC = 0
-		
+
 		for line in assemblyCode:
 			binary = ''
 			opCode = ''
@@ -104,15 +113,22 @@ class Assembler:
 						if type == 'rtype':
 							func = code[3]
 						break	
-			
+				
+				
 				#Handle the assembly of different types
 				if type == 'jtype':
+					#print line
 					newline = self.insertConstants(constants,line,type)
 					binary = self.jtype(opCode,newline)
 					
 					
 				elif type == 'itype':
-					newline = self.insertConstants(constants,line,type)
+					if opCode == '0110':
+						newline = self.jRA()# handle jra separately
+					#elif opCode == '1111':
+					#	newline = self.jal() #take care of jal in the assembler
+					else:
+						newline = self.insertConstants(constants,line,type)
 					binary = self.iType(opCode,newline,reg)
 					
 				elif type == 'rtype':
@@ -124,14 +140,19 @@ class Assembler:
 				elif type == 'set':
 					binary = self.setType(opCode,func,line,reg)
 					
+			
 				#Record each assembled line
 				assembledCode.append(binary)
-				
+			
 				#increment the Program Counter	
 				PC+=1
-		
+
 		return assembledCode,labels,address
-		
+
+	def jRA(self):
+		newline = ['jra','r0','r31','0']
+		return newline
+
 	def insertConstants(self,constants,line,type):
 		newLine = line
 		if type == 'jtype':
@@ -146,18 +167,19 @@ class Assembler:
 					if line[3] == const:
 						immediate = constants[const]
 						newLine = newLine = [line[0],line[1],line[2],immediate] 
-		
-		
+							
+								
+					
 		return newLine					
-		
-		
+
+
 	def insertLabels(self,assembledCode,labels,address):
 		'''
 		This code searches for labels ending in ":". Then the labels are replaced with binary addresses to complete 
 		the assembled code. 
 		'''
 		count = 0 #index in assembledCode
-		
+
 		for line in assembledCode:
 			if line.endswith(':'): #search for labels      
 				for label in labels:#find the right label
@@ -173,7 +195,7 @@ class Assembler:
 					index = len(label)*-1-1
 					branchImm = address[label] - count-1 #find the distance to branch
 					branchImm = self.dec2bin(branchImm,18)
-	
+
 					if line[index:-1] == label:
 						newLine = line[:index]+branchImm #find the address that goes with that label
 						assembledCode[count]= newLine  #replace the label with a binary address
@@ -181,7 +203,7 @@ class Assembler:
 			count+=1
 					
 		return assembledCode
-		
+
 	def jtype(self,opCode,line):
 		'''
 		Assembles J-Type instructions with there opCode and label. The labels need to be converted into
@@ -189,13 +211,13 @@ class Assembler:
 		'''
 		binary = opCode+'_'+line[1]#makes it more readable
 		return binary
-		
+
 	def setType(self,opCode,func,line,reg):
 		newline = ['set',line[1],opCode,'x',func]
 		func = '1101'
 		binary = self.rType('0100',func,newline,reg)
 		return binary
-		
+
 	def branchType(self,opCode,line,reg):
 		if line[1].endswith(':'):
 			newline = ['b','x',opCode,'0']
@@ -205,17 +227,27 @@ class Assembler:
 			newline = ['b','x',opCode,line[1]]
 			binary = self.iType('1100',newline,reg)
 		return binary
-		
+
+
+
+
+
+
+
+
+
+
+
 	def iType(self,opCode,line,reg):
 		'''
 		Assembles I-Type instructions and returns them in binary form.
 		'''
 		Rs = ''
 		Rd = ''
-		
+
 		#Determine the Immediate 
 		Imm = self.dec2bin(int(line[3]),18)
-		
+
 		#Determine register values
 		for register in reg:
 			if register == line[1]:
@@ -227,9 +259,9 @@ class Assembler:
 					
 		#Assemble the binary machine code		
 		binary = opCode+'_'+Rd+'_'+Rs+'_'+Imm
-		
+
 		return binary	
-		
+
 	def rType(self,opCode,func,line,reg):
 		'''
 		Assembles R-Type instructions and returns them in binary form.
@@ -237,7 +269,7 @@ class Assembler:
 		Rs = ''
 		Rd = ''
 		Rt = ''
-		
+
 		#Determine register values
 		for register in reg:
 			if register == line[1]:
@@ -250,13 +282,13 @@ class Assembler:
 		for register in reg:
 			if register == line[3]:
 				Rt = reg[register]
-		
+
 		#Assemble the binary machine code
 		binary = opCode+'_'+Rd+'_'+Rs+'_'+Rt+'_'+'000000000'+'_'+func
-		
+
 		return binary
-		
-		
+
+
 	def importCSVfile(self,filename):
 		'''
 		Reads in a CSV file and stores the lines in an array. Blank lines are omitted. 
@@ -267,7 +299,8 @@ class Assembler:
 			for line in reader:
 				if line != []: #Ignore empty lines 
 					if not(line[0].startswith('//')): #Ignore lines that start with '//'
-						lines.append(line)
+						if not(line[0].startswith('	')):
+							lines.append(line)
 		return lines	
 
 	def dec2bin(self,integer,length):
@@ -279,11 +312,11 @@ class Assembler:
 		onesComp = ''
 		twosComp = ''
 		carry = '1'
-		
+
 		#Determine the sign 
 		if integer < 0:
 			sign = 'neg'
-		
+
 		#positive is easy
 		if sign == 'pos':	
 			while integer > 0:
@@ -292,7 +325,7 @@ class Assembler:
 				integer /= 2
 			while len(binNumber)<length:
 				binNumber = '0'+binNumber
-		
+
 		#if negative get abs and convert normally
 		if sign == 'neg':
 			integer = int(math.fabs(integer))
@@ -324,16 +357,21 @@ class Assembler:
 
 			binNumber = twosComp	
 				
-				
+						
 		return binNumber
-		
-		
+				
 			
-			
-			
-			
-			
-			
+				
+				
+				
+				
+				
+				
 if __name__ == "__main__":
+	#try:
+	CodeFile = str(sys.argv[1]) 
+	#except:
+	#	CodeFile = 'none'
+	print CodeFile
 	Assembler = Assembler()
-	Assembler.run()
+	Assembler.run(CodeFile)
