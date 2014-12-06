@@ -34,9 +34,6 @@ class Assembler:
 		#codeFile = "C:\Users\Mark\Dropbox\Assembly Code\AssemblyCode.csv"
 		op = []
 		reg = {}
-
-		
-		print codeFile
 		
 		#Import CSV Configuration file
 		configuration = self.importCSVfile(configurationFile)
@@ -368,10 +365,9 @@ class Assembler:
 				
 				
 if __name__ == "__main__":
-	#try:
-	CodeFile = str(sys.argv[1]) 
-	#except:
-	#	CodeFile = 'none'
-	print CodeFile
+	try:
+		CodeFile = str(sys.argv[1]) 
+	except:
+		CodeFile = 'none'
 	Assembler = Assembler()
 	Assembler.run(CodeFile)
