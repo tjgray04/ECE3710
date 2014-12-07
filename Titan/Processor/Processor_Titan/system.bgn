@@ -5,7 +5,7 @@ C:\Xilinx\14.4\ISE_DS\ISE\.
    "System" is an NCD, version 3.2, device xc6slx16, package csg324, speed -3
 Opened constraints file System.pcf.
 
-Fri Dec 05 19:39:32 2014
+Sat Dec 06 20:09:02 2014
 
 C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g Reset_on_err:No -g ConfigRate:2 -g ProgPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:No -g SPI_buswidth:1 -g TIMER_CFG:0xFFFF -g multipin_wakeup:No -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No -g en_sw_gsr:No -g drive_awake:No -g sw_clk:Startupclk -g sw_gwe_cycle:5 -g sw_gts_cycle:4 System.ncd 
 
@@ -129,16 +129,10 @@ There were 0 CONFIG constraint(s) processed from System.pcf.
 
 Running DRC.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM5_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM1_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM12_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM13_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM3_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM11_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM2_RAMD_D1_O> is incomplete. The signal does
@@ -147,16 +141,22 @@ WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM14_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM15_RAMD_D1_O> is incomplete. The signal does
-   not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM4_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM11_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM15_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM1_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM5_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <titan/ExStage/regfile/Mram_RAM13_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <titan/ExStage/regfile/Mram_RAM12_RAMD_D1_O> is incomplete. The signal does
+   not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <titan/ExStage/regfile/Mram_RAM3_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 DRC detected 0 errors and 10 warnings.  Please see the previously displayed
 individual error or warning messages for more details.

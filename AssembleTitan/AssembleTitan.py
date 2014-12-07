@@ -105,7 +105,7 @@ class Assembler:
 			
 			#First determine if the line is a label
 			if line[0].endswith(":"):
-				#print line[0]+' '+str(PC)
+				print line[0]+' '+str(PC)
 				labels[line[0]] = self.dec2bin(PC,28) #Store labels in a dictionary with their binary addresses
 				address[line[0]] = PC
 			

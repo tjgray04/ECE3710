@@ -3,16 +3,16 @@ r0 - Zero Register
 
 r1 - Argument 1 - TEMPORARY REGISTER - glyph INDEX
 r2 - Argument 2 - TEMPORARY REGISTER - glyph LOCATION
-r3 - Argument 3 - TEMPORARY REGISTER
+r3 - Argument 3 - TEMPORARY REGISTER - glyph MEMORY location
 r4 - Argument 4 - TEMPORARY REGISTER
 r5 - Argument 5 - TEMPORARY REGISTER
 r6 - Argument 6 - TEMPORARY REGISTER
 
-//DONT NEED THESE REGISTERS
-r7 - BLUE MAN glyph INDEX value (giBLUEMAN)
-r8 - RED MAN glyph INDEX value (giREDMAN)
-r9 - GREEN MAN glyph INDEX value (giGREENMAN)
-r10 - WHITE MAN glyph INDEX value (giWHITEMAN)
+r7 - BLUE MAN LASER glyph LOCATION (glBLUEMAN)
+r8 - RED MAN LASER glyph LOCATION (glREDMAN)
+r9 - GREEN MAN LASER glyph LOCATION (glGREENMAN)
+r10 - WHITE MAN LASER glyph LOCATION (glWHITEMAN)
+
 r11 - BLUE MAN glyph LOCATION (glBLUEMAN)
 r12 - RED MAN glyph LOCATION (glREDMAN)
 r13 - GREEN MAN glyph LOCATION (glGREENMAN)
@@ -24,22 +24,23 @@ r16 - RED MAN CONTROLLER value
 r17 - GREEN MAN CONTROLLER value
 r18 - WHITE MAN CONTROLLER value
 
-r19 - comparison value for GREEN MAN Controller
-r20 - comparison value for WHITE MAN Controller
+r19 - 
+r20 - 
 r21 - 
 
 r22 - Return 3
 r23 - Return 2
 r24 - Return 1
 
-//DONT NEED THESE REGISTERS
-r25 - Sound Generator Address
-r26 - Timer
-r27 - VGA Base Address (VGA = 16384)
-r28 - LED Address (LED = 40959)
-r29 - Controller Address (CTRLR = 49151)
-r30 - Stack Pointer
+r25 - Save Register
+r26 - Save Register
+r27 - Save Register
+r28 - Save Register
+r29 - Save Register
+r30 - Save Register
+
 r31 - Return Address
+
 
 
 TERMINOLOGY:
@@ -54,3 +55,26 @@ ctrlr2led();
 DrawGlyph(r1,r2);
 DrawBackground(r2);
 movement(r1,r2);
+
+GLOBAL CONSTANTS:
+
+gcon,TIMER,10,			//131000,		//Initial wait timer value
+
+gcon,VGA,16384,			//Binary: 01_00_0000_0000_0000, This is the base address for the VGA
+gcon,LED,40959,			//Binary: 10_0_1_1111_1111_1111, This is IO memory space for the LEDs
+gcon,CTRLR,49151,		//Binary: 10_1_1_1111_1111_1111, This is IO memory space for the Controller
+
+gcon,giBLUEMAN,1,		//Glyph INDEX value of BLUE MAN
+gcon,giREDMAN,9,		//Glyph INDEX value of RED MAN
+gcon,giGREENMAN,17,		//Glyph INDEX value of GREEN MAN
+gcon,giWHITEMAN,25,		//Glyph INDEX value of WHITE MAN
+
+gcon,glBLUEMAN,81,		//Initial glyph LOCATION of the BLUE MAN
+gcon,glREDMAN,157,		//Initial glyph LOCATION of the RED MAN
+gcon,glGREENMAN,4401,	//Initial glyph LOCATION of the GREEN MAN
+gcon,glWHITEMAN,4477,	//Initial glyph LOCATION of the WHITE MAN
+
+gcon,BLUELASER,33,		//Glyph INDEX value of BLUE MAN LASER
+gcon,REDLASER,35,		//Glyph INDEX value of BLUE MAN LASER
+gcon,GREENLASER,37,		//Glyph INDEX value of BLUE MAN LASER
+gcon,WHITELASER,38,		//Glyph INDEX value of BLUE MAN LASER
