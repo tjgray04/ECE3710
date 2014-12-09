@@ -32,8 +32,17 @@ WhiteMan6,//Right Arm - White
 WhiteMan7,//Left Leg - White 
 WhiteMan8,//Right Leg - White 
 GreyWall,//Wall - GREY 0xA0
-BlueLaser,
+BlueLaserLeft,
+BlueLaserRight,
 RedLaserLeft, //Direction matters for the red laser
 RedLaserRight,
-GreenLaser,
-WhiteLaser,
+GreenLaserLeft,
+GreenLaserRight,
+WhiteLaserLeft,
+WhiteLaserRight,
+BlueTile,
+RedTile,
+WhiteTile,
+YellowTile,
+OrangeTile,
+GreenTile,
