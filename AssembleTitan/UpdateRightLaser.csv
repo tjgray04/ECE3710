@@ -16,7 +16,7 @@ updateRightLaser:,//
 addi,r29,r31,0,					//Store the return address
 
 str,r0,r2,VGA,					//Store the background INDEX (index 0) into the glyph MEMORY location of the laser
-addi,r3,r2,1,					//Check location next to the laser (1 location to the left)
+addi,r3,r2,1,					//Check location next to the laser (1 location to the right)
 addi,r3,r3,VGA,					//Glyph MEMORY location of glyph to check
 ld,r4,r3,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
 cmpi,x,r4,0,					//Check if index is the background glyph (index )
@@ -37,7 +37,7 @@ cmpi,x,r4,giBLUEMAN,			//Check if the glyph INDEX value is the BLUE MAN top LEFT
 beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the function
 cmpi,x,r4,giREDMAN,				//Check if the glyph INDEX value is the BLUE MAN bottom LEFT head
 beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the function
-cmpi,x,r4,giGREENMAN,			////Check if the glyph INDEX value is the BLUE MAN LEFT ARM
+cmpi,x,r4,giGREENMAN,			//Check if the glyph INDEX value is the BLUE MAN LEFT ARM
 beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the function
 cmpi,x,r4,giWHITEMAN,			////Check if the glyph INDEX value is the BLUE MAN LEFT LEG
 beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the function	
@@ -95,6 +95,8 @@ addi,r1,r0,giWHITEMAN,//
 addi,r1,r0,6,					//increment to the index value of the WHITE MAN LEFT arm	
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN LEFT arm
 beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function
+
+j,resetRightLaser:,				//If none of these checks work, reset the RIGHT laser and end the function
 
 terminateLeftHeadTop:,//
 // PARAMETERS:			r3 - glyph MEMORY location

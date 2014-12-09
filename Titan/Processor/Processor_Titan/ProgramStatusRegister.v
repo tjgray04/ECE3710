@@ -64,18 +64,18 @@ module ProgramStatusRegister#(parameter REGBITS = 5, WIDTH = 32)
 	begin
       case (PSRsel)
 			// PSRwrite[4:0] = {C,L,F,Z,N}
-         5'b0_0000: PSRcond = PSR[1]; 	//EQ, equal, Z=1
+         5'b0_0000: PSRcond = PSR[1]; 		//EQ, equal, Z=1
          5'b0_0001: PSRcond = ~PSR[1]; 	// NE, not equal, Z=0
          5'b0_1101: PSRcond = PSR[0] | PSR[1]; // GE, greater than or equal, N=1 or Z=1
-         5'b0_0010: PSRcond = PSR[4]; 	// CS, carry set, C=1
+         5'b0_0010: PSRcond = PSR[4]; 		// CS, carry set, C=1
          5'b0_0011: PSRcond = ~PSR[4]; 	// CC, carry clear, C=0
-         5'b0_0100: PSRcond = PSR[3]; 	// HI, higher than, L=1
+         5'b0_0100: PSRcond = PSR[3]; 		// HI, higher than, L=1
          5'b0_0101: PSRcond = ~PSR[3]; 	// LS, lower than or same as, L=0
          5'b0_1010: PSRcond = (~PSR[3]) & (~PSR[1]); // LO, lower than, L=0 and Z=0
 			5'b0_1011: PSRcond = PSR[3] | PSR[1]; // HS, higher than or Same as, L=1 or Z=1
-         5'b0_0110: PSRcond = PSR[0]; 	// GT, greater than, N=1
+         5'b0_0110: PSRcond = PSR[0]; 		// GT, greater than, N=1
          5'b0_0111: PSRcond = ~PSR[0]; 	// LE, less than or equal, N=0
-         5'b0_1000: PSRcond = PSR[2]; 	// FS, flag set, F=1
+         5'b0_1000: PSRcond = PSR[2]; 		// FS, flag set, F=1
          5'b0_1001: PSRcond = ~PSR[2]; 	// FC, flag clear, F=0
          5'b0_1100: PSRcond = (~PSR[0]) & (~PSR[1]); // LT, less than, N=0 and Z=0
          5'b0_1110: PSRcond = 0; // UC, unconditional, N/A

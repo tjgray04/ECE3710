@@ -1,0 +1,17 @@
+gcon,LED,40959,				//Binary: 10_0_1_1111_1111_1111, This is IO memory space for the LEDs
+gcon,CTRLR,49151,			//Binary: 10_1_1_1111_1111_1111, This is IO memory space for the Controller
+
+start:,
+addi,r1,r0,1,
+addi,r2,r0,1,
+cmp,x,r1,r2,
+beq,end:,
+
+//IF THE BEQ WORKS, WE SHOULDN'T EVER SEE WHAT'S ON THE LEDs
+ld,r24,r0,CTRLR,		//Load the Controller value into r23 to return
+addi,r0,r0,0,			//TESTER NOP
+str,r24,r0,LED,			//Store the value to the LEDs
+
+
+end:,
+j,start:,
