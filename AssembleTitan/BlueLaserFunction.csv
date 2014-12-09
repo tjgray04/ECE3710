@@ -24,8 +24,8 @@ beq,checkALaserBLUE:,			//If the laser does not exist, then check for fired lase
 //If laser exist, then check if it was a right or left laser
 //For the BLUE MAN LASER, we need to check RightBLUELASER and LeftBLUELASER
 ld,r1,r7,VGA,					//Load the glyph INDEX value of the current BLUE MAN LASER glyph MEMORY location
-cmpi,x,r1,RightBLUELASER,		//Check if the glyph INDEX is the RIGHT laser
-beq,blueUpdateRightLaser:,		//If the glyph INDEX is the RIGHT laser, then update the right
+cmpi,x,r1,LeftBLUELASER,		//Check if the glyph INDEX is the LEFT laser
+bne,blueUpdateRightLaser:,		//If the glyph INDEX is the RIGHT laser, then update the right
 
 //*****UPDATE BLUE MAN LEFT LASER*******
 //cmpi,x,r1,LeftBLUELASER,		//If it's not a right laser, double check that it's a left laser

@@ -1,0 +1,194 @@
+//***************************************MOVEMENT FUNCTION***********************************
+// This function will check the movement of a glyph character
+// PARAMETERS: 			r1 - controller value
+// 						r2 - glyph LOCATION of current glyph
+// LOCAL VARIABLES: 	r3 - directional value (result of controller value AND direction being checked)
+//						r4 - glyph MEMORY location
+//						r5 - glyph INDEX value of position to MOVE INTO
+//						r30 - Saved Return Address for this function
+// GLOBAL VARIABLES:	r27 - VGA Base Address
+// RETURN VARIABLES:	r23 - updated glyph LOCATION
+
+movement:
+addi,r30,r31,0,				//Store the return address
+
+//********CHECK RIGHT MOVEMENT*********
+andi,r3,r1,1,				//Get the right directional value
+cmpi,x,r3,1,				//Check if direction pressed is RIGHT
+bne,checkL:,				//Check LEFT direction if fails
+//Check TOP RIGHT HEAD
+addi,r4,r2,2,				//Check location next to top right head (2 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check BOTTOM RIGHT HEAD
+addi,r4,r2,82,				//Check location next to bottom right head (82 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT ARM
+addi,r4,r2,162,				//Check location next to right arm (162 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT LEG
+addi,r4,r2,242,				//Check location next to right leg (242 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If RIGHT movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,1,				//Update glyph LOCATION to store to - glyph LOCATION to the RIGHT
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
+
+//*********CHECK LEFT MOVEMENT************
+checkL:
+andi,r3,r1,2,				//Get the left directional value
+cmpi,x,r3,2,				//Check if direction pressed is LEFT
+bne,checkD:,				//Check DOWN direction if fails
+//Check TOP LEFT HEAD
+addi,r4,r2,-1,				//Check location next to top left head (-1 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check BOTTOM LEFT HEAD
+addi,r4,r2,79,				//Check location next to bottom left head (79 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check LEFT ARM
+addi,r4,r2,159,				//Check location next to left arm (159 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check LEFT LEG
+addi,r4,r2,239,				//Check location next to left leg (239 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If LEFT movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,-1,				//Update glyph LOCATION to store to - glyph LOCATION to the LEFT
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
+
+//**********CHECK DOWN MOVEMENT************
+checkD:
+andi,r3,r1,4,				//Get the down directional value
+cmpi,x,r3,4,				//Check if direction pressed is DOWN
+bne,checkU:,				//Check UP direction if fails
+//Check LEFT LEG
+addi,r4,r2,320,				//Check location next to left leg (320 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT LEG
+addi,r4,r2,321,				//Check location next to right leg (321 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If DOWN movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,80,				//Update glyph LOCATION to store to - glyph LOCATION DOWN
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
+
+//**********CHECK UP MOVEMENT************
+checkU:
+andi,r3,r1,8,				//Get the up directional value
+cmpi,x,r3,8,				//Check if direction pressed is UP
+bne,endMovement:,			//Branch to the end if fails
+//Check TOP LEFT HEAD
+addi,r4,r2,-80,				//Check location next to top left head (-80 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check TOP RIGHT HEAD
+addi,r4,r2,-79,				//Check location next to top right head (-79 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If UP movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,-80,				//Update glyph LOCATION to store to - glyph LOCATION UP
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
+
+//END OF MOVEMENT FUNCTION
+endMovement:
+addi,r23,r2,0,				//return the updated glyph LOCATION
+addi,r31,r30,0,				//restore the Return Address
+jra,						//jump to the Return Address of where the function was called

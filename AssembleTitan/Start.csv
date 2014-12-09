@@ -1,6 +1,60 @@
 //*****************************START FUNCTION***********************************
 // This function will replace a character glyph with a terminate glyph
-// PARAMETERS:			r3 - glyph MEMORY location
+// PARAMETERS:			
 // LOCAL VARIABLES:		
-// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glph
+// GLOBAL VARIABLES:	giORANGETILE - glyph INDEX of the ORANGE TILE
 // RETURN VARIABLES:
+
+start:,//
+//Begin with the 1st row of Start
+addi,r1,r0,giORANGETILE,				//Add the ORANGE TILE into r1
+addi,r2,r0,START,						//Add the START glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of START into r2
+//Top of S
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//Top of T
+str,r1,r2,5,
+str,r1,r2,6,
+str,r1,r2,7,
+str,r1,r2,8,
+str,r1,r2,9,
+
+//Top of A
+str,r1,r2,11,
+str,r1,r2,12,
+str,r1,r2,13,
+str,r1,r2,14,
+str,r1,r2,15,
+
+//Top of R
+str,r1,r2,17,
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+
+//Top of T
+str,r1,r2,22,
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+str,r1,r2,26,
+
+//2nd row of Start
+
+
+//3rd row of Start
+
+//4th row of Start
+
+
+//5th row of Start
+
+
+//6th row of Start
+
+
+//7th row of Start
