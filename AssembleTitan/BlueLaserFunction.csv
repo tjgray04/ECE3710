@@ -1,0 +1,92 @@
+//********************************BLUE LASER FUNCTION*****************************************
+// This function will update the BLUE MAN Laser
+// If the laser exist, then it will update in the direction it is currently travelling.
+// If the laser does not exist, then this function will generate a new laser
+// PARAMETERS:						
+// LOCAL VARIABLES:		r1 - glyph INDEX - Loaded from glyph MEMORY location calculated from r3, or set by global constants
+//						r5 - glyph MEMORY location of position to MOVE INTO
+//						r6 - glyph INDEX value of position to MOVE INTO
+//						r30 - temporary storage of Return Address Register
+// GLOBAL VARIABLES:	r7 - glyph LOCATION of BLUE MAN LASER
+//						r11 - BLUE MAN glyph LOCATION
+//						r15 - BLUE MAN CONTROLLER value
+//						RightBLUELASER - glyph INDEX value of BLUE MAN LASER RIGHT
+//						LeftBLUELASER - glyph INDEX value of BLUE MAN LASER LEFT
+// RETURN VARIABLES:	r24 - return register with updated glyph LOCATION of laser
+
+blueLaser:
+addi,r30,r31,0,					//Store the return address
+
+//Check if the laser exist
+cmpi,x,r7,0,					//Check if a laser exist - if laser exist, it will be different from 0
+beq,checkALaserBLUE:,			//If the laser does not exist, then check for fired laser
+
+//If laser exist, then check if it was a right or left laser
+//For the BLUE MAN LASER, we need to check RightBLUELASER and LeftBLUELASER
+ld,r1,r7,VGA,					//Load the glyph INDEX value of the current BLUE MAN LASER glyph MEMORY location
+cmpi,x,r1,RightBLUELASER,		//Check if the glyph INDEX is the RIGHT laser
+beq,blueUpdateRightLaser:,		//If the glyph INDEX is the RIGHT laser, then update the right
+
+//*****UPDATE BLUE MAN LEFT LASER*******
+//cmpi,x,r1,LeftBLUELASER,		//If it's not a right laser, double check that it's a left laser
+//bne,blueLaserEnd:,			//If it's not a LEFT laser, branch to the end
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,LeftBLUELASER,		//Put the glyph INDEX of the BLUE MAN LASER RIGHT into the argument register r1
+addi,r2,r7,0,					//Put the glyph LOCATION of the BLUE MAN LASER into the argument register r2
+jal,updateLeftLaser:,			//If it is a LEFT laser, jump and link to the Update Left Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r7,r23,0,					//Update the glyph LOCATION of the BLUE MAN LASER
+j,blueLaserEnd:,				//Jump to the end after updating the left laser
+
+//*****UPDATE BLUE MAN RIGHT LASER*******
+blueUpdateRightLaser:
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,RightBLUELASER,		//Put the glyph INDEX of the BLUE MAN LASER RIGHT into the argument register r1
+addi,r2,r7,0,					//Put the glyph LOCATION of the BLUE MAN LASER into the argument register r2
+jal,updateRightLaser:,			//Jump and link to the Update Right Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r7,r23,0,					//Update the glyph LOCATION of the BLUE MAN LASER
+j,blueLaserEnd:,				//Jump to the end after updating the right laser
+
+//******GENERATE NEW LASER**********
+//If the laser doesn't exist, generate a new laser
+//Check if button A was pressed for RIGHT laser
+checkALaserBLUE:
+andi,r6,r15,128,				//Get the right laser value - r6 doesn't follow convention here, but will in a few lines
+cmpi,x,r6,128,					//Check if laser pressed is for direction RIGHT
+bne,checkBLaserBLUE:,			//Check B laser if fails
+//Check to see if the position to the right of the right arm of the character is a valid position
+addi,r5,r11,162,				//Check location next to the right arm (162 glyph locations away from current glyph)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,blueLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r7 because laser shouldn't exist
+//if RIGHT movement is valid, generate the new laser
+addi,r1,r0,RightBLUELASER,		//get the glyph INDEX for the BLUE MAN LASER RIGHT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r7,r5,VGA,					//update the glyph LOCATION of the BLUE MAN LASER - this is the created laser
+j,blueLaserEnd:,				//After creating the glyph, jump to the end of the function
+
+//Check if button B was pressed for LEFT laser
+checkBLaserBLUE:
+andi,r6,r15,64,					//Get the left laser value - again, r6 doesn't follow convention here
+cmpi,x,r6,64,					//Check if laser pressed is for direction Left
+bne,blueLaserEnd:,				//Jump to end of function if fails
+//Check to see if position to the left of left arm of the character is a valid position
+addi,r5,r11,159,				//Check location next to the left arm (159 glyph locations away from glyph LOCATION of BLUE MAN)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,blueLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r7 because laser shouldn't exist
+//if LEFT movement is valid, generate the new laser
+addi,r1,r0,LeftBLUELASER,		//get the glyph INDEX for the BLUE MAN LASER LEFT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r7,r5,VGA,					//update the glyph LOCATION of the BLUE MAN LASER - this is the created laser
+
+blueLaserEnd:
+addi,r31,r30,0,					//Restore the return address
+jra,							//jump to the Return Address of where the function was called

@@ -1,0 +1,24 @@
+//*****************************COUNT DOWN FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			r3 - glyph MEMORY location
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glyph
+// RETURN VARIABLES:
+
+countDown:
+addi,r30,r31,0,				//Store the Return Address
+
+jal,three:,					//Jump and link to the Three Function to draw a three
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two			
+
+jal,two:,
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing One
+
+jal,one:,
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Start
+
+jal,start:,
+jal,waitLoop:,				//Jump and link to the waitLoop before starting the game
+
+addi,r31,r30,0,				//Restore the return address
+jra,						//jump to the Return Address of where the function was called

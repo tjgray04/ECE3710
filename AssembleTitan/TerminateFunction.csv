@@ -1,0 +1,44 @@
+//*****************************TERMINATE CHARACTER FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			r3 - glyph MEMORY location
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glylph
+// RETURN VARIABLES:
+
+terminate:
+//use the red glyph for now rather than the giTERMINATE glyph
+addi,r1,r0,giTERMINATE,		//put the red glyph into r1
+//TOP LEFT HEAD
+str,r1,r3,0,        		//Sets the old position to be the background
+//TOP RIGHT HEAD
+//addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,1,       		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//BOTTOM LEFT HEAD
+//addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,79,      		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//BOTTOM RIGHT HEAD
+//addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,1,       		//go to the next glyph LOCATION
+str,r1,r3,0,				/set the old position to be the background
+//LEFT ARM
+//addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,79,      		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//RIGHT ARM
+//addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,1,       		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//LEFT LEG
+//addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,79,      		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//RIGHT LEG
+//addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,1,       		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+
+jra,						//jump to the Return Address of where the function was called
+
+	

@@ -1,0 +1,6 @@
+//*****************************WINNER FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			r3 - glyph MEMORY location
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glyph
+// RETURN VARIABLES:
