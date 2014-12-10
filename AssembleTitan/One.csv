@@ -1,6 +1,46 @@
 //*****************************ONE FUNCTION***********************************
 // This function will replace a character glyph with a terminate glyph
-// PARAMETERS:			r3 - glyph MEMORY location
+// PARAMETERS:			
 // LOCAL VARIABLES:		
 // GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glyph
 // RETURN VARIABLES:
+
+one:,//
+//Begin with the 1st row of the ONE
+addi,r1,r0,giORANGETILE,				//Add the ORANGE TILE into r1
+addi,r2,r0,ONE,							//Add the ONE glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of ONE into r2
+
+str,r1,r2,0,							//Store the ORANGE TILE
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+
+jra,						//jump to the Return Address of where the function was called

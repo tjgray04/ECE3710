@@ -28,8 +28,6 @@ cmpi,x,r1,LeftBLUELASER,		//Check if the glyph INDEX is the LEFT laser
 bne,blueUpdateRightLaser:,		//If the glyph INDEX is the RIGHT laser, then update the right
 
 //*****UPDATE BLUE MAN LEFT LASER*******
-//cmpi,x,r1,LeftBLUELASER,		//If it's not a right laser, double check that it's a left laser
-//bne,blueLaserEnd:,			//If it's not a LEFT laser, branch to the end
 // PARAMETERS:			r1 - glyph INDEX
 //						r2 - glyph LOCATION of laser
 // RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	

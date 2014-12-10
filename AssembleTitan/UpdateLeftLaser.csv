@@ -43,7 +43,7 @@ cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN top left head
 beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function
 addi,r1,r0,giGREENMAN,//
 addi,r1,r1,1,					//Increment to the index value of the RED MAN top RIGHT head
-cmp,x,r4,r1,			//Check if the glyph INDEX value is the GREEN MAN top left head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN top left head
 beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function
 addi,r1,r0,giWHITEMAN,//
 addi,r1,r1,1,					//Increment to the index value of the RED MAN top RIGHT head

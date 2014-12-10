@@ -6,7 +6,8 @@ Command Line: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 xc6slx16-csg324-3 System.ngc System.ngd
 
 Reading NGO file "C:/Users/Steve
-Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.ngc" ...
+Brown/Desktop/ECE3710/Titan_TESTproject/Titan/Processor/Processor_Titan/System.n
+gc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -28,10 +29,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 168436 kilobytes
+Total memory usage is 169716 kilobytes
 
 Writing NGD file "System.ngd" ...
-Total REAL time to NGDBUILD completion:  11 sec
-Total CPU time to NGDBUILD completion:   10 sec
+Total REAL time to NGDBUILD completion:  10 sec
+Total CPU time to NGDBUILD completion:   9 sec
 
 Writing NGDBUILD log file "System.bld"...

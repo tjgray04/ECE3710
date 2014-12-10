@@ -3,7 +3,10 @@ gcon,TIMER,100000,			//Initial wait timer value
 
 gcon,VGA,16384,				//Binary: 01_00_0000_0000_0000, This is the base address for the VGA
 gcon,LED,40959,				//Binary: 10_0_1_1111_1111_1111, This is IO memory space for the LEDs
+gcon,SOUND,45055,			//Binary: 10_1_0_1111_1111_1111, This is IO memory space for the SOUND
 gcon,CTRLR,49151,			//Binary: 10_1_1_1111_1111_1111, This is IO memory space for the Controller
+gcon,LASER,1,				//Value to write to SOUND MEMORY space to play LASER sound
+gcon,DEATH,3,				//Value to write to SOUND MEMORY space to play DEATH sound
 
 gcon,giBLUEMAN,1,			//Glyph INDEX value of BLUE MAN
 gcon,giREDMAN,9,			//Glyph INDEX value of RED MAN
@@ -99,12 +102,13 @@ jal,ctrlr2led:,			//jump and link to CTRLR 2 LED function
 //BLUE MAN   0000_0000__0000_0000__0000_0000__1111_1111 = 255
 andi,r15,r24,255,		//Collect bits relating only to BLUE MAN Controller
 
-//CHECK RED LASER FIRE
+//CHECK BLUE LASER FIRE
 jal,blueLaser:,			//Jump and link to the blueLaser function
 
 //CHECK BLUE MOVEMENT
 //movement PARAMETERS:	r1 - controller value
-// 						r2 - glyph LOCATION of current glyph	
+// 						r2 - glyph LOCATION of current glyph
+//						r23 - return register with updated glyph LOCATION	
 addi,r1,r15,0,			//Put the controller value into the argument register r1
 addi,r2,r11,0,			//Put the current glyph LOCATION into argument register r2
 jal,movement:,			//Jump to the movement function
@@ -594,18 +598,23 @@ jra,							//jump to the Return Address of where the function was called
 // LOCAL VARIABLES:		r1 - glyph INDEX of TERMINATE
 //						r2 - Counter
 //						r28 - Return Address
-// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glylph
+// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glyph
+//						SOUND - I/O MEMORY space for sound
 // RETURN VARIABLES:
 
 terminate:
 addi,r28,r31,0,				//Save the return address
-//use the red glyph for now rather than the giTERMINATE glyph
-addi,r1,r0,giTERMINATE,		//put the TERMINATE glyph into r1
+
+//****CHECK THIS CODE****
+//Trigger the death sound
+addi,r1,r0,DEATH,				//Trigger the death sound
+str,r1,r0,SOUND,				//Store the trigger into the SOUND MEMORY space
 
 //Set up a counter
-addi,r2,r0,1000,				//Initialize counter to 100
+addi,r2,r0,100000,			//Initialize counter to 100
 
-terminateLoop:
+//terminateLoop:
+addi,r1,r0,giTERMINATE,		//put the TERMINATE glyph into r1
 //TOP LEFT HEAD
 str,r1,r3,0,        		//Sets the old position to be the background
 //TOP RIGHT HEAD
@@ -637,17 +646,23 @@ addi,r1,r1,1,				//go to the next glyph INDEX value
 addi,r3,r3,1,       		//go to the next glyph LOCATION
 str,r1,r3,0,				//set the old position to be the background
 
-addi,r27,r1,0,				//Save the current glyph INDEX
-addi,r26,r2,0,				//Save the current counter
-addi,r25,r3,0,				//Save the current MEMORY location
-jal,DrawBackground:,		//Jump and Link to the background to emulate GLYching
-addi,r1,r27,0,				//Restore the current glyph INDEX
-addi,r2,r26,0,				//Restore the current counter
-addi,r3,r25,0,				//Restore the current MEMORY location
+subi,r3,r3,241,				//set r3 back to the top of the glyph character
 
+//addi,r27,r1,0,				//Save the current glyph INDEX
+//addi,r26,r2,0,				//Save the current counter
+//addi,r25,r3,0,				//Save the current MEMORY location
+//jal,DrawBackground:,		//Jump and Link to the background to emulate GLYching
+//addi,r1,r27,0,				//Restore the current glyph INDEX
+//addi,r2,r26,0,				//Restore the current counter
+//addi,r3,r25,0,				//Restore the current MEMORY location
+
+terminateLoop:
 subi,r2,r2,1,				//Decrement the counter
 cmpi,x,r2,0,				//Check if we've reached zero
 bne,terminateLoop:,			//If we're not done, branch to the top of the loop
+
+subi,r3,r3,VGA,				//set r3 back to the top of the glyph character
+jal,DrawBackground:,		//Jump and Link to the background to emulate GLYching
 
 addi,r31,r28,0,				//Restore the Return Address
 jra,						//jump to the Return Address of where the function was called
