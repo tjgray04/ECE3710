@@ -15,16 +15,16 @@ gcon,glREDMAN,157,			//Initial glyph LOCATION of the RED MAN
 gcon,glGREENMAN,4401,		//Initial glyph LOCATION of the GREEN MAN
 gcon,glWHITEMAN,4477,		//Initial glyph LOCATION of the WHITE MAN
 
-gcon,LeftBLUELASER,34,		//Glyph INDEX value of BLUE MAN LASER LEFT - tested with a red block for now.
-gcon,RightBLUELASER,41,		//Glyph INDEX value of BLUE MAN LASER RIGHT
-gcon,LeftREDLASER,36,		//Glyph INDEX value of BLUE MAN LASER
-gcon,RightREDLASER,37,		//Glyph INDEX value of BLUE MAN LASER
-gcon,LeftGREENLASER,38,		//Glyph INDEX value of BLUE MAN LASER
-gcon,RightGREENLASER,39,	//Glyph INDEX value of BLUE MAN LASER
-gcon,LeftWHITELASER,40,		//Glyph INDEX value of BLUE MAN LASER
-gcon,RightWHITELASER,41,	//Glyph INDEX value of BLUE MAN LASER
+gcon,LeftBLUELASER,42,		//Glyph INDEX value of BLUE MAN LASER LEFT - tested with a red block for now.
+gcon,RightBLUELASER,43,		//Glyph INDEX value of BLUE MAN LASER RIGHT
+gcon,LeftREDLASER,44,		//Glyph INDEX value of BLUE MAN LASER
+gcon,RightREDLASER,45,		//Glyph INDEX value of BLUE MAN LASER
+gcon,LeftGREENLASER,46,		//Glyph INDEX value of BLUE MAN LASER
+gcon,RightGREENLASER,47,	//Glyph INDEX value of BLUE MAN LASER
+gcon,LeftWHITELASER,48,		//Glyph INDEX value of BLUE MAN LASER
+gcon,RightWHITELASER,49,	//Glyph INDEX value of BLUE MAN LASER
 
-gcon,giTERMINATE,42,		//Glyph INDEX value of TERMINATE
+gcon,giTERMINATE,34,		//Glyph INDEX value of TERMINATE
 gcon,giWALL,33,				//Glyph INDEX value of WALL
 
 gcon,giBLUETILE,50,			//Glyph INDEX value of BLUE TILE
@@ -161,11 +161,11 @@ j,main:,				//Loop back to main
 waitLoop:
 addi,r1,r0,TIMER,		//store the timer into a temporary register
 //lshi,r1,r1,4,			//multiply the timer by shifting to the left
-addi,r1,r1,0,			//double the size of the timer
-addi,r1,r1,0,			//double the size of the timer again
-addi,r1,r1,0,			//double the size of the timer again
-addi,r1,r1,0,			//double the size of the timer again
-addi,r1,r1,0,			//double the size of the timer again
+add,r1,r1,r1,			//double the size of the timer
+add,r1,r1,r1,			//double the size of the timer again
+//add,r1,r1,r1,			//double the size of the timer again
+//add,r1,r1,r1,			//double the size of the timer again
+//add,r1,r1,r1,			//double the size of the timer again
 
 waitLoop2:
 addi,r1,r1,-1,			//decrement the timer
@@ -343,55 +343,55 @@ beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the functio
 
 //If not the TOP LEFT HEAD, then check the BOTTOM LEFT HEAD
 addi,r1,r0,giBLUEMAN,//
-addi,r1,r0,2,					//increment to the index value of the BLUE MAN bottom LEFT head
+addi,r1,r1,2,					//increment to the index value of the BLUE MAN bottom LEFT head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN bottom LEFT head
 beq,terminateLeftHeadBottom:,	//If true, then reset the laser and exit the function	
 addi,r1,r0,giREDMAN,//
-addi,r1,r0,2,					//increment to the index value of the RED MAN bottom LEFT head
+addi,r1,r1,2,					//increment to the index value of the RED MAN bottom LEFT head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN bottom LEFT head
 beq,terminateLeftHeadBottom:,	//If true, then reset the laser and exit the function
 addi,r1,r0,giGREENMAN,//
-addi,r1,r0,2,					//increment to the index value of the GREEN MAN bottom LEFT head
+addi,r1,r1,2,					//increment to the index value of the GREEN MAN bottom LEFT head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN bottom LEFT head
 beq,terminateLeftHeadBottom:,	//If true, then reset the laser and exit the function
 addi,r1,r0,giWHITEMAN,//
-addi,r1,r0,2,					//increment to the index value of the WHITE MAN bottom LEFT head	
+addi,r1,r1,2,					//increment to the index value of the WHITE MAN bottom LEFT head	
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN bottom LEFT head
 beq,terminateLeftHeadBottom:,	//If true, then reset the laser and exit the function	
 
 //If not the BOTTOM LEFT HEAD, then check the LEFT ARM
 addi,r1,r0,giBLUEMAN,//
-addi,r1,r0,4,					//increment to the index value of the BLUE MAN LEFT leg
+addi,r1,r1,4,					//increment to the index value of the BLUE MAN LEFT leg
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN LEFT leg
 beq,terminateLeftArm:,			//If true, then reset the laser and exit the function	
 addi,r1,r0,giREDMAN,//
-addi,r1,r0,4,					//increment to the index value of the RED MAN LEFT leg
+addi,r1,r1,4,					//increment to the index value of the RED MAN LEFT leg
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN LEFT leg
 beq,terminateLeftArm:,			//If true, then reset the laser and exit the function
 addi,r1,r0,giGREENMAN,//
-addi,r1,r0,4,					//increment to the index value of the GREEN MAN LEFT leg
+addi,r1,r1,4,					//increment to the index value of the GREEN MAN LEFT leg
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN LEFT leg
 beq,terminateLeftArm:,			//If true, then reset the laser and exit the function
 addi,r1,r0,giWHITEMAN,//
-addi,r1,r0,4,					//increment to the index value of the WHITE MAN LEFT leg	
+addi,r1,r1,4,					//increment to the index value of the WHITE MAN LEFT leg	
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN LEFT leg
 beq,terminateLeftArm:,			//If true, then reset the laser and exit the function
 
 //If not the LEFT ARM, then check the LEFT LEG
 addi,r1,r0,giBLUEMAN,//
-addi,r1,r0,6,					//increment to the index value of the BLUE MAN LEFT arm
+addi,r1,r1,6,					//increment to the index value of the BLUE MAN LEFT arm
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN LEFT arm
 beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function	
 addi,r1,r0,giREDMAN,//
-addi,r1,r0,6,					//increment to the index value of the RED MAN LEFT arm
+addi,r1,r1,6,					//increment to the index value of the RED MAN LEFT arm
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN LEFT arm
 beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function
 addi,r1,r0,giGREENMAN,//
-addi,r1,r0,6,					//increment to the index value of the GREEN MAN LEFT arm
+addi,r1,r1,6,					//increment to the index value of the GREEN MAN LEFT arm
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN LEFT arm
 beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function
 addi,r1,r0,giWHITEMAN,//
-addi,r1,r0,6,					//increment to the index value of the WHITE MAN LEFT arm	
+addi,r1,r1,6,					//increment to the index value of the WHITE MAN LEFT arm	
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN LEFT arm
 beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function
 
@@ -474,73 +474,73 @@ beq,resetLeftLaser:,			//If it is the WALL, just jump to resetLeftLaser
 //This is because we have to know where the laser hits the character
 //Note, at this point we don't need to worry about what r1 is
 addi,r1,r0,giBLUEMAN,//
-addi,r1,r0,1,					//Increment to the index value of the BLUE MAN top RIGHT head
+addi,r1,r1,1,					//Increment to the index value of the BLUE MAN top RIGHT head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN top RIGHT head
 beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function
 addi,r1,r0,giREDMAN,//
-addi,r1,r0,1,					//Increment to the index value of the RED MAN top RIGHT head
+addi,r1,r1,1,					//Increment to the index value of the RED MAN top RIGHT head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN top left head
 beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function
 addi,r1,r0,giGREENMAN,//
-addi,r1,r0,1,					//Increment to the index value of the RED MAN top RIGHT head
+addi,r1,r1,1,					//Increment to the index value of the RED MAN top RIGHT head
 cmp,x,r4,r1,			//Check if the glyph INDEX value is the GREEN MAN top left head
 beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function
 addi,r1,r0,giWHITEMAN,//
-addi,r1,r0,1,					//Increment to the index value of the RED MAN top RIGHT head
+addi,r1,r1,1,					//Increment to the index value of the RED MAN top RIGHT head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN top left head
 beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function	
 
 //If not the TOP RIGHT HEAD, then check the BOTTOM RIGHT HEAD
 addi,r1,r0,giBLUEMAN,//
-addi,r1,r0,3,					//increment to the index value of the BLUE MAN bottom left head
+addi,r1,r1,3,					//increment to the index value of the BLUE MAN bottom left head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN bottom left head
 beq,terminateRightHeadBottom:,	//If true, then reset the laser and exit the function	
 addi,r1,r0,giREDMAN,//
-addi,r1,r0,3,					//increment to the index value of the RED MAN bottom left head
+addi,r1,r1,3,					//increment to the index value of the RED MAN bottom left head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN bottom left head
 beq,terminateRightHeadBottom:,	//If true, then reset the laser and exit the function
 addi,r1,r0,giGREENMAN,//
-addi,r1,r0,3,					//increment to the index value of the GREEN MAN bottom left head
+addi,r1,r1,3,					//increment to the index value of the GREEN MAN bottom left head
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN bottom left head
 beq,terminateRightHeadBottom:,	//If true, then reset the laser and exit the function
 addi,r1,r0,giWHITEMAN,//
-addi,r1,r0,3,					//increment to the index value of the WHITE MAN bottom left head	
+addi,r1,r1,3,					//increment to the index value of the WHITE MAN bottom left head	
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN bottom left head
 beq,terminateRightHeadBottom:,	//If true, then reset the laser and exit the function	
 
 //If not the BOTTOM RIGHT HEAD, then check the RIGHT ARM
 addi,r1,r0,giBLUEMAN,//
-addi,r1,r0,5,					//increment to the index value of the BLUE MAN left leg
+addi,r1,r1,5,					//increment to the index value of the BLUE MAN left leg
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN left leg
 beq,terminateRightArm:,			//If true, then reset the laser and exit the function	
 addi,r1,r0,giREDMAN,
-addi,r1,r0,5,					//increment to the index value of the RED MAN left leg
+addi,r1,r1,5,					//increment to the index value of the RED MAN left leg
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN left leg
 beq,terminateRightArm:,			//If true, then reset the laser and exit the function
 addi,r1,r0,giGREENMAN,
-addi,r1,r0,5,					//increment to the index value of the GREEN MAN left leg
+addi,r1,r1,5,					//increment to the index value of the GREEN MAN left leg
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN left leg
 beq,terminateRightArm:,			//If true, then reset the laser and exit the function
 addi,r1,r0,giWHITEMAN,
-addi,r1,r0,5,					//increment to the index value of the WHITE MAN left leg	
+addi,r1,r1,5,					//increment to the index value of the WHITE MAN left leg	
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN left leg
 beq,terminateRightArm:,			//If true, then reset the laser and exit the function
 
 //If not the RIGHT ARM, then check the RIGHT LEG
 addi,r1,r0,giBLUEMAN,//
-addi,r1,r0,7,					//increment to the index value of the BLUE MAN left arm
+addi,r1,r1,7,					//increment to the index value of the BLUE MAN left arm
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN left arm
 beq,terminateRightLeg:,			//If true, then reset the laser and exit the function	
 addi,r1,r0,giREDMAN,//
-addi,r1,r0,7,					//increment to the index value of the RED MAN left arm
+addi,r1,r1,7,					//increment to the index value of the RED MAN left arm
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN left arm
 beq,terminateRightLeg:,			//If true, then reset the laser and exit the function
 addi,r1,r0,giGREENMAN,//
-addi,r1,r0,7,					//increment to the index value of the GREEN MAN left arm
+addi,r1,r1,7,					//increment to the index value of the GREEN MAN left arm
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN left arm
 beq,terminateRightLeg:,			//If true, then reset the laser and exit the function
 addi,r1,r0,giWHITEMAN,//
-addi,r1,r0,7,					//increment to the index value of the WHITE MAN left arm	
+addi,r1,r1,7,					//increment to the index value of the WHITE MAN left arm	
 cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN left arm
 beq,terminateRightLeg:,			//If true, then reset the laser and exit the function
 
@@ -591,14 +591,21 @@ jra,							//jump to the Return Address of where the function was called
 //*****************************TERMINATE CHARACTER FUNCTION***********************************
 // This function will replace a character glyph with a terminate glyph
 // PARAMETERS:			r3 - glyph MEMORY location
-// LOCAL VARIABLES:		
+// LOCAL VARIABLES:		r1 - glyph INDEX of TERMINATE
+//						r2 - Counter
+//						r28 - Return Address
 // GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glylph
 // RETURN VARIABLES:
 
 terminate:
+addi,r28,r31,0,				//Save the return address
 //use the red glyph for now rather than the giTERMINATE glyph
 addi,r1,r0,giTERMINATE,		//put the TERMINATE glyph into r1
 
+//Set up a counter
+addi,r2,r0,1000,				//Initialize counter to 100
+
+terminateLoop:
 //TOP LEFT HEAD
 str,r1,r3,0,        		//Sets the old position to be the background
 //TOP RIGHT HEAD
@@ -630,6 +637,19 @@ addi,r1,r1,1,				//go to the next glyph INDEX value
 addi,r3,r3,1,       		//go to the next glyph LOCATION
 str,r1,r3,0,				//set the old position to be the background
 
+addi,r27,r1,0,				//Save the current glyph INDEX
+addi,r26,r2,0,				//Save the current counter
+addi,r25,r3,0,				//Save the current MEMORY location
+jal,DrawBackground:,		//Jump and Link to the background to emulate GLYching
+addi,r1,r27,0,				//Restore the current glyph INDEX
+addi,r2,r26,0,				//Restore the current counter
+addi,r3,r25,0,				//Restore the current MEMORY location
+
+subi,r2,r2,1,				//Decrement the counter
+cmpi,x,r2,0,				//Check if we've reached zero
+bne,terminateLoop:,			//If we're not done, branch to the top of the loop
+
+addi,r31,r28,0,				//Restore the Return Address
 jra,						//jump to the Return Address of where the function was called
 
 

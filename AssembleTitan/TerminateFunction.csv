@@ -1,14 +1,21 @@
 //*****************************TERMINATE CHARACTER FUNCTION***********************************
 // This function will replace a character glyph with a terminate glyph
 // PARAMETERS:			r3 - glyph MEMORY location
-// LOCAL VARIABLES:		
+// LOCAL VARIABLES:		r1 - glyph INDEX of TERMINATE
+//						r2 - Counter
+//						r28 - Return Address
 // GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glylph
 // RETURN VARIABLES:
 
 terminate:
+addi,r28,r31,0,				//Save the return address
 //use the red glyph for now rather than the giTERMINATE glyph
 addi,r1,r0,giTERMINATE,		//put the TERMINATE glyph into r1
 
+//Set up a counter
+addi,r2,r0,1000,				//Initialize counter to 100
+
+terminateLoop:
 //TOP LEFT HEAD
 str,r1,r3,0,        		//Sets the old position to be the background
 //TOP RIGHT HEAD
@@ -40,6 +47,20 @@ addi,r1,r1,1,				//go to the next glyph INDEX value
 addi,r3,r3,1,       		//go to the next glyph LOCATION
 str,r1,r3,0,				//set the old position to be the background
 
+
+addi,r27,r1,0,				//Save the current glyph INDEX
+addi,r26,r2,0,				//Save the current counter
+addi,r25,r3,0,				//Save the current MEMORY location
+jal,DrawBackground:,		//Jump and Link to the background to emulate GLYching
+addi,r1,r27,0,				//Restore the current glyph INDEX
+addi,r2,r26,0,				//Restore the current counter
+addi,r3,r25,0,				//Restore the current MEMORY location
+
+subi,r2,r2,1,				//Decrement the counter
+cmpi,x,r2,0,				//Check if we've reached zero
+bne,terminateLoop:,			//If we're not done, branch to the top of the loop
+
+addi,r31,r28,0,				//Restore the Return Address
 jra,						//jump to the Return Address of where the function was called
 
 	

@@ -16,7 +16,7 @@ updateRightLaser:,//
 addi,r29,r31,0,					//Store the return address
 
 str,r0,r2,VGA,					//Store the background INDEX (index 0) into the glyph MEMORY location of the laser
-addi,r3,r2,1,					//Check location next to the laser (1 location to the right)
+addi,r3,r2,-1,					//Check location next to the laser (1 location to the right)
 addi,r3,r3,VGA,					//Glyph MEMORY location of glyph to check
 ld,r4,r3,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
 cmpi,x,r4,0,					//Check if index is the background glyph (index )
