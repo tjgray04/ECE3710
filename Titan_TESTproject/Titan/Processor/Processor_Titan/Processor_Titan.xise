@@ -221,7 +221,7 @@
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="189"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="189"/>
     </file>
-    <file xil_pn:name="NES_CONTROLLER.v" xil_pn:type="FILE_VERILOG"/>
+    <file xil_pn:name="../../../../NES_CONTROLLER/NES_CONTROLLER.v" xil_pn:type="FILE_VERILOG"/>
     <file xil_pn:name="System.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
@@ -230,10 +230,6 @@
       <association xil_pn:name="PostMapSimulation" xil_pn:seqID="248"/>
       <association xil_pn:name="PostRouteSimulation" xil_pn:seqID="248"/>
       <association xil_pn:name="PostTranslateSimulation" xil_pn:seqID="248"/>
-    </file>
-    <file xil_pn:name="NES_CONTROLLER.v" xil_pn:type="FILE_VERILOG">
-      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="10"/>
-      <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
     </file>
     <file xil_pn:name="TestGlyphMover.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="0"/>
@@ -273,6 +269,10 @@
     <file xil_pn:name="AssemblyCode.dat" xil_pn:type="FILE_USERDOC"/>
     <file xil_pn:name="GlyphLibrary.dat" xil_pn:type="FILE_USERDOC"/>
     <file xil_pn:name="InitialMap.dat" xil_pn:type="FILE_USERDOC"/>
+    <file xil_pn:name="NES_Controller_2.v" xil_pn:type="FILE_VERILOG">
+      <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="317"/>
+      <association xil_pn:name="Implementation" xil_pn:seqID="10"/>
+    </file>
     <file xil_pn:name="ipcore_dir/DCM_50M.xise" xil_pn:type="FILE_COREGENISE">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>

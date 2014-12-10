@@ -1,28 +1,50 @@
 //*****************************COUNT DOWN FUNCTION***********************************
 // This function will replace a character glyph with a terminate glyph
-// PARAMETERS:			r3 - glyph MEMORY location
+// PARAMETERS:			
 // LOCAL VARIABLES:		
-// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glyph
+// GLOBAL VARIABLES:	
 // RETURN VARIABLES:
 
 countDown:
 addi,r30,r31,0,				//Store the Return Address
 
+jal,startLoop:,				//Jump and link to the start loop
+addi,r0,r0,0,				//NOP
 jal,three:,					//Jump and link to the Three Function to draw a three
 addi,r0,r0,0,				//NOP
-jal,startLoop::,			//Jump and link to the waitLoop before drawing Two			
+jal,startLoop:,				//Jump and link to the waitLoop before drawing Two			
+addi,r0,r0,0,				//NOP
+jal,threeRemove:,			//Jump and link to the Three Remove Function
+addi,r0,r0,0,				//NOP
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two
+addi,r0,r0,0,				//NOP
 
 jal,two:,
 addi,r0,r0,0,				//NOP
-jal,startLoop::,			//Jump and link to the waitLoop before drawing One
+jal,startLoop:,				//Jump and link to the waitLoop before drawing One
+addi,r0,r0,0,				//NOP
+jal,twoRemove:,				//Jump and link to the Three Remove Function
+addi,r0,r0,0,				//NOP
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two	
+addi,r0,r0,0,				//NOP
 
 jal,one:,
 addi,r0,r0,0,				//NOP
-jal,startLoop::,			//Jump and link to the waitLoop before drawing Start
+jal,startLoop:,				//Jump and link to the waitLoop before drawing Start
+addi,r0,r0,0,				//NOP
+jal,oneRemove:,				//Jump and link to the Three Remove Function
+addi,r0,r0,0,				//NOP
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two
+addi,r0,r0,0,				//NOP	
 
 jal,start:,
 addi,r0,r0,0,				//NOP
-jal,startLoop::,			//Jump and link to the waitLoop before starting the game
+jal,startLoop:,				//Jump and link to the waitLoop before starting the game
+addi,r0,r0,0,				//NOP
+jal,startRemove:,			//Jump and link to the Three Remove Function
+addi,r0,r0,0,				//NOP
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two
+addi,r0,r0,0,				//NOP
 
 addi,r31,r30,0,				//Restore the return address
 jra,						//jump to the Return Address of where the function was called

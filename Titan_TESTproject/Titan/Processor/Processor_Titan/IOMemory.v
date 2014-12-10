@@ -44,9 +44,12 @@ module IOMemory#(parameter WIDTH = 8, RAM_ADDR_BITS = 14)
 wire [7:0] NESdata;
 
 //Instantiate NES Controller
-NES_CONTROLLER nes(.clock(clk), .reset(reset), .data(NESinputData), .latch(latch), .pulse(pulse), 
-						.controller_data(NESdata));
+//NES_CONTROLLER nes(.clock(clk), .reset(reset), .data(NESinputData), .latch(latch), .pulse(pulse), 
+//						.controller_data(NESdata));
 
+NES_Controller_2 nes1(.clock(clk), .reset(reset), .data(NESinputData), .latch(latch), .pulse(pulse), 
+						.controller_data(NESdata));
+						
 //Instantiate Sound Generator
 
 //IO Write

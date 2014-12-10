@@ -1,0 +1,246 @@
+//*****************************START REMOVE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+startRemove:,//
+//Begin with the 1st row of Start
+addi,r1,r0,0,							//Add the 0 into r1
+addi,r2,r0,START,						//Add the START glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of START into r2
+//Top of S
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//Top of T
+str,r1,r2,4,
+str,r1,r2,5,
+str,r1,r2,6,
+str,r1,r2,7,
+str,r1,r2,8,
+
+//Top of A
+str,r1,r2,10,
+str,r1,r2,11,
+str,r1,r2,12,
+str,r1,r2,13,
+str,r1,r2,14,
+
+//Top of R
+str,r1,r2,16,
+str,r1,r2,17,
+str,r1,r2,18,
+str,r1,r2,19,
+
+//Top of T
+str,r1,r2,21,
+str,r1,r2,22,
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+
+//2nd row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//3rd row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//4th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//5th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//6th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,12,
+str,r1,r2,13,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,17,
+str,r1,r2,18,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//7th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,17,
+
+//T
+str,r1,r2,23,
+
+//8th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,18,
+
+//T
+str,r1,r2,23,
+
+//9th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//10th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//11th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+jra,						//jump to the Return Address of where the function was called
