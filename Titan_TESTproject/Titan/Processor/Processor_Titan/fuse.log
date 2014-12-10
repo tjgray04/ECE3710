@@ -1,0 +1,82 @@
+Running: C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.exe -prj C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_beh.prj work.SystemControllerIntegration_TestBench work.glbl 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/DCM_50M.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ipcore_dir/DCM_50M/example_design/DCM_50M_exdes.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ZeroPad.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SignExtender.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/Shifter.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/RegFile.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/Mux.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in ALU with formal parameter declaration list
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/vgaControl.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ProgramStatusRegister.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ProgramCounter.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/NES_CONTROLLER.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" into library work
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 31: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 32: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 37: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 47: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 58: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 63: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 67: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 70: Parameter declaration becomes local in LogicController with formal parameter declaration list
+WARNING:HDLCompiler:693 - "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LogicController.v" Line 81: Parameter declaration becomes local in LogicController with formal parameter declaration list
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/InstructionROM.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/InstructionDecoder.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ExecutionStage.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterROM.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/CharacterDisplayRAM.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/Titan.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/MemoryController.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/IOMemory.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DisplayVGA.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DataRAM.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/System.v" into library work
+Analyzing Verilog file "C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module Mux
+Compiling module ProgramCounter
+Compiling module InstructionROM
+Compiling module InstructionDecoder
+Compiling module RegFile
+Compiling module Mux(WIDTH=5)
+Compiling module ALU
+Compiling module Shifter
+Compiling module SignExtender
+Compiling module ExecutionStage
+Compiling module LogicController
+Compiling module ZeroPad
+Compiling module ProgramStatusRegister
+Compiling module Titan
+Compiling module MemoryController
+Compiling module DataRAM
+Compiling module NES_CONTROLLER
+Compiling module IOMemory
+Compiling module vgaControl
+Compiling module CharacterDisplayRAM
+Compiling module CharacterROM
+Compiling module DisplayVGA
+Compiling module IBUFG
+Compiling module dcm_sp_clock_divide_by_2
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_clock_lost
+Compiling module DCM_SP
+Compiling module BUFG
+Compiling module DCM_50M
+Compiling module System
+Compiling module SystemControllerIntegration_Test...
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 11 sub-compilation(s) to finish...
+Compiled 33 Verilog Units
+Built simulation executable C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.exe
+Fuse Memory Usage: 32624 KB
+Fuse CPU Usage: 1497 ms

@@ -1,0 +1,76 @@
+ISim log file
+Running: C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SystemControllerIntegration_TestBench_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SystemControllerIntegration_TestBench_isim_beh.wdb 
+ISim P.49d (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 160.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# run 160.00us
+# restart
+# run 25.0us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 10.0ns
+# run 100.0ns
+# run 100.0ns
+# run 25.0us
+# run 100.0ns
+# run 100.0ns
+# run 100.0ns
+# restart
+# run 43.0us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 100.0ns
+# run 100.0ns
