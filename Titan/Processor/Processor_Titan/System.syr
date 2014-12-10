@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: System.prj
 
@@ -114,77 +114,79 @@ Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Proces
 Parsing module <DCM_50M_exdes>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ZeroPad.v" into library work
 Parsing module <ZeroPad>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ticksMux.v" into library work
+Parsing module <ticksMux>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\sound_generator.v" into library work
+Parsing module <sound_generator>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundRegControlFSM.v" into library work
+Parsing module <SoundRegControlFSM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundMux.v" into library work
+Parsing module <SoundMux>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundMux.v" Line 28. parameter declaration becomes local in SoundMux with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundMux.v" Line 29. parameter declaration becomes local in SoundMux with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" into library work
+Parsing module <SoundFX_FSM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundControllerReg.v" into library work
+Parsing module <SoundControllerReg>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" into library work
+Parsing module <melody_library>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" Line 28. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" Line 29. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" Line 30. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" Line 31. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" Line 32. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" Line 33. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" Line 36. parameter declaration becomes local in melody_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v" Line 59. parameter declaration becomes local in melody_library with formal parameter declaration list
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SignExtender.v" into library work
 Parsing module <SignExtender>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Shifter.v" into library work
 Parsing module <Shifter>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\RegFile.v" into library work
 Parsing module <RegFile>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Pulse_generator.v" into library work
+Parsing module <pulse_generator>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Mux.v" into library work
 Parsing module <Mux>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" into library work
+Parsing module <LaserSFXLibrary>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 29. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 30. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 31. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 32. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 33. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 34. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 37. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 48. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" into library work
+Parsing module <Duration_FSM>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" into library work
+Parsing module <DeathSFXLibrary>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 29. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 30. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 31. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 32. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 33. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 34. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 37. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 48. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" into library work
+Parsing module <bass_library>.
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" Line 28. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" Line 29. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" Line 30. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" Line 31. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" Line 32. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" Line 33. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" Line 36. parameter declaration becomes local in bass_library with formal parameter declaration list
+INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v" Line 71. parameter declaration becomes local in bass_library with formal parameter declaration list
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" into library work
 Parsing module <ALU>.
 INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ALU.v" Line 41. parameter declaration becomes local in ALU with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\ticksMux.v" into library work
-Parsing module <ticksMux>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\sound_generator.v" into library work
-Parsing module <sound_generator>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundRegControlFSM.v" into library work
-Parsing module <SoundRegControlFSM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" into library work
-Parsing module <SoundMux>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" Line 28. parameter declaration becomes local in SoundMux with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v" Line 29. parameter declaration becomes local in SoundMux with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" into library work
-Parsing module <SoundFX_FSM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundControllerReg.v" into library work
-Parsing module <SoundControllerReg>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" into library work
-Parsing module <melody_library>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 28. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 29. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 30. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 31. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 32. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 33. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 36. parameter declaration becomes local in melody_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v" Line 59. parameter declaration becomes local in melody_library with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Pulse_generator.v" into library work
-Parsing module <pulse_generator>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" into library work
-Parsing module <LaserSFXLibrary>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 29. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 30. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 31. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 32. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 33. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 34. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 37. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 48. parameter declaration becomes local in LaserSFXLibrary with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" into library work
-Parsing module <Duration_FSM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" into library work
-Parsing module <DeathSFXLibrary>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 29. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 30. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 31. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 32. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 33. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 34. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 37. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 48. parameter declaration becomes local in DeathSFXLibrary with formal parameter declaration list
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" into library work
-Parsing module <bass_library>.
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 28. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 29. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 30. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 31. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 32. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 33. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 36. parameter declaration becomes local in bass_library with formal parameter declaration list
-INFO:HDLCompiler:693 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v" Line 71. parameter declaration becomes local in bass_library with formal parameter declaration list
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\vgaControl.v" into library work
 Parsing module <vgaControl>.
+Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundGenerator.v" into library work
+Parsing module <SoundGenerator>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramStatusRegister.v" into library work
 Parsing module <ProgramStatusRegister>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ProgramCounter.v" into library work
@@ -212,8 +214,6 @@ Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Proces
 Parsing module <CharacterROM>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\CharacterDisplayRAM.v" into library work
 Parsing module <CharacterDisplayRAM>.
-Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v" into library work
-Parsing module <SoundGenerator>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Titan.v" into library work
 Parsing module <Titan>.
 Analyzing Verilog file "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\MemoryController.v" into library work
@@ -277,11 +277,11 @@ Elaborating module <SoundGenerator>.
 Elaborating module <pulse_generator>.
 
 Elaborating module <Duration_FSM>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 54: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 55: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 56: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 57: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v" Line 58: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 54: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 55: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 56: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 57: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 58: Result of 32-bit expression is truncated to fit in 3-bit target.
 
 Elaborating module <melody_library>.
 
@@ -292,22 +292,22 @@ Elaborating module <bass_library>.
 Elaborating module <SoundRegControlFSM>.
 
 Elaborating module <SoundFX_FSM>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 76: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 83: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 90: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 97: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 104: Result of 32-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 130: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 148: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 166: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 184: Result of 8-bit expression is truncated to fit in 7-bit target.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v" Line 202: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 76: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 83: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 90: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 97: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 104: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 130: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 148: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 166: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 184: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 202: Result of 8-bit expression is truncated to fit in 7-bit target.
 
 Elaborating module <LaserSFXLibrary>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v" Line 63: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 63: Result of 7-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <DeathSFXLibrary>.
-WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v" Line 63: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 63: Result of 7-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <ticksMux>.
 
@@ -569,14 +569,14 @@ Synthesizing Unit <NES_CONTROLLER>.
 Unit <NES_CONTROLLER> synthesized.
 
 Synthesizing Unit <SoundGenerator>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundGenerator.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundGenerator.v".
         TICKBITS = 20
     Summary:
 	no macro.
 Unit <SoundGenerator> synthesized.
 
 Synthesizing Unit <pulse_generator>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Pulse_generator.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Pulse_generator.v".
         maxCount = 187500
     Found 1-bit register for signal <enable>.
     Found 27-bit register for signal <count>.
@@ -588,7 +588,7 @@ Synthesizing Unit <pulse_generator>.
 Unit <pulse_generator> synthesized.
 
 Synthesizing Unit <Duration_FSM>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\Duration_FSM.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v".
         fetch = 0
         quarter = 1
         eigth = 2
@@ -608,7 +608,7 @@ Synthesizing Unit <Duration_FSM>.
 Unit <Duration_FSM> synthesized.
 
 Synthesizing Unit <melody_library>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\song_library.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\song_library.v".
         TICKBITS = 20
     Found 9-bit register for signal <count>.
     Found 9-bit adder for signal <count[8]_GND_58_o_add_2_OUT> created at line 67.
@@ -621,7 +621,7 @@ Synthesizing Unit <melody_library>.
 Unit <melody_library> synthesized.
 
 Synthesizing Unit <sound_generator>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\sound_generator.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\sound_generator.v".
         TICKBITS = 20
 WARNING:Xst:647 - Input <ticks<0:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 20-bit register for signal <count>.
@@ -636,7 +636,7 @@ WARNING:Xst:647 - Input <ticks<0:0>> is never used. This port will be preserved 
 Unit <sound_generator> synthesized.
 
 Synthesizing Unit <bass_library>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\bass_library.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\bass_library.v".
         TICKBITS = 20
     Found 9-bit register for signal <count>.
     Found 9-bit adder for signal <count[8]_GND_60_o_add_2_OUT> created at line 79.
@@ -647,7 +647,7 @@ Synthesizing Unit <bass_library>.
 Unit <bass_library> synthesized.
 
 Synthesizing Unit <SoundRegControlFSM>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundRegControlFSM.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundRegControlFSM.v".
         DEATH = 2'b11
         ENABLED = 3'b000
         DISABLED = 3'b001
@@ -674,7 +674,7 @@ Synthesizing Unit <SoundRegControlFSM>.
 Unit <SoundRegControlFSM> synthesized.
 
 Synthesizing Unit <SoundFX_FSM>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundFX_FSM.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v".
         fetch = 0
         quarter = 1
         eigth = 2
@@ -699,7 +699,7 @@ Synthesizing Unit <SoundFX_FSM>.
 Unit <SoundFX_FSM> synthesized.
 
 Synthesizing Unit <LaserSFXLibrary>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\LaserSFXLibrary.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v".
         TICKBITS = 20
     Found 1-bit register for signal <SFXended>.
     Found 6-bit register for signal <count>.
@@ -711,7 +711,7 @@ Synthesizing Unit <LaserSFXLibrary>.
 Unit <LaserSFXLibrary> synthesized.
 
 Synthesizing Unit <DeathSFXLibrary>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\DeathSFXLibrary.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v".
         TICKBITS = 20
     Found 1-bit register for signal <SFXended>.
     Found 6-bit register for signal <count>.
@@ -725,21 +725,21 @@ Synthesizing Unit <DeathSFXLibrary>.
 Unit <DeathSFXLibrary> synthesized.
 
 Synthesizing Unit <ticksMux>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\ticksMux.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ticksMux.v".
         WIDTH = 20
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <ticksMux> synthesized.
 
 Synthesizing Unit <SoundControllerReg>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundControllerReg.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundControllerReg.v".
     Found 2-bit register for signal <soundReg>.
     Summary:
 	inferred   2 D-type flip-flop(s).
 Unit <SoundControllerReg> synthesized.
 
 Synthesizing Unit <SoundMux>.
-    Related source file is "C:\Users\u0655172\Desktop\ECE3710\SoundGenerator\SoundMux.v".
+    Related source file is "C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundMux.v".
         TICKBITS = 20
     Summary:
 	inferred   1 Multiplexer(s).
@@ -1560,12 +1560,12 @@ dispVGA/vgaCtrl/clk25M|    6.618|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 42.00 secs
-Total CPU time to Xst completion: 42.56 secs
+Total REAL time to Xst completion: 43.00 secs
+Total CPU time to Xst completion: 42.53 secs
  
 --> 
 
-Total memory usage is 332456 kilobytes
+Total memory usage is 334260 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   30 (   0 filtered)

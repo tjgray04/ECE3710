@@ -9,13 +9,13 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>blibrary - bass_library (C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/bass_library.v)</SelectedItem>
+         <SelectedItem>SoundGenerator (C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >11</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >7</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000188000000020000000000000000000000000200000064ffffffff000000810000000300000002000001880000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>blibrary - bass_library (C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/bass_library.v)</CurrentItem>
+      <CurrentItem>SoundGenerator (C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/SoundGenerator.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>

@@ -13,6 +13,8 @@
          <ClosedNode>/System C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/ioMem - IOMemory</ClosedNode>
          <ClosedNode>/System C:|Users|u0499404|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/PSR - ProgramStatusRegister</ClosedNode>
          <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/dispVGA - DisplayVGA</ClosedNode>
+         <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/ioMem - IOMemory</ClosedNode>
+         <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan</ClosedNode>
          <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/ExStage - ExecutionStage</ClosedNode>
          <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/PC - ProgramCounter</ClosedNode>
          <ClosedNode>/System C:|Users|u0655172|Desktop|ECE3710|Titan|Processor|Processor_Titan|System.v/titan - Titan/PSR - ProgramStatusRegister</ClosedNode>
@@ -43,13 +45,13 @@
          <ClosedNode>/vgaControl_TestBench C:|Users|u0791587|Documents|GitHub|ECE3710|Titan|Processor|Processor_Titan|vgaControl_TestBench.v</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>pulseGen - pulse_generator (C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/Pulse_generator.v)</SelectedItem>
+         <SelectedItem>sg - SoundGenerator (C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/SoundGenerator.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >29</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >13</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001b9000000020000000000000000000000000200000064ffffffff000000810000000300000002000001b90000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>pulseGen - pulse_generator (C:/Users/u0655172/Desktop/ECE3710/SoundGenerator/Pulse_generator.v)</CurrentItem>
+      <CurrentItem>sg - SoundGenerator (C:/Users/u0655172/Desktop/ECE3710/Titan/Processor/Processor_Titan/SoundGenerator.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
@@ -95,7 +97,7 @@
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff0000000000000002000000cf000000ca01000000050100000002</SourceProcessView>
+   <SourceProcessView>000000ff0000000000000002000000f70000005a01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>

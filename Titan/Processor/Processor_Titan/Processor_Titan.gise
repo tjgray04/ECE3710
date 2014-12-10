@@ -461,14 +461,10 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1418169909" xil_pn:in_ck="-2867864419978122084" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2650511322985255976" xil_pn:start_ts="1418169863">
+    <transform xil_pn:end_ts="1418235847" xil_pn:in_ck="-8633980275594605060" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="-2650511322985255976" xil_pn:start_ts="1418235802">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="DisplayVGA.ngr"/>
       <outfile xil_pn:name="ExecutionStage.ngr"/>
       <outfile xil_pn:name="ProgramStatusRegister.ngr"/>
@@ -495,7 +491,8 @@
     <transform xil_pn:end_ts="1418169919" xil_pn:in_ck="8282500562381546837" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="3898234420971544778" xil_pn:start_ts="1418169909">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="System.bld"/>
       <outfile xil_pn:name="System.ngd"/>
       <outfile xil_pn:name="System_ngdbuild.xrpt"/>
@@ -535,10 +532,12 @@
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
     </transform>
     <transform xil_pn:end_ts="1418170391" xil_pn:in_ck="-8735058955677194016" xil_pn:name="TRANEXT_bitFile_spartan6" xil_pn:prop_ck="5341574683187206424" xil_pn:start_ts="1418170361">
-      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="System.ut"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="system.bgn"/>
