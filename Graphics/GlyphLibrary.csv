@@ -41,7 +41,7 @@ Termination6,
 Termination7,
 Termination8,
 BlueLaserLeft,
-BlueLaserRight,
+BlueLaserRight,//The real thing
 RedLaserLeft, //Direction matters for the lasers
 RedLaserRight,
 GreenLaserLeft,
