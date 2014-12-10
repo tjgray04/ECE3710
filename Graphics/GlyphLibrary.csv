@@ -42,7 +42,7 @@ Termination7,
 Termination8,
 BlueLaserLeft,
 BlueLaserRight,
-RedLaserLeft, //Direction matters for the red laser
+RedLaserLeft, //Direction matters for the lasers
 RedLaserRight,
 GreenLaserLeft,
 GreenLaserRight,
@@ -54,12 +54,4 @@ WhiteTile,
 YellowTile,
 OrangeTile,
 GreenTile,
-BlueLaserLeft,
-BlueLaserRight,
-RedLaserLeft, //Direction matters for the red laser
-RedLaserRight,
-GreenLaserLeft,
-GreenLaserRight,
-WhiteLaserLeft,
-WhiteLaserRight,
 
