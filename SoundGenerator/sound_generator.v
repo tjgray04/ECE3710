@@ -35,7 +35,7 @@ always@(posedge clk)
         sound<=0;
 	     count<=0;
       end
-    else if(count==ticks)			//The number of ticks determines the frequency
+    else if(count==(ticks>>1))			//The number of ticks determines the frequency
 	   begin
 		  sound<=~sound;				//When the count reaches the tick number, alternate the output. This creates a simple tone of the desired frequency.
 		  count<=0;

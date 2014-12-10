@@ -22,7 +22,7 @@ module MemoryController#(parameter WIDTH = 32)
 	(input writeEn,
 	input [WIDTH-1:0] addressIN, CPUdata_IN,
 	input [WIDTH-1:0] memData_IN,
-	input [7:0] IOdata_IN,
+	input [31:0] IOdata_IN,
 	input	[6:0] vgaData_IN,
 	output reg memData_wrEn, vgaData_wrEn, IOdata_wrEn,
 	output reg [WIDTH-1:0] CPUdata_OUT, memData_OUT,

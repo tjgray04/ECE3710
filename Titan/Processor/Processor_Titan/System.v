@@ -20,11 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 module System#(parameter WIDTH = 32)(
 		input clk, reset,
-		input NESinputData,
-		output latch, pulse,
+		input NESinputData1,NESinputData2,NESinputData3,NESinputData4,
+		output latch1,latch2,latch3,latch4, pulse1,pulse2,pulse3,pulse4,
 		output hSync, vSync,
 		output [7:0] rgb,
-		output [7:0] leds
+		output [7:0] leds,
+		output soundMelody, soundBass
     );
 
 //Wires
@@ -32,7 +33,8 @@ module System#(parameter WIDTH = 32)(
 	wire [WIDTH-1:0] memControllerData, memAddr, memWriteData;
 	//Memory Controller wires
 	wire [WIDTH-1:0] memData_IN; //, stackData_IN;
-	wire [7:0] IOdata_IN, IOdata_OUT;
+	wire [7:0] IOdata_OUT;
+	wire [WIDTH-1:0] IOdata_IN;
 	wire [6:0] vgaData_IN, vgaData_OUT;
 	wire [WIDTH-1:0] memData_OUT; //, stackData_OUT;
 	wire [13:0] addressOUT;
@@ -60,8 +62,8 @@ DataRAM dataRAM(.clk(clk_50M), .enRAM(enRAM), .memWrite(memData_wrEn), .input_da
 
 //IO Memory				
 IOMemory ioMem(.clk(clk_50M), .en(enRAM), .memWrite(IOdata_wrEn), .input_data(IOdata_OUT),
-					.address(addressOUT), .IO_Data(IOdata_IN), .reset(systemReset), .NESinputData(NESinputData),
-					.latch(latch), .pulse(pulse), .leds(leds));
+					.address(addressOUT), .IO_Data(IOdata_IN), .reset(systemReset), .NESinputData1(NESinputData1),.NESinputData2(NESinputData2),.NESinputData3(NESinputData3),.NESinputData4(NESinputData4),
+					.latch1(latch1),.latch2(latch2),.latch3(latch3),.latch4(latch4), .pulse1(pulse1),.pulse2(pulse2),.pulse3(pulse3),.pulse4(pulse4), .leds(leds),.soundMelody(soundMelody), .soundBass(soundBass));
 
 //VGA Display							
 DisplayVGA dispVGA(.clk(clk_50M), .reset(systemReset), .cpuWriteEn(vgaData_wrEn), .writeData(vgaData_OUT),

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<document OS="nt64" product="ISE" version="14.4">
+<document OS="nt64" product="ISE" version="14.7">
 
   <!--The data in this file is primarily intended for consumption by Xilinx tools.
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Tue Dec 09 17:31:07 2014">
+  <application stringID="par" timeStamp="Tue Dec 09 17:08:40 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.4\ISE_DS\ISE\\bin\nt64;C:\Xilinx\Vivado_HLS\2012.4\bin;C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.4\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.4\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\Vivado\2012.4\bin;C:\Xilinx\14.4\ISE_DS\PlanAhead\bin;C:\Xilinx\14.4\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.4\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.4\ISE_DS\common\bin\nt64;C:\Xilinx\14.4\ISE_DS\common\lib\nt64;C:\Microsemi\Libero_v10.1\Model\win32acoem;C:\Microsemi\Libero_v10.1\Designer\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\1.5\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\1.5\bin\x64;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Java\jre\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\fet\bin;C:\OrCAD\OrCAD_16.6_Lite\OpenAccess\bin\win32\opt;C:\OrCAD\OrCAD_16.6_Lite\tools\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\Capture;C:\OrCAD\OrCAD_16.6_Lite\tools\PSpice;C:\Program Files (x86)\Java\jre7\bin"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\XSTOOLs;C:\Program Files\TortoiseSVN\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -20,36 +20,32 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE\"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\EDK"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\PlanAhead"/>
-        </row>
-        <row stringID="row" value="6">
-          <item stringID="variable" value="XILINX_VIVADO"/>
-          <item stringID="value" value="C:\Xilinx\Vivado\2012.4"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Microsoft Windows 7 , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="Service Pack 1  (build 7601)"/>
       </item>
-      <item stringID="User_EnvHost" value="SteveBrown-PC"/>
+      <item stringID="User_EnvHost" value="dslwin13"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz"/>
-          <item stringID="speed" value="2893 MHz"/>
+          <item stringID="arch" value="AMD Phenom(tm) II X4 945 Processor"/>
+          <item stringID="speed" value="3013 MHz"/>
         </row>
       </table>
     </section>
@@ -63,12 +59,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="6 mins 59 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="6 mins 59 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="2 mins 47 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="2 mins 48 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
         <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="8 mins 5 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="8 mins 5 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="3 mins 26 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="3 mins 28 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -236,7 +232,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B5"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_0"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="24">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B6"/>
@@ -267,7 +263,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B10"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_0"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="29">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B11"/>
@@ -298,7 +294,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B15"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_0"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="34">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="B16"/>
@@ -485,7 +481,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D7"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_0"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="62">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D8"/>
@@ -523,7 +519,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D13"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_0"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="68">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="D14"/>
@@ -565,7 +561,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E2"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_3"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="75">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E3"/>
@@ -616,7 +612,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E10"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_0"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="83">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="E11"/>
@@ -740,10 +736,17 @@
           </row>
           <row stringID="row" value="101">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F11"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBM"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="soundMelody"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L42P_0"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="102">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="F12"/>
@@ -816,7 +819,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G4"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_3"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="113">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G5"/>
@@ -855,10 +858,17 @@
           </row>
           <row stringID="row" value="119">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G11"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBM"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="soundBass"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L40P_0"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="0"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="120">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="G12"/>
@@ -1020,23 +1030,36 @@
           </row>
           <row stringID="row" value="145">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J1"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBS"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="latch4"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L40N_M3DQ7_3"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="146">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J2"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_3"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="147">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J3"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBM"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="NESinputData4"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L40P_M3DQ6_3"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="148">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J4"/>
@@ -1046,7 +1069,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J5"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_3"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="150">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="J6"/>
@@ -1124,24 +1147,44 @@
           </row>
           <row stringID="row" value="163">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K1"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBS"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="latch3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L38N_M3DQ3_3"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="164">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K2"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBM"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="NESinputData3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L38P_M3DQ2_3"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="165">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K3"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBS"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="pulse4"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L42N_GCLK24_M3LDM_3"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="166">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="K4"/>
@@ -1259,10 +1302,17 @@
           </row>
           <row stringID="row" value="184">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="L4"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBM"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="pulse3"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L39P_M3LDQS_3"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="185">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="L5"/>
@@ -1374,7 +1424,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M4"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_3"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="203">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M5"/>
@@ -1406,10 +1456,16 @@
           </row>
           <row stringID="row" value="208">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M10"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBM"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="NESinputData2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L22P_2"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="INPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+            <item label="IOB&#xA;Delay" stringID="IOB_Delay" value="NONE"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="209">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="M11"/>
@@ -1540,14 +1596,21 @@
           </row>
           <row stringID="row" value="225">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N9"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBS"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="latch2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L22N_2"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="226">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="N10"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="pulse"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="pulse1"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L20P_2"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -1757,7 +1820,7 @@
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="R2"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="VCCO_3"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="3"/>
-            <item label="Voltage" stringID="Voltage" value="any******"/>
+            <item label="Voltage" stringID="Voltage" value="3.30"/>
           </row>
           <row stringID="row" value="255">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="R3"/>
@@ -1967,7 +2030,7 @@
           </row>
           <row stringID="row" value="282">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="T12"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="NESinputData"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="NESinputData1"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L19P_2"/>
             <item stringID="Direction" value="INPUT"/>
@@ -2091,10 +2154,17 @@
           </row>
           <row stringID="row" value="299">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="U11"/>
-            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOBM"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="pulse2"/>
+            <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L23P_2"/>
-            <item stringID="Direction" value="UNUSED"/>
+            <item stringID="Direction" value="OUTPUT"/>
+            <item label="IO&#xA;Standard" sort="smart" stringID="IO_Standard" value="LVCMOS33"/>
             <item label="IO Bank&#xA;Number" stringID="IO_Bank_Number" value="2"/>
+            <item label="Drive&#xA;(mA)" stringID="Drive" value="12"/>
+            <item label="Slew&#xA;Rate" stringID="Slew_Rate" value="SLOW"/>
+            <item label="Constraint" stringID="Constraint" value="LOCATED"/>
+            <item label="IO&#xA;Register" stringID="IO_Register" value="NO"/>
+            <item label="Signal&#xA;Integrity" stringID="Signal_Integrity" value="NONE"/>
           </row>
           <row stringID="row" value="300">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="U12"/>
@@ -2248,7 +2318,7 @@
           </row>
           <row stringID="row" value="318">
             <item label="Pin&#xA;Number" sort="smart" stringID="Pin_Number" value="V12"/>
-            <item label="Signal&#xA;Name" stringID="Signal_Name" value="latch"/>
+            <item label="Signal&#xA;Name" stringID="Signal_Name" value="latch1"/>
             <item label="Pin&#xA;Usage" stringID="Pin_Usage" value="IOB"/>
             <item label="Pin&#xA;Name" sort="smart" stringID="Pin_Name" value="IO_L19N_2"/>
             <item stringID="Direction" value="OUTPUT"/>
@@ -2325,14 +2395,14 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Tue Dec 09 17:31:08 2014">
+  <application stringID="Par" timeStamp="Tue Dec 09 17:08:40 2014">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.4\ISE_DS\ISE\\bin\nt64;C:\Xilinx\Vivado_HLS\2012.4\bin;C:\Xilinx\14.4\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.4\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.4\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\Vivado\2012.4\bin;C:\Xilinx\14.4\ISE_DS\PlanAhead\bin;C:\Xilinx\14.4\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.4\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.4\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.4\ISE_DS\common\bin\nt64;C:\Xilinx\14.4\ISE_DS\common\lib\nt64;C:\Microsemi\Libero_v10.1\Model\win32acoem;C:\Microsemi\Libero_v10.1\Designer\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\OpenCL SDK\1.5\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\1.5\bin\x64;C:\Program Files\TortoiseGit\bin;C:\Program Files (x86)\Java\jre\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\pcb\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\fet\bin;C:\OrCAD\OrCAD_16.6_Lite\OpenAccess\bin\win32\opt;C:\OrCAD\OrCAD_16.6_Lite\tools\bin;C:\OrCAD\OrCAD_16.6_Lite\tools\Capture;C:\OrCAD\OrCAD_16.6_Lite\tools\PSpice;C:\Program Files (x86)\Java\jre7\bin"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.7\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.7\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.7\ISE_DS\PlanAhead\bin;C:\Xilinx\14.7\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.7\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\powerpc-eabi\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\arm\nt\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_be\bin;C:\Xilinx\14.7\ISE_DS\EDK\gnu\microblaze\linux_toolchain\nt64_le\bin;C:\Xilinx\14.7\ISE_DS\common\bin\nt64;C:\Xilinx\14.7\ISE_DS\common\lib\nt64;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\XSTOOLs;C:\Program Files\TortoiseSVN\bin"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -2340,51 +2410,47 @@
         </row>
         <row stringID="row" value="2">
           <item stringID="variable" value="XILINX"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE\"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE\"/>
         </row>
         <row stringID="row" value="3">
           <item stringID="variable" value="XILINX_DSP"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\ISE"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\ISE"/>
         </row>
         <row stringID="row" value="4">
           <item stringID="variable" value="XILINX_EDK"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\EDK"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\EDK"/>
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="XILINX_PLANAHEAD"/>
-          <item stringID="value" value="C:\Xilinx\14.4\ISE_DS\PlanAhead"/>
-        </row>
-        <row stringID="row" value="6">
-          <item stringID="variable" value="XILINX_VIVADO"/>
-          <item stringID="value" value="C:\Xilinx\Vivado\2012.4"/>
+          <item stringID="value" value="C:\Xilinx\14.7\ISE_DS\PlanAhead"/>
         </row>
       </table>
       <item stringID="User_EnvOs" value="OS Information">
         <item stringID="User_EnvOsname" value="Microsoft Windows 7 , 64-bit"/>
         <item stringID="User_EnvOsrelease" value="Service Pack 1  (build 7601)"/>
       </item>
-      <item stringID="User_EnvHost" value="SteveBrown-PC"/>
+      <item stringID="User_EnvHost" value="dslwin13"/>
       <table stringID="User_EnvCpu">
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Core(TM) i7-3520M CPU @ 2.90GHz"/>
-          <item stringID="speed" value="2893 MHz"/>
+          <item stringID="arch" value="AMD Phenom(tm) II X4 945 Processor"/>
+          <item stringID="speed" value="3013 MHz"/>
         </row>
       </table>
     </section>
     <task label="Device Utilization Summary" stringID="PAR_DEVICE_UTLIZATION">
       <section stringID="PAR_SLICE_REPORTING">
-        <item AVAILABLE="18224" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="120">
-          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="119"/>
+        <item AVAILABLE="18224" dataType="int" label="Number of Slice Registers" stringID="PAR_SLICE_REGISTERS" value="292">
+          <item dataType="int" stringID="PAR_NUM_SLICE_FF" value="291"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCH" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="1"/>
         </item>
-        <item AVAILABLE="9112" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="4210">
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="57"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="2376"/>
-          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="243"/>
+        <item AVAILABLE="9112" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="4469">
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="85"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="2575"/>
+          <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="274"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_ROM_O5ANDO6" value="0"/>
@@ -2397,26 +2463,26 @@
           <item dataType="int" stringID="PAR_NUM_SRL_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="3"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="4"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="3"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="4"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="2278" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="1400">
-          <item AVAILABLE="595" dataType="int" stringID="PAR_NUM_SLICEL" value="212"/>
+        <item AVAILABLE="2278" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="1461">
+          <item AVAILABLE="595" dataType="int" stringID="PAR_NUM_SLICEL" value="258"/>
           <item AVAILABLE="544" dataType="int" stringID="PAR_NUM_SLICEM" value="402"/>
-          <item AVAILABLE="1139" dataType="int" stringID="PAR_NUM_SLICEX" value="786"/>
+          <item AVAILABLE="1139" dataType="int" stringID="PAR_NUM_SLICEX" value="801"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="4213">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="4104"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="3"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="106"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="4479">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="4200"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="10"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="269"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">
-        <item AVAILABLE="232" dataType="int" stringID="PAR_AGG_BONDED_IO" value="23"/>
+        <item AVAILABLE="232" dataType="int" stringID="PAR_AGG_BONDED_IO" value="34"/>
         <item AVAILABLE="12" dataType="int" stringID="PAR_AGG_UNBONDED_IO" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IOB_FF" value="0"/>
         <item AVAILABLE="0" dataType="int" stringID="PAR_NUM_IOB_LATCH" value="0"/>
