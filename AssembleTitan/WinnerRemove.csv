@@ -1,0 +1,317 @@
+//*****************************WINNER REMOVE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+winnerRemove:,//
+//Begin with the 1st row of Winner
+addi,r1,r0,0,							//Add 0 into r1
+addi,r2,r0,WINNER,						//Add the Winner glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of Winner into r2
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+str,r1,r2,26,
+
+//2nd row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//3rd row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//4th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//5th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//6th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+str,r1,r2,26,
+
+//7th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+
+//8th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,25,
+
+//9th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,25,
+
+//10th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//10th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+
+//I
+str,r1,r2,6,
+
+//N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+jra,						//jump to the Return Address of where the function was called

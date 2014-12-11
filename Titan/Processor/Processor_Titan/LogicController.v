@@ -46,7 +46,7 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 		//Declare Op Code states for I-Type instructions.
 		parameter ADDI  = 4'b0101,
 					 SUBI  = 4'b1001,
-					 MULTI = 4'b1110,
+//					 MULTI = 4'b1110,
 					 CMPI  = 4'b1011,
 					 ANDI  = 4'b0001,
 					 ORI   = 4'b0010,
@@ -70,7 +70,7 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 		parameter ADD  = 4'b0101,
 					 ADDU = 4'b0110,
 					 SUB  = 4'b1001,
-					 MULT = 4'b1110,
+//					 MULT = 4'b1110,
 					 CMP  = 4'b1011,
 					 AND  = 4'b0001,
 					 OR   = 4'b0010,
@@ -79,7 +79,7 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 
 		//DeclareFunction Code States for RTYPE2 instructions.
 		parameter LSH  = 4'b0100,
-					 LSHI = 4'b0000, //000s, s is taken care of in the shifter.
+					 LSHI = 4'b1110, //000s, s is taken care of in the shifter.
 					 ASH  = 4'b0110,
 					 ASHI = 4'b0011; //001s, s is taken care of in the shifter.
 			
@@ -169,13 +169,13 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 						regWriteEn <= 1'b1;	//write back
 						aluop <= opSUB;		//subtract
 						end
-				MULTI:
-						begin
-						wbSrc <= 1'b1;			//use alu ouput, not mem
-						memSrc <= 1'b1;		//use alu output, not shifter
-						regWriteEn <= 1'b1;	//write back
-						aluop <= opMULT;		//multiply
-						end
+//				MULTI:
+//						begin
+//						wbSrc <= 1'b1;			//use alu ouput, not mem
+//						memSrc <= 1'b1;		//use alu output, not shifter
+//						regWriteEn <= 1'b1;	//write back
+//						aluop <= opMULT;		//multiply
+//						end
 				CMPI:
 						begin
 						LZNWrite <= 1'b1;		//update LZN flags
@@ -203,6 +203,11 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 						memSrc <= 1'b1;		//use alu output, not shifter
 						regWriteEn <= 1'b1;	//write back
 						aluop <= opXOR;		//xor
+						end
+				LSHI:
+						begin
+						wbSrc <= 1'b1;			//use alu output, not mem
+						regWriteEn <= 1'b1;	//write back
 						end
 				BCOND:
 						begin
@@ -251,14 +256,14 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 									regWriteEn <= 1'b1;	//write back
 									aluop <= opSUB;		//sub
 									end
-							MULT:
-									begin
-									wbSrc <= 1'b1;			//use alu ouput, not mem
-									memSrc <= 1'b1;		//use alu output, not shifter
-									aluSrcb <= 1'b1;		//use register arg
-									regWriteEn <= 1'b1;	//write back
-									aluop <= opMULT;		//mult
-									end
+//							MULT:
+//									begin
+//									wbSrc <= 1'b1;			//use alu ouput, not mem
+//									memSrc <= 1'b1;		//use alu output, not shifter
+//									aluSrcb <= 1'b1;		//use register arg
+//									regWriteEn <= 1'b1;	//write back
+//									aluop <= opMULT;		//mult
+//									end
 							CMP:
 									begin
 									LZNWrite <= 1'b1;		//update LZN flags
@@ -319,11 +324,11 @@ module LogicController#(parameter OPBITS =4, FUNCTBITS = 4, REGBITS = 5)
 									aluSrcb <= 1'b1;		//use register arg
 									regWriteEn <= 1'b1;	//write back
 									end
-							LSHI:
-									begin
-									wbSrc <= 1'b1;			//use alu output, not mem
-									regWriteEn <= 1'b1;	//write back
-									end
+//							LSHI:
+//									begin
+//									wbSrc <= 1'b1;			//use alu output, not mem
+//									regWriteEn <= 1'b1;	//write back
+//									end
 							ASH:
 									begin
 									wbSrc <= 1'b1;			//use alu output, not mem

@@ -27,7 +27,6 @@ module LogicController_TestBench;
 	// Inputs
 	reg clk;
 	reg reset;
-	reg [4:0] Rs;
 	reg [3:0] opCode;
 	reg [3:0] functionCode;
 
@@ -49,7 +48,6 @@ module LogicController_TestBench;
 	wire memWrite;
 	wire pcEn;
 	wire [2:0] aluop;
-	wire [4:0] PSRsel;
 
 	// Instantiate the Unit Under Test (UUT)
 	LogicController uut (
@@ -74,7 +72,6 @@ module LogicController_TestBench;
 		.memWrite(memWrite), 
 		.pcEn(pcEn), 
 		.aluop(aluop),
-		.PSRsel(PSRsel)
 	);
 
 	initial begin
@@ -82,7 +79,6 @@ module LogicController_TestBench;
 		clk = 0;
 		reset = 1;
 		opCode = 0;
-		Rs = 0;
 		functionCode = 0;
 
 		// Wait 100 ns for global reset to finish
@@ -102,6 +98,10 @@ module LogicController_TestBench;
 		//store
 		opCode = 4'b1010;
 		functionCode = 4'b0000;
+		#4;
+		//lshi
+		opCode = 4'b1110;
+		
 		
 	end
       

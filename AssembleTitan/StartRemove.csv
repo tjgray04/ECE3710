@@ -17,14 +17,13 @@ str,r1,r2,2,
 str,r1,r2,3,
 
 //Top of T
-str,r1,r2,4,
 str,r1,r2,5,
 str,r1,r2,6,
 str,r1,r2,7,
 str,r1,r2,8,
+str,r1,r2,9,
 
 //Top of A
-str,r1,r2,10,
 str,r1,r2,11,
 str,r1,r2,12,
 str,r1,r2,13,
@@ -197,7 +196,7 @@ str,r1,r2,14,
 
 //R
 str,r1,r2,16,
-str,r1,r2,19,
+str,r1,r2,18,
 
 //T
 str,r1,r2,23,

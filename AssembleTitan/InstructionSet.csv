@@ -36,12 +36,12 @@ op,itype,str,1010
 op,itype,addi,0101
 op,itype,addui,0110
 op,itype,subi,1001
-op,itype,multi,1110
+//op,itype,multi,1110,//DON'T NEED THIS, STOLE OP-CODE FOR LSHI
 op,itype,cmpi,1011
 op,itype,andi,0001
 op,itype,ori,0010
 op,itype,xoi,0011
-op,itype,lshi,1000
+op,itype,lshi,1110,//STOLE OP-CODE FROM MULTI, PREVIOUSLY WAS 1000
 op,itype,ashi,1000
 op,itype,jRA,0110
 op,itype,jra,0110

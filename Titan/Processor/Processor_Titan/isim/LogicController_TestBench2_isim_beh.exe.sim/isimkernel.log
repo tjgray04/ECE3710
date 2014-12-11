@@ -1,0 +1,29 @@
+Command line:
+   LogicController_TestBench2_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50289
+
+Wed Dec 10 19:45:27 2014
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 501.772 Meg
+
+ Total Signals          : 35
+ Total Nets             : 43
+ Total Signal Drivers   : 27
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 34
+ Total Traceable Variables  : 82
+ Total Scalar Nets and Variables : 385
+Total Line Count : 243
+
+ Total Simulation Time: 0.187201 sec
+
+ Current Memory Usage: 501.772 Meg
+
+Wed Dec 10 19:49:52 2014
+

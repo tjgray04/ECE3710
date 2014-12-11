@@ -5,6 +5,108 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SoundMux.v" Line 28: Parameter declaration becomes local in <arg fmt="%s" index="1">SoundMux</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/SoundMux.v" Line 29: Parameter declaration becomes local in <arg fmt="%s" index="1">SoundMux</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/song_library.v" Line 28: Parameter declaration becomes local in <arg fmt="%s" index="1">melody_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/song_library.v" Line 29: Parameter declaration becomes local in <arg fmt="%s" index="1">melody_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/song_library.v" Line 30: Parameter declaration becomes local in <arg fmt="%s" index="1">melody_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/song_library.v" Line 31: Parameter declaration becomes local in <arg fmt="%s" index="1">melody_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/song_library.v" Line 32: Parameter declaration becomes local in <arg fmt="%s" index="1">melody_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/song_library.v" Line 33: Parameter declaration becomes local in <arg fmt="%s" index="1">melody_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/song_library.v" Line 36: Parameter declaration becomes local in <arg fmt="%s" index="1">melody_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/song_library.v" Line 59: Parameter declaration becomes local in <arg fmt="%s" index="1">melody_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LaserSFXLibrary.v" Line 29: Parameter declaration becomes local in <arg fmt="%s" index="1">LaserSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LaserSFXLibrary.v" Line 30: Parameter declaration becomes local in <arg fmt="%s" index="1">LaserSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LaserSFXLibrary.v" Line 31: Parameter declaration becomes local in <arg fmt="%s" index="1">LaserSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LaserSFXLibrary.v" Line 32: Parameter declaration becomes local in <arg fmt="%s" index="1">LaserSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LaserSFXLibrary.v" Line 33: Parameter declaration becomes local in <arg fmt="%s" index="1">LaserSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LaserSFXLibrary.v" Line 34: Parameter declaration becomes local in <arg fmt="%s" index="1">LaserSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LaserSFXLibrary.v" Line 37: Parameter declaration becomes local in <arg fmt="%s" index="1">LaserSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/LaserSFXLibrary.v" Line 48: Parameter declaration becomes local in <arg fmt="%s" index="1">LaserSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DeathSFXLibrary.v" Line 29: Parameter declaration becomes local in <arg fmt="%s" index="1">DeathSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DeathSFXLibrary.v" Line 30: Parameter declaration becomes local in <arg fmt="%s" index="1">DeathSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DeathSFXLibrary.v" Line 31: Parameter declaration becomes local in <arg fmt="%s" index="1">DeathSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DeathSFXLibrary.v" Line 32: Parameter declaration becomes local in <arg fmt="%s" index="1">DeathSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DeathSFXLibrary.v" Line 33: Parameter declaration becomes local in <arg fmt="%s" index="1">DeathSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DeathSFXLibrary.v" Line 34: Parameter declaration becomes local in <arg fmt="%s" index="1">DeathSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DeathSFXLibrary.v" Line 37: Parameter declaration becomes local in <arg fmt="%s" index="1">DeathSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/DeathSFXLibrary.v" Line 48: Parameter declaration becomes local in <arg fmt="%s" index="1">DeathSFXLibrary</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/bass_library.v" Line 28: Parameter declaration becomes local in <arg fmt="%s" index="1">bass_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/bass_library.v" Line 29: Parameter declaration becomes local in <arg fmt="%s" index="1">bass_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/bass_library.v" Line 30: Parameter declaration becomes local in <arg fmt="%s" index="1">bass_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/bass_library.v" Line 31: Parameter declaration becomes local in <arg fmt="%s" index="1">bass_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/bass_library.v" Line 32: Parameter declaration becomes local in <arg fmt="%s" index="1">bass_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/bass_library.v" Line 33: Parameter declaration becomes local in <arg fmt="%s" index="1">bass_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/bass_library.v" Line 36: Parameter declaration becomes local in <arg fmt="%s" index="1">bass_library</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/bass_library.v" Line 71: Parameter declaration becomes local in <arg fmt="%s" index="1">bass_library</arg> with formal parameter declaration list
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"C:/Users/Steve Brown/Desktop/ECE3710/Titan/Processor/Processor_Titan/ALU.v" Line 41: Parameter declaration becomes local in <arg fmt="%s" index="1">ALU</arg> with formal parameter declaration list
 </msg>
 

@@ -1,0 +1,101 @@
+//*************************************WAIT FOR STARTS FUNCTION***********************************************
+// This function will wait for all 4 players to press start to re-enable game play
+// PARAMETERS:
+// LOCAL VARIABLES:
+// GLOBAL VARIABLES:
+// RETURN VARIABLES:
+
+waitForStarts:,
+//Initialize count variables
+addi,r25,r0,0,
+addi,r26,r0,0,
+addi,r27,r0,0,
+addi,r28,r0,0,
+
+waitForStarts2:,
+//LOAD THE CONTROLLER VALUE TO LEDS
+jal,ctrlr2led:,			//jump and link to CTRLR 2 LED function
+						//return register r24 contains value from controller
+
+//**********GET VALUE FROM CONTROLLERS************
+//BLUE MAN   0000_0000__0000_0000__0000_0000__1111_1111 = 255
+//RED MAN   0000_0000__0000_0000__1111_1111__0000_0000 = 65280
+//GREEN MAN   0000_0000__1111_1111__0000_0000__0000_0000 = 16711680
+//WHITE MAN   1111_1111__0000_0000__0000_0000__0000_0000 = 4278190080
+
+//BLUE MAN
+addi,r1,r0,255,			//Change r1 to get the bits from BLUE MAN Controller
+and,r15,r1,r24,			//Collect bits relating only to BLUE MAN Controller
+
+//RED MAN
+//Shift by 8 to get value from RED MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from RED MAN Controller
+and,r16,r1,r24,			//Collect bits relating only to RED MAN Controller
+lshi,r16,r16,-8,		//Shift the RED MAN Controller bits to the lower 8 bits
+
+//GREEN MAN
+//Shift by another 8 to get value from GREEN MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from GREEN MAN Controller
+and,r17,r1,r24,			//Collect bits relating only to GREEN MAN Controller
+lshi,r17,r17,-16,		//Shift the GREEN MAN Controller bits to the lower 8 bits
+
+//WHITE MAN
+//Shift by another 8 to get value from WHITE MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from WHITE MAN Controller
+and,r18,r1,r24,			//Collect bits relating only to WHITE MAN Controller
+lshi,r18,r18,-24,		//Shift the WHITE MAN Controller bits to the lower 8 bits
+
+//Check the controller data for start buttons
+//BLUE MAN
+andi,r1,r15,16,				//Mask the bits to get the START bit
+cmpi,x,r1,16,				//Check for BLUE MAN start
+bne,REDMANstart:,			//If not, check if RED MAN has pressed start
+addi,r25,r0,1,				//Set the BLUE MAN death counter to one
+
+//RED MAN
+REDMANstart:
+andi,r1,r16,16,			//Mask the bits to get the START bit
+cmpi,x,r1,16,				//Check for RED MAN start
+bne,GREENMANstart:,		//If not, check if GREEN MAN has pressed start
+addi,r26,r0,1,				//Set the RED MAN death counter to one
+
+//GREEN MAN
+GREENMANstart:
+andi,r1,r17,16,			//Mask the bits to get the START bit
+cmpi,x,r1,16,				//Check for GREEN MAN start
+bne,WHITEMANstart:,		//If not, check if WHITE MAN has pressed start
+addi,r27,r0,1,				//Set the GREEN MAN death counter to one
+
+//WHITE MAN
+WHITEMANstart:
+andi,r1,r17,16,				//Mask the bits to get the START bit
+cmpi,x,r1,16,				//Check for WHITE MAN start
+bne,addStartCount:,			//If not, jump back to top of loop
+addi,r28,r0,1,				//Set the WHITE MAN death counter to one
+
+//Add up the count
+addStartCount:,
+add,r6,r25,r26,
+add,r6,r6,r27,
+add,r6,r6,r28,
+
+cmpi,x,r6,4,				//If all four players have pressed start, then it's time to initialize
+bne,waitForStarts2:,			//If not all players have pressed start, then keep checking
+
+//Make sure to remove the winner banner
+jal,winnerRemove:,			//Remove the WINNER banner
+
+//If all 4 players have pressed start, make sure to reset the background
+//Make sure all the players are set to the background so initialization can redraw them properly
+subi,r2,r11,0,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,			//Jump and Link to the background to emulate GLYching
+subi,r2,r12,0,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,			//Jump and Link to the background to emulate GLYching
+subi,r2,r13,0,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,			//Jump and Link to the background to emulate GLYching
+subi,r2,r14,0,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,			//Jump and Link to the background to emulate GLYching
+addi,r0,r0,0,					//NOP
+
+//At the end of the function, jump back to the initialization
+j,init:,

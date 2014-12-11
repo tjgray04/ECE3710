@@ -5,64 +5,64 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal &lt;<arg fmt="%s" index="1">inst_ROM</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal &lt;<arg fmt="%s" index="1">inst_ROM</arg>&gt; in initial block is partially initialized.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 224: Result of <arg fmt="%d" index="1">22</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">21</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\NES_CONTROLLER.v" Line 224: Result of <arg fmt="%d" index="1">22</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">21</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 54: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 54: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 55: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 55: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 56: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 56: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 57: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 57: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 58: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\Duration_FSM.v" Line 58: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 76: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 76: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 83: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 83: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 90: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 90: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 97: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 97: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 104: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 104: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 130: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 130: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 148: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 148: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 166: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 166: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 184: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 184: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 202: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\SoundFX_FSM.v" Line 202: Result of <arg fmt="%d" index="1">8</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">7</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 63: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\LaserSFXLibrary.v" Line 63: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 63: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\DeathSFXLibrary.v" Line 63: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\u0655172\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 130: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\ipcore_dir\DCM_50M.v" Line 130: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">inst_ROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">InstructionROM</arg>&apos;, is tied to its initial value.
@@ -120,6 +120,12 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">ioMem/sg/bassDurationFSM/PS_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">System</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">ioMem/sg/deathLib/count_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">System</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">ioMem/sg/deathLib/count_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">System</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ioMem/nes4/count_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">System</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ioMem/nes3/count_0&gt; &lt;ioMem/nes2/count_0&gt; &lt;ioMem/nes1/count_0&gt; &lt;dispVGA/vgaCtrl/count&gt; </arg>

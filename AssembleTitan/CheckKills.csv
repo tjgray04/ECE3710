@@ -1,0 +1,52 @@
+//*****************************CHECK KILLS FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+checkKills:,
+addi,r30,r31,0,						//Store the return address
+addi,r2,r0,0,						//Set the death counter to zero
+
+//When a player is terminated, a background glyph (Index 0) is stored into the player's MEMORY location
+//Check if the value stored in the character's MEMORY location is 0 or not
+
+//check for BLUE MAN
+ld,r1,r11,VGA,						//Load from the BLUE MAN glyph MEMORY location
+cmpi,x,r1,0,						//If BLUE MAN has been terminated, this will be true
+bne,checkREDkill:,					//If the BLUE MAN is still alive, check if RED MAN is alive
+//If BLUE man is dead, increment a counter
+addi,r2,r2,1,						//The counter has a 1 for BLUE MAN killed
+
+//check for RED MAN
+checkREDkill:,
+ld,r1,r12,VGA,						//Load from the RED MAN glyph MEMORY location
+cmpi,x,r1,0,						//If RED MAN has been terminated, this will be true
+bne,checkGREENkill:,					//If the RED MAN is still alive, check if GREEN MAN is alive
+//If RED man is dead, increment a counter
+addi,r2,r2,1,						//The counter has a 1 for RED MAN killed
+
+//check for GREEN MAN
+checkGREENkill:,
+ld,r1,r13,VGA,						//Load from the GREEN MAN glyph MEMORY location
+cmpi,x,r1,0,						//If GREEN MAN has been terminated, this will be true
+bne,checkWHITEkill:,					//If the GREEN MAN is still alive, check if WHITE MAN is alive
+//If GREEN man is dead, increment a counter
+addi,r2,r2,1,						//The counter has a 1 for GREEN MAN killed
+
+//check for WHITE MAN
+checkWHITEkill:,
+ld,r1,r14,VGA,						//Load from the WHITE MAN glyph MEMORY location
+cmpi,x,r1,0,						//If WHITE MAN has been terminated, this will be true
+bne,checkKillEND:,					//If the WHITE MAN is still alive, jump to the end of the function
+//If WHITE man is dead, increment a counter
+addi,r2,r2,1,						//The counter has a 1 for WHITE MAN killed
+
+cmpi,x,r2,3,						//Check to see if 3 of the 4 players have been eliminated
+bne,checkKillEND:,					//If more than 1 is alive, jump to end of function and continue
+j,winner:,							//If only one player is left, just jump to WINNER function
+
+checkKillEND:
+addi,r31,r30,0,				//Restore the return address
+jra,						//jump to the Return Address of where the function was called

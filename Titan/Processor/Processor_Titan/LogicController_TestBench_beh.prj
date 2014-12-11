@@ -1,0 +1,4 @@
+verilog work "LogicController.v"
+verilog work "LogicController_TestBench.v"
+verilog work "ipcore_dir/DCM_50M/example_design/DCM_50M_exdes.v"
+verilog work "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v"
