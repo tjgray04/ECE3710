@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.34 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.34 secs
+Total CPU time to Xst completion: 0.08 secs
  
 --> Reading design: System.prj
 
@@ -240,7 +240,7 @@ Elaborating module <ProgramCounter>.
 Elaborating module <Mux>.
 
 Elaborating module <InstructionROM>.
-Reading initialization file \"FinalCodeV10.dat\".
+Reading initialization file \"FinalCodeV12.dat\".
 WARNING:HDLCompiler:1670 - "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\InstructionROM.v" Line 41: Signal <inst_ROM> in initial block is partially initialized.
 
 Elaborating module <InstructionDecoder>.
@@ -525,6 +525,7 @@ Synthesizing Unit <IOMemory>.
     Related source file is "C:\Users\Steve Brown\Desktop\ECE3710\Titan\Processor\Processor_Titan\IOMemory.v".
         WIDTH = 8
         RAM_ADDR_BITS = 14
+WARNING:Xst:647 - Input <address<11:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <soundGenWriteEn>.
     Found 8-bit register for signal <leds>.
     Found 2-bit register for signal <soundGenWriteData>.
@@ -772,7 +773,7 @@ Synthesizing Unit <vgaControl>.
     Found 12-bit comparator lessequal for signal <n0002> created at line 64
     Found 12-bit comparator greater for signal <hCount[11]_GND_69_o_LessThan_4_o> created at line 64
     Found 12-bit comparator greater for signal <n0006> created at line 69
-    Found 12-bit comparator greater for signal <GND_69_o_INV_147_o> created at line 73
+    Found 12-bit comparator greater for signal <GND_69_o_INV_146_o> created at line 73
     Found 12-bit comparator greater for signal <vCount[11]_GND_69_o_LessThan_9_o> created at line 79
     Found 12-bit comparator lessequal for signal <n0022> created at line 89
     Found 12-bit comparator greater for signal <vCount[11]_GND_69_o_LessThan_17_o> created at line 89
@@ -1192,8 +1193,6 @@ Optimizing unit <ProgramStatusRegister> ...
 
 Optimizing unit <vgaControl> ...
 WARNING:Xst:1710 - FF/Latch <ioMem/sg/bassDurationFSM/PS_2> (without init value) has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <ioMem/sg/deathLib/count_5> has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <ioMem/sg/deathLib/count_4> has a constant value of 0 in block <System>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <ioMem/nes4/count_0> in Unit <System> is equivalent to the following 4 FFs/Latches, which will be removed : <ioMem/nes3/count_0> <ioMem/nes2/count_0> <ioMem/nes1/count_0> <dispVGA/vgaCtrl/count> 
 INFO:Xst:2261 - The FF/Latch <ioMem/nes4/count_1> in Unit <System> is equivalent to the following 3 FFs/Latches, which will be removed : <ioMem/nes3/count_1> <ioMem/nes2/count_1> <ioMem/nes1/count_1> 
 INFO:Xst:2261 - The FF/Latch <ioMem/nes4/count_2> in Unit <System> is equivalent to the following 3 FFs/Latches, which will be removed : <ioMem/nes3/count_2> <ioMem/nes2/count_2> <ioMem/nes1/count_2> 
@@ -1226,8 +1225,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 289
- Flip-Flops                                            : 289
+# Registers                                            : 291
+ Flip-Flops                                            : 291
 
 =========================================================================
 
@@ -1250,24 +1249,24 @@ Top Level Output File Name         : System.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 5238
+# BELS                             : 5159
 #      GND                         : 1
 #      INV                         : 13
 #      LUT1                        : 89
-#      LUT2                        : 188
-#      LUT3                        : 296
-#      LUT4                        : 393
-#      LUT5                        : 700
-#      LUT6                        : 2661
+#      LUT2                        : 159
+#      LUT3                        : 291
+#      LUT4                        : 417
+#      LUT5                        : 681
+#      LUT6                        : 2646
 #      MUXCY                       : 323
-#      MUXF7                       : 282
+#      MUXF7                       : 247
 #      VCC                         : 1
 #      XORCY                       : 291
-# FlipFlops/Latches                : 289
+# FlipFlops/Latches                : 291
 #      FD                          : 13
 #      FDC                         : 15
 #      FDCE                        : 63
-#      FDE                         : 50
+#      FDE                         : 52
 #      FDR                         : 106
 #      FDRE                        : 41
 #      FDS                         : 1
@@ -1295,17 +1294,17 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             289  out of  18224     1%  
- Number of Slice LUTs:                 5950  out of   9112    65%  
-    Number used as Logic:              4340  out of   9112    47%  
+ Number of Slice Registers:             291  out of  18224     1%  
+ Number of Slice LUTs:                 5906  out of   9112    64%  
+    Number used as Logic:              4296  out of   9112    47%  
     Number used as Memory:             1610  out of   2176    73%  
        Number used as RAM:             1610
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   5987
-   Number with an unused Flip Flop:    5698  out of   5987    95%  
-   Number with an unused LUT:            37  out of   5987     0%  
-   Number of fully used LUT-FF pairs:   252  out of   5987     4%  
+ Number of LUT Flip Flop pairs used:   5943
+   Number with an unused Flip Flop:    5652  out of   5943    95%  
+   Number with an unused LUT:            37  out of   5943     0%  
+   Number of fully used LUT-FF pairs:   254  out of   5943     4%  
    Number of unique control sets:        32
 
 IO Utilization: 
@@ -1337,7 +1336,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk                                | DCM_SP:CLKDV           | 651   |
+clk                                | DCM_SP:CLKDV           | 653   |
 dispVGA/vgaCtrl/clk25M             | BUFG                   | 46    |
 -----------------------------------+------------------------+-------+
 
@@ -1349,9 +1348,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 12.224ns (Maximum Frequency: 81.804MHz)
-   Minimum input arrival time before clock: 21.239ns
-   Maximum output required time after clock: 26.327ns
+   Minimum period: 13.013ns (Maximum Frequency: 76.847MHz)
+   Minimum input arrival time before clock: 21.242ns
+   Maximum output required time after clock: 26.575ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1360,10 +1359,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 12.224ns (frequency: 81.804MHz)
-  Total number of paths / destination ports: 134668838846 / 4222
+  Clock period: 13.013ns (frequency: 76.847MHz)
+  Total number of paths / destination ports: 376980705420 / 4226
 -------------------------------------------------------------------------
-Delay:               24.449ns (Levels of Logic = 13)
+Delay:               26.026ns (Levels of Logic = 14)
   Source:            titan/PC/PC_5 (FF)
   Destination:       titan/ExStage/regfile/Mram_RAM5 (RAM)
   Source Clock:      clk rising 0.5X
@@ -1373,31 +1372,32 @@ Delay:               24.449ns (Levels of Logic = 13)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q           729   0.447   2.507  titan/PC/PC_5 (titan/PC/PC_5)
-     LUT6:I0->O            4   0.203   0.684  SF20310_SW0 (N245)
-     LUT4:I3->O           13   0.205   1.161  SF20310 (SF20310)
-     LUT6:I3->O            2   0.205   0.617  titan/instROM/Mram_inst_ROM5681419 (titan/instROM/Mram_inst_ROM5681418)
-     LUT6:I5->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM5681453 (titan/instROM/Mram_inst_ROM5681452)
-     LUT6:I5->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM5681460 (titan/instROM/Mram_inst_ROM5681459)
-     LUT5:I4->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM56814156_SW0 (N9621)
-     LUT6:I5->O           39   0.205   1.392  titan/instROM/Mram_inst_ROM56814156 (titan/instruction<30>)
-     LUT5:I4->O           17   0.205   1.132  titan/ExStage/aluSrcbMUX/Mmux_out110_SW0 (N1051)
-     LUT6:I4->O            9   0.203   0.829  titan/ExStage/aluSrcbMUX/Mmux_out110 (titan/ExStage/ALUMuxOUT<0>)
-     DSP48A1:B0->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     FDCE:C->Q           683   0.447   2.496  titan/PC/PC_5 (titan/PC/PC_5)
+     LUT6:I0->O           12   0.203   0.909  SF73_SW0 (N982)
+     LUT4:I3->O            3   0.205   0.651  SF1345 (SF1345)
+     LUT5:I4->O           10   0.205   0.857  SF13412 (SF134)
+     LUT6:I5->O            1   0.205   0.827  titan/instROM/Mram_inst_ROM5521416 (titan/instROM/Mram_inst_ROM5521415)
+     LUT6:I2->O            1   0.203   0.808  titan/instROM/Mram_inst_ROM5521422 (titan/instROM/Mram_inst_ROM5521421)
+     LUT6:I3->O            1   0.205   0.580  titan/instROM/Mram_inst_ROM5521458 (titan/instROM/Mram_inst_ROM5521457)
+     LUT6:I5->O           39   0.205   1.392  titan/instROM/Mram_inst_ROM55214114 (titan/instruction<28>)
+     LUT6:I5->O            3   0.205   1.015  titan/InstDec/Mmux_Rt41 (titan/Rt<3>)
+     LUT6:I0->O           19   0.203   1.072  titan/ExStage/regfile/out12_1 (titan/ExStage/regfile/out12)
+     LUT6:I5->O            9   0.205   0.829  titan/ExStage/aluSrcbMUX/Mmux_out261 (titan/ExStage/ALUMuxOUT<3>)
+     DSP48A1:B3->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
      DSP48A1:C30->PCOUT47    1   2.689   0.000  titan/ExStage/alu/Mmult_n00361 (titan/ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
      DSP48A1:PCIN47->P7    1   2.264   0.580  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<24>)
      LUT6:I5->O            2   0.205   0.616  titan/ExStage/RaWriteEnMUX/Mmux_out1711 (titan/ExStage/writeData<24>)
      RAM32M:DIA0               0.303          titan/ExStage/regfile/Mram_RAM15
     ----------------------------------------
-    Total                     24.449ns (12.143ns logic, 12.306ns route)
-                                       (49.7% logic, 50.3% route)
+    Total                     26.026ns (12.346ns logic, 13.680ns route)
+                                       (47.4% logic, 52.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'dispVGA/vgaCtrl/clk25M'
-  Clock period: 6.378ns (frequency: 156.785MHz)
+  Clock period: 6.618ns (frequency: 151.100MHz)
   Total number of paths / destination ports: 5056 / 77
 -------------------------------------------------------------------------
-Delay:               6.378ns (Levels of Logic = 4)
+Delay:               6.618ns (Levels of Logic = 4)
   Source:            dispVGA/vgaCtrl/hCount_2 (FF)
   Destination:       dispVGA/vgaCtrl/vPixel_8 (FF)
   Source Clock:      dispVGA/vgaCtrl/clk25M rising
@@ -1408,20 +1408,20 @@ Delay:               6.378ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              3   0.447   0.898  dispVGA/vgaCtrl/hCount_2 (dispVGA/vgaCtrl/hCount_2)
-     LUT4:I0->O            4   0.203   0.788  dispVGA/vgaCtrl/hCount[11]_GND_69_o_LessThan_4_o21 (dispVGA/vgaCtrl/hCount[11]_GND_69_o_LessThan_4_o2)
-     LUT6:I4->O           12   0.203   0.909  dispVGA/vgaCtrl/GND_69_o_hCount[11]_AND_1381_o1 (dispVGA/vgaCtrl/GND_69_o_hCount[11]_AND_1381_o)
-     LUT5:I4->O           17   0.205   1.372  dispVGA/vgaCtrl/GND_69_o_hCount[11]_AND_1381_o4 (dispVGA/vgaCtrl/GND_69_o_hCount[11]_AND_1381_o_inv_inv)
+     LUT4:I0->O            4   0.203   1.028  dispVGA/vgaCtrl/hCount[11]_GND_69_o_LessThan_4_o21 (dispVGA/vgaCtrl/hCount[11]_GND_69_o_LessThan_4_o2)
+     LUT6:I1->O           12   0.203   0.909  dispVGA/vgaCtrl/GND_69_o_hCount[11]_AND_1377_o1 (dispVGA/vgaCtrl/GND_69_o_hCount[11]_AND_1377_o)
+     LUT5:I4->O           17   0.205   1.372  dispVGA/vgaCtrl/GND_69_o_hCount[11]_AND_1377_o4 (dispVGA/vgaCtrl/GND_69_o_hCount[11]_AND_1377_o_inv_inv)
      LUT5:I0->O            9   0.203   0.829  dispVGA/vgaCtrl/_n0130_inv1 (dispVGA/vgaCtrl/_n0130_inv)
      FDCE:CE                   0.322          dispVGA/vgaCtrl/vPixel_0
     ----------------------------------------
-    Total                      6.378ns (1.583ns logic, 4.795ns route)
-                                       (24.8% logic, 75.2% route)
+    Total                      6.618ns (1.583ns logic, 5.035ns route)
+                                       (23.9% logic, 76.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 69057160 / 4188
+  Total number of paths / destination ports: 88225736 / 4192
 -------------------------------------------------------------------------
-Offset:              21.239ns (Levels of Logic = 9)
+Offset:              21.242ns (Levels of Logic = 9)
   Source:            reset (PAD)
   Destination:       titan/ExStage/regfile/Mram_RAM5 (RAM)
   Destination Clock: clk rising 0.5X
@@ -1430,25 +1430,25 @@ Offset:              21.239ns (Levels of Logic = 9)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           116   1.222   1.920  reset_IBUF (reset_IBUF)
-     LUT2:I1->O          277   0.205   2.433  systemReset1 (systemReset)
-     LUT6:I0->O            2   0.203   0.845  titan/LogicCtrl/Mmux_RtSrcReg11_SW4_SW0 (N1033)
-     LUT6:I3->O           19   0.205   1.072  titan/ExStage/regfile/out11_1 (titan/ExStage/regfile/out111)
-     LUT6:I5->O            9   0.205   0.829  titan/ExStage/aluSrcbMUX/Mmux_out110 (titan/ExStage/ALUMuxOUT<0>)
-     DSP48A1:B0->P47      18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
+     IBUF:I->O           107   1.222   1.896  reset_IBUF (reset_IBUF)
+     LUT2:I1->O          285   0.205   2.414  systemReset1 (systemReset)
+     LUT6:I1->O            2   0.203   0.721  titan/ExStage/regfile/out11_SW0 (N1044)
+     LUT6:I4->O           19   0.203   1.300  titan/ExStage/regfile/out11_1 (titan/ExStage/regfile/out111)
+     LUT5:I2->O            7   0.205   0.773  titan/ExStage/aluSrcbMUX/Mmux_out210 (titan/ExStage/ALUMuxOUT<10>)
+     DSP48A1:B10->P47     18   4.394   1.049  titan/ExStage/alu/Mmult_n0036 (titan/ExStage/alu/Mmult_n0036_P47_to_Mmult_n00361)
      DSP48A1:C30->PCOUT47    1   2.689   0.000  titan/ExStage/alu/Mmult_n00361 (titan/ExStage/alu/Mmult_n00361_PCOUT_to_Mmult_n00362_PCIN_47)
      DSP48A1:PCIN47->P7    1   2.264   0.580  titan/ExStage/alu/Mmult_n00362 (titan/ExStage/alu/n0036<24>)
      LUT6:I5->O            2   0.205   0.616  titan/ExStage/RaWriteEnMUX/Mmux_out1711 (titan/ExStage/writeData<24>)
      RAM32M:DIA0               0.303          titan/ExStage/regfile/Mram_RAM15
     ----------------------------------------
-    Total                     21.239ns (11.895ns logic, 9.344ns route)
+    Total                     21.242ns (11.893ns logic, 9.349ns route)
                                        (56.0% logic, 44.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'dispVGA/vgaCtrl/clk25M'
   Total number of paths / destination ports: 46 / 46
 -------------------------------------------------------------------------
-Offset:              5.845ns (Levels of Logic = 2)
+Offset:              5.822ns (Levels of Logic = 2)
   Source:            reset (PAD)
   Destination:       dispVGA/vgaCtrl/vCount_11 (FF)
   Destination Clock: dispVGA/vgaCtrl/clk25M rising
@@ -1457,18 +1457,18 @@ Offset:              5.845ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O           116   1.222   1.920  reset_IBUF (reset_IBUF)
-     LUT2:I1->O          277   0.205   2.068  systemReset1 (systemReset)
+     IBUF:I->O           107   1.222   1.896  reset_IBUF (reset_IBUF)
+     LUT2:I1->O          285   0.205   2.069  systemReset1 (systemReset)
      FDC:CLR                   0.430          dispVGA/vgaCtrl/bright
     ----------------------------------------
-    Total                      5.845ns (1.857ns logic, 3.988ns route)
-                                       (31.8% logic, 68.2% route)
+    Total                      5.822ns (1.857ns logic, 3.965ns route)
+                                       (31.9% logic, 68.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'dispVGA/vgaCtrl/clk25M'
-  Total number of paths / destination ports: 2112833 / 9
+  Total number of paths / destination ports: 2081990 / 9
 -------------------------------------------------------------------------
-Offset:              26.327ns (Levels of Logic = 19)
+Offset:              26.575ns (Levels of Logic = 19)
   Source:            dispVGA/vgaCtrl/vPixel_8 (FF)
   Destination:       rgb<7> (PAD)
   Source Clock:      dispVGA/vgaCtrl/clk25M rising
@@ -1481,31 +1481,31 @@ Offset:              26.327ns (Levels of Logic = 19)
      DSP48A1:A5->P11      48   4.560   1.884  dispVGA/charDispRAM/Maddsub_n0016 (dispVGA/charDispRAM/vgaAddress<11>)
      LUT6:I0->O            1   0.203   0.827  inst_LPM_MUX40_122 (inst_LPM_MUX40_122)
      LUT6:I2->O            1   0.203   0.684  inst_LPM_MUX40_7 (inst_LPM_MUX40_7)
-     LUT6:I4->O          291   0.203   2.415  dispVGA/charDispRAM/vgaAddress<12>11 (dispVGA/outputVGA<1>)
-     LUT6:I1->O            1   0.203   0.684  SF27125_SW0 (N1665)
-     LUT6:I4->O            1   0.203   0.827  SF27125 (SF27125)
-     LUT4:I0->O            1   0.203   0.000  SF27147_G (N1782)
-     MUXF7:I1->O           1   0.140   0.684  SF27147 (SF27147)
-     LUT6:I4->O            1   0.203   0.944  SF27148 (SF27148)
-     LUT6:I0->O            7   0.203   1.138  SF27182 (SF271)
+     LUT6:I4->O          290   0.203   2.435  dispVGA/charDispRAM/vgaAddress<12>11 (dispVGA/outputVGA<1>)
+     LUT6:I0->O            1   0.203   0.684  SF25825_SW0 (N1674)
+     LUT6:I4->O            1   0.203   0.827  SF25825 (SF25825)
+     LUT4:I0->O            1   0.203   0.000  SF25847_G (N1791)
+     MUXF7:I1->O           1   0.140   0.684  SF25847 (SF25847)
+     LUT6:I4->O            1   0.203   0.944  SF25848 (SF25848)
+     LUT6:I0->O            7   0.203   1.138  SF25882 (SF258)
      LUT6:I0->O            3   0.203   0.879  dispVGA/charROM/Mram_charROM2491769 (dispVGA/charROM/Mram_charROM2491768)
      LUT3:I0->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM2491777 (dispVGA/charROM/Mram_charROM2491776)
      LUT6:I5->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM2491778 (dispVGA/charROM/Mram_charROM2491777)
-     LUT6:I5->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM2491790_SW0 (N1622)
-     LUT6:I5->O            1   0.205   0.944  dispVGA/charROM/Mram_charROM2491790 (dispVGA/charROM/Mram_charROM2491789)
-     LUT6:I0->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM2491798_F (N1747)
+     LUT6:I5->O            1   0.205   0.808  dispVGA/charROM/Mram_charROM2491790_SW0 (N1630)
+     LUT6:I3->O            1   0.205   0.944  dispVGA/charROM/Mram_charROM2491790 (dispVGA/charROM/Mram_charROM2491789)
+     LUT6:I0->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM2491798_F (N1756)
      MUXF7:I0->O           1   0.131   0.580  dispVGA/charROM/Mram_charROM2491798 (dispVGA/color<7>)
      LUT2:I1->O            1   0.205   0.579  dispVGA/Mmux_rgb81 (rgb_7_OBUF)
      OBUF:I->O                 2.571          rgb_7_OBUF (rgb<7>)
     ----------------------------------------
-    Total                     26.327ns (10.904ns logic, 15.423ns route)
-                                       (41.4% logic, 58.6% route)
+    Total                     26.575ns (10.904ns logic, 15.671ns route)
+                                       (41.0% logic, 59.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 5998 / 25
+  Total number of paths / destination ports: 5922 / 25
 -------------------------------------------------------------------------
-Offset:              19.352ns (Levels of Logic = 17)
+Offset:              19.600ns (Levels of Logic = 17)
   Source:            dispVGA/charDispRAM/Mram_charDispRAM261 (RAM)
   Destination:       rgb<7> (PAD)
   Source Clock:      clk rising 0.5X
@@ -1516,25 +1516,25 @@ Offset:              19.352ns (Levels of Logic = 17)
     ----------------------------------------  ------------
      RAM64X1D:WCLK->DPO    1   0.854   0.580  dispVGA/charDispRAM/Mram_charDispRAM261 (N821)
      LUT3:I2->O            1   0.205   0.808  inst_LPM_MUX40_8 (inst_LPM_MUX40_8)
-     LUT6:I3->O          291   0.205   2.415  dispVGA/charDispRAM/vgaAddress<12>11 (dispVGA/outputVGA<1>)
-     LUT6:I1->O            1   0.203   0.684  SF27125_SW0 (N1665)
-     LUT6:I4->O            1   0.203   0.827  SF27125 (SF27125)
-     LUT4:I0->O            1   0.203   0.000  SF27147_G (N1782)
-     MUXF7:I1->O           1   0.140   0.684  SF27147 (SF27147)
-     LUT6:I4->O            1   0.203   0.944  SF27148 (SF27148)
-     LUT6:I0->O            7   0.203   1.138  SF27182 (SF271)
+     LUT6:I3->O          290   0.205   2.435  dispVGA/charDispRAM/vgaAddress<12>11 (dispVGA/outputVGA<1>)
+     LUT6:I0->O            1   0.203   0.684  SF25825_SW0 (N1674)
+     LUT6:I4->O            1   0.203   0.827  SF25825 (SF25825)
+     LUT4:I0->O            1   0.203   0.000  SF25847_G (N1791)
+     MUXF7:I1->O           1   0.140   0.684  SF25847 (SF25847)
+     LUT6:I4->O            1   0.203   0.944  SF25848 (SF25848)
+     LUT6:I0->O            7   0.203   1.138  SF25882 (SF258)
      LUT6:I0->O            3   0.203   0.879  dispVGA/charROM/Mram_charROM2491769 (dispVGA/charROM/Mram_charROM2491768)
      LUT3:I0->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM2491777 (dispVGA/charROM/Mram_charROM2491776)
      LUT6:I5->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM2491778 (dispVGA/charROM/Mram_charROM2491777)
-     LUT6:I5->O            1   0.205   0.580  dispVGA/charROM/Mram_charROM2491790_SW0 (N1622)
-     LUT6:I5->O            1   0.205   0.944  dispVGA/charROM/Mram_charROM2491790 (dispVGA/charROM/Mram_charROM2491789)
-     LUT6:I0->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM2491798_F (N1747)
+     LUT6:I5->O            1   0.205   0.808  dispVGA/charROM/Mram_charROM2491790_SW0 (N1630)
+     LUT6:I3->O            1   0.205   0.944  dispVGA/charROM/Mram_charROM2491790 (dispVGA/charROM/Mram_charROM2491789)
+     LUT6:I0->O            1   0.203   0.000  dispVGA/charROM/Mram_charROM2491798_F (N1756)
      MUXF7:I0->O           1   0.131   0.580  dispVGA/charROM/Mram_charROM2491798 (dispVGA/color<7>)
      LUT2:I1->O            1   0.205   0.579  dispVGA/Mmux_rgb81 (rgb_7_OBUF)
      OBUF:I->O                 2.571          rgb_7_OBUF (rgb<7>)
     ----------------------------------------
-    Total                     19.352ns (6.552ns logic, 12.800ns route)
-                                       (33.9% logic, 66.1% route)
+    Total                     19.600ns (6.552ns logic, 13.048ns route)
+                                       (33.4% logic, 66.6% route)
 
 =========================================================================
 
@@ -1546,7 +1546,7 @@ Clock to Setup on destination clock clk
                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------+---------+---------+---------+---------+
-clk                   |   24.449|         |         |         |
+clk                   |   26.026|         |         |         |
 dispVGA/vgaCtrl/clk25M|    6.675|         |         |         |
 ----------------------+---------+---------+---------+---------+
 
@@ -1555,20 +1555,20 @@ Clock to Setup on destination clock dispVGA/vgaCtrl/clk25M
                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock          |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------------+---------+---------+---------+---------+
-dispVGA/vgaCtrl/clk25M|    6.378|         |         |         |
+dispVGA/vgaCtrl/clk25M|    6.618|         |         |         |
 ----------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 103.00 secs
-Total CPU time to Xst completion: 103.13 secs
+Total REAL time to Xst completion: 41.00 secs
+Total CPU time to Xst completion: 40.91 secs
  
 --> 
 
-Total memory usage is 311556 kilobytes
+Total memory usage is 344004 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   32 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
 Number of infos    :   30 (   0 filtered)
 

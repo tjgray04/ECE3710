@@ -10,7 +10,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Wed Dec 10 20:13:49 2014
+Mapped Date    : Thu Dec 11 12:02:49 2014
 
 Mapping design into LUTs...
 Running directed packing...
@@ -19,67 +19,67 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 27 secs 
-Total CPU  time at the beginning of Placer: 27 secs 
+Total REAL time at the beginning of Placer: 10 secs 
+Total CPU  time at the beginning of Placer: 10 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:94c36f42) REAL time: 29 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:efb1765c) REAL time: 11 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:94c36f42) REAL time: 30 secs 
+Phase 2.7  Design Feasibility Check (Checksum:efb1765c) REAL time: 11 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:94c36f42) REAL time: 30 secs 
+Phase 3.31  Local Placement Optimization (Checksum:efb1765c) REAL time: 11 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:45ba1d4) REAL time: 42 secs 
+(Checksum:fd61a286) REAL time: 17 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:45ba1d4) REAL time: 42 secs 
+Phase 5.36  Local Placement Optimization (Checksum:fd61a286) REAL time: 17 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:45ba1d4) REAL time: 42 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:fd61a286) REAL time: 17 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:45ba1d4) REAL time: 43 secs 
+Phase 7.3  Local Placement Optimization (Checksum:fd61a286) REAL time: 17 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:45ba1d4) REAL time: 43 secs 
+Phase 8.5  Local Placement Optimization (Checksum:fd61a286) REAL time: 17 secs 
 
 Phase 9.8  Global Placement
-...........
-.......................................................................................................
-.................................................................................................................................................................................................................
-......................................................................................................................................................................................................................
-......................................................................................................................................
-Phase 9.8  Global Placement (Checksum:932da504) REAL time: 1 mins 30 secs 
+.............
+.............................................................................
+....................................................................................................................................................................................................
+...........................................................................................................................................................................................................
+.................................................................................
+Phase 9.8  Global Placement (Checksum:acde33a5) REAL time: 54 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:932da504) REAL time: 1 mins 31 secs 
+Phase 10.5  Local Placement Optimization (Checksum:acde33a5) REAL time: 54 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:8605b152) REAL time: 2 mins 47 secs 
+Phase 11.18  Placement Optimization (Checksum:1d8609e5) REAL time: 2 mins 12 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:8605b152) REAL time: 2 mins 47 secs 
+Phase 12.5  Local Placement Optimization (Checksum:1d8609e5) REAL time: 2 mins 13 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:8415e414) REAL time: 2 mins 47 secs 
+Phase 13.34  Placement Validation (Checksum:1d8609e5) REAL time: 2 mins 13 secs 
 
-Total REAL time to Placer completion: 2 mins 47 secs 
-Total CPU  time to Placer completion: 2 mins 47 secs 
+Total REAL time to Placer completion: 2 mins 13 secs 
+Total CPU  time to Placer completion: 2 mins 13 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM4_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM14_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM15_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM12_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM5_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM11_RAMD_D1_O> is incomplete. The signal does
@@ -91,16 +91,16 @@ WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM2_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM3_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM12_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
    <titan/ExStage/regfile/Mram_RAM13_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM5_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM14_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <titan/ExStage/regfile/Mram_RAM15_RAMD_D1_O> is incomplete. The signal does
+   <titan/ExStage/regfile/Mram_RAM3_RAMD_D1_O> is incomplete. The signal does
    not drive any load pins in the design.
 
 Design Summary
@@ -110,16 +110,16 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   10
 Slice Logic Utilization:
-  Number of Slice Registers:                   290 out of  18,224    1%
-    Number used as Flip Flops:                 289
+  Number of Slice Registers:                   292 out of  18,224    1%
+    Number used as Flip Flops:                 291
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                1
-  Number of Slice LUTs:                      5,669 out of   9,112   62%
-    Number used as logic:                    4,134 out of   9,112   45%
-      Number using O6 output only:           3,757
+  Number of Slice LUTs:                      5,594 out of   9,112   61%
+    Number used as logic:                    4,059 out of   9,112   44%
+      Number using O6 output only:           3,648
       Number using O5 output only:              85
-      Number using O5 and O6:                  292
+      Number using O5 and O6:                  326
       Number used as ROM:                        0
     Number used as Memory:                   1,531 out of   2,176   70%
       Number used as Dual Port RAM:            944
@@ -137,15 +137,15 @@ Slice Logic Utilization:
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,796 out of   2,278   78%
+  Number of occupied Slices:                 1,815 out of   2,278   79%
   Number of MUXCYs used:                       348 out of   4,556    7%
-  Number of LUT Flip Flop pairs used:        5,677
-    Number with an unused Flip Flop:         5,410 out of   5,677   95%
-    Number with an unused LUT:                   8 out of   5,677    1%
-    Number of fully used LUT-FF pairs:         259 out of   5,677    4%
+  Number of LUT Flip Flop pairs used:        5,600
+    Number with an unused Flip Flop:         5,319 out of   5,600   94%
+    Number with an unused LUT:                   6 out of   5,600    1%
+    Number of fully used LUT-FF pairs:         275 out of   5,600    4%
     Number of unique control sets:              75
     Number of slice register sites lost
-      to control set restrictions:             360 out of  18,224    1%
+      to control set restrictions:             358 out of  18,224    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -188,11 +188,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                6.75
+Average Fanout of Non-Clock Nets:                6.70
 
-Peak Memory Usage:  462 MB
-Total REAL time to MAP completion:  2 mins 51 secs 
-Total CPU time to MAP completion:   2 mins 51 secs 
+Peak Memory Usage:  470 MB
+Total REAL time to MAP completion:  2 mins 17 secs 
+Total CPU time to MAP completion:   2 mins 17 secs 
 
 Mapping completed.
 See MAP report file "System_map.mrp" for details.

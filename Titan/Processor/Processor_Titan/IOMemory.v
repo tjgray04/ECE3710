@@ -74,7 +74,7 @@ begin
 		begin
          if (memWrite)
 			begin
-				case(address[RAM_ADDR_BITS-1:0])
+				case(address[RAM_ADDR_BITS-1:RAM_ADDR_BITS-2])
 					//Trying to write to NES space
 					2'b11:
 						begin

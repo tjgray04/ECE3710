@@ -14,32 +14,37 @@ addi,r2,r0,0,						//Set the death counter to zero
 
 //check for BLUE MAN
 ld,r1,r11,VGA,						//Load from the BLUE MAN glyph MEMORY location
-cmpi,x,r1,0,						//If BLUE MAN has been terminated, this will be true
-bne,checkREDkill:,					//If the BLUE MAN is still alive, check if RED MAN is alive
+cmpi,x,r1,giBLUEMAN,				//If BLUE MAN has been terminated, this will be true
+beq,checkREDkill:,					//If the BLUE MAN is still alive, check if RED MAN is alive
 //If BLUE man is dead, increment a counter
 addi,r2,r2,1,						//The counter has a 1 for BLUE MAN killed
 
 //check for RED MAN
 checkREDkill:,
 ld,r1,r12,VGA,						//Load from the RED MAN glyph MEMORY location
-cmpi,x,r1,0,						//If RED MAN has been terminated, this will be true
-bne,checkGREENkill:,					//If the RED MAN is still alive, check if GREEN MAN is alive
+cmpi,x,r1,giREDMAN,						//If RED MAN has been terminated, this will be true
+beq,checkGREENkill:,					//If the RED MAN is still alive, check if GREEN MAN is alive
 //If RED man is dead, increment a counter
 addi,r2,r2,1,						//The counter has a 1 for RED MAN killed
 
 //check for GREEN MAN
 checkGREENkill:,
 ld,r1,r13,VGA,						//Load from the GREEN MAN glyph MEMORY location
-cmpi,x,r1,0,						//If GREEN MAN has been terminated, this will be true
-bne,checkWHITEkill:,					//If the GREEN MAN is still alive, check if WHITE MAN is alive
+cmpi,x,r1,giGREENMAN,						//If GREEN MAN has been terminated, this will be true
+beq,checkWHITEkill:,					//If the GREEN MAN is still alive, check if WHITE MAN is alive
 //If GREEN man is dead, increment a counter
 addi,r2,r2,1,						//The counter has a 1 for GREEN MAN killed
+
+//Check if 3/4 players are already dead
+cmpi,x,r2,3,						//Check to see if 3 of the 4 players have been eliminated
+bne,checkWHITEkill:,				//If the first three (BLUE, RED, GREEN) are not dead, check WHITE MAN
+j,winner:,							//If only one player is left, just jump to WINNER function
 
 //check for WHITE MAN
 checkWHITEkill:,
 ld,r1,r14,VGA,						//Load from the WHITE MAN glyph MEMORY location
-cmpi,x,r1,0,						//If WHITE MAN has been terminated, this will be true
-bne,checkKillEND:,					//If the WHITE MAN is still alive, jump to the end of the function
+cmpi,x,r1,giWHITEMAN,						//If WHITE MAN has been terminated, this will be true
+beq,checkKillEND:,					//If the WHITE MAN is still alive, jump to the end of the function
 //If WHITE man is dead, increment a counter
 addi,r2,r2,1,						//The counter has a 1 for WHITE MAN killed
 

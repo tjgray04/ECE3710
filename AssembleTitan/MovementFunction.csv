@@ -12,6 +12,12 @@
 movement:
 addi,r30,r31,0,				//Store the return address
 
+//FIRST CHECK SHOULD BE IF THE PLAYER HAS BEEN TERMINATED, THEN DON'T EVEN MOVE
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r6,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+cmpi,x,r6,0,				//Compare if the INDEX is a background (means player has been terminated)
+beq,endMovement:,			//If the player's glyph INDEX is a background glyph, then branch to endMovement
+
 //********CHECK RIGHT MOVEMENT*********
 andi,r3,r1,1,				//Get the right directional value
 cmpi,x,r3,1,				//Check if direction pressed is RIGHT
@@ -21,9 +27,7 @@ addi,r4,r2,2,				//Check location next to top right head (2 glyph locations away
 addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
 ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
 cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
-beq,endMovement:,			//Branch to the end if invalid movement
-cmpi,x,r5,giBLUEMAN,		//Check if the glyph is a BLUE MAN
-
+bne,endMovement:,			//Branch to the end if invalid movement
 //Check BOTTOM RIGHT HEAD
 addi,r4,r2,82,				//Check location next to bottom right head (82 glyph locations away from current glyph LOCATION)
 addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check

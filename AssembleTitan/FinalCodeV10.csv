@@ -1180,6 +1180,11 @@ bne,checkWHITEkill:,					//If the GREEN MAN is still alive, check if WHITE MAN i
 //If GREEN man is dead, increment a counter
 addi,r2,r2,1,						//The counter has a 1 for GREEN MAN killed
 
+//Check if 3/4 players are already dead
+cmpi,x,r2,3,						//Check to see if 3 of the 4 players have been eliminated
+bne,checkWHITEkill:,				//If the first three (BLUE, RED, GREEN) are not dead, check WHITE MAN
+j,winner:,							//If only one player is left, just jump to WINNER function
+
 //check for WHITE MAN
 checkWHITEkill:,
 ld,r1,r14,VGA,						//Load from the WHITE MAN glyph MEMORY location
@@ -2792,6 +2797,12 @@ jra,					//jump to the Return Address of where the function was called
 
 movement:
 addi,r30,r31,0,				//Store the return address
+
+//FIRST CHECK SHOULD BE IF THE PLAYER HAS BEEN TERMINATED, THEN DON'T EVEN MOVE
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r6,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+cmpi,x,r6,0,				//Compare if the INDEX is a background (means player has been terminated)
+beq,endMovement:,			//If the player's glyph INDEX is a background glyph, then branch to endMovement
 
 //********CHECK RIGHT MOVEMENT*********
 andi,r3,r1,1,				//Get the right directional value

@@ -17,7 +17,15 @@
 redLaser:
 addi,r30,r31,0,					//Store the return address
 
+//CHECK IF RED MAN EVEN EXIST
+//ld,r6,r12,VGA,				//Glyph INDEX value of current glyph MEMORY location
+//cmpi,x,r6,giREDMAN,			//Compare if the INDEX is the right index (means player exist)
+//bne,redLaserEnd:,			//If the player's glyph INDEX is a background glyph, then branch to endMovement
+//addi,r12,r0,0,				//Set the BLUE MAN glyph LOCATION to zero
+//j,redLaserEnd:,			//Jump to the end of the function
+
 //Check if the laser exist
+redLaserExist:,
 cmpi,x,r8,0,					//Check if a laser exist - if laser exist, it will be different from 0
 beq,checkALaserRED:,			//If the laser does not exist, then check for fired laser
 
