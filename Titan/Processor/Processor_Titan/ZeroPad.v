@@ -18,6 +18,8 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
+
+//This module extends a 1-bit value into a 32-bit value cocatenating 31'b0 with a 1-bit input
 module ZeroPad#(parameter WIDTH = 32)
 	(input data_in, output [WIDTH-1:0] data_out);
 	

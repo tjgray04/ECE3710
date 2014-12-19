@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.5 r10040"
-   sodipodi:docname="GlychPoster.svg">
+   sodipodi:docname="GlychPoster.pdf">
   <defs
      id="defs4" />
   <sodipodi:namedview
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748738"
-     inkscape:cx="1728.4096"
-     inkscape:cy="1158.4092"
+     inkscape:zoom="0.175"
+     inkscape:cx="1477.7705"
+     inkscape:cy="926.3494"
      inkscape:document-units="px"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
