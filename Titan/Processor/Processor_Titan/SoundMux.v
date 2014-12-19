@@ -24,7 +24,7 @@ module SoundMux#(parameter TICKBITS = 20)(
 		output reg [TICKBITS-1:0] bassSound
     );
 
-//Define parameters
+//Define parameters for convenience
 parameter BASS = 1'b0;
 parameter SFX = 1'b1;
 
@@ -32,7 +32,7 @@ parameter SFX = 1'b1;
 always@(*)
 begin
 	case(select)
-		BASS: bassSound <= bass;
+		BASS: bassSound <= bass;		//This mux determines whether the bass line or a sound effect is output to the speaker
 		SFX: bassSound <= sfx;
 	endcase
 end

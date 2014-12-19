@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: This finite state machine controls what gets written to the sound register
 //
 // Dependencies: 
 //
@@ -51,27 +51,27 @@ end
 always@(*)
 begin
 	case(PS)
-		ENABLED:
+		ENABLED:		//In this state the processor can write to the sound register
 					begin
-					if((CPUwriteEn == 1'b1) && (writeDataIN != 0))
+					if((CPUwriteEn == 1'b1) && (writeDataIN != 0))		//If a sound effect is written, then the processor can only overwrite the sound register with another death sound effect request
 						NS <= DISABLED;
 					else
 						NS <= ENABLED;
 					end
-		DISABLED:
+		DISABLED:		//Writes by the processor that aren't death sound effect requests are ignored
 					begin
 					if(done == 1'b1)
-						NS <= REENABLE;
+						NS <= REENABLE;		//If the sound effect finished playing, reenable processor writing
 					else if((CPUwriteEn == 1'b1) && (writeDataIN == 2'b11))
 						NS <= TRANS;
 					else
 						NS <= DISABLED;
 					end
-		TRANS: NS <= DISABLED2;
-		DISABLED2:
+		TRANS: NS <= DISABLED2;		//An intermediate state used to write a death sound effect request to the sound register
+		DISABLED2:					//The death sound effect cannot be interrupted until it has finished except by another death sound effect request
 					begin
 					if(done == 1'b1)
-						NS <= REENABLE;
+						NS <= REENABLE;		//When the death sound effect has finished, writing from the processor is reenabled
 					else
 						NS <= DISABLED2;
 					end
@@ -84,22 +84,22 @@ end
 always@(*)
 begin
 	case(PS)
-		ENABLED:
+		ENABLED:	//The module acts transparent and the processor can write to the sound register
 					begin
 					writeEn <= CPUwriteEn;
 					writeDataOUT <= writeDataIN;
 					end
-		DISABLED:
+		DISABLED:	//There is no writing to the sound register
 					begin
 					writeEn <= 0;
 					writeDataOUT <= writeDataIN;
 					end
-		TRANS:
+		TRANS:		//A death sound effect request is written to the sound register
 					begin
 					writeEn <= 1;
 					writeDataOUT <= DEATH;
 					end
-		DISABLED2:
+		DISABLED2:	//No writes are allowed except for a death sound effect request
 					begin
 					if((CPUwriteEn == 1'b1) && (writeDataIN == 2'b11))
 					 begin
@@ -112,7 +112,7 @@ begin
 						writeDataOUT <= writeDataIN;
 					 end
 					end
-		REENABLE:
+		REENABLE:	//Writing becomes reeabled after a sound effect has finished playing
 					begin
 					writeEn <= 1'b1;
 					writeDataOUT <= 0;

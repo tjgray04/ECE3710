@@ -24,6 +24,6 @@ module ticksMux#(parameter WIDTH = 20)(
 		output [WIDTH-1:0] result
     );
 
-assign result = select ? arg2: arg1;
-
+assign result = select ? arg2: arg1;		//A special mux used to determine which sound effect gets send to the bass line tone generator
+											//It is controlled by the sound mux
 endmodule

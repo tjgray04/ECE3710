@@ -24,6 +24,6 @@ module Mux#(parameter WIDTH = 32)(
 		output[WIDTH-1:0] out
     );
 
-	assign out = select ? d1 : d0;
+	assign out = select ? d1 : d0;		//If select is high, output the second argument, otherwise output the first
 
 endmodule

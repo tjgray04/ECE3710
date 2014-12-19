@@ -60,7 +60,7 @@ always@(*)
 	 endcase
   end
 
-//Counter
+//This counter determines if the note has ended playing for a given duration
 always@(posedge clk)
   begin
     case(PS)
@@ -71,12 +71,12 @@ always@(posedge clk)
 		  end
 		quarter:
 		  begin
-		    if(count==100)		//If count has been reached, indicate that the end has been reached.
+		    if(count==100)		//If count has been reached, indicate that the note is done playing
 		      begin
 			     ended<=1;
 				  count<=0;
 			   end
-		    else if(enable)		//If the pulse arrives, then continue count
+		    else if(enable)		//If the pulse arrives, then continue the count
 			   begin
 			     ended<=0;
 			  	  count<=count+1'b1;
@@ -89,7 +89,7 @@ always@(posedge clk)
 		  end
 		eigth:
 		  begin
-		    if(count==50)
+		    if(count==50)				//The maximum count changes depending on the duration
 		      begin
 			     ended<=1;
 				  count<=0;
@@ -167,12 +167,12 @@ always@(posedge clk)
     endcase
   end
   
-//Output
+//Output block
 always@(*)
   begin
     case(PS)
 	   fetch: nextNote=0;
-		quarter: nextNote=ended;		//If the note has finished playing, say that it's ok to fetch the next note.
+		quarter: nextNote=ended;		//If the note has finished playing, say that it's OK to fetch the next note.
 		eigth: nextNote=ended;
 		third: nextNote=ended;
 		sixteenth: nextNote=ended;

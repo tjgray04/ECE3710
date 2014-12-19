@@ -39,19 +39,19 @@ reg [26:0]count;
 
 always@(posedge clk)
   begin
-    if(clr)
+    if(clr)							//Reset the counter if a reset signal is seen
       begin
         count<=0;
         enable<=0;
 	   end
-    else if(count == maxCount)
+    else if(count == maxCount)		//If the maximum count has been reached, output an enable signal
       begin
 	     count<=0;
 	     enable<=1;
 	   end
     else
       begin
-        count<=count+1'b1;
+        count<=count+1'b1;			//Otherwise continue the count
 	     enable<=0;
 	   end
   end

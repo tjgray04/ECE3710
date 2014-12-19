@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: This module holds the tone sound library for the melody of the Glych music
 //
 // Dependencies: 
 //
@@ -24,16 +24,16 @@ module melody_library#(parameter TICKBITS = 20)(
 		output reg [TICKBITS-1:0]ticks
     );
 
-//Parameters
-parameter fetch=0;
-parameter quarter=1;
+//Define state parameters
+parameter fetch=0;		//The fetch state is the default state in which the next note will be fetched
+parameter quarter=1;	//State corresponding to the duration of a quarter note
 parameter eigth=2;
 parameter third=3;
 parameter sixteenth=4;
 parameter sixth = 5;
 
 //Note parameters
-parameter 	C3  = 382234,
+parameter 	C3  = 382234,			//These parameter define the number of counts needed at 100 MHz to play the corresponding note
 				Cshp3 = 360776,
 				D3  = 340530,
 				Dshp3 = 321419,
@@ -79,7 +79,7 @@ always@(*)
   begin
 	 case(count)
 		//Melody pattern 1
-	   1: begin duration=eigth; ticks=A3; end
+	   1: begin duration=eigth; ticks=A3; end				//At each count the duration and tone count is output
 		2: begin duration=eigth; ticks=REST; end
 		3: begin duration=eigth; ticks=A3; end
 		4: begin duration=eigth; ticks=REST; end

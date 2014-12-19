@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: This module holds the tone sound library for the bass line of the Glych music
 //
 // Dependencies: 
 //
@@ -24,51 +24,51 @@ module bass_library#(parameter TICKBITS = 20)(
 		output reg [TICKBITS-1:0]ticks
     );
 
-//Parameters
-parameter fetch=0;
-parameter quarter=1;
+//Define state parameters
+parameter fetch=0;		//The fetch state is the default state in which the next note will be fetched
+parameter quarter=1;	//State corresponding to the duration of a quarter note
 parameter eigth=2;
 parameter third=3;
 parameter sixteenth=4;
 parameter sixth = 5;
 
 //Note parameters
-parameter 	C2 = 764409,
-				Cshp2 = 721501,
-				D2 = 681013,
-				Dshp2 = 642839,
-				E2 = 606722,
-				F2 = 572672,
-				Fshp2 = 540541,
-				G2 = 510204,
-				Gshp2 = 481556,
-				A2 = 454545,
-				Ashp2 = 429037,
-				B2 = 404957,
-				C3  = 382234,
-				Cshp3 = 360776,
-				D3  = 340530,
-				Dshp3 = 321419,
-				E3  = 303380,
-				F3  = 286352,
-				Fshp3  = 270270,
-				G3  = 255102,
-				Gshp3  = 240790,
-				A3  = 227273,
-				Ashp3  = 214519,
-				B3  = 202478,
-				C4  = 191110,		//One octave starting at middle C.
-				D4  = 170265,
-				E4  = 151685,
-				F4  = 143172,
-				G4  = 127551,
-				A4  = 113636,
-				B4  = 101239,
-				REST = 0;
+parameter 	C2 = 764409,		//These parameter define the number of counts needed at 100 MHz to play the corresponding note
+			Cshp2 = 721501,
+			D2 = 681013,
+			Dshp2 = 642839,
+			E2 = 606722,
+			F2 = 572672,
+			Fshp2 = 540541,
+			G2 = 510204,
+			Gshp2 = 481556,
+			A2 = 454545,
+			Ashp2 = 429037,
+			B2 = 404957,
+			C3  = 382234,
+			Cshp3 = 360776,
+			D3  = 340530,
+			Dshp3 = 321419,
+			E3  = 303380,
+			F3  = 286352,
+			Fshp3  = 270270,
+			G3  = 255102,
+			Gshp3  = 240790,
+			A3  = 227273,
+			Ashp3  = 214519,
+			B3  = 202478,
+			C4  = 191110,		//One octave starting at middle C.
+			D4  = 170265,
+			E4  = 151685,
+			F4  = 143172,
+			G4  = 127551,
+			A4  = 113636,
+			B4  = 101239,
+			REST = 0;
 
 //Counts through song bank
 reg [8:0]count = 1;
-parameter totalNoteCount = 256;
+parameter totalNoteCount = 256;		//The total number of notes in the song
 always@(posedge clk)
   begin
     if(clr)
@@ -85,13 +85,13 @@ always@(posedge clk)
 /* The number of ticks needed to play a given note can be calculated by:
  * 		ticks = (100*10^6)/(2*freq)
  * where freq is the frequency of the desired note to be played. The ticks act as a counter that counts
- * to half of the time given by 1\freq. The output is then oscillated giving a sqare wave tone approximation.
+ * to half of the time given by 1\freq. The output is then oscillated giving a square wave tone approximation.
  */
 always@(*)
   begin
 	 case(count)
 		//Bass pattern 1
-	   1: begin duration=eigth; ticks=A2; end
+	   1: begin duration=eigth; ticks=A2; end		//At each count a duration and note count are output
 		2: begin duration=eigth; ticks=E3; end
 		3: begin duration=eigth; ticks=A2; end
 		4: begin duration=eigth; ticks=E3; end

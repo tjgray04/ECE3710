@@ -30,19 +30,19 @@ reg [TICKBITS-1:0]count = 0;
 
 always@(posedge clk)
   begin
-    if(clr)
+    if(clr)			//Don't play a sound on reset
       begin
         sound<=0;
 	     count<=0;
       end
-    else if(count==(ticks>>1))			//The number of ticks determines the frequency
-	   begin
+    else if(count==(ticks>>1))			//The number of ticks determines the frequency. The ticks are dived by two since the clock was
+	   begin							//originally 100 MHz, but switched to 50 MHz
 		  sound<=~sound;				//When the count reaches the tick number, alternate the output. This creates a simple tone of the desired frequency.
 		  count<=0;
 		end
 	 else
 	   begin
-		  count<=count+1'b1;
+		  count<=count+1'b1;			//Continue the count
 		  sound<=sound;
 		end
 	end

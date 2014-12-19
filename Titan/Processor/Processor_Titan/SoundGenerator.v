@@ -9,7 +9,7 @@
 // Project Name: 
 // Target Devices: 
 // Tool versions: 
-// Description: 
+// Description: This Module is the top module that implements and connects all the modules needed to make the sound generator
 //
 // Dependencies: 
 //
@@ -58,9 +58,6 @@ Duration_FSM bassDurationFSM(.clk(clk), .clr(clr), .enable(enable), .duration(du
 bass_library blibrary(.clk(clk), .clr(clr), .nextNote(nextNoteBass), .duration(durationBass),
 								.ticks(bass));
 
-//TestSoundManipulator
-//TestSoundManipulator tm(.clk(clk), .reset(clr), .writeEn(CPUwriteEn), .writeData(writeDataCPU), .btnL(btnL), .btnR(btnR));
-
 //SoundRegControlFSM
 SoundRegControlFSM srcRSM(.clk(clk), .reset(clr), .done(done), .CPUwriteEn(CPUwriteEn), .writeDataIN(writeDataCPU),
 									.writeEn(writeEn), .writeDataOUT(writeData));
@@ -78,7 +75,7 @@ LaserSFXLibrary laserLib(.clk(clk),.clr(clr),.nextNote(nextNoteLaser),.duration(
 DeathSFXLibrary deathLib(.clk(clk),.clr(clr),.nextNote(nextNoteDeath),.duration(durationDeath),
 								.ticks(deathTicks),.SFXended(SFXendedDeath));
 
-assign SFXended = SFXendedLaser || SFXendedDeath;
+assign SFXended = SFXendedLaser || SFXendedDeath;		//Tells when the current sound effect has ended (since two sound effects can't play at once)
 
 //SFXmux
 ticksMux tmux(.select(soundSelect[1]),.arg1(laserTicks), .arg2(deathTicks), .result(SFXticks));

@@ -25,8 +25,8 @@ module SoundFX_FSM(input clk,clr,enable, SFXended,
     );
 
 //Define state parameters
-parameter fetch=0;
-parameter quarter=1;
+parameter fetch=0;			//The fetch state is the default state in which the next note will be fetched
+parameter quarter=1;		//State corresponding to the duration of a quarter note
 parameter eigth=2;
 parameter third=3;
 parameter sixteenth=4;
@@ -52,17 +52,17 @@ always@(posedge clk)
 always@(*)
   begin
     case(PS)
-		WAIT:
+		WAIT:		//Stay here if no sound effects need to be played
 				begin
 				if(soundRegBits != 0)
 					NS = fetch;
 				else
 					NS = WAIT;
 				end
-      fetch: 
+      fetch: 		//If a sound effect needs to be played, get the next note of the correct sound effect
 				begin
 				if(SFXended)
-					NS = DONE;
+					NS = DONE;			//Go to the end state if the sound effect has finished playing
 				else if(soundRegBits == 2'b11)
 					NS=durationDeath;
 				else
@@ -103,12 +103,12 @@ always@(*)
 				else
 					NS=(ended)?fetch:sixth;
 				end
-		DONE: NS = WAIT;
+		DONE: NS = WAIT;		//If the sound effect is done playing, go to the wait state
 		default NS=WAIT;
 	 endcase
   end
 
-//Counter
+//Define a counter that determines when a duration has been reached
 always@(posedge clk)
   begin
     case(PS)
@@ -135,7 +135,7 @@ always@(posedge clk)
 				  count<=count;
 			   end
 		  end
-		eigth:
+		eigth:						//The max count changes depending on the duration
 		  begin
 		    if(count==50)
 		      begin
@@ -218,20 +218,20 @@ always@(posedge clk)
 //Output
 always@(*)
   begin
-  nextNoteLaser = 0;
+  nextNoteLaser = 0;	//Initialize all outputs to zero so that only the ones that need to be set high will be changed
   nextNoteDeath = 0;
   done = 0;
     case(PS)
-		WAIT: ;
+		WAIT: ;			//No need to change outputs
 	   fetch: ;
-		quarter:		//If the note has finished playing, say that it's ok to fetch the next note.
+		quarter:		//If the note has finished playing, say that it's OK to fetch the next note.
 					begin
-					if(soundRegBits == 2'b11)
+					if(soundRegBits == 2'b11)		//The next note depends on what sound effect is being played (determined by the sound register)
 						nextNoteDeath = ended;
 					else
 						nextNoteLaser = ended;
 					end
-		eigth:
+		eigth:										//Each duration has its own state
 					begin
 					if(soundRegBits == 2'b11)
 						nextNoteDeath = ended;
@@ -259,7 +259,7 @@ always@(*)
 					else
 						nextNoteLaser = ended;
 					end
-		DONE: done = 1'b1;
+		DONE: done = 1'b1;		//Tell the sound controller when the sound effect has finished playing
 		default ;
 	 endcase
   end

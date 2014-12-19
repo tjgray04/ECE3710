@@ -40,7 +40,7 @@ begin
 	else
 	 begin
 		if(writeEn)
-			soundReg <= writeData;
+			soundReg <= writeData;		//Write if enabled
 		else
 			soundReg <= soundReg;
 	 end

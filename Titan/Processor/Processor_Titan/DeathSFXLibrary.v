@@ -25,9 +25,9 @@ module DeathSFXLibrary#(parameter TICKBITS = 20)(
 		output reg SFXended
     );
 
-//Parameters
-parameter fetch=0;
-parameter quarter=1;
+//Define state parameters
+parameter fetch=0;		//The fetch state is the default state in which the next note will be fetched
+parameter quarter=1;	//State corresponding to the duration of a quarter note
 parameter eigth=2;
 parameter third=3;
 parameter sixteenth=4;
@@ -35,17 +35,17 @@ parameter sixth = 5;
 
 //Note parameters
 parameter 	C = 191110,		//One octave starting at middle C.
-				D = 170265,
-				E = 151685,
-				F = 143172,
-				G = 127551,
-				A = 113636,
-				B = 101239,
-				REST = 0;
+			D = 170265,		//These parameter define the number of counts needed at 100 MHz to play the corresponding note
+			E = 151685,
+			F = 143172,
+			G = 127551,
+			A = 113636,
+			B = 101239,
+			REST = 0;
 
 //Counts through song bank
 reg [5:0]count = 1;
-parameter totalNoteCount = 7;
+parameter totalNoteCount = 7;		//The total number of notes in the song
 always@(posedge clk)
   begin
     if(clr)
@@ -56,7 +56,7 @@ always@(posedge clk)
 	 else if(count == totalNoteCount+1)		//Reset the count if the end of the song has been reached.
 	 begin
 	   count<=1;
-		SFXended<=1;
+		SFXended<=1;						//Indicate that the sound effect has ended
 	 end
 	 else if(nextNote)							//Only fetch the next note if the last one is done playing.
 	 begin
@@ -74,12 +74,12 @@ always@(posedge clk)
 /* The number of ticks needed to play a given note can be calculated by:
  * 		ticks = (100*10^6)/(2*freq)
  * where freq is the frequency of the desired note to be played. The ticks act as a counter that counts
- * to half of the time given by 1\freq. The output is then oscillated giving a sqare wave tone approximation.
+ * to half of the time given by 1\freq. The output is then oscillated giving a square wave tone approximation.
  */
 always@(*)
   begin
 	 case(count)
-	   1: begin duration=sixteenth; ticks=B; end
+	   1: begin duration=sixteenth; ticks=B; end		//At each count the duration and tone count is output
 		2: begin duration=sixteenth; ticks=A; end
 		3: begin duration=sixteenth; ticks=G; end
 		4: begin duration=sixteenth; ticks=F; end
