@@ -1,0 +1,3056 @@
+//**************GLOBAL VARIABLES********************
+gcon,TIMER,100000,			//Initial wait timer value
+
+gcon,VGA,16384,				//Binary: 01_00_0000_0000_0000, This is the base address for the VGA
+gcon,LED,40959,				//Binary: 10_0_1_1111_1111_1111, This is IO memory space for the LEDs
+gcon,SOUND,45055,			//Binary: 10_1_0_1111_1111_1111, This is IO memory space for the SOUND
+gcon,CTRLR,49151,			//Binary: 10_1_1_1111_1111_1111, This is IO memory space for the Controller
+gcon,LASER,1,				//Value to write to SOUND MEMORY space to play LASER sound
+gcon,DEATH,3,				//Value to write to SOUND MEMORY space to play DEATH sound
+
+gcon,giBLUEMAN,1,			//Glyph INDEX value of BLUE MAN
+gcon,giREDMAN,9,			//Glyph INDEX value of RED MAN
+gcon,giGREENMAN,17,			//Glyph INDEX value of GREEN MAN
+gcon,giWHITEMAN,25,			//Glyph INDEX value of WHITE MAN
+
+gcon,glBLUEMAN,81,			//Initial glyph LOCATION of the BLUE MAN
+gcon,glREDMAN,157,			//Initial glyph LOCATION of the RED MAN
+gcon,glGREENMAN,4401,		//Initial glyph LOCATION of the GREEN MAN
+gcon,glWHITEMAN,4477,		//Initial glyph LOCATION of the WHITE MAN
+
+gcon,LeftBLUELASER,42,		//Glyph INDEX value of BLUE MAN LASER LEFT - tested with a red block for now.
+gcon,RightBLUELASER,43,		//Glyph INDEX value of BLUE MAN LASER RIGHT
+gcon,LeftREDLASER,44,		//Glyph INDEX value of BLUE MAN LASER
+gcon,RightREDLASER,45,		//Glyph INDEX value of BLUE MAN LASER
+gcon,LeftGREENLASER,46,		//Glyph INDEX value of BLUE MAN LASER
+gcon,RightGREENLASER,47,	//Glyph INDEX value of BLUE MAN LASER
+gcon,LeftWHITELASER,48,		//Glyph INDEX value of BLUE MAN LASER
+gcon,RightWHITELASER,49,	//Glyph INDEX value of BLUE MAN LASER
+
+gcon,giTERMINATE,34,		//Glyph INDEX value of TERMINATE
+gcon,giWALL,33,				//Glyph INDEX value of WALL
+
+gcon,giBLUETILE,50,			//Glyph INDEX value of BLUE TILE
+gcon,giREDTILE,51,			//Glyph INDEX value of RED TILE
+gcon,giWHITETILE,52,		//Glyph INDEX value of WHITE TILE
+gcon,giYELLOWTILE,53,		//Glyph INDEX value of YELLOW TILE
+gcon,giORANGETILE,54,		//Glyph INDEX value of ORANGE TILE
+gcon,giGREENTILE,55,		//Glyph INDEX value of GREEN TILE
+
+gcon,THREE,1957,			//Glyph LOCATION of the START glyph
+gcon,TWO,1957,				//Glyph LOCATION of the START glyph
+gcon,ONE,1959,				//Glyph LOCATION of the START glyph
+gcon,START,2027,			//Glyph LOCATION of the START glyph
+gcon,WINNER,2026,			//Glyph LOCATION of the WINNER glyph
+
+
+//*********************INITIALIZATION************************
+init:
+addi,r1,r0,0,				//Start an increment variable to draw the background black
+
+//INITIALIZE THE SCREEN TO JUST THE MAZE
+initializeScreen:
+addi,r1,r1,1,
+cmpi,x,r1,4800,				//See if we have reach the end of the screen
+beq,initializeCharacters:,	//If the end of the screen is reached, then start initializing characters
+//If we haven't reached the end of the screen
+ld,r2,r1,VGA,				//Load the INDEX seen at the glyph MEMORY location
+cmpi,x,r2,giWALL,			//Compare the INDEX of the current glyph MEMORY location to the wall
+beq,initializeScreen:,		//If it is the wall glyph, then continue to the next glyph
+str,r0,r1,VGA,				//Otherwise, if not a wall glyph, then store a black background glyph (INDEX 0)
+j,initializeScreen:,		//Jump back to the top of the function and continue
+
+//LOAD THE GLYPH CHARACTERS TO THE SCREEN
+initializeCharacters:
+//BLUE MAN
+addi,r1,r0,giBLUEMAN,	//Parameter r1: takes in value of glyph INDEX - r7 for BLUE MAN
+addi,r2,r0,glBLUEMAN,	//Parameter r2: takes in value of glyph LOCATION - r11 for BLUE MAN
+jal,DrawGlyph:,			//Draw the RED MAN first
+
+//RED MAN
+addi,r1,r0,giREDMAN,	//Parameter r1: takes in value of glyph INDEX - r8 for RED MAN
+addi,r2,r0,glREDMAN,	//Parameter r2: takes in value of glyph LOCATION - r12 for RED MAN
+jal,DrawGlyph:,			//Draw the BLUE MAN second
+
+//GREEN MAN
+addi,r1,r0,giGREENMAN,	//Parameter r1: takes in value of glyph INDEX - r9 for GREEN MAN
+addi,r2,r0,glGREENMAN,	//Parameter r2: takes in value of glyph LOCATION - r13 for GREEN MAN
+jal,DrawGlyph:,			//Draw the GREEN MAN third
+
+//WHITE MAN
+addi,r1,r0,giWHITEMAN,	//Parameter r1: takes in value of glyph INDEX - r10 for WHITE MAN
+addi,r2,r0,glWHITEMAN,	//Parameter r2: takes in value of glyph LOCATION - r14 for WHITE MAN
+jal,DrawGlyph:,			//Draw the WHITE MAN last
+
+//Save the initial current glyph LOCATION
+addi,r11,r0,glBLUEMAN,		//The initial glyph LOCATION of the BLUE MAN
+addi,r12,r0,glREDMAN,		//The initial glyph LOCATION of the RED MAN
+addi,r13,r0,glGREENMAN,		//The initial glyph LOCATION of the GREEN MAN
+addi,r14,r0,glWHITEMAN,		//The initial glyph LOCATION of the WHITE MAN
+
+//Set all the LASER glyph LOCATIONs to zero - Means the laser doesn't exist
+addi,r7,r0,0,				//The initial BLUE MAN LASER glyph LOCATION
+addi,r8,r0,0,				//The initial RED MAN LASER glyph LOCATION
+addi,r9,r0,0,				//The initial GREEN MAN LASER glyph LOCATION
+addi,r10,r0,0,				//The initial WHITE MAN LASER glyph LOCATION
+
+//CALL THE COUNT DWON FUNCTION
+jal,countDown:,
+
+
+//*************************************MAIN FUNCTION***********************************************
+// This function is the main game loop
+// PARAMETERS:
+// LOCAL VARIABLES:
+// GLOBAL VARIABLES:
+// RETURN VARIABLES:	
+
+main:
+addi,r0,r0,0,			//NOP
+jal,checkKills:,		//Jump and link to the Check for Kills function
+addi,r0,r0,0,			//NOP
+
+//LOAD THE CONTROLLER VALUE TO LEDS
+jal,ctrlr2led:,			//jump and link to CTRLR 2 LED function
+						//return register r24 contains value from controller
+
+//**************************CHECK FOR MOVEMENT**************************
+
+//**********GET VALUE FROM CONTROLLERS************
+//BLUE MAN   0000_0000__0000_0000__0000_0000__1111_1111 = 255
+//RED MAN   0000_0000__0000_0000__1111_1111__0000_0000 = 65280
+//GREEN MAN   0000_0000__1111_1111__0000_0000__0000_0000 = 16711680
+//WHITE MAN   1111_1111__0000_0000__0000_0000__0000_0000 = 4278190080
+
+//BLUE MAN
+addi,r1,r0,255,			//Change r1 to get the bits from BLUE MAN Controller
+and,r15,r1,r24,			//Collect bits relating only to BLUE MAN Controller
+
+//RED MAN
+//Shift by 8 to get value from RED MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from RED MAN Controller
+and,r16,r1,r24,			//Collect bits relating only to RED MAN Controller
+lshi,r16,r16,-8,		//Shift the RED MAN Controller bits to the lower 8 bits
+
+//GREEN MAN
+//Shift by another 8 to get value from GREEN MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from GREEN MAN Controller
+and,r17,r1,r24,			//Collect bits relating only to GREEN MAN Controller
+lshi,r17,r17,-16,		//Shift the GREEN MAN Controller bits to the lower 8 bits
+
+//WHITE MAN
+//Shift by another 8 to get value from WHITE MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from WHITE MAN Controller
+and,r18,r1,r24,			//Collect bits relating only to WHITE MAN Controller
+lshi,r18,r18,-24,		//Shift the WHITE MAN Controller bits to the lower 8 bits
+
+//******BLUE MAN CHECKS**********
+//CHECK IF BLUE MAN EVEN EXIST
+ld,r6,r11,VGA,				//Glyph INDEX value of current glyph MEMORY location
+cmpi,x,r6,giBLUEMAN,		//Compare if the INDEX is the right index (means player exist)
+bne,redMovement:,			//branch to check the next character
+
+//CHECK BLUE LASER FIRE
+jal,blueLaser:,			//Jump and link to the blueLaser function
+
+//CHECK BLUE MOVEMENT
+//movement PARAMETERS:	r1 - controller value
+// 						r2 - glyph LOCATION of current glyph
+//						r23 - return register with updated glyph LOCATION	
+addi,r1,r15,0,			//Put the controller value into the argument register r1
+addi,r2,r11,0,			//Put the current glyph LOCATION into argument register r2
+jal,movement:,			//Jump to the movement function
+addi,r11,r23,0,			//update the glyph LOCATION
+
+//******RED MAN CHECKS**********
+redMovement:,
+//CHECK IF RED MAN EVEN EXIST
+ld,r6,r12,VGA,			//Glyph INDEX value of current glyph MEMORY location
+cmpi,x,r6,giREDMAN,		//Compare if the INDEX is the right index (means player exist)
+bne,greenMovement:,		//branch to check the next character
+
+//CHECK RED LASER FIRE
+jal,redLaser:,			//Jump and link to the redLaser function
+
+//CHECK RED MOVEMENT
+//movement PARAMETERS:	r1 - controller value
+//		 				r2 - glyph LOCATION of current glyph	
+addi,r1,r16,0,			//Put the controller value into the argument register r1
+addi,r2,r12,0,			//Put the current glyph LOCATION into argument register r2
+jal,movement:,			//Jump to the movement function
+addi,r12,r23,0,			//update the glyph LOCATION
+
+//******GREEN MAN CHECKS**********
+greenMovement:,
+//CHECK IF GREEN MAN EVEN EXIST
+ld,r6,r13,VGA,			//Glyph INDEX value of current glyph MEMORY location
+cmpi,x,r6,giGREENMAN,		//Compare if the INDEX is the right index (means player exist)
+bne,whiteMovement:,		//branch to check the next character
+
+//CHECK GREEN LASER FIRE
+jal,greenLaser:,			//Jump and link to the greenLaser function
+
+//CHECK GREEN MOVEMENT
+//movement PARAMETERS:	r1 - controller value
+//		 				r2 - glyph LOCATION of current glyph	
+addi,r1,r17,0,			//Put the controller value into the argument register r1
+addi,r2,r13,0,			//Put the current glyph LOCATION into argument register r2
+jal,movement:,			//Jump to the movement function
+addi,r13,r23,0,			//update the glyph LOCATION
+
+//******WHITE MAN CHECKS**********
+whiteMovement:,
+//CHECK IF WHITE MAN EVEN EXIST
+ld,r6,r14,VGA,			//Glyph INDEX value of current glyph MEMORY location
+cmpi,x,r6,giWHITEMAN,	//Compare if the INDEX is the right index (means player exist)
+bne,mainEnd:,			//branch to end of main function
+
+//CHECK WHITE LASER FIRE
+jal,whiteLaser:,			//Jump and link to the whiteLaser function
+
+//CHECK WHITE MOVEMENT
+//movement PARAMETERS:	r1 - controller value
+//		 				r2 - glyph LOCATION of current glyph	
+addi,r1,r18,0,			//Put the controller value into the argument register r1
+addi,r2,r14,0,			//Put the current glyph LOCATION into argument register r2
+jal,movement:,			//Jump to the movement function
+addi,r14,r23,0,			//update the glyph LOCATION
+
+mainEnd:
+jal,waitLoop:,			//Jump to the wait loop
+j,main:,				//Loop back to main
+
+
+//***********************************WAIT LOOP FUNCTION****************************
+// This function will do nothing for the duration of the timer
+// PARAMETERS:
+// LOCAL VARIABLES:		r1 - timer decrement register 
+// GLOBAL VARIABLES:	TIMER - Wait time
+// RETURN VARIABLES:	
+
+waitLoop:
+addi,r1,r0,TIMER,		//store the timer into a temporary register
+//lshi,r1,r1,4,			//multiply the timer by shifting to the left
+add,r1,r1,r1,			//double the size of the timer
+add,r1,r1,r1,			//double the size of the timer again
+//add,r1,r1,r1,			//double the size of the timer again
+//add,r1,r1,r1,			//double the size of the timer again
+//add,r1,r1,r1,			//double the size of the timer again
+
+waitLoop2:
+addi,r1,r1,-1,			//decrement the timer
+cmpi,x,r1,0,			//check to see if timer is done
+bne,waitLoop2:,			//stay in timer until done
+
+jra,					//jump to the Return Address of where the function was called
+
+
+//*****************************COUNT DOWN FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+countDown:
+addi,r30,r31,0,				//Store the Return Address
+
+jal,startLoop:,				//Jump and link to the start loop
+addi,r0,r0,0,				//NOP
+jal,three:,					//Jump and link to the Three Function to draw a three
+addi,r0,r0,0,				//NOP
+jal,startLoop:,				//Jump and link to the waitLoop before drawing Two			
+addi,r0,r0,0,				//NOP
+jal,threeRemove:,			//Jump and link to the Three Remove Function
+addi,r0,r0,0,				//NOP
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two
+addi,r0,r0,0,				//NOP
+
+jal,two:,
+addi,r0,r0,0,				//NOP
+jal,startLoop:,				//Jump and link to the waitLoop before drawing One
+addi,r0,r0,0,				//NOP
+jal,twoRemove:,				//Jump and link to the Three Remove Function
+addi,r0,r0,0,				//NOP
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two	
+addi,r0,r0,0,				//NOP
+
+jal,one:,
+addi,r0,r0,0,				//NOP
+jal,startLoop:,				//Jump and link to the waitLoop before drawing Start
+addi,r0,r0,0,				//NOP
+jal,oneRemove:,				//Jump and link to the Three Remove Function
+addi,r0,r0,0,				//NOP
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two
+addi,r0,r0,0,				//NOP	
+
+jal,start:,
+addi,r0,r0,0,				//NOP
+jal,startLoop:,				//Jump and link to the waitLoop before starting the game
+addi,r0,r0,0,				//NOP
+jal,startRemove:,			//Jump and link to the Three Remove Function
+addi,r0,r0,0,				//NOP
+jal,waitLoop:,				//Jump and link to the waitLoop before drawing Two
+addi,r0,r0,0,				//NOP
+
+addi,r31,r30,0,				//Restore the return address
+jra,						//jump to the Return Address of where the function was called
+
+
+//***********************************START TIMER LOOP FUNCTION****************************
+// This function will do nothing for the duration of the timer
+// PARAMETERS:
+// LOCAL VARIABLES:		r1 - timer decrement register 
+// GLOBAL VARIABLES:	TIMER - Wait time
+// RETURN VARIABLES:	
+
+startLoop:
+addi,r1,r0,TIMER,		//store the timer into a temporary register
+//lshi,r1,r1,4,			//multiply the timer by shifting to the left
+add,r1,r1,r1,			//double the size of the timer
+add,r1,r1,r1,			//double the size of the timer again
+add,r1,r1,r1,			//double the size of the timer again
+add,r1,r1,r1,			//double the size of the timer again
+add,r1,r1,r1,			//double the size of the timer again
+add,r1,r1,r1,			//double the size of the timer again
+add,r1,r1,r1,			//double the size of the timer again
+add,r1,r1,r1,			//double the size of the timer again
+
+startLoop2:
+addi,r1,r1,-1,			//decrement the timer
+cmpi,x,r1,0,			//check to see if timer is done
+bne,startLoop2:,		//stay in timer until done
+
+jra,					//jump to the Return Address of where the function was called
+
+
+//*****************************START FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	giORANGETILE - glyph INDEX of the ORANGE TILE
+// RETURN VARIABLES:
+
+start:,//
+//Begin with the 1st row of Start
+addi,r1,r0,giORANGETILE,				//Add the ORANGE TILE into r1
+addi,r2,r0,START,						//Add the START glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of START into r2
+//Top of S
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//Top of T
+str,r1,r2,5,
+str,r1,r2,6,
+str,r1,r2,7,
+str,r1,r2,8,
+str,r1,r2,9,
+
+//Top of A
+str,r1,r2,11,
+str,r1,r2,12,
+str,r1,r2,13,
+str,r1,r2,14,
+
+//Top of R
+str,r1,r2,16,
+str,r1,r2,17,
+str,r1,r2,18,
+str,r1,r2,19,
+
+//Top of T
+str,r1,r2,21,
+str,r1,r2,22,
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+
+//2nd row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//3rd row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//4th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//5th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//6th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,12,
+str,r1,r2,13,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,17,
+str,r1,r2,18,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//7th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,17,
+
+//T
+str,r1,r2,23,
+
+//8th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,18,
+
+//T
+str,r1,r2,23,
+
+//9th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,18,
+
+//T
+str,r1,r2,23,
+
+//10th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//11th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************START REMOVE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+startRemove:,//
+//Begin with the 1st row of Start
+addi,r1,r0,0,							//Add the 0 into r1
+addi,r2,r0,START,						//Add the START glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of START into r2
+//Top of S
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//Top of T
+str,r1,r2,5,
+str,r1,r2,6,
+str,r1,r2,7,
+str,r1,r2,8,
+str,r1,r2,9,
+
+//Top of A
+str,r1,r2,11,
+str,r1,r2,12,
+str,r1,r2,13,
+str,r1,r2,14,
+
+//Top of R
+str,r1,r2,16,
+str,r1,r2,17,
+str,r1,r2,18,
+str,r1,r2,19,
+
+//Top of T
+str,r1,r2,21,
+str,r1,r2,22,
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+
+//2nd row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//3rd row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//4th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//5th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//6th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,12,
+str,r1,r2,13,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,17,
+str,r1,r2,18,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//7th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,17,
+
+//T
+str,r1,r2,23,
+
+//8th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,18,
+
+//T
+str,r1,r2,23,
+
+//9th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,18,
+
+//T
+str,r1,r2,23,
+
+//10th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+//11th row of Start
+addi,r2,r2,80,						//Put the start offset on the next line
+//S
+str,r1,r2,0,
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+
+//T
+str,r1,r2,7,
+
+//A
+str,r1,r2,11,
+str,r1,r2,14,
+
+//R
+str,r1,r2,16,
+str,r1,r2,19,
+
+//T
+str,r1,r2,23,
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************THREE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	giORANGETILE - glyph INDEX of the ORANGE TILE
+// RETURN VARIABLES:
+
+three:,//
+//Begin with the 1st row of the THREE
+addi,r1,r0,giORANGETILE,				//Add the ORANGE TILE into r1
+addi,r2,r0,THREE,						//Add the THREE glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of THREE into r2
+//Top of 3
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+
+//Middle of 3
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+
+//Bottom of 3
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************THREE REMOVE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+threeRemove:,//
+//Begin with the 1st row of the THREE
+addi,r1,r0,0,							//Add the 0 into r1
+addi,r2,r0,THREE,						//Add the THREE glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of THREE into r2
+//Top of 3
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+
+//Middle of 3
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+
+//Bottom of 3
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************TWO FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glyph
+// RETURN VARIABLES:
+
+two:,//
+//Begin with the 1st row of the TWO
+addi,r1,r0,giORANGETILE,				//Add the ORANGE TILE into r1
+addi,r2,r0,TWO,							//Add the TWO glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of TWO into r2
+//Top of 2
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+
+//Middle of 2
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+
+//Bottom of 2
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************TWO REMOVE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+twoRemove:,//
+//Begin with the 1st row of the TWO
+addi,r1,r0,0,							//Add the 0 into r1
+addi,r2,r0,TWO,							//Add the TWO glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of TWO into r2
+//Top of 2
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,5,
+
+//Middle of 2
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+
+//Bottom of 2
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+str,r1,r2,5,
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************ONE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glyph
+// RETURN VARIABLES:
+
+one:,//
+//Begin with the 1st row of the ONE
+addi,r1,r0,giORANGETILE,				//Add the ORANGE TILE into r1
+addi,r2,r0,ONE,							//Add the ONE glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of ONE into r2
+
+str,r1,r2,0,							//Store the ORANGE TILE
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************ONE REMOVE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+oneRemove:,//
+//Begin with the 1st row of the ONE
+addi,r1,r0,0,							//Add the 0 into r1
+addi,r2,r0,ONE,							//Add the ONE glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of ONE into r2
+
+str,r1,r2,0,							//Store the ORANGE TILE
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,
+//Next line
+addi,r2,r2,80,						//Put the start offset on the next line
+str,r1,r2,0,						
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************CHECK KILLS FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+checkKills:,
+addi,r30,r31,0,						//Store the return address
+addi,r2,r0,0,						//Set the death counter to zero
+
+//When a player is terminated, a background glyph (Index 0) is stored into the player's MEMORY location
+//Check if the value stored in the character's MEMORY location is 0 or not
+
+//check for BLUE MAN
+ld,r1,r11,VGA,						//Load from the BLUE MAN glyph MEMORY location
+cmpi,x,r1,0,						//If BLUE MAN has been terminated, this will be true
+bne,checkREDkill:,					//If the BLUE MAN is still alive, check if RED MAN is alive
+//If BLUE man is dead, increment a counter
+addi,r2,r2,1,						//The counter has a 1 for BLUE MAN killed
+
+//check for RED MAN
+checkREDkill:,
+ld,r1,r12,VGA,						//Load from the RED MAN glyph MEMORY location
+cmpi,x,r1,0,						//If RED MAN has been terminated, this will be true
+bne,checkGREENkill:,					//If the RED MAN is still alive, check if GREEN MAN is alive
+//If RED man is dead, increment a counter
+addi,r2,r2,1,						//The counter has a 1 for RED MAN killed
+
+//check for GREEN MAN
+checkGREENkill:,
+ld,r1,r13,VGA,						//Load from the GREEN MAN glyph MEMORY location
+cmpi,x,r1,0,						//If GREEN MAN has been terminated, this will be true
+bne,checkWHITEkill:,					//If the GREEN MAN is still alive, check if WHITE MAN is alive
+//If GREEN man is dead, increment a counter
+addi,r2,r2,1,						//The counter has a 1 for GREEN MAN killed
+
+//Check if 3/4 players are already dead
+cmpi,x,r2,3,						//Check to see if 3 of the 4 players have been eliminated
+bne,checkWHITEkill:,				//If the first three (BLUE, RED, GREEN) are not dead, check WHITE MAN
+j,winner:,							//If only one player is left, just jump to WINNER function
+
+//check for WHITE MAN
+checkWHITEkill:,
+ld,r1,r14,VGA,						//Load from the WHITE MAN glyph MEMORY location
+cmpi,x,r1,0,						//If WHITE MAN has been terminated, this will be true
+bne,checkKillEND:,					//If the WHITE MAN is still alive, jump to the end of the function
+//If WHITE man is dead, increment a counter
+addi,r2,r2,1,						//The counter has a 1 for WHITE MAN killed
+
+cmpi,x,r2,3,						//Check to see if 3 of the 4 players have been eliminated
+bne,checkKillEND:,					//If more than 1 is alive, jump to end of function and continue
+j,winner:,							//If only one player is left, just jump to WINNER function
+
+checkKillEND:
+addi,r31,r30,0,				//Restore the return address
+jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************WINNER FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	giORANGETILE - glyph INDEX of the ORANGE TILE
+// RETURN VARIABLES:
+
+winner:,//
+//Begin with the 1st row of Winner
+addi,r1,r0,giORANGETILE,				//Add the ORANGE TILE into r1
+addi,r2,r0,WINNER,						//Add the Winner glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of Winner into r2
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+str,r1,r2,26,
+
+//2nd row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//3rd row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//4th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//5th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//6th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+str,r1,r2,26,
+
+//7th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+
+//8th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,25,
+
+//9th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,25,
+
+//10th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//10th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+
+//I
+str,r1,r2,6,
+
+//N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+j,waitForStarts:,			//Jump to the WAIT FOR STARTS function
+
+//jra,						//jump to the Return Address of where the function was called
+
+
+//*****************************WINNER REMOVE FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:
+
+winnerRemove:,//
+//Begin with the 1st row of Winner
+addi,r1,r0,0,							//Add 0 into r1
+addi,r2,r0,WINNER,						//Add the Winner glyph LOCATION into r2
+addi,r2,r2,VGA,							//Put the glyph MEMORY location of Winner into r2
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+str,r1,r2,26,
+
+//2nd row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//3rd row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//4th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//5th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,9
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,14
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//6th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+str,r1,r2,25,
+str,r1,r2,26,
+
+//7th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,24,
+
+//8th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,25,
+
+//9th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,10,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,15,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,25,
+
+//10th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//Top of W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,2,
+str,r1,r2,4,
+
+//Top of I
+str,r1,r2,6,
+
+//Top of N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//Top of N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//Top of E
+str,r1,r2,18,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+//10th row of Winner
+addi,r2,r2,80,						//Put the Winner offset on the next line
+//W
+str,r1,r2,0,							//Store the ORANGE TILE
+str,r1,r2,1,
+str,r1,r2,2,
+str,r1,r2,3,
+str,r1,r2,4,
+
+//I
+str,r1,r2,6,
+
+//N
+str,r1,r2,8,
+str,r1,r2,11,
+
+//N
+str,r1,r2,13,
+str,r1,r2,16,
+
+//E
+str,r1,r2,18,
+str,r1,r2,19,
+str,r1,r2,20,
+str,r1,r2,21,
+
+//Top of R
+str,r1,r2,23,
+str,r1,r2,26,
+
+jra,						//jump to the Return Address of where the function was called
+
+
+//*************************************WAIT FOR STARTS FUNCTION***********************************************
+// This function will wait for all 4 players to press start to re-enable game play
+// PARAMETERS:
+// LOCAL VARIABLES:
+// GLOBAL VARIABLES:
+// RETURN VARIABLES:
+
+waitForStarts:,
+//Initialize count variables
+addi,r25,r0,0,
+addi,r26,r0,0,
+addi,r27,r0,0,
+addi,r28,r0,0,
+
+waitForStarts2:,
+//LOAD THE CONTROLLER VALUE TO LEDS
+jal,ctrlr2led:,			//jump and link to CTRLR 2 LED function
+						//return register r24 contains value from controller
+
+//**********GET VALUE FROM CONTROLLERS************
+//BLUE MAN   0000_0000__0000_0000__0000_0000__1111_1111 = 255
+//RED MAN   0000_0000__0000_0000__1111_1111__0000_0000 = 65280
+//GREEN MAN   0000_0000__1111_1111__0000_0000__0000_0000 = 16711680
+//WHITE MAN   1111_1111__0000_0000__0000_0000__0000_0000 = 4278190080
+
+//BLUE MAN
+addi,r1,r0,255,			//Change r1 to get the bits from BLUE MAN Controller
+and,r15,r1,r24,			//Collect bits relating only to BLUE MAN Controller
+
+//RED MAN
+//Shift by 8 to get value from RED MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from RED MAN Controller
+and,r16,r1,r24,			//Collect bits relating only to RED MAN Controller
+lshi,r16,r16,-8,		//Shift the RED MAN Controller bits to the lower 8 bits
+
+//GREEN MAN
+//Shift by another 8 to get value from GREEN MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from GREEN MAN Controller
+and,r17,r1,r24,			//Collect bits relating only to GREEN MAN Controller
+lshi,r17,r17,-16,		//Shift the GREEN MAN Controller bits to the lower 8 bits
+
+//WHITE MAN
+//Shift by another 8 to get value from WHITE MAN
+lshi,r1,r1,8,			//Change r1 to get the bits from WHITE MAN Controller
+and,r18,r1,r24,			//Collect bits relating only to WHITE MAN Controller
+lshi,r18,r18,-24,		//Shift the WHITE MAN Controller bits to the lower 8 bits
+
+//Check the controller data for start buttons
+//BLUE MAN
+andi,r1,r15,16,				//Mask the bits to get the START bit
+cmpi,x,r1,16,				//Check for BLUE MAN start
+bne,REDMANstart:,			//If not, check if RED MAN has pressed start
+addi,r25,r0,1,				//Set the BLUE MAN death counter to one
+
+//RED MAN
+REDMANstart:
+andi,r1,r16,16,			//Mask the bits to get the START bit
+cmpi,x,r1,16,				//Check for RED MAN start
+bne,GREENMANstart:,		//If not, check if GREEN MAN has pressed start
+addi,r26,r0,1,				//Set the RED MAN death counter to one
+
+//GREEN MAN
+GREENMANstart:
+andi,r1,r17,16,			//Mask the bits to get the START bit
+cmpi,x,r1,16,				//Check for GREEN MAN start
+bne,WHITEMANstart:,		//If not, check if WHITE MAN has pressed start
+addi,r27,r0,1,				//Set the GREEN MAN death counter to one
+
+//WHITE MAN
+WHITEMANstart:
+andi,r1,r17,16,				//Mask the bits to get the START bit
+cmpi,x,r1,16,				//Check for WHITE MAN start
+bne,addStartCount:,			//If not, jump back to top of loop
+addi,r28,r0,1,				//Set the WHITE MAN death counter to one
+
+//Add up the count
+addStartCount:,
+add,r6,r25,r26,
+add,r6,r6,r27,
+add,r6,r6,r28,
+
+cmpi,x,r6,4,				//If all four players have pressed start, then it's time to initialize
+bne,waitForStarts2:,			//If not all players have pressed start, then keep checking
+
+//Make sure to remove the winner banner
+jal,winnerRemove:,			//Remove the WINNER banner
+
+//If all 4 players have pressed start, make sure to reset the background
+//Make sure all the players are set to the background so initialization can redraw them properly
+subi,r2,r11,0,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,			//Jump and Link to the background to emulate GLYching
+subi,r2,r12,0,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,			//Jump and Link to the background to emulate GLYching
+subi,r2,r13,0,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,			//Jump and Link to the background to emulate GLYching
+subi,r2,r14,0,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,			//Jump and Link to the background to emulate GLYching
+addi,r0,r0,0,					//NOP
+
+//At the end of the function, jump back to the initialization
+j,init:,
+
+
+//******************************CONTROLLER 2 LED FUNCTION**********************
+// This function will load the value from the Controller onto the LEDs
+// PARAMETERS:			
+// LOCAL VARIABLES:		
+// GLOBAL VARIABLES:	CTRLR - Memory location of the Controller
+//						LED - Memory location of the LED's
+// RETURN VARIABLES:	r24 - Return the controller value
+
+ctrlr2led:
+ld,r24,r0,CTRLR,		//Load the Controller value into r23 to return
+addi,r0,r0,0,			//TESTER NOP
+str,r24,r0,LED,			//Store the value to the LEDs
+
+jra,					//jump to the Return Address of where the function was called
+
+
+//********************************BLUE LASER FUNCTION*****************************************
+// This function will update the BLUE MAN Laser
+// If the laser exist, then it will update in the direction it is currently travelling.
+// If the laser does not exist, then this function will generate a new laser
+// PARAMETERS:						
+// LOCAL VARIABLES:		r1 - glyph INDEX - Loaded from glyph MEMORY location calculated from r3, or set by global constants
+//						r5 - glyph MEMORY location of position to MOVE INTO
+//						r6 - glyph INDEX value of position to MOVE INTO
+//						r30 - temporary storage of Return Address Register
+// GLOBAL VARIABLES:	r7 - glyph LOCATION of BLUE MAN LASER
+//						r11 - BLUE MAN glyph LOCATION
+//						r15 - BLUE MAN CONTROLLER value
+//						RightBLUELASER - glyph INDEX value of BLUE MAN LASER RIGHT
+//						LeftBLUELASER - glyph INDEX value of BLUE MAN LASER LEFT
+// RETURN VARIABLES:	r24 - return register with updated glyph LOCATION of laser
+
+blueLaser:
+addi,r30,r31,0,					//Store the return address
+
+//CHECK IF BLUE MAN EVEN EXIST
+//ld,r6,r11,VGA,				//Glyph INDEX value of current glyph MEMORY location
+//cmpi,x,r6,giBLUEMAN,		//Compare if the INDEX is the right index (means player exist)
+//bne,blueLaserEnd2:,			//If the player's glyph INDEX is a background glyph, then branch to endMovement
+//addi,r11,r0,0,				//Set the BLUE MAN glyph LOCATION to zero
+//j,blueLaserEnd:,			//Jump to the end of the function
+
+//Check if the laser exist
+blueLaserExist:,
+cmpi,x,r7,0,					//Check if a laser exist - if laser exist, it will be different from 0
+beq,checkALaserBLUE:,			//If the laser does not exist, then check for fired laser
+
+//If laser exist, then check if it was a right or left laser
+//For the BLUE MAN LASER, we need to check RightBLUELASER and LeftBLUELASER
+ld,r1,r7,VGA,					//Load the glyph INDEX value of the current BLUE MAN LASER glyph MEMORY location
+cmpi,x,r1,LeftBLUELASER,		//Check if the glyph INDEX is the LEFT laser
+bne,blueUpdateRightLaser:,		//If the glyph INDEX is the RIGHT laser, then update the right
+
+//*****UPDATE BLUE MAN LEFT LASER*******
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,LeftBLUELASER,		//Put the glyph INDEX of the BLUE MAN LASER RIGHT into the argument register r1
+addi,r2,r7,0,					//Put the glyph LOCATION of the BLUE MAN LASER into the argument register r2
+jal,updateLeftLaser:,			//If it is a LEFT laser, jump and link to the Update Left Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r7,r23,0,					//Update the glyph LOCATION of the BLUE MAN LASER
+j,blueLaserEnd:,				//Jump to the end after updating the left laser
+
+//*****UPDATE BLUE MAN RIGHT LASER*******
+blueUpdateRightLaser:
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,RightBLUELASER,		//Put the glyph INDEX of the BLUE MAN LASER RIGHT into the argument register r1
+addi,r2,r7,0,					//Put the glyph LOCATION of the BLUE MAN LASER into the argument register r2
+jal,updateRightLaser:,			//Jump and link to the Update Right Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r7,r23,0,					//Update the glyph LOCATION of the BLUE MAN LASER
+j,blueLaserEnd:,				//Jump to the end after updating the right laser
+
+//******GENERATE NEW LASER**********
+//If the laser doesn't exist, generate a new laser
+//Check if button A was pressed for RIGHT laser
+checkALaserBLUE:
+andi,r6,r15,128,				//Get the right laser value - r6 doesn't follow convention here, but will in a few lines
+cmpi,x,r6,128,					//Check if laser pressed is for direction RIGHT
+bne,checkBLaserBLUE:,			//Check B laser if fails
+//Check to see if the position to the right of the right arm of the character is a valid position
+addi,r5,r11,162,				//Check location next to the right arm (162 glyph locations away from current glyph)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,blueLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r7 because laser shouldn't exist
+//if RIGHT movement is valid, generate the new laser
+addi,r1,r0,RightBLUELASER,		//get the glyph INDEX for the BLUE MAN LASER RIGHT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r7,r5,VGA,					//update the glyph LOCATION of the BLUE MAN LASER - this is the created laser
+j,blueLaserEnd:,				//After creating the glyph, jump to the end of the function
+
+//Check if button B was pressed for LEFT laser
+checkBLaserBLUE:
+andi,r6,r15,64,					//Get the left laser value - again, r6 doesn't follow convention here
+cmpi,x,r6,64,					//Check if laser pressed is for direction Left
+bne,blueLaserEnd:,				//Jump to end of function if fails
+//Check to see if position to the left of left arm of the character is a valid position
+addi,r5,r11,159,				//Check location next to the left arm (159 glyph locations away from glyph LOCATION of BLUE MAN)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,blueLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r7 because laser shouldn't exist
+//if LEFT movement is valid, generate the new laser
+addi,r1,r0,LeftBLUELASER,		//get the glyph INDEX for the BLUE MAN LASER LEFT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r7,r5,VGA,					//update the glyph LOCATION of the BLUE MAN LASER - this is the created laser
+
+blueLaserEnd:
+addi,r31,r30,0,					//Restore the return address
+jra,							//jump to the Return Address of where the function was called
+
+
+//********************************RED LASER FUNCTION*****************************************
+// This function will update the RED MAN Laser
+// If the laser exist, then it will update in the direction it is currently travelling.
+// If the laser does not exist, then this function will generate a new laser
+// PARAMETERS:						
+// LOCAL VARIABLES:		r1 - glyph INDEX - Loaded from glyph MEMORY location calculated from r3, or set by global constants
+//						r5 - glyph MEMORY location of position to MOVE INTO
+//						r6 - glyph INDEX value of position to MOVE INTO
+//						r30 - temporary storage of Return Address Register
+// GLOBAL VARIABLES:	r8 - glyph LOCATION of RED MAN LASER
+//						r12 - RED MAN glyph LOCATION
+//						r16 - RED MAN CONTROLLER value
+//						RightREDLASER - glyph INDEX value of RED MAN LASER RIGHT
+//						LeftREDLASER - glyph INDEX value of RED MAN LASER LEFT
+// RETURN VARIABLES:	r24 - return register with updated glyph LOCATION of laser
+
+redLaser:
+addi,r30,r31,0,					//Store the return address
+
+//CHECK IF RED MAN EVEN EXIST
+//ld,r6,r12,VGA,				//Glyph INDEX value of current glyph MEMORY location
+//cmpi,x,r6,giREDMAN,			//Compare if the INDEX is the right index (means player exist)
+//bne,redLaserEnd:,			//If the player's glyph INDEX is a background glyph, then branch to endMovement
+//addi,r12,r0,0,				//Set the BLUE MAN glyph LOCATION to zero
+//j,redLaserEnd:,			//Jump to the end of the function
+
+//Check if the laser exist
+redLaserExist:,
+cmpi,x,r8,0,					//Check if a laser exist - if laser exist, it will be different from 0
+beq,checkALaserRED:,			//If the laser does not exist, then check for fired laser
+
+//If laser exist, then check if it was a right or left laser
+//For the RED MAN LASER, we need to check RightREDLASER and LeftREDLASER
+ld,r1,r8,VGA,					//Load the glyph INDEX value of the current RED MAN LASER glyph MEMORY location
+cmpi,x,r1,LeftREDLASER,		//Check if the glyph INDEX is the RIGHT laser
+bne,redUpdateRightLaser:,		//If the glyph INDEX is the RIGHT laser, then update the right
+
+//*****UPDATE RED MAN LEFT LASER*******
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,LeftREDLASER,		//Put the glyph INDEX of the RED MAN LASER RIGHT into the argument register r1
+addi,r2,r8,0,					//Put the glyph LOCATION of the RED MAN LASER into the argument register r2
+jal,updateLeftLaser:,			//If it is a LEFT laser, jump and link to the Update Left Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r8,r23,0,					//Update the glyph LOCATION of the RED MAN LASER
+j,redLaserEnd:,				//Jump to the end after updating the left laser
+
+//*****UPDATE RED MAN RIGHT LASER*******
+redUpdateRightLaser:
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,RightREDLASER,		//Put the glyph INDEX of the RED MAN LASER RIGHT into the argument register r1
+addi,r2,r8,0,					//Put the glyph LOCATION of the RED MAN LASER into the argument register r2
+jal,updateRightLaser:,			//Jump and link to the Update Right Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r8,r23,0,					//Update the glyph LOCATION of the RED MAN LASER
+j,redLaserEnd:,				//Jump to the end after updating the right laser
+
+//******GENERATE NEW LASER**********
+//If the laser doesn't exist, generate a new laser
+//Check if button A was pressed for RIGHT laser
+checkALaserRED:
+andi,r6,r16,128,				//Get the right laser value - r6 doesn't follow convention here, but will in a few lines
+cmpi,x,r6,128,					//Check if laser pressed is for direction RIGHT
+bne,checkBLaserRED:,			//Check B laser if fails
+//Check to see if the position to the right of the right arm of the character is a valid position
+addi,r5,r12,162,				//Check location next to the right arm (162 glyph locations away from current glyph)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,redLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r8 because laser shouldn't exist
+//if RIGHT movement is valid, generate the new laser
+addi,r1,r0,RightREDLASER,		//get the glyph INDEX for the RED MAN LASER RIGHT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r8,r5,VGA,					//update the glyph LOCATION of the RED MAN LASER - this is the created laser
+j,redLaserEnd:,				//After creating the glyph, jump to the end of the function
+
+//Check if button B was pressed for LEFT laser
+checkBLaserRED:
+andi,r6,r16,64,					//Get the left laser value - again, r6 doesn't follow convention here
+cmpi,x,r6,64,					//Check if laser pressed is for direction Left
+bne,redLaserEnd:,				//Jump to end of function if fails
+//Check to see if position to the left of left arm of the character is a valid position
+addi,r5,r12,159,				//Check location next to the left arm (159 glyph locations away from glyph LOCATION of RED MAN)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,redLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r8 because laser shouldn't exist
+//if LEFT movement is valid, generate the new laser
+addi,r1,r0,LeftREDLASER,		//get the glyph INDEX for the RED MAN LASER LEFT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r8,r5,VGA,					//update the glyph LOCATION of the RED MAN LASER - this is the created laser
+
+redLaserEnd:
+addi,r31,r30,0,					//Restore the return address
+jra,							//jump to the Return Address of where the function was called
+
+
+//********************************GREEN LASER FUNCTION*****************************************
+// This function will update the GREEN MAN Laser
+// If the laser exist, then it will update in the direction it is currently travelling.
+// If the laser does not exist, then this function will generate a new laser
+// PARAMETERS:						
+// LOCAL VARIABLES:		r1 - glyph INDEX - Loaded from glyph MEMORY location calculated from r3, or set by global constants
+//						r5 - glyph MEMORY location of position to MOVE INTO
+//						r6 - glyph INDEX value of position to MOVE INTO
+//						r30 - temporary storage of Return Address Register
+// GLOBAL VARIABLES:	r9 - glyph LOCATION of GREEN MAN LASER
+//						r13 - GREEN MAN glyph LOCATION
+//						r17 - GREEN MAN CONTROLLER value
+//						RightGREENLASER - glyph INDEX value of GREEN MAN LASER RIGHT
+//						LeftGREENLASER - glyph INDEX value of GREEN MAN LASER LEFT
+// RETURN VARIABLES:	r24 - return register with updated glyph LOCATION of laser
+
+greenLaser:
+addi,r30,r31,0,					//Store the return address
+
+//CHECK IF GREEN MAN EVEN EXIST
+//ld,r6,r13,VGA,				//Glyph INDEX value of current glyph MEMORY location
+//cmpi,x,r6,giGREENMAN,				//Compare if the INDEX is a background (means player has been terminated)
+//bne,greenLaserEnd:,			//If the player's glyph INDEX is a background glyph, then branch to endMovement
+//addi,r13,r0,0,				//Set the BLUE MAN glyph LOCATION to zero
+//j,blueLaserEnd:,			//Jump to the end of the function
+
+//Check if the laser exist
+greenLaserExist:
+cmpi,x,r9,0,					//Check if a laser exist - if laser exist, it will be different from 0
+beq,checkALaserGREEN:,			//If the laser does not exist, then check for fired laser
+
+//If laser exist, then check if it was a right or left laser
+//For the GREEN MAN LASER, we need to check RightGREENLASER and LeftGREENLASER
+ld,r1,r9,VGA,					//Load the glyph INDEX value of the current GREEN MAN LASER glyph MEMORY location
+cmpi,x,r1,LeftGREENLASER,		//Check if the glyph INDEX is the RIGHT laser
+bne,greenUpdateRightLaser:,		//If the glyph INDEX is the RIGHT laser, then update the right
+
+//*****UPDATE GREEN MAN LEFT LASER*******
+//cmpi,x,r1,LeftGREENLASER,		//If it's not a right laser, double check that it's a left laser
+//bne,greenLaserEnd:,			//If it's not a LEFT laser, branch to the end
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,LeftGREENLASER,		//Put the glyph INDEX of the GREEN MAN LASER RIGHT into the argument register r1
+addi,r2,r9,0,					//Put the glyph LOCATION of the GREEN MAN LASER into the argument register r2
+jal,updateLeftLaser:,			//If it is a LEFT laser, jump and link to the Update Left Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r9,r23,0,					//Update the glyph LOCATION of the GREEN MAN LASER
+j,greenLaserEnd:,				//Jump to the end after updating the left laser
+
+//*****UPDATE GREEN MAN RIGHT LASER*******
+greenUpdateRightLaser:
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,RightGREENLASER,		//Put the glyph INDEX of the GREEN MAN LASER RIGHT into the argument register r1
+addi,r2,r9,0,					//Put the glyph LOCATION of the GREEN MAN LASER into the argument register r2
+jal,updateRightLaser:,			//Jump and link to the Update Right Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r9,r23,0,					//Update the glyph LOCATION of the GREEN MAN LASER
+j,greenLaserEnd:,				//Jump to the end after updating the right laser
+
+//******GENERATE NEW LASER**********
+//If the laser doesn't exist, generate a new laser
+//Check if button A was pressed for RIGHT laser
+checkALaserGREEN:
+andi,r6,r17,128,				//Get the right laser value - r6 doesn't follow convention here, but will in a few lines
+cmpi,x,r6,128,					//Check if laser pressed is for direction RIGHT
+bne,checkBLaserGREEN:,			//Check B laser if fails
+//Check to see if the position to the right of the right arm of the character is a valid position
+addi,r5,r13,162,				//Check location next to the right arm (162 glyph locations away from current glyph)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,greenLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r9 because laser shouldn't exist
+//if RIGHT movement is valid, generate the new laser
+addi,r1,r0,RightGREENLASER,		//get the glyph INDEX for the GREEN MAN LASER RIGHT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r9,r5,VGA,					//update the glyph LOCATION of the GREEN MAN LASER - this is the created laser
+j,greenLaserEnd:,				//After creating the glyph, jump to the end of the function
+
+//Check if button B was pressed for LEFT laser
+checkBLaserGREEN:
+andi,r6,r17,64,					//Get the left laser value - again, r6 doesn't follow convention here
+cmpi,x,r6,64,					//Check if laser pressed is for direction Left
+bne,greenLaserEnd:,				//Jump to end of function if fails
+//Check to see if position to the left of left arm of the character is a valid position
+addi,r5,r13,159,				//Check location next to the left arm (159 glyph locations away from glyph LOCATION of GREEN MAN)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,greenLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r9 because laser shouldn't exist
+//if LEFT movement is valid, generate the new laser
+addi,r1,r0,LeftGREENLASER,		//get the glyph INDEX for the GREEN MAN LASER LEFT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r9,r5,VGA,					//update the glyph LOCATION of the GREEN MAN LASER - this is the created laser
+
+greenLaserEnd:
+addi,r31,r30,0,					//Restore the return address
+jra,							//jump to the Return Address of where the function was called
+
+
+//********************************WHITE LASER FUNCTION*****************************************
+// This function will update the WHITE MAN Laser
+// If the laser exist, then it will update in the direction it is currently travelling.
+// If the laser does not exist, then this function will generate a new laser
+// PARAMETERS:						
+// LOCAL VARIABLES:		r1 - glyph INDEX - Loaded from glyph MEMORY location calculated from r3, or set by global constants
+//						r5 - glyph MEMORY location of position to MOVE INTO
+//						r6 - glyph INDEX value of position to MOVE INTO
+//						r30 - temporary storage of Return Address Register
+// GLOBAL VARIABLES:	r10 - glyph LOCATION of WHITE MAN LASER
+//						r14 - WHITE MAN glyph LOCATION
+//						r18 - WHITE MAN CONTROLLER value
+//						RightWHITELASER - glyph INDEX value of WHITE MAN LASER RIGHT
+//						LeftWHITELASER - glyph INDEX value of WHITE MAN LASER LEFT
+// RETURN VARIABLES:	r24 - return register with updated glyph LOCATION of laser
+
+whiteLaser:
+addi,r30,r31,0,					//Store the return address
+
+//CHECK IF WHITE MAN EVEN EXIST
+//ld,r6,r14,VGA,				//Glyph INDEX value of current glyph MEMORY location
+//cmpi,x,r6,giWHITEMAN,				//Compare if the INDEX is a background (means player has been terminated)
+//bne,whiteLaserEnd:,			//If the player's glyph INDEX is a background glyph, then branch to endMovement
+//addi,r14,r0,0,				//Set the BLUE MAN glyph LOCATION to zero
+//j,whiteLaserEnd:,			//Jump to the end of the function
+
+//Check if the laser exist
+whiteLaserExist:,
+cmpi,x,r10,0,					//Check if a laser exist - if laser exist, it will be different from 0
+beq,checkALaserWHITE:,			//If the laser does not exist, then check for fired laser
+
+//If laser exist, then check if it was a right or left laser
+//For the WHITE MAN LASER, we need to check RightWHITELASER and LeftWHITELASER
+ld,r1,r10,VGA,					//Load the glyph INDEX value of the current WHITE MAN LASER glyph MEMORY location
+cmpi,x,r1,LeftWHITELASER,		//Check if the glyph INDEX is the RIGHT laser
+bne,whiteUpdateRightLaser:,		//If the glyph INDEX is the RIGHT laser, then update the right
+
+//*****UPDATE WHITE MAN LEFT LASER*******
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,LeftWHITELASER,		//Put the glyph INDEX of the WHITE MAN LASER RIGHT into the argument register r1
+addi,r2,r10,0,					//Put the glyph LOCATION of the WHITE MAN LASER into the argument register r2
+jal,updateLeftLaser:,			//If it is a LEFT laser, jump and link to the Update Left Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r10,r23,0,					//Update the glyph LOCATION of the WHITE MAN LASER
+j,whiteLaserEnd:,				//Jump to the end after updating the left laser
+
+//*****UPDATE WHITE MAN RIGHT LASER*******
+whiteUpdateRightLaser:
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+addi,r1,r0,RightWHITELASER,		//Put the glyph INDEX of the WHITE MAN LASER RIGHT into the argument register r1
+addi,r2,r10,0,					//Put the glyph LOCATION of the WHITE MAN LASER into the argument register r2
+jal,updateRightLaser:,			//Jump and link to the Update Right Laser Function
+								//return register r23 contains the updated glyph LOCATION
+addi,r10,r23,0,					//Update the glyph LOCATION of the WHITE MAN LASER
+j,whiteLaserEnd:,				//Jump to the end after updating the right laser
+
+//******GENERATE NEW LASER**********
+//If the laser doesn't exist, generate a new laser
+//Check if button A was pressed for RIGHT laser
+checkALaserWHITE:
+andi,r6,r18,128,				//Get the right laser value - r6 doesn't follow convention here, but will in a few lines
+cmpi,x,r6,128,					//Check if laser pressed is for direction RIGHT
+bne,checkBLaserWHITE:,			//Check B laser if fails
+//Check to see if the position to the right of the right arm of the character is a valid position
+addi,r5,r14,162,				//Check location next to the right arm (162 glyph locations away from current glyph)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,whiteLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r10 because laser shouldn't exist
+//if RIGHT movement is valid, generate the new laser
+addi,r1,r0,RightWHITELASER,		//get the glyph INDEX for the WHITE MAN LASER RIGHT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r10,r5,VGA,					//update the glyph LOCATION of the WHITE MAN LASER - this is the created laser
+j,whiteLaserEnd:,				//After creating the glyph, jump to the end of the function
+
+//Check if button B was pressed for LEFT laser
+checkBLaserWHITE:
+andi,r6,r18,64,					//Get the left laser value - again, r6 doesn't follow convention here
+cmpi,x,r6,64,					//Check if laser pressed is for direction Left
+bne,whiteLaserEnd:,				//Jump to end of function if fails
+//Check to see if position to the left of left arm of the character is a valid position
+addi,r5,r14,159,				//Check location next to the left arm (159 glyph locations away from glyph LOCATION of WHITE MAN)
+addi,r5,r5,VGA,					//Glyph MEMORY location of glyph to check
+ld,r6,r5,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r6,0,					//Check if the INDEX is the background glyph (index 0)
+bne,whiteLaserEnd:,				//Branch to the end of the function if invalid position - no need to update r10 because laser shouldn't exist
+//if LEFT movement is valid, generate the new laser
+addi,r1,r0,LeftWHITELASER,		//get the glyph INDEX for the WHITE MAN LASER LEFT
+str,r1,r5,0,					//Store the glyph INDEX of the laser into the valid position
+subi,r10,r5,VGA,					//update the glyph LOCATION of the WHITE MAN LASER - this is the created laser
+
+whiteLaserEnd:
+addi,r31,r30,0,					//Restore the return address
+jra,							//jump to the Return Address of where the function was called
+
+
+//******************************UPDATE RIGHT LASER FUNCTION********************************
+// This function will update lasers travelling to the right
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// LOCAL VARIABLES:		r3 - glyph MEMORY location of position to MOVE INTO - one position to right
+//						r4 - glyph INDEX value of position to MOVE INTO
+//						r29 - temporary storage of Return Address Register
+// GLOBAL VARIABLES:	giWALL - glyph INDEX value of WALL
+//						giBLUEMAN - glyph INDEX value of BLUE MAN
+//						giREDMAN - glyph INDEX value of RED MAN
+//						giGREENMAN - glyph INDEX value of GREEN MAN
+//						giWHITEMAN - glyph INDEX value of WHITE MAN
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+
+updateRightLaser:,//
+addi,r29,r31,0,					//Store the return address
+
+str,r0,r2,VGA,					//Store the background INDEX (index 0) into the glyph MEMORY location of the laser
+addi,r3,r2,1,					//Check location next to the laser (1 location to the right)
+addi,r3,r3,VGA,					//Glyph MEMORY location of glyph to check
+ld,r4,r3,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r4,0,					//Check if index is the background glyph (index )
+bne,checkRightWall:,			//If false, the position to move into is not valid and we must check if the invalid position is a character
+str,r1,r3,0,					//Store the glyph INDEX of laser into the glyph MEMORY location that was checked
+subi,r2,r3,VGA,					//Update the glyph LOCATION of the laser
+j,endRightLaser:,				//After updating, jump to the end of the function
+
+//Check if the laser hits a wall - if it does, terminate the laser
+checkRightWall:,//
+cmpi,x,r4,giWALL,				//Check if the glyph INDEX of the glyph MEMORY location being checked is the WALL
+beq,resetRightLaser:,			//If it is the WALL, just jump to resetRightLaser
+
+//4 Checks need to be done for the entire LEFT side of a character - for all 4 characters
+//This is because we have to know where the laser hits the character
+//Note, at this point we don't need to worry about what r1 is
+cmpi,x,r4,giBLUEMAN,			//Check if the glyph INDEX value is the BLUE MAN top LEFT head
+beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the function
+cmpi,x,r4,giREDMAN,				//Check if the glyph INDEX value is the BLUE MAN bottom LEFT head
+beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the function
+cmpi,x,r4,giGREENMAN,			//Check if the glyph INDEX value is the BLUE MAN LEFT ARM
+beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the function
+cmpi,x,r4,giWHITEMAN,			////Check if the glyph INDEX value is the BLUE MAN LEFT LEG
+beq,terminateLeftHeadTop:,		//If true, then reset the laser and exit the function	
+
+//If not the TOP LEFT HEAD, then check the BOTTOM LEFT HEAD
+addi,r1,r0,giBLUEMAN,//
+addi,r1,r1,2,					//increment to the index value of the BLUE MAN bottom LEFT head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN bottom LEFT head
+beq,terminateLeftHeadBottom:,	//If true, then reset the laser and exit the function	
+addi,r1,r0,giREDMAN,//
+addi,r1,r1,2,					//increment to the index value of the RED MAN bottom LEFT head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN bottom LEFT head
+beq,terminateLeftHeadBottom:,	//If true, then reset the laser and exit the function
+addi,r1,r0,giGREENMAN,//
+addi,r1,r1,2,					//increment to the index value of the GREEN MAN bottom LEFT head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN bottom LEFT head
+beq,terminateLeftHeadBottom:,	//If true, then reset the laser and exit the function
+addi,r1,r0,giWHITEMAN,//
+addi,r1,r1,2,					//increment to the index value of the WHITE MAN bottom LEFT head	
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN bottom LEFT head
+beq,terminateLeftHeadBottom:,	//If true, then reset the laser and exit the function	
+
+//If not the BOTTOM LEFT HEAD, then check the LEFT ARM
+addi,r1,r0,giBLUEMAN,//
+addi,r1,r1,4,					//increment to the index value of the BLUE MAN LEFT leg
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN LEFT leg
+beq,terminateLeftArm:,			//If true, then reset the laser and exit the function	
+addi,r1,r0,giREDMAN,//
+addi,r1,r1,4,					//increment to the index value of the RED MAN LEFT leg
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN LEFT leg
+beq,terminateLeftArm:,			//If true, then reset the laser and exit the function
+addi,r1,r0,giGREENMAN,//
+addi,r1,r1,4,					//increment to the index value of the GREEN MAN LEFT leg
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN LEFT leg
+beq,terminateLeftArm:,			//If true, then reset the laser and exit the function
+addi,r1,r0,giWHITEMAN,//
+addi,r1,r1,4,					//increment to the index value of the WHITE MAN LEFT leg	
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN LEFT leg
+beq,terminateLeftArm:,			//If true, then reset the laser and exit the function
+
+//If not the LEFT ARM, then check the LEFT LEG
+addi,r1,r0,giBLUEMAN,//
+addi,r1,r1,6,					//increment to the index value of the BLUE MAN LEFT arm
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN LEFT arm
+beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function	
+addi,r1,r0,giREDMAN,//
+addi,r1,r1,6,					//increment to the index value of the RED MAN LEFT arm
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN LEFT arm
+beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function
+addi,r1,r0,giGREENMAN,//
+addi,r1,r1,6,					//increment to the index value of the GREEN MAN LEFT arm
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN LEFT arm
+beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function
+addi,r1,r0,giWHITEMAN,//
+addi,r1,r1,6,					//increment to the index value of the WHITE MAN LEFT arm	
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN LEFT arm
+beq,terminateLeftLeg:,			//If true, then reset the laser and exit the function
+
+j,resetRightLaser:,				//If none of these checks work, reset the RIGHT laser and end the function
+
+terminateLeftHeadTop:,//
+// PARAMETERS:			r3 - glyph MEMORY location
+//If the TOP LEFT HEAD was hit, make the parameter the TOP LEFT HEAD
+//r3 currently contains the value of the TOP LEFT HEAD
+jal,terminate:,					//Jump and link to the terminate function
+j,resetRightLaser:,				//Jump to the end of the function
+
+terminateLeftHeadBottom:,//
+// PARAMETERS:			r3 - glyph MEMORY location
+//If the BOTTOM LEFT HEAD was hit, make the parameter the TOP LEFT HEAD
+//r3 currently contains the value of the BOTTOM LEFT HEAD
+addi,r3,r3,-80,					//The top left head is 1 glyph MEMORY location away from r3
+jal,terminate:,					//Jump and link to the terminate function
+j,resetRightLaser:,				//Jump to the end of the function
+
+terminateLeftArm:,//
+// PARAMETERS:			r3 - glyph MEMORY location
+//If the LEFT ARM was hit, make the parameter the TOP LEFT HEAD
+//r3 currently contains the value of the LEFT ARM
+addi,r3,r3,-160,				//The top left head is 1 glyph MEMORY location away from r3
+jal,terminate:,					//Jump and link to the terminate function
+j,resetRightLaser:,				//Jump to the end of the function
+
+terminateLeftLeg:,//
+// PARAMETERS:			r3 - glyph MEMORY location
+//If the LEFT LEG was hit, make the parameter the TOP LEFT HEAD
+//r3 currently contains the value of the LEFT LEG
+addi,r3,r3,-240,				//The top left head is 1 glyph MEMORY location away from r3
+jal,terminate:,					//Jump and link to the terminate function
+j,resetRightLaser:,				//Jump to the end of the function
+
+resetRightLaser:,//
+addi,r2,r0,0,					//Reset laser glyph LOCATION to zero - means the laser doesn't exist any more
+
+endRightLaser:,//
+//return the updated glyph LOCATION - return register 23
+addi,r23,r2,0,					//Store the updated position into the return register
+addi,r31,r29,0,					//Restore the Return Address
+jra,							//jump to the Return Address of where the function was called
+
+
+//*****************************UPDATE LEFT LASER FUNCTION***********************************
+// This function will update lasers travelling to the left
+// PARAMETERS:			r1 - glyph INDEX
+//						r2 - glyph LOCATION of laser
+// LOCAL VARIABLES:		r3 - glyph MEMORY location of position to MOVE INTO - one position to left
+//						r4 - glyph INDEX value of position to MOVE INTO
+//						r29 - temporary storage of Return Address Register
+// GLOBAL VARIABLES:	giWALL - glyph INDEX value of WALL
+//						giBLUEMAN - glyph INDEX value of BLUE MAN
+//						giREDMAN - glyph INDEX value of RED MAN
+//						giGREENMAN - glyph INDEX value of GREEN MAN
+//						giWHITEMAN - glyph INDEX value of WHITE MAN
+// RETURN VARIABLES:	r23 - return register with updated glyph LOCATION of laser	
+
+updateLeftLaser:,//
+addi,r29,r31,0,					//Store the return address
+
+str,r0,r2,VGA,					//Store the background INDEX (index 0) into the glyph MEMORY location of the laser
+addi,r3,r2,-1,					//Check location next to the laser (1 location to the left)
+addi,r3,r3,VGA,					//Glyph MEMORY location of glyph to check
+ld,r4,r3,0,						//Load the glyph INDEX of the glyph MEMORY location being checked
+cmpi,x,r4,0,					//Check if index is the background glyph (index )
+bne,checkLeftWall:,				//If false, the position to move into is not valid and we must check if the invalid position is a character
+str,r1,r3,0,					//Store the glyph INDEX of laser into the glyph MEMORY location that was checked
+subi,r2,r3,VGA,					//Update the glyph LOCATION of the laser
+j,endLeftLaser:,				//After updating, jump to the end of the function
+
+//Check if the laser hits a wall - if it does, terminate the laser
+checkLeftWall:,//
+cmpi,x,r4,giWALL,				//Check if the glyph INDEX of the glyph MEMORY location being checked is the WALL
+beq,resetLeftLaser:,			//If it is the WALL, just jump to resetLeftLaser
+
+//4 Checks need to be done for the entire RIGHT side of a character - for all 4 characters
+//This is because we have to know where the laser hits the character
+//Note, at this point we don't need to worry about what r1 is
+addi,r1,r0,giBLUEMAN,//
+addi,r1,r1,1,					//Increment to the index value of the BLUE MAN top RIGHT head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN top RIGHT head
+beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function
+addi,r1,r0,giREDMAN,//
+addi,r1,r1,1,					//Increment to the index value of the RED MAN top RIGHT head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN top left head
+beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function
+addi,r1,r0,giGREENMAN,//
+addi,r1,r1,1,					//Increment to the index value of the RED MAN top RIGHT head
+cmp,x,r4,r1,			//Check if the glyph INDEX value is the GREEN MAN top left head
+beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function
+addi,r1,r0,giWHITEMAN,//
+addi,r1,r1,1,					//Increment to the index value of the RED MAN top RIGHT head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN top left head
+beq,terminateRightHeadTop:,		//If true, then reset the laser and exit the function	
+
+//If not the TOP RIGHT HEAD, then check the BOTTOM RIGHT HEAD
+addi,r1,r0,giBLUEMAN,//
+addi,r1,r1,3,					//increment to the index value of the BLUE MAN bottom left head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN bottom left head
+beq,terminateRightHeadBottom:,	//If true, then reset the laser and exit the function	
+addi,r1,r0,giREDMAN,//
+addi,r1,r1,3,					//increment to the index value of the RED MAN bottom left head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN bottom left head
+beq,terminateRightHeadBottom:,	//If true, then reset the laser and exit the function
+addi,r1,r0,giGREENMAN,//
+addi,r1,r1,3,					//increment to the index value of the GREEN MAN bottom left head
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN bottom left head
+beq,terminateRightHeadBottom:,	//If true, then reset the laser and exit the function
+addi,r1,r0,giWHITEMAN,//
+addi,r1,r1,3,					//increment to the index value of the WHITE MAN bottom left head	
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN bottom left head
+beq,terminateRightHeadBottom:,	//If true, then reset the laser and exit the function	
+
+//If not the BOTTOM RIGHT HEAD, then check the RIGHT ARM
+addi,r1,r0,giBLUEMAN,//
+addi,r1,r1,5,					//increment to the index value of the BLUE MAN left leg
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN left leg
+beq,terminateRightArm:,			//If true, then reset the laser and exit the function	
+addi,r1,r0,giREDMAN,
+addi,r1,r1,5,					//increment to the index value of the RED MAN left leg
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN left leg
+beq,terminateRightArm:,			//If true, then reset the laser and exit the function
+addi,r1,r0,giGREENMAN,
+addi,r1,r1,5,					//increment to the index value of the GREEN MAN left leg
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN left leg
+beq,terminateRightArm:,			//If true, then reset the laser and exit the function
+addi,r1,r0,giWHITEMAN,
+addi,r1,r1,5,					//increment to the index value of the WHITE MAN left leg	
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN left leg
+beq,terminateRightArm:,			//If true, then reset the laser and exit the function
+
+//If not the RIGHT ARM, then check the RIGHT LEG
+addi,r1,r0,giBLUEMAN,//
+addi,r1,r1,7,					//increment to the index value of the BLUE MAN left arm
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the BLUE MAN left arm
+beq,terminateRightLeg:,			//If true, then reset the laser and exit the function	
+addi,r1,r0,giREDMAN,//
+addi,r1,r1,7,					//increment to the index value of the RED MAN left arm
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the RED MAN left arm
+beq,terminateRightLeg:,			//If true, then reset the laser and exit the function
+addi,r1,r0,giGREENMAN,//
+addi,r1,r1,7,					//increment to the index value of the GREEN MAN left arm
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the GREEN MAN left arm
+beq,terminateRightLeg:,			//If true, then reset the laser and exit the function
+addi,r1,r0,giWHITEMAN,//
+addi,r1,r1,7,					//increment to the index value of the WHITE MAN left arm	
+cmp,x,r4,r1,					//Check if the glyph INDEX value is the WHITE MAN left arm
+beq,terminateRightLeg:,			//If true, then reset the laser and exit the function
+
+j,resetLeftLaser:,				//Reset the LEFT laser and end the function
+
+terminateRightHeadTop:,//
+// PARAMETERS:			r3 - glyph MEMORY location
+//If the TOP RIGHT HEAD was hit, make the parameter the TOP LEFT HEAD
+//r3 currently contains the value of the TOP RIGHT HEAD
+addi,r3,r3,-1,					//The top left head is 1 glyph MEMORY location away from r3
+jal,terminate:,					//Jump and link to the terminate function
+j,resetLeftLaser:,				//Jump to the end of the function
+
+terminateRightHeadBottom:,//
+// PARAMETERS:			r3 - glyph MEMORY location
+//If the BOTTOM RIGHT HEAD was hit, make the parameter the TOP LEFT HEAD
+//r3 currently contains the value of the BOTTOM RIGHT HEAD
+addi,r3,r3,-81,					//The top left head is 1 glyph MEMORY location away from r3
+jal,terminate:,					//Jump and link to the terminate function
+j,resetLeftLaser:,				//Jump to the end of the function
+
+terminateRightArm:,//
+// PARAMETERS:			r3 - glyph MEMORY location
+//If the RIGHT ARM was hit, make the parameter the TOP LEFT HEAD
+//r3 currently contains the value of the RIGHT ARM
+addi,r3,r3,-161,				//The top left head is 1 glyph MEMORY location away from r3
+jal,terminate:,					//Jump and link to the terminate function
+j,resetLeftLaser:,				//Jump to the end of the function
+
+terminateRightLeg:,//
+// PARAMETERS:			r3 - glyph MEMORY location
+//If the RIGHT LEG was hit, make the parameter the TOP LEFT HEAD
+//r3 currently contains the value of the RIGHT LEG
+addi,r3,r3,-241,				//The top left head is 1 glyph MEMORY location away from r3
+jal,terminate:,					//Jump and link to the terminate function
+j,resetLeftLaser:,				//Jump to the end of the function
+
+resetLeftLaser:,//
+addi,r2,r0,0,					//Reset laser glyph LOCATION to zero - means the laser doesn't exist any more
+
+endLeftLaser:,//
+//return the updated glyph LOCATION - return register 23
+addi,r23,r2,0,					//Store the updated position into the return register
+addi,r31,r29,0,					//Restore the Return Address
+jra,							//jump to the Return Address of where the function was called	
+
+
+//*****************************TERMINATE CHARACTER FUNCTION***********************************
+// This function will replace a character glyph with a terminate glyph
+// PARAMETERS:			r3 - glyph MEMORY location
+// LOCAL VARIABLES:		r1 - glyph INDEX of TERMINATE
+//						r2 - Counter
+//						r28 - Return Address
+// GLOBAL VARIABLES:	giTERMINATE - glyph INDEX value of the TERMINATE glyph
+//						SOUND - I/O MEMORY space for sound
+// RETURN VARIABLES:
+
+terminate:
+addi,r28,r31,0,				//Save the return address
+
+//****CHECK THIS CODE****
+//Trigger the death sound
+addi,r1,r0,DEATH,				//Trigger the death sound
+str,r1,r0,SOUND,				//Store the trigger into the SOUND MEMORY space
+
+//Set up a counter
+addi,r2,r0,100000,			//Initialize counter to 1000
+add,r2,r2,r2,				//Increment the counter
+add,r2,r2,r2,
+add,r2,r2,r2,
+add,r2,r2,r2,
+add,r2,r2,r2,
+add,r2,r2,r2,
+
+//terminateLoop:
+addi,r1,r0,giTERMINATE,		//put the TERMINATE glyph into r1
+//TOP LEFT HEAD
+str,r1,r3,0,        		//Sets the old position to be the background
+//TOP RIGHT HEAD
+addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,1,       		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//BOTTOM LEFT HEAD
+addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,79,      		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//BOTTOM RIGHT HEAD
+addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,1,       		//go to the next glyph LOCATION
+str,r1,r3,0,				/set the old position to be the background
+//LEFT ARM
+addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,79,      		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//RIGHT ARM
+addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,1,       		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//LEFT LEG
+addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,79,      		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+//RIGHT LEG
+addi,r1,r1,1,				//go to the next glyph INDEX value
+addi,r3,r3,1,       		//go to the next glyph LOCATION
+str,r1,r3,0,				//set the old position to be the background
+
+subi,r3,r3,241,				//set r3 back to the top of the glyph character
+
+terminateLoop:
+subi,r2,r2,1,				//Decrement the counter
+cmpi,x,r2,0,				//Check if we've reached zero
+bne,terminateLoop:,			//If we're not done, branch to the top of the loop
+
+subi,r2,r3,VGA,				//set r2 back to the top of the glyph character's glyph LOCATION
+jal,DrawBackground:,		//Jump and Link to the background to emulate GLYching
+
+addi,r31,r28,0,				//Restore the Return Address
+jra,						//jump to the Return Address of where the function was called
+
+
+//***************************************DRAW GLYPH FUNCTION***********************************
+// This function will draw a glyph character
+// PARAMETERS: 			r1 - glyph INDEX to store
+// 						r2 - glyph LOCATION to store into
+// LOCAL VARIABLES: 	r3 - glyph MEMORY location to store into
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:	
+
+DrawGlyph:
+//TOP LEFT HEAD
+addi,r3,r2,VGA,			//r3 contains the glyph MEMORY location
+str,r1,r3,0,			//store the glyph INDEX into the glyph MEMORY location
+
+//TOP RIGHT HEAD
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
+//BOTTOM LEFT HEAD
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+str,r1,r3,0,			//store the bottom left head.
+
+//BOTTOM RIGHT HEAD
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
+//LEFT ARM
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+str,r1,r3,0,			//store the bottom left head.
+
+//RIGHT ARM
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
+//LEFT LEG
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,79,			//next glyph location is down one line and to the left one
+str,r1,r3,0,			//store the bottom left head.
+
+//RIGHT LEG
+addi,r1,r1,1,			//increment the glyph INDEX to the next glyph
+addi,r3,r3,1,			//draw in the next glyph location - one glyph to the right
+str,r1,r3,0,			//store the top right glyph
+
+jra,					//jump to the Return Address of where the function was called
+
+
+//***********************************DRAW BACKGROUND FUNCTION*********************************
+// This function will draw a glyph character
+// PARAMETERS: 			r2 - glyph LOCATION to write over
+// LOCAL VARIABLES: 	r3 - glyph MEMORY location to write over
+// GLOBAL VARIABLES:	
+// RETURN VARIABLES:	
+
+DrawBackground:
+//TOP LEFT HEAD
+addi,r3,r2,VGA,			//r3 contains the current glyph location address
+str,r0,r3,0,        	//Sets the old position to be the background
+//TOP RIGHT HEAD
+addi,r3,r3,1,       	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
+//BOTTOM LEFT HEAD
+addi,r3,r3,79,      	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
+//BOTTOM RIGHT HEAD
+addi,r3,r3,1,       	//go to the next glyph location
+str,r0,r3,0,			/set the old position to be the background
+//LEFT ARM
+addi,r3,r3,79,      	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
+//RIGHT ARM
+addi,r3,r3,1,       	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
+//LEFT LEG
+addi,r3,r3,79,      	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
+//RIGHT LEG
+addi,r3,r3,1,       	//go to the next glyph location
+str,r0,r3,0,			//set the old position to be the background
+
+jra,					//jump to the Return Address of where the function was called
+
+
+//***************************************MOVEMENT FUNCTION***********************************
+// This function will check the movement of a glyph character
+// PARAMETERS: 			r1 - controller value
+// 						r2 - glyph LOCATION of current glyph
+// LOCAL VARIABLES: 	r3 - directional value (result of controller value AND direction being checked)
+//						r4 - glyph MEMORY location
+//						r5 - glyph INDEX value of position to MOVE INTO
+//						r30 - Saved Return Address for this function
+// GLOBAL VARIABLES:	r27 - VGA Base Address
+// RETURN VARIABLES:	r23 - updated glyph LOCATION
+
+movement:
+addi,r30,r31,0,				//Store the return address
+
+//FIRST CHECK SHOULD BE IF THE PLAYER HAS BEEN TERMINATED, THEN DON'T EVEN MOVE
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r6,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+cmpi,x,r6,0,				//Compare if the INDEX is a background (means player has been terminated)
+beq,endMovement:,			//If the player's glyph INDEX is a background glyph, then branch to endMovement
+
+//********CHECK RIGHT MOVEMENT*********
+andi,r3,r1,1,				//Get the right directional value
+cmpi,x,r3,1,				//Check if direction pressed is RIGHT
+bne,checkL:,				//Check LEFT direction if fails
+//Check TOP RIGHT HEAD
+addi,r4,r2,2,				//Check location next to top right head (2 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check BOTTOM RIGHT HEAD
+addi,r4,r2,82,				//Check location next to bottom right head (82 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT ARM
+addi,r4,r2,162,				//Check location next to right arm (162 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT LEG
+addi,r4,r2,242,				//Check location next to right leg (242 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If RIGHT movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,1,				//Update glyph LOCATION to store to - glyph LOCATION to the RIGHT
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
+
+//*********CHECK LEFT MOVEMENT************
+checkL:
+andi,r3,r1,2,				//Get the left directional value
+cmpi,x,r3,2,				//Check if direction pressed is LEFT
+bne,checkD:,				//Check DOWN direction if fails
+//Check TOP LEFT HEAD
+addi,r4,r2,-1,				//Check location next to top left head (-1 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check BOTTOM LEFT HEAD
+addi,r4,r2,79,				//Check location next to bottom left head (79 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check LEFT ARM
+addi,r4,r2,159,				//Check location next to left arm (159 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check LEFT LEG
+addi,r4,r2,239,				//Check location next to left leg (239 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If LEFT movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,-1,				//Update glyph LOCATION to store to - glyph LOCATION to the LEFT
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
+
+//**********CHECK DOWN MOVEMENT************
+checkD:
+andi,r3,r1,4,				//Get the down directional value
+cmpi,x,r3,4,				//Check if direction pressed is DOWN
+bne,checkU:,				//Check UP direction if fails
+//Check LEFT LEG
+addi,r4,r2,320,				//Check location next to left leg (320 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check RIGHT LEG
+addi,r4,r2,321,				//Check location next to right leg (321 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If DOWN movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,80,				//Update glyph LOCATION to store to - glyph LOCATION DOWN
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
+
+//**********CHECK UP MOVEMENT************
+checkU:
+andi,r3,r1,8,				//Get the up directional value
+cmpi,x,r3,8,				//Check if direction pressed is UP
+bne,endMovement:,			//Branch to the end if fails
+//Check TOP LEFT HEAD
+addi,r4,r2,-80,				//Check location next to top left head (-80 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+//Check TOP RIGHT HEAD
+addi,r4,r2,-79,				//Check location next to top right head (-79 glyph locations away from current glyph LOCATION)
+addi,r4,r4,VGA,				//Glyph MEMORY location of glyph to check
+ld,r5,r4,0,					//Load the glyph INDEX of the glyph MEMORY location
+cmpi,x,r5,0,				//Check if index is the background glyph (index 0)
+bne,endMovement:,			//Branch to the end if invalid movement
+
+//If UP movement is valid, update the position
+//First, get the glyph INDEX value of the current glyph LOCATION
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+ld,r1,r3,0,					//Glyph INDEX value of current glyph MEMORY location
+
+//Draw the background where the glyph is
+//PARAMETERS: 	r2 - glyph LOCATION - already parameter of this function
+//This function doesn't affect r1, but does change r3
+jal,DrawBackground:,		//call the DrawBackground function to draw background in current position
+
+//Draw the glyph into the new location
+//PARAMETERS:	r1 - glyph INDEX to store
+// 				r2 - glyph LOCATION to store into
+addi,r2,r2,-80,				//Update glyph LOCATION to store to - glyph LOCATION UP
+//Reset r3 to desired glyph MEMORY location
+addi,r3,r2,VGA,				//Glyph MEMORY location of current glyph LOCATION
+jal,DrawGlyph:,				//call the DrawGlyph function to draw glyph character in new location
+
+j,endMovement:,				//Jump to the end of the function to exit
+
+//END OF MOVEMENT FUNCTION
+endMovement:
+addi,r23,r2,0,				//return the updated glyph LOCATION
+addi,r31,r30,0,				//restore the Return Address
+jra,						//jump to the Return Address of where the function was called
